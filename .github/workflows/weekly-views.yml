@@ -21,9 +21,15 @@ jobs:
         with:
           node-version: 22
       - name: Write rounded counts to content/views.json
+        # Uses Redis directly if these secrets exist (either naming works); otherwise reads the rounded
+        # counts from the live site's public /api/views-weekly, so no secrets are required.
+        # Set the repository variable SITE_URL (e.g. https://icu360.in) once the custom domain is live.
         env:
           UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
           UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
+          KV_REST_API_URL: ${{ secrets.KV_REST_API_URL }}
+          KV_REST_API_TOKEN: ${{ secrets.KV_REST_API_TOKEN }}
+          VIEWS_SOURCE_URL: ${{ vars.SITE_URL || 'https://icu360.vercel.app' }}/api/views-weekly
         run: node scripts/update-views.mjs
       - name: Commit if changed
         run: |

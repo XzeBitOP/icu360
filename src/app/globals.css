@@ -79,7 +79,12 @@ body { font-feature-settings: "cv11", "ss01"; background: #eaf0f5; color: var(--
    Backdrop blur is GPU-heavy on low-end Android, so it is limited to fixed chrome and a few key cards
    (.blur-glass: tab bar, header buttons, search pill, sidebar, hero). Other glass cards are translucent
    gradients over the already-soft aurora, which looks the same and scrolls smoothly. */
-.glass, .glass-strong, .glass-hero, .glass-chip, .glass-btn, .callout { position: relative; isolation: isolate; }
+/* In a cascade layer on purpose: unlayered CSS beats every Tailwind utility, so an unlayered
+   `position: relative` here silently overrode `fixed`/`sticky` on glass elements (the mobile tab bar
+   ended up in normal flow at the very bottom of the page). Layered, utilities like `fixed` win. */
+@layer components {
+  .glass, .glass-strong, .glass-hero, .glass-chip, .glass-btn, .callout { position: relative; isolation: isolate; }
+}
 .glass::before, .glass-strong::before, .glass-hero::before, .glass-chip::before, .glass-btn::before, .callout::before {
   content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
   background: linear-gradient(160deg, rgba(255,255,255,.95), rgba(255,255,255,.25) 35%, rgba(255,255,255,.08) 62%, rgba(255,255,255,.6));
@@ -181,4 +186,12 @@ input[type="number"] { -moz-appearance: textfield; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Mobile tab bar: always pinned to the viewport; slides down + fades after idle, back on any interaction */
+.tabbar { transition: transform .25s ease, opacity .25s ease; will-change: transform, opacity; }
+.tabbar[data-hidden="true"] { transform: translateY(calc(100% + 2.5rem)); opacity: 0; pointer-events: none; }
+@media (prefers-reduced-motion: reduce) {
+  .tabbar { transition: opacity .25s ease !important; transition-duration: .25s !important; }
+  .tabbar[data-hidden="true"] { transform: none; }
 }

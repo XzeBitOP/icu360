@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import { House, LayoutGrid, Calculator, Star, Newspaper, ChevronLeft } from "lucide-react";
 
 const ITEMS = [
@@ -11,10 +12,56 @@ const ITEMS = [
   { href: "/news", label: "News", Icon: Newspaper, match: (p: string) => p.startsWith("/news") || p.startsWith("/quiz") },
 ];
 
+const IDLE_MS = 4000;
+const INTERACTION_EVENTS = ["scroll", "wheel", "touchstart", "touchmove", "pointerdown", "pointermove", "keydown", "focusin"] as const;
+
+/** True while the user is typing or a modal is open: the tab bar must never hide then. */
+function shouldStayVisible(): boolean {
+  const el = document.activeElement as HTMLElement | null;
+  if (el) {
+    const tag = el.tagName;
+    if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || el.isContentEditable) return true;
+    if (el.closest("[data-tabbar]")) return true;
+  }
+  return !!document.querySelector('dialog[open], [role="dialog"][aria-modal="true"], [aria-modal="true"]');
+}
+
+/** Hides the bar after IDLE_MS without any interaction; shows it again immediately on any interaction. */
+function useIdleHide(resetKey: string) {
+  const [hidden, setHidden] = useState(false);
+  const hiddenRef = useRef(false);
+  useEffect(() => {
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const set = (v: boolean) => {
+      if (hiddenRef.current !== v) { hiddenRef.current = v; setHidden(v); }
+    };
+    const arm = () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        if (shouldStayVisible()) arm();
+        else set(true);
+      }, IDLE_MS);
+    };
+    const onActivity = () => { set(false); arm(); };
+    const opts: AddEventListenerOptions = { passive: true, capture: true };
+    INTERACTION_EVENTS.forEach((e) => window.addEventListener(e, onActivity, opts));
+    const onVis = () => { if (document.visibilityState === "visible") onActivity(); };
+    document.addEventListener("visibilitychange", onVis);
+    onActivity();
+    return () => {
+      clearTimeout(timer);
+      INTERACTION_EVENTS.forEach((e) => window.removeEventListener(e, onActivity, opts));
+      document.removeEventListener("visibilitychange", onVis);
+    };
+  }, [resetKey]);
+  return hidden;
+}
+
 export function TabBar() {
   const p = usePathname() || "/";
+  const hidden = useIdleHide(p);
   return (
-    <nav aria-label="Main" className="lg:hidden fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] inset-x-3 z-30 glass blur-glass rounded-[30px] px-1.5 py-1.5 max-w-[560px] mx-auto">
+    <nav aria-label="Main" data-tabbar="" data-hidden={hidden ? "true" : "false"} className="tabbar lg:hidden fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] inset-x-3 z-30 glass blur-glass rounded-[30px] px-1.5 py-1.5 max-w-[560px] mx-auto">
       <ul className="grid grid-cols-5">
         {ITEMS.map(({ href, label, Icon, match }) => {
           const on = match(p);

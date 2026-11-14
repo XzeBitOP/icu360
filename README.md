@@ -31,8 +31,9 @@ Copy `.env.example` to `.env.local`. Everything is optional; the site builds and
 
 | Variable | Used by | Notes |
 | --- | --- | --- |
-| `UPSTASH_REDIS_REST_URL` | `/api/view`, `/api/stats`, weekly Action | From the Upstash console, "REST API" section |
+| `UPSTASH_REDIS_REST_URL` | `/api/view`, `/api/stats`, `/api/views-weekly` | From the Upstash console, "REST API" section |
 | `UPSTASH_REDIS_REST_TOKEN` | same | Use the normal token, not the read-only one |
+| `KV_REST_API_URL` / `KV_REST_API_TOKEN` | same (fallback) | Added automatically by the Vercel Marketplace "Upstash for Redis" integration. Used when the `UPSTASH_*` names are not set |
 | `STATS_PASSWORD` | `/stats` | Long random string. `/stats` is disabled if unset |
 | `NEXT_PUBLIC_SITE_URL` | metadata, share links | Defaults to `https://icu360.in` |
 
@@ -109,19 +110,19 @@ Add a set to `sets` in `content/quiz/daily.json`. The quiz page shows the set wh
 - The site shows an eye icon with `New` (under 1,000), `1K`, `12K`, or `1.2M`. Home shows "Top topic of the week" (or an editor's pick until there is data).
 - `/stats` shows exact counts for this week, last week and all time, behind `STATS_PASSWORD`.
 
-The Action needs two **repository secrets** (Settings → Secrets and variables → Actions): `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN`. You can also run it by hand from the Actions tab ("Run workflow").
+The Action needs **no secrets** by default: it reads the already-rounded numbers from the live site's public `GET /api/views-weekly` (exact counts never leave the server). It uses `https://icu360.vercel.app` until you set a repository **variable** `SITE_URL` (Settings → Secrets and variables → Actions → Variables), e.g. `https://icu360.in`. If you prefer the Action to read Redis directly, add repository secrets `UPSTASH_REDIS_REST_URL` + `UPSTASH_REDIS_REST_TOKEN` (or `KV_REST_API_URL` + `KV_REST_API_TOKEN`); they take priority. You can also run it by hand from the Actions tab ("Run workflow").
 
 ## Deploying on Vercel
 
 1. In Vercel, **Add New → Project** and import `XzeBitOP/icu360`. The framework preset is detected as Next.js; keep the default build command (`npm run build`) and output.
-2. Create a free Redis database at [upstash.com](https://upstash.com) (region: Mumbai `ap-south-1` is closest). Copy the REST URL and token. Or use Vercel's Marketplace → Upstash integration, which adds the variables for you.
+2. Create a free Redis database at [upstash.com](https://upstash.com) (region: Mumbai `ap-south-1` is closest). Copy the REST URL and token. Or use Vercel's Marketplace → Upstash integration, which adds `KV_REST_API_URL` / `KV_REST_API_TOKEN` for you (the code accepts those names, so step 3's Upstash variables can be skipped).
 3. In the Vercel project, **Settings → Environment Variables**, add for Production (and Preview if you like):
    - `UPSTASH_REDIS_REST_URL`
    - `UPSTASH_REDIS_REST_TOKEN`
    - `STATS_PASSWORD`
    - `NEXT_PUBLIC_SITE_URL` = `https://icu360.in`
 4. Deploy. Then **Settings → Domains**, add `icu360.in` (and `www.icu360.in` redirecting to it) and set the DNS records Vercel shows at your registrar.
-5. In GitHub, add the same two Upstash values as repository secrets for the weekly Action.
+5. Optional: in GitHub, set the repository variable `SITE_URL` to your live URL for the weekly Action (no secrets needed; see "View counts").
 
 ## PWA and offline
 
