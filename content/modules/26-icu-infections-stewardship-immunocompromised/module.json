@@ -1,0 +1,2781 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "icu-infections-stewardship-immunocompromised",
+  "number": 26,
+  "folder": "26-icu-infections-stewardship-immunocompromised",
+  "section": {
+    "id": "G",
+    "title": "Infections"
+  },
+  "phase": 2,
+  "title": "ICU infections, stewardship and the immunocompromised",
+  "summary": "Infections in the ICU: severe CAP, HAP/VAP, carbapenem-resistant Gram-negatives per ICMR, invasive fungal disease, TB and HIV, febrile neutropenia and TLS, and antibiotic PK/PD with stewardship - aligned with NCDC/ICMR National Treatment Guidelines 2025.",
+  "tags": [
+    "CAP",
+    "VAP",
+    "HAP",
+    "CRE",
+    "NDM",
+    "CRAB",
+    "polymyxin",
+    "ICMR",
+    "candidaemia",
+    "Candida auris",
+    "mucormycosis",
+    "TB",
+    "HIV",
+    "PJP",
+    "febrile neutropenia",
+    "TLS",
+    "PK/PD",
+    "procalcitonin",
+    "stewardship"
+  ],
+  "relatedModules": [
+    "sepsis-septic-shock",
+    "icu-care-bundles-infection-prevention",
+    "renal-replacement-therapy",
+    "aki-renal-drug-dosing",
+    "tropical-monsoon-fevers",
+    "mechanical-ventilation",
+    "bedside-interpretation-ecg-cxr-ct-labs"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "bug",
+    "accent": "high"
+  },
+  "viewKey": "module:icu-infections-stewardship-immunocompromised",
+  "topics": [
+    {
+      "id": "severe-cap",
+      "title": "Severe community-acquired pneumonia",
+      "summary": "Identify severe CAP (ATS/IDSA criteria), start the Indian national empirical regimen within 1 h, add hydrocortisone, and think of Indian tropical mimics.",
+      "viewKey": "topic:icu-infections-stewardship-immunocompromised/severe-cap",
+      "uiHints": {
+        "icon": "wind",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Severe CAP (ATS/IDSA 2019): 1 major criterion (septic shock needing vasopressors, or respiratory failure needing mechanical ventilation) or ≥ 3 minor criteria (RR ≥ 30, PaO2/FiO2 ≤ 250, multilobar infiltrates, confusion, BUN ≥ 20 mg/dL, WBC < 4,000/mm³, platelets < 100,000/mm³, temperature < 36 °C, hypotension needing aggressive fluids).",
+          "refs": [
+            "ats-idsa-cap-2019"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Recognise and admit to ICU",
+            "detail": "Apply ATS/IDSA criteria; CURB-65 ≥ 3 also flags high risk.",
+            "time": "0 h",
+            "refs": [
+              "ats-idsa-cap-2019"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Samples before antibiotics",
+            "detail": "Two blood cultures, sputum/tracheal aspirate Gram stain and culture, urinary pneumococcal and Legionella antigens, influenza/SARS-CoV-2 PCR; consider sputum GeneXpert for TB and scrub typhus/leptospira/dengue tests in the Indian monsoon setting.",
+            "refs": [
+              "ers-scap-2023",
+              "ntg-india-2025"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Empirical antibiotics within 1 h",
+            "detail": "Ceftriaxone 2 g IV daily + azithromycin 500 mg daily (or doxycycline 100 mg BD). Pseudomonas risk (bronchiectasis, recent antibiotics/hospital, immunosuppression): piperacillin-tazobactam 4.5 g q6h + azithromycin. Add MRSA cover (vancomycin or linezolid) for necrotising pneumonia or post-influenza.",
+            "time": "≤ 1 h",
+            "refs": [
+              "ntg-india-2025",
+              "ats-idsa-cap-2019"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Influenza",
+            "detail": "Oseltamivir 75 mg BD when influenza is suspected in season, without waiting for PCR.",
+            "refs": [
+              "ers-scap-2023"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Hydrocortisone",
+            "detail": "Severe CAP (ICU, high-flow/NIV/ventilation): hydrocortisone 200 mg/day for 4-8 days with taper (CAPE COD). Not in influenza pneumonia.",
+            "refs": [
+              "cape-cod",
+              "ers-scap-2023"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Respiratory support",
+            "detail": "HFNC or NIV trial with close monitoring (ROX index); lung-protective ventilation if intubated.",
+            "refs": [
+              "ers-scap-2023"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "De-escalate and stop",
+            "detail": "Narrow to culture results; stop macrolide when atypicals excluded; total 5-7 days if clinically stable (longer for S. aureus, Pseudomonas, lung abscess, empyema). If not resolving in 2 weeks, exclude TB.",
+            "refs": [
+              "ntg-india-2025",
+              "ats-idsa-cap-2019"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "ceftriaxone",
+            "role": "Severe CAP backbone",
+            "route": "IV",
+            "dose": "2 g once daily",
+            "refs": [
+              "ntg-india-2025"
+            ]
+          },
+          {
+            "drugId": "azithromycin",
+            "role": "Atypical cover",
+            "route": "IV/oral",
+            "dose": "500 mg once daily",
+            "refs": [
+              "ntg-india-2025"
+            ]
+          },
+          {
+            "drugId": "hydrocortisone",
+            "role": "Severe CAP adjunct",
+            "route": "IV infusion",
+            "dose": "200 mg/day for 4 days (8 if still severe), then taper",
+            "dilution": "200 mg in 50 mL NS over 24 h = ~2 mL/h",
+            "workedExample": "Any weight: 200 mg/24 h ≈ 8.3 mg/h",
+            "refs": [
+              "cape-cod"
+            ]
+          },
+          {
+            "drugId": "oseltamivir",
+            "role": "Influenza",
+            "route": "Oral/NG",
+            "dose": "75 mg twice daily for 5 days",
+            "verify": "Renal adjustment.",
+            "refs": [
+              "ers-scap-2023"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "cap-regimens",
+            "title": "Empirical ICU CAP regimens (NCDC/ICMR 2025)",
+            "columns": [
+              "Scenario",
+              "First line",
+              "Alternative"
+            ],
+            "rows": [
+              [
+                "ICU, no Pseudomonas risk",
+                "Ceftriaxone 2 g OD + azithromycin 500 mg OD (or doxycycline 100 mg q12h)",
+                "Cefotaxime 2 g TDS or piperacillin-tazobactam 4.5 g q6h + azithromycin/doxycycline"
+              ],
+              [
+                "ICU with Pseudomonas risk",
+                "Piperacillin-tazobactam 4.5 g q6h + azithromycin or doxycycline",
+                "Imipenem/meropenem + azithromycin or doxycycline"
+              ],
+              [
+                "Necrotising or post-influenza",
+                "Add vancomycin 25 mg/kg load then 15 mg/kg q8-12h",
+                "Teicoplanin or linezolid 600 mg BD (after TB excluded)"
+              ]
+            ],
+            "refs": [
+              "ntg-india-2025"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Diabetic from coastal South/East India with severe pneumonia, abscesses or septic shock: consider melioidosis (Burkholderia pseudomallei) - needs meropenem or ceftazidime.",
+            "refs": [
+              "ntg-india-2025"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Delaying antibiotics for imaging or sputum when the patient is in shock.",
+            "refs": [
+              "ers-scap-2023"
+            ]
+          },
+          {
+            "text": "Using a fluoroquinolone empirically in India where TB is common: it can mask and select resistant TB.",
+            "refs": [
+              "ntg-india-2025"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Procalcitonin should not be used to decide whether to start antibiotics in severe CAP, but can support stopping.",
+            "refs": [
+              "ats-idsa-cap-2019"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Severe CAP: first hour",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Pneumonia with organ dysfunction"
+          },
+          {
+            "id": "sev",
+            "type": "decision",
+            "text": "Major criterion or ≥ 3 minor criteria?"
+          },
+          {
+            "id": "ward",
+            "type": "end",
+            "text": "Ward regimen; reassess"
+          },
+          {
+            "id": "cx",
+            "type": "action",
+            "text": "Cultures, antigens, viral PCR; ICU",
+            "severity": "high"
+          },
+          {
+            "id": "ps",
+            "type": "decision",
+            "text": "Pseudomonas risk factors?"
+          },
+          {
+            "id": "std",
+            "type": "action",
+            "text": "Ceftriaxone + azithromycin/doxycycline"
+          },
+          {
+            "id": "pip",
+            "type": "action",
+            "text": "Piperacillin-tazobactam + azithromycin/doxycycline"
+          },
+          {
+            "id": "adj",
+            "type": "action",
+            "text": "Hydrocortisone (no influenza); oseltamivir if flu suspected"
+          },
+          {
+            "id": "mrsa",
+            "type": "decision",
+            "text": "Necrotising / post-influenza?"
+          },
+          {
+            "id": "addv",
+            "type": "end",
+            "text": "Add vancomycin or linezolid",
+            "severity": "high"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Review cultures at 48-72 h; total 5-7 days"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "sev"
+          },
+          {
+            "from": "sev",
+            "to": "ward",
+            "label": "No"
+          },
+          {
+            "from": "sev",
+            "to": "cx",
+            "label": "Yes"
+          },
+          {
+            "from": "cx",
+            "to": "ps"
+          },
+          {
+            "from": "ps",
+            "to": "std",
+            "label": "No"
+          },
+          {
+            "from": "ps",
+            "to": "pip",
+            "label": "Yes"
+          },
+          {
+            "from": "std",
+            "to": "adj"
+          },
+          {
+            "from": "pip",
+            "to": "adj"
+          },
+          {
+            "from": "adj",
+            "to": "mrsa"
+          },
+          {
+            "from": "mrsa",
+            "to": "addv",
+            "label": "Yes"
+          },
+          {
+            "from": "mrsa",
+            "to": "cont",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "ntg-india-2025",
+          "ats-idsa-cap-2019"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "S. pneumoniae remains the leading cause; H. influenzae, S. aureus, Gram-negative bacilli (Klebsiella), atypicals (Legionella, Mycoplasma) and respiratory viruses (influenza, SARS-CoV-2, RSV) follow. Severe disease reflects dysregulated host response with lung injury and sepsis.",
+        "evidence": "- ATS/IDSA 2019 defines severe CAP and empirical regimens [Metlay 2019].\n- ERS/ESICM/ESCMID/ALAT 2023 suggest corticosteroids for severe CAP without shock and macrolides in combination [Martin-Loeches 2023].\n- CAPE COD: hydrocortisone reduced 28-day mortality (6.2% vs 11.9%) in severe CAP [Dequin 2023].",
+        "controversies": "- Steroids in influenza or in patients already in septic shock; macrolide vs doxycycline for atypical cover.",
+        "indiaNotes": "- The NCDC/ICMR National Treatment Guidelines (v2.0, 2025) set ceftriaxone + azithromycin/doxycycline as first line for ICU CAP.\n- Indian CAP mimics: TB, scrub typhus, leptospirosis (pulmonary haemorrhage), melioidosis, H1N1 influenza and dengue; ask about season, occupation and geography."
+      },
+      "drugIds": [
+        "ceftriaxone",
+        "azithromycin",
+        "hydrocortisone",
+        "oseltamivir"
+      ],
+      "calculatorIds": [
+        "curb-65",
+        "pf-ratio",
+        "rox-index"
+      ],
+      "references": [
+        "ats-idsa-cap-2019",
+        "ers-scap-2023",
+        "cape-cod",
+        "ntg-india-2025"
+      ],
+      "quiz": [
+        {
+          "id": "severe-cap-q1",
+          "stem": "Which is a major ATS/IDSA criterion for severe CAP?",
+          "options": [
+            "RR ≥ 30",
+            "Need for mechanical ventilation",
+            "Multilobar infiltrates",
+            "Confusion"
+          ],
+          "answerIndex": 1,
+          "explanation": "Major criteria: vasopressors or mechanical ventilation."
+        },
+        {
+          "id": "severe-cap-q2",
+          "stem": "National Indian first-line empirical ICU CAP regimen without Pseudomonas risk:",
+          "options": [
+            "Meropenem + colistin",
+            "Ceftriaxone 2 g + azithromycin 500 mg",
+            "Levofloxacin alone",
+            "Vancomycin alone"
+          ],
+          "answerIndex": 1,
+          "explanation": "NCDC/ICMR 2025."
+        },
+        {
+          "id": "severe-cap-q3",
+          "stem": "CAPE COD showed hydrocortisone in severe CAP:",
+          "options": [
+            "Increased mortality",
+            "Reduced 28-day mortality",
+            "No effect",
+            "Only reduced fever"
+          ],
+          "answerIndex": 1,
+          "explanation": "6.2% vs 11.9%."
+        },
+        {
+          "id": "severe-cap-q4",
+          "stem": "Diabetic farmer from coastal Odisha with cavitating pneumonia and shock. Consider:",
+          "options": [
+            "Melioidosis - meropenem/ceftazidime",
+            "Viral pneumonia only",
+            "PJP",
+            "Asthma"
+          ],
+          "answerIndex": 0,
+          "explanation": "Melioidosis is endemic in India."
+        }
+      ]
+    },
+    {
+      "id": "hap-vap",
+      "title": "Hospital-acquired and ventilator-associated pneumonia",
+      "summary": "Diagnose VAP carefully, choose empirical therapy from the local ICU antibiogram, cover MRSA and resistant Gram-negatives when indicated, and stop at 7 days.",
+      "viewKey": "topic:icu-infections-stewardship-immunocompromised/hap-vap",
+      "uiHints": {
+        "icon": "air-vent",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "HAP: pneumonia ≥ 48 h after admission, not incubating at admission. VAP: pneumonia > 48 h after intubation. Diagnosis: new or progressive infiltrate plus ≥ 2 of fever, purulent secretions, leucocytosis/leucopenia, worsening oxygenation.",
+          "refs": [
+            "idsa-hapvap-2016",
+            "ers-hapvap-2017"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Confirm clinically and microbiologically",
+            "detail": "Chest imaging (CXR/lung ultrasound), endotracheal aspirate semi-quantitative culture (or BAL/mini-BAL), blood cultures. Exclude atelectasis, pulmonary oedema, ARDS, PE.",
+            "refs": [
+              "idsa-hapvap-2016"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Assess resistance risk",
+            "detail": "Prior IV antibiotics within 90 days, septic shock, ARDS before VAP, ≥ 5 days hospital stay before onset, acute RRT, known colonisation, local MDR prevalence (in most Indian ICUs: high).",
+            "refs": [
+              "idsa-hapvap-2016",
+              "ers-hapvap-2017"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Empirical therapy",
+            "detail": "Per ICU antibiogram. Without recent BL-BLI/carbapenem exposure: piperacillin-tazobactam 4.5 g q6h (or cefoperazone-sulbactam 3 g q12h). Recent BL-BLI/carbapenem exposure: meropenem ± polymyxin B (or colistin). Add vancomycin/linezolid if MRSA risk or MRSA > 10-20% locally.",
+            "time": "≤ 1 h if shock",
+            "refs": [
+              "ntg-india-2025",
+              "idsa-hapvap-2016"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Optimise dosing",
+            "detail": "Loading doses, extended infusion of beta-lactams, TDM for vancomycin/aminoglycosides; consider CRRT/ARC effects.",
+            "refs": [
+              "abdulaziz-2024",
+              "vanco-2020"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "De-escalate at 48-72 h",
+            "detail": "Narrow to culture results; stop MRSA cover if cultures/nasal PCR negative; stop if alternative diagnosis.",
+            "refs": [
+              "idsa-hapvap-2016"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Duration 7 days",
+            "detail": "7 days for most HAP/VAP regardless of organism if clinically improving (ICMR CRO guidance 7-10 days).",
+            "refs": [
+              "idsa-hapvap-2016",
+              "icmr-cro-2022"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "piperacillin-tazobactam",
+            "role": "Empirical VAP (no recent BL-BLI)",
+            "route": "IV extended infusion",
+            "dose": "4.5 g q6h over 3-4 h (first dose over 30 min)",
+            "dilution": "4.5 g in 100 mL NS",
+            "workedExample": "70 kg normal renal function: 4.5 g at 00, 06, 12, 18 h, each over 3 h (33 mL/h)",
+            "refs": [
+              "ntg-india-2025",
+              "abdulaziz-2024"
+            ]
+          },
+          {
+            "drugId": "meropenem",
+            "role": "VAP after BL-BLI exposure / ESBL",
+            "route": "IV extended infusion",
+            "dose": "1 g q8h (2 g q8h over 3 h for high MIC)",
+            "refs": [
+              "ntg-india-2025",
+              "icmr-cro-2022"
+            ]
+          },
+          {
+            "drugId": "vancomycin",
+            "role": "MRSA cover",
+            "route": "IV",
+            "dose": "Load 25 mg/kg, then 15 mg/kg q8-12h; AUC 400-600",
+            "workedExample": "70 kg: 1,750 mg load over ~2 h, then 1 g q12h; level before 4th dose",
+            "calculatorId": "creatinine-clearance-cg",
+            "refs": [
+              "vanco-2020",
+              "ntg-india-2025"
+            ]
+          },
+          {
+            "drugId": "linezolid",
+            "role": "MRSA alternative",
+            "route": "IV/oral",
+            "dose": "600 mg q12h",
+            "refs": [
+              "idsa-hapvap-2016"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "VAP with septic shock in an ICU with high CRE/CRAB rates: empirical polymyxin-containing regimen per antibiogram until cultures return.",
+            "refs": [
+              "ntg-india-2025",
+              "icmr-cro-2022"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Treating tracheal colonisation (positive culture without clinical pneumonia) - especially Acinetobacter.",
+            "refs": [
+              "icmr-cro-2022"
+            ]
+          },
+          {
+            "text": "Nebulised antibiotics for CRAB pneumonia: not recommended by ICMR.",
+            "refs": [
+              "icmr-cro-2022"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "A negative good-quality tracheal aspirate (no organisms, few neutrophils) in a patient without new antibiotics strongly argues against VAP.",
+            "refs": [
+              "idsa-hapvap-2016"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Suspected VAP",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "New infiltrate + fever/secretions/hypoxaemia"
+          },
+          {
+            "id": "cx",
+            "type": "action",
+            "text": "Tracheal aspirate/BAL + blood cultures"
+          },
+          {
+            "id": "exp",
+            "type": "decision",
+            "text": "Recent BL-BLI or carbapenem exposure / CRO colonised?"
+          },
+          {
+            "id": "pt",
+            "type": "action",
+            "text": "Piperacillin-tazobactam (antibiogram-guided)"
+          },
+          {
+            "id": "mer",
+            "type": "action",
+            "text": "Meropenem ± polymyxin B/colistin",
+            "severity": "high"
+          },
+          {
+            "id": "mrsa",
+            "type": "decision",
+            "text": "MRSA risk?"
+          },
+          {
+            "id": "addv",
+            "type": "action",
+            "text": "Add vancomycin or linezolid"
+          },
+          {
+            "id": "rev",
+            "type": "decision",
+            "text": "48-72 h: cultures positive and improving?"
+          },
+          {
+            "id": "de",
+            "type": "end",
+            "text": "De-escalate to targeted therapy; 7 days"
+          },
+          {
+            "id": "stop",
+            "type": "end",
+            "text": "Reconsider diagnosis; stop if cultures negative and improving"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "cx"
+          },
+          {
+            "from": "cx",
+            "to": "exp"
+          },
+          {
+            "from": "exp",
+            "to": "pt",
+            "label": "No"
+          },
+          {
+            "from": "exp",
+            "to": "mer",
+            "label": "Yes"
+          },
+          {
+            "from": "pt",
+            "to": "mrsa"
+          },
+          {
+            "from": "mer",
+            "to": "mrsa"
+          },
+          {
+            "from": "mrsa",
+            "to": "addv",
+            "label": "Yes"
+          },
+          {
+            "from": "mrsa",
+            "to": "rev",
+            "label": "No"
+          },
+          {
+            "from": "addv",
+            "to": "rev"
+          },
+          {
+            "from": "rev",
+            "to": "de",
+            "label": "Yes"
+          },
+          {
+            "from": "rev",
+            "to": "stop",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "ntg-india-2025",
+          "idsa-hapvap-2016"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Micro-aspiration of colonised oropharyngeal and gastric secretions past the cuff, biofilm on the endotracheal tube, and impaired mucociliary clearance lead to VAP; pathogens are predominantly Gram-negative (Klebsiella, Acinetobacter, Pseudomonas) in Indian ICUs.",
+        "evidence": "- IDSA/ATS 2016: 7 days for HAP/VAP, antibiogram-based empirical therapy, de-escalation [Kalil 2016].\n- ERS/ESICM 2017 international HAP/VAP guideline [Torres 2017].\n- NCDC/ICMR 2025 and ICMR CRO guidance 2022 give Indian empirical and directed regimens [NCDC 2025; ICMR 2022].",
+        "controversies": "- Diagnosis by clinical vs quantitative cultures; ventilator-associated tracheobronchitis treatment; inhaled antibiotics.",
+        "indiaNotes": "- ICMR AMRSN surveillance shows high carbapenem resistance in Klebsiella pneumoniae and very high resistance in Acinetobacter baumannii in Indian ICUs; generating a unit antibiogram is essential.\n- Cefoperazone-sulbactam is commonly used in India and is listed as a first-line VAP option in national guidelines."
+      },
+      "drugIds": [
+        "piperacillin-tazobactam",
+        "meropenem",
+        "vancomycin",
+        "linezolid"
+      ],
+      "calculatorIds": [
+        "creatinine-clearance-cg"
+      ],
+      "references": [
+        "idsa-hapvap-2016",
+        "ers-hapvap-2017",
+        "ntg-india-2025",
+        "icmr-cro-2022",
+        "abdulaziz-2024",
+        "vanco-2020"
+      ],
+      "quiz": [
+        {
+          "id": "hap-vap-q1",
+          "stem": "Standard VAP treatment duration:",
+          "options": [
+            "3 days",
+            "7 days",
+            "14 days",
+            "21 days"
+          ],
+          "answerIndex": 1,
+          "explanation": "IDSA/ATS 2016."
+        },
+        {
+          "id": "hap-vap-q2",
+          "stem": "Empirical VAP regimen after recent piperacillin-tazobactam exposure in an Indian ICU (NCDC 2025):",
+          "options": [
+            "Ceftriaxone",
+            "Meropenem ± polymyxin B/colistin",
+            "Azithromycin",
+            "Amoxicillin"
+          ],
+          "answerIndex": 1,
+          "explanation": "Recent BL-BLI exposure."
+        },
+        {
+          "id": "hap-vap-q3",
+          "stem": "Nebulised colistin for CRAB VAP (ICMR):",
+          "options": [
+            "Recommended as monotherapy",
+            "Not recommended",
+            "Mandatory with IV",
+            "Only in children"
+          ],
+          "answerIndex": 1,
+          "explanation": "ICMR CRO guidance."
+        }
+      ]
+    },
+    {
+      "id": "mdr-gram-negatives",
+      "title": "Carbapenem-resistant and MDR Gram-negative infections",
+      "summary": "Mechanism-directed therapy for CRE (NDM, OXA-48, KPC), CRAB and CRPA following ICMR 2022 and IDSA 2024, with polymyxin dosing and infection control.",
+      "viewKey": "topic:icu-infections-stewardship-immunocompromised/mdr-gram-negatives",
+      "uiHints": {
+        "icon": "shield-alert",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "CRE = Enterobacterales resistant to any carbapenem. In India, NDM (metallo-beta-lactamase) and OXA-48-like carbapenemases predominate, often together. CRAB and CRPA are carbapenem-resistant Acinetobacter baumannii and Pseudomonas aeruginosa.",
+          "refs": [
+            "icmr-cro-2022",
+            "icmr-amrsn-2023"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Infection or colonisation?",
+            "detail": "Treat only clinical infection; Acinetobacter and Stenotrophomonas in respiratory or wound samples are often colonisers.",
+            "refs": [
+              "icmr-cro-2022"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Ask the lab for mechanism",
+            "detail": "Request carbapenemase testing (phenotypic/PCR: NDM, OXA-48, KPC) and ceftazidime-avibactam + aztreonam synergy testing.",
+            "refs": [
+              "icmr-cro-2022"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "NDM (± OXA-48) CRE",
+            "detail": "First choice: ceftazidime-avibactam 2.5 g q8h + aztreonam 2 g q8h, both over 3 h (after synergy shown). Alternatives: polymyxin + another active agent (tigecycline, aminoglycoside, IV fosfomycin) or high-dose meropenem if MIC < 16.",
+            "refs": [
+              "icmr-cro-2022",
+              "idsa-amr-2024"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "OXA-48-like or KPC CRE",
+            "detail": "Ceftazidime-avibactam 2.5 g q8h over 3 h (if susceptible). Meropenem-vaborbactam or imipenem-relebactam also options for KPC where available.",
+            "refs": [
+              "icmr-cro-2022",
+              "idsa-amr-2024"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "CRAB",
+            "detail": "High-dose sulbactam (6-9 g/day; e.g. ampicillin-sulbactam 9 g q8h over 4 h) as backbone plus a second active agent (polymyxin, minocycline 200 mg q12h, tigecycline) for moderate-severe infection.",
+            "refs": [
+              "icmr-cro-2022",
+              "idsa-amr-2024"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "CRPA",
+            "detail": "Use any susceptible beta-lactam (ceftazidime, cefepime, piperacillin-tazobactam); newer agents (ceftolozane-tazobactam, ceftazidime-avibactam) per susceptibility; polymyxin-based combination only when nothing else works.",
+            "refs": [
+              "icmr-cro-2022",
+              "idsa-amr-2024"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Polymyxin rules",
+            "detail": "Always load. Polymyxin B for systemic infections (no renal adjustment); colistin for UTI (renal excretion as active drug). Avoid tigecycline monotherapy for bacteraemia/pneumonia.",
+            "refs": [
+              "polymyxin-2019",
+              "icmr-cro-2022"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Source control and infection control",
+            "detail": "Remove lines, drain collections; contact precautions, cohorting, rectal surveillance per policy, hand hygiene.",
+            "refs": [
+              "icmr-cro-2022"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "ceftazidime-avibactam",
+            "role": "NDM CRE (with aztreonam) or OXA-48/KPC (alone)",
+            "route": "IV over 3 h",
+            "dose": "2.5 g q8h (+ aztreonam 2 g q8h over 3 h for MBL)",
+            "verify": "Renal adjustment for both agents; synergy test before use.",
+            "refs": [
+              "icmr-cro-2022"
+            ]
+          },
+          {
+            "drugId": "polymyxin-b",
+            "role": "CRO when no better option",
+            "route": "IV",
+            "dose": "Load 2.5 mg/kg (25,000 units/kg), then 1.5 mg/kg (15,000 units/kg) q12h",
+            "workedExample": "70 kg: 17.5 lakh units (175 mg) load over 2 h, then 10.5 lakh units (105 mg) q12h; Indian vial 5 lakh units",
+            "notes": "1 mg = 10,000 units.",
+            "verify": "ICMR fixed doses 15 lakh load then 7.5 lakh q12h; NCDC 15-20 lakh then 7.5-10 lakh.",
+            "refs": [
+              "polymyxin-2019"
+            ]
+          },
+          {
+            "drugId": "colistin",
+            "role": "CRO UTI or when polymyxin B unavailable",
+            "route": "IV",
+            "dose": "9 million units load, then 4.5 million units q12h",
+            "verify": "Adjust maintenance for CrCl and CRRT.",
+            "refs": [
+              "icmr-cro-2022"
+            ]
+          },
+          {
+            "drugId": "ampicillin-sulbactam",
+            "role": "CRAB backbone",
+            "route": "IV over 4 h",
+            "dose": "9 g q8h (sulbactam 9 g/day)",
+            "refs": [
+              "icmr-cro-2022"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "cro-choice",
+            "title": "Mechanism-directed therapy (ICMR 2022)",
+            "columns": [
+              "Organism / mechanism",
+              "First choice",
+              "Other options"
+            ],
+            "rows": [
+              [
+                "CRE - NDM (MBL) ± OXA-48",
+                "Ceftazidime-avibactam + aztreonam, prolonged infusion (synergy test)",
+                "Polymyxin + active agent; high-dose meropenem if MIC < 16"
+              ],
+              [
+                "CRE - OXA-48-like",
+                "Ceftazidime-avibactam (prolonged infusion)",
+                "Polymyxin + active agent"
+              ],
+              [
+                "CRE - KPC",
+                "Ceftazidime-avibactam",
+                "Polymyxin + active agent"
+              ],
+              [
+                "CRAB",
+                "High-dose sulbactam + second active agent",
+                "Polymyxin, minocycline, tigecycline"
+              ],
+              [
+                "CRPA",
+                "Any susceptible beta-lactam/BL-BLI",
+                "Polymyxin-based combination if pan-resistant"
+              ]
+            ],
+            "refs": [
+              "icmr-cro-2022"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Septic shock with known CRE colonisation: empirical regimen must cover CRE until cultures are back.",
+            "refs": [
+              "icmr-cro-2022"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Using polymyxin B for UTI (low urinary concentration) or colistin without a loading dose.",
+            "refs": [
+              "polymyxin-2019",
+              "icmr-cro-2022"
+            ]
+          },
+          {
+            "text": "Empirical ceftazidime-avibactam + aztreonam: national guidance reserves it for targeted therapy.",
+            "refs": [
+              "ntg-india-2025"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Give ceftazidime-avibactam and aztreonam simultaneously (Y-site) so the inhibitor protects aztreonam at the same time.",
+            "refs": [
+              "idsa-amr-2024"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Carbapenem-resistant isolate",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Carbapenem-resistant Gram-negative isolate"
+          },
+          {
+            "id": "inf",
+            "type": "decision",
+            "text": "True infection (not colonisation)?"
+          },
+          {
+            "id": "noabx",
+            "type": "end",
+            "text": "Do not treat; infection control"
+          },
+          {
+            "id": "org",
+            "type": "decision",
+            "text": "Organism?"
+          },
+          {
+            "id": "mech",
+            "type": "decision",
+            "text": "Carbapenemase type?"
+          },
+          {
+            "id": "ndm",
+            "type": "end",
+            "text": "Ceftazidime-avibactam + aztreonam (synergy)",
+            "severity": "critical"
+          },
+          {
+            "id": "cza",
+            "type": "end",
+            "text": "Ceftazidime-avibactam alone",
+            "severity": "high"
+          },
+          {
+            "id": "crab",
+            "type": "end",
+            "text": "High-dose sulbactam + second agent",
+            "severity": "critical"
+          },
+          {
+            "id": "crpa",
+            "type": "end",
+            "text": "Susceptible beta-lactam; polymyxin combo if none",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "inf"
+          },
+          {
+            "from": "inf",
+            "to": "noabx",
+            "label": "No"
+          },
+          {
+            "from": "inf",
+            "to": "org",
+            "label": "Yes"
+          },
+          {
+            "from": "org",
+            "to": "mech",
+            "label": "Enterobacterales"
+          },
+          {
+            "from": "org",
+            "to": "crab",
+            "label": "Acinetobacter"
+          },
+          {
+            "from": "org",
+            "to": "crpa",
+            "label": "Pseudomonas"
+          },
+          {
+            "from": "mech",
+            "to": "ndm",
+            "label": "NDM (MBL)"
+          },
+          {
+            "from": "mech",
+            "to": "cza",
+            "label": "OXA-48 / KPC"
+          }
+        ],
+        "refs": [
+          "icmr-cro-2022"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Carbapenemases hydrolyse carbapenems: serine enzymes (KPC, OXA-48) are inhibited by avibactam; metallo-beta-lactamases (NDM, VIM) are not but cannot hydrolyse aztreonam - hence aztreonam plus avibactam (which protects aztreonam from co-produced ESBL/AmpC).",
+        "evidence": "- ICMR 2022 CRO guidance: Indian mechanism-based options and doses [ICMR 2022].\n- IDSA 2024 AMR guidance [Tamma 2024].\n- International polymyxin consensus 2019: loading doses, polymyxin B preferred for systemic infection, colistin for UTI [Tsuji 2019].",
+        "controversies": "- Combination vs monotherapy for CRE; cefiderocol in CRAB; sulbactam-durlobactam (not available in India).",
+        "indiaNotes": "- India is a global hotspot for NDM-producing Enterobacterales; ICMR AMRSN annual reports document high carbapenem resistance in K. pneumoniae and A. baumannii.\n- Polymyxin B vials in India are labelled in units (5 lakh units = 50 mg). Newer agents (e.g. cefepime-enmetazobactam) are entering the Indian market; use per susceptibility and stewardship approval."
+      },
+      "drugIds": [
+        "ceftazidime-avibactam",
+        "polymyxin-b",
+        "colistin",
+        "ampicillin-sulbactam"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "icmr-cro-2022",
+        "idsa-amr-2024",
+        "polymyxin-2019",
+        "icmr-amrsn-2023",
+        "ntg-india-2025"
+      ],
+      "quiz": [
+        {
+          "id": "mdr-gram-negatives-q1",
+          "stem": "First-choice therapy for NDM-producing Klebsiella bacteraemia (ICMR):",
+          "options": [
+            "Meropenem alone",
+            "Ceftazidime-avibactam + aztreonam",
+            "Tigecycline monotherapy",
+            "Ceftriaxone"
+          ],
+          "answerIndex": 1,
+          "explanation": "After synergy testing."
+        },
+        {
+          "id": "mdr-gram-negatives-q2",
+          "stem": "Polymyxin preferred for CRE pyelonephritis:",
+          "options": [
+            "Polymyxin B",
+            "Colistin",
+            "Either",
+            "Neither ever"
+          ],
+          "answerIndex": 1,
+          "explanation": "Colistin reaches urine as active drug."
+        },
+        {
+          "id": "mdr-gram-negatives-q3",
+          "stem": "CRAB backbone per ICMR:",
+          "options": [
+            "High-dose sulbactam",
+            "Ceftazidime-avibactam",
+            "Aztreonam",
+            "Ertapenem"
+          ],
+          "answerIndex": 0,
+          "explanation": "Sulbactam 6-9 g/day."
+        },
+        {
+          "id": "mdr-gram-negatives-q4",
+          "stem": "Polymyxin B loading dose for 70 kg:",
+          "options": [
+            "2.5 lakh units",
+            "~17.5 lakh units (2.5 mg/kg)",
+            "50 lakh units",
+            "No loading"
+          ],
+          "answerIndex": 1,
+          "explanation": "25,000 units/kg."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Polymyxin B units-to-mg conversion and Indian vial strength",
+          "reason": "1 mg = 10,000 units; check vial labelling."
+        }
+      ]
+    },
+    {
+      "id": "invasive-fungal",
+      "title": "Invasive fungal infections: candidaemia, C. auris, aspergillosis, mucormycosis",
+      "summary": "Echinocandin-first candidaemia bundle, C. auris precautions, voriconazole for aspergillosis and urgent liposomal amphotericin plus surgery for mucormycosis.",
+      "viewKey": "topic:icu-infections-stewardship-immunocompromised/invasive-fungal",
+      "uiHints": {
+        "icon": "sprout",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Invasive candidiasis (candidaemia, deep-seated) is the commonest ICU fungal infection. Invasive aspergillosis occurs in neutropenia, transplant, steroids, influenza/COVID-19 and COPD. Mucormycosis (rhino-orbito-cerebral) is strongly linked to uncontrolled diabetes and steroids in India.",
+          "refs": [
+            "idsa-candida-2016",
+            "idsa-asperg-2016",
+            "mucor-2019"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Candidaemia bundle",
+            "detail": "Echinocandin first line; remove/replace CVC; repeat blood cultures daily until negative; dilated fundoscopy (in neutropenia after recovery); echocardiography if persistent; 14 days after first negative culture and symptom resolution.",
+            "refs": [
+              "idsa-candida-2016",
+              "ntg-india-2025"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Step-down",
+            "detail": "Switch to fluconazole after 5-7 days if isolate susceptible, patient stable and repeat cultures negative.",
+            "refs": [
+              "idsa-candida-2016"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Candida auris",
+            "detail": "Fluconazole-resistant, spreads in ICUs: echinocandin, contact precautions, single room, chlorine/peracetic-acid environmental cleaning, inform infection control.",
+            "refs": [
+              "idsa-candida-2016",
+              "ntg-india-2025"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Do not treat candiduria or respiratory Candida",
+            "detail": "Usually colonisation; treat candiduria only in neutropenia, urological procedures or symptomatic infection.",
+            "refs": [
+              "idsa-candida-2016"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Aspergillosis",
+            "detail": "CT chest, serum/BAL galactomannan; voriconazole 6 mg/kg q12h × 2 then 4 mg/kg q12h (TDM); isavuconazole or L-AmB alternatives.",
+            "refs": [
+              "idsa-asperg-2016"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Mucormycosis",
+            "detail": "Emergency: L-AmB 5 mg/kg/day (10 mg/kg CNS), urgent surgical debridement (ENT/maxillofacial/neurosurgery), control glucose and acidosis, reduce steroids/immunosuppression; step-down posaconazole/isavuconazole.",
+            "refs": [
+              "mucor-2019"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "caspofungin",
+            "role": "Candidaemia first line",
+            "route": "IV",
+            "dose": "70 mg load, then 50 mg daily",
+            "notes": "Micafungin 100 mg daily needs no load.",
+            "refs": [
+              "idsa-candida-2016",
+              "ntg-india-2025"
+            ]
+          },
+          {
+            "drugId": "fluconazole",
+            "role": "Step-down for susceptible Candida",
+            "route": "IV/oral",
+            "dose": "800 mg load, then 400 mg daily",
+            "workedExample": "70 kg: 12 mg/kg ≈ 800 mg, then 6 mg/kg ≈ 400 mg",
+            "refs": [
+              "idsa-candida-2016"
+            ]
+          },
+          {
+            "drugId": "voriconazole",
+            "role": "Invasive aspergillosis",
+            "route": "IV/oral",
+            "dose": "6 mg/kg q12h × 2, then 4 mg/kg q12h",
+            "target": "Trough 1-5.5 mg/L",
+            "workedExample": "70 kg: 420 mg × 2, then 280 mg q12h; trough day 5",
+            "refs": [
+              "idsa-asperg-2016"
+            ]
+          },
+          {
+            "drugId": "liposomal-amb",
+            "role": "Mucormycosis",
+            "route": "IV",
+            "dose": "5 mg/kg/day (10 mg/kg/day for CNS involvement)",
+            "dilution": "Reconstitute 50 mg vials; dilute in 5% dextrose (not saline) to 0.2-2 mg/mL over 2 h",
+            "workedExample": "70 kg: 350 mg/day (7 vials)",
+            "refs": [
+              "mucor-2019"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Diabetic with facial pain/swelling, black nasal eschar, ptosis or vision loss: suspect rhino-orbito-cerebral mucormycosis - same-day imaging, biopsy, L-AmB and surgery.",
+            "refs": [
+              "mucor-2019"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Starting fluconazole empirically for candidaemia in an Indian ICU where C. auris/C. glabrata are common.",
+            "refs": [
+              "ntg-india-2025"
+            ]
+          },
+          {
+            "text": "Leaving the central line in place in candidaemia.",
+            "refs": [
+              "idsa-candida-2016"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Beta-D-glucan has a high negative predictive value for invasive candidiasis and can support stopping empirical antifungals.",
+            "refs": [
+              "idsa-candida-2016"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Candida in blood culture",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Candida spp. in blood culture"
+          },
+          {
+            "id": "ech",
+            "type": "action",
+            "text": "Start echinocandin; remove CVC",
+            "severity": "high"
+          },
+          {
+            "id": "work",
+            "type": "action",
+            "text": "Daily blood cultures; fundoscopy; echo if persistent"
+          },
+          {
+            "id": "auris",
+            "type": "decision",
+            "text": "C. auris identified?"
+          },
+          {
+            "id": "ipc",
+            "type": "action",
+            "text": "Contact precautions, single room, environmental cleaning"
+          },
+          {
+            "id": "susc",
+            "type": "decision",
+            "text": "Stable, cultures negative, fluconazole-susceptible?"
+          },
+          {
+            "id": "step",
+            "type": "end",
+            "text": "Step down to fluconazole; 14 days from first negative culture"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Continue echinocandin 14 days from first negative culture"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "ech"
+          },
+          {
+            "from": "ech",
+            "to": "work"
+          },
+          {
+            "from": "work",
+            "to": "auris"
+          },
+          {
+            "from": "auris",
+            "to": "ipc",
+            "label": "Yes"
+          },
+          {
+            "from": "auris",
+            "to": "susc",
+            "label": "No"
+          },
+          {
+            "from": "ipc",
+            "to": "cont"
+          },
+          {
+            "from": "susc",
+            "to": "step",
+            "label": "Yes"
+          },
+          {
+            "from": "susc",
+            "to": "cont",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "idsa-candida-2016"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Candida gains access from colonised gut or skin through CVCs, abdominal surgery and broad-spectrum antibiotics. Moulds are inhaled; angioinvasion causes infarction and necrosis, especially in mucormycosis where acidosis and high iron availability (DKA) drive growth.",
+        "evidence": "- IDSA 2016 candidiasis guideline [Pappas 2016]. IDSA 2016 aspergillosis guideline [Patterson 2016]. ECMM/MSG 2019 global mucormycosis guideline [Cornely 2019].",
+        "controversies": "- Empirical antifungals in non-neutropenic ICU patients (EMPIRICUS showed no benefit); antifungal prophylaxis in high-risk surgical patients.",
+        "indiaNotes": "- India has high rates of C. auris and C. tropicalis candidaemia; national guidelines recommend echinocandins first line.\n- India had the world's largest COVID-19-associated mucormycosis outbreak (2021); uncontrolled diabetes and steroid overuse remain key risk factors.\n- Generic L-AmB is available but expensive; conventional amphotericin is cheaper but more nephrotoxic."
+      },
+      "drugIds": [
+        "caspofungin",
+        "fluconazole",
+        "voriconazole",
+        "liposomal-amb"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "idsa-candida-2016",
+        "idsa-asperg-2016",
+        "mucor-2019",
+        "ntg-india-2025"
+      ],
+      "quiz": [
+        {
+          "id": "invasive-fungal-q1",
+          "stem": "First-line therapy for candidaemia in an Indian ICU:",
+          "options": [
+            "Fluconazole",
+            "Echinocandin",
+            "Voriconazole",
+            "Nystatin"
+          ],
+          "answerIndex": 1,
+          "explanation": "NCDC 2025, IDSA 2016."
+        },
+        {
+          "id": "invasive-fungal-q2",
+          "stem": "Duration of candidaemia therapy:",
+          "options": [
+            "5 days",
+            "14 days after first negative blood culture",
+            "6 weeks always",
+            "Until line removed"
+          ],
+          "answerIndex": 1,
+          "explanation": "IDSA 2016."
+        },
+        {
+          "id": "invasive-fungal-q3",
+          "stem": "Mucormycosis treatment:",
+          "options": [
+            "Fluconazole",
+            "Liposomal amphotericin B + surgical debridement",
+            "Voriconazole",
+            "Echinocandin"
+          ],
+          "answerIndex": 1,
+          "explanation": "Voriconazole has no activity against Mucorales."
+        }
+      ]
+    },
+    {
+      "id": "tb-hiv-icu",
+      "title": "Tuberculosis and HIV in the ICU",
+      "summary": "Start NTEP weight-band ATT for critically ill TB, steroids for TB meningitis, and manage PJP, cryptococcal meningitis and ART timing in advanced HIV.",
+      "viewKey": "topic:icu-infections-stewardship-immunocompromised/tb-hiv-icu",
+      "uiHints": {
+        "icon": "shield",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "TB presents to the ICU as miliary TB with ARDS, TB meningitis, massive haemoptysis, TB-IRIS or drug-induced liver injury. In advanced HIV (CD4 < 200), PJP, cryptococcal meningitis, TB and bacterial sepsis dominate.",
+          "refs": [
+            "ntep-stw-2022",
+            "who-crypto-2022"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Diagnose TB quickly",
+            "detail": "Sputum/tracheal aspirate/BAL GeneXpert (CBNAAT/TrueNat) with rifampicin resistance, CSF Xpert Ultra and ADA, urine LAM in HIV, imaging; start empirical ATT if high suspicion and critically ill.",
+            "refs": [
+              "ntep-stw-2022"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "ATT",
+            "detail": "2HRZE/4HRE by NTEP weight band (extend continuation to 10 months for CNS TB). Give by NG if needed; IV options limited.",
+            "refs": [
+              "ntep-stw-2022"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "TB meningitis steroids",
+            "detail": "Dexamethasone 0.4 mg/kg/day IV in divided doses during admission, tapered over 6-8 weeks (HIV-negative).",
+            "refs": [
+              "thwaites-2004",
+              "ntep-stw-2022"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Drug-induced liver injury",
+            "detail": "Stop hepatotoxic drugs if ALT > 3× with symptoms or > 5× without, or bilirubin rise; give non-hepatotoxic bridge (e.g. ethambutol + levofloxacin + streptomycin/linezolid per specialist); reintroduce sequentially.",
+            "refs": [
+              "ntep-stw-2022"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "PJP",
+            "detail": "CD4 < 200, hypoxaemia, bilateral ground-glass: cotrimoxazole 15-20 mg/kg/day (TMP) in 3-4 doses × 21 days + prednisolone if PaO2 < 70 mmHg.",
+            "refs": [
+              "nih-oi-pcp"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Cryptococcal meningitis",
+            "detail": "Single L-AmB 10 mg/kg + 14 days flucytosine 100 mg/kg/day + fluconazole 1,200 mg/day (WHO 2022); therapeutic LPs for raised opening pressure (> 25 cm H2O).",
+            "refs": [
+              "who-crypto-2022"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "ART timing",
+            "detail": "Continue ART if already on it. New diagnosis: start within 2 weeks for most OIs (including PJP, and TB if CD4 < 50); delay 4-6 weeks in cryptococcal meningitis and TB meningitis (IRIS risk).",
+            "refs": [
+              "who-crypto-2022",
+              "nih-oi-pcp"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "hrze",
+            "role": "Drug-sensitive TB",
+            "route": "Oral/NG",
+            "dose": "Weight-band FDC daily (e.g. 50-64 kg: 4 tablets)",
+            "workedExample": "70 kg: 5 tablets of HRZE (75/150/400/275) daily for 8 weeks",
+            "refs": [
+              "ntep-stw-2022"
+            ]
+          },
+          {
+            "drugId": "dexamethasone",
+            "role": "TB meningitis",
+            "route": "IV",
+            "dose": "0.4 mg/kg/day in 3-4 divided doses, taper",
+            "workedExample": "70 kg: 28 mg/day (e.g. 8 mg q8h ≈ 24 mg or 7 mg q6h)",
+            "refs": [
+              "thwaites-2004",
+              "ntep-stw-2022"
+            ]
+          },
+          {
+            "drugId": "cotrimoxazole",
+            "role": "PJP",
+            "route": "IV/oral",
+            "dose": "TMP 15-20 mg/kg/day in 3-4 doses × 21 days",
+            "workedExample": "70 kg: TMP 1,050-1,400 mg/day, e.g. 2 double-strength (160/800 mg) tablets q6h = TMP 1,280 mg/day",
+            "refs": [
+              "nih-oi-pcp"
+            ]
+          },
+          {
+            "drugId": "prednisolone",
+            "role": "Moderate-severe PJP",
+            "route": "Oral",
+            "dose": "40 mg BD × 5 days, 40 mg OD × 5 days, 20 mg OD × 11 days",
+            "refs": [
+              "nih-oi-pcp"
+            ]
+          },
+          {
+            "drugId": "liposomal-amb",
+            "role": "Cryptococcal meningitis",
+            "route": "IV",
+            "dose": "Single 10 mg/kg dose (with flucytosine + fluconazole)",
+            "refs": [
+              "who-crypto-2022"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "TB meningitis with falling GCS: hydrocephalus - urgent CT and neurosurgical review (VP shunt/EVD).",
+            "refs": [
+              "ntep-stw-2022"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Empirical fluoroquinolone or linezolid for 'pneumonia' masking TB.",
+            "refs": [
+              "ntg-india-2025"
+            ]
+          },
+          {
+            "text": "Starting ART immediately in cryptococcal meningitis: increased mortality from IRIS.",
+            "refs": [
+              "who-crypto-2022"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Rifampicin markedly lowers levels of azoles, many ART drugs, steroids and warfarin - review all drug interactions on starting ATT.",
+            "refs": [
+              "ntep-stw-2022"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Miliary TB causes diffuse granulomatous lung injury and ARDS; TB meningitis causes basal exudates, vasculitis, infarcts and hydrocephalus. HIV-related CD4 depletion predisposes to opportunistic infections; ART-driven immune recovery can cause IRIS.",
+        "evidence": "- Thwaites 2004: dexamethasone reduced mortality in TB meningitis (RR 0.69) in HIV-negative adults [Thwaites 2004].\n- WHO 2022: single high-dose L-AmB induction for cryptococcal meningitis [WHO 2022].\n- NIH OI guidelines: cotrimoxazole + adjunctive steroids for PJP [NIH OI].",
+        "controversies": "- High-dose rifampicin for TB meningitis; outcomes of mechanical ventilation in TB-ARDS.",
+        "indiaNotes": "- India has the world's highest TB burden; notify all TB cases on Ni-kshay and link to NTEP (free drugs, nutritional support).\n- NACO provides free ART; ART centres guide regimens (dolutegravir-based first line); check rifampicin-dolutegravir interaction (dolutegravir twice daily)."
+      },
+      "drugIds": [
+        "hrze",
+        "dexamethasone",
+        "cotrimoxazole",
+        "prednisolone",
+        "liposomal-amb"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "ntep-stw-2022",
+        "thwaites-2004",
+        "who-crypto-2022",
+        "nih-oi-pcp",
+        "ntg-india-2025"
+      ],
+      "quiz": [
+        {
+          "id": "tb-hiv-icu-q1",
+          "stem": "NTEP weight band for a 70 kg adult on HRZE FDC:",
+          "options": [
+            "3 tablets",
+            "4 tablets",
+            "5 tablets",
+            "6 tablets"
+          ],
+          "answerIndex": 2,
+          "explanation": "65-75 kg = 5 tablets."
+        },
+        {
+          "id": "tb-hiv-icu-q2",
+          "stem": "Steroid in TB meningitis (HIV-negative):",
+          "options": [
+            "None",
+            "Dexamethasone 0.4 mg/kg/day tapered",
+            "Hydrocortisone 50 mg once",
+            "Fludrocortisone"
+          ],
+          "answerIndex": 1,
+          "explanation": "Thwaites 2004."
+        },
+        {
+          "id": "tb-hiv-icu-q3",
+          "stem": "ART timing in cryptococcal meningitis:",
+          "options": [
+            "Immediately",
+            "Defer 4-6 weeks",
+            "Never",
+            "After 1 year"
+          ],
+          "answerIndex": 1,
+          "explanation": "IRIS risk."
+        },
+        {
+          "id": "tb-hiv-icu-q4",
+          "stem": "PJP with PaO2 60 mmHg on room air. Add:",
+          "options": [
+            "Prednisolone",
+            "Fluconazole",
+            "Rifampicin",
+            "Nothing"
+          ],
+          "answerIndex": 0,
+          "explanation": "Steroids if PaO2 < 70."
+        }
+      ],
+      "verify": [
+        {
+          "item": "PJP cotrimoxazole tablet worked example",
+          "reason": "Confirm local tablet strength (DS = 160/800 mg) and IV availability."
+        },
+        {
+          "item": "TB DILI non-hepatotoxic bridging regimen",
+          "reason": "Follow NTEP/chest physician protocol."
+        }
+      ]
+    },
+    {
+      "id": "febrile-neutropenia-tls",
+      "title": "Febrile neutropenia and tumour lysis syndrome",
+      "summary": "Antipseudomonal beta-lactam within 1 h for febrile neutropenia, escalation rules, and prevention/treatment of TLS with fluids, rasburicase and early RRT.",
+      "viewKey": "topic:icu-infections-stewardship-immunocompromised/febrile-neutropenia-tls",
+      "uiHints": {
+        "icon": "thermometer",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Febrile neutropenia: ANC < 500/mm³ (or expected to fall below 500 within 48 h) with single temperature ≥ 38.3 °C or ≥ 38.0 °C sustained for 1 h. TLS (Cairo-Bishop): ≥ 2 of uric acid ≥ 8 mg/dL, K ≥ 6 mmol/L, phosphate ≥ 4.5 mg/dL, Ca ≤ 7 mg/dL within 3 days before to 7 days after therapy; clinical TLS adds AKI, arrhythmia or seizures.",
+          "refs": [
+            "idsa-fn-2011",
+            "cairo-bishop-2004"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "FN: antibiotics within 1 h",
+            "detail": "Cultures (peripheral + each lumen), then piperacillin-tazobactam 4.5 g q6h (or cefoperazone-sulbactam). Unstable: meropenem 1 g q8h + vancomycin ± polymyxin B (per NCDC 2025 and CRO risk).",
+            "time": "≤ 1 h",
+            "refs": [
+              "ntg-india-2025",
+              "idsa-fn-2011"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "When to add vancomycin",
+            "detail": "Haemodynamic instability, pneumonia, suspected line infection, skin/soft tissue infection, MRSA colonisation, Gram-positive bacteraemia pending ID; stop at 48 h if no Gram-positive infection.",
+            "refs": [
+              "ntg-india-2025",
+              "idsa-fn-2011"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Antifungal",
+            "detail": "If febrile after 72-96 h with negative cultures and unstable: CT chest, galactomannan/beta-D-glucan, and echinocandin or mould-active agent.",
+            "refs": [
+              "ntg-india-2025",
+              "idsa-fn-2011"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "De-escalate/stop",
+            "detail": "Stop if afebrile for 3 days and cultures negative, with close observation, even before count recovery (ECIL-4 / NCDC).",
+            "refs": [
+              "ntg-india-2025"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "TLS prevention",
+            "detail": "Risk-stratify (bulky lymphoma, ALL/AML with high WBC, high LDH, CKD). IV fluids 2-3 L/m²/day aiming urine output 80-100 mL/m²/h; allopurinol (intermediate risk); rasburicase (high risk). Avoid urinary alkalinisation.",
+            "refs": [
+              "tls-2008"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Established TLS",
+            "detail": "Rasburicase 0.2 mg/kg; treat hyperkalaemia; do not treat asymptomatic hypocalcaemia (calcium-phosphate precipitation); early RRT for refractory hyperkalaemia, hyperphosphataemia, fluid overload or oliguria.",
+            "refs": [
+              "tls-2008"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "piperacillin-tazobactam",
+            "role": "Stable FN",
+            "route": "IV",
+            "dose": "4.5 g q6h (extended infusion)",
+            "refs": [
+              "ntg-india-2025"
+            ]
+          },
+          {
+            "drugId": "meropenem",
+            "role": "Unstable FN",
+            "route": "IV",
+            "dose": "1 g q8h (+ vancomycin ± polymyxin B)",
+            "refs": [
+              "ntg-india-2025"
+            ]
+          },
+          {
+            "drugId": "cefepime",
+            "role": "FN where local ESBL rates low",
+            "route": "IV",
+            "dose": "2 g q8h",
+            "refs": [
+              "idsa-fn-2011"
+            ]
+          },
+          {
+            "drugId": "rasburicase",
+            "role": "High-risk or established TLS",
+            "route": "IV",
+            "dose": "0.2 mg/kg over 30 min daily (up to 5 days)",
+            "workedExample": "70 kg: 14 mg; many units use a single 3-6 mg dose and repeat by uric acid",
+            "notes": "Check G6PD first (common in India).",
+            "verify": "Fixed-dose practice and availability.",
+            "refs": [
+              "tls-2008"
+            ]
+          },
+          {
+            "drugId": "allopurinol",
+            "role": "TLS prevention",
+            "route": "Oral",
+            "dose": "100 mg/m² q8h (max 800 mg/day)",
+            "workedExample": "BSA 1.8 m²: 180 mg q8h (e.g. 200 mg q8h)",
+            "calculatorId": "bsa-mosteller",
+            "refs": [
+              "tls-2008"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "cairo-bishop",
+            "title": "Cairo-Bishop laboratory TLS (≥ 2 within 3 days before to 7 days after therapy)",
+            "columns": [
+              "Parameter",
+              "Threshold"
+            ],
+            "rows": [
+              [
+                "Uric acid",
+                "≥ 8 mg/dL or 25% rise"
+              ],
+              [
+                "Potassium",
+                "≥ 6 mmol/L or 25% rise"
+              ],
+              [
+                "Phosphate",
+                "≥ 4.5 mg/dL (adults) or 25% rise"
+              ],
+              [
+                "Calcium",
+                "≤ 7 mg/dL or 25% fall"
+              ]
+            ],
+            "caption": "Clinical TLS = laboratory TLS + creatinine ≥ 1.5 × ULN, arrhythmia/sudden death, or seizure.",
+            "refs": [
+              "cairo-bishop-2004"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Neutropenic patient with hypotension: septic shock until proven otherwise - antibiotics before any imaging.",
+            "refs": [
+              "idsa-fn-2011"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Rasburicase in G6PD deficiency: severe haemolysis and methaemoglobinaemia.",
+            "refs": [
+              "tls-2008"
+            ]
+          },
+          {
+            "text": "Giving calcium for asymptomatic hypocalcaemia in TLS with high phosphate.",
+            "refs": [
+              "tls-2008"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Rasburicase continues to degrade uric acid in the blood tube: send samples on ice for accurate levels.",
+            "refs": [
+              "tls-2008"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Febrile neutropenia",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Fever + ANC < 500"
+          },
+          {
+            "id": "cx",
+            "type": "action",
+            "text": "Cultures (peripheral + all lumens), lactate, CXR"
+          },
+          {
+            "id": "unst",
+            "type": "decision",
+            "text": "Haemodynamically unstable?"
+          },
+          {
+            "id": "mer",
+            "type": "action",
+            "text": "Meropenem + vancomycin ± polymyxin B (CRO risk)",
+            "severity": "critical"
+          },
+          {
+            "id": "pip",
+            "type": "action",
+            "text": "Piperacillin-tazobactam within 1 h"
+          },
+          {
+            "id": "fev",
+            "type": "decision",
+            "text": "Febrile at 72-96 h, cultures negative?"
+          },
+          {
+            "id": "fung",
+            "type": "end",
+            "text": "CT chest, galactomannan/BDG; add antifungal",
+            "severity": "high"
+          },
+          {
+            "id": "stop",
+            "type": "end",
+            "text": "Afebrile 3 days, cultures negative: stop or de-escalate"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "cx"
+          },
+          {
+            "from": "cx",
+            "to": "unst"
+          },
+          {
+            "from": "unst",
+            "to": "mer",
+            "label": "Yes"
+          },
+          {
+            "from": "unst",
+            "to": "pip",
+            "label": "No"
+          },
+          {
+            "from": "mer",
+            "to": "fev"
+          },
+          {
+            "from": "pip",
+            "to": "fev"
+          },
+          {
+            "from": "fev",
+            "to": "fung",
+            "label": "Yes"
+          },
+          {
+            "from": "fev",
+            "to": "stop",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "ntg-india-2025",
+          "idsa-fn-2011"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Neutropenia removes the main defence against bacteria and fungi; mucositis and lines permit translocation. TLS results from rapid tumour cell lysis releasing potassium, phosphate and nucleic acids (metabolised to uric acid), causing crystal nephropathy, arrhythmias and calcium-phosphate deposition.",
+        "evidence": "- IDSA 2010 FN guideline [Freifeld 2011]; NCDC/ICMR 2025 Indian FN regimens [NCDC 2025].\n- TLS evidence-based review [Coiffier 2008]; Cairo-Bishop classification [Cairo 2004].",
+        "controversies": "- Early stopping of antibiotics before neutrophil recovery; prophylactic fluoroquinolones in high MDR settings.",
+        "indiaNotes": "- High rates of ESBL and carbapenem resistance in Indian oncology units mean NCDC suggests meropenem + vancomycin ± polymyxin B for unstable FN.\n- G6PD deficiency is common in several Indian communities; test before rasburicase."
+      },
+      "drugIds": [
+        "piperacillin-tazobactam",
+        "meropenem",
+        "cefepime",
+        "rasburicase",
+        "allopurinol"
+      ],
+      "calculatorIds": [
+        "bsa-mosteller"
+      ],
+      "references": [
+        "idsa-fn-2011",
+        "ntg-india-2025",
+        "tls-2008",
+        "cairo-bishop-2004"
+      ],
+      "quiz": [
+        {
+          "id": "febrile-neutropenia-tls-q1",
+          "stem": "Febrile neutropenia definition (IDSA):",
+          "options": [
+            "ANC < 1,500 + any fever",
+            "ANC < 500 + T ≥ 38.3 °C once or ≥ 38.0 °C for 1 h",
+            "WBC < 4,000",
+            "CRP > 100"
+          ],
+          "answerIndex": 1,
+          "explanation": "IDSA 2010."
+        },
+        {
+          "id": "febrile-neutropenia-tls-q2",
+          "stem": "Contraindication to rasburicase:",
+          "options": [
+            "CKD",
+            "G6PD deficiency",
+            "Diabetes",
+            "Hyperkalaemia"
+          ],
+          "answerIndex": 1,
+          "explanation": "Haemolysis."
+        },
+        {
+          "id": "febrile-neutropenia-tls-q3",
+          "stem": "Stable febrile neutropenia first-line in India:",
+          "options": [
+            "Piperacillin-tazobactam 4.5 g q6h",
+            "Vancomycin alone",
+            "Ceftriaxone + azithromycin",
+            "Fluconazole"
+          ],
+          "answerIndex": 0,
+          "explanation": "NCDC 2025."
+        },
+        {
+          "id": "febrile-neutropenia-tls-q4",
+          "stem": "Asymptomatic calcium 6.8 mg/dL with phosphate 9 mg/dL in TLS:",
+          "options": [
+            "Give calcium gluconate",
+            "Do not give calcium; treat phosphate/consider RRT",
+            "Give bicarbonate",
+            "Give vitamin D"
+          ],
+          "answerIndex": 1,
+          "explanation": "Risk of calcium-phosphate precipitation."
+        }
+      ]
+    },
+    {
+      "id": "pkpd-stewardship",
+      "title": "Antibiotic PK/PD, TDM, procalcitonin and stewardship",
+      "summary": "Dose antibiotics for critical illness (loading, extended infusion, AUC-guided vancomycin), use procalcitonin to stop, and keep courses short.",
+      "viewKey": "topic:icu-infections-stewardship-immunocompromised/pkpd-stewardship",
+      "uiHints": {
+        "icon": "timer",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Beta-lactams are time-dependent (target fT > MIC), aminoglycosides concentration-dependent (Cmax/MIC 8-10), and vancomycin AUC-dependent (AUC/MIC 400-600). Critical illness alters volume of distribution and clearance (augmented renal clearance, AKI, CRRT, hypoalbuminaemia).",
+          "refs": [
+            "abdulaziz-2024",
+            "vanco-2020"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Load fully",
+            "detail": "Give full loading doses regardless of renal function (Vd is increased in sepsis); adjust only maintenance doses.",
+            "refs": [
+              "vanco-2020",
+              "polymyxin-2019"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Prolonged beta-lactam infusion",
+            "detail": "After a 30-min loading dose, give piperacillin-tazobactam, meropenem, cefepime as extended (3-4 h) or continuous infusion; meta-analysis showed lower 90-day mortality.",
+            "refs": [
+              "abdulaziz-2024",
+              "bling3"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Aminoglycosides once daily",
+            "detail": "Amikacin 15-25 mg/kg or gentamicin 5-7 mg/kg once daily (if used); trough monitoring.",
+            "refs": [
+              "ntg-india-2025"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Vancomycin AUC dosing",
+            "detail": "Load 20-35 mg/kg; AUC 400-600 mg·h/L by two levels or Bayesian software; trough 15-20 as surrogate where AUC not feasible.",
+            "refs": [
+              "vanco-2020"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Procalcitonin to stop",
+            "detail": "Stop antibiotics when PCT < 0.5 ng/mL or falls ≥ 80% from peak, if clinically improving (not to start antibiotics in shock).",
+            "refs": [
+              "saps-pct"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Short courses",
+            "detail": "CAP 5-7 days; HAP/VAP 7; intra-abdominal infection with source control 4 days (STOP-IT); uncomplicated Gram-negative bacteraemia 7 days (BALANCE).",
+            "refs": [
+              "stop-it",
+              "balance",
+              "idsa-hapvap-2016"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Stewardship time-out at 48-72 h",
+            "detail": "Review cultures, de-escalate, IV-to-oral switch, document indication and stop date; unit antibiogram every 6-12 months.",
+            "refs": [
+              "ntg-india-2025"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "vancomycin",
+            "role": "Serious MRSA infection",
+            "route": "IV",
+            "dose": "Load 25 mg/kg, maintenance AUC-guided",
+            "workedExample": "70 kg: 1,750 mg load in 500 mL NS over 2 h; then 15 mg/kg q12h (1 g) adjusted to AUC",
+            "calculatorId": "creatinine-clearance-cg",
+            "refs": [
+              "vanco-2020"
+            ]
+          },
+          {
+            "drugId": "meropenem",
+            "role": "Extended infusion example",
+            "route": "IV",
+            "dose": "1 g q8h over 3 h after 30-min first dose",
+            "dilution": "1 g in 100 mL NS",
+            "workedExample": "100 mL over 3 h = 33 mL/h",
+            "verify": "Meropenem stability at room temperature in Indian ICUs (~8 h at 25 °C; less at higher temperatures).",
+            "refs": [
+              "abdulaziz-2024"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "pkpd",
+            "title": "PK/PD targets",
+            "columns": [
+              "Class",
+              "PD driver",
+              "Practical dosing"
+            ],
+            "rows": [
+              [
+                "Beta-lactams",
+                "fT > MIC (40-100%)",
+                "Extended/continuous infusion; frequent dosing"
+              ],
+              [
+                "Aminoglycosides",
+                "Cmax/MIC 8-10",
+                "Once-daily high dose"
+              ],
+              [
+                "Vancomycin",
+                "AUC/MIC 400-600",
+                "Load + AUC-guided maintenance"
+              ],
+              [
+                "Polymyxins",
+                "AUC/MIC",
+                "Load; polymyxin B no renal adjustment"
+              ],
+              [
+                "Fluoroquinolones",
+                "AUC/MIC",
+                "Full doses"
+              ]
+            ],
+            "refs": [
+              "abdulaziz-2024",
+              "vanco-2020",
+              "polymyxin-2019"
+            ]
+          },
+          {
+            "id": "durations",
+            "title": "Evidence-based durations",
+            "columns": [
+              "Infection",
+              "Duration"
+            ],
+            "rows": [
+              [
+                "CAP (stable)",
+                "5-7 days"
+              ],
+              [
+                "HAP/VAP",
+                "7 days"
+              ],
+              [
+                "Intra-abdominal with source control",
+                "4 days (STOP-IT)"
+              ],
+              [
+                "Gram-negative bacteraemia, uncomplicated",
+                "7 days (BALANCE)"
+              ],
+              [
+                "Candidaemia",
+                "14 days after first negative culture"
+              ]
+            ],
+            "refs": [
+              "stop-it",
+              "balance",
+              "idsa-hapvap-2016",
+              "idsa-candida-2016"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Young trauma/sepsis patient with high urine output and low creatinine (CrCl > 130 mL/min): augmented renal clearance - standard doses may be subtherapeutic.",
+            "refs": [
+              "abdulaziz-2024"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Halving the first dose of a beta-lactam because of AKI.",
+            "refs": [
+              "vanco-2020"
+            ]
+          },
+          {
+            "text": "Continuing 'just to complete 14 days' when the evidence supports shorter courses.",
+            "refs": [
+              "balance"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Write the stop date when you start an antibiotic.",
+            "refs": [
+              "ntg-india-2025"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Capillary leak and fluid resuscitation increase Vd of hydrophilic drugs (beta-lactams, aminoglycosides, vancomycin); hyperdynamic circulation increases renal clearance; hypoalbuminaemia increases free fraction and clearance of highly bound drugs.",
+        "evidence": "- Abdul-Aziz 2024 meta-analysis (18 RCTs): prolonged beta-lactam infusion reduced 90-day mortality; BLING III showed a non-significant reduction [Abdul-Aziz 2024; Dulhunty 2024].\n- SAPS: PCT guidance reduced antibiotic duration and mortality [de Jong 2016].\n- STOP-IT: 4 days after source control as good as longer [Sawyer 2015]. BALANCE: 7 days non-inferior to 14 days for bacteraemia [BALANCE 2025].",
+        "controversies": "- Routine beta-lactam TDM; PCT cost-effectiveness in India.",
+        "indiaNotes": "- India's Kerala AMR strategy and ICMR AMSP programme promote stewardship; Schedule H1 restricts sale of many antibiotics.\n- PCT and TDM are available mainly in larger centres; in their absence, use clinical response and short fixed durations."
+      },
+      "drugIds": [
+        "vancomycin",
+        "meropenem"
+      ],
+      "calculatorIds": [
+        "creatinine-clearance-cg"
+      ],
+      "references": [
+        "abdulaziz-2024",
+        "bling3",
+        "vanco-2020",
+        "saps-pct",
+        "stop-it",
+        "balance",
+        "idsa-hapvap-2016",
+        "idsa-candida-2016",
+        "ntg-india-2025",
+        "polymyxin-2019"
+      ],
+      "quiz": [
+        {
+          "id": "pkpd-stewardship-q1",
+          "stem": "Beta-lactam efficacy best correlates with:",
+          "options": [
+            "Cmax/MIC",
+            "Time free drug above MIC",
+            "AUC only",
+            "Trough"
+          ],
+          "answerIndex": 1,
+          "explanation": "Time-dependent."
+        },
+        {
+          "id": "pkpd-stewardship-q2",
+          "stem": "Intra-abdominal infection with adequate source control - duration (STOP-IT):",
+          "options": [
+            "4 days",
+            "14 days",
+            "21 days",
+            "Until WBC normal"
+          ],
+          "answerIndex": 0,
+          "explanation": "Fixed ~4 days."
+        },
+        {
+          "id": "pkpd-stewardship-q3",
+          "stem": "PCT stopping rule:",
+          "options": [
+            "PCT < 0.5 ng/mL or ≥ 80% fall from peak",
+            "PCT > 2",
+            "Any rise",
+            "PCT to start antibiotics in shock"
+          ],
+          "answerIndex": 0,
+          "explanation": "SAPS."
+        },
+        {
+          "id": "pkpd-stewardship-q4",
+          "stem": "Loading dose of vancomycin in AKI:",
+          "options": [
+            "Halve it",
+            "Give full loading dose",
+            "Omit",
+            "Only oral"
+          ],
+          "answerIndex": 1,
+          "explanation": "Load regardless of renal function."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "ceftriaxone",
+      "name": "Ceftriaxone",
+      "class": "Third-generation cephalosporin",
+      "indications": "Severe CAP (with macrolide/doxycycline)",
+      "adultDose": "2 g IV once daily for 5-7 days.",
+      "refs": [
+        "ntg-india-2025"
+      ]
+    },
+    {
+      "id": "azithromycin",
+      "name": "Azithromycin",
+      "class": "Macrolide",
+      "indications": "Atypical cover in severe CAP",
+      "adultDose": "500 mg IV/oral once daily for 3-5 days.",
+      "cautions": "QT prolongation.",
+      "refs": [
+        "ntg-india-2025",
+        "ats-idsa-cap-2019"
+      ]
+    },
+    {
+      "id": "hydrocortisone",
+      "name": "Hydrocortisone",
+      "class": "Corticosteroid",
+      "indications": "Severe CAP (CAPE COD); septic shock",
+      "adultDose": "Severe CAP: 200 mg/day IV (infusion) for 4 days, extended to 8 days if still severe, then taper (total 8 or 14 days).",
+      "cautions": "Not studied in influenza pneumonia or septic shock at enrolment in CAPE COD; hyperglycaemia.",
+      "refs": [
+        "cape-cod",
+        "ers-scap-2023"
+      ]
+    },
+    {
+      "id": "oseltamivir",
+      "name": "Oseltamivir",
+      "class": "Neuraminidase inhibitor",
+      "indications": "Suspected/confirmed influenza (including H1N1) in severe CAP",
+      "adultDose": "75 mg orally/NG twice daily for 5 days (longer if still shedding/severe).",
+      "renalHepatic": "CrCl 30-60: 30 mg BD; 10-30: 30 mg OD.",
+      "refs": [
+        "ats-idsa-cap-2019",
+        "ers-scap-2023"
+      ]
+    },
+    {
+      "id": "piperacillin-tazobactam",
+      "name": "Piperacillin-tazobactam",
+      "class": "Antipseudomonal beta-lactam/beta-lactamase inhibitor",
+      "indications": "HAP/VAP, febrile neutropenia, CAP with Pseudomonas risk",
+      "adultDose": "4.5 g IV q6h; extended infusion over 3-4 h (or continuous after loading) in critically ill.",
+      "renalHepatic": "CrCl 20-40: 4.5 g q8h (keep extended infusion).",
+      "refs": [
+        "ntg-india-2025",
+        "abdulaziz-2024"
+      ]
+    },
+    {
+      "id": "meropenem",
+      "name": "Meropenem",
+      "class": "Carbapenem",
+      "indications": "ESBL infection; HAP/VAP after BL-BLI exposure; febrile neutropenia with instability",
+      "adultDose": "1 g IV q8h (2 g q8h over 3 h for high-MIC organisms, CNS infection or CRE with MIC < 16 per ICMR).",
+      "renalHepatic": "CrCl 26-50: 1 g q12h; 10-25: 500 mg q12h.",
+      "refs": [
+        "ntg-india-2025",
+        "icmr-cro-2022"
+      ]
+    },
+    {
+      "id": "vancomycin",
+      "name": "Vancomycin",
+      "class": "Glycopeptide",
+      "indications": "MRSA cover (pneumonia, line infection, febrile neutropenia with instability)",
+      "adultDose": "Load 20-35 mg/kg (actual weight, max 3 g), then 15-20 mg/kg q8-12h; AUC-guided 400-600 mg·h/L (trough 15-20 mg/L as surrogate if AUC not available).",
+      "renalHepatic": "Dose by levels; extend interval in AKI.",
+      "monitoring": "Levels before 4th dose; creatinine daily.",
+      "refs": [
+        "vanco-2020",
+        "ntg-india-2025"
+      ]
+    },
+    {
+      "id": "linezolid",
+      "name": "Linezolid",
+      "class": "Oxazolidinone",
+      "indications": "MRSA pneumonia (alternative to vancomycin)",
+      "adultDose": "600 mg IV/oral q12h.",
+      "cautions": "Thrombocytopenia after 10-14 days; serotonin syndrome; avoid as empirical in possible TB (ICMR).",
+      "refs": [
+        "idsa-hapvap-2016",
+        "ntg-india-2025"
+      ]
+    },
+    {
+      "id": "ceftazidime-avibactam",
+      "name": "Ceftazidime-avibactam (± aztreonam)",
+      "class": "Cephalosporin + novel beta-lactamase inhibitor",
+      "indications": "KPC/OXA-48 CRE (alone); NDM (MBL) CRE with aztreonam after synergy testing",
+      "adultDose": "2.5 g IV q8h over 3 h; for MBL: plus aztreonam 2 g IV q8h over 3 h given simultaneously.",
+      "renalHepatic": "CrCl 31-50: 1.25 g q8h; 16-30: 0.94 g q12h.",
+      "cautions": "Reserve agent; not for empirical use per national guidelines.",
+      "refs": [
+        "icmr-cro-2022",
+        "idsa-amr-2024"
+      ]
+    },
+    {
+      "id": "polymyxin-b",
+      "name": "Polymyxin B",
+      "class": "Polymyxin",
+      "indications": "CRE, CRAB, CRPA when no better agent (not for UTI)",
+      "adultDose": "Loading 2.5 mg/kg (25,000 units/kg) over 2 h, then 1.5 mg/kg (15,000 units/kg) q12h; Indian guidance: 15-20 lakh units load, then 7.5-10 lakh units q12h.",
+      "renalHepatic": "No renal adjustment.",
+      "cautions": "Nephrotoxicity, neurotoxicity, skin pigmentation; use in combination for severe infections.",
+      "refs": [
+        "polymyxin-2019",
+        "icmr-cro-2022",
+        "ntg-india-2025"
+      ]
+    },
+    {
+      "id": "colistin",
+      "name": "Colistin (colistimethate sodium)",
+      "class": "Polymyxin",
+      "indications": "CRE/CRAB infections, preferred polymyxin for UTI",
+      "adultDose": "9 million units IV loading, then 4.5 million units q12h (normal renal function).",
+      "renalHepatic": "Reduce maintenance by CrCl; supplement on CRRT.",
+      "cautions": "Nephrotoxicity (dose-related).",
+      "refs": [
+        "icmr-cro-2022",
+        "polymyxin-2019"
+      ]
+    },
+    {
+      "id": "ampicillin-sulbactam",
+      "name": "Ampicillin-sulbactam (high dose)",
+      "class": "Beta-lactam + inhibitor",
+      "indications": "CRAB (sulbactam backbone)",
+      "adultDose": "9 g (6 g ampicillin + 3 g sulbactam) IV q8h over 4 h (sulbactam 9 g/day), usually with a second active agent.",
+      "refs": [
+        "icmr-cro-2022",
+        "idsa-amr-2024"
+      ]
+    },
+    {
+      "id": "caspofungin",
+      "name": "Caspofungin (or micafungin/anidulafungin)",
+      "class": "Echinocandin",
+      "indications": "Candidaemia/invasive candidiasis first line",
+      "adultDose": "Caspofungin 70 mg IV load, then 50 mg daily; micafungin 100 mg daily; anidulafungin 200 mg load, then 100 mg daily.",
+      "refs": [
+        "idsa-candida-2016",
+        "ntg-india-2025"
+      ]
+    },
+    {
+      "id": "fluconazole",
+      "name": "Fluconazole",
+      "class": "Triazole",
+      "indications": "Step-down for susceptible Candida",
+      "adultDose": "800 mg (12 mg/kg) load, then 400 mg (6 mg/kg) daily.",
+      "renalHepatic": "Halve maintenance if CrCl < 50 (not on RRT).",
+      "cautions": "C. auris, C. krusei and many C. glabrata are resistant.",
+      "refs": [
+        "idsa-candida-2016"
+      ]
+    },
+    {
+      "id": "voriconazole",
+      "name": "Voriconazole",
+      "class": "Triazole",
+      "indications": "Invasive aspergillosis first line",
+      "adultDose": "6 mg/kg IV q12h × 2 doses, then 4 mg/kg q12h; TDM trough 1-5.5 mg/L.",
+      "cautions": "Many interactions, visual disturbance, hepatotoxicity; IV vehicle accumulates if CrCl < 50 (use oral).",
+      "refs": [
+        "idsa-asperg-2016"
+      ]
+    },
+    {
+      "id": "liposomal-amb",
+      "name": "Liposomal amphotericin B",
+      "class": "Polyene",
+      "indications": "Mucormycosis; aspergillosis/candidiasis alternative; cryptococcal meningitis",
+      "adultDose": "Mucormycosis 5 mg/kg/day (10 mg/kg/day for CNS); candidiasis 3-5 mg/kg/day; cryptococcal meningitis single 10 mg/kg (WHO 2022).",
+      "cautions": "Hypokalaemia, hypomagnesaemia, nephrotoxicity (less than conventional); pre-hydrate with saline.",
+      "refs": [
+        "mucor-2019",
+        "who-crypto-2022",
+        "idsa-candida-2016"
+      ]
+    },
+    {
+      "id": "hrze",
+      "name": "HRZE fixed-dose combination (NTEP)",
+      "class": "First-line antitubercular therapy",
+      "indications": "Drug-sensitive TB including miliary and TB meningitis",
+      "adultDose": "Daily FDC (H 75/R 150/Z 400/E 275 mg) by weight band: 35-49 kg 3 tablets, 50-64 kg 4, 65-75 kg 5, > 75 kg 6. Equivalent H 5, R 10, Z 25, E 15 mg/kg.",
+      "cautions": "Hepatotoxicity (check LFT), rifampicin interactions (azoles, ART, warfarin); add pyridoxine 10 mg/day.",
+      "refs": [
+        "ntep-stw-2022"
+      ]
+    },
+    {
+      "id": "dexamethasone",
+      "name": "Dexamethasone",
+      "class": "Corticosteroid",
+      "indications": "TB meningitis (HIV-negative)",
+      "adultDose": "0.4 mg/kg/day IV in divided doses, tapered over 6-8 weeks.",
+      "refs": [
+        "thwaites-2004",
+        "ntep-stw-2022"
+      ]
+    },
+    {
+      "id": "cotrimoxazole",
+      "name": "Trimethoprim-sulfamethoxazole",
+      "class": "Antifolate combination",
+      "indications": "Pneumocystis pneumonia",
+      "adultDose": "15-20 mg/kg/day of trimethoprim component IV/oral in 3-4 divided doses for 21 days.",
+      "cautions": "Hyperkalaemia, marrow suppression, rash/SJS, AKI; G6PD.",
+      "refs": [
+        "nih-oi-pcp"
+      ]
+    },
+    {
+      "id": "prednisolone",
+      "name": "Prednisolone",
+      "class": "Corticosteroid",
+      "indications": "Moderate-severe PJP (PaO2 < 70 mmHg or A-a gradient ≥ 35)",
+      "adultDose": "40 mg BD days 1-5, 40 mg daily days 6-10, 20 mg daily days 11-21 (start within 72 h of PJP therapy).",
+      "refs": [
+        "nih-oi-pcp"
+      ]
+    },
+    {
+      "id": "cefepime",
+      "name": "Cefepime",
+      "class": "Fourth-generation cephalosporin",
+      "indications": "Febrile neutropenia (where ESBL rates allow)",
+      "adultDose": "2 g IV q8h (extended infusion in critically ill).",
+      "renalHepatic": "Reduce by CrCl (neurotoxicity in AKI).",
+      "refs": [
+        "idsa-fn-2011"
+      ]
+    },
+    {
+      "id": "rasburicase",
+      "name": "Rasburicase",
+      "class": "Recombinant urate oxidase",
+      "indications": "Established TLS or high risk of TLS",
+      "adultDose": "0.2 mg/kg IV over 30 min daily for up to 5 days (single fixed 3-6 mg doses often effective).",
+      "cautions": "Contraindicated in G6PD deficiency (haemolysis, methaemoglobinaemia); sample for uric acid on ice.",
+      "verify": "Fixed-dose regimens and local availability/cost.",
+      "refs": [
+        "tls-2008"
+      ]
+    },
+    {
+      "id": "allopurinol",
+      "name": "Allopurinol",
+      "class": "Xanthine oxidase inhibitor",
+      "indications": "TLS prevention (low-intermediate risk)",
+      "adultDose": "100 mg/m² q8h orally (max 800 mg/day), starting 1-2 days before chemotherapy.",
+      "renalHepatic": "Reduce in renal impairment.",
+      "refs": [
+        "tls-2008"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "ats-idsa-cap-2019",
+      "citation": "Metlay JP, Waterer GW, Long AC, et al. Diagnosis and treatment of adults with community-acquired pneumonia. An official clinical practice guideline of the American Thoracic Society and Infectious Diseases Society of America. Am J Respir Crit Care Med 2019;200:e45-67.",
+      "url": "https://doi.org/10.1164/rccm.201908-1581ST",
+      "year": 2019,
+      "type": "guideline",
+      "doi": "10.1164/rccm.201908-1581ST"
+    },
+    {
+      "id": "ers-scap-2023",
+      "citation": "Martin-Loeches I, Torres A, Nagavci B, et al. ERS/ESICM/ESCMID/ALAT guidelines for the management of severe community-acquired pneumonia. Intensive Care Med 2023;49:615-32.",
+      "url": "https://doi.org/10.1007/s00134-023-07033-8",
+      "year": 2023,
+      "type": "guideline",
+      "doi": "10.1007/s00134-023-07033-8"
+    },
+    {
+      "id": "cape-cod",
+      "citation": "Dequin PF, Meziani F, Quenot JP, et al. Hydrocortisone in severe community-acquired pneumonia (CAPE COD). N Engl J Med 2023;388:1931-41.",
+      "url": "https://doi.org/10.1056/NEJMoa2215145",
+      "year": 2023,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa2215145"
+    },
+    {
+      "id": "ntg-india-2025",
+      "citation": "National Centre for Disease Control (DGHS, MoHFW) and Indian Council of Medical Research. National Treatment Guidelines for Antimicrobial Use in Infectious Disease Syndromes, Version 2.0. New Delhi: MoHFW; November 2025.",
+      "url": "https://ncdc.mohfw.gov.in/uploads/pdf/amr17.pdf",
+      "year": 2025,
+      "type": "guideline"
+    },
+    {
+      "id": "idsa-hapvap-2016",
+      "citation": "Kalil AC, Metersky ML, Klompas M, et al. Management of adults with hospital-acquired and ventilator-associated pneumonia: 2016 clinical practice guidelines by the IDSA and ATS. Clin Infect Dis 2016;63:e61-111.",
+      "url": "https://doi.org/10.1093/cid/ciw353",
+      "year": 2016,
+      "type": "guideline",
+      "doi": "10.1093/cid/ciw353"
+    },
+    {
+      "id": "ers-hapvap-2017",
+      "citation": "Torres A, Niederman MS, Chastre J, et al. International ERS/ESICM/ESCMID/ALAT guidelines for the management of hospital-acquired pneumonia and ventilator-associated pneumonia. Eur Respir J 2017;50:1700582.",
+      "url": "https://doi.org/10.1183/13993003.00582-2017",
+      "year": 2017,
+      "type": "guideline",
+      "doi": "10.1183/13993003.00582-2017"
+    },
+    {
+      "id": "icmr-cro-2022",
+      "citation": "Indian Council of Medical Research. Guidance on Diagnosis and Management of Carbapenem Resistant Gram-negative Infections. New Delhi: ICMR; 2022.",
+      "url": "https://www.icmr.gov.in/icmrobject/custom_data/pdf/resource-guidelines/Diagnosis_and_management_of_CROs.pdf",
+      "year": 2022,
+      "type": "guideline"
+    },
+    {
+      "id": "icmr-amrsn-2023",
+      "citation": "Indian Council of Medical Research. Annual Report: Antimicrobial Resistance Research and Surveillance Network, January 2023-December 2023. New Delhi: ICMR; 2024.",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Documents/1725536060_annual_report_2023.pdf",
+      "year": 2024,
+      "type": "web"
+    },
+    {
+      "id": "idsa-amr-2024",
+      "citation": "Tamma PD, Heil EL, Justo JA, Mathers AJ, Satlin MJ, Bonomo RA. Infectious Diseases Society of America 2024 guidance on the treatment of antimicrobial-resistant gram-negative infections. Clin Infect Dis 2024 (online ahead of print).",
+      "url": "https://doi.org/10.1093/cid/ciae403",
+      "year": 2024,
+      "type": "guideline",
+      "doi": "10.1093/cid/ciae403"
+    },
+    {
+      "id": "polymyxin-2019",
+      "citation": "Tsuji BT, Pogue JM, Zavascki AP, et al. International consensus guidelines for the optimal use of the polymyxins. Pharmacotherapy 2019;39:10-39.",
+      "url": "https://doi.org/10.1002/phar.2209",
+      "year": 2019,
+      "type": "consensus",
+      "doi": "10.1002/phar.2209"
+    },
+    {
+      "id": "idsa-candida-2016",
+      "citation": "Pappas PG, Kauffman CA, Andes DR, et al. Clinical practice guideline for the management of candidiasis: 2016 update by the IDSA. Clin Infect Dis 2016;62:e1-50.",
+      "url": "https://doi.org/10.1093/cid/civ933",
+      "year": 2016,
+      "type": "guideline",
+      "doi": "10.1093/cid/civ933"
+    },
+    {
+      "id": "idsa-asperg-2016",
+      "citation": "Patterson TF, Thompson GR 3rd, Denning DW, et al. Practice guidelines for the diagnosis and management of aspergillosis: 2016 update by the IDSA. Clin Infect Dis 2016;63:e1-60.",
+      "url": "https://doi.org/10.1093/cid/ciw326",
+      "year": 2016,
+      "type": "guideline",
+      "doi": "10.1093/cid/ciw326"
+    },
+    {
+      "id": "mucor-2019",
+      "citation": "Cornely OA, Alastruey-Izquierdo A, Arenz D, et al. Global guideline for the diagnosis and management of mucormycosis: an initiative of the ECMM in cooperation with the MSG ERC. Lancet Infect Dis 2019;19:e405-21.",
+      "url": "https://doi.org/10.1016/S1473-3099(19)30312-3",
+      "year": 2019,
+      "type": "guideline",
+      "doi": "10.1016/S1473-3099(19)30312-3"
+    },
+    {
+      "id": "ntep-stw-2022",
+      "citation": "Department of Health Research, MoHFW / ICMR. Standard Treatment Workflow: Drug-sensitive TB treatment as per NTEP. New Delhi; March 2022.",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/STWs/1725964686_2_ntep_18032022.pdf",
+      "year": 2022,
+      "type": "guideline"
+    },
+    {
+      "id": "thwaites-2004",
+      "citation": "Thwaites GE, Nguyen DB, Nguyen HD, et al. Dexamethasone for the treatment of tuberculous meningitis in adolescents and adults. N Engl J Med 2004;351:1741-51.",
+      "url": "https://doi.org/10.1056/NEJMoa040573",
+      "year": 2004,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa040573"
+    },
+    {
+      "id": "who-crypto-2022",
+      "citation": "World Health Organization. Guidelines for diagnosing, preventing and managing cryptococcal disease among adults, adolescents and children living with HIV. Geneva: WHO; 2022.",
+      "url": "https://www.who.int/publications/i/item/9789240052178",
+      "year": 2022,
+      "type": "guideline"
+    },
+    {
+      "id": "nih-oi-pcp",
+      "citation": "Panel on Guidelines for the Prevention and Treatment of Opportunistic Infections in Adults and Adolescents with HIV. Pneumocystis Pneumonia. NIH/CDC/HIVMA-IDSA; continuously updated.",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/pneumocystis",
+      "year": 2024,
+      "type": "guideline"
+    },
+    {
+      "id": "idsa-fn-2011",
+      "citation": "Freifeld AG, Bow EJ, Sepkowitz KA, et al. Clinical practice guideline for the use of antimicrobial agents in neutropenic patients with cancer: 2010 update by the IDSA. Clin Infect Dis 2011;52:e56-93.",
+      "url": "https://doi.org/10.1093/cid/ciq147",
+      "year": 2011,
+      "type": "guideline",
+      "doi": "10.1093/cid/ciq147"
+    },
+    {
+      "id": "tls-2008",
+      "citation": "Coiffier B, Altman A, Pui CH, Younes A, Cairo MS. Guidelines for the management of pediatric and adult tumor lysis syndrome: an evidence-based review. J Clin Oncol 2008;26:2767-78.",
+      "url": "https://doi.org/10.1200/JCO.2007.15.0177",
+      "year": 2008,
+      "type": "guideline",
+      "doi": "10.1200/JCO.2007.15.0177"
+    },
+    {
+      "id": "cairo-bishop-2004",
+      "citation": "Cairo MS, Bishop M. Tumour lysis syndrome: new therapeutic strategies and classification. Br J Haematol 2004;127:3-11.",
+      "url": "https://doi.org/10.1111/j.1365-2141.2004.05094.x",
+      "year": 2004,
+      "type": "guideline",
+      "doi": "10.1111/j.1365-2141.2004.05094.x"
+    },
+    {
+      "id": "bling3",
+      "citation": "Dulhunty JM, Brett SJ, De Waele JJ, et al. Continuous vs intermittent beta-lactam antibiotic infusions in critically ill patients with sepsis (BLING III). JAMA 2024;332:629-37.",
+      "url": "https://doi.org/10.1001/jama.2024.9779",
+      "year": 2024,
+      "type": "trial",
+      "doi": "10.1001/jama.2024.9779"
+    },
+    {
+      "id": "abdulaziz-2024",
+      "citation": "Abdul-Aziz MH, Hammond NE, Brett SJ, et al. Prolonged vs intermittent infusions of beta-lactam antibiotics in adults with sepsis or septic shock: a systematic review and meta-analysis. JAMA 2024;332:638-48.",
+      "url": "https://doi.org/10.1001/jama.2024.9803",
+      "year": 2024,
+      "type": "review",
+      "doi": "10.1001/jama.2024.9803"
+    },
+    {
+      "id": "vanco-2020",
+      "citation": "Rybak MJ, Le J, Lodise TP, et al. Therapeutic monitoring of vancomycin for serious methicillin-resistant Staphylococcus aureus infections: a revised consensus guideline. Am J Health Syst Pharm 2020;77:835-64.",
+      "url": "https://doi.org/10.1093/ajhp/zxaa036",
+      "year": 2020,
+      "type": "consensus",
+      "doi": "10.1093/ajhp/zxaa036"
+    },
+    {
+      "id": "saps-pct",
+      "citation": "de Jong E, van Oers JA, Beishuizen A, et al. Efficacy and safety of procalcitonin guidance in reducing the duration of antibiotic treatment in critically ill patients (SAPS). Lancet Infect Dis 2016;16:819-27.",
+      "url": "https://doi.org/10.1016/S1473-3099(16)00053-0",
+      "year": 2016,
+      "type": "trial",
+      "doi": "10.1016/S1473-3099(16)00053-0"
+    },
+    {
+      "id": "stop-it",
+      "citation": "Sawyer RG, Claridge JA, Nathens AB, et al. Trial of short-course antimicrobial therapy for intraabdominal infection (STOP-IT). N Engl J Med 2015;372:1996-2005.",
+      "url": "https://doi.org/10.1056/NEJMoa1411162",
+      "year": 2015,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1411162"
+    },
+    {
+      "id": "balance",
+      "citation": "BALANCE Investigators. Antibiotic treatment for 7 versus 14 days in patients with bloodstream infections. N Engl J Med 2025;392:1065-78.",
+      "url": "https://doi.org/10.1056/NEJMoa2404991",
+      "year": 2025,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa2404991"
+    }
+  ]
+}

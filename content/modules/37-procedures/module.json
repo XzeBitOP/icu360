@@ -1,0 +1,1738 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "procedures",
+  "number": 37,
+  "folder": "37-procedures",
+  "section": {
+    "id": "K",
+    "title": "Skills and professional practice"
+  },
+  "phase": 2,
+  "title": "Procedures",
+  "summary": "Bedside ICU procedures: ultrasound-guided central venous and arterial cannulation, thoracentesis and chest drains, lumbar puncture, paracentesis and pericardiocentesis, with coagulation thresholds, local anaesthetic safety and Indian context.",
+  "tags": [
+    "procedures",
+    "central line",
+    "CVC",
+    "arterial line",
+    "chest drain",
+    "thoracentesis",
+    "lumbar puncture",
+    "paracentesis",
+    "pericardiocentesis",
+    "ultrasound guidance",
+    "local anaesthetic",
+    "LAST"
+  ],
+  "relatedModules": [
+    "icu-care-bundles-infection-prevention",
+    "pocus-critical-care-echo",
+    "haemodynamic-monitoring",
+    "pe-tamponade-aortic-emergencies",
+    "liver-failure",
+    "neuro-emergencies",
+    "haematology-coagulation-transfusion",
+    "airway-management"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "hand",
+    "accent": "standard"
+  },
+  "viewKey": "module:procedures",
+  "topics": [
+    {
+      "id": "central-venous-catheter",
+      "title": "Central venous catheter insertion",
+      "summary": "Site choice, real-time ultrasound, confirming venous placement before dilation, tip position and complications.",
+      "viewKey": "topic:procedures/central-venous-catheter",
+      "uiHints": {
+        "icon": "syringe",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "CVC indications: vasopressors or irritant infusions, poor peripheral access, CVP/ScvO₂ monitoring, RRT or plasmapheresis (dialysis catheter), transvenous pacing. ASA 2020 recommends real-time ultrasound for internal jugular access and confirmation of venous placement before dilation.",
+          "refs": [
+            "asa-cvc-2020",
+            "lamperti-us-2012"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Prepare",
+            "detail": "Consent where possible; check coagulation and platelets (correction rarely needed for compressible sites); time-out; full sterile barrier and alcoholic chlorhexidine.",
+            "refs": [
+              "asa-cvc-2020",
+              "shea-clabsi-2022"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Choose site",
+            "detail": "IJ with ultrasound: lowest mechanical risk and easy compression; subclavian: lowest infection and thrombosis risk but pneumothorax risk; femoral: fast in arrest/coagulopathy but highest infection and thrombosis risk.",
+            "refs": [
+              "asa-cvc-2020",
+              "shea-clabsi-2022"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Ultrasound",
+            "detail": "Pre-scan vessel patency and size; real-time needle guidance (short- or long-axis) with the needle tip visualised.",
+            "refs": [
+              "asa-cvc-2020",
+              "lamperti-us-2012"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Position",
+            "detail": "Head-down (Trendelenburg) for IJ/subclavian to distend veins and reduce air embolism risk.",
+            "refs": [
+              "asa-cvc-2020"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Confirm venous placement before dilating",
+            "detail": "Ultrasound view of the wire in the vein (long axis), manometry or pressure waveform transduction; never dilate an uncertain vessel.",
+            "time": "Before dilation",
+            "refs": [
+              "asa-cvc-2020"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Keep control of the wire",
+            "detail": "Never let go of the guidewire; check the wire is complete after removal.",
+            "refs": [
+              "asa-cvc-2020"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Confirm tip and exclude pneumothorax",
+            "detail": "Tip at the lower SVC / cavo-atrial junction; chest X-ray, or ultrasound with agitated saline (bubbles in RA within 2 s) and lung sliding check.",
+            "refs": [
+              "asa-cvc-2020",
+              "lamperti-us-2012"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Arterial cannulation with dilator or catheter",
+            "detail": "Leave the device in place, do not remove; call vascular surgery / interventional radiology.",
+            "refs": [
+              "asa-cvc-2020"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "lidocaine",
+            "role": "Local anaesthetic",
+            "route": "Infiltration",
+            "dose": "1-2% lidocaine; stay under 4.5 mg/kg plain",
+            "workedExample": "70 kg: max ~300 mg plain = 30 mL of 1% (10 mg/mL) or 15 mL of 2%.",
+            "refs": [
+              "asra-last-2018"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "cvc-sites",
+            "title": "CVC site comparison",
+            "columns": [
+              "Site",
+              "Advantages",
+              "Disadvantages"
+            ],
+            "rows": [
+              [
+                "Internal jugular",
+                "Ultrasound-friendly; compressible; straight path to SVC (right)",
+                "Carotid puncture; patient comfort; tracheostomy contamination"
+              ],
+              [
+                "Subclavian",
+                "Lowest infection and thrombosis; comfortable",
+                "Pneumothorax; non-compressible artery; harder with ultrasound"
+              ],
+              [
+                "Femoral",
+                "Fast, away from airway and CPR",
+                "Highest infection and DVT; immobilises patient"
+              ]
+            ],
+            "refs": [
+              "asa-cvc-2020",
+              "shea-clabsi-2022"
+            ]
+          },
+          {
+            "id": "coag-thresholds",
+            "title": "Bleeding risk and coagulation for bedside procedures (SIR 2019)",
+            "columns": [
+              "Bleeding-risk class",
+              "Examples",
+              "Suggested thresholds"
+            ],
+            "rows": [
+              [
+                "Low",
+                "CVC, paracentesis, thoracentesis",
+                "INR ≤ 2.0-3.0; platelets > 20 × 10⁹/L"
+              ],
+              [
+                "High",
+                "Pericardiocentesis (non-emergency), deep organ procedures",
+                "INR ≤ 1.5-1.8; platelets > 50 × 10⁹/L"
+              ]
+            ],
+            "caption": "Consensus thresholds; emergencies proceed with the most experienced operator and ultrasound.",
+            "refs": [
+              "sir-coag-2019"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "New hypotension, hypoxaemia or neurological deficit during or after insertion: consider pneumothorax, haemothorax, air embolism (left lateral head-down, 100% oxygen) or arterial injury.",
+            "refs": [
+              "asa-cvc-2020"
+            ]
+          },
+          {
+            "text": "Perioral tingling, seizures or arrhythmia after local anaesthetic: stop injecting, call for help, manage airway and give 20% lipid emulsion (1.5 mL/kg bolus) for LAST.",
+            "refs": [
+              "asra-last-2018"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Dilating before confirming the wire is in the vein.",
+            "refs": [
+              "asa-cvc-2020"
+            ]
+          },
+          {
+            "text": "Routine FFP or platelets before ultrasound-guided CVC in mild coagulopathy.",
+            "refs": [
+              "sir-coag-2019"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "PACER: with platelets 10-50 × 10⁹/L, omitting a prophylactic platelet unit before CVC placement increased catheter-related bleeding (11.9% vs 4.8%).",
+            "refs": [
+              "pacer"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Ultrasound-guided CVC",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "CVC indicated"
+          },
+          {
+            "id": "site",
+            "type": "action",
+            "text": "Choose site; pre-scan vessel; full sterile barrier"
+          },
+          {
+            "id": "needle",
+            "type": "action",
+            "text": "Real-time US-guided venepuncture"
+          },
+          {
+            "id": "conf",
+            "type": "decision",
+            "text": "Wire confirmed in vein (US long axis or manometry)?"
+          },
+          {
+            "id": "stop",
+            "type": "action",
+            "text": "Do not dilate; withdraw, compress, reassess"
+          },
+          {
+            "id": "dil",
+            "type": "action",
+            "text": "Dilate, pass catheter, secure"
+          },
+          {
+            "id": "art",
+            "type": "decision",
+            "text": "Arterial placement of dilator/catheter?"
+          },
+          {
+            "id": "vasc",
+            "type": "end",
+            "text": "Leave in situ; call vascular surgery",
+            "severity": "critical"
+          },
+          {
+            "id": "tip",
+            "type": "action",
+            "text": "Confirm tip (CXR or US + agitated saline) and lung sliding"
+          },
+          {
+            "id": "end",
+            "type": "end",
+            "text": "Line ready for use; document"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "site"
+          },
+          {
+            "from": "site",
+            "to": "needle"
+          },
+          {
+            "from": "needle",
+            "to": "conf"
+          },
+          {
+            "from": "conf",
+            "to": "dil",
+            "label": "Yes"
+          },
+          {
+            "from": "conf",
+            "to": "stop",
+            "label": "No"
+          },
+          {
+            "from": "stop",
+            "to": "needle"
+          },
+          {
+            "from": "dil",
+            "to": "art"
+          },
+          {
+            "from": "art",
+            "to": "vasc",
+            "label": "Yes"
+          },
+          {
+            "from": "art",
+            "to": "tip",
+            "label": "No"
+          },
+          {
+            "from": "tip",
+            "to": "end"
+          }
+        ],
+        "refs": [
+          "asa-cvc-2020"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Mechanical complications (arterial puncture, pneumothorax, malposition) occur at insertion and are reduced by ultrasound; infectious and thrombotic complications accumulate with catheter days and are site- and maintenance-dependent.",
+        "evidence": "- ASA 2020 practice guidelines [ASA 2020].\n- International recommendations on ultrasound-guided vascular access [Lamperti 2012]; ESAIC 2020 [Lamperti 2020].\n- PACER trial [van Baarle 2023]; SIR 2019 periprocedural thresholds [Patel 2019].",
+        "controversies": "- Subclavian versus IJ as the default site; ultrasound-guided subclavian/axillary approaches; prophylactic platelets in severe thrombocytopenia.",
+        "indiaNotes": "- Ultrasound machines are now widely available in Indian tertiary ICUs; in district hospitals landmark technique is still used - train with simulation and prefer femoral or IJ with ultrasound when possible.\n- Triple-lumen 7 Fr CVCs and 12-13.5 Fr dialysis catheters are standard stock; antimicrobial-impregnated catheters are costlier and rarely used."
+      },
+      "drugIds": [
+        "lidocaine",
+        "lipid-emulsion-20"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "asa-cvc-2020",
+        "lamperti-us-2012",
+        "esaic-us-2020",
+        "shea-clabsi-2022",
+        "sir-coag-2019",
+        "pacer",
+        "asra-last-2018"
+      ],
+      "quiz": [
+        {
+          "id": "central-venous-catheter-q1",
+          "stem": "Before dilating during CVC insertion, you should:",
+          "options": [
+            "Inject contrast",
+            "Confirm the wire is in the vein",
+            "Get a chest X-ray",
+            "Give heparin"
+          ],
+          "answerIndex": 1,
+          "explanation": "ASA 2020."
+        },
+        {
+          "id": "central-venous-catheter-q2",
+          "stem": "Lowest infection risk site:",
+          "options": [
+            "Femoral",
+            "Subclavian",
+            "IJ",
+            "All equal"
+          ],
+          "answerIndex": 1,
+          "explanation": "SHEA/ASA."
+        },
+        {
+          "id": "central-venous-catheter-q3",
+          "stem": "Dilator found in the carotid artery:",
+          "options": [
+            "Pull and compress",
+            "Leave in place; call vascular surgery",
+            "Flush with heparin",
+            "Ignore"
+          ],
+          "answerIndex": 1,
+          "explanation": "Do not remove."
+        },
+        {
+          "id": "central-venous-catheter-q4",
+          "stem": "PACER trial population:",
+          "options": [
+            "Platelets 10-50 × 10⁹/L before CVC",
+            "INR > 3",
+            "Children",
+            "Dialysis catheters only"
+          ],
+          "answerIndex": 0,
+          "explanation": "van Baarle 2023."
+        }
+      ]
+    },
+    {
+      "id": "arterial-line",
+      "title": "Arterial line insertion and troubleshooting",
+      "summary": "Radial cannulation with ultrasound, transducer set-up, zeroing, and the square-wave test.",
+      "viewKey": "topic:procedures/arterial-line",
+      "uiHints": {
+        "icon": "activity",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Arterial cannulation provides continuous blood pressure and frequent blood gas sampling. Indications: vasopressors, haemodynamic instability, frequent ABGs, unreliable NIBP. Radial is first choice; femoral and brachial are alternatives.",
+          "refs": [
+            "ibcc",
+            "esaic-us-2020"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Site",
+            "detail": "Radial (first choice) > femoral > brachial (end artery, use with caution) > dorsalis pedis.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Ultrasound",
+            "detail": "Ultrasound guidance increases first-pass success and reduces haematoma.",
+            "refs": [
+              "esaic-us-2020",
+              "lamperti-us-2012"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Technique",
+            "detail": "Wrist extended; aseptic; 20 G catheter (radial) via direct puncture or Seldinger; secure and dress.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Transducer",
+            "detail": "Pressure bag at 300 mmHg giving ~3 mL/h flush of saline; no glucose-containing flush.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Zero and level",
+            "detail": "Level the transducer at the phlebostatic axis (4th intercostal space, mid-axillary line); zero to atmosphere; re-level after bed changes.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Check damping",
+            "detail": "Fast-flush (square-wave) test: 1-2 oscillations = optimal; none = overdamped (air, clot, kink); many = underdamped (stiff long tubing).",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Remove",
+            "detail": "Remove when no longer needed; check hand perfusion daily.",
+            "refs": [
+              "shea-clabsi-2022"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "lidocaine",
+            "role": "Local anaesthetic",
+            "route": "Infiltration",
+            "dose": "1-2% lidocaine; stay under 4.5 mg/kg plain",
+            "workedExample": "70 kg: max ~300 mg plain = 30 mL of 1% (10 mg/mL) or 15 mL of 2%.",
+            "refs": [
+              "asra-last-2018"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "damping",
+            "title": "Arterial waveform troubleshooting",
+            "columns": [
+              "Problem",
+              "Effect",
+              "Fix"
+            ],
+            "rows": [
+              [
+                "Overdamped",
+                "Falsely low systolic, high diastolic; MAP roughly preserved",
+                "Remove air bubbles, clot, kinks; check bag pressure"
+              ],
+              [
+                "Underdamped (resonance)",
+                "Overshoot: falsely high systolic, low diastolic",
+                "Shorten tubing; damping device"
+              ],
+              [
+                "Transducer too low",
+                "All pressures read high",
+                "Re-level at phlebostatic axis"
+              ],
+              [
+                "Transducer too high",
+                "All pressures read low",
+                "Re-level"
+              ]
+            ],
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Pale, cold or painful hand after radial cannulation: remove the catheter and assess perfusion.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "text": "Accidental drug injection into an arterial line: stop, leave catheter, seek vascular advice.",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Trusting a systolic value from an overdamped trace - use MAP for decisions.",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "The modified Allen test predicts ischaemia poorly; ultrasound of ulnar flow and clinical monitoring are more useful.",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Catheter-tubing-transducer systems are second-order systems with a natural frequency and damping coefficient; distortion causes systematic errors in systolic and diastolic values while MAP is least affected.",
+        "evidence": "- Ultrasound-guided arterial access improves success [Lamperti 2020; Lamperti 2012].\n- Practical guidance [IBCC].",
+        "controversies": "- Infection risk of arterial lines relative to CVCs (similar per catheter-day in some studies).",
+        "indiaNotes": "- Disposable transducer kits add cost; some units reuse domes - follow manufacturer and infection-control policy."
+      },
+      "drugIds": [
+        "lidocaine"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "ibcc",
+        "esaic-us-2020",
+        "lamperti-us-2012",
+        "shea-clabsi-2022",
+        "asra-last-2018"
+      ],
+      "quiz": [
+        {
+          "id": "arterial-line-q1",
+          "stem": "Phlebostatic axis:",
+          "options": [
+            "2nd ICS mid-clavicular",
+            "4th ICS mid-axillary",
+            "Xiphisternum",
+            "Ear level"
+          ],
+          "answerIndex": 1,
+          "explanation": "Level here."
+        },
+        {
+          "id": "arterial-line-q2",
+          "stem": "No oscillations after fast flush suggests:",
+          "options": [
+            "Optimal",
+            "Overdamping",
+            "Underdamping",
+            "Arrhythmia"
+          ],
+          "answerIndex": 1,
+          "explanation": "Air, clot, kink."
+        },
+        {
+          "id": "arterial-line-q3",
+          "stem": "Value least affected by damping errors:",
+          "options": [
+            "Systolic",
+            "Diastolic",
+            "MAP",
+            "Pulse pressure"
+          ],
+          "answerIndex": 2,
+          "explanation": "Use MAP."
+        }
+      ]
+    },
+    {
+      "id": "pleural-procedures",
+      "title": "Thoracentesis and chest drain insertion",
+      "summary": "Ultrasound-guided pleural aspiration, interpreting pleural fluid, intercostal drain insertion and drain management.",
+      "viewKey": "topic:procedures/pleural-procedures",
+      "uiHints": {
+        "icon": "stethoscope",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "BTS 2023: use thoracic ultrasound for all pleural procedures for fluid; insert drains in the 'triangle of safety'; small-bore Seldinger drains are suitable for most effusions, pneumothorax and pleural infection.",
+          "refs": [
+            "bts-pleural-2023"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Image",
+            "detail": "Ultrasound to mark or guide the site; note depth, diaphragm and organs; ICU patients often supine - lateral approach in mid- to posterior axillary line.",
+            "refs": [
+              "bts-pleural-2023"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Site",
+            "detail": "Triangle of safety: anterior border of latissimus dorsi, lateral border of pectoralis major, line at the 5th intercostal space (nipple level); insert just above the rib.",
+            "refs": [
+              "bts-pleural-2023"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Diagnostic tap",
+            "detail": "Send protein, LDH, pH (blood gas syringe), glucose, cell count, Gram stain and culture (blood-culture bottles), cytology, and ADA where TB is suspected.",
+            "refs": [
+              "bts-pleural-2023"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Therapeutic tap",
+            "detail": "Stop if chest tightness, cough or vasovagal symptoms; limit volume at one sitting (commonly 1-1.5 L) to avoid re-expansion oedema.",
+            "refs": [
+              "bts-pleural-2023"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Chest drain",
+            "detail": "Seldinger 12-14 Fr for most indications; larger bore for haemothorax or large air leaks; secure, connect to underwater seal.",
+            "refs": [
+              "bts-pleural-2023"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Pleural infection",
+            "detail": "Drain if frank pus, pH < 7.2 or positive Gram stain/culture; antibiotics; consider intrapleural tPA + DNase if poor drainage; surgical referral if failing.",
+            "refs": [
+              "bts-pleural-2023",
+              "mist2"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Drain care",
+            "detail": "Never clamp a bubbling drain; daily CXR/US and output; remove when lung re-expanded and air leak stops or fluid < ~200 mL/day (local protocol).",
+            "refs": [
+              "bts-pleural-2023"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "lidocaine",
+            "role": "Local anaesthetic",
+            "route": "Infiltration",
+            "dose": "1-2% lidocaine; stay under 4.5 mg/kg plain",
+            "workedExample": "70 kg: max ~300 mg plain = 30 mL of 1% (10 mg/mL) or 15 mL of 2%.",
+            "refs": [
+              "asra-last-2018",
+              "bts-pleural-2023"
+            ]
+          },
+          {
+            "drugId": "tpa-dnase-intrapleural",
+            "role": "Pleural infection with poor drainage",
+            "route": "Intrapleural",
+            "dose": "Alteplase 10 mg + dornase 5 mg twice daily for 3 days",
+            "verify": "Availability of dornase in India.",
+            "refs": [
+              "mist2",
+              "bts-pleural-2023"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "lights",
+            "title": "Light's criteria (exudate if any one present)",
+            "columns": [
+              "Criterion",
+              "Exudate"
+            ],
+            "rows": [
+              [
+                "Pleural/serum protein",
+                "> 0.5"
+              ],
+              [
+                "Pleural/serum LDH",
+                "> 0.6"
+              ],
+              [
+                "Pleural LDH",
+                "> 2/3 upper limit of normal serum LDH"
+              ]
+            ],
+            "refs": [
+              "bts-pleural-2023"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Sudden hypoxaemia and frothy sputum after draining a large effusion: re-expansion pulmonary oedema.",
+            "refs": [
+              "bts-pleural-2023"
+            ]
+          },
+          {
+            "text": "Tension pneumothorax in a ventilated patient (hypotension, rising airway pressures, absent lung sliding): needle or finger decompression then drain.",
+            "refs": [
+              "bts-pleural-2023"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Inserting a drain without ultrasound for a fluid collection.",
+            "refs": [
+              "bts-pleural-2023"
+            ]
+          },
+          {
+            "text": "Clamping a drain that is bubbling.",
+            "refs": [
+              "bts-pleural-2023"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Light's criteria misclassify about 25% of transudates in patients on diuretics as exudates - check serum-pleural albumin gradient (> 12 g/L favours transudate).",
+            "refs": [
+              "bts-pleural-2023"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Pleural effusion in ICU",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Effusion on ultrasound"
+          },
+          {
+            "id": "sym",
+            "type": "decision",
+            "text": "Diagnostic uncertainty or suspected infection?"
+          },
+          {
+            "id": "tap",
+            "type": "action",
+            "text": "US-guided diagnostic aspiration: pH, protein, LDH, glucose, culture"
+          },
+          {
+            "id": "inf",
+            "type": "decision",
+            "text": "Pus, pH < 7.2 or positive Gram stain?"
+          },
+          {
+            "id": "drain",
+            "type": "action",
+            "text": "Small-bore chest drain + antibiotics"
+          },
+          {
+            "id": "poor",
+            "type": "decision",
+            "text": "Poor drainage at 24-48 h?"
+          },
+          {
+            "id": "tpa",
+            "type": "end",
+            "text": "Intrapleural tPA + DNase or surgical referral"
+          },
+          {
+            "id": "ok",
+            "type": "end",
+            "text": "Continue; remove when resolved"
+          },
+          {
+            "id": "big",
+            "type": "decision",
+            "text": "Large effusion impairing oxygenation or weaning?"
+          },
+          {
+            "id": "ther",
+            "type": "end",
+            "text": "Therapeutic aspiration (stop with symptoms)"
+          },
+          {
+            "id": "treat",
+            "type": "end",
+            "text": "Treat cause (diuresis, albumin, etc.)"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "sym"
+          },
+          {
+            "from": "sym",
+            "to": "tap",
+            "label": "Yes"
+          },
+          {
+            "from": "sym",
+            "to": "big",
+            "label": "No"
+          },
+          {
+            "from": "tap",
+            "to": "inf"
+          },
+          {
+            "from": "inf",
+            "to": "drain",
+            "label": "Yes"
+          },
+          {
+            "from": "inf",
+            "to": "big",
+            "label": "No"
+          },
+          {
+            "from": "drain",
+            "to": "poor"
+          },
+          {
+            "from": "poor",
+            "to": "tpa",
+            "label": "Yes"
+          },
+          {
+            "from": "poor",
+            "to": "ok",
+            "label": "No"
+          },
+          {
+            "from": "big",
+            "to": "ther",
+            "label": "Yes"
+          },
+          {
+            "from": "big",
+            "to": "treat",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "bts-pleural-2023"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Effusions in ICU are mostly transudates (heart failure, fluid overload, hypoalbuminaemia, atelectasis) but parapneumonic effusions and haemothorax need drainage. Removing large effusions improves oxygenation modestly and may aid weaning.",
+        "evidence": "- BTS 2023 pleural guideline [Roberts 2023].\n- MIST2: tPA + DNase improved radiographic drainage and reduced surgical referral [Rahman 2011].",
+        "controversies": "- Volume limits for therapeutic thoracentesis (pleural manometry); drainage of transudates in ventilated patients.",
+        "indiaNotes": "- Tuberculous effusion is common: pleural ADA (> 40 units/L supportive) with lymphocytic exudate; avoid drains for uncomplicated TB effusions.\n- Empyema from delayed presentation is frequent; dornase alfa is expensive - urokinase or streptokinase are sometimes used locally (weaker evidence)."
+      },
+      "drugIds": [
+        "lidocaine",
+        "tpa-dnase-intrapleural"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "bts-pleural-2023",
+        "mist2",
+        "asra-last-2018"
+      ],
+      "quiz": [
+        {
+          "id": "pleural-procedures-q1",
+          "stem": "Exudate by Light's criteria:",
+          "options": [
+            "Pleural/serum protein 0.3",
+            "Pleural/serum LDH 0.7",
+            "Pleural LDH 1/3 ULN",
+            "pH 7.45"
+          ],
+          "answerIndex": 1,
+          "explanation": "LDH ratio > 0.6."
+        },
+        {
+          "id": "pleural-procedures-q2",
+          "stem": "Indication for chest drain in parapneumonic effusion:",
+          "options": [
+            "pH 7.35",
+            "pH < 7.2",
+            "Lymphocytes",
+            "Transudate"
+          ],
+          "answerIndex": 1,
+          "explanation": "BTS."
+        },
+        {
+          "id": "pleural-procedures-q3",
+          "stem": "Never do this with a bubbling drain:",
+          "options": [
+            "Suction",
+            "Clamp",
+            "X-ray",
+            "Secure"
+          ],
+          "answerIndex": 1,
+          "explanation": "Risk of tension."
+        },
+        {
+          "id": "pleural-procedures-q4",
+          "stem": "MIST2 regimen:",
+          "options": [
+            "Streptokinase alone",
+            "tPA 10 mg + DNase 5 mg BD for 3 days",
+            "Urokinase daily",
+            "Saline irrigation"
+          ],
+          "answerIndex": 1,
+          "explanation": "Rahman 2011."
+        }
+      ]
+    },
+    {
+      "id": "lumbar-puncture",
+      "title": "Lumbar puncture in the ICU",
+      "summary": "When to scan first, anticoagulant timing, technique, opening pressure and CSF tests.",
+      "viewKey": "topic:procedures/lumbar-puncture",
+      "uiHints": {
+        "icon": "scan-line",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "LP is needed for suspected meningitis/encephalitis, subarachnoid haemorrhage with negative CT, Guillain-Barré syndrome and some neurological disorders. Never delay antibiotics for imaging or LP in suspected bacterial meningitis.",
+          "refs": [
+            "escmid-meningitis-2016"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Antibiotics first",
+            "detail": "If bacterial meningitis is suspected and LP will be delayed, take blood cultures and give antibiotics (and dexamethasone) immediately.",
+            "time": "Within 1 h",
+            "refs": [
+              "escmid-meningitis-2016"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "CT before LP if",
+            "detail": "Focal neurological deficit, new-onset seizures, GCS < 10, severe immunocompromise (ESCMID).",
+            "refs": [
+              "escmid-meningitis-2016"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Coagulation and anticoagulants",
+            "detail": "Prophylactic LMWH: wait 12 h; therapeutic LMWH: 24 h; SC UFH 5,000 units: 4-6 h; apixaban/rivaroxaban: 72 h; clopidogrel: 5-7 days; warfarin: normal INR. Platelets commonly ≥ 50 × 10⁹/L.",
+            "refs": [
+              "asra-anticoag-2018"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Position and technique",
+            "detail": "Lateral decubitus (for accurate opening pressure) at L3/4 or L4/5; atraumatic (pencil-point) needle reduces post-dural puncture headache.",
+            "refs": [
+              "atraumatic-lp-2018"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Opening pressure",
+            "detail": "Measure with a manometer in lateral position, legs extended; normal about 10-20 cmH₂O; > 25 cmH₂O is raised (consider cryptococcal meningitis, IIH, venous sinus thrombosis).",
+            "refs": [
+              "escmid-meningitis-2016"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Samples",
+            "detail": "Cell count (tubes 1 and 4 for SAH), protein, glucose with paired plasma glucose, Gram stain and culture, PCR (HSV, enterovirus), cryptococcal antigen, AFB/GeneXpert, xanthochromia (> 12 h after SAH onset).",
+            "refs": [
+              "escmid-meningitis-2016"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "lidocaine",
+            "role": "Local anaesthetic",
+            "route": "Infiltration",
+            "dose": "1-2% lidocaine; stay under 4.5 mg/kg plain",
+            "workedExample": "70 kg: max ~300 mg plain = 30 mL of 1% (10 mg/mL) or 15 mL of 2%.",
+            "refs": [
+              "asra-last-2018"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "csf",
+            "title": "CSF patterns",
+            "columns": [
+              "Pattern",
+              "Cells",
+              "Protein",
+              "Glucose ratio"
+            ],
+            "rows": [
+              [
+                "Normal",
+                "< 5/µL lymphocytes",
+                "0.15-0.45 g/L",
+                "≥ 0.6"
+              ],
+              [
+                "Bacterial",
+                "Hundreds-thousands, neutrophils",
+                "High (> 1 g/L)",
+                "< 0.4"
+              ],
+              [
+                "Viral",
+                "10-500, lymphocytes",
+                "Normal-mildly high",
+                "Normal"
+              ],
+              [
+                "TB / fungal",
+                "50-500, lymphocytes",
+                "High (often > 1-2 g/L)",
+                "Low"
+              ]
+            ],
+            "refs": [
+              "escmid-meningitis-2016"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Deterioration after LP (falling GCS, new pupil asymmetry) - suspect herniation; treat raised ICP and image urgently.",
+            "refs": [
+              "escmid-meningitis-2016"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Delaying antibiotics for CT and LP.",
+            "refs": [
+              "escmid-meningitis-2016"
+            ]
+          },
+          {
+            "text": "Doing LP on therapeutic LMWH or a DOAC without checking timing.",
+            "refs": [
+              "asra-anticoag-2018"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "CSF:blood glucose ratio < 0.4 is more useful than an absolute CSF glucose in hyperglycaemic patients.",
+            "refs": [
+              "escmid-meningitis-2016"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "LP risks are herniation in patients with mass effect or obstructive hydrocephalus, spinal haematoma in coagulopathy, infection and post-dural puncture headache from CSF leak.",
+        "evidence": "- ESCMID 2016 meningitis guideline [van de Beek 2016].\n- ASRA 2018 neuraxial anticoagulation timing, used by analogy for LP [Horlocker 2018].\n- Atraumatic needles reduce PDPH [Nath 2018].",
+        "controversies": "- Safe platelet threshold for LP (often 40-50 × 10⁹/L; lower in haematology practice).",
+        "indiaNotes": "- TB meningitis, cryptococcal meningitis and scrub typhus/JE encephalitis are key differentials in India - send CSF ADA, GeneXpert and cryptococcal antigen where suspected.\n- Manometers are often missing from LP sets; request them so that opening pressure is recorded."
+      },
+      "drugIds": [
+        "lidocaine"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "escmid-meningitis-2016",
+        "asra-anticoag-2018",
+        "atraumatic-lp-2018",
+        "asra-last-2018"
+      ],
+      "quiz": [
+        {
+          "id": "lumbar-puncture-q1",
+          "stem": "Bacterial meningitis suspected; CT will take 2 h:",
+          "options": [
+            "Wait for CT",
+            "Blood cultures and antibiotics now",
+            "LP without CT",
+            "Steroids only"
+          ],
+          "answerIndex": 1,
+          "explanation": "ESCMID."
+        },
+        {
+          "id": "lumbar-puncture-q2",
+          "stem": "Interval after prophylactic enoxaparin before LP:",
+          "options": [
+            "2 h",
+            "6 h",
+            "12 h",
+            "72 h"
+          ],
+          "answerIndex": 2,
+          "explanation": "ASRA."
+        },
+        {
+          "id": "lumbar-puncture-q3",
+          "stem": "Needle type that reduces post-dural puncture headache:",
+          "options": [
+            "Cutting Quincke",
+            "Atraumatic pencil-point",
+            "Larger gauge",
+            "No difference"
+          ],
+          "answerIndex": 1,
+          "explanation": "Nath 2018."
+        }
+      ]
+    },
+    {
+      "id": "paracentesis",
+      "title": "Paracentesis (diagnostic and large-volume)",
+      "summary": "Site, safety in coagulopathy, essential tests, SAAG, SBP diagnosis and albumin after large-volume paracentesis.",
+      "viewKey": "topic:procedures/paracentesis",
+      "uiHints": {
+        "icon": "droplet",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Diagnostic paracentesis for every patient with cirrhosis and ascites admitted to hospital or deteriorating (SBP screening). Large-volume paracentesis (LVP) for tense or refractory ascites. Routine FFP or platelets are not recommended before paracentesis.",
+          "refs": [
+            "aasld-ascites-2021"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Indication",
+            "detail": "New ascites, any hospital admission with ascites, fever, encephalopathy, AKI or GI bleed in cirrhosis.",
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Site",
+            "detail": "Left lower quadrant, about 2 finger-breadths medial and cephalad to the anterior superior iliac spine; ultrasound guidance; avoid inferior epigastric vessels and scars.",
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Coagulopathy",
+            "detail": "Do not routinely give FFP or platelets; avoid in DIC or clinically evident fibrinolysis.",
+            "refs": [
+              "aasld-ascites-2021",
+              "sir-coag-2019"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Tests",
+            "detail": "Cell count and differential, albumin (SAAG), total protein, culture in blood culture bottles at the bedside (10 mL each); amylase, cytology, ADA as indicated.",
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Interpret",
+            "detail": "SBP: neutrophils ≥ 250/µL. SAAG ≥ 1.1 g/dL = portal hypertension; total protein < 1.5 g/dL = higher SBP risk.",
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "LVP",
+            "detail": "Remove ascites to dryness if tolerated; give 20% albumin 6-8 g/L removed when > 5 L.",
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "lidocaine",
+            "role": "Local anaesthetic",
+            "route": "Infiltration",
+            "dose": "1-2% lidocaine; stay under 4.5 mg/kg plain",
+            "workedExample": "70 kg: max ~300 mg plain = 30 mL of 1% (10 mg/mL) or 15 mL of 2%.",
+            "refs": [
+              "asra-last-2018"
+            ]
+          },
+          {
+            "drugId": "albumin-20",
+            "role": "After LVP > 5 L",
+            "route": "IV",
+            "dose": "6-8 g per litre removed",
+            "workedExample": "8 L removed: 48-64 g albumin = 240-320 mL of 20% albumin (about 2.5-3 bottles of 100 mL).",
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Abdominal pain, falling haemoglobin or hypotension after paracentesis: suspect abdominal wall haematoma or haemoperitoneum (inferior epigastric injury).",
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Delaying diagnostic paracentesis for INR correction.",
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          },
+          {
+            "text": "Sending ascitic fluid in a sterile container only - culture yield is higher when inoculated into blood culture bottles at the bedside.",
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Polymicrobial growth with very high protein or low glucose suggests secondary (surgical) peritonitis - image for perforation.",
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "LVP without albumin can cause post-paracentesis circulatory dysfunction (activation of renin-angiotensin, AKI, hyponatraemia); albumin expands effective arterial volume.",
+        "evidence": "- AASLD 2021 practice guidance [Biggins 2021].\n- SIR 2019 classifies paracentesis as low bleeding risk [Patel 2019].",
+        "controversies": "- Albumin for LVP < 5 L in patients with AKI or ACLF.",
+        "indiaNotes": "- Albumin is costly; prioritise LVP > 5 L and SBP/HRS indications. Tuberculous peritonitis is a common cause of high-protein, low-SAAG, lymphocytic ascites (ADA helpful)."
+      },
+      "drugIds": [
+        "lidocaine",
+        "albumin-20"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "aasld-ascites-2021",
+        "sir-coag-2019",
+        "asra-last-2018"
+      ],
+      "quiz": [
+        {
+          "id": "paracentesis-q1",
+          "stem": "SBP threshold:",
+          "options": [
+            "Neutrophils ≥ 250/µL",
+            "WBC ≥ 100/µL",
+            "Protein > 2.5 g/dL",
+            "SAAG ≥ 1.1"
+          ],
+          "answerIndex": 0,
+          "explanation": "AASLD."
+        },
+        {
+          "id": "paracentesis-q2",
+          "stem": "Albumin after 7 L LVP:",
+          "options": [
+            "None",
+            "42-56 g",
+            "200 g",
+            "10 g"
+          ],
+          "answerIndex": 1,
+          "explanation": "6-8 g/L."
+        },
+        {
+          "id": "paracentesis-q3",
+          "stem": "INR 2.2 before diagnostic paracentesis:",
+          "options": [
+            "Give FFP first",
+            "Proceed without routine correction",
+            "Give vitamin K and wait 24 h",
+            "Cancel"
+          ],
+          "answerIndex": 1,
+          "explanation": "AASLD."
+        }
+      ]
+    },
+    {
+      "id": "pericardiocentesis",
+      "title": "Pericardiocentesis",
+      "summary": "Echo-guided pericardial drainage for tamponade: approach, confirmation, drain management and when to go to surgery.",
+      "viewKey": "topic:procedures/pericardiocentesis",
+      "uiHints": {
+        "icon": "heart-pulse",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Pericardiocentesis is indicated for cardiac tamponade and for large or suspected purulent/neoplastic effusions. Echo guidance is recommended. Aortic dissection and traumatic haemopericardium are relative contraindications: surgical drainage is preferred.",
+          "refs": [
+            "esc-pericardial-2015",
+            "esc-pericarditis-2025"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Confirm",
+            "detail": "Echo: effusion with RA/RV diastolic collapse, plethoric IVC, respiratory variation of mitral inflow; clinical hypotension and tachycardia.",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Resuscitate",
+            "detail": "Fluid bolus may transiently help; avoid positive-pressure ventilation and sedation if possible (may precipitate arrest).",
+            "refs": [
+              "esc-pericardial-2015",
+              "ibcc"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Approach",
+            "detail": "Echo-guided at the site with the largest fluid collection closest to the skin (apical, parasternal or subxiphoid); subxiphoid aims at the left shoulder at 30-45°.",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Confirm needle position",
+            "detail": "Echo with agitated saline in the pericardial space; then pass wire and pigtail catheter (Seldinger).",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Drain",
+            "detail": "Drain in steps (about < 1 L at once) to reduce pericardial decompression syndrome; leave the pigtail; remove when output < 25-30 mL/day.",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Send fluid",
+            "detail": "Cell count, protein, LDH, glucose, Gram stain, culture, AFB/GeneXpert, ADA, cytology.",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Surgical drainage",
+            "detail": "Aortic dissection, trauma, purulent loculated effusion, recurrent or clotted haemopericardium after cardiac surgery.",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "lidocaine",
+            "role": "Local anaesthetic",
+            "route": "Infiltration",
+            "dose": "1-2% lidocaine; stay under 4.5 mg/kg plain",
+            "workedExample": "70 kg: max ~300 mg plain = 30 mL of 1% (10 mg/mL) or 15 mL of 2%.",
+            "refs": [
+              "asra-last-2018"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Tamponade with type A aortic dissection: urgent surgery; pericardiocentesis only to prevent imminent death, removing small volumes.",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Intubating a patient with tamponade before drainage - induction and positive pressure can cause collapse.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "text": "Draining a large chronic effusion completely at once.",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Pericardial ADA > 40 units/L supports tuberculous pericarditis - common in India.",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Tamponade occurs when intrapericardial pressure exceeds cardiac filling pressures; the rate of accumulation matters more than volume (200 mL acutely vs > 1 L chronically). Ventricular interdependence produces pulsus paradoxus.",
+        "evidence": "- ESC 2015 pericardial guideline (procedural detail) [Adler 2015].\n- ESC 2025 myocarditis and pericarditis guideline update [Schulz-Menger 2025].",
+        "controversies": "- Extended drainage to reduce recurrence; timing of drain removal.",
+        "indiaNotes": "- Tuberculous pericarditis is a leading cause of large effusions in India; send ADA, GeneXpert and consider anti-tubercular therapy.\n- Pigtail pericardial kits may not be available outside cath labs - a CVC set over a wire is a common improvisation (smaller lumen, blocks more easily)."
+      },
+      "drugIds": [
+        "lidocaine"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "esc-pericardial-2015",
+        "esc-pericarditis-2025",
+        "ibcc",
+        "asra-last-2018"
+      ],
+      "quiz": [
+        {
+          "id": "pericardiocentesis-q1",
+          "stem": "Preferred guidance for pericardiocentesis:",
+          "options": [
+            "Blind subxiphoid",
+            "Echocardiography",
+            "CT",
+            "Fluoroscopy only"
+          ],
+          "answerIndex": 1,
+          "explanation": "ESC."
+        },
+        {
+          "id": "pericardiocentesis-q2",
+          "stem": "Relative contraindication to pericardiocentesis:",
+          "options": [
+            "Malignant effusion",
+            "Aortic dissection with haemopericardium",
+            "TB effusion",
+            "Uraemic effusion"
+          ],
+          "answerIndex": 1,
+          "explanation": "Go to surgery."
+        },
+        {
+          "id": "pericardiocentesis-q3",
+          "stem": "To reduce pericardial decompression syndrome:",
+          "options": [
+            "Drain in steps (< 1 L at once)",
+            "Drain all quickly",
+            "Give diuretics",
+            "Use larger needle"
+          ],
+          "answerIndex": 0,
+          "explanation": "ESC 2015."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "lidocaine",
+      "name": "Lidocaine (lignocaine)",
+      "class": "Amide local anaesthetic",
+      "indications": "Local infiltration for bedside procedures",
+      "adultDose": "Infiltration with 1% (10 mg/mL) or 2% solution. Maximum: 4.5 mg/kg plain (about 300 mg), 7 mg/kg with adrenaline (about 500 mg).",
+      "preparationIndia": "1% and 2% vials (plain or with adrenaline 1:200,000).",
+      "cautions": "Local anaesthetic systemic toxicity (perioral tingling, tinnitus, seizures, arrhythmia, arrest); aspirate before injecting; avoid adrenaline-containing solutions at end-arterial sites.",
+      "monitoring": "Neurological symptoms and ECG during and after large-volume infiltration.",
+      "verify": "Maximum dose limits vary by source (some cite 3 mg/kg plain); use the local procedural policy.",
+      "refs": [
+        "asra-last-2018",
+        "ibcc"
+      ]
+    },
+    {
+      "id": "lipid-emulsion-20",
+      "name": "Lipid emulsion 20%",
+      "class": "Antidote for local anaesthetic systemic toxicity",
+      "indications": "LAST with seizures, arrhythmia or cardiovascular collapse",
+      "adultDose": "> 70 kg: 100 mL bolus over 2-3 min, then 200-250 mL over 15-20 min. ≤ 70 kg: 1.5 mL/kg bolus over 2-3 min, then 0.25 mL/kg/min. Repeat bolus once or twice and double infusion rate if unstable; maximum about 12 mL/kg.",
+      "preparationIndia": "20% lipid emulsion bags (parenteral nutrition products, e.g. 100 mL and 250 mL).",
+      "cautions": "Pancreatitis and lipaemic interference with labs; use with standard ACLS (reduced adrenaline doses ≤ 1 mcg/kg).",
+      "refs": [
+        "asra-last-2018"
+      ]
+    },
+    {
+      "id": "tpa-dnase-intrapleural",
+      "name": "Intrapleural alteplase + dornase alfa",
+      "class": "Fibrinolytic + mucolytic (intrapleural)",
+      "indications": "Pleural infection with poor drainage despite a chest drain",
+      "adultDose": "Alteplase 10 mg + dornase alfa 5 mg intrapleurally twice daily for 3 days (6 doses), each clamped for 1 h.",
+      "cautions": "Pleural bleeding; check coagulation and platelets; avoid with bronchopleural fistula.",
+      "verify": "Dornase alfa availability and cost in India; local protocol for dilution (commonly in 30 mL saline).",
+      "refs": [
+        "mist2",
+        "bts-pleural-2023"
+      ]
+    },
+    {
+      "id": "albumin-20",
+      "name": "Human albumin 20%",
+      "class": "Colloid",
+      "indications": "Large-volume paracentesis (> 5 L)",
+      "adultDose": "6-8 g albumin per litre of ascites removed (e.g. 8 L removed: 48-64 g).",
+      "preparationIndia": "20% (20 g in 100 mL) and 5% vials; costly in India.",
+      "cautions": "Volume overload in cardiac disease.",
+      "refs": [
+        "aasld-ascites-2021"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "aasld-ascites-2021",
+      "citation": "Biggins SW, Angeli P, Garcia-Tsao G, et al. Diagnosis, evaluation, and management of ascites, spontaneous bacterial peritonitis and hepatorenal syndrome: 2021 practice guidance by the AASLD. Hepatology 2021;74:1014-48.",
+      "url": "https://doi.org/10.1002/hep.31884",
+      "year": 2021,
+      "type": "guideline",
+      "doi": "10.1002/hep.31884"
+    },
+    {
+      "id": "asa-cvc-2020",
+      "citation": "American Society of Anesthesiologists Task Force on Central Venous Access. Practice Guidelines for Central Venous Access 2020. Anesthesiology 2020;132:8-43.",
+      "url": "https://doi.org/10.1097/ALN.0000000000002864",
+      "year": 2020,
+      "type": "guideline",
+      "doi": "10.1097/ALN.0000000000002864"
+    },
+    {
+      "id": "bts-pleural-2023",
+      "citation": "Roberts ME, Rahman NM, Maskell NA, et al. British Thoracic Society Guideline for pleural disease. Thorax 2023;78(Suppl 3):s1-42.",
+      "url": "https://doi.org/10.1136/thorax-2022-219784",
+      "year": 2023,
+      "type": "guideline",
+      "doi": "10.1136/thorax-2022-219784"
+    },
+    {
+      "id": "ibcc",
+      "citation": "Farkas J. The Internet Book of Critical Care (IBCC). EMCrit Project; continuously updated.",
+      "url": "https://emcrit.org/ibcc/toc/",
+      "year": 2024,
+      "type": "textbook"
+    },
+    {
+      "id": "lamperti-us-2012",
+      "citation": "Lamperti M, Bodenham AR, Pittiruti M, et al. International evidence-based recommendations on ultrasound-guided vascular access. Intensive Care Med 2012;38:1105-17.",
+      "url": "https://doi.org/10.1007/s00134-012-2597-x",
+      "year": 2012,
+      "type": "consensus",
+      "doi": "10.1007/s00134-012-2597-x"
+    },
+    {
+      "id": "shea-clabsi-2022",
+      "citation": "Buetti N, Marschall J, Drees M, et al. Strategies to prevent central line-associated bloodstream infections in acute-care hospitals: 2022 update. Infect Control Hosp Epidemiol 2022;43:553-69.",
+      "url": "https://doi.org/10.1017/ice.2022.87",
+      "year": 2022,
+      "type": "consensus",
+      "doi": "10.1017/ice.2022.87"
+    },
+    {
+      "id": "esaic-us-2020",
+      "citation": "Lamperti M, Biasucci DG, Disma N, et al. European Society of Anaesthesiology guidelines on peri-operative use of ultrasound-guided for vascular access (PERSEUS vascular access). Eur J Anaesthesiol 2020;37:344-76.",
+      "url": "https://doi.org/10.1097/EJA.0000000000001180",
+      "year": 2020,
+      "type": "guideline",
+      "doi": "10.1097/EJA.0000000000001180"
+    },
+    {
+      "id": "sir-coag-2019",
+      "citation": "Patel IJ, Rahim S, Davidson JC, et al. Society of Interventional Radiology consensus guidelines for the periprocedural management of thrombotic and bleeding risk in patients undergoing percutaneous image-guided interventions - part II: recommendations. J Vasc Interv Radiol 2019;30:1168-84.",
+      "url": "https://doi.org/10.1016/j.jvir.2019.04.017",
+      "year": 2019,
+      "type": "consensus",
+      "doi": "10.1016/j.jvir.2019.04.017"
+    },
+    {
+      "id": "pacer",
+      "citation": "van Baarle FLF, van de Weerdt EK, van der Velden WJFM, et al. Platelet transfusion before CVC placement in patients with thrombocytopenia (PACER). N Engl J Med 2023;388:1956-65.",
+      "url": "https://doi.org/10.1056/NEJMoa2214322",
+      "year": 2023,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa2214322"
+    },
+    {
+      "id": "asra-anticoag-2018",
+      "citation": "Horlocker TT, Vandermeuelen E, Kopp SL, et al. Regional anesthesia in the patient receiving antithrombotic or thrombolytic therapy: American Society of Regional Anesthesia and Pain Medicine evidence-based guidelines (fourth edition). Reg Anesth Pain Med 2018;43:263-309.",
+      "url": "https://doi.org/10.1097/AAP.0000000000000763",
+      "year": 2018,
+      "type": "guideline",
+      "doi": "10.1097/AAP.0000000000000763"
+    },
+    {
+      "id": "asra-last-2018",
+      "citation": "Neal JM, Barrington MJ, Fettiplace MR, et al. The third American Society of Regional Anesthesia and Pain Medicine practice advisory on local anesthetic systemic toxicity: executive summary 2017. Reg Anesth Pain Med 2018;43:113-23.",
+      "url": "https://doi.org/10.1097/AAP.0000000000000720",
+      "year": 2018,
+      "type": "consensus",
+      "doi": "10.1097/AAP.0000000000000720"
+    },
+    {
+      "id": "escmid-meningitis-2016",
+      "citation": "van de Beek D, Cabellos C, Dzupova O, et al. ESCMID guideline: diagnosis and treatment of acute bacterial meningitis. Clin Microbiol Infect 2016;22(Suppl 3):S37-62.",
+      "url": "https://doi.org/10.1016/j.cmi.2016.01.007",
+      "year": 2016,
+      "type": "guideline",
+      "doi": "10.1016/j.cmi.2016.01.007"
+    },
+    {
+      "id": "atraumatic-lp-2018",
+      "citation": "Nath S, Koziarz A, Badhiwala JH, et al. Atraumatic versus conventional lumbar puncture needles: a systematic review and meta-analysis. Lancet 2018;391:1197-204.",
+      "url": "https://doi.org/10.1016/S0140-6736(17)32451-0",
+      "year": 2018,
+      "type": "review",
+      "doi": "10.1016/S0140-6736(17)32451-0"
+    },
+    {
+      "id": "mist2",
+      "citation": "Rahman NM, Maskell NA, West A, et al. Intrapleural use of tissue plasminogen activator and DNase in pleural infection (MIST2). N Engl J Med 2011;365:518-26.",
+      "url": "https://doi.org/10.1056/NEJMoa1012740",
+      "year": 2011,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1012740"
+    },
+    {
+      "id": "esc-pericardial-2015",
+      "citation": "Adler Y, Charron P, Imazio M, et al. 2015 ESC guidelines for the diagnosis and management of pericardial diseases. Eur Heart J 2015;36:2921-64.",
+      "url": "https://doi.org/10.1093/eurheartj/ehv318",
+      "year": 2015,
+      "type": "guideline",
+      "doi": "10.1093/eurheartj/ehv318"
+    },
+    {
+      "id": "esc-pericarditis-2025",
+      "citation": "Schulz-Menger J, Collini V, Gröschel J, et al. 2025 ESC guidelines for the management of myocarditis and pericarditis. Eur Heart J 2025.",
+      "url": "https://doi.org/10.1093/eurheartj/ehaf192",
+      "year": 2025,
+      "type": "guideline",
+      "doi": "10.1093/eurheartj/ehaf192"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Lidocaine maximum doses",
+      "reason": "Sources vary (3-4.5 mg/kg plain); confirm local policy."
+    },
+    {
+      "item": "LP platelet threshold",
+      "reason": "No guideline-fixed value; 40-50 × 10⁹/L commonly used."
+    },
+    {
+      "item": "Therapeutic thoracentesis volume limit",
+      "reason": "BTS advises stopping with symptoms; numeric limits are practice-based."
+    },
+    {
+      "item": "Intrapleural dornase availability",
+      "reason": "Cost and availability in India."
+    }
+  ]
+}

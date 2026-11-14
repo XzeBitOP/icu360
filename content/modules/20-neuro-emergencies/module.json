@@ -1,0 +1,1883 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "neuro-emergencies",
+  "number": 20,
+  "folder": "20-neuro-emergencies",
+  "section": {
+    "id": "E",
+    "title": "Neuro-critical care"
+  },
+  "phase": 1,
+  "title": "Neuro emergencies",
+  "summary": "Time-critical neurological emergencies in the ICU: the status epilepticus ladder, acute ischaemic stroke and thrombolysis, intracerebral and subarachnoid haemorrhage, a structured approach to coma, CNS infections, and neuromuscular respiratory failure (GBS and myasthenic crisis).",
+  "tags": [
+    "status epilepticus",
+    "lorazepam",
+    "midazolam",
+    "levetiracetam",
+    "valproate",
+    "phenytoin",
+    "refractory status",
+    "stroke",
+    "tenecteplase",
+    "alteplase",
+    "thrombectomy",
+    "intracerebral haemorrhage",
+    "blood pressure",
+    "anticoagulant reversal",
+    "subarachnoid haemorrhage",
+    "nimodipine",
+    "vasospasm",
+    "coma",
+    "GCS",
+    "FOUR score",
+    "meningitis",
+    "encephalitis",
+    "dexamethasone",
+    "acyclovir",
+    "Guillain-Barré",
+    "myasthenic crisis",
+    "IVIg",
+    "plasma exchange"
+  ],
+  "relatedModules": [
+    "airway-management",
+    "mechanical-ventilation",
+    "raised-icp-neurotrauma-brain-death",
+    "snakebite-scorpion-envenomation",
+    "agrochemical-household-poisons",
+    "tropical-monsoon-fevers"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "brain",
+    "accent": "critical"
+  },
+  "viewKey": "module:neuro-emergencies",
+  "topics": [
+    {
+      "id": "status-epilepticus",
+      "title": "Status epilepticus ladder",
+      "summary": "Seizure > 5 min or recurrent without recovery: adequate-dose benzodiazepine by 5-10 min, a second-line agent (levetiracetam, valproate or phenytoin, all equivalent in ESETT) by 20-30 min, then anaesthetic infusion with EEG for refractory status.",
+      "viewKey": "topic:neuro-emergencies/status-epilepticus",
+      "uiHints": {
+        "icon": "brain",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Convulsive status: ≥ 5 min of continuous seizure or ≥ 2 seizures without return to baseline. Refractory: continues after a benzodiazepine and one second-line drug. Super-refractory: continues ≥ 24 h after anaesthesia.",
+          "refs": [
+            "ncs-se2012"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "0-5 min",
+            "title": "Stabilise",
+            "detail": "ABC, oxygen, glucose (give thiamine then dextrose if < 60 mg/dL), IV access, time the seizure.",
+            "refs": [
+              "aes2016"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "5-10 min",
+            "title": "Benzodiazepine",
+            "detail": "Lorazepam 0.1 mg/kg IV (max 4 mg), repeat once; or midazolam 10 mg IM; or diazepam 0.15-0.2 mg/kg IV (max 10 mg). Give the full dose.",
+            "refs": [
+              "aes2016"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "10-30 min",
+            "title": "Second line",
+            "detail": "Levetiracetam 60 mg/kg (max 4.5 g) or valproate 40 mg/kg (max 3 g) or phenytoin 20 mg/kg (fosphenytoin 20 mg PE/kg). ESETT: ~half stopped with each; no drug superior.",
+            "refs": [
+              "esett"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "30-60 min",
+            "title": "Refractory",
+            "detail": "Intubate; midazolam 0.2 mg/kg then 0.05-2 mg/kg/h, or propofol 1-2 mg/kg then 20-200 mcg/kg/min (watch PRIS), or ketamine. Continuous EEG; titrate to seizure suppression or burst suppression for 24-48 h.",
+            "refs": [
+              "ncs-se2012"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Cause",
+            "title": "Search",
+            "detail": "Glucose, Na+, Ca2+, Mg2+, drug levels/toxicology, CT then MRI, LP if infection possible; eclampsia (magnesium), TB/neurocysticercosis, autoimmune encephalitis."
+          },
+          {
+            "n": 6,
+            "time": "After",
+            "title": "Non-convulsive SE",
+            "detail": "No return of consciousness 10-20 min after movements stop: EEG to exclude non-convulsive status.",
+            "refs": [
+              "ncs-se2012"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "lorazepam",
+            "role": "First line",
+            "route": "IV",
+            "dose": "0.1 mg/kg (max 4 mg), repeat once at 5-10 min",
+            "workedExample": "70 kg: 4 mg IV, repeat 4 mg if still seizing",
+            "refs": [
+              "aes2016"
+            ]
+          },
+          {
+            "drugId": "levetiracetam",
+            "role": "Second line",
+            "route": "IV over 10-15 min",
+            "dose": "60 mg/kg, max 4500 mg",
+            "workedExample": "60 kg: 3600 mg in 100 mL 0.9% saline over 15 min",
+            "refs": [
+              "esett"
+            ]
+          },
+          {
+            "drugId": "phenytoin",
+            "role": "Second line",
+            "route": "IV in saline, ECG monitoring",
+            "dose": "20 mg/kg at ≤ 50 mg/min",
+            "workedExample": "70 kg: 1400 mg over ≥ 28 min",
+            "refs": [
+              "ncs-se2012"
+            ]
+          },
+          {
+            "drugId": "midazolam",
+            "role": "Refractory SE infusion",
+            "route": "IV",
+            "dose": "0.2 mg/kg bolus, then 0.05-2 mg/kg/h",
+            "doseRange": {
+              "min": 0.05,
+              "max": 2,
+              "unit": "mg/kg/h"
+            },
+            "refs": [
+              "ncs-se2012"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Persisting coma after convulsions stop: non-convulsive status until EEG says otherwise."
+          },
+          {
+            "text": "Pregnant or post-partum woman with seizures: eclampsia; give magnesium sulphate."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Under-dosed benzodiazepines (e.g. 2 mg lorazepam for 80 kg) and delayed second-line therapy."
+          },
+          {
+            "text": "Valproate with meropenem (levels collapse)."
+          },
+          {
+            "text": "Phenytoin given too fast or in dextrose."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Neurocysticercosis is a leading cause of new-onset seizures in Indian adults; TB and stroke are also common."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Convulsive status epilepticus",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Seizure > 5 min"
+          },
+          {
+            "id": "abc",
+            "type": "action",
+            "text": "ABC, O2, glucose, IV access"
+          },
+          {
+            "id": "bz",
+            "type": "action",
+            "text": "Benzodiazepine full dose; repeat once",
+            "severity": "critical"
+          },
+          {
+            "id": "stop1",
+            "type": "decision",
+            "text": "Stopped?"
+          },
+          {
+            "id": "sl",
+            "type": "action",
+            "text": "Levetiracetam 60 mg/kg or valproate 40 mg/kg or phenytoin 20 mg/kg"
+          },
+          {
+            "id": "stop2",
+            "type": "decision",
+            "text": "Stopped?"
+          },
+          {
+            "id": "rse",
+            "type": "action",
+            "text": "Intubate; midazolam/propofol/ketamine infusion; continuous EEG",
+            "severity": "critical"
+          },
+          {
+            "id": "back",
+            "type": "decision",
+            "text": "Back to baseline?"
+          },
+          {
+            "id": "eeg",
+            "type": "end",
+            "text": "EEG for non-convulsive SE"
+          },
+          {
+            "id": "cause",
+            "type": "end",
+            "text": "Find and treat the cause; maintenance ASM"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "abc"
+          },
+          {
+            "from": "abc",
+            "to": "bz"
+          },
+          {
+            "from": "bz",
+            "to": "stop1"
+          },
+          {
+            "from": "stop1",
+            "to": "back",
+            "label": "Yes"
+          },
+          {
+            "from": "stop1",
+            "to": "sl",
+            "label": "No"
+          },
+          {
+            "from": "sl",
+            "to": "stop2"
+          },
+          {
+            "from": "stop2",
+            "to": "back",
+            "label": "Yes"
+          },
+          {
+            "from": "stop2",
+            "to": "rse",
+            "label": "No"
+          },
+          {
+            "from": "rse",
+            "to": "cause"
+          },
+          {
+            "from": "back",
+            "to": "cause",
+            "label": "Yes"
+          },
+          {
+            "from": "back",
+            "to": "eeg",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "aes2016"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **ESETT 2019:** levetiracetam, fosphenytoin and valproate each stopped benzodiazepine-refractory SE in ~45-47%.\n- **AES 2016:** benzodiazepine first-line at adequate dose; time-based approach.",
+        "controversies": "- Depth and duration of anaesthetic suppression in refractory SE are not trial-proven; ketamine use is growing.",
+        "indiaNotes": "- Levetiracetam and valproate IV are widely available and inexpensive; continuous EEG is limited, so intermittent EEG and clinical vigilance are common."
+      },
+      "drugIds": [
+        "lorazepam",
+        "midazolam",
+        "levetiracetam",
+        "sodium-valproate",
+        "phenytoin"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "aes2016",
+        "ncs-se2012",
+        "esett"
+      ],
+      "quiz": [
+        {
+          "id": "status-epilepticus-q1",
+          "stem": "Lorazepam dose for status epilepticus:",
+          "options": [
+            "0.01 mg/kg",
+            "0.1 mg/kg (max 4 mg)",
+            "1 mg/kg",
+            "4 mg/kg"
+          ],
+          "answerIndex": 1,
+          "explanation": "Full dose, repeat once."
+        },
+        {
+          "id": "status-epilepticus-q2",
+          "stem": "ESETT found:",
+          "options": [
+            "Levetiracetam superior",
+            "Valproate superior",
+            "No difference between the three",
+            "Phenytoin superior"
+          ],
+          "answerIndex": 2,
+          "explanation": "~half responded in each arm."
+        },
+        {
+          "id": "status-epilepticus-q3",
+          "stem": "Patient stops convulsing but remains comatose 30 min later:",
+          "options": [
+            "Post-ictal, observe",
+            "EEG for non-convulsive SE",
+            "Discharge",
+            "Stop all drugs"
+          ],
+          "answerIndex": 1,
+          "explanation": "Non-convulsive SE is common after convulsive SE."
+        }
+      ]
+    },
+    {
+      "id": "acute-ischaemic-stroke",
+      "title": "Acute ischaemic stroke and thrombolysis",
+      "summary": "Time is brain: non-contrast CT (± CT angiography), glucose check, then IV thrombolysis (tenecteplase 0.25 mg/kg or alteplase 0.9 mg/kg) within 4.5 h if eligible, and thrombectomy for large vessel occlusion up to 24 h. Keep BP < 185/110 before and < 180/105 for 24 h after lysis.",
+      "viewKey": "topic:neuro-emergencies/acute-ischaemic-stroke",
+      "uiHints": {
+        "icon": "brain",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Recognise",
+            "detail": "BE-FAST; last known well time; NIHSS; glucose (treat < 60 mg/dL)."
+          },
+          {
+            "n": 2,
+            "time": "0-25 min",
+            "title": "Imaging",
+            "detail": "Non-contrast CT to exclude haemorrhage; CT angiography for large vessel occlusion if thrombectomy is possible; perfusion imaging for late or wake-up presentations.",
+            "refs": [
+              "aha-ais2026"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "< 4.5 h",
+            "title": "Thrombolysis",
+            "detail": "Tenecteplase 0.25 mg/kg (max 25 mg) single bolus, or alteplase 0.9 mg/kg (max 90 mg, 10% bolus, rest over 1 h). Door-to-needle target ≤ 60 min (ideally ≤ 45).",
+            "refs": [
+              "aha-ais2026"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "BP",
+            "title": "Before and after",
+            "detail": "Lower to < 185/110 before lysis; keep < 180/105 for 24 h (labetalol, nicardipine). Not lysed: treat only if > 220/120.",
+            "refs": [
+              "aha-ais2026"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "LVO",
+            "title": "Thrombectomy",
+            "detail": "Anterior circulation LVO up to 24 h with favourable imaging (including selected large cores); basilar occlusion also benefits. Transfer early; do not wait to see the effect of lysis.",
+            "refs": [
+              "aha-ais2026"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "ICU care",
+            "title": "24 h",
+            "detail": "Neuro checks and BP every 15 min for 2 h, then 30-minutely for 6 h, then hourly; no antiplatelets/anticoagulants for 24 h after lysis; repeat CT at 24 h; dysphagia screen; glucose 140-180 mg/dL; malignant MCA infarction: early decompressive hemicraniectomy discussion (age ≤ 60)."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "tenecteplase",
+            "role": "Stroke thrombolysis",
+            "route": "IV bolus over 5 s",
+            "dose": "0.25 mg/kg, max 25 mg",
+            "workedExample": "68 kg: 17 mg (3.4 mL of 5 mg/mL)",
+            "refs": [
+              "aha-ais2026"
+            ]
+          },
+          {
+            "drugId": "alteplase",
+            "role": "Stroke thrombolysis",
+            "route": "IV",
+            "dose": "0.9 mg/kg (max 90 mg): 10% over 1 min, 90% over 60 min",
+            "workedExample": "70 kg: 63 mg total; 6.3 mg bolus then 56.7 mg over 1 h",
+            "refs": [
+              "aha-ais2026"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Neurological worsening, headache, vomiting or BP surge during/after lysis: stop infusion, urgent CT, check fibrinogen, give cryoprecipitate and tranexamic acid."
+          },
+          {
+            "text": "Tongue/lip swelling after alteplase: angio-oedema; stop, antihistamine, steroids, adrenaline if airway threatened."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Using the STEMI weight-band tenecteplase dose (up to 50 mg) for stroke."
+          },
+          {
+            "text": "Waiting for coagulation results in a patient not on anticoagulants."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Stroke mimics (hypoglycaemia, Todd's paresis, migraine) have very low haemorrhage risk with lysis; do not delay to exclude every mimic."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Acute stroke pathway",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Suspected stroke"
+          },
+          {
+            "id": "glu",
+            "type": "action",
+            "text": "Glucose; NIHSS; last known well"
+          },
+          {
+            "id": "ct",
+            "type": "decision",
+            "text": "Haemorrhage on CT?"
+          },
+          {
+            "id": "ich",
+            "type": "end",
+            "text": "ICH pathway"
+          },
+          {
+            "id": "win",
+            "type": "decision",
+            "text": "≤ 4.5 h and eligible?"
+          },
+          {
+            "id": "lyse",
+            "type": "action",
+            "text": "Tenecteplase 0.25 mg/kg or alteplase; BP < 185/110",
+            "severity": "critical"
+          },
+          {
+            "id": "lvo",
+            "type": "decision",
+            "text": "LVO on CTA?"
+          },
+          {
+            "id": "evt",
+            "type": "end",
+            "text": "Thrombectomy (up to 24 h with favourable imaging)"
+          },
+          {
+            "id": "stroke",
+            "type": "end",
+            "text": "Stroke unit/ICU care; antiplatelet when appropriate"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "glu"
+          },
+          {
+            "from": "glu",
+            "to": "ct"
+          },
+          {
+            "from": "ct",
+            "to": "ich",
+            "label": "Yes"
+          },
+          {
+            "from": "ct",
+            "to": "win",
+            "label": "No"
+          },
+          {
+            "from": "win",
+            "to": "lyse",
+            "label": "Yes"
+          },
+          {
+            "from": "win",
+            "to": "lvo",
+            "label": "No"
+          },
+          {
+            "from": "lyse",
+            "to": "lvo"
+          },
+          {
+            "from": "lvo",
+            "to": "evt",
+            "label": "Yes"
+          },
+          {
+            "from": "lvo",
+            "to": "stroke",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "aha-ais2026"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **AHA/ASA 2026 AIS guideline:** tenecteplase or alteplase within 4.5 h; expanded thrombectomy eligibility (including large-core trials such as SELECT2, ANGEL-ASPECT); paediatric section.",
+        "controversies": "- Extended-window lysis guided by perfusion imaging and thrombolysis before thrombectomy in directly admitted patients remain debated.",
+        "indiaNotes": "- Few Indian districts have thrombectomy; hub-and-spoke \"drip and ship\" and tele-stroke networks are expanding. Tenecteplase single bolus suits transfer."
+      },
+      "drugIds": [
+        "tenecteplase",
+        "alteplase"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "aha-ais2026"
+      ],
+      "quiz": [
+        {
+          "id": "acute-ischaemic-stroke-q1",
+          "stem": "Tenecteplase dose for acute ischaemic stroke:",
+          "options": [
+            "0.5 mg/kg max 50 mg",
+            "0.25 mg/kg max 25 mg",
+            "0.9 mg/kg max 90 mg",
+            "10 mg fixed"
+          ],
+          "answerIndex": 1,
+          "explanation": "Not the STEMI dose."
+        },
+        {
+          "id": "acute-ischaemic-stroke-q2",
+          "stem": "BP before thrombolysis must be below:",
+          "options": [
+            "140/90",
+            "185/110",
+            "220/120",
+            "160/100"
+          ],
+          "answerIndex": 1,
+          "explanation": "Then < 180/105 for 24 h."
+        },
+        {
+          "id": "acute-ischaemic-stroke-q3",
+          "stem": "Thrombectomy for anterior LVO can be considered up to:",
+          "options": [
+            "4.5 h only",
+            "6 h only",
+            "24 h with favourable imaging",
+            "72 h"
+          ],
+          "answerIndex": 2,
+          "explanation": "DAWN/DEFUSE-3 and later trials."
+        }
+      ],
+      "verify": [
+        {
+          "item": "BP monitoring schedule after lysis",
+          "reason": "Frequency (15-min ×2 h, 30-min ×6 h, hourly ×16 h) follows standard AHA post-lysis care; confirm against the 2026 guideline text."
+        }
+      ]
+    },
+    {
+      "id": "ich-sah",
+      "title": "Intracerebral and subarachnoid haemorrhage",
+      "summary": "ICH: lower SBP to ~140 mmHg (avoid < 130) within 2 h, reverse anticoagulants immediately, treat hydrocephalus, and avoid prophylactic antiseizure drugs. Aneurysmal SAH: nimodipine, early aneurysm securing, euvolaemia, and vigilance for rebleeding, hydrocephalus and delayed cerebral ischaemia.",
+      "viewKey": "topic:neuro-emergencies/ich-sah",
+      "uiHints": {
+        "icon": "brain",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "ICH",
+            "title": "BP",
+            "detail": "SBP 150-220: target 140 mmHg (range 130-150) started within 2 h and reached within 1 h of starting; avoid drops > 70 mmHg and SBP < 130. Smooth control with labetalol or nicardipine.",
+            "refs": [
+              "aha-ich2022"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "ICH",
+            "title": "Reverse",
+            "detail": "Warfarin: 4-factor PCC (dose by INR) + vitamin K 10 mg IV. Dabigatran: idarucizumab 5 g. Factor Xa inhibitors: andexanet alfa or 4F-PCC 50 units/kg. Heparin: protamine. Platelet transfusion is not recommended for antiplatelet-associated ICH without surgery.",
+            "refs": [
+              "aha-ich2022"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "ICH",
+            "title": "Neurosurgery",
+            "detail": "Cerebellar haemorrhage > 15 mL with deterioration, brainstem compression or hydrocephalus: evacuation. IVH with hydrocephalus: EVD.",
+            "refs": [
+              "aha-ich2022"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "ICH",
+            "title": "Supportive",
+            "detail": "Glucose 80-180 (avoid hypo), normothermia, intermittent pneumatic compression from day 1; no prophylactic antiseizure drugs; no steroids.",
+            "refs": [
+              "aha-ich2022"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "SAH",
+            "title": "Diagnose and grade",
+            "detail": "Thunderclap headache: CT within 6 h is highly sensitive; otherwise LP for xanthochromia. CTA for aneurysm. Grade with WFNS or Hunt-Hess.",
+            "refs": [
+              "aha-sah2023"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "SAH",
+            "title": "Before securing",
+            "detail": "Treat BP (commonly SBP < 160), reverse anticoagulation, nimodipine 60 mg 4-hourly for 21 days, EVD for hydrocephalus, secure aneurysm (coil or clip) as early as possible, ideally < 24 h.",
+            "refs": [
+              "aha-sah2023"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "SAH",
+            "title": "Days 3-14",
+            "detail": "Euvolaemia (no prophylactic hypervolaemia), Na+ monitoring (SIADH vs cerebral salt wasting), TCD or clinical monitoring for delayed cerebral ischaemia; DCI: induced hypertension, then endovascular therapy.",
+            "refs": [
+              "aha-sah2023"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "nimodipine",
+            "role": "Aneurysmal SAH",
+            "route": "Oral/NG",
+            "dose": "60 mg every 4 h for 21 days",
+            "notes": "If BP drops, give 30 mg every 2 h.",
+            "refs": [
+              "aha-sah2023"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "wfns",
+            "title": "WFNS grade for SAH",
+            "columns": [
+              "Grade",
+              "GCS",
+              "Motor deficit"
+            ],
+            "rows": [
+              [
+                "I",
+                "15",
+                "Absent"
+              ],
+              [
+                "II",
+                "13-14",
+                "Absent"
+              ],
+              [
+                "III",
+                "13-14",
+                "Present"
+              ],
+              [
+                "IV",
+                "7-12",
+                "Present or absent"
+              ],
+              [
+                "V",
+                "3-6",
+                "Present or absent"
+              ]
+            ],
+            "caption": "Higher grades predict worse outcome; grade should be re-assessed after resuscitation and EVD.",
+            "refs": [
+              "aha-sah2023"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Sudden deterioration in SAH: rebleed, hydrocephalus, seizure or DCI; urgent CT."
+          },
+          {
+            "text": "ICH on anticoagulant: reversal is time-critical; do not wait for INR to start PCC if the history is clear."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Aggressive BP lowering with sublingual nifedipine (unpredictable falls)."
+          },
+          {
+            "text": "Fluid restricting hyponatraemic SAH patients (cerebral salt wasting; hypovolaemia worsens DCI)."
+          },
+          {
+            "text": "Tranexamic acid to prevent rebleeding: no improvement in outcome (ULTRA)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Spot sign on CTA predicts haematoma expansion."
+          },
+          {
+            "text": "ICH score (GCS, volume, IVH, infratentorial, age ≥ 80) helps communication but should not drive early DNR decisions."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Spontaneous ICH",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "ICH on CT"
+          },
+          {
+            "id": "bp",
+            "type": "action",
+            "text": "SBP target 140 (avoid < 130) within 2 h"
+          },
+          {
+            "id": "ac",
+            "type": "decision",
+            "text": "On anticoagulant?"
+          },
+          {
+            "id": "rev",
+            "type": "action",
+            "text": "Reverse now (PCC/vit K, idarucizumab, andexanet/PCC)",
+            "severity": "critical"
+          },
+          {
+            "id": "hyd",
+            "type": "decision",
+            "text": "Hydrocephalus or cerebellar > 15 mL with deterioration?"
+          },
+          {
+            "id": "ns",
+            "type": "end",
+            "text": "Neurosurgery: EVD / evacuation"
+          },
+          {
+            "id": "icu",
+            "type": "end",
+            "text": "Neuro ICU care; no seizure prophylaxis"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "bp"
+          },
+          {
+            "from": "bp",
+            "to": "ac"
+          },
+          {
+            "from": "ac",
+            "to": "rev",
+            "label": "Yes"
+          },
+          {
+            "from": "ac",
+            "to": "hyd",
+            "label": "No"
+          },
+          {
+            "from": "rev",
+            "to": "hyd"
+          },
+          {
+            "from": "hyd",
+            "to": "ns",
+            "label": "Yes"
+          },
+          {
+            "from": "hyd",
+            "to": "icu",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "aha-ich2022"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **AHA/ASA ICH 2022:** BP target 140 for SBP 150-220; reversal algorithms; avoid platelet transfusion for antiplatelet ICH (PATCH).\n- **AHA/ASA SAH 2023:** nimodipine, early securing, against prophylactic hypervolaemia and TXA.",
+        "controversies": "- Minimally invasive evacuation for lobar ICH (ENRICH 2024) is promising but not widely available.",
+        "indiaNotes": "- Hypertensive ICH is far commoner in India than in the West and occurs at a younger age; neurosurgical and coiling access vary widely; andexanet is rarely available, so 4F-PCC is used."
+      },
+      "drugIds": [
+        "nimodipine"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "aha-ich2022",
+        "aha-sah2023"
+      ],
+      "quiz": [
+        {
+          "id": "ich-sah-q1",
+          "stem": "ICH, SBP 200: target SBP:",
+          "options": [
+            "< 110",
+            "140 (avoid < 130)",
+            "180",
+            "No treatment"
+          ],
+          "answerIndex": 1,
+          "explanation": "AHA 2022."
+        },
+        {
+          "id": "ich-sah-q2",
+          "stem": "Nimodipine dose in SAH:",
+          "options": [
+            "60 mg 4-hourly for 21 days",
+            "10 mg daily",
+            "IV bolus 5 mg",
+            "60 mg once"
+          ],
+          "answerIndex": 0,
+          "explanation": "Improves neurological outcome."
+        },
+        {
+          "id": "ich-sah-q3",
+          "stem": "Platelet transfusion for ICH on aspirin without surgery:",
+          "options": [
+            "Recommended",
+            "Not recommended",
+            "Mandatory",
+            "Only if platelets < 400"
+          ],
+          "answerIndex": 1,
+          "explanation": "PATCH: harm."
+        }
+      ]
+    },
+    {
+      "id": "coma-approach",
+      "title": "Approach to coma (GCS and FOUR score)",
+      "summary": "Stabilise ABC and glucose first, then look for the pattern: structural (focal signs, asymmetric pupils) vs metabolic/toxic (symmetric, reactive pupils). Record GCS components and the FOUR score in intubated patients; image early and treat reversible causes.",
+      "viewKey": "topic:neuro-emergencies/coma-approach",
+      "uiHints": {
+        "icon": "brain",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Stabilise",
+            "detail": "Airway (GCS ≤ 8 usually needs protection), breathing, circulation; glucose; thiamine 200-500 mg IV if malnourished/alcohol before dextrose; naloxone if opioid toxidrome."
+          },
+          {
+            "n": 2,
+            "time": "Examine",
+            "title": "Pattern",
+            "detail": "Pupils (pinpoint = opioid, OP poisoning, pontine; fixed dilated unilateral = herniation), eye movements, motor asymmetry, neck stiffness, rash, eschar (scrub typhus), bite marks."
+          },
+          {
+            "n": 3,
+            "time": "Score",
+            "title": "GCS + FOUR",
+            "detail": "GCS as E V M components. FOUR (Eye, Motor, Brainstem, Respiration; each 0-4) works in intubated patients and detects locked-in and brainstem signs.",
+            "refs": [
+              "four2005"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Investigate",
+            "title": "Bloods + CT",
+            "detail": "Na+, Ca2+, glucose, urea, LFT/ammonia, ABG/CO2, CO-Hb, toxicology, malaria smear/RDT, blood cultures; CT head; LP after CT if infection suspected; EEG for non-convulsive status; MRI later."
+          },
+          {
+            "n": 5,
+            "time": "Treat",
+            "title": "Reversible causes",
+            "detail": "Hypoglycaemia, hyponatraemia, hypercapnia, infection (empirical antibiotics/acyclovir), raised ICP (head up 30°, osmotherapy), poisons (antidotes), seizures."
+          }
+        ],
+        "tables": [
+          {
+            "id": "four",
+            "title": "FOUR score",
+            "columns": [
+              "Component",
+              "4",
+              "3",
+              "2",
+              "1",
+              "0"
+            ],
+            "rows": [
+              [
+                "Eye",
+                "Eyelids open, tracks or blinks to command",
+                "Open, not tracking",
+                "Closed, open to loud voice",
+                "Closed, open to pain",
+                "Remain closed to pain"
+              ],
+              [
+                "Motor",
+                "Thumbs-up, fist or peace sign",
+                "Localises to pain",
+                "Flexion to pain",
+                "Extension to pain",
+                "No response or myoclonus status"
+              ],
+              [
+                "Brainstem",
+                "Pupil and corneal reflexes present",
+                "One pupil wide and fixed",
+                "Pupil or corneal reflexes absent",
+                "Pupil and corneal reflexes absent",
+                "Pupil, corneal and cough reflexes absent"
+              ],
+              [
+                "Respiration",
+                "Not intubated, regular",
+                "Not intubated, Cheyne-Stokes",
+                "Not intubated, irregular",
+                "Breathes above ventilator rate",
+                "Breathes at ventilator rate or apnoea"
+              ]
+            ],
+            "caption": "Total 0-16. Lower scores are worse; 0 with apnoea prompts brain death evaluation.",
+            "refs": [
+              "four2005"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Unilateral fixed dilated pupil with falling GCS: herniation; osmotherapy and urgent neurosurgical review."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Reporting a single GCS total without components (e.g. 'GCS 8' hides M5 vs M2)."
+          },
+          {
+            "text": "Assuming alcohol intoxication explains coma (head injury, hypoglycaemia, methanol)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Metabolic coma usually spares pupillary reflexes; structural coma often does not."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Coma",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Reduced consciousness"
+          },
+          {
+            "id": "abc",
+            "type": "action",
+            "text": "ABC, glucose, thiamine, naloxone if toxidrome"
+          },
+          {
+            "id": "focal",
+            "type": "decision",
+            "text": "Focal signs or asymmetric pupils?"
+          },
+          {
+            "id": "ct",
+            "type": "action",
+            "text": "Urgent CT ± CTA; neurosurgery/stroke pathway"
+          },
+          {
+            "id": "met",
+            "type": "action",
+            "text": "Metabolic/toxic screen; CT; consider LP and EEG"
+          },
+          {
+            "id": "tr",
+            "type": "end",
+            "text": "Treat reversible cause; reassess GCS/FOUR"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "abc"
+          },
+          {
+            "from": "abc",
+            "to": "focal"
+          },
+          {
+            "from": "focal",
+            "to": "ct",
+            "label": "Yes"
+          },
+          {
+            "from": "focal",
+            "to": "met",
+            "label": "No"
+          },
+          {
+            "from": "ct",
+            "to": "tr"
+          },
+          {
+            "from": "met",
+            "to": "tr"
+          }
+        ],
+        "refs": [
+          "four2005"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Wijdicks 2005:** FOUR score validated with good inter-rater reliability, including in intubated patients.",
+        "indiaNotes": "- Common Indian causes: poisoning (OP, sedatives), hepatic and uraemic encephalopathy, cerebral malaria, Japanese and scrub typhus encephalitis, TB meningitis, stroke and hypoglycaemia."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "gcs"
+      ],
+      "references": [
+        "four2005"
+      ],
+      "quiz": [
+        {
+          "id": "coma-approach-q1",
+          "stem": "Advantage of FOUR over GCS:",
+          "options": [
+            "Shorter",
+            "Usable in intubated patients and assesses brainstem",
+            "Predicts mortality perfectly",
+            "No training"
+          ],
+          "answerIndex": 1,
+          "explanation": "No verbal component needed."
+        },
+        {
+          "id": "coma-approach-q2",
+          "stem": "Pinpoint pupils and coma suggest:",
+          "options": [
+            "Opioids, OP poisoning or pontine lesion",
+            "Atropine toxicity",
+            "Uncal herniation",
+            "Hypoglycaemia only"
+          ],
+          "answerIndex": 0,
+          "explanation": "Classic pattern."
+        },
+        {
+          "id": "coma-approach-q3",
+          "stem": "Before dextrose in a malnourished patient give:",
+          "options": [
+            "Insulin",
+            "Thiamine",
+            "Phenytoin",
+            "Mannitol"
+          ],
+          "answerIndex": 1,
+          "explanation": "Avoid precipitating Wernicke's (do not delay dextrose)."
+        }
+      ]
+    },
+    {
+      "id": "meningitis-encephalitis",
+      "title": "Meningitis and encephalitis",
+      "summary": "Suspected bacterial meningitis: blood cultures, dexamethasone and antibiotics within 1 hour; do not delay for CT or LP. Add aciclovir for encephalitis. In India think also of TB meningitis, Japanese encephalitis, scrub typhus, cerebral malaria and cryptococcus.",
+      "viewKey": "topic:neuro-emergencies/meningitis-encephalitis",
+      "uiHints": {
+        "icon": "brain",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Cultures + treat",
+            "detail": "Blood cultures, then dexamethasone 10 mg IV with or just before ceftriaxone 2 g IV every 12 h (+ vancomycin if penicillin-resistant pneumococcus is a concern; + ampicillin 2 g every 4 h if > 50 years, pregnant, immunocompromised, alcohol use).",
+            "refs": [
+              "escmid2016"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "CT first only if",
+            "title": "Indications",
+            "detail": "Focal deficits (not cranial nerve), new seizures, GCS < 10, severe immunocompromise. Otherwise LP immediately. Never delay antibiotics for imaging.",
+            "refs": [
+              "escmid2016"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Encephalitis",
+            "title": "Aciclovir",
+            "detail": "Altered behaviour, seizures, focal signs, fever: aciclovir 10 mg/kg IV every 8 h until HSV PCR negative (repeat if early and negative); MRI and EEG.",
+            "refs": [
+              "idsa-enc2008"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "CSF",
+            "title": "Interpret",
+            "detail": "Bacterial: neutrophils, low glucose (CSF:serum < 0.4), high protein. TB: lymphocytes, very low glucose, high protein, ADA, GeneXpert. Viral: lymphocytes, normal glucose. Cryptococcus: India ink, CrAg.",
+            "refs": [
+              "escmid2016"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Tropical",
+            "title": "Add cover",
+            "detail": "Scrub typhus (eschar, transaminitis): doxycycline or azithromycin. Malaria smear/RDT in every febrile coma. JE: supportive (no specific antiviral). TB meningitis: 4-drug ATT + dexamethasone."
+          },
+          {
+            "n": 6,
+            "time": "ICU",
+            "title": "Support",
+            "detail": "Airway if GCS ≤ 8, seizure control, avoid hyponatraemia, ICP measures; dexamethasone 4 days (stop if not bacterial, or if Listeria)."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "dexamethasone",
+            "role": "Bacterial meningitis",
+            "route": "IV",
+            "dose": "10 mg every 6 h for 4 days, first dose with or before antibiotic",
+            "refs": [
+              "degans2002",
+              "escmid2016"
+            ]
+          },
+          {
+            "drugId": "ceftriaxone",
+            "role": "Empirical meningitis",
+            "route": "IV",
+            "dose": "2 g every 12 h",
+            "refs": [
+              "escmid2016"
+            ]
+          },
+          {
+            "drugId": "acyclovir",
+            "role": "HSV encephalitis",
+            "route": "IV over 1 h",
+            "dose": "10 mg/kg every 8 h for 14-21 days",
+            "workedExample": "60 kg: 600 mg 8-hourly; reduce if creatinine clearance < 50 mL/min",
+            "refs": [
+              "idsa-enc2008"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Petechial/purpuric rash with fever: meningococcaemia; antibiotics within minutes, shock management."
+          },
+          {
+            "text": "Falling GCS, new focal signs or papilloedema: raised ICP or abscess; CT."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Waiting for CT before giving antibiotics."
+          },
+          {
+            "text": "Stopping aciclovir after a single negative PCR done within 72 h of symptom onset."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Dexamethasone benefit is greatest in pneumococcal meningitis (de Gans 2002: mortality 7% vs 15%)."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Suspected CNS infection",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Fever + headache/neck stiffness/altered sensorium"
+          },
+          {
+            "id": "bc",
+            "type": "action",
+            "text": "Blood cultures; dexamethasone + ceftriaxone (± ampicillin, vancomycin)",
+            "severity": "critical"
+          },
+          {
+            "id": "enc",
+            "type": "decision",
+            "text": "Encephalitic features?"
+          },
+          {
+            "id": "acv",
+            "type": "action",
+            "text": "Add aciclovir 10 mg/kg 8-hourly"
+          },
+          {
+            "id": "ctq",
+            "type": "decision",
+            "text": "Focal deficit, seizure, GCS < 10, immunocompromised?"
+          },
+          {
+            "id": "ct",
+            "type": "action",
+            "text": "CT, then LP if safe"
+          },
+          {
+            "id": "lp",
+            "type": "action",
+            "text": "LP now"
+          },
+          {
+            "id": "csf",
+            "type": "end",
+            "text": "Tailor by CSF, PCR, GeneXpert, CrAg; tropical tests"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "bc"
+          },
+          {
+            "from": "bc",
+            "to": "enc"
+          },
+          {
+            "from": "enc",
+            "to": "acv",
+            "label": "Yes"
+          },
+          {
+            "from": "enc",
+            "to": "ctq",
+            "label": "No"
+          },
+          {
+            "from": "acv",
+            "to": "ctq"
+          },
+          {
+            "from": "ctq",
+            "to": "ct",
+            "label": "Yes"
+          },
+          {
+            "from": "ctq",
+            "to": "lp",
+            "label": "No"
+          },
+          {
+            "from": "ct",
+            "to": "csf"
+          },
+          {
+            "from": "lp",
+            "to": "csf"
+          }
+        ],
+        "refs": [
+          "escmid2016"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **de Gans 2002:** dexamethasone reduced unfavourable outcome (15% vs 25%) and death in adults with bacterial meningitis.\n- **ESCMID 2016:** antibiotics within 1 h; CT indications; adjunctive dexamethasone.",
+        "controversies": "- Dexamethasone benefit in low-income settings with late presentation and HIV is less clear.",
+        "indiaNotes": "- Acute encephalitis syndrome (AES) surveillance: JE, scrub typhus, dengue, HSV, Nipah (Kerala). TB meningitis remains common; GeneXpert on CSF is widely available through the national programme."
+      },
+      "drugIds": [
+        "ceftriaxone",
+        "dexamethasone",
+        "acyclovir"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "escmid2016",
+        "degans2002",
+        "idsa-enc2008"
+      ],
+      "quiz": [
+        {
+          "id": "meningitis-encephalitis-q1",
+          "stem": "When should dexamethasone be given in bacterial meningitis?",
+          "options": [
+            "After 24 h of antibiotics",
+            "With or before first antibiotic dose",
+            "Only if shock",
+            "Never"
+          ],
+          "answerIndex": 1,
+          "explanation": "Its benefit depends on timing."
+        },
+        {
+          "id": "meningitis-encephalitis-q2",
+          "stem": "Add ampicillin to ceftriaxone when:",
+          "options": [
+            "Age > 50 or immunocompromised (Listeria)",
+            "Child",
+            "Viral meningitis",
+            "Always"
+          ],
+          "answerIndex": 0,
+          "explanation": "Cephalosporins do not cover Listeria."
+        },
+        {
+          "id": "meningitis-encephalitis-q3",
+          "stem": "Fever, eschar, altered sensorium in rural India – add:",
+          "options": [
+            "Doxycycline",
+            "Fluconazole",
+            "Oseltamivir",
+            "Metronidazole"
+          ],
+          "answerIndex": 0,
+          "explanation": "Scrub typhus meningoencephalitis."
+        }
+      ]
+    },
+    {
+      "id": "gbs-myasthenic-crisis",
+      "title": "Guillain-Barré syndrome and myasthenic crisis",
+      "summary": "Neuromuscular respiratory failure creeps up silently: monitor vital capacity and NIF, intubate electively when VC < 20 mL/kg or NIF weaker than −30 cmH2O, or with bulbar failure. Treat GBS with IVIg or plasma exchange; myasthenic crisis with IVIg or PLEX plus steroids.",
+      "viewKey": "topic:neuro-emergencies/gbs-myasthenic-crisis",
+      "uiHints": {
+        "icon": "brain",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Monitor",
+            "title": "20/30/40 rule",
+            "detail": "Intubate if VC < 20 mL/kg, NIF (MIP) weaker than −30 cmH2O, MEP < 40 cmH2O, or rapid decline; bulbar weakness with aspiration. SpO2 and ABG change late."
+          },
+          {
+            "n": 2,
+            "time": "GBS",
+            "title": "Predict",
+            "detail": "EGRIS (days from onset to admission, facial/bulbar weakness, MRC sum score): high score → ~65% need ventilation within a week; admit to ICU.",
+            "refs": [
+              "egris2010"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "GBS",
+            "title": "Treat",
+            "detail": "Unable to walk unaided within 2 weeks of onset (4 weeks for PLEX): IVIg 0.4 g/kg/day × 5 days or plasma exchange 12-15 L over 4-5 exchanges. Steroids are not recommended.",
+            "refs": [
+              "ean-gbs2023"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "GBS",
+            "title": "Dysautonomia",
+            "detail": "Labile BP and arrhythmias; avoid large BP-lowering doses; temporary pacing for severe bradycardia. DVT prophylaxis, pain control (gabapentinoids), bowel care."
+          },
+          {
+            "n": 5,
+            "time": "Myasthenic crisis",
+            "title": "Treat",
+            "detail": "IVIg 2 g/kg over 2-5 days or PLEX (5 exchanges); start or continue corticosteroids (watch for early worsening); hold pyridostigmine while intubated. Look for trigger (infection, aminoglycosides, fluoroquinolones, magnesium, β-blockers).",
+            "refs": [
+              "mg2021"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Exclude",
+            "title": "Mimics",
+            "detail": "Hypokalaemia, hypophosphataemia, neurotoxic snakebite, OP poisoning (intermediate syndrome), botulism, transverse myelitis, diphtheria (still seen in India)."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "ivig",
+            "role": "GBS or myasthenic crisis",
+            "route": "IV",
+            "dose": "0.4 g/kg/day for 5 days (2 g/kg total)",
+            "workedExample": "60 kg: 24 g/day × 5 days",
+            "refs": [
+              "ean-gbs2023",
+              "mg2021"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Single breath count < 20, staccato speech, paradoxical breathing, weak cough: imminent respiratory failure."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Waiting for hypoxaemia or hypercapnia before intubating neuromuscular patients."
+          },
+          {
+            "text": "Using succinylcholine in GBS (hyperkalaemia)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Small-volume plasma exchange is a cheaper option studied in India where IVIg is unaffordable."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Neuromuscular weakness",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Acute flaccid weakness"
+          },
+          {
+            "id": "vc",
+            "type": "decision",
+            "text": "VC < 20 mL/kg, NIF > −30, bulbar failure?"
+          },
+          {
+            "id": "intub",
+            "type": "action",
+            "text": "Elective intubation (avoid succinylcholine)",
+            "severity": "critical"
+          },
+          {
+            "id": "dx",
+            "type": "decision",
+            "text": "GBS or myasthenic crisis?"
+          },
+          {
+            "id": "gbs",
+            "type": "end",
+            "text": "IVIg 2 g/kg over 5 days or PLEX; no steroids"
+          },
+          {
+            "id": "mg",
+            "type": "end",
+            "text": "IVIg or PLEX + steroids; stop trigger drugs"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "vc"
+          },
+          {
+            "from": "vc",
+            "to": "intub",
+            "label": "Yes"
+          },
+          {
+            "from": "vc",
+            "to": "dx",
+            "label": "No"
+          },
+          {
+            "from": "intub",
+            "to": "dx"
+          },
+          {
+            "from": "dx",
+            "to": "gbs",
+            "label": "GBS"
+          },
+          {
+            "from": "dx",
+            "to": "mg",
+            "label": "Myasthenia"
+          }
+        ],
+        "refs": [
+          "ean-gbs2023"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **EAN/PNS 2023 GBS guideline:** IVIg or PLEX equivalent; no steroids; second IVIg course not recommended.\n- **EGRIS 2010:** prediction of respiratory insufficiency.\n- **International MG consensus 2020 update:** IVIg/PLEX for crisis.",
+        "indiaNotes": "- Axonal GBS (AMAN) after Campylobacter is common in India; IVIg costs are prohibitive for many, so PLEX or small-volume plasma exchange is widely used."
+      },
+      "drugIds": [
+        "ivig"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "ean-gbs2023",
+        "egris2010",
+        "mg2021"
+      ],
+      "quiz": [
+        {
+          "id": "gbs-myasthenic-crisis-q1",
+          "stem": "Elective intubation in GBS when VC falls below:",
+          "options": [
+            "50 mL/kg",
+            "20 mL/kg",
+            "5 mL/kg",
+            "40 mL/kg"
+          ],
+          "answerIndex": 1,
+          "explanation": "20/30/40 rule."
+        },
+        {
+          "id": "gbs-myasthenic-crisis-q2",
+          "stem": "Which is NOT recommended in GBS?",
+          "options": [
+            "IVIg",
+            "Plasma exchange",
+            "Corticosteroids",
+            "DVT prophylaxis"
+          ],
+          "answerIndex": 2,
+          "explanation": "Steroids do not help."
+        },
+        {
+          "id": "gbs-myasthenic-crisis-q3",
+          "stem": "Drug to avoid in myasthenia:",
+          "options": [
+            "Aminoglycosides",
+            "Paracetamol",
+            "Ceftriaxone",
+            "Heparin"
+          ],
+          "answerIndex": 0,
+          "explanation": "Worsen neuromuscular transmission."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "lorazepam",
+      "name": "Lorazepam",
+      "class": "Benzodiazepine",
+      "indications": "First-line for status epilepticus.",
+      "adultDose": "0.1 mg/kg IV (max 4 mg per dose) at 2 mg/min, repeat once after 5-10 min.",
+      "preparationIndia": "2 mg/mL ampoules; needs refrigeration.",
+      "cautions": "Respiratory depression, hypotension; under-dosing is the commonest error.",
+      "refs": [
+        "aes2016",
+        "ncs-se2012"
+      ]
+    },
+    {
+      "id": "midazolam",
+      "name": "Midazolam",
+      "class": "Benzodiazepine",
+      "indications": "First-line SE without IV access (IM/buccal); refractory SE infusion.",
+      "adultDose": "IM 10 mg (> 40 kg) or 5 mg (13-40 kg) once. Refractory SE: 0.2 mg/kg IV bolus, then 0.05-2 mg/kg/h titrated to seizure/EEG suppression.",
+      "preparationIndia": "1 mg/mL and 5 mg/mL ampoules.",
+      "cautions": "Accumulates in renal failure and obesity; hypotension.",
+      "refs": [
+        "aes2016",
+        "ncs-se2012"
+      ]
+    },
+    {
+      "id": "levetiracetam",
+      "name": "Levetiracetam",
+      "class": "Antiseizure medication",
+      "indications": "Second-line for established SE; seizure prophylaxis.",
+      "adultDose": "60 mg/kg IV (max 4500 mg) over 10-15 min; maintenance 1-1.5 g every 12 h (reduce in renal impairment).",
+      "preparationIndia": "500 mg/5 mL vials.",
+      "cautions": "Agitation; renally cleared (dose adjust in AKI/CRRT).",
+      "refs": [
+        "esett"
+      ]
+    },
+    {
+      "id": "sodium-valproate",
+      "name": "Sodium valproate",
+      "class": "Antiseizure medication",
+      "indications": "Second-line for established SE.",
+      "adultDose": "40 mg/kg IV (max 3000 mg) over 10 min; maintenance 1-2 g/day in divided doses.",
+      "preparationIndia": "100 mg/mL 5 mL vials.",
+      "cautions": "Avoid in liver disease, mitochondrial disorders, pregnancy if alternatives exist; hyperammonaemia; interacts with carbapenems (levels fall sharply).",
+      "refs": [
+        "esett"
+      ]
+    },
+    {
+      "id": "phenytoin",
+      "name": "Phenytoin",
+      "class": "Antiseizure medication",
+      "indications": "Second-line for established SE.",
+      "adultDose": "20 mg/kg IV at ≤ 50 mg/min (≤ 25 mg/min in elderly/cardiac) in 0.9% saline; maintenance 100 mg every 8 h guided by levels. Fosphenytoin 20 mg PE/kg at up to 150 mg PE/min where available.",
+      "preparationIndia": "50 mg/mL ampoules; precipitates in dextrose.",
+      "cautions": "Hypotension, bradyarrhythmia (ECG monitoring), purple glove syndrome; many interactions.",
+      "refs": [
+        "esett",
+        "ncs-se2012"
+      ]
+    },
+    {
+      "id": "tenecteplase",
+      "name": "Tenecteplase",
+      "class": "Thrombolytic",
+      "indications": "Acute ischaemic stroke within 4.5 h (or selected later windows).",
+      "adultDose": "0.25 mg/kg IV single bolus (max 25 mg).",
+      "preparationIndia": "Indian biosimilar tenecteplase 20 mg and 30 mg vials are available.",
+      "cautions": "Different dose from STEMI (do not use the cardiac weight-band dose). BP must be < 185/110.",
+      "refs": [
+        "aha-ais2026"
+      ]
+    },
+    {
+      "id": "alteplase",
+      "name": "Alteplase",
+      "class": "Thrombolytic",
+      "indications": "Acute ischaemic stroke within 4.5 h.",
+      "adultDose": "0.9 mg/kg (max 90 mg): 10% IV bolus over 1 min, remainder over 60 min.",
+      "cautions": "Angio-oedema (especially with ACE inhibitors), bleeding.",
+      "refs": [
+        "aha-ais2026"
+      ]
+    },
+    {
+      "id": "nimodipine",
+      "name": "Nimodipine",
+      "class": "Calcium channel blocker",
+      "indications": "Aneurysmal SAH (improves outcome).",
+      "adultDose": "60 mg orally/NG every 4 h for 21 days (30 mg every 2 h if hypotension).",
+      "cautions": "Hypotension: reduce dose and split rather than stop.",
+      "refs": [
+        "aha-sah2023"
+      ]
+    },
+    {
+      "id": "ceftriaxone",
+      "name": "Ceftriaxone",
+      "class": "Third-generation cephalosporin",
+      "indications": "Empirical bacterial meningitis.",
+      "adultDose": "2 g IV every 12 h (meningitic dose).",
+      "cautions": "Biliary sludge; calcium co-infusion in neonates.",
+      "refs": [
+        "escmid2016"
+      ]
+    },
+    {
+      "id": "dexamethasone",
+      "name": "Dexamethasone",
+      "class": "Corticosteroid",
+      "indications": "Suspected bacterial meningitis (start with or before first antibiotic dose).",
+      "adultDose": "10 mg IV every 6 h for 4 days; stop if not pneumococcal/Haemophilus or if non-bacterial.",
+      "cautions": "Hyperglycaemia; reduces vancomycin CSF penetration.",
+      "refs": [
+        "degans2002",
+        "escmid2016"
+      ]
+    },
+    {
+      "id": "acyclovir",
+      "name": "Aciclovir",
+      "class": "Antiviral",
+      "indications": "Suspected HSV/VZV encephalitis.",
+      "adultDose": "10 mg/kg IV every 8 h for 14-21 days (adjust for renal function; use ideal body weight in obesity).",
+      "cautions": "Crystal nephropathy: hydrate, monitor creatinine.",
+      "refs": [
+        "idsa-enc2008"
+      ]
+    },
+    {
+      "id": "ivig",
+      "name": "Intravenous immunoglobulin (IVIg)",
+      "class": "Immunomodulator",
+      "indications": "GBS (unable to walk unaided); myasthenic crisis.",
+      "adultDose": "0.4 g/kg/day for 5 days (total 2 g/kg).",
+      "preparationIndia": "5 g and 10 g vials; very costly; check IgA deficiency if possible.",
+      "cautions": "Thrombosis, AKI (sucrose-containing products), aseptic meningitis, volume load.",
+      "refs": [
+        "ean-gbs2023",
+        "mg2021"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "esett",
+      "citation": "Kapur J, Elm J, Chamberlain JM, et al. Randomized trial of three anticonvulsant medications for status epilepticus (ESETT). N Engl J Med. 2019;381(22):2103-2113",
+      "url": "https://doi.org/10.1056/NEJMoa1905795",
+      "year": 2019,
+      "doi": "10.1056/NEJMoa1905795",
+      "type": "trial"
+    },
+    {
+      "id": "ncs-se2012",
+      "citation": "Brophy GM, Bell R, Claassen J, et al. Guidelines for the evaluation and management of status epilepticus. Neurocrit Care. 2012;17(1):3-23",
+      "url": "https://doi.org/10.1007/s12028-012-9695-z",
+      "year": 2012,
+      "doi": "10.1007/s12028-012-9695-z",
+      "type": "guideline"
+    },
+    {
+      "id": "aes2016",
+      "citation": "Glauser T, Shinnar S, Gloss D, et al. Evidence-based guideline: treatment of convulsive status epilepticus in children and adults: report of the Guideline Committee of the American Epilepsy Society. Epilepsy Curr. 2016;16(1):48-61",
+      "url": "https://doi.org/10.5698/1535-7597-16.1.48",
+      "year": 2016,
+      "doi": "10.5698/1535-7597-16.1.48",
+      "type": "guideline"
+    },
+    {
+      "id": "aha-ais2026",
+      "citation": "Prabhakaran S, Gonzalez NR, Zachrison KS, et al. 2026 Guideline for the early management of patients with acute ischemic stroke: a guideline from the American Heart Association/American Stroke Association. Stroke. 2026;57(8):e316-e436",
+      "url": "https://doi.org/10.1161/STR.0000000000000513",
+      "year": 2026,
+      "doi": "10.1161/STR.0000000000000513",
+      "type": "guideline"
+    },
+    {
+      "id": "aha-ich2022",
+      "citation": "Greenberg SM, Ziai WC, Cordonnier C, et al. 2022 Guideline for the management of patients with spontaneous intracerebral hemorrhage: a guideline from the American Heart Association/American Stroke Association. Stroke. 2022;53(7):e282-e361",
+      "url": "https://doi.org/10.1161/STR.0000000000000407",
+      "year": 2022,
+      "doi": "10.1161/STR.0000000000000407",
+      "type": "guideline"
+    },
+    {
+      "id": "aha-sah2023",
+      "citation": "Hoh BL, Ko NU, Amin-Hanjani S, et al. 2023 Guideline for the management of patients with aneurysmal subarachnoid hemorrhage: a guideline from the American Heart Association/American Stroke Association. Stroke. 2023;54(7):e314-e370",
+      "url": "https://doi.org/10.1161/STR.0000000000000436",
+      "year": 2023,
+      "doi": "10.1161/STR.0000000000000436",
+      "type": "guideline"
+    },
+    {
+      "id": "four2005",
+      "citation": "Wijdicks EFM, Bamlet WR, Maramattom BV, Manno EM, McClelland RL. Validation of a new coma scale: the FOUR score. Ann Neurol. 2005;58(4):585-593",
+      "url": "https://doi.org/10.1002/ana.20611",
+      "year": 2005,
+      "doi": "10.1002/ana.20611",
+      "type": "trial"
+    },
+    {
+      "id": "escmid2016",
+      "citation": "van de Beek D, Cabellos C, Dzupova O, et al. ESCMID guideline: diagnosis and treatment of acute bacterial meningitis. Clin Microbiol Infect. 2016;22(Suppl 3):S37-S62",
+      "url": "https://doi.org/10.1016/j.cmi.2016.01.007",
+      "year": 2016,
+      "doi": "10.1016/j.cmi.2016.01.007",
+      "type": "guideline"
+    },
+    {
+      "id": "degans2002",
+      "citation": "de Gans J, van de Beek D. Dexamethasone in adults with bacterial meningitis. N Engl J Med. 2002;347(20):1549-1556",
+      "url": "https://doi.org/10.1056/NEJMoa021334",
+      "year": 2002,
+      "doi": "10.1056/NEJMoa021334",
+      "type": "trial"
+    },
+    {
+      "id": "idsa-enc2008",
+      "citation": "Tunkel AR, Glaser CA, Bloch KC, et al. The management of encephalitis: clinical practice guidelines by the Infectious Diseases Society of America. Clin Infect Dis. 2008;47(3):303-327",
+      "url": "https://doi.org/10.1086/589747",
+      "year": 2008,
+      "doi": "10.1086/589747",
+      "type": "guideline"
+    },
+    {
+      "id": "ean-gbs2023",
+      "citation": "van Doorn PA, Van den Bergh PYK, Hadden RDM, et al. European Academy of Neurology/Peripheral Nerve Society guideline on diagnosis and treatment of Guillain-Barré syndrome. Eur J Neurol. 2023;30(12):3646-3674",
+      "url": "https://doi.org/10.1111/ene.16073",
+      "year": 2023,
+      "doi": "10.1111/ene.16073",
+      "type": "guideline"
+    },
+    {
+      "id": "egris2010",
+      "citation": "Walgaard C, Lingsma HF, Ruts L, et al. Prediction of respiratory insufficiency in Guillain-Barré syndrome. Ann Neurol. 2010;67(6):781-787",
+      "url": "https://doi.org/10.1002/ana.21976",
+      "year": 2010,
+      "doi": "10.1002/ana.21976",
+      "type": "trial"
+    },
+    {
+      "id": "mg2021",
+      "citation": "Narayanaswami P, Sanders DB, Wolfe G, et al. International consensus guidance for management of myasthenia gravis: 2020 update. Neurology. 2021;96(3):114-122",
+      "url": "https://doi.org/10.1212/WNL.0000000000011124",
+      "year": 2021,
+      "doi": "10.1212/WNL.0000000000011124",
+      "type": "consensus"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Fosphenytoin availability",
+      "reason": "Fosphenytoin is not widely available in India; phenytoin and levetiracetam/valproate are the usual second-line options."
+    },
+    {
+      "item": "Thrombolytic cost and availability",
+      "reason": "Tenecteplase (Indian biosimilars) and alteplase are both used; confirm local protocol and stroke-ready centre pathway."
+    }
+  ]
+}

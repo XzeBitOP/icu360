@@ -1,0 +1,1810 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fluids-electrolytes",
+  "number": 16,
+  "folder": "16-fluids-electrolytes",
+  "section": {
+    "id": "D",
+    "title": "Renal, fluids and metabolic"
+  },
+  "phase": 1,
+  "title": "Fluids and electrolytes",
+  "summary": "Choose and prescribe IV fluids as drugs (balanced crystalloids for most), and manage the electrolyte emergencies of the ICU: hypo- and hypernatraemia with safe correction limits, hyperkalaemia, hypokalaemia, and calcium, magnesium and phosphate disorders including refeeding syndrome.",
+  "tags": [
+    "IV fluids",
+    "balanced crystalloid",
+    "Ringer's lactate",
+    "Plasma-Lyte",
+    "normal saline",
+    "albumin",
+    "maintenance fluids",
+    "hyponatraemia",
+    "hypertonic saline",
+    "osmotic demyelination",
+    "hypernatraemia",
+    "free water deficit",
+    "hyperkalaemia",
+    "calcium gluconate",
+    "insulin dextrose",
+    "salbutamol",
+    "hypokalaemia",
+    "potassium chloride",
+    "hypocalcaemia",
+    "hypomagnesaemia",
+    "hypophosphataemia",
+    "refeeding syndrome"
+  ],
+  "relatedModules": [
+    "acid-base-abg",
+    "aki-renal-drug-dosing",
+    "renal-replacement-therapy",
+    "endocrine-metabolic-emergencies",
+    "sepsis-septic-shock",
+    "nutrition-metabolic-support"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "beaker",
+    "accent": "high"
+  },
+  "viewKey": "module:fluids-electrolytes",
+  "topics": [
+    {
+      "id": "fluid-choice",
+      "title": "IV fluids: choice, dose and stewardship",
+      "summary": "Treat fluids as drugs with four phases: resuscitation, optimisation, stabilisation, de-escalation. Balanced crystalloids are reasonable default resuscitation fluids; saline for TBI and hypochloraemia; albumin selectively; never starches.",
+      "viewKey": "topic:fluids-electrolytes/fluid-choice",
+      "uiHints": {
+        "icon": "beaker",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Four indications: resuscitation, replacement of ongoing losses, maintenance (often unnecessary when enteral feed and drug diluents already cover water needs), and nutrition."
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "Resuscitation",
+            "title": "Bolus and reassess",
+            "detail": "250-500 mL balanced crystalloid over 15-30 min; reassess perfusion and fluid responsiveness (PLR, POCUS) before each further bolus."
+          },
+          {
+            "n": 2,
+            "time": "Choose",
+            "title": "Balanced vs saline",
+            "detail": "SMART (n = 15,802) showed fewer major adverse kidney events with balanced fluids; PLUS and BaSICS showed no mortality difference. Balanced fluids are a reasonable default.",
+            "refs": [
+              "smart",
+              "plus",
+              "basics"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Exceptions",
+            "title": "Use 0.9% saline",
+            "detail": "Severe TBI / raised ICP (BaSICS signal of harm with balanced fluid in TBI), hypochloraemic metabolic alkalosis, hyponatraemia.",
+            "refs": [
+              "basics"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Maintenance",
+            "title": "Adult needs",
+            "detail": "Water 25-30 mL/kg/day, Na+ 1 mmol/kg, K+ 1 mmol/kg, glucose 50-100 g/day; count all drug infusions and feeds (fluid creep)."
+          },
+          {
+            "n": 5,
+            "time": "De-escalate",
+            "title": "Once stable",
+            "detail": "Stop maintenance fluid, concentrate infusions, target even or negative balance; diuretics or RRT for overload."
+          }
+        ],
+        "tables": [
+          {
+            "id": "crystalloid-composition",
+            "title": "Composition of common IV fluids (mmol/L)",
+            "columns": [
+              "Fluid",
+              "Na+",
+              "Cl-",
+              "K+",
+              "Buffer",
+              "Osmolarity"
+            ],
+            "rows": [
+              [
+                "0.9% NaCl",
+                "154",
+                "154",
+                "0",
+                "None",
+                "308"
+              ],
+              [
+                "Ringer's lactate (Hartmann's)",
+                "130-131",
+                "109-111",
+                "4-5",
+                "Lactate 28-29",
+                "273-278"
+              ],
+              [
+                "Plasma-Lyte 148 / A",
+                "140",
+                "98",
+                "5",
+                "Acetate 27, gluconate 23",
+                "294"
+              ],
+              [
+                "5% dextrose",
+                "0",
+                "0",
+                "0",
+                "None",
+                "278 (free water once glucose metabolised)"
+              ],
+              [
+                "DNS (5% dextrose in 0.9% NaCl)",
+                "154",
+                "154",
+                "0",
+                "None",
+                "586"
+              ],
+              [
+                "Human albumin 4-5% / 20%",
+                "~130-160",
+                "variable",
+                "< 2",
+                "None",
+                "~300"
+              ]
+            ],
+            "caption": "Values vary slightly by manufacturer; check the bag. Hydroxyethyl starch is associated with AKI and death in sepsis and should not be used.",
+            "refs": [
+              "plus"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Lung crackles, rising oxygen need, B-lines or a plethoric non-collapsing IVC after boluses: stop fluid."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Running 'maintenance' DNS at 100 mL/h by default in a patient already on enteral feeds and multiple drug infusions."
+          },
+          {
+            "text": "Hypotonic fluids (dextrose-saline, 5% dextrose) as maintenance in sick patients → hospital-acquired hyponatraemia."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Write the fluid order as a drug: type, volume, rate, indication, review time."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Does this patient need IV fluid?",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Patient on IV fluids or being considered"
+          },
+          {
+            "id": "res",
+            "type": "decision",
+            "text": "Signs of hypoperfusion and likely fluid responsive?"
+          },
+          {
+            "id": "bolus",
+            "type": "action",
+            "text": "250-500 mL balanced crystalloid bolus; reassess"
+          },
+          {
+            "id": "loss",
+            "type": "decision",
+            "text": "Ongoing measured losses?"
+          },
+          {
+            "id": "rep",
+            "type": "end",
+            "text": "Replace like-for-like (e.g. RL for GI losses + KCl)"
+          },
+          {
+            "id": "oral",
+            "type": "decision",
+            "text": "Meeting needs enterally/with drug diluents?"
+          },
+          {
+            "id": "stop",
+            "type": "end",
+            "text": "Stop IV fluid; consider de-resuscitation"
+          },
+          {
+            "id": "mf",
+            "type": "end",
+            "text": "Isotonic maintenance with K+ (25-30 mL/kg/day)"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "res"
+          },
+          {
+            "from": "res",
+            "to": "bolus",
+            "label": "Yes"
+          },
+          {
+            "from": "bolus",
+            "to": "res",
+            "label": "Reassess"
+          },
+          {
+            "from": "res",
+            "to": "loss",
+            "label": "No"
+          },
+          {
+            "from": "loss",
+            "to": "rep",
+            "label": "Yes"
+          },
+          {
+            "from": "loss",
+            "to": "oral",
+            "label": "No"
+          },
+          {
+            "from": "oral",
+            "to": "stop",
+            "label": "Yes"
+          },
+          {
+            "from": "oral",
+            "to": "mf",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "smart"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **SMART 2018:** balanced vs saline, MAKE30 14.3% vs 15.4%.\n- **PLUS 2022:** Plasma-Lyte vs saline, 90-day mortality 21.8% vs 22.0%.\n- **BaSICS 2021:** no overall difference; possible harm with balanced fluid in TBI.",
+        "controversies": "- Benefit of balanced fluids is small; meta-analyses suggest a modest reduction in mortality but the confidence interval includes no effect.",
+        "indiaNotes": "- RL is cheap and universally available; Plasma-Lyte costs more. DNS remains overused as \"maintenance\" in Indian wards; this is a common source of hyponatraemia and hyperglycaemia."
+      },
+      "drugIds": [
+        "balanced-crystalloid"
+      ],
+      "calculatorIds": [
+        "maintenance-fluids-421",
+        "burns-fluid-24h"
+      ],
+      "references": [
+        "smart",
+        "plus",
+        "basics"
+      ],
+      "quiz": [
+        {
+          "id": "fluid-choice-q1",
+          "stem": "Which trial showed fewer major adverse kidney events with balanced crystalloids?",
+          "options": [
+            "PLUS",
+            "SMART",
+            "BaSICS",
+            "CHEST"
+          ],
+          "answerIndex": 1,
+          "explanation": "SMART: MAKE30 reduced by ~1% absolute."
+        },
+        {
+          "id": "fluid-choice-q2",
+          "stem": "Preferred crystalloid in severe TBI:",
+          "options": [
+            "Ringer's lactate",
+            "0.9% saline",
+            "5% dextrose",
+            "Hydroxyethyl starch"
+          ],
+          "answerIndex": 1,
+          "explanation": "Avoid hypotonic fluids in raised ICP."
+        },
+        {
+          "id": "fluid-choice-q3",
+          "stem": "Approximate daily water requirement for an adult:",
+          "options": [
+            "10 mL/kg",
+            "25-30 mL/kg",
+            "60 mL/kg",
+            "100 mL/kg"
+          ],
+          "answerIndex": 1,
+          "explanation": "NICE CG174 and common practice."
+        }
+      ]
+    },
+    {
+      "id": "hyponatraemia",
+      "title": "Hyponatraemia",
+      "summary": "Treat symptoms, not the number: severe symptoms get 3% saline boluses immediately. Then classify by osmolality, volume status and urine studies. Limit correction to 10 mmol/L in 24 h (8 if high risk of osmotic demyelination) and re-lower if overshooting.",
+      "viewKey": "topic:fluids-electrolytes/hyponatraemia",
+      "uiHints": {
+        "icon": "beaker",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Serum Na+ < 135 mmol/L. Mild 130-134, moderate 125-129, profound < 125 (European guideline).",
+          "refs": [
+            "spasovski2014"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Severe symptoms?",
+            "detail": "Vomiting, seizures, GCS < 9, cardiorespiratory distress: 150 mL 3% saline over 20 min, check Na+, repeat up to twice until Na+ rises 5 mmol/L.",
+            "refs": [
+              "spasovski2014"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Moderate symptoms",
+            "title": "Single bolus",
+            "detail": "Confusion, nausea, headache: one 150 mL 3% bolus (or 2 mL/kg), then treat cause; target +5 mmol/L/24 h."
+          },
+          {
+            "n": 3,
+            "time": "Check",
+            "title": "Rule out pseudo/translocational",
+            "detail": "Measure serum osmolality and glucose (correct Na+ for hyperglycaemia); exclude hyperlipidaemia/paraprotein, mannitol."
+          },
+          {
+            "n": 4,
+            "time": "Classify",
+            "title": "Urine osmolality and Na+",
+            "detail": "Uosm < 100 → water excess (primary polydipsia, beer potomania, low solute). UNa < 30 → low effective arterial volume (GI loss, heart failure, cirrhosis). UNa > 30 → SIADH, diuretics, adrenal insufficiency, hypothyroidism, cerebral salt wasting.",
+            "refs": [
+              "spasovski2014"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Treat",
+            "title": "By cause",
+            "detail": "Hypovolaemia: 0.9% saline or RL. SIADH: fluid restriction < 800-1000 mL/day; oral urea 15-30 g/day or salt tablets + furosemide if refractory. Heart failure/cirrhosis: fluid restriction, treat underlying."
+          },
+          {
+            "n": 6,
+            "time": "Monitor",
+            "title": "Every 4-6 h",
+            "detail": "Limit rise to 10 mmol/L in first 24 h and 8 mmol/L in each subsequent 24 h; in high-risk patients aim for 4-8 and do not exceed 8. Watch for aquaresis (UO > 100 mL/h)."
+          },
+          {
+            "n": 7,
+            "time": "Overshoot",
+            "title": "Re-lower",
+            "detail": "Stop hypertonic fluid; 5% dextrose 10 mL/kg over 1 h ± desmopressin 1-2 mcg IV/SC to bring Na+ back below the limit.",
+            "refs": [
+              "spasovski2014"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "hypertonic-saline-3",
+            "role": "Severe symptomatic hyponatraemia",
+            "route": "IV (peripheral acceptable for boluses)",
+            "dose": "150 mL over 20 min; repeat up to 2 more times guided by Na+ (or 2 mL/kg, max 150 mL)",
+            "target": "Rise of 5 mmol/L in the first 1-2 h; symptoms improve",
+            "workedExample": "60 kg woman, Na+ 112, seizing: 150 mL 3% over 20 min → Na+ 115; repeat 150 mL → 117; stop boluses",
+            "notes": "SALSA: rapid intermittent boluses had no more overcorrection than slow continuous infusion.",
+            "refs": [
+              "spasovski2014",
+              "salsa"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "odsrisk",
+            "title": "High risk of osmotic demyelination: correct more slowly",
+            "columns": [
+              "Risk factor",
+              "Note"
+            ],
+            "rows": [
+              [
+                "Na+ ≤ 105 mmol/L",
+                "Highest risk"
+              ],
+              [
+                "Alcohol use disorder",
+                "Common in Indian men with beer potomania"
+              ],
+              [
+                "Malnutrition",
+                "Also low solute intake"
+              ],
+              [
+                "Hypokalaemia",
+                "K+ replacement itself raises Na+"
+              ],
+              [
+                "Advanced liver disease",
+                "Including liver transplant candidates"
+              ]
+            ],
+            "caption": "US expert panel: in high-risk patients, aim for 4-8 mmol/L per day and do not exceed 8 mmol/L in any 24 h.",
+            "refs": [
+              "verbalis2013"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Seizure or GCS fall with Na+ < 125: hypertonic saline now, not a water restriction."
+          },
+          {
+            "text": "Urine output suddenly > 100 mL/h of dilute urine: overcorrection is coming; check Na+ every 1-2 h."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Giving 0.9% saline in SIADH (urine osmolality > 500): Na+ may fall further."
+          },
+          {
+            "text": "Forgetting that K+ replacement also raises Na+."
+          },
+          {
+            "text": "Missing adrenal insufficiency or hypothyroidism before labelling SIADH."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Urine osmolality + urine Na+ before treatment are worth more than any formula."
+          },
+          {
+            "text": "Thiazides are a leading cause in the elderly; stop them."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Hyponatraemia",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Na+ < 135 mmol/L"
+          },
+          {
+            "id": "sym",
+            "type": "decision",
+            "text": "Severe or moderate symptoms?"
+          },
+          {
+            "id": "hts",
+            "type": "action",
+            "text": "3% saline 150 mL over 20 min; repeat to +5 mmol/L",
+            "severity": "critical"
+          },
+          {
+            "id": "osm",
+            "type": "decision",
+            "text": "Serum osmolality < 275?"
+          },
+          {
+            "id": "pseudo",
+            "type": "end",
+            "text": "Hyperglycaemia, mannitol, pseudo: treat cause"
+          },
+          {
+            "id": "uosm",
+            "type": "decision",
+            "text": "Urine osm < 100?"
+          },
+          {
+            "id": "water",
+            "type": "end",
+            "text": "Water excess / low solute: restrict water; watch rapid correction"
+          },
+          {
+            "id": "una",
+            "type": "decision",
+            "text": "Urine Na+ > 30?"
+          },
+          {
+            "id": "low",
+            "type": "end",
+            "text": "Low effective volume: saline if hypovolaemic; restrict if HF/cirrhosis"
+          },
+          {
+            "id": "siadh",
+            "type": "end",
+            "text": "SIADH, diuretics, adrenal, thyroid: check cortisol/TSH; fluid restriction"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "sym"
+          },
+          {
+            "from": "sym",
+            "to": "hts",
+            "label": "Yes"
+          },
+          {
+            "from": "hts",
+            "to": "osm",
+            "label": "Then"
+          },
+          {
+            "from": "sym",
+            "to": "osm",
+            "label": "No"
+          },
+          {
+            "from": "osm",
+            "to": "pseudo",
+            "label": "No"
+          },
+          {
+            "from": "osm",
+            "to": "uosm",
+            "label": "Yes"
+          },
+          {
+            "from": "uosm",
+            "to": "water",
+            "label": "Yes"
+          },
+          {
+            "from": "uosm",
+            "to": "una",
+            "label": "No"
+          },
+          {
+            "from": "una",
+            "to": "low",
+            "label": "No"
+          },
+          {
+            "from": "una",
+            "to": "siadh",
+            "label": "Yes"
+          }
+        ],
+        "refs": [
+          "spasovski2014"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "- Brain cells adapt within 48 h by losing osmolytes; rapid correction then dehydrates them, causing osmotic demyelination 2-6 days later.",
+        "evidence": "- **European guideline 2014** and **US expert panel 2013** agree on 3% bolus therapy for severe symptoms and on daily limits.\n- **SALSA 2021:** rapid intermittent bolus vs slow continuous infusion: similar overcorrection rates.",
+        "controversies": "- Tolvaptan: effective in SIADH but costly, risk of overcorrection and liver injury; avoid in liver disease.",
+        "indiaNotes": "- Common Indian causes: thiazides, diarrhoeal illness, beer potomania, SIADH from TB meningitis/pneumonia, hypothyroidism and hypopituitarism (Sheehan's syndrome in women)."
+      },
+      "drugIds": [
+        "hypertonic-saline-3"
+      ],
+      "calculatorIds": [
+        "corrected-sodium-glucose",
+        "sodium-change-per-litre",
+        "serum-osmolality"
+      ],
+      "references": [
+        "spasovski2014",
+        "verbalis2013",
+        "salsa"
+      ],
+      "quiz": [
+        {
+          "id": "hyponatraemia-q1",
+          "stem": "Initial treatment of a seizing patient with Na+ 112:",
+          "options": [
+            "Fluid restriction",
+            "150 mL 3% saline over 20 min",
+            "Tolvaptan",
+            "1 L 0.9% saline over 1 h"
+          ],
+          "answerIndex": 1,
+          "explanation": "Bolus hypertonic saline to raise Na+ ~5 mmol/L."
+        },
+        {
+          "id": "hyponatraemia-q2",
+          "stem": "Maximum Na+ rise in the first 24 h for a high-risk patient:",
+          "options": [
+            "4 mmol/L",
+            "8 mmol/L",
+            "12 mmol/L",
+            "20 mmol/L"
+          ],
+          "answerIndex": 1,
+          "explanation": "Do not exceed 8 mmol/L when ODS risk is high."
+        },
+        {
+          "id": "hyponatraemia-q3",
+          "stem": "Na+ overshoot after 12 h – best step:",
+          "options": [
+            "Continue",
+            "5% dextrose ± desmopressin to re-lower",
+            "Furosemide",
+            "More 3% saline"
+          ],
+          "answerIndex": 1,
+          "explanation": "Re-lower with free water and DDAVP."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Oral urea",
+          "reason": "Oral urea sachets are not widely marketed in India; check availability."
+        }
+      ]
+    },
+    {
+      "id": "hypernatraemia",
+      "title": "Hypernatraemia",
+      "summary": "Na+ > 145 mmol/L usually means water loss plus inability to drink. Restore volume first if shocked, then replace the free-water deficit plus ongoing losses, lowering Na+ by about 10 mmol/L/day in chronic cases.",
+      "viewKey": "topic:fluids-electrolytes/hypernatraemia",
+      "uiHints": {
+        "icon": "beaker",
+        "accent": "standard"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "First",
+            "title": "Volume",
+            "detail": "Shock or hypovolaemia: isotonic crystalloid boluses first."
+          },
+          {
+            "n": 2,
+            "time": "Cause",
+            "title": "Classify",
+            "detail": "Renal water loss (osmotic diuresis from glucose/urea/mannitol, diabetes insipidus), GI/insensible losses, or sodium gain (hypertonic saline, bicarbonate). Urine osmolality < 300 with polyuria suggests DI.",
+            "refs": [
+              "adrogue2000"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Replace",
+            "title": "Free water",
+            "detail": "Enteral water via NG tube is best; IV 5% dextrose or 0.45% saline. Use the free-water deficit or Adrogué-Madias formula and add ongoing losses.",
+            "refs": [
+              "adrogue2000"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Rate",
+            "title": "Chronic (> 48 h)",
+            "detail": "Lower Na+ by ≤ 10-12 mmol/L per 24 h to avoid cerebral oedema; acute (hours, e.g. salt ingestion) can be corrected faster."
+          },
+          {
+            "n": 5,
+            "time": "DI",
+            "title": "Central",
+            "detail": "Desmopressin 1-2 mcg IV/SC (or 10 mcg intranasal) and replace losses; common after neurosurgery, TBI, brain death."
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Hypernatraemia in an ICU patient on diuretics and hypertonic fluids is iatrogenic until proven otherwise."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Treating with 0.9% saline alone, which is hypertonic relative to the urine in osmotic diuresis."
+          },
+          {
+            "text": "Forgetting glucose load with large 5% dextrose volumes."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "1 L of 5% dextrose lowers Na+ by about (Na+ − 0)/(TBW + 1): use sodium-change-per-litre."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Hypernatraemia",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Na+ > 145 mmol/L"
+          },
+          {
+            "id": "shock",
+            "type": "decision",
+            "text": "Hypovolaemic shock?"
+          },
+          {
+            "id": "iso",
+            "type": "action",
+            "text": "Isotonic crystalloid until perfused"
+          },
+          {
+            "id": "uo",
+            "type": "decision",
+            "text": "Polyuria with urine osm < 300?"
+          },
+          {
+            "id": "di",
+            "type": "end",
+            "text": "Diabetes insipidus: desmopressin (central) + water"
+          },
+          {
+            "id": "fw",
+            "type": "end",
+            "text": "Free water deficit + ongoing losses; ≤ 10-12 mmol/L/day"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "shock"
+          },
+          {
+            "from": "shock",
+            "to": "iso",
+            "label": "Yes"
+          },
+          {
+            "from": "iso",
+            "to": "uo",
+            "label": "Then"
+          },
+          {
+            "from": "shock",
+            "to": "uo",
+            "label": "No"
+          },
+          {
+            "from": "uo",
+            "to": "di",
+            "label": "Yes"
+          },
+          {
+            "from": "uo",
+            "to": "fw",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "adrogue2000"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Adrogué & Madias 2000:** classic review; formula for change in Na+ per litre of infusate.",
+        "controversies": "- Observational data in adults suggest faster correction (> 0.5 mmol/L/h) is not clearly harmful, but the 10-12 mmol/day limit remains standard practice.",
+        "indiaNotes": "- Elderly patients with poor water access and fever in summer, heat illness, and post-neurosurgical DI are common scenarios."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "free-water-deficit",
+        "sodium-change-per-litre"
+      ],
+      "references": [
+        "adrogue2000"
+      ],
+      "quiz": [
+        {
+          "id": "hypernatraemia-q1",
+          "stem": "Best route for free-water replacement in a ventilated patient with an NG tube:",
+          "options": [
+            "0.9% saline IV",
+            "Enteral water",
+            "3% saline",
+            "Albumin"
+          ],
+          "answerIndex": 1,
+          "explanation": "Enteral free water is simple and avoids glucose load."
+        },
+        {
+          "id": "hypernatraemia-q2",
+          "stem": "Max correction rate for chronic hypernatraemia:",
+          "options": [
+            "≤ 10-12 mmol/L/24 h",
+            "20 mmol/L/24 h",
+            "1 mmol/L/h for 48 h",
+            "No limit"
+          ],
+          "answerIndex": 0,
+          "explanation": "Avoid cerebral oedema."
+        },
+        {
+          "id": "hypernatraemia-q3",
+          "stem": "Polyuria with urine osmolality 120 after pituitary surgery suggests:",
+          "options": [
+            "SIADH",
+            "Central DI",
+            "Osmotic diuresis",
+            "Cerebral salt wasting"
+          ],
+          "answerIndex": 1,
+          "explanation": "Dilute polyuria + hypernatraemia."
+        }
+      ]
+    },
+    {
+      "id": "hyperkalaemia",
+      "title": "Hyperkalaemia",
+      "summary": "Five steps (UKKA): protect the heart with IV calcium if ECG changes, shift K+ into cells with insulin-glucose (± salbutamol), remove K+ (binders, diuresis, dialysis), monitor glucose and K+, and prevent recurrence.",
+      "viewKey": "topic:fluids-electrolytes/hyperkalaemia",
+      "uiHints": {
+        "icon": "beaker",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "UKKA: mild 5.5-5.9, moderate 6.0-6.4, severe ≥ 6.5 mmol/L.",
+          "refs": [
+            "uk-k2023"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "ECG and confirm",
+            "detail": "12-lead ECG, continuous monitoring; repeat sample if haemolysed but do not delay treatment if ECG changes."
+          },
+          {
+            "n": 2,
+            "time": "Step 1",
+            "title": "Protect the heart",
+            "detail": "ECG changes: 30 mL 10% calcium gluconate over 10 min (10 mL 10% calcium chloride over 5 min in peri-arrest). Repeat if changes persist after 5-10 min.",
+            "refs": [
+              "uk-k2023"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Step 2",
+            "title": "Shift K+",
+            "detail": "K+ ≥ 6.0: soluble insulin 10 units + 25 g glucose over 15 min. If pre-treatment glucose < 7 mmol/L (126 mg/dL): then 10% glucose 50 mL/h for 5 h. K+ ≥ 6.5: add salbutamol 10-20 mg nebulised.",
+            "refs": [
+              "uk-k2023"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Step 3",
+            "title": "Remove K+",
+            "detail": "Sodium zirconium cyclosilicate 10 g three times daily (or patiromer); loop diuretic if passing urine and volume replete; urgent dialysis for refractory hyperkalaemia, anuric AKI or ESKD.",
+            "refs": [
+              "uk-k2023"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Step 4",
+            "title": "Monitor",
+            "detail": "K+ at 1, 2, 4, 6 and 24 h; capillary glucose 0, 30, 60, 90, 120, 180, 240, 300, 360 min after insulin.",
+            "refs": [
+              "uk-k2023"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Step 5",
+            "title": "Prevent",
+            "detail": "Stop K+ supplements, ACEi/ARB/MRA, NSAIDs, trimethoprim, heparin; treat rhabdomyolysis, tumour lysis, acidosis."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "calcium-gluconate",
+            "role": "Hyperkalaemia with ECG changes",
+            "route": "IV, large vein",
+            "dose": "30 mL of 10% over 10 min; repeat if ECG unchanged",
+            "notes": "Onset 3 min, lasts 30-60 min; does not lower K+.",
+            "refs": [
+              "uk-k2023"
+            ]
+          },
+          {
+            "drugId": "insulin-dextrose",
+            "role": "K+ ≥ 6.0 mmol/L",
+            "route": "IV",
+            "dose": "Soluble insulin 10 units + 25 g glucose (50 mL 50% or 250 mL 10%) over 15 min",
+            "target": "K+ falls 0.6-1.0 mmol/L within 30-60 min",
+            "workedExample": "70 kg, K+ 7.1, glucose 90 mg/dL (5 mmol/L): insulin 10 units + 50 mL 50% dextrose; then 10% dextrose 50 mL/h for 5 h",
+            "verify": "Draw 10 units with an insulin syringe of the correct strength (U-40 vs U-100).",
+            "refs": [
+              "uk-k2023"
+            ]
+          },
+          {
+            "drugId": "salbutamol",
+            "role": "Adjunct, K+ ≥ 6.5",
+            "route": "Nebulised",
+            "dose": "10-20 mg",
+            "refs": [
+              "uk-k2023"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "k-ecg",
+            "title": "ECG changes of hyperkalaemia (not reliably sequential)",
+            "columns": [
+              "Change",
+              "Comment"
+            ],
+            "rows": [
+              [
+                "Peaked T waves",
+                "Earliest, but insensitive"
+              ],
+              [
+                "PR prolongation, flattened/absent P",
+                "Atrial conduction slows"
+              ],
+              [
+                "Broad QRS, bundle branch block",
+                "High risk"
+              ],
+              [
+                "Bradycardia, high-grade AV block, junctional rhythm",
+                "Peri-arrest; atropine often ineffective"
+              ],
+              [
+                "Sine wave, VF, asystole, PEA",
+                "Cardiac arrest: calcium chloride, insulin-glucose, consider bicarbonate, dialysis"
+              ]
+            ],
+            "caption": "BRASH syndrome (Bradycardia, Renal failure, AV nodal blockade, Shock, Hyperkalaemia) can occur with K+ < 6.5.",
+            "refs": [
+              "uk-k2023"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Broad QRS or bradycardia with high K+: calcium now, then everything else."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Hypoglycaemia hours after insulin, especially in CKD (no glucose monitoring)."
+          },
+          {
+            "text": "Relying on sodium polystyrene / calcium resonium for acute treatment (slow; not recommended)."
+          },
+          {
+            "text": "Sodium bicarbonate as routine therapy: insufficient evidence except in cardiac arrest or severe acidosis."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Calcium gluconate 30 mL of 10% contains the same calcium as 10 mL of 10% chloride."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Hyperkalaemia (UKKA)",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "K+ ≥ 6.0 mmol/L"
+          },
+          {
+            "id": "ecg",
+            "type": "decision",
+            "text": "ECG changes?"
+          },
+          {
+            "id": "ca",
+            "type": "action",
+            "text": "Calcium gluconate 10% 30 mL over 10 min",
+            "severity": "critical"
+          },
+          {
+            "id": "ins",
+            "type": "action",
+            "text": "Insulin 10 U + glucose 25 g; salbutamol if K+ ≥ 6.5"
+          },
+          {
+            "id": "glu",
+            "type": "action",
+            "text": "Glucose monitoring for 6 h; 10% glucose 50 mL/h × 5 h if baseline < 7 mmol/L"
+          },
+          {
+            "id": "rem",
+            "type": "action",
+            "text": "Remove K+: binder, loop diuretic"
+          },
+          {
+            "id": "dial",
+            "type": "decision",
+            "text": "Refractory, anuric AKI or ESKD?"
+          },
+          {
+            "id": "hd",
+            "type": "end",
+            "text": "Urgent dialysis"
+          },
+          {
+            "id": "rev",
+            "type": "end",
+            "text": "Re-check K+ at 1, 2, 4, 6, 24 h; prevent recurrence"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "ecg"
+          },
+          {
+            "from": "ecg",
+            "to": "ca",
+            "label": "Yes"
+          },
+          {
+            "from": "ca",
+            "to": "ins"
+          },
+          {
+            "from": "ecg",
+            "to": "ins",
+            "label": "No"
+          },
+          {
+            "from": "ins",
+            "to": "glu"
+          },
+          {
+            "from": "glu",
+            "to": "rem"
+          },
+          {
+            "from": "rem",
+            "to": "dial"
+          },
+          {
+            "from": "dial",
+            "to": "hd",
+            "label": "Yes"
+          },
+          {
+            "from": "dial",
+            "to": "rev",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "uk-k2023"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **UKKA 2023 (updated 2026):** calcium gluconate dose increased to 30 mL; insulin-glucose with structured glucose monitoring; calcium resonium removed from acute algorithm.\n- **KDIGO 2020:** consensus on potassium homeostasis and dyskalaemia.",
+        "controversies": "- Lower insulin doses (5 units) in CKD reduce hypoglycaemia but may be less effective.",
+        "indiaNotes": "- Sodium zirconium cyclosilicate is available in India but costly; patiromer availability is limited. Dialysis access drives management in district hospitals."
+      },
+      "drugIds": [
+        "calcium-gluconate",
+        "insulin-dextrose",
+        "salbutamol"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "uk-k2023",
+        "kdigo-k2020"
+      ],
+      "quiz": [
+        {
+          "id": "hyperkalaemia-q1",
+          "stem": "First drug for K+ 7.2 with broad QRS:",
+          "options": [
+            "Insulin-dextrose",
+            "Calcium gluconate 10% 30 mL",
+            "Salbutamol",
+            "Sodium bicarbonate"
+          ],
+          "answerIndex": 1,
+          "explanation": "Membrane stabilisation first."
+        },
+        {
+          "id": "hyperkalaemia-q2",
+          "stem": "After insulin-dextrose with baseline glucose 5 mmol/L:",
+          "options": [
+            "Nothing more",
+            "10% glucose 50 mL/h for 5 h",
+            "Repeat insulin",
+            "Stop monitoring at 1 h"
+          ],
+          "answerIndex": 1,
+          "explanation": "Prevents delayed hypoglycaemia."
+        },
+        {
+          "id": "hyperkalaemia-q3",
+          "stem": "Which is no longer recommended for acute hyperkalaemia (UKKA)?",
+          "options": [
+            "Calcium resonium",
+            "Calcium gluconate",
+            "Insulin-glucose",
+            "Salbutamol"
+          ],
+          "answerIndex": 0,
+          "explanation": "Too slow; novel binders preferred."
+        }
+      ]
+    },
+    {
+      "id": "hypokalaemia",
+      "title": "Hypokalaemia",
+      "summary": "Replace potassium safely (≤ 10 mmol/h peripherally, ≤ 20 mmol/h centrally with monitoring), correct magnesium, and look for the cause (GI loss, diuretics, insulin, β-agonists, refeeding, RTA, hyperaldosteronism).",
+      "viewKey": "topic:fluids-electrolytes/hypokalaemia",
+      "uiHints": {
+        "icon": "beaker",
+        "accent": "standard"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Assess",
+            "title": "Severity",
+            "detail": "Mild 3.0-3.4; severe < 2.5 or with ECG changes (U waves, ST depression, arrhythmia), weakness or paralysis, digoxin, or cardiac disease."
+          },
+          {
+            "n": 2,
+            "time": "Replace",
+            "title": "Oral if possible",
+            "detail": "KCl 20-40 mmol 2-3 times daily."
+          },
+          {
+            "n": 3,
+            "time": "Replace",
+            "title": "IV",
+            "detail": "Peripheral up to 10 mmol/h (concentration ≤ 40 mmol/L); central with ECG monitoring up to 20 mmol/h. Each 10 mmol raises K+ ~0.1 mmol/L (less with ongoing losses).",
+            "refs": [
+              "kdigo-k2020"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Magnesium",
+            "title": "Always check",
+            "detail": "Hypomagnesaemia causes refractory hypokalaemia; give 2 g magnesium sulphate IV."
+          },
+          {
+            "n": 5,
+            "time": "Cause",
+            "title": "Urine K+",
+            "detail": "Urine K+ < 20 mmol/day (or K/creatinine low) → GI/shift; high → renal loss (diuretics, vomiting, RTA, hyperaldosteronism)."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "potassium-chloride",
+            "role": "Severe hypokalaemia",
+            "route": "IV via central line, cardiac monitor",
+            "dose": "20 mmol in 100 mL over 1 h; repeat with K+ checks",
+            "doseRange": {
+              "min": 10,
+              "max": 20,
+              "unit": "mmol/h"
+            },
+            "workedExample": "K+ 2.4 with ectopics: 20 mmol/h centrally ×2, re-check; + 2 g MgSO4 over 30 min",
+            "verify": "Check whether central concentrated KCl is permitted on your unit's policy.",
+            "refs": [
+              "kdigo-k2020"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Flaccid paralysis with K+ < 2.5: hypokalaemic periodic paralysis, distal RTA, or Gitelman; ventilatory failure is possible."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "IV push of KCl (fatal)."
+          },
+          {
+            "text": "Insulin in DKA before K+ ≥ 3.5."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Thyrotoxic periodic paralysis: Asian men, high carbohydrate meal; small K+ doses + propranolol to avoid rebound hyperkalaemia."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Hypokalaemia",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "K+ < 3.5 mmol/L"
+          },
+          {
+            "id": "sev",
+            "type": "decision",
+            "text": "< 2.5, ECG changes, weakness or arrhythmia?"
+          },
+          {
+            "id": "iv",
+            "type": "action",
+            "text": "IV KCl ≤ 20 mmol/h central, monitor",
+            "severity": "high"
+          },
+          {
+            "id": "po",
+            "type": "action",
+            "text": "Oral KCl 20-40 mmol 2-3× daily"
+          },
+          {
+            "id": "mg",
+            "type": "end",
+            "text": "Check/correct Mg; find cause (urine K+)"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "sev"
+          },
+          {
+            "from": "sev",
+            "to": "iv",
+            "label": "Yes"
+          },
+          {
+            "from": "sev",
+            "to": "po",
+            "label": "No"
+          },
+          {
+            "from": "iv",
+            "to": "mg"
+          },
+          {
+            "from": "po",
+            "to": "mg"
+          }
+        ],
+        "refs": [
+          "kdigo-k2020"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **KDIGO 2020 controversies conference:** consensus on potassium homeostasis; IV replacement rates reflect standard safety practice rather than trials.",
+        "indiaNotes": "- Diarrhoeal illness and diuretics are the commonest causes; hypokalaemic paralysis presents frequently to Indian emergency departments, including distal RTA and thyrotoxic periodic paralysis."
+      },
+      "drugIds": [
+        "potassium-chloride",
+        "magnesium-sulphate"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "kdigo-k2020"
+      ],
+      "quiz": [
+        {
+          "id": "hypokalaemia-q1",
+          "stem": "Max peripheral KCl rate:",
+          "options": [
+            "10 mmol/h",
+            "40 mmol/h",
+            "5 mmol/min",
+            "Bolus"
+          ],
+          "answerIndex": 0,
+          "explanation": "Higher rates need a central line and monitoring."
+        },
+        {
+          "id": "hypokalaemia-q2",
+          "stem": "Refractory hypokalaemia – check:",
+          "options": [
+            "Calcium",
+            "Magnesium",
+            "Phosphate",
+            "Chloride"
+          ],
+          "answerIndex": 1,
+          "explanation": "Low Mg drives renal K+ loss."
+        },
+        {
+          "id": "hypokalaemia-q3",
+          "stem": "Thyrotoxic periodic paralysis – useful adjunct:",
+          "options": [
+            "Propranolol",
+            "Salbutamol",
+            "Insulin",
+            "Furosemide"
+          ],
+          "answerIndex": 0,
+          "explanation": "Non-selective β-blockade reverses the shift."
+        }
+      ]
+    },
+    {
+      "id": "ca-mg-po4-refeeding",
+      "title": "Calcium, magnesium, phosphate and refeeding syndrome",
+      "summary": "Use ionised calcium in the ICU. Treat symptomatic hypocalcaemia with IV calcium; replace magnesium early. Identify refeeding risk before feeding: start low, give thiamine, and check phosphate, potassium and magnesium every 12 h for 3 days.",
+      "viewKey": "topic:fluids-electrolytes/ca-mg-po4-refeeding",
+      "uiHints": {
+        "icon": "beaker",
+        "accent": "standard"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Calcium",
+            "title": "Measure ionised",
+            "detail": "Normal iCa 1.1-1.3 mmol/L. Total calcium correction for albumin is unreliable in ICU."
+          },
+          {
+            "n": 2,
+            "time": "Hypocalcaemia",
+            "title": "Symptomatic",
+            "detail": "Tetany, seizures, prolonged QT, hypotension: 10-20 mL 10% calcium gluconate over 10 min, then infusion. Correct Mg first if low. Common in massive transfusion, pancreatitis, rhabdomyolysis, CRRT citrate."
+          },
+          {
+            "n": 3,
+            "time": "Hypercalcaemia",
+            "title": "Severe (> 14 mg/dL or symptomatic)",
+            "detail": "0.9% saline to euvolaemia, then zoledronic acid 4 mg IV (adjust in renal impairment) or calcitonin 4 IU/kg SC for rapid effect; dialysis if renal failure. Look for malignancy, hyperparathyroidism, vitamin D excess."
+          },
+          {
+            "n": 4,
+            "time": "Magnesium",
+            "title": "Replace",
+            "detail": "Mg < 0.7 mmol/L (1.7 mg/dL) or arrhythmia: 2 g MgSO4 IV over 15-60 min; repeat to keep ≥ 0.8-1.0 in cardiac patients."
+          },
+          {
+            "n": 5,
+            "time": "Refeeding",
+            "title": "Identify risk",
+            "detail": "ASPEN: BMI < 16 (severe), weight loss > 7.5% in 3 months or > 10% in 6, negligible intake > 7 days, low baseline K/P/Mg, alcohol use, malignancy, prolonged NPO.",
+            "refs": [
+              "aspen-refeed2020"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Refeeding",
+            "title": "Feed carefully",
+            "detail": "High risk: start 100-150 g dextrose or 10-20 kcal/kg in first 24 h, advance by 33% of goal every 1-2 days. Thiamine 100 mg before feeding and daily for 5-7 days.",
+            "refs": [
+              "aspen-refeed2020"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Refeeding",
+            "title": "Monitor",
+            "detail": "K+, PO4, Mg every 12 h for first 3 days in high-risk patients; if levels fall, replace and do not advance calories.",
+            "refs": [
+              "aspen-refeed2020"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "magnesium-sulphate",
+            "role": "Hypomagnesaemia",
+            "route": "IV",
+            "dose": "2 g (8 mmol) over 15-60 min",
+            "refs": [
+              "aspen-refeed2020"
+            ]
+          },
+          {
+            "drugId": "potassium-phosphate",
+            "role": "Severe hypophosphataemia (< 0.3 mmol/L / < 1 mg/dL)",
+            "route": "IV",
+            "dose": "0.5 mmol/kg over 8-12 h (max ~50 mmol), then recheck",
+            "workedExample": "50 kg: 25 mmol phosphate over 8 h",
+            "verify": "Local preparations vary; check mmol/mL and accompanying K+.",
+            "refs": [
+              "aspen-refeed2020"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "refeed-severity",
+            "title": "ASPEN refeeding syndrome severity (fall in P, K or Mg within 5 days of feeding)",
+            "columns": [
+              "Severity",
+              "Fall in any of P, K, Mg"
+            ],
+            "rows": [
+              [
+                "Mild",
+                "10-20%"
+              ],
+              [
+                "Moderate",
+                "20-30%"
+              ],
+              [
+                "Severe",
+                "> 30% and/or organ dysfunction from these deficits or thiamine deficiency"
+              ]
+            ],
+            "caption": "Organ dysfunction includes arrhythmia, respiratory muscle weakness, heart failure, delirium.",
+            "refs": [
+              "aspen-refeed2020"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Phosphate < 0.3 mmol/L with weakness, failed weaning or heart failure: replace IV now."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Starting full-calorie feeds in a malnourished patient after prolonged starvation."
+          },
+          {
+            "text": "Using albumin-corrected calcium to decide on calcium therapy in shock or massive transfusion."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Unexplained failure to wean: check phosphate and magnesium."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Refeeding risk",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Starting nutrition"
+          },
+          {
+            "id": "risk",
+            "type": "decision",
+            "text": "ASPEN refeeding risk criteria met?"
+          },
+          {
+            "id": "std",
+            "type": "end",
+            "text": "Usual feeding plan; routine electrolytes"
+          },
+          {
+            "id": "slow",
+            "type": "action",
+            "text": "Thiamine 100 mg; start 10-20 kcal/kg; replace K, P, Mg"
+          },
+          {
+            "id": "mon",
+            "type": "decision",
+            "text": "P, K or Mg falling (12-hourly × 3 days)?"
+          },
+          {
+            "id": "hold",
+            "type": "end",
+            "text": "Replace; hold calorie advance"
+          },
+          {
+            "id": "adv",
+            "type": "end",
+            "text": "Advance by 33% of goal every 1-2 days"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "risk"
+          },
+          {
+            "from": "risk",
+            "to": "std",
+            "label": "No"
+          },
+          {
+            "from": "risk",
+            "to": "slow",
+            "label": "Yes"
+          },
+          {
+            "from": "slow",
+            "to": "mon"
+          },
+          {
+            "from": "mon",
+            "to": "hold",
+            "label": "Yes"
+          },
+          {
+            "from": "mon",
+            "to": "adv",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "aspen-refeed2020"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **ASPEN 2020 consensus:** definitions, risk criteria and a practical feeding protocol.",
+        "indiaNotes": "- Malnutrition, alcohol use and prolonged fasting before admission make refeeding risk common in Indian ICUs; tuberculosis patients are a high-risk group."
+      },
+      "drugIds": [
+        "calcium-gluconate",
+        "magnesium-sulphate",
+        "potassium-phosphate"
+      ],
+      "calculatorIds": [
+        "corrected-calcium"
+      ],
+      "references": [
+        "aspen-refeed2020"
+      ],
+      "quiz": [
+        {
+          "id": "ca-mg-po4-refeeding-q1",
+          "stem": "Phosphate falls 35% on day 2 of feeding with weakness:",
+          "options": [
+            "Mild refeeding",
+            "Severe refeeding syndrome",
+            "Normal",
+            "Hypercalcaemia"
+          ],
+          "answerIndex": 1,
+          "explanation": "> 30% fall or organ dysfunction = severe."
+        },
+        {
+          "id": "ca-mg-po4-refeeding-q2",
+          "stem": "Thiamine before feeding a high-risk patient:",
+          "options": [
+            "100 mg",
+            "1 mg",
+            "Not needed",
+            "10 g"
+          ],
+          "answerIndex": 0,
+          "explanation": "ASPEN: 100 mg before feeding, then daily 5-7 days."
+        },
+        {
+          "id": "ca-mg-po4-refeeding-q3",
+          "stem": "Calcium measure of choice in ICU:",
+          "options": [
+            "Albumin-corrected total",
+            "Ionised calcium",
+            "Urine calcium",
+            "PTH"
+          ],
+          "answerIndex": 1,
+          "explanation": "Correction formulas are unreliable in critical illness."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Hypercalcaemia drugs",
+          "reason": "Zoledronic acid and calcitonin doses are standard practice; add a hypercalcaemia guideline reference if a reviewer wants one."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "balanced-crystalloid",
+      "name": "Balanced crystalloid (Ringer's lactate, Plasma-Lyte)",
+      "class": "Isotonic crystalloid",
+      "indications": "Default resuscitation and replacement fluid in most ICU patients.",
+      "adultDose": "Resuscitation boluses 250-500 mL over 15-30 min, reassessing after each; replacement matched to measured losses.",
+      "preparationIndia": "RL 500 mL bottles/bags (Na 130, K 4, Ca 2.7 mmol/L, lactate 28); Plasma-Lyte A/148 (Na 140, K 5, Mg 1.5, acetate 27, gluconate 23).",
+      "cautions": "Mildly hypotonic (RL ~273 mOsm/L): prefer 0.9% saline in raised ICP/severe TBI; volume overload.",
+      "refs": [
+        "smart",
+        "plus",
+        "basics"
+      ]
+    },
+    {
+      "id": "hypertonic-saline-3",
+      "name": "3% sodium chloride",
+      "class": "Hypertonic crystalloid",
+      "indications": "Symptomatic (moderate-severe) hyponatraemia; raised ICP.",
+      "adultDose": "Severe symptoms: 150 mL (or 2 mL/kg) over 20 min, repeat up to 2-3 times checking Na+ between, aiming for +5 mmol/L in the first hours. Limit rise to 10 mmol/L in 24 h (8 if high ODS risk).",
+      "preparationIndia": "3% NaCl (513 mmol/L) bottles available; or locally prepared – confirm recipe and label clearly.",
+      "cautions": "Overcorrection and osmotic demyelination; volume overload; peripheral phlebitis with prolonged infusion (short bolus via peripheral line is acceptable).",
+      "refs": [
+        "spasovski2014",
+        "verbalis2013",
+        "salsa"
+      ]
+    },
+    {
+      "id": "calcium-gluconate",
+      "name": "Calcium gluconate 10%",
+      "class": "Electrolyte / membrane stabiliser",
+      "indications": "Hyperkalaemia with ECG changes; symptomatic hypocalcaemia; calcium channel blocker toxicity; magnesium toxicity.",
+      "adultDose": "Hyperkalaemia: 30 mL of 10% IV over 10 min (≈ 6.8 mmol Ca2+), repeat if ECG changes persist. Hypocalcaemia: 10-20 mL over 10 min, then infusion 0.5-1.5 mg/kg/h elemental calcium.",
+      "preparationIndia": "10 mL ampoules of 10% (0.22 mmol/mL Ca2+).",
+      "cautions": "Do not mix with bicarbonate (precipitates); caution with digoxin toxicity; extravasation injury.",
+      "refs": [
+        "uk-k2023"
+      ]
+    },
+    {
+      "id": "insulin-dextrose",
+      "name": "Insulin + glucose",
+      "class": "Potassium shift",
+      "indications": "Hyperkalaemia K+ ≥ 6.0 mmol/L.",
+      "adultDose": "Soluble insulin 10 units with 25 g glucose IV over 15 min (e.g. 50 mL of 50% dextrose, or 250 mL 10%). If pre-treatment glucose < 7 mmol/L (126 mg/dL), follow with 10% glucose 50 mL/h for 5 h.",
+      "preparationIndia": "Regular (soluble) insulin 40 IU/mL vials are common in India; U-100 vials also exist; check the strength.",
+      "cautions": "Hypoglycaemia (most common up to 6 h; monitor glucose 0, 30, 60, 90, 120, 180, 240, 300, 360 min), especially in CKD.",
+      "refs": [
+        "uk-k2023"
+      ]
+    },
+    {
+      "id": "salbutamol",
+      "name": "Salbutamol (nebulised)",
+      "class": "β2-agonist",
+      "indications": "Adjunct for hyperkalaemia K+ ≥ 6.5 mmol/L.",
+      "adultDose": "10-20 mg nebulised (as additional, not sole therapy).",
+      "cautions": "Tachycardia; less effective on β-blockers; caution in ischaemic heart disease.",
+      "refs": [
+        "uk-k2023"
+      ]
+    },
+    {
+      "id": "potassium-chloride",
+      "name": "Potassium chloride",
+      "class": "Electrolyte",
+      "indications": "Hypokalaemia; metabolic alkalosis.",
+      "adultDose": "Peripheral: up to 10 mmol/h (40 mmol/L). Central line with cardiac monitoring: up to 20 mmol/h (max 40 mmol/h in life-threatening). Oral 20-40 mmol 2-3 times daily.",
+      "preparationIndia": "15% KCl 10 mL ampoule = 20 mmol. Premixed bags preferred. Never give undiluted or as a bolus.",
+      "cautions": "Fatal if pushed; reduce in AKI/oliguria; correct Mg2+.",
+      "verify": "Check local ampoule strength (15% = 2 mmol/mL).",
+      "refs": [
+        "kdigo-k2020"
+      ]
+    },
+    {
+      "id": "magnesium-sulphate",
+      "name": "Magnesium sulphate",
+      "class": "Electrolyte",
+      "indications": "Hypomagnesaemia; refractory hypokalaemia/hypocalcaemia; torsades; eclampsia; severe asthma.",
+      "adultDose": "Hypomagnesaemia: 2 g (8 mmol) IV over 15-60 min (over 1-2 min in torsades), then up to 8 g/24 h guided by levels.",
+      "preparationIndia": "50% w/v (2 mmol/mL; 1 g in 2 mL); dilute for infusion.",
+      "cautions": "Reduce dose in renal failure; loss of reflexes, respiratory depression if toxic (antidote calcium).",
+      "refs": [
+        "aspen-refeed2020"
+      ]
+    },
+    {
+      "id": "potassium-phosphate",
+      "name": "Potassium / sodium phosphate",
+      "class": "Electrolyte",
+      "indications": "Hypophosphataemia, especially refeeding.",
+      "adultDose": "Moderate (0.3-0.6 mmol/L): 0.3-0.5 mmol/kg IV over 6-12 h; severe (< 0.3): 0.5 mmol/kg (max ~50 mmol) over 8-12 h; recheck.",
+      "preparationIndia": "Availability of IV phosphate varies in India; oral phosphate (sodium/potassium phosphate) may be the only option.",
+      "cautions": "Hypocalcaemia, metastatic calcification; potassium load; reduce in AKI.",
+      "verify": "Check local IV phosphate preparation and its mmol/mL of phosphate and K+/Na+.",
+      "refs": [
+        "aspen-refeed2020"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "smart",
+      "citation": "Semler MW, Self WH, Wanderer JP, et al. Balanced crystalloids versus saline in critically ill adults (SMART). N Engl J Med. 2018;378(9):829-839",
+      "url": "https://doi.org/10.1056/NEJMoa1711584",
+      "year": 2018,
+      "doi": "10.1056/NEJMoa1711584",
+      "type": "trial"
+    },
+    {
+      "id": "plus",
+      "citation": "Finfer S, Micallef S, Hammond N, et al. Balanced multielectrolyte solution versus saline in critically ill adults (PLUS). N Engl J Med. 2022;386(9):815-826",
+      "url": "https://doi.org/10.1056/NEJMoa2114464",
+      "year": 2022,
+      "doi": "10.1056/NEJMoa2114464",
+      "type": "trial"
+    },
+    {
+      "id": "basics",
+      "citation": "Zampieri FG, Machado FR, Biondi RS, et al. Effect of intravenous fluid treatment with a balanced solution vs 0.9% saline solution on mortality in critically ill patients (BaSICS). JAMA. 2021;326(9):818-829",
+      "url": "https://doi.org/10.1001/jama.2021.11684",
+      "year": 2021,
+      "doi": "10.1001/jama.2021.11684",
+      "type": "trial"
+    },
+    {
+      "id": "spasovski2014",
+      "citation": "Spasovski G, Vanholder R, Allolio B, et al. Clinical practice guideline on diagnosis and treatment of hyponatraemia. Eur J Endocrinol. 2014;170(3):G1-G47",
+      "url": "https://doi.org/10.1530/EJE-13-1020",
+      "year": 2014,
+      "doi": "10.1530/EJE-13-1020",
+      "type": "guideline"
+    },
+    {
+      "id": "verbalis2013",
+      "citation": "Verbalis JG, Goldsmith SR, Greenberg A, et al. Diagnosis, evaluation, and treatment of hyponatremia: expert panel recommendations. Am J Med. 2013;126(10 Suppl 1):S1-S42",
+      "url": "https://doi.org/10.1016/j.amjmed.2013.07.006",
+      "year": 2013,
+      "doi": "10.1016/j.amjmed.2013.07.006",
+      "type": "consensus"
+    },
+    {
+      "id": "salsa",
+      "citation": "Baek SH, Jo YH, Ahn S, et al. Risk of overcorrection in rapid intermittent bolus vs slow continuous infusion therapies of hypertonic saline for patients with symptomatic hyponatremia (SALSA). JAMA Intern Med. 2021;181(1):81-92",
+      "url": "https://doi.org/10.1001/jamainternmed.2020.5519",
+      "year": 2021,
+      "doi": "10.1001/jamainternmed.2020.5519",
+      "type": "trial"
+    },
+    {
+      "id": "adrogue2000",
+      "citation": "Adrogué HJ, Madias NE. Hypernatremia. N Engl J Med. 2000;342(20):1493-1499",
+      "url": "https://doi.org/10.1056/NEJM200005183422006",
+      "year": 2000,
+      "doi": "10.1056/NEJM200005183422006",
+      "type": "review"
+    },
+    {
+      "id": "kdigo-k2020",
+      "citation": "Clase CM, Carrero JJ, Ellison DH, et al. Potassium homeostasis and management of dyskalemia in kidney diseases: conclusions from a KDIGO Controversies Conference. Kidney Int. 2020;97(1):42-61",
+      "url": "https://doi.org/10.1016/j.kint.2019.09.018",
+      "year": 2020,
+      "doi": "10.1016/j.kint.2019.09.018",
+      "type": "consensus"
+    },
+    {
+      "id": "uk-k2023",
+      "citation": "UK Kidney Association. Clinical practice guideline: Treatment of acute hyperkalaemia in adults (October 2023; updated July 2026)",
+      "url": "https://www.ukkidney.org/health-professionals/guidelines/treatment-acute-hyperkalaemia-adults-0",
+      "year": 2023,
+      "type": "guideline"
+    },
+    {
+      "id": "aspen-refeed2020",
+      "citation": "da Silva JSV, Seres DS, Sabino K, et al. ASPEN consensus recommendations for refeeding syndrome. Nutr Clin Pract. 2020;35(2):178-195",
+      "url": "https://doi.org/10.1002/ncp.10474",
+      "year": 2020,
+      "doi": "10.1002/ncp.10474",
+      "type": "consensus"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Indian fluid products",
+      "reason": "Ringer's lactate and 0.9% saline are universal; Plasma-Lyte A/148 and Sterofundin are available in many private hospitals. 3% saline is often prepared locally (e.g. 0.9% saline + 15% or 20% NaCl ampoules); confirm the local recipe."
+    },
+    {
+      "item": "Potassium ampoules",
+      "reason": "KCl ampoules in India are commonly 15% w/v (2 mmol/mL, 10 mL = 20 mmol). Never give undiluted; many hospitals use premixed bags."
+    }
+  ]
+}

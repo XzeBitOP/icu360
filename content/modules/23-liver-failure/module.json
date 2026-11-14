@@ -1,0 +1,1707 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "liver-failure",
+  "number": 23,
+  "folder": "23-liver-failure",
+  "section": {
+    "id": "F",
+    "title": "GI, liver and haematology"
+  },
+  "phase": 2,
+  "title": "Liver failure",
+  "summary": "Liver failure in the ICU: acute liver failure with King's College criteria, acute-on-chronic liver failure (EASL-CLIF and APASL), hepatic encephalopathy, ascites/SBP/hepatorenal syndrome, and coagulopathy of liver disease, with transplant referral throughout.",
+  "tags": [
+    "acute liver failure",
+    "King's College",
+    "ACLF",
+    "APASL",
+    "hepatic encephalopathy",
+    "lactulose",
+    "SBP",
+    "albumin",
+    "HRS",
+    "cirrhosis coagulopathy",
+    "NAC",
+    "transplant"
+  ],
+  "relatedModules": [
+    "gi-bleeding-abdominal-emergencies",
+    "aki-renal-drug-dosing",
+    "haematology-coagulation-transfusion",
+    "raised-icp-neurotrauma-brain-death",
+    "poisoning-approach-drug-overdoses",
+    "nutrition-metabolic-support",
+    "procedures"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "leaf",
+    "accent": "high"
+  },
+  "viewKey": "module:liver-failure",
+  "topics": [
+    {
+      "id": "acute-liver-failure",
+      "title": "Acute liver failure and King's College criteria",
+      "summary": "Recognise ALF, find the cause, give NAC, protect the brain, support organs and use King's College criteria for transplant referral.",
+      "viewKey": "topic:liver-failure/acute-liver-failure",
+      "uiHints": {
+        "icon": "flame",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "ALF = INR ≥ 1.5 with hepatic encephalopathy, without pre-existing cirrhosis, within 26 weeks of illness onset (EASL). Hyperacute (< 7 days jaundice-to-HE), acute (8-28 days), subacute (5-12 weeks). Hyperacute has highest cerebral oedema risk but best spontaneous survival.",
+          "refs": [
+            "easl-alf-2017"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Confirm and grade",
+            "detail": "INR, bilirubin, glucose, lactate, ammonia, ABG, creatinine; grade HE (West Haven). Exclude cirrhosis (history, imaging).",
+            "time": "0-1 h",
+            "refs": [
+              "easl-alf-2017"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Find the cause",
+            "detail": "Paracetamol level, viral serology (HAV IgM, HEV IgM, HBsAg/anti-HBc IgM, HSV), drugs (anti-TB drugs, herbal/ayurvedic), autoimmune, Wilson (age < 40), Budd-Chiari (Doppler), pregnancy (AFLP/HELLP), mushroom.",
+            "refs": [
+              "easl-alf-2017"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Specific treatments",
+            "detail": "NAC for paracetamol; NAC for early-grade non-paracetamol ALF; antivirals for HBV; delivery for AFLP/HELLP; acyclovir for HSV; steroids for autoimmune (selected).",
+            "refs": [
+              "easl-alf-2017",
+              "lee-nac-2009"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Contact a transplant centre early",
+            "detail": "Discuss every ALF with encephalopathy or INR > 2 with a liver transplant unit; apply King's College criteria serially.",
+            "time": "Early",
+            "refs": [
+              "easl-alf-2017",
+              "kings-1989"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Neuroprotection",
+            "detail": "Intubate grade III-IV HE; head-up 30°, normocapnia, Na 140-150 mmol/L (hypertonic saline), treat fever; mannitol 0.5-1 g/kg or hypertonic saline for ICP surges. Ammonia > 150-200 µmol/L = high risk of cerebral oedema.",
+            "refs": [
+              "easl-alf-2017"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Organ support",
+            "detail": "Noradrenaline for MAP ≥ 65 mmHg after fluids; early CRRT for hyperammonaemia, AKI or fluid/acid-base problems; glucose 4-hourly (dextrose infusion for hypoglycaemia); low threshold for antibiotics/antifungals.",
+            "refs": [
+              "easl-alf-2017"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Coagulation",
+            "detail": "Do not correct INR prophylactically (it is a prognostic marker); vitamin K 10 mg IV once; products only for bleeding or procedures.",
+            "refs": [
+              "easl-alf-2017"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Plasma exchange",
+            "detail": "High-volume plasma exchange (8-12 L or 15% of ideal body weight per day for 3 days) improved transplant-free survival; consider as bridge in specialist centres.",
+            "refs": [
+              "larsen-hvpe-2016",
+              "easl-alf-2017"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "nac",
+            "role": "Non-paracetamol ALF (grade I-II HE)",
+            "route": "IV",
+            "dose": "150 mg/kg/h × 1 h, 12.5 mg/kg/h × 4 h, then 6.25 mg/kg/h × 67 h",
+            "dilution": "Each phase in 5% dextrose (e.g. load in 250 mL, then 500 mL, then 1,000 mL bags)",
+            "workedExample": "70 kg: 10.5 g over 1 h, then 875 mg/h for 4 h, then 437.5 mg/h for 67 h",
+            "calculatorId": "infusion-rate-weight-hour",
+            "refs": [
+              "lee-nac-2009"
+            ]
+          },
+          {
+            "drugId": "vitamin-k",
+            "role": "Exclude vitamin K deficiency",
+            "route": "IV",
+            "dose": "10 mg slow IV once",
+            "refs": [
+              "easl-alf-2017"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "kings",
+            "title": "King's College criteria (transplant referral)",
+            "columns": [
+              "Aetiology",
+              "Criteria"
+            ],
+            "rows": [
+              [
+                "Paracetamol",
+                "Arterial pH < 7.30 after fluid resuscitation, OR all of: INR > 6.5, creatinine > 3.4 mg/dL (300 µmol/L), grade III-IV HE within 24 h"
+              ],
+              [
+                "Paracetamol (modified)",
+                "Lactate > 3.5 mmol/L at 4 h or > 3.0 mmol/L after fluid resuscitation adds sensitivity"
+              ],
+              [
+                "Non-paracetamol",
+                "INR > 6.5, OR any 3 of: age < 10 or > 40 years; aetiology non-A non-B hepatitis, halothane or idiosyncratic drug reaction; jaundice-to-HE interval > 7 days; INR > 3.5; bilirubin > 17.5 mg/dL (300 µmol/L)"
+              ]
+            ],
+            "caption": "Low sensitivity: absence of criteria does not guarantee survival. Clichy criteria (factor V) are an alternative.",
+            "refs": [
+              "kings-1989",
+              "easl-alf-2017"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Rising ammonia (> 150-200 µmol/L), grade III-IV HE, pupillary changes, hypertension with bradycardia: impending intracranial hypertension.",
+            "refs": [
+              "easl-alf-2017"
+            ]
+          },
+          {
+            "text": "Hypoglycaemia is common and can mimic worsening encephalopathy: check glucose every 1-4 h.",
+            "refs": [
+              "easl-alf-2017"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Giving FFP to 'correct' INR: masks prognosis, adds volume and rarely needed.",
+            "refs": [
+              "easl-alf-2017"
+            ]
+          },
+          {
+            "text": "Sedating with benzodiazepines; use propofol/short-acting opioids once intubated.",
+            "refs": [
+              "easl-alf-2017"
+            ]
+          },
+          {
+            "text": "Missing hepatitis E in pregnancy and anti-TB DILI in India.",
+            "refs": [
+              "easl-alf-2017"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Sequential lactate, INR trend and HE grade guide referral better than a single value.",
+            "refs": [
+              "easl-alf-2017"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Acute liver failure",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "INR ≥ 1.5 + encephalopathy, no cirrhosis"
+          },
+          {
+            "id": "cause",
+            "type": "action",
+            "text": "Cause work-up; NAC; specific therapy"
+          },
+          {
+            "id": "txu",
+            "type": "action",
+            "text": "Discuss with transplant centre now",
+            "severity": "high"
+          },
+          {
+            "id": "he",
+            "type": "decision",
+            "text": "HE grade III-IV?"
+          },
+          {
+            "id": "intub",
+            "type": "action",
+            "text": "Intubate; ICP-protective care; Na 140-150; CRRT if ammonia high",
+            "severity": "critical"
+          },
+          {
+            "id": "ward",
+            "type": "action",
+            "text": "HDU/ICU: glucose 1-4 hourly, avoid sedatives, monitor"
+          },
+          {
+            "id": "kcc",
+            "type": "decision",
+            "text": "King's College criteria met?"
+          },
+          {
+            "id": "list",
+            "type": "end",
+            "text": "Super-urgent transplant listing; HVPE as bridge",
+            "severity": "critical"
+          },
+          {
+            "id": "sup",
+            "type": "end",
+            "text": "Continue support; reassess criteria every 12-24 h"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "cause"
+          },
+          {
+            "from": "cause",
+            "to": "txu"
+          },
+          {
+            "from": "txu",
+            "to": "he"
+          },
+          {
+            "from": "he",
+            "to": "intub",
+            "label": "Yes"
+          },
+          {
+            "from": "he",
+            "to": "ward",
+            "label": "No"
+          },
+          {
+            "from": "intub",
+            "to": "kcc"
+          },
+          {
+            "from": "ward",
+            "to": "kcc"
+          },
+          {
+            "from": "kcc",
+            "to": "list",
+            "label": "Yes"
+          },
+          {
+            "from": "kcc",
+            "to": "sup",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "easl-alf-2017",
+          "kings-1989"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Massive hepatocyte necrosis/apoptosis causes loss of synthetic, metabolic and detoxifying function. Ammonia is converted to glutamine in astrocytes, causing swelling and cerebral oedema; systemic inflammation produces vasodilatory shock and multi-organ failure resembling sepsis.",
+        "evidence": "- EASL 2017 ALF guideline covers aetiology, intensive care and transplant criteria [EASL 2017].\n- Lee 2009: NAC improved transplant-free survival in non-paracetamol ALF with grade I-II HE (52% vs 30%), not in grade III-IV [Lee 2009].\n- Larsen 2016: high-volume plasma exchange improved transplant-free survival (58.7% vs 47.8%) [Larsen 2016].",
+        "controversies": "- Routine ICP monitoring; prophylactic hypothermia (no benefit in trials); prophylactic antimicrobials.",
+        "indiaNotes": "- In India, viral hepatitis (HEV, HAV, HBV) and drug-induced liver injury (especially anti-TB drugs and complementary medicines) predominate; paracetamol ALF is uncommon.\n- HEV-related ALF in pregnancy carries high mortality.\n- Indian prognostic models (e.g. ALFED) are used in some centres; living-donor liver transplant is the predominant transplant type in India, which affects timing."
+      },
+      "drugIds": [
+        "nac",
+        "vitamin-k"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-hour",
+        "gcs"
+      ],
+      "references": [
+        "easl-alf-2017",
+        "kings-1989",
+        "lee-nac-2009",
+        "larsen-hvpe-2016"
+      ],
+      "quiz": [
+        {
+          "id": "acute-liver-failure-q1",
+          "stem": "ALF definition requires:",
+          "options": [
+            "Cirrhosis + jaundice",
+            "INR ≥ 1.5 + encephalopathy without pre-existing cirrhosis",
+            "Bilirubin > 5 mg/dL only",
+            "Ascites"
+          ],
+          "answerIndex": 1,
+          "explanation": "EASL 2017."
+        },
+        {
+          "id": "acute-liver-failure-q2",
+          "stem": "King's criterion for paracetamol ALF:",
+          "options": [
+            "pH < 7.30 after resuscitation",
+            "Age > 40",
+            "Bilirubin > 17.5",
+            "Jaundice > 7 days before HE"
+          ],
+          "answerIndex": 0,
+          "explanation": "pH < 7.30 alone suffices."
+        },
+        {
+          "id": "acute-liver-failure-q3",
+          "stem": "NAC in non-paracetamol ALF benefits mainly:",
+          "options": [
+            "Grade III-IV HE",
+            "Grade I-II HE",
+            "Children",
+            "No one"
+          ],
+          "answerIndex": 1,
+          "explanation": "Lee 2009."
+        },
+        {
+          "id": "acute-liver-failure-q4",
+          "stem": "Target serum sodium for neuroprotection in ALF with high-grade HE:",
+          "options": [
+            "125-130",
+            "140-150 mmol/L",
+            "155-160",
+            "No target"
+          ],
+          "answerIndex": 1,
+          "explanation": "Hypertonic saline to keep 140-150."
+        }
+      ]
+    },
+    {
+      "id": "aclf",
+      "title": "Acute-on-chronic liver failure",
+      "summary": "Define ACLF (EASL-CLIF and APASL), treat precipitants including alcoholic hepatitis and HBV flare, support organs, and decide on transplant or futility.",
+      "viewKey": "topic:liver-failure/aclf",
+      "uiHints": {
+        "icon": "activity",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "ACLF is acute decompensation of chronic liver disease with organ failures and high short-term mortality. EASL-CLIF: graded 1-3 by organ failures (CLIF-C OF score). APASL: jaundice (bilirubin ≥ 5 mg/dL) and coagulopathy (INR ≥ 1.5) complicated within 4 weeks by ascites and/or HE.",
+          "refs": [
+            "easl-aclf-2023",
+            "apasl-aclf-2019"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Identify precipitant",
+            "detail": "Infection (SBP, pneumonia, UTI), alcoholic hepatitis, HBV reactivation/flare, HEV/HAV superinfection, DILI, GI bleed. Culture all sites, diagnostic paracentesis.",
+            "refs": [
+              "easl-aclf-2023",
+              "apasl-aclf-2019"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Grade",
+            "detail": "Count organ failures (liver, kidney, brain, coagulation, circulation, respiration) using CLIF-C OF; calculate CLIF-C ACLF score or APASL AARC score.",
+            "refs": [
+              "easl-aclf-2023",
+              "apasl-aclf-2019"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Treat infection early",
+            "detail": "Empirical antibiotics according to local resistance (nosocomial: broader cover); start within 1 h if septic shock.",
+            "refs": [
+              "easl-aclf-2023"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Alcoholic hepatitis",
+            "detail": "Maddrey DF ≥ 32 or MELD > 20 without infection/bleeding/AKI: prednisolone 40 mg/day; Lille at day 7 (≥ 0.45 = stop). Abstinence counselling.",
+            "refs": [
+              "easl-ald-2018",
+              "lille-2007"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "HBV",
+            "detail": "Start tenofovir or entecavir immediately in HBV-related ACLF.",
+            "refs": [
+              "apasl-aclf-2019"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Organ support",
+            "detail": "Albumin for volume, noradrenaline ± terlipressin, CRRT, ventilation; HE care; avoid nephrotoxins and sedatives.",
+            "refs": [
+              "easl-aclf-2023"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Transplant evaluation",
+            "detail": "Early referral; ACLF-2/3 have 28-day mortality 30-80% without transplant.",
+            "refs": [
+              "easl-aclf-2023"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Reassess at day 3-7",
+            "detail": "If ≥ 4 organ failures or CLIF-C ACLF > 70 after 3-7 days of full support and not a transplant candidate, discuss limitation/palliation.",
+            "time": "Day 3-7",
+            "refs": [
+              "easl-aclf-2023"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "prednisolone",
+            "role": "Severe alcoholic hepatitis",
+            "route": "Oral/NG",
+            "dose": "40 mg once daily for 28 days",
+            "notes": "Stop at day 7 if Lille ≥ 0.45.",
+            "refs": [
+              "easl-ald-2018"
+            ]
+          },
+          {
+            "drugId": "tenofovir",
+            "role": "HBV-related ACLF",
+            "route": "Oral/NG",
+            "dose": "Tenofovir DF 300 mg daily (or entecavir 0.5 mg daily)",
+            "verify": "Renal dose adjustment.",
+            "refs": [
+              "apasl-aclf-2019"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "aclf-grade",
+            "title": "EASL-CLIF ACLF grades (simplified)",
+            "columns": [
+              "Grade",
+              "Organ failures",
+              "Approx. 28-day mortality"
+            ],
+            "rows": [
+              [
+                "No ACLF",
+                "None, or single non-kidney OF with creatinine < 1.5 and no HE",
+                "~5%"
+              ],
+              [
+                "ACLF-1",
+                "Single kidney failure, or single other OF with creatinine 1.5-1.9 mg/dL and/or grade I-II HE",
+                "~20-25%"
+              ],
+              [
+                "ACLF-2",
+                "Two organ failures",
+                "~30-35%"
+              ],
+              [
+                "ACLF-3",
+                "Three or more organ failures",
+                "~70-80%"
+              ]
+            ],
+            "refs": [
+              "easl-aclf-2023"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "ACLF-3, particularly with ≥ 4 organ failures persisting after 3-7 days: very high mortality without transplant.",
+            "refs": [
+              "easl-aclf-2023"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Starting steroids for alcoholic hepatitis without excluding infection.",
+            "refs": [
+              "easl-ald-2018"
+            ]
+          },
+          {
+            "text": "Applying APASL and EASL definitions interchangeably: they select different populations.",
+            "refs": [
+              "easl-aclf-2023",
+              "apasl-aclf-2019"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Each additional organ failure markedly increases mortality; count organ failures daily.",
+            "refs": [
+              "easl-aclf-2023"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "ACLF approach",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Cirrhosis/CLD with acute decompensation"
+          },
+          {
+            "id": "of",
+            "type": "action",
+            "text": "Count organ failures; CLIF-C ACLF / AARC score"
+          },
+          {
+            "id": "prec",
+            "type": "action",
+            "text": "Cultures, paracentesis; treat precipitant"
+          },
+          {
+            "id": "ah",
+            "type": "decision",
+            "text": "Severe alcoholic hepatitis, no infection?"
+          },
+          {
+            "id": "ster",
+            "type": "action",
+            "text": "Prednisolone 40 mg; Lille day 7"
+          },
+          {
+            "id": "sup",
+            "type": "action",
+            "text": "Organ support; transplant referral",
+            "severity": "high"
+          },
+          {
+            "id": "rev",
+            "type": "decision",
+            "text": "Day 3-7: improving or transplant candidate?"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Continue; transplant if eligible"
+          },
+          {
+            "id": "pall",
+            "type": "end",
+            "text": "Discuss limitation / palliative care",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "of"
+          },
+          {
+            "from": "of",
+            "to": "prec"
+          },
+          {
+            "from": "prec",
+            "to": "ah"
+          },
+          {
+            "from": "ah",
+            "to": "ster",
+            "label": "Yes"
+          },
+          {
+            "from": "ah",
+            "to": "sup",
+            "label": "No"
+          },
+          {
+            "from": "ster",
+            "to": "sup"
+          },
+          {
+            "from": "sup",
+            "to": "rev"
+          },
+          {
+            "from": "rev",
+            "to": "cont",
+            "label": "Yes"
+          },
+          {
+            "from": "rev",
+            "to": "pall",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "easl-aclf-2023"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Systemic inflammation driven by PAMPs (infection, translocation) and DAMPs (alcohol, viral hepatitis) causes immunopathology, mitochondrial dysfunction and organ failure on a background of portal hypertension and immune paresis.",
+        "evidence": "- EASL 2023 ACLF guideline: definitions, organ support, transplant and futility [EASL 2023].\n- APASL 2019 update, with AARC score widely used in Asia [Sarin 2019].\n- Lille model: non-response to steroids (≥ 0.45) predicts poor survival [Louvet 2007].",
+        "controversies": "- G-CSF, plasma exchange and extracorporeal liver support in ACLF; transplant in ACLF-3.",
+        "indiaNotes": "- APASL criteria were developed largely from Asian (including Indian) cohorts with alcohol and HBV/HEV precipitants.\n- Cost of transplant and limited deceased-donor organs mean early goals-of-care discussions are important in India."
+      },
+      "drugIds": [
+        "prednisolone",
+        "tenofovir"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "easl-aclf-2023",
+        "apasl-aclf-2019",
+        "easl-ald-2018",
+        "lille-2007"
+      ],
+      "quiz": [
+        {
+          "id": "aclf-q1",
+          "stem": "APASL ACLF definition requires:",
+          "options": [
+            "Bilirubin ≥ 5 mg/dL and INR ≥ 1.5 with ascites/HE within 4 weeks",
+            "Any AKI",
+            "Varices",
+            "Lactate > 4"
+          ],
+          "answerIndex": 0,
+          "explanation": "APASL 2019."
+        },
+        {
+          "id": "aclf-q2",
+          "stem": "Stop prednisolone in alcoholic hepatitis when day-7 Lille score is:",
+          "options": [
+            "≥ 0.45",
+            "< 0.16",
+            "Any value",
+            "> 0.9 only"
+          ],
+          "answerIndex": 0,
+          "explanation": "Non-responders."
+        },
+        {
+          "id": "aclf-q3",
+          "stem": "ACLF-3 means:",
+          "options": [
+            "One organ failure",
+            "Two",
+            "Three or more organ failures",
+            "Encephalopathy only"
+          ],
+          "answerIndex": 2,
+          "explanation": "EASL-CLIF grading."
+        }
+      ]
+    },
+    {
+      "id": "hepatic-encephalopathy",
+      "title": "Hepatic encephalopathy",
+      "summary": "Grade HE, find and treat precipitants, give lactulose (or PEG), add rifaximin, protect the airway and keep feeding.",
+      "viewKey": "topic:liver-failure/hepatic-encephalopathy",
+      "uiHints": {
+        "icon": "brain",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "HE is brain dysfunction due to liver insufficiency and/or portosystemic shunting. West Haven grades: I (trivial lack of awareness, short attention), II (lethargy, disorientation, asterixis), III (somnolence, confusion, responsive to stimuli), IV (coma).",
+          "refs": [
+            "easl-he-2022"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Exclude other causes",
+            "detail": "Hypoglycaemia, sepsis, hyponatraemia, intracranial bleed (CT if focal signs or fall), alcohol withdrawal, Wernicke, drugs. A normal ammonia should prompt a search for another diagnosis.",
+            "refs": [
+              "easl-he-2022"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Treat precipitants",
+            "detail": "Infection, GI bleeding, constipation, dehydration/over-diuresis, hypokalaemia, sedatives/opioids, TIPS, AKI.",
+            "refs": [
+              "easl-he-2022"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Airway",
+            "detail": "Grade III-IV: nurse in HDU/ICU; intubate if unable to protect airway (GCS ≤ 8) or for endoscopy.",
+            "refs": [
+              "easl-he-2022"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Lactulose",
+            "detail": "25-30 mL every 1-2 h until bowel motion, then titrate to 2-3 soft stools/day. Via NG or enema if unable to swallow.",
+            "refs": [
+              "easl-he-2022"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "PEG 3350 alternative",
+            "detail": "4 L PEG over 4 h resolved HE faster than lactulose in HELP; consider when lactulose fails (airway risk).",
+            "refs": [
+              "help-trial"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Rifaximin",
+            "detail": "Add 550 mg BD for recurrent HE (secondary prophylaxis with lactulose).",
+            "refs": [
+              "easl-he-2022"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Nutrition",
+            "detail": "Do not restrict protein: 1.2-1.5 g/kg/day, energy 35 kcal/kg/day, late evening snack; enteral feeding if unable to eat.",
+            "refs": [
+              "easl-he-2022"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Refractory",
+            "detail": "Consider LOLA, embolisation of large spontaneous portosystemic shunts, TIPS reduction; transplant evaluation.",
+            "refs": [
+              "easl-he-2022"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "lactulose",
+            "role": "Overt HE",
+            "route": "Oral/NG",
+            "dose": "25-30 mL every 1-2 h until bowel motion, then titrate to 2-3 stools/day",
+            "notes": "Enema: 300 mL in 700 mL water, retained 30-60 min.",
+            "refs": [
+              "easl-he-2022"
+            ]
+          },
+          {
+            "drugId": "rifaximin",
+            "role": "Recurrent HE",
+            "route": "Oral",
+            "dose": "550 mg twice daily",
+            "refs": [
+              "easl-he-2022"
+            ]
+          },
+          {
+            "drugId": "peg3350",
+            "role": "Alternative to lactulose",
+            "route": "Oral/NG",
+            "dose": "4 L over 4 h",
+            "refs": [
+              "help-trial"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "west-haven",
+            "title": "West Haven grades",
+            "columns": [
+              "Grade",
+              "Features"
+            ],
+            "rows": [
+              [
+                "Covert (minimal/I)",
+                "Abnormal psychometrics; mild inattention, sleep inversion"
+              ],
+              [
+                "II",
+                "Lethargy, disorientation to time, inappropriate behaviour, asterixis"
+              ],
+              [
+                "III",
+                "Somnolent but rousable, gross disorientation, bizarre behaviour"
+              ],
+              [
+                "IV",
+                "Coma"
+              ]
+            ],
+            "refs": [
+              "easl-he-2022"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Focal neurology or head injury in a cirrhotic with confusion: CT head (coagulopathy, falls).",
+            "refs": [
+              "easl-he-2022"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Restricting protein: worsens sarcopenia and outcomes.",
+            "refs": [
+              "easl-he-2022"
+            ]
+          },
+          {
+            "text": "Excess lactulose causing dehydration, hypernatraemia and AKI.",
+            "refs": [
+              "easl-he-2022"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "HE is a clinical diagnosis; ammonia helps mainly by its negative predictive value.",
+            "refs": [
+              "easl-he-2022"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Overt HE",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Confusion in cirrhosis"
+          },
+          {
+            "id": "exc",
+            "type": "action",
+            "text": "Glucose, Na, sepsis screen, CT if focal/fall"
+          },
+          {
+            "id": "air",
+            "type": "decision",
+            "text": "Airway protected (GCS > 8)?"
+          },
+          {
+            "id": "int",
+            "type": "action",
+            "text": "Intubate; ICU",
+            "severity": "critical"
+          },
+          {
+            "id": "prec",
+            "type": "action",
+            "text": "Treat precipitant; lactulose to 2-3 stools/day"
+          },
+          {
+            "id": "resp",
+            "type": "decision",
+            "text": "Improving in 24-48 h?"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Continue lactulose ± rifaximin; feed 1.2-1.5 g/kg protein"
+          },
+          {
+            "id": "alt",
+            "type": "end",
+            "text": "Recheck diagnosis; PEG, rifaximin, LOLA; transplant review",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "exc"
+          },
+          {
+            "from": "exc",
+            "to": "air"
+          },
+          {
+            "from": "air",
+            "to": "prec",
+            "label": "Yes"
+          },
+          {
+            "from": "air",
+            "to": "int",
+            "label": "No"
+          },
+          {
+            "from": "int",
+            "to": "prec"
+          },
+          {
+            "from": "prec",
+            "to": "resp"
+          },
+          {
+            "from": "resp",
+            "to": "cont",
+            "label": "Yes"
+          },
+          {
+            "from": "resp",
+            "to": "alt",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "easl-he-2022"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Gut-derived ammonia bypasses hepatic clearance; astrocytic glutamine accumulation, neuroinflammation, GABA-ergic tone and manganese deposition contribute. Lactulose acidifies the colon (NH3 → NH4+), is cathartic and alters flora.",
+        "evidence": "- EASL 2022 HE guideline [EASL 2022].\n- HELP (50 patients): PEG improved HE grade at 24 h more than lactulose [Rahimi 2014].",
+        "controversies": "- Routine ammonia measurement; LOLA and branched-chain amino acids.",
+        "indiaNotes": "- Lactulose and rifaximin are inexpensive and widely available in India; LOLA is commonly used in Indian practice."
+      },
+      "drugIds": [
+        "lactulose",
+        "rifaximin",
+        "peg3350"
+      ],
+      "calculatorIds": [
+        "gcs"
+      ],
+      "references": [
+        "easl-he-2022",
+        "help-trial"
+      ],
+      "quiz": [
+        {
+          "id": "hepatic-encephalopathy-q1",
+          "stem": "Normal ammonia in a confused cirrhotic suggests:",
+          "options": [
+            "Grade IV HE",
+            "Search for an alternative diagnosis",
+            "Give more lactulose",
+            "Stop feeding"
+          ],
+          "answerIndex": 1,
+          "explanation": "EASL 2022."
+        },
+        {
+          "id": "hepatic-encephalopathy-q2",
+          "stem": "Protein intake in HE:",
+          "options": [
+            "Restrict to 0.5 g/kg",
+            "1.2-1.5 g/kg/day",
+            "Zero",
+            "3 g/kg/day"
+          ],
+          "answerIndex": 1,
+          "explanation": "Avoid protein restriction."
+        },
+        {
+          "id": "hepatic-encephalopathy-q3",
+          "stem": "Lactulose target:",
+          "options": [
+            "1 stool/week",
+            "2-3 soft stools per day",
+            "8-10 stools/day",
+            "No stools"
+          ],
+          "answerIndex": 1,
+          "explanation": "Titrate to effect."
+        }
+      ]
+    },
+    {
+      "id": "ascites-sbp-hrs",
+      "title": "Ascites, SBP and hepatorenal syndrome in the ICU",
+      "summary": "Diagnostic paracentesis in every admission, treat SBP with antibiotics plus albumin, safe large-volume paracentesis, and recognise HRS-AKI.",
+      "viewKey": "topic:liver-failure/ascites-sbp-hrs",
+      "uiHints": {
+        "icon": "droplets",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "SBP = ascitic neutrophils (PMN) ≥ 250 cells/mm³ without a surgical source. HRS-AKI = AKI (ICA-KDIGO) in cirrhosis with ascites, not responding to 48 h diuretic withdrawal and albumin 1 g/kg, without shock, nephrotoxins or structural kidney disease.",
+          "refs": [
+            "aasld-ascites-2021",
+            "easl-decomp-2018"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Diagnostic paracentesis",
+            "detail": "In every cirrhotic admitted with ascites, GI bleed, encephalopathy, AKI or infection: cell count, culture in blood-culture bottles at bedside, albumin (SAAG), total protein. Coagulopathy is not a contraindication.",
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Treat SBP",
+            "detail": "Ceftriaxone 2 g/day or cefotaxime (community); piperacillin-tazobactam or carbapenem (nosocomial/MDR risk) for 5-7 days. Repeat tap at 48 h if not improving (PMN should fall ≥ 25%).",
+            "refs": [
+              "aasld-ascites-2021",
+              "easl-decomp-2018"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Albumin in SBP",
+            "detail": "1.5 g/kg on day 1 and 1 g/kg on day 3 (reduces AKI and death), especially if creatinine > 1 mg/dL, bilirubin > 4 mg/dL or urea high.",
+            "refs": [
+              "sort-1999",
+              "aasld-ascites-2021"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Secondary bacterial peritonitis",
+            "detail": "Suspect if PMN very high, multiple organisms, total protein > 1 g/dL, glucose < 50 mg/dL, LDH high: CT and surgical review.",
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Large-volume paracentesis",
+            "detail": "For tense ascites: drain; if > 5 L removed give albumin 6-8 g per litre removed (e.g. 8 L = 48-64 g). Safe without routine FFP/platelets.",
+            "refs": [
+              "aasld-ascites-2021",
+              "easl-decomp-2018"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "AKI in cirrhosis",
+            "detail": "Stop diuretics, NSAIDs, nephrotoxins; treat infection; albumin 1 g/kg (max 100 g) for 2 days; if HRS-AKI criteria met, terlipressin + albumin (see AKI module).",
+            "refs": [
+              "aasld-ascites-2021",
+              "easl-decomp-2018"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Prophylaxis",
+            "detail": "Long-term norfloxacin/ciprofloxacin after SBP; avoid beta-blocker hypotension in refractory ascites (SBP < 90 mmHg, Na < 130, AKI).",
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "albumin",
+            "role": "SBP",
+            "route": "IV",
+            "dose": "1.5 g/kg day 1, 1 g/kg day 3",
+            "workedExample": "70 kg: 105 g (5 × 100 mL of 20%) day 1, 70 g day 3",
+            "notes": "Watch for pulmonary oedema.",
+            "refs": [
+              "sort-1999"
+            ]
+          },
+          {
+            "drugId": "albumin",
+            "role": "Large-volume paracentesis > 5 L",
+            "route": "IV",
+            "dose": "6-8 g per litre removed",
+            "workedExample": "7 L drained: 42-56 g (2-3 × 100 mL of 20%)",
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          },
+          {
+            "drugId": "ceftriaxone",
+            "role": "Community-acquired SBP",
+            "route": "IV",
+            "dose": "2 g once daily for 5-7 days",
+            "verify": "Local resistance; switch for nosocomial SBP.",
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "ascitic",
+            "title": "Ascitic fluid interpretation",
+            "columns": [
+              "Test",
+              "Interpretation"
+            ],
+            "rows": [
+              [
+                "PMN ≥ 250/mm³",
+                "SBP (treat empirically)"
+              ],
+              [
+                "SAAG ≥ 1.1 g/dL",
+                "Portal hypertension"
+              ],
+              [
+                "SAAG < 1.1 g/dL",
+                "Non-portal (TB, malignancy, pancreatic)"
+              ],
+              [
+                "Protein > 1 g/dL + glucose < 50 mg/dL + LDH > serum ULN",
+                "Secondary peritonitis (Runyon criteria)"
+              ],
+              [
+                "ADA raised, lymphocytic, SAAG < 1.1",
+                "Consider tuberculous peritonitis"
+              ]
+            ],
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "SBP with rising creatinine: high risk of HRS-AKI and death; give albumin and avoid nephrotoxins.",
+            "refs": [
+              "sort-1999"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Waiting for culture before treating SBP; culture is negative in ~40% (culture-negative neutrocytic ascites is treated the same).",
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          },
+          {
+            "text": "Giving FFP before paracentesis.",
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Inoculating 10 mL of ascitic fluid into blood culture bottles at the bedside increases culture yield.",
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Splanchnic vasodilation reduces effective arterial volume, activating RAAS, SNS and vasopressin; sodium and water retention cause ascites and dilutional hyponatraemia, and renal vasoconstriction causes HRS. Bacterial translocation underlies SBP.",
+        "evidence": "- Sort 1999: albumin with cefotaxime reduced renal impairment (10% vs 33%) and mortality (10% vs 29%) in SBP [Sort 1999].\n- AASLD 2021 and EASL 2018 guidance on ascites, SBP, paracentesis and HRS [Biggins 2021; EASL 2018].",
+        "controversies": "- Long-term albumin (ANSWER vs ATTIRE); beta-blockers in refractory ascites.",
+        "indiaNotes": "- Tuberculous peritonitis is an important differential in India (ascitic ADA, lymphocytes, SAAG < 1.1).\n- High prevalence of ESBL and carbapenem resistance in Indian hospitals means nosocomial SBP often needs a carbapenem; follow local antibiogram (ICMR AMRSN)."
+      },
+      "drugIds": [
+        "albumin",
+        "ceftriaxone"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "aasld-ascites-2021",
+        "easl-decomp-2018",
+        "sort-1999"
+      ],
+      "quiz": [
+        {
+          "id": "ascites-sbp-hrs-q1",
+          "stem": "SBP is diagnosed by ascitic PMN count:",
+          "options": [
+            "≥ 50",
+            "≥ 250 cells/mm³",
+            "≥ 1,000",
+            "Positive culture only"
+          ],
+          "answerIndex": 1,
+          "explanation": "AASLD 2021."
+        },
+        {
+          "id": "ascites-sbp-hrs-q2",
+          "stem": "Albumin dose in SBP:",
+          "options": [
+            "20 g once",
+            "1.5 g/kg day 1 and 1 g/kg day 3",
+            "6-8 g/L",
+            "None"
+          ],
+          "answerIndex": 1,
+          "explanation": "Sort 1999."
+        },
+        {
+          "id": "ascites-sbp-hrs-q3",
+          "stem": "Albumin after 8 L paracentesis:",
+          "options": [
+            "None",
+            "48-64 g",
+            "200 g",
+            "10 g"
+          ],
+          "answerIndex": 1,
+          "explanation": "6-8 g per litre removed."
+        }
+      ]
+    },
+    {
+      "id": "liver-coagulopathy",
+      "title": "Coagulopathy in liver disease",
+      "summary": "Rebalanced haemostasis: why INR misleads, when to give products, viscoelastic testing, and VTE prophylaxis.",
+      "viewKey": "topic:liver-failure/liver-coagulopathy",
+      "uiHints": {
+        "icon": "droplet",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Chronic liver disease causes 'rebalanced haemostasis': reduced pro- and anticoagulant factors, thrombocytopenia offset by high von Willebrand factor. INR/PT does not predict procedural bleeding and patients remain at risk of thrombosis.",
+          "refs": [
+            "easl-bleeding-2022"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Do not correct INR prophylactically",
+            "detail": "No FFP before low-risk procedures (paracentesis, thoracocentesis, central lines with ultrasound) regardless of INR.",
+            "refs": [
+              "easl-bleeding-2022"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "High-risk procedures",
+            "detail": "Assess case by case; viscoelastic tests (TEG/ROTEM) reduce product use. Platelets if < 50 × 10⁹/L for high-risk procedures (or thrombopoietin agonists electively).",
+            "refs": [
+              "easl-bleeding-2022"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Active bleeding",
+            "detail": "Treat portal hypertension first (vasoactive, endoscopy); correct fibrinogen (< 100-120 mg/dL: cryoprecipitate), platelets > 50, guided by viscoelastic testing; restrictive RBC transfusion.",
+            "refs": [
+              "easl-bleeding-2022",
+              "baveno7"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Vitamin K",
+            "detail": "10 mg IV if cholestasis, malnutrition or antibiotics; little effect in parenchymal failure.",
+            "refs": [
+              "easl-bleeding-2022"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Correct triggers",
+            "detail": "Infection, AKI/uraemia, hypothermia, acidosis and hypocalcaemia worsen bleeding.",
+            "refs": [
+              "easl-bleeding-2022"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "VTE prophylaxis",
+            "detail": "Give LMWH prophylaxis to immobile cirrhotic ICU patients without active bleeding or very low platelets; a high INR is not protective.",
+            "refs": [
+              "easl-bleeding-2022"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "vitamin-k",
+            "role": "Suspected deficiency",
+            "route": "IV",
+            "dose": "10 mg slowly",
+            "refs": [
+              "easl-bleeding-2022"
+            ]
+          },
+          {
+            "drugId": "cryoprecipitate",
+            "role": "Bleeding with low fibrinogen",
+            "route": "IV",
+            "dose": "1 unit/10 kg (about 8-10 units)",
+            "target": "Fibrinogen > 120 mg/dL (or viscoelastic target)",
+            "verify": "Fibrinogen per unit varies by blood bank.",
+            "refs": [
+              "easl-bleeding-2022"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Unexplained bleeding with hyperfibrinolysis (oozing from puncture sites, ROTEM lysis): consider tranexamic acid after specialist input.",
+            "refs": [
+              "easl-bleeding-2022"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Giving 4 units of FFP before an ascitic tap: no benefit, volume overload and higher portal pressure.",
+            "refs": [
+              "easl-bleeding-2022"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Portal vein thrombosis is common in cirrhosis; check Doppler in decompensation.",
+            "refs": [
+              "easl-bleeding-2022"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Reduced synthesis of factors II, V, VII, IX, X, XI and of protein C/S and antithrombin, with high factor VIII and vWF and low ADAMTS13, produces a fragile balance that can tip to bleeding (infection, uraemia) or thrombosis.",
+        "evidence": "- EASL 2022 bleeding and thrombosis guideline: avoid prophylactic correction of INR; use viscoelastic testing; give VTE prophylaxis [EASL 2022].",
+        "controversies": "- Platelet and fibrinogen thresholds before high-risk procedures.",
+        "indiaNotes": "- TEG/ROTEM are available mainly in tertiary centres; where unavailable, fibrinogen level and platelet count guide therapy.\n- Cryoprecipitate and single-donor platelets are often available only in blood banks of larger hospitals."
+      },
+      "drugIds": [
+        "vitamin-k",
+        "cryoprecipitate"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "easl-bleeding-2022",
+        "baveno7"
+      ],
+      "quiz": [
+        {
+          "id": "liver-coagulopathy-q1",
+          "stem": "Before ultrasound-guided paracentesis with INR 2.5:",
+          "options": [
+            "Give 4 units FFP",
+            "No correction needed",
+            "Give vitamin K and wait 24 h",
+            "Cancel"
+          ],
+          "answerIndex": 1,
+          "explanation": "EASL 2022."
+        },
+        {
+          "id": "liver-coagulopathy-q2",
+          "stem": "Fibrinogen threshold commonly used in bleeding cirrhotics:",
+          "options": [
+            "< 100-120 mg/dL",
+            "< 400 mg/dL",
+            "< 50 mg/dL only",
+            "No threshold"
+          ],
+          "answerIndex": 0,
+          "explanation": "Correct with cryoprecipitate."
+        },
+        {
+          "id": "liver-coagulopathy-q3",
+          "stem": "A cirrhotic with INR 1.8 immobile in ICU, not bleeding, platelets 90:",
+          "options": [
+            "No VTE prophylaxis (auto-anticoagulated)",
+            "LMWH prophylaxis",
+            "Warfarin",
+            "FFP"
+          ],
+          "answerIndex": 1,
+          "explanation": "INR does not protect against VTE."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "nac",
+      "name": "N-acetylcysteine",
+      "class": "Glutathione precursor / antidote",
+      "indications": "Paracetamol hepatotoxicity; early-grade (I-II HE) non-paracetamol ALF",
+      "adultDose": "Non-paracetamol ALF (Lee 2009): 150 mg/kg/h for 1 h, then 12.5 mg/kg/h for 4 h, then 6.25 mg/kg/h for 67 h (72 h total). Paracetamol: 21-h regimen 150 mg/kg over 1 h, 50 mg/kg over 4 h, 100 mg/kg over 16 h; continue 6.25 mg/kg/h if ALF.",
+      "preparationIndia": "200 mg/mL (Indian vials 1 g/5 mL and 2 g/10 mL); dilute in 5% dextrose.",
+      "cautions": "Anaphylactoid reactions (flushing, bronchospasm) mostly during loading; slow or pause, give antihistamine. Fluid load in small patients.",
+      "verify": "Weight cap (commonly 100-110 kg) and local NAC protocol.",
+      "refs": [
+        "lee-nac-2009",
+        "easl-alf-2017"
+      ]
+    },
+    {
+      "id": "vitamin-k",
+      "name": "Vitamin K1 (phytomenadione)",
+      "class": "Vitamin",
+      "indications": "Possible vitamin K deficiency (cholestasis, malnutrition, antibiotics)",
+      "adultDose": "10 mg IV slowly once (repeat daily for 3 days if response).",
+      "cautions": "Slow IV (anaphylactoid reactions).",
+      "refs": [
+        "easl-alf-2017",
+        "easl-bleeding-2022"
+      ]
+    },
+    {
+      "id": "prednisolone",
+      "name": "Prednisolone",
+      "class": "Corticosteroid",
+      "indications": "Severe alcoholic hepatitis (Maddrey DF ≥ 32 or MELD > 20) without contraindication",
+      "adultDose": "40 mg orally once daily for 28 days; stop at day 7 if Lille score ≥ 0.45.",
+      "cautions": "Exclude/treat infection, GI bleed, AKI first; risk of infection.",
+      "refs": [
+        "easl-ald-2018",
+        "lille-2007"
+      ]
+    },
+    {
+      "id": "tenofovir",
+      "name": "Tenofovir disoproxil fumarate / entecavir",
+      "class": "Nucleos(t)ide analogue",
+      "indications": "HBV-related ALF or ACLF (HBV reactivation/flare)",
+      "adultDose": "Tenofovir DF 300 mg orally once daily (or entecavir 0.5 mg daily); adjust for renal function.",
+      "renalHepatic": "Dose-adjust for CrCl < 50 mL/min.",
+      "refs": [
+        "apasl-aclf-2019",
+        "easl-aclf-2023"
+      ]
+    },
+    {
+      "id": "lactulose",
+      "name": "Lactulose",
+      "class": "Non-absorbable disaccharide",
+      "indications": "Hepatic encephalopathy treatment and secondary prophylaxis",
+      "adultDose": "25-30 mL (oral/NG) every 1-2 h until a bowel motion, then titrate to 2-3 soft stools/day (usually 15-30 mL two to three times daily). Enema 300 mL in 700 mL water if NG not possible.",
+      "preparationIndia": "10 g/15 mL syrup (Indian 3.35 g/5 mL).",
+      "cautions": "Over-use causes dehydration, hypernatraemia, hypokalaemia and can worsen HE/AKI.",
+      "refs": [
+        "easl-he-2022"
+      ]
+    },
+    {
+      "id": "rifaximin",
+      "name": "Rifaximin",
+      "class": "Non-absorbable antibiotic",
+      "indications": "Add-on for recurrent HE",
+      "adultDose": "550 mg orally twice daily (or 400 mg three times daily).",
+      "preparationIndia": "400 mg and 550 mg tablets available in India.",
+      "refs": [
+        "easl-he-2022"
+      ]
+    },
+    {
+      "id": "peg3350",
+      "name": "Polyethylene glycol 3350-electrolyte",
+      "class": "Osmotic laxative",
+      "indications": "Overt HE (alternative to lactulose)",
+      "adultDose": "4 L over 4 h orally or by NG (single dose) (HELP trial).",
+      "cautions": "Aspiration risk in encephalopathic patients; give via NG with airway protection if needed.",
+      "refs": [
+        "help-trial"
+      ]
+    },
+    {
+      "id": "albumin",
+      "name": "Human albumin 20%",
+      "class": "Colloid",
+      "indications": "SBP, large-volume paracentesis, HRS-AKI",
+      "adultDose": "SBP: 1.5 g/kg day 1 and 1 g/kg day 3 (max ~100 g/day). LVP > 5 L: 6-8 g per litre removed. HRS-AKI: 1 g/kg (max 100 g) day 1-2, then 20-40 g/day with terlipressin.",
+      "preparationIndia": "20% 100 mL = 20 g.",
+      "cautions": "Pulmonary oedema, especially with terlipressin; monitor lungs/POCUS.",
+      "refs": [
+        "sort-1999",
+        "aasld-ascites-2021",
+        "easl-decomp-2018"
+      ]
+    },
+    {
+      "id": "ceftriaxone",
+      "name": "Ceftriaxone",
+      "class": "Third-generation cephalosporin",
+      "indications": "Community-acquired SBP; GI bleed prophylaxis in cirrhosis",
+      "adultDose": "SBP: 2 g IV once daily for 5-7 days (or cefotaxime 2 g q8h). Use piperacillin-tazobactam or carbapenem for nosocomial SBP or high-MDR settings.",
+      "refs": [
+        "aasld-ascites-2021",
+        "easl-decomp-2018"
+      ]
+    },
+    {
+      "id": "cryoprecipitate",
+      "name": "Cryoprecipitate",
+      "class": "Blood product",
+      "indications": "Bleeding with fibrinogen < 100-120 mg/dL in liver disease",
+      "adultDose": "1 unit per 10 kg (about 8-10 units adult) or per viscoelastic test.",
+      "verify": "Fibrinogen content per unit varies by blood bank.",
+      "refs": [
+        "easl-bleeding-2022"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "easl-alf-2017",
+      "citation": "European Association for the Study of the Liver. EASL Clinical Practical Guidelines on the management of acute (fulminant) liver failure. J Hepatol 2017;66:1047-81.",
+      "url": "https://doi.org/10.1016/j.jhep.2016.12.003",
+      "year": 2017,
+      "type": "guideline",
+      "doi": "10.1016/j.jhep.2016.12.003"
+    },
+    {
+      "id": "aasld-ascites-2021",
+      "citation": "Biggins SW, Angeli P, Garcia-Tsao G, et al. Diagnosis, evaluation, and management of ascites, spontaneous bacterial peritonitis and hepatorenal syndrome: 2021 practice guidance by the AASLD. Hepatology 2021;74:1014-48.",
+      "url": "https://doi.org/10.1002/hep.31884",
+      "year": 2021,
+      "type": "guideline",
+      "doi": "10.1002/hep.31884"
+    },
+    {
+      "id": "baveno7",
+      "citation": "de Franchis R, Bosch J, Garcia-Tsao G, et al. Baveno VII - Renewing consensus in portal hypertension. J Hepatol 2022;76:959-74.",
+      "url": "https://doi.org/10.1016/j.jhep.2021.12.022",
+      "year": 2022,
+      "type": "consensus",
+      "doi": "10.1016/j.jhep.2021.12.022"
+    },
+    {
+      "id": "kings-1989",
+      "citation": "O'Grady JG, Alexander GJ, Hayllar KM, Williams R. Early indicators of prognosis in fulminant hepatic failure. Gastroenterology 1989;97:439-45.",
+      "url": "https://doi.org/10.1016/0016-5085(89)90081-4",
+      "year": 1989,
+      "type": "trial",
+      "doi": "10.1016/0016-5085(89)90081-4"
+    },
+    {
+      "id": "lee-nac-2009",
+      "citation": "Lee WM, Hynan LS, Rossaro L, et al. Intravenous N-acetylcysteine improves transplant-free survival in early stage non-acetaminophen acute liver failure. Gastroenterology 2009;137:856-64.",
+      "url": "https://doi.org/10.1053/j.gastro.2009.06.006",
+      "year": 2009,
+      "type": "trial",
+      "doi": "10.1053/j.gastro.2009.06.006"
+    },
+    {
+      "id": "larsen-hvpe-2016",
+      "citation": "Larsen FS, Schmidt LE, Bernsmeier C, et al. High-volume plasma exchange in patients with acute liver failure: an open randomised controlled trial. J Hepatol 2016;64:69-78.",
+      "url": "https://doi.org/10.1016/j.jhep.2015.08.018",
+      "year": 2016,
+      "type": "trial",
+      "doi": "10.1016/j.jhep.2015.08.018"
+    },
+    {
+      "id": "easl-aclf-2023",
+      "citation": "European Association for the Study of the Liver. EASL Clinical Practice Guidelines on acute-on-chronic liver failure. J Hepatol 2023;79:461-91.",
+      "url": "https://doi.org/10.1016/j.jhep.2023.04.021",
+      "year": 2023,
+      "type": "guideline",
+      "doi": "10.1016/j.jhep.2023.04.021"
+    },
+    {
+      "id": "apasl-aclf-2019",
+      "citation": "Sarin SK, Choudhury A, Sharma MK, et al. Acute-on-chronic liver failure: consensus recommendations of the Asian Pacific association for the study of the liver (APASL): an update. Hepatol Int 2019;13:353-90.",
+      "url": "https://doi.org/10.1007/s12072-019-09946-3",
+      "year": 2019,
+      "type": "consensus",
+      "doi": "10.1007/s12072-019-09946-3"
+    },
+    {
+      "id": "easl-he-2022",
+      "citation": "European Association for the Study of the Liver. EASL Clinical Practice Guidelines on the management of hepatic encephalopathy. J Hepatol 2022;77:807-24.",
+      "url": "https://doi.org/10.1016/j.jhep.2022.06.001",
+      "year": 2022,
+      "type": "guideline",
+      "doi": "10.1016/j.jhep.2022.06.001"
+    },
+    {
+      "id": "help-trial",
+      "citation": "Rahimi RS, Singal AG, Cuthbert JA, Rockey DC. Lactulose vs polyethylene glycol 3350-electrolyte solution for treatment of overt hepatic encephalopathy: the HELP randomized clinical trial. JAMA Intern Med 2014;174:1727-33.",
+      "url": "https://doi.org/10.1001/jamainternmed.2014.4746",
+      "year": 2014,
+      "type": "trial",
+      "doi": "10.1001/jamainternmed.2014.4746"
+    },
+    {
+      "id": "easl-decomp-2018",
+      "citation": "European Association for the Study of the Liver. EASL Clinical Practice Guidelines for the management of patients with decompensated cirrhosis. J Hepatol 2018;69:406-60.",
+      "url": "https://doi.org/10.1016/j.jhep.2018.03.024",
+      "year": 2018,
+      "type": "guideline",
+      "doi": "10.1016/j.jhep.2018.03.024"
+    },
+    {
+      "id": "sort-1999",
+      "citation": "Sort P, Navasa M, Arroyo V, et al. Effect of intravenous albumin on renal impairment and mortality in patients with cirrhosis and spontaneous bacterial peritonitis. N Engl J Med 1999;341:403-9.",
+      "url": "https://doi.org/10.1056/NEJM199908053410603",
+      "year": 1999,
+      "type": "trial",
+      "doi": "10.1056/NEJM199908053410603"
+    },
+    {
+      "id": "easl-bleeding-2022",
+      "citation": "European Association for the Study of the Liver. EASL Clinical Practice Guidelines on prevention and management of bleeding and thrombosis in patients with cirrhosis. J Hepatol 2022;76:1151-84.",
+      "url": "https://doi.org/10.1016/j.jhep.2021.09.003",
+      "year": 2022,
+      "type": "guideline",
+      "doi": "10.1016/j.jhep.2021.09.003"
+    },
+    {
+      "id": "easl-ald-2018",
+      "citation": "European Association for the Study of the Liver. EASL Clinical Practice Guidelines: management of alcohol-related liver disease. J Hepatol 2018;69:154-81.",
+      "url": "https://doi.org/10.1016/j.jhep.2018.03.018",
+      "year": 2018,
+      "type": "guideline",
+      "doi": "10.1016/j.jhep.2018.03.018"
+    },
+    {
+      "id": "lille-2007",
+      "citation": "Louvet A, Naveau S, Abdelnour M, et al. The Lille model: a new tool for therapeutic strategy in patients with severe alcoholic hepatitis treated with steroids. Hepatology 2007;45:1348-54.",
+      "url": "https://doi.org/10.1002/hep.21607",
+      "year": 2007,
+      "type": "trial",
+      "doi": "10.1002/hep.21607"
+    }
+  ],
+  "verify": [
+    {
+      "item": "ALF sodium target",
+      "reason": "Text uses Na 140-150 mmol/L (EASL 2017 suggests inducing hypernatraemia with hypertonic saline in high-risk patients; Murphy trial targeted 145-155). Confirm unit protocol."
+    },
+    {
+      "item": "Ascites/SBP antibiotic choice",
+      "reason": "Choose empirical agent per local antibiogram (ESBL/CRE prevalence)."
+    }
+  ]
+}

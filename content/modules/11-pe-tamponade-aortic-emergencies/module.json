@@ -1,0 +1,2077 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "pe-tamponade-aortic-emergencies",
+  "number": 11,
+  "folder": "11-pe-tamponade-aortic-emergencies",
+  "section": {
+    "id": "C",
+    "title": "Cardiovascular and haemodynamics"
+  },
+  "phase": 2,
+  "title": "PE, tamponade and aortic emergencies",
+  "summary": "Obstructive and aortic emergencies: PE risk stratification (ESC 2019 and the new AHA/ACC 2026 categories) and thrombolysis, acute RV failure, tamponade and pericardiocentesis, aortic dissection impulse control, and ruptured AAA.",
+  "tags": [
+    "pulmonary embolism",
+    "thrombolysis",
+    "RV failure",
+    "tamponade",
+    "pericardiocentesis",
+    "aortic dissection",
+    "AAA",
+    "esmolol"
+  ],
+  "relatedModules": [
+    "shock-vasoactive-support",
+    "pocus-critical-care-echo",
+    "cardiac-emergencies-arrhythmias",
+    "ecmo-mechanical-circulatory-support",
+    "haematology-coagulation-transfusion",
+    "procedures"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "heart-crack",
+    "accent": "critical"
+  },
+  "viewKey": "module:pe-tamponade-aortic-emergencies",
+  "topics": [
+    {
+      "id": "pe-risk-thrombolysis",
+      "title": "PE risk stratification and thrombolysis",
+      "summary": "Stratify acute PE by haemodynamics, sPESI, RV dysfunction and troponin (ESC 2019 and AHA/ACC 2026 categories), and choose anticoagulation, thrombolysis or advanced therapy.",
+      "viewKey": "topic:pe-tamponade-aortic-emergencies/pe-risk-thrombolysis",
+      "uiHints": {
+        "icon": "activity",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "High-risk PE (ESC) / AHA-ACC category E = cardiac arrest, obstructive shock (SBP < 90 mmHg or vasopressors with end-organ hypoperfusion) or persistent hypotension (SBP < 90 or fall ≥ 40 mmHg for > 15 min). Intermediate risk = sPESI ≥ 1 or RV dysfunction/troponin; intermediate-high = both RV dysfunction AND raised troponin.",
+          "refs": [
+            "esc-pe-2019",
+            "aha-pe-2026"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Suspect and stabilise",
+            "detail": "Sudden dyspnoea, pleuritic pain, syncope, hypoxaemia, tachycardia; risk factors (post-op, immobilisation, cancer, pregnancy/postpartum, OCP). Oxygen; avoid intubation if possible (induction can cause arrest).",
+            "time": "0 min",
+            "refs": [
+              "esc-pe-2019"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Unstable: bedside echo",
+            "detail": "If shock and CT not immediately feasible: bedside echo showing RV dilatation (RV/LV > 1), McConnell sign, D-shaped LV, or a clot-in-transit justifies treatment as high-risk PE. Look for DVT with compression ultrasound.",
+            "time": "< 15 min",
+            "refs": [
+              "esc-pe-2019"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Stable: confirm",
+            "detail": "Wells/Geneva probability; D-dimer (age-adjusted: age x 10 mcg/L if > 50 years) for low/intermediate probability; CTPA if high probability or positive D-dimer. Start anticoagulation while waiting if probability is high.",
+            "refs": [
+              "esc-pe-2019"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Stratify",
+            "detail": "sPESI (age > 80, cancer, chronic cardiopulmonary disease, HR ≥ 110, SBP < 100, SpO2 < 90%: 1 point each). Then RV on CT/echo and troponin: both positive = intermediate-high; one or none = intermediate-low; sPESI 0 and both normal = low risk.",
+            "refs": [
+              "spesi",
+              "esc-pe-2019"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "High risk (category E): reperfuse",
+            "detail": "UFH bolus + systemic thrombolysis (alteplase 100 mg over 2 h). If contraindicated or failed: catheter-directed therapy or surgical embolectomy. Cardiac arrest from PE: alteplase 0.6 mg/kg (max 50 mg) over 15 min, continue CPR 60-90 min; consider ECMO.",
+            "time": "Immediately",
+            "refs": [
+              "esc-pe-2019",
+              "aha-pe-2026"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Intermediate-high: anticoagulate and watch",
+            "detail": "LMWH (or UFH if thrombolysis likely) and monitor in HDU/ICU for 48-72 h. Routine primary thrombolysis is NOT recommended (PEITHO). Rescue thrombolysis or catheter therapy if haemodynamic decompensation.",
+            "refs": [
+              "peitho",
+              "esc-pe-2019",
+              "aha-pe-2026"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Low and intermediate-low",
+            "detail": "Anticoagulation with LMWH or a DOAC (rivaroxaban/apixaban); early discharge for low risk if home circumstances allow.",
+            "refs": [
+              "esc-pe-2019",
+              "aha-pe-2026"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "alteplase",
+            "role": "Systemic thrombolysis (high-risk PE)",
+            "route": "IV",
+            "dose": "100 mg over 2 h; arrest 0.6 mg/kg (max 50 mg) over 15 min",
+            "notes": "Hold UFH during infusion; restart when aPTT < 2x upper limit.",
+            "refs": [
+              "esc-pe-2019"
+            ]
+          },
+          {
+            "drugId": "tenecteplase",
+            "role": "Thrombolysis alternative (off-label)",
+            "route": "IV bolus",
+            "dose": "30-50 mg by weight band (5 mg per 10 kg from 30 mg at < 60 kg)",
+            "workedExample": "72 kg: 40 mg (8 mL of 5 mg/mL) single bolus",
+            "verify": "Off-label for PE in India; confirm institutional protocol and vial size.",
+            "refs": [
+              "peitho"
+            ]
+          },
+          {
+            "drugId": "streptokinase",
+            "role": "Low-cost thrombolytic",
+            "route": "IV",
+            "dose": "1.5 million IU over 2 h",
+            "refs": [
+              "esc-pe-2019"
+            ]
+          },
+          {
+            "drugId": "ufh",
+            "role": "Anticoagulation when reperfusion may be needed",
+            "route": "IV",
+            "dose": "80 units/kg bolus then 18 units/kg/h",
+            "dilution": "25,000 units in 50 mL NS = 500 units/mL",
+            "target": "aPTT 1.5-2.5x control",
+            "workedExample": "70 kg: 5,600 units bolus, then 1,260 units/h = 2.5 mL/h",
+            "calculatorId": "infusion-rate-weight-hour",
+            "refs": [
+              "esc-pe-2019"
+            ]
+          },
+          {
+            "drugId": "enoxaparin",
+            "role": "Preferred anticoagulant if stable",
+            "route": "SC",
+            "dose": "1 mg/kg every 12 h",
+            "workedExample": "70 kg: 70 mg SC twice daily",
+            "refs": [
+              "esc-pe-2019",
+              "aha-pe-2026"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "pe-risk",
+            "title": "PE risk classes (ESC 2019) and AHA/ACC 2026 categories",
+            "columns": [
+              "Risk",
+              "Shock/hypotension",
+              "sPESI ≥ 1",
+              "RV dysfunction + troponin",
+              "Approx. AHA/ACC category",
+              "Treatment"
+            ],
+            "rows": [
+              [
+                "High",
+                "Yes",
+                "(+)",
+                "(+)",
+                "E (E1 shock, E2 arrest)",
+                "Thrombolysis or advanced therapy"
+              ],
+              [
+                "Intermediate-high",
+                "No",
+                "Yes",
+                "Both positive",
+                "C-D",
+                "Anticoagulate, monitor, rescue reperfusion"
+              ],
+              [
+                "Intermediate-low",
+                "No",
+                "Yes",
+                "One or none",
+                "C",
+                "Anticoagulate, ward"
+              ],
+              [
+                "Low",
+                "No",
+                "No",
+                "Neither (optional)",
+                "A-B",
+                "Anticoagulate, early discharge"
+              ]
+            ],
+            "caption": "AHA/ACC 2026 categories are approximated; see the guideline for the subcategory definitions (C1-C3, D1-D2, E1-E2).",
+            "refs": [
+              "esc-pe-2019",
+              "aha-pe-2026"
+            ]
+          },
+          {
+            "id": "lysis-contra",
+            "title": "Contraindications to thrombolysis (ESC 2019)",
+            "columns": [
+              "Type",
+              "Contraindication"
+            ],
+            "rows": [
+              [
+                "Absolute",
+                "Previous haemorrhagic stroke or stroke of unknown origin"
+              ],
+              [
+                "Absolute",
+                "Ischaemic stroke in previous 6 months"
+              ],
+              [
+                "Absolute",
+                "CNS neoplasm"
+              ],
+              [
+                "Absolute",
+                "Major trauma, surgery or head injury in previous 3 weeks"
+              ],
+              [
+                "Absolute",
+                "Bleeding diathesis or active bleeding"
+              ],
+              [
+                "Relative",
+                "TIA < 6 months, oral anticoagulation, pregnancy/first postpartum week, non-compressible puncture, traumatic CPR, refractory hypertension (SBP > 180), advanced liver disease, infective endocarditis, active peptic ulcer"
+              ]
+            ],
+            "refs": [
+              "esc-pe-2019"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "PE with syncope, SpO2 < 90%, lactate > 2 mmol/L or rising vasopressor needs: high risk of collapse, involve senior/PERT now.",
+            "refs": [
+              "esc-pe-2019"
+            ]
+          },
+          {
+            "text": "Intubating a PE patient in shock can cause cardiac arrest: preoxygenate, use haemodynamically stable induction (low-dose ketamine), have noradrenaline running, avoid high PEEP.",
+            "refs": [
+              "hfa-rv-2016"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Giving full-dose thrombolysis to normotensive intermediate-risk patients: PEITHO showed fewer decompensations but more haemorrhagic strokes and no mortality benefit.",
+            "refs": [
+              "peitho"
+            ]
+          },
+          {
+            "text": "Large fluid boluses in RV failure: they worsen RV dilatation and septal shift.",
+            "refs": [
+              "hfa-rv-2016"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "In India streptokinase and tenecteplase are cheaper and more available than alteplase; agree a hospital PE thrombolysis protocol in advance.",
+            "refs": [
+              "esc-pe-2019"
+            ]
+          },
+          {
+            "text": "The 2026 AHA/ACC guideline recommends LMWH over UFH for most patients needing parenteral anticoagulation and multidisciplinary PE response teams for categories C-E.",
+            "refs": [
+              "aha-pe-2026"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Acute PE management",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Suspected acute PE"
+          },
+          {
+            "id": "shock",
+            "type": "decision",
+            "text": "Shock, persistent hypotension or arrest?"
+          },
+          {
+            "id": "echo",
+            "type": "action",
+            "text": "Bedside echo / CTPA if feasible; UFH bolus",
+            "severity": "critical"
+          },
+          {
+            "id": "rv",
+            "type": "decision",
+            "text": "RV dysfunction confirmed (or CTPA positive)?"
+          },
+          {
+            "id": "other",
+            "type": "end",
+            "text": "Search other causes of shock"
+          },
+          {
+            "id": "ci",
+            "type": "decision",
+            "text": "Contraindication to thrombolysis?"
+          },
+          {
+            "id": "lyse",
+            "type": "end",
+            "text": "Systemic thrombolysis (alteplase 100 mg/2 h)",
+            "severity": "critical"
+          },
+          {
+            "id": "cath",
+            "type": "end",
+            "text": "Catheter-directed therapy / surgical embolectomy / ECMO",
+            "severity": "critical"
+          },
+          {
+            "id": "ctpa",
+            "type": "action",
+            "text": "Probability + D-dimer / CTPA; start anticoagulation if high probability"
+          },
+          {
+            "id": "spesi",
+            "type": "decision",
+            "text": "sPESI ≥ 1 or RV dysfunction/troponin?"
+          },
+          {
+            "id": "low",
+            "type": "end",
+            "text": "Low risk: LMWH/DOAC, early discharge"
+          },
+          {
+            "id": "both",
+            "type": "decision",
+            "text": "Both RV dysfunction AND raised troponin?"
+          },
+          {
+            "id": "ihr",
+            "type": "action",
+            "text": "Intermediate-high: LMWH/UFH, HDU/ICU monitoring 48-72 h",
+            "severity": "high"
+          },
+          {
+            "id": "det",
+            "type": "decision",
+            "text": "Haemodynamic deterioration?"
+          },
+          {
+            "id": "rescue",
+            "type": "end",
+            "text": "Rescue thrombolysis or catheter therapy",
+            "severity": "critical"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Continue anticoagulation; step down"
+          },
+          {
+            "id": "ilr",
+            "type": "end",
+            "text": "Intermediate-low: anticoagulation on ward"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "shock"
+          },
+          {
+            "from": "shock",
+            "to": "echo",
+            "label": "Yes"
+          },
+          {
+            "from": "echo",
+            "to": "rv"
+          },
+          {
+            "from": "rv",
+            "to": "ci",
+            "label": "Yes"
+          },
+          {
+            "from": "rv",
+            "to": "other",
+            "label": "No"
+          },
+          {
+            "from": "ci",
+            "to": "lyse",
+            "label": "No"
+          },
+          {
+            "from": "ci",
+            "to": "cath",
+            "label": "Yes"
+          },
+          {
+            "from": "shock",
+            "to": "ctpa",
+            "label": "No"
+          },
+          {
+            "from": "ctpa",
+            "to": "spesi"
+          },
+          {
+            "from": "spesi",
+            "to": "low",
+            "label": "No"
+          },
+          {
+            "from": "spesi",
+            "to": "both",
+            "label": "Yes"
+          },
+          {
+            "from": "both",
+            "to": "ihr",
+            "label": "Yes"
+          },
+          {
+            "from": "both",
+            "to": "ilr",
+            "label": "No"
+          },
+          {
+            "from": "ihr",
+            "to": "det"
+          },
+          {
+            "from": "det",
+            "to": "rescue",
+            "label": "Yes"
+          },
+          {
+            "from": "det",
+            "to": "cont",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "esc-pe-2019",
+          "aha-pe-2026"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Acute obstruction of the pulmonary arterial bed raises RV afterload. The thin-walled RV dilates, its wall tension and oxygen demand rise while RCA perfusion falls (low systemic pressure), septal shift impairs LV filling, and a downward spiral of falling cardiac output leads to obstructive shock.",
+        "evidence": "- ESC 2019: risk-adapted strategy; thrombolysis for high-risk PE; age-adjusted D-dimer; DOACs preferred over VKA [ESC 2019].\n- PEITHO (n=1,005, normotensive intermediate-risk PE): tenecteplase reduced death or decompensation at 7 days (2.6% vs 5.6%) but increased haemorrhagic stroke (2.0% vs 0.2%) [Meyer 2014].\n- AHA/ACC 2026 introduced categories A-E with subcategories; systemic thrombolysis is reasonable for E and may be considered for D1-2; not for A-C2 [AHA/ACC 2026].",
+        "controversies": "- Reduced-dose thrombolysis (e.g. alteplase 50 mg) and catheter-directed therapies for intermediate-high-risk PE are under study (PEITHO-3, HI-PEITHO).\n- ECMO as a bridge in refractory high-risk PE.",
+        "indiaNotes": "- Postpartum, post-surgical and long-distance travel PE are common; PE is often missed in patients labelled 'pneumonia' or 'ACS'.\n- Interventional radiology for catheter-directed therapy is limited to tertiary centres; systemic thrombolysis is the realistic option in most hospitals.\n- DOACs (rivaroxaban, apixaban, dabigatran) are affordable in India as generics."
+      },
+      "drugIds": [
+        "alteplase",
+        "tenecteplase",
+        "streptokinase",
+        "ufh",
+        "enoxaparin",
+        "noradrenaline"
+      ],
+      "calculatorIds": [
+        "wells-pe",
+        "shock-index",
+        "infusion-rate-weight-hour",
+        "infusion-rate-weight-min"
+      ],
+      "references": [
+        "esc-pe-2019",
+        "aha-pe-2026",
+        "peitho",
+        "spesi",
+        "hfa-rv-2016"
+      ],
+      "quiz": [
+        {
+          "id": "pe-risk-thrombolysis-q1",
+          "stem": "Normotensive PE with RV dilatation on CT and raised troponin, sPESI 2. Best initial management:",
+          "options": [
+            "Full-dose alteplase",
+            "Anticoagulation with close monitoring; rescue reperfusion if deterioration",
+            "Discharge on DOAC",
+            "IVC filter"
+          ],
+          "answerIndex": 1,
+          "explanation": "Intermediate-high risk: PEITHO showed routine thrombolysis increases haemorrhagic stroke without mortality benefit."
+        },
+        {
+          "id": "pe-risk-thrombolysis-q2",
+          "stem": "Alteplase dose for high-risk PE (non-arrest):",
+          "options": [
+            "0.9 mg/kg max 90 mg over 60 min",
+            "100 mg over 2 h",
+            "50 mg bolus",
+            "15 mg bolus only"
+          ],
+          "answerIndex": 1,
+          "explanation": "ESC regimen: 100 mg over 2 h. 0.9 mg/kg is the stroke regimen."
+        },
+        {
+          "id": "pe-risk-thrombolysis-q3",
+          "stem": "Which is NOT an sPESI criterion?",
+          "options": [
+            "Age > 80",
+            "HR ≥ 110",
+            "D-dimer > 500",
+            "SpO2 < 90%"
+          ],
+          "answerIndex": 2,
+          "explanation": "sPESI: age > 80, cancer, chronic cardiopulmonary disease, HR ≥ 110, SBP < 100, SpO2 < 90%."
+        },
+        {
+          "id": "pe-risk-thrombolysis-q4",
+          "stem": "Fluid strategy in PE with RV failure and hypotension:",
+          "options": [
+            "2 L bolus",
+            "Cautious: at most a small bolus (≤ 500 mL) if CVP low; start noradrenaline",
+            "No vasopressors",
+            "Diuretics first always"
+          ],
+          "answerIndex": 1,
+          "explanation": "Volume overload worsens RV dilatation and septal shift."
+        }
+      ]
+    },
+    {
+      "id": "rv-failure",
+      "title": "Acute right ventricular failure",
+      "summary": "Recognise and support the failing RV: optimise preload, maintain systemic pressure, reduce afterload and add inotropes, and ventilate safely.",
+      "viewKey": "topic:pe-tamponade-aortic-emergencies/rv-failure",
+      "uiHints": {
+        "icon": "heart",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Acute RV failure = rapidly progressive syndrome with systemic congestion from impaired RV filling and/or reduced RV output. Causes: PE, ARDS/high PEEP, RV infarction, pulmonary hypertension decompensation (sepsis, arrhythmia), post-cardiac surgery.",
+          "refs": [
+            "hfa-rv-2016"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Confirm on echo",
+            "detail": "RV dilated (RV/LV > 1 in apical 4-chamber), TAPSE < 17 mm, septal flattening (D-shaped LV), dilated non-collapsing IVC, tricuspid regurgitation; estimate PASP.",
+            "refs": [
+              "hfa-rv-2016"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Treat the cause",
+            "detail": "PE: reperfusion; RV infarct: revascularise, avoid nitrates; ARDS: reduce plateau pressure/driving pressure, correct hypercapnia, consider prone; arrhythmia: restore sinus rhythm (atrial kick matters).",
+            "refs": [
+              "hfa-rv-2016"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Optimise preload",
+            "detail": "If CVP low and no congestion: cautious 250-500 mL bolus. If CVP high (> 12-15 mmHg) or congested: diuretics or ultrafiltration; volume removal often improves RV function.",
+            "refs": [
+              "hfa-rv-2016"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Maintain systemic pressure",
+            "detail": "Noradrenaline first line to keep MAP ≥ 65 mmHg (preserves RCA perfusion). Vasopressin is an option (less pulmonary vasoconstriction).",
+            "refs": [
+              "hfa-rv-2016"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Add inotropy",
+            "detail": "Dobutamine 2.5-10 mcg/kg/min, or milrinone/levosimendan (both reduce PVR but cause hypotension; combine with noradrenaline).",
+            "refs": [
+              "hfa-rv-2016"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Reduce RV afterload",
+            "detail": "Correct hypoxaemia, hypercapnia and acidosis; inhaled nitric oxide or inhaled prostacyclin in specialist centres.",
+            "refs": [
+              "hfa-rv-2016"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Ventilate carefully",
+            "detail": "Avoid intubation if possible. If needed: induce with haemodynamically stable agents and vasopressor ready; Vt 6 mL/kg, plateau < 27-30 cmH2O, lowest PEEP that maintains oxygenation, avoid hypercapnia. Consider ECMO/mechanical RV support for refractory cases.",
+            "refs": [
+              "hfa-rv-2016"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "noradrenaline",
+            "role": "Maintain MAP / coronary perfusion",
+            "route": "IV (central)",
+            "dose": "0.05-0.5 mcg/kg/min",
+            "dilution": "4 mg in 50 mL = 80 mcg/mL",
+            "target": "MAP ≥ 65 mmHg",
+            "workedExample": "70 kg at 0.1 mcg/kg/min = 5.25 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "hfa-rv-2016"
+            ]
+          },
+          {
+            "drugId": "dobutamine",
+            "role": "Inotrope",
+            "route": "IV",
+            "dose": "2.5-10 mcg/kg/min",
+            "dilution": "250 mg in 50 mL = 5,000 mcg/mL",
+            "workedExample": "70 kg at 5 mcg/kg/min = 4.2 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "hfa-rv-2016"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Systemic hypotension in RV failure triggers RV ischaemia and a downward spiral: treat hypotension immediately with vasopressor rather than fluid.",
+            "refs": [
+              "hfa-rv-2016"
+            ]
+          },
+          {
+            "text": "Bradycardia or loss of sinus rhythm in RV infarction can cause sudden collapse: pacing/cardioversion.",
+            "refs": [
+              "hfa-rv-2016"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "'The RV is preload dependent so give litres of fluid': true only in early RV infarction with low CVP; over-filling worsens septal shift and output.",
+            "refs": [
+              "hfa-rv-2016"
+            ]
+          },
+          {
+            "text": "Nitrates or diuretics in RV infarction with hypotension.",
+            "refs": [
+              "hfa-rv-2016"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "A falling CVP and improving urine output after diuresis is a good sign that the RV is unloading.",
+            "refs": [
+              "hfa-rv-2016"
+            ]
+          },
+          {
+            "text": "High PEEP and hypercapnia raise PVR; in ARDS, prone positioning can unload the RV.",
+            "refs": [
+              "hfa-rv-2016"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Acute RV failure support",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Shock or congestion with dilated RV on echo"
+          },
+          {
+            "id": "cause",
+            "type": "action",
+            "text": "Identify and treat cause (PE, RV infarct, ARDS, arrhythmia, PH crisis)"
+          },
+          {
+            "id": "map",
+            "type": "decision",
+            "text": "MAP ≥ 65 mmHg?"
+          },
+          {
+            "id": "ne",
+            "type": "action",
+            "text": "Start noradrenaline (vasopressin as option)",
+            "severity": "critical"
+          },
+          {
+            "id": "cvp",
+            "type": "decision",
+            "text": "CVP high / congestion?"
+          },
+          {
+            "id": "diur",
+            "type": "action",
+            "text": "Diuretics or ultrafiltration"
+          },
+          {
+            "id": "bolus",
+            "type": "action",
+            "text": "Cautious 250-500 mL bolus, reassess"
+          },
+          {
+            "id": "co",
+            "type": "decision",
+            "text": "Low output persists (lactate, ScvO2, oliguria)?"
+          },
+          {
+            "id": "ino",
+            "type": "action",
+            "text": "Add dobutamine / milrinone / levosimendan; reduce afterload (O2, CO2, iNO)",
+            "severity": "high"
+          },
+          {
+            "id": "ok",
+            "type": "end",
+            "text": "Continue treating cause, monitor"
+          },
+          {
+            "id": "refr",
+            "type": "decision",
+            "text": "Refractory?"
+          },
+          {
+            "id": "ecmo",
+            "type": "end",
+            "text": "VA-ECMO / RV mechanical support referral",
+            "severity": "critical"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "cause"
+          },
+          {
+            "from": "cause",
+            "to": "map"
+          },
+          {
+            "from": "map",
+            "to": "ne",
+            "label": "No"
+          },
+          {
+            "from": "map",
+            "to": "cvp",
+            "label": "Yes"
+          },
+          {
+            "from": "ne",
+            "to": "cvp"
+          },
+          {
+            "from": "cvp",
+            "to": "diur",
+            "label": "Yes"
+          },
+          {
+            "from": "cvp",
+            "to": "bolus",
+            "label": "No"
+          },
+          {
+            "from": "diur",
+            "to": "co"
+          },
+          {
+            "from": "bolus",
+            "to": "co"
+          },
+          {
+            "from": "co",
+            "to": "ino",
+            "label": "Yes"
+          },
+          {
+            "from": "co",
+            "to": "ok",
+            "label": "No"
+          },
+          {
+            "from": "ino",
+            "to": "refr"
+          },
+          {
+            "from": "refr",
+            "to": "ecmo",
+            "label": "Yes"
+          },
+          {
+            "from": "refr",
+            "to": "ok",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "hfa-rv-2016"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "The RV is a thin, compliant volume pump that tolerates volume but not pressure. Unlike the LV it is perfused in both systole and diastole, so RV coronary perfusion depends on the gradient between aortic pressure and RV pressure. Ventricular interdependence via the septum and pericardium means a dilated RV directly reduces LV filling.",
+        "evidence": "- The HFA/ESC 2016 statement summarises physiology-based management: treat cause, optimise volume, vasopressors to maintain perfusion pressure, inotropes and pulmonary vasodilators [Harjola 2016].",
+        "controversies": "- Choice between dobutamine, milrinone and levosimendan; limited RCT evidence.\n- Timing of mechanical RV support or ECMO.",
+        "indiaNotes": "- Rheumatic mitral stenosis with pulmonary hypertension and RV failure is still common in India, especially in pregnancy; treat AF and tachycardia aggressively.\n- Inhaled nitric oxide is available in few Indian ICUs; inhaled or IV sildenafil is sometimes used as an alternative pulmonary vasodilator (specialist advice)."
+      },
+      "drugIds": [
+        "noradrenaline",
+        "dobutamine"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-min",
+        "mean-arterial-pressure"
+      ],
+      "references": [
+        "hfa-rv-2016"
+      ],
+      "quiz": [
+        {
+          "id": "rv-failure-q1",
+          "stem": "First-line vasoactive for hypotension in acute RV failure:",
+          "options": [
+            "Nitroglycerin",
+            "Noradrenaline",
+            "Furosemide",
+            "Esmolol"
+          ],
+          "answerIndex": 1,
+          "explanation": "Maintaining systemic pressure preserves RV coronary perfusion."
+        },
+        {
+          "id": "rv-failure-q2",
+          "stem": "Echo sign of RV pressure overload:",
+          "options": [
+            "Small RV",
+            "D-shaped LV with septal flattening",
+            "Collapsing IVC",
+            "LV hypertrophy"
+          ],
+          "answerIndex": 1,
+          "explanation": "Septal flattening reflects raised RV pressure."
+        },
+        {
+          "id": "rv-failure-q3",
+          "stem": "Ventilator settings that worsen RV failure:",
+          "options": [
+            "Low tidal volume",
+            "High PEEP and permissive hypercapnia",
+            "Normocapnia",
+            "Prone positioning"
+          ],
+          "answerIndex": 1,
+          "explanation": "High PEEP and hypercapnia increase PVR."
+        }
+      ]
+    },
+    {
+      "id": "tamponade-pericardiocentesis",
+      "title": "Cardiac tamponade and pericardiocentesis",
+      "summary": "Clinical and echo diagnosis of tamponade, temporising measures, and urgent drainage.",
+      "viewKey": "topic:pe-tamponade-aortic-emergencies/tamponade-pericardiocentesis",
+      "uiHints": {
+        "icon": "heart-crack",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Cardiac tamponade = life-threatening compression of the heart by pericardial fluid, pus, blood, clot or gas, causing impaired filling and obstructive shock. It is a clinical and echocardiographic diagnosis; the rate of accumulation matters more than volume.",
+          "refs": [
+            "esc-pericardial-2015"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Suspect",
+            "detail": "Hypotension, tachycardia, raised JVP, muffled heart sounds (Beck triad), pulsus paradoxus > 10 mmHg, low-voltage ECG/electrical alternans. Contexts: malignancy, TB, uraemia, post-cardiac surgery/procedure, trauma, aortic dissection, hypothyroidism.",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Echo",
+            "detail": "Circumferential effusion with RA systolic collapse, RV diastolic collapse, dilated IVC with < 50% collapse, exaggerated respiratory variation in mitral (> 25%) and tricuspid (> 40%) inflow.",
+            "time": "< 10 min",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Temporise",
+            "detail": "Small fluid bolus (250-500 mL) may help if hypovolaemic; vasopressor/inotrope as bridge; avoid intubation and positive-pressure ventilation if possible (can precipitate arrest) - if unavoidable, drain first or have the needle ready.",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Drain urgently",
+            "detail": "Echo-guided pericardiocentesis (subxiphoid or apical/parasternal, where fluid is closest) with pigtail catheter; or surgical drainage for purulent, clotted, loculated, post-surgical or traumatic effusions.",
+            "time": "ASAP",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Do NOT needle in aortic dissection",
+            "detail": "Tamponade from type A dissection or myocardial rupture needs emergency surgery; pericardiocentesis can worsen bleeding (only controlled small-volume drainage as last resort).",
+            "refs": [
+              "esc-pericardial-2015",
+              "acc-aha-aorta-2022"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Send fluid and find the cause",
+            "detail": "Cell count, protein, LDH, glucose, Gram stain, culture, AFB/GeneXpert, ADA (TB), cytology. Leave drain until < 25-50 mL/day.",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "tamponade-echo",
+            "title": "Echo signs of tamponade",
+            "columns": [
+              "Sign",
+              "Significance"
+            ],
+            "rows": [
+              [
+                "RA collapse > 1/3 of systole",
+                "Sensitive, early"
+              ],
+              [
+                "RV diastolic collapse",
+                "More specific"
+              ],
+              [
+                "Plethoric IVC (> 2.1 cm, < 50% collapse)",
+                "Sensitive; absent in hypovolaemia ('low-pressure tamponade')"
+              ],
+              [
+                "Mitral inflow variation > 25%",
+                "Doppler equivalent of pulsus paradoxus"
+              ],
+              [
+                "Swinging heart",
+                "Large effusion, electrical alternans"
+              ]
+            ],
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Effusion + hypotension + plethoric IVC = drain now; prepare for arrest.",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          },
+          {
+            "text": "Post-cardiac surgery tamponade may be localised (clot behind the RA/LV) and missed on transthoracic echo; re-sternotomy may be needed.",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Intubating before drainage: loss of sympathetic tone and positive pressure collapse filling.",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          },
+          {
+            "text": "Ruling out tamponade because effusion is 'small': rapid accumulation of 100-200 mL can tamponade.",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "TB is the commonest cause of large pericardial effusion in India; send ADA and GeneXpert from pericardial fluid.",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          },
+          {
+            "text": "Low-pressure tamponade occurs in hypovolaemia (dialysis, bleeding): JVP may not be raised; a fluid bolus helps.",
+            "refs": [
+              "esc-pericardial-2015"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Suspected tamponade",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Hypotension + suspected pericardial effusion"
+          },
+          {
+            "id": "echo",
+            "type": "action",
+            "text": "Bedside echo"
+          },
+          {
+            "id": "eff",
+            "type": "decision",
+            "text": "Effusion with chamber collapse / plethoric IVC?"
+          },
+          {
+            "id": "alt",
+            "type": "end",
+            "text": "Look for other causes of shock"
+          },
+          {
+            "id": "diss",
+            "type": "decision",
+            "text": "Aortic dissection, trauma or myocardial rupture?"
+          },
+          {
+            "id": "surg",
+            "type": "end",
+            "text": "Emergency cardiac surgery",
+            "severity": "critical"
+          },
+          {
+            "id": "temp",
+            "type": "action",
+            "text": "Temporise: small fluid bolus, vasopressor, avoid PPV",
+            "severity": "high"
+          },
+          {
+            "id": "pc",
+            "type": "end",
+            "text": "Echo-guided pericardiocentesis with pigtail; send fluid",
+            "severity": "critical"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "echo"
+          },
+          {
+            "from": "echo",
+            "to": "eff"
+          },
+          {
+            "from": "eff",
+            "to": "alt",
+            "label": "No"
+          },
+          {
+            "from": "eff",
+            "to": "diss",
+            "label": "Yes"
+          },
+          {
+            "from": "diss",
+            "to": "surg",
+            "label": "Yes"
+          },
+          {
+            "from": "diss",
+            "to": "temp",
+            "label": "No"
+          },
+          {
+            "from": "temp",
+            "to": "pc"
+          }
+        ],
+        "refs": [
+          "esc-pericardial-2015"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "The pericardium is stiff: once its reserve volume is exceeded, small further increments raise pressure steeply. Rising intrapericardial pressure equalises diastolic pressures across chambers; the thin-walled RA and RV collapse first. Inspiration increases RV filling at the expense of LV filling (ventricular interdependence), causing pulsus paradoxus.",
+        "evidence": "- ESC 2015 pericardial guideline (updated by the 2025 ESC myocarditis and pericarditis guideline) recommends urgent echo-guided pericardiocentesis or surgery for tamponade and a triage score for timing in non-emergent cases [Adler 2015].",
+        "controversies": "- Optimal approach (subxiphoid vs apical vs parasternal): choose the site with largest fluid pocket and no intervening structures on ultrasound.",
+        "indiaNotes": "- Tuberculous pericarditis: add anti-TB therapy; adjunctive steroids are not routinely recommended (IMPI trial) except in selected patients; constrictive pericarditis may follow.\n- Uraemic pericarditis needs intensified dialysis (avoid heparin)."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "esc-pericardial-2015",
+        "acc-aha-aorta-2022"
+      ],
+      "quiz": [
+        {
+          "id": "tamponade-pericardiocentesis-q1",
+          "stem": "Which echo sign is most specific for tamponade?",
+          "options": [
+            "Small posterior effusion",
+            "RV diastolic collapse",
+            "Pleural effusion",
+            "LV hypertrophy"
+          ],
+          "answerIndex": 1,
+          "explanation": "RV diastolic collapse is more specific; RA collapse is more sensitive."
+        },
+        {
+          "id": "tamponade-pericardiocentesis-q2",
+          "stem": "Tamponade from type A aortic dissection: management?",
+          "options": [
+            "Bedside pericardiocentesis to dryness",
+            "Emergency surgery",
+            "Thrombolysis",
+            "Diuretics"
+          ],
+          "answerIndex": 1,
+          "explanation": "Needle drainage can raise aortic pressure and worsen bleeding; surgery is definitive."
+        },
+        {
+          "id": "tamponade-pericardiocentesis-q3",
+          "stem": "Why avoid intubation before draining tamponade?",
+          "options": [
+            "Risk of aspiration only",
+            "Positive pressure and induction drugs reduce venous return, causing arrest",
+            "It is painful",
+            "No reason"
+          ],
+          "answerIndex": 1,
+          "explanation": "Filling depends on venous return, which PPV reduces."
+        }
+      ]
+    },
+    {
+      "id": "aortic-dissection",
+      "title": "Acute aortic dissection: BP and HR targets",
+      "summary": "Recognise acute aortic syndrome, start impulse control (HR < 60, SBP < 120) with beta-blocker first, and route type A to surgery.",
+      "viewKey": "topic:pe-tamponade-aortic-emergencies/aortic-dissection",
+      "uiHints": {
+        "icon": "zap",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Acute aortic syndrome = dissection, intramural haematoma, penetrating ulcer. Stanford type A involves the ascending aorta (surgical emergency, mortality rises ~1-2% per hour untreated); type B does not (medical therapy unless complicated).",
+          "refs": [
+            "acc-aha-aorta-2022",
+            "esc-aorta-2024"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Suspect",
+            "detail": "Abrupt severe tearing chest/back pain, pulse or BP differential > 20 mmHg between arms, new aortic regurgitation murmur, neurological deficit, syncope, mesenteric/limb ischaemia. Risk: hypertension, Marfan/connective tissue disease, bicuspid valve, cocaine, pregnancy, recent aortic instrumentation.",
+            "time": "0 min",
+            "refs": [
+              "acc-aha-aorta-2022"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Risk-stratify and image",
+            "detail": "ADD-RS (high-risk condition, pain features, exam features; 0-3). ADD-RS ≤ 1 with D-dimer < 500 ng/mL makes dissection unlikely. CT angiography aorta is the test of choice; bedside TTE (flap, AR, effusion) if unstable.",
+            "time": "< 30 min",
+            "refs": [
+              "add-rs",
+              "esc-aorta-2024"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Analgesia",
+            "detail": "IV opioid (morphine or fentanyl) titrated: pain drives sympathetic surge.",
+            "refs": [
+              "acc-aha-aorta-2022"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Beta-blocker first",
+            "detail": "Target HR < 60/min and SBP < 120 mmHg (as low as tolerated with preserved perfusion and urine output). Esmolol or labetalol IV. If beta-blocker contraindicated: diltiazem/verapamil for rate.",
+            "time": "Within 20 min",
+            "refs": [
+              "acc-aha-aorta-2022",
+              "esc-aorta-2024"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Then vasodilator if SBP still high",
+            "detail": "Add GTN, nicardipine or nitroprusside only after HR control to avoid reflex tachycardia.",
+            "refs": [
+              "acc-aha-aorta-2022"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Type A: emergency surgery",
+            "detail": "Immediate cardiothoracic surgery referral; avoid anticoagulants/antiplatelets (rule out dissection before treating 'ACS'). Pericardiocentesis is avoided for tamponade.",
+            "refs": [
+              "acc-aha-aorta-2022",
+              "esc-aorta-2024"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Type B",
+            "detail": "Uncomplicated: ICU, impulse control, analgesia, serial imaging. Complicated (malperfusion, rupture, refractory pain/hypertension, rapid expansion): TEVAR.",
+            "refs": [
+              "acc-aha-aorta-2022",
+              "esc-aorta-2024"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "esmolol",
+            "role": "First-line impulse control",
+            "route": "IV",
+            "dose": "500 mcg/kg over 1 min, then 50-300 mcg/kg/min",
+            "target": "HR < 60/min",
+            "workedExample": "70 kg: 35 mg bolus; infusion 50 mcg/kg/min = 3.5 mg/min = 21 mL/h of 10 mg/mL",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "acc-aha-aorta-2022"
+            ]
+          },
+          {
+            "drugId": "labetalol",
+            "role": "Alternative beta + alpha blocker",
+            "route": "IV",
+            "dose": "20 mg over 2 min then 20-80 mg every 10 min (max 300 mg) or 0.5-2 mg/min infusion",
+            "dilution": "200 mg in 200 mL = 1 mg/mL; 30-120 mL/h",
+            "calculatorId": "infusion-rate-fixed",
+            "refs": [
+              "acc-aha-aorta-2022"
+            ]
+          },
+          {
+            "drugId": "ntg",
+            "role": "Add-on vasodilator after beta-blockade",
+            "route": "IV",
+            "dose": "5-10 mcg/min, up-titrate every 3-5 min",
+            "dilution": "50 mg in 50 mL = 1,000 mcg/mL (0.3 mL/h = 5 mcg/min)",
+            "target": "SBP < 120 mmHg",
+            "calculatorId": "infusion-rate-fixed",
+            "refs": [
+              "acc-aha-aorta-2022"
+            ]
+          },
+          {
+            "drugId": "morphine",
+            "role": "Analgesia",
+            "route": "IV",
+            "dose": "Morphine 2-4 mg every 5-10 min titrated, or fentanyl 25-50 mcg",
+            "refs": [
+              "acc-aha-aorta-2022"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "add-rs-table",
+            "title": "Aortic Dissection Detection Risk Score (1 point per category present)",
+            "columns": [
+              "Category",
+              "Features"
+            ],
+            "rows": [
+              [
+                "High-risk conditions",
+                "Marfan or connective tissue disease, family history of aortic disease, known aortic valve disease, recent aortic manipulation, known thoracic aortic aneurysm"
+              ],
+              [
+                "High-risk pain features",
+                "Abrupt onset, severe intensity, ripping or tearing"
+              ],
+              [
+                "High-risk exam features",
+                "Pulse deficit, SBP differential, focal neuro deficit + pain, new AR murmur + pain, hypotension or shock"
+              ]
+            ],
+            "refs": [
+              "add-rs"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Chest pain + neurological deficit or pulse deficit: think dissection before thrombolysis or heparin.",
+            "refs": [
+              "acc-aha-aorta-2022"
+            ]
+          },
+          {
+            "text": "Hypotension in dissection suggests tamponade, rupture, severe AR or myocardial ischaemia: emergency surgery.",
+            "refs": [
+              "acc-aha-aorta-2022"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Starting a vasodilator before the beta-blocker: reflex tachycardia increases aortic wall stress (dP/dt).",
+            "refs": [
+              "acc-aha-aorta-2022"
+            ]
+          },
+          {
+            "text": "Giving antiplatelets/heparin/thrombolysis for presumed STEMI when dissection involves the coronary ostia (usually RCA - inferior STEMI).",
+            "refs": [
+              "acc-aha-aorta-2022"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Measure BP in both arms and use the higher arm reading to titrate therapy.",
+            "refs": [
+              "acc-aha-aorta-2022"
+            ]
+          },
+          {
+            "text": "A normal chest X-ray does not exclude dissection; CTA is required if suspicion remains.",
+            "refs": [
+              "esc-aorta-2024"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Acute aortic dissection",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Suspected acute aortic syndrome"
+          },
+          {
+            "id": "unstable",
+            "type": "decision",
+            "text": "Haemodynamically unstable?"
+          },
+          {
+            "id": "tte",
+            "type": "action",
+            "text": "Bedside TTE/TOE; call cardiac surgeon; resuscitate",
+            "severity": "critical"
+          },
+          {
+            "id": "addrs",
+            "type": "action",
+            "text": "ADD-RS + D-dimer; CT angiography"
+          },
+          {
+            "id": "conf",
+            "type": "decision",
+            "text": "Dissection confirmed?"
+          },
+          {
+            "id": "alt",
+            "type": "end",
+            "text": "Alternative diagnosis (ACS, PE, etc.)"
+          },
+          {
+            "id": "ctrl",
+            "type": "action",
+            "text": "Opioid analgesia; esmolol/labetalol to HR < 60; then vasodilator to SBP < 120",
+            "severity": "high"
+          },
+          {
+            "id": "typea",
+            "type": "decision",
+            "text": "Type A (ascending aorta)?"
+          },
+          {
+            "id": "surg",
+            "type": "end",
+            "text": "Emergency surgery",
+            "severity": "critical"
+          },
+          {
+            "id": "comp",
+            "type": "decision",
+            "text": "Complicated type B (malperfusion, rupture, refractory pain/HTN)?"
+          },
+          {
+            "id": "tevar",
+            "type": "end",
+            "text": "TEVAR / vascular intervention",
+            "severity": "high"
+          },
+          {
+            "id": "med",
+            "type": "end",
+            "text": "ICU medical therapy; serial imaging; oral antihypertensives"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "unstable"
+          },
+          {
+            "from": "unstable",
+            "to": "tte",
+            "label": "Yes"
+          },
+          {
+            "from": "unstable",
+            "to": "addrs",
+            "label": "No"
+          },
+          {
+            "from": "tte",
+            "to": "typea"
+          },
+          {
+            "from": "addrs",
+            "to": "conf"
+          },
+          {
+            "from": "conf",
+            "to": "alt",
+            "label": "No"
+          },
+          {
+            "from": "conf",
+            "to": "ctrl",
+            "label": "Yes"
+          },
+          {
+            "from": "ctrl",
+            "to": "typea"
+          },
+          {
+            "from": "typea",
+            "to": "surg",
+            "label": "Yes"
+          },
+          {
+            "from": "typea",
+            "to": "comp",
+            "label": "No"
+          },
+          {
+            "from": "comp",
+            "to": "tevar",
+            "label": "Yes"
+          },
+          {
+            "from": "comp",
+            "to": "med",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "acc-aha-aorta-2022",
+          "esc-aorta-2024"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "An intimal tear lets blood enter the media, creating a false lumen that propagates with each heartbeat. Propagation depends on the rate of rise of aortic pressure (dP/dt) as well as absolute pressure, which is why beta-blockade (reducing HR and contractility) comes before vasodilation.",
+        "evidence": "- 2022 ACC/AHA aortic guideline: IV beta-blocker to HR < 60 and SBP < 120 mmHg; emergency surgery for type A; TEVAR for complicated type B [Isselbacher 2022].\n- ESC 2024 guideline on aortic diseases gives similar targets and recommends CTA as first-line imaging [Mazzolai 2024].\n- ADD-RS ≤ 1 combined with negative D-dimer has high sensitivity for ruling out dissection in low-risk patients [Rogers 2011].",
+        "controversies": "- Pre-emptive TEVAR for uncomplicated type B with high-risk features.\n- Optimal BP target in older patients with chronic hypertension and AKI.",
+        "indiaNotes": "- Uncontrolled hypertension is the main risk factor in India; Marfan syndrome and pregnancy-related dissections are seen in younger patients.\n- Esmolol, labetalol and GTN are widely available; nitroprusside and nicardipine have patchy availability."
+      },
+      "drugIds": [
+        "esmolol",
+        "labetalol",
+        "ntg",
+        "morphine"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-min",
+        "infusion-rate-fixed",
+        "mean-arterial-pressure"
+      ],
+      "references": [
+        "acc-aha-aorta-2022",
+        "esc-aorta-2024",
+        "add-rs"
+      ],
+      "quiz": [
+        {
+          "id": "aortic-dissection-q1",
+          "stem": "Correct sequence of drugs in acute aortic dissection:",
+          "options": [
+            "GTN then beta-blocker",
+            "Beta-blocker first, then vasodilator if needed",
+            "Calcium channel blocker only",
+            "Diuretic then GTN"
+          ],
+          "answerIndex": 1,
+          "explanation": "Beta-blockade prevents reflex tachycardia and lowers dP/dt."
+        },
+        {
+          "id": "aortic-dissection-q2",
+          "stem": "Targets in acute aortic dissection:",
+          "options": [
+            "HR < 100, SBP < 160",
+            "HR < 60, SBP < 120",
+            "HR < 80, MAP 90",
+            "No targets"
+          ],
+          "answerIndex": 1,
+          "explanation": "ACC/AHA 2022 and ESC 2024 targets."
+        },
+        {
+          "id": "aortic-dissection-q3",
+          "stem": "Inferior STEMI with tearing back pain and unequal arm pulses. Next step:",
+          "options": [
+            "Thrombolysis",
+            "Urgent CT aortogram before antithrombotics",
+            "Heparin and aspirin",
+            "Discharge"
+          ],
+          "answerIndex": 1,
+          "explanation": "Dissection can involve the RCA ostium; antithrombotics may be fatal."
+        }
+      ]
+    },
+    {
+      "id": "ruptured-aaa",
+      "title": "Ruptured abdominal aortic aneurysm",
+      "summary": "Rapid recognition, permissive hypotension, massive transfusion and immediate transfer for EVAR or open repair.",
+      "viewKey": "topic:pe-tamponade-aortic-emergencies/ruptured-aaa",
+      "uiHints": {
+        "icon": "alert-octagon",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Ruptured AAA = haemorrhage from an abdominal aortic aneurysm (usually > 5.5 cm, but rupture occurs at smaller sizes). Classic triad: abdominal/back/flank pain, hypotension, pulsatile mass (present in < 50%).",
+          "refs": [
+            "esvs-aaa-2024"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Suspect",
+            "detail": "Older man (> 60), smoker, hypertensive, with sudden abdominal/back/flank pain and collapse or hypotension. Often misdiagnosed as renal colic, MI or pancreatitis.",
+            "time": "0 min",
+            "refs": [
+              "esvs-aaa-2024"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Bedside ultrasound",
+            "detail": "Aortic diameter > 3 cm confirms aneurysm; in an unstable patient with known/likely AAA, this plus the clinical picture is enough to call the vascular team.",
+            "time": "< 5 min",
+            "refs": [
+              "esvs-aaa-2024"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Permissive hypotension",
+            "detail": "Keep the patient conscious with SBP ~70-90 mmHg; avoid large crystalloid volumes; give blood products in ratio (activate MTP), TXA per local policy.",
+            "refs": [
+              "esvs-aaa-2024"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Image only if stable",
+            "detail": "CT angiography to plan EVAR in haemodynamically stable patients; unstable patients go straight to theatre/hybrid suite.",
+            "refs": [
+              "esvs-aaa-2024"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Transfer immediately",
+            "detail": "Contact the nearest vascular centre at once; EVAR is preferred when anatomically suitable. Do not delay transfer for further tests.",
+            "refs": [
+              "esvs-aaa-2024"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Post-op ICU",
+            "detail": "Watch for abdominal compartment syndrome (measure bladder pressure), colonic ischaemia (bloody diarrhoea, lactate), AKI, limb ischaemia, coagulopathy.",
+            "refs": [
+              "esvs-aaa-2024"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "prbc",
+            "role": "Haemorrhagic shock",
+            "route": "IV (warmed)",
+            "dose": "Activate MTP: PRBC:FFP:platelets 1:1:1",
+            "target": "Conscious patient, SBP ~70-90 mmHg until aortic control",
+            "refs": [
+              "esvs-aaa-2024"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "'Renal colic' in a man over 60 with hypotension: scan the aorta.",
+            "refs": [
+              "esvs-aaa-2024"
+            ]
+          },
+          {
+            "text": "Rising bladder pressure > 20 mmHg with new organ dysfunction after repair = abdominal compartment syndrome.",
+            "refs": [
+              "esvs-aaa-2024"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Aggressive fluid resuscitation to 'normal' BP: dislodges clot and increases bleeding.",
+            "refs": [
+              "esvs-aaa-2024"
+            ]
+          },
+          {
+            "text": "Waiting for CT in an unstable patient.",
+            "refs": [
+              "esvs-aaa-2024"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Ultrasound measures outer wall to outer wall in the transverse plane; bowel gas can obscure the view - scan from the left flank.",
+            "refs": [
+              "esvs-aaa-2024"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Suspected ruptured AAA",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Pain + collapse in older patient"
+          },
+          {
+            "id": "us",
+            "type": "action",
+            "text": "Bedside aortic ultrasound"
+          },
+          {
+            "id": "aaa",
+            "type": "decision",
+            "text": "AAA present (> 3 cm)?"
+          },
+          {
+            "id": "other",
+            "type": "end",
+            "text": "Other diagnosis"
+          },
+          {
+            "id": "call",
+            "type": "action",
+            "text": "Call vascular team; MTP; permissive hypotension (conscious, SBP 70-90)",
+            "severity": "critical"
+          },
+          {
+            "id": "stable",
+            "type": "decision",
+            "text": "Haemodynamically stable enough for CT?"
+          },
+          {
+            "id": "cta",
+            "type": "action",
+            "text": "CTA for EVAR planning"
+          },
+          {
+            "id": "or",
+            "type": "end",
+            "text": "Immediate theatre / hybrid suite (EVAR or open)",
+            "severity": "critical"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "us"
+          },
+          {
+            "from": "us",
+            "to": "aaa"
+          },
+          {
+            "from": "aaa",
+            "to": "other",
+            "label": "No"
+          },
+          {
+            "from": "aaa",
+            "to": "call",
+            "label": "Yes"
+          },
+          {
+            "from": "call",
+            "to": "stable"
+          },
+          {
+            "from": "stable",
+            "to": "cta",
+            "label": "Yes"
+          },
+          {
+            "from": "stable",
+            "to": "or",
+            "label": "No"
+          },
+          {
+            "from": "cta",
+            "to": "or"
+          }
+        ],
+        "refs": [
+          "esvs-aaa-2024"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Most ruptures are retroperitoneal, where tamponade by surrounding tissue may temporarily contain bleeding; raising BP or rough handling can convert a contained into a free intraperitoneal rupture.",
+        "evidence": "- ESVS 2024 recommends permissive hypotension, immediate transfer to a vascular centre and EVAR as first choice for anatomically suitable ruptured AAA [Wanhainen 2024].",
+        "controversies": "- Exact SBP target; age and frailty thresholds for offering repair; palliative care for those unfit.",
+        "indiaNotes": "- EVAR capability is limited to large cities; most patients need rapid inter-hospital transfer, so early communication is vital. Consider family discussion on prognosis in very elderly/frail patients."
+      },
+      "drugIds": [
+        "prbc"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "esvs-aaa-2024"
+      ],
+      "quiz": [
+        {
+          "id": "ruptured-aaa-q1",
+          "stem": "Initial BP strategy in ruptured AAA before aortic control:",
+          "options": [
+            "MAP 90",
+            "Permissive hypotension keeping patient conscious (SBP ~70-90)",
+            "SBP 140",
+            "No BP targets"
+          ],
+          "answerIndex": 1,
+          "explanation": "Avoid clot disruption while maintaining cerebral perfusion."
+        },
+        {
+          "id": "ruptured-aaa-q2",
+          "stem": "An unstable patient with a 7 cm AAA on ultrasound. Next:",
+          "options": [
+            "CT first",
+            "Immediate theatre / vascular centre",
+            "Admit to ward",
+            "Thrombolysis"
+          ],
+          "answerIndex": 1,
+          "explanation": "Unstable patients should not go to CT."
+        },
+        {
+          "id": "ruptured-aaa-q3",
+          "stem": "Complication to monitor after repair:",
+          "options": [
+            "Abdominal compartment syndrome",
+            "Hyperthyroidism",
+            "Asthma",
+            "Gout"
+          ],
+          "answerIndex": 0,
+          "explanation": "Massive transfusion and retroperitoneal haematoma raise intra-abdominal pressure."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "alteplase",
+      "name": "Alteplase (rt-PA)",
+      "class": "Fibrinolytic",
+      "indications": "High-risk (category E) PE; rescue in deteriorating intermediate-high-risk PE",
+      "adultDose": "100 mg IV over 2 h (10 mg bolus + 90 mg over 2 h). Cardiac arrest due to PE: 0.6 mg/kg (max 50 mg) over 15 min; continue CPR 60-90 min.",
+      "preparationIndia": "50 mg vials (expensive in India).",
+      "cautions": "Stop UFH during infusion; restart when aPTT < 2x normal. Absolute contraindications: prior haemorrhagic stroke, ischaemic stroke < 6 months, CNS neoplasm, major trauma/surgery/head injury < 3 weeks, active bleeding, bleeding diathesis.",
+      "refs": [
+        "esc-pe-2019"
+      ]
+    },
+    {
+      "id": "tenecteplase",
+      "name": "Tenecteplase",
+      "class": "Fibrinolytic",
+      "indications": "High-risk PE (off-label alternative where alteplase not available)",
+      "adultDose": "Weight-based single IV bolus: < 60 kg 30 mg; 60-69 kg 35 mg; 70-79 kg 40 mg; 80-89 kg 45 mg; ≥ 90 kg 50 mg.",
+      "preparationIndia": "20 mg and 40 mg vials (Indian brands) - check vial size; reconstitute 5 mg/mL.",
+      "cautions": "PEITHO (full-dose TNK in intermediate-risk) showed more haemorrhagic strokes (2% vs 0.2%).",
+      "verify": "Not licensed for PE in India; dosing is extrapolated from STEMI/PEITHO. Consider half-dose in elderly per local protocol.",
+      "refs": [
+        "esc-pe-2019",
+        "peitho"
+      ]
+    },
+    {
+      "id": "streptokinase",
+      "name": "Streptokinase",
+      "class": "Fibrinolytic",
+      "indications": "High-risk PE where alteplase/TNK unavailable",
+      "adultDose": "Accelerated: 1.5 million IU IV over 2 h. Older regimen: 250,000 units over 30 min then 100,000 units/h for 12-24 h.",
+      "preparationIndia": "15 lakh (1.5 million) IU vials widely available and cheap in India.",
+      "cautions": "Hypotension, allergy; do not repeat within 6-12 months (antibodies).",
+      "refs": [
+        "esc-pe-2019"
+      ]
+    },
+    {
+      "id": "ufh",
+      "name": "Unfractionated heparin",
+      "class": "Anticoagulant",
+      "indications": "PE when thrombolysis/procedure possible, haemodynamic instability, severe renal impairment (CrCl < 30 mL/min)",
+      "adultDose": "80 units/kg IV bolus, then 18 units/kg/h; adjust to aPTT 1.5-2.5x control (or anti-Xa 0.3-0.7 units/mL).",
+      "preparationIndia": "5,000 units/mL vials; 25,000 units in 50 mL NS = 500 units/mL.",
+      "monitoring": "aPTT 6 h after start and after each change; platelets (HIT).",
+      "refs": [
+        "esc-pe-2019"
+      ]
+    },
+    {
+      "id": "enoxaparin",
+      "name": "Enoxaparin (LMWH)",
+      "class": "Anticoagulant",
+      "indications": "PE without haemodynamic instability (preferred parenteral agent)",
+      "adultDose": "1 mg/kg SC every 12 h (or 1.5 mg/kg daily). CrCl 15-30 mL/min: 1 mg/kg once daily.",
+      "preparationIndia": "40, 60, 80 mg prefilled syringes.",
+      "renalHepatic": "Avoid or anti-Xa monitor if CrCl < 15 mL/min; use UFH.",
+      "refs": [
+        "esc-pe-2019",
+        "aha-pe-2026"
+      ]
+    },
+    {
+      "id": "noradrenaline",
+      "name": "Noradrenaline",
+      "class": "Vasopressor",
+      "indications": "Hypotension in RV failure, PE, tamponade bridge",
+      "adultDose": "0.05-0.5 mcg/kg/min, titrate to MAP ≥ 65 mmHg (higher may be needed to perfuse the RV).",
+      "preparationIndia": "4 mg in 50 mL = 80 mcg/mL (or 8 mg in 50 mL = 160 mcg/mL); central line preferred, peripheral short-term acceptable.",
+      "refs": [
+        "hfa-rv-2016"
+      ]
+    },
+    {
+      "id": "dobutamine",
+      "name": "Dobutamine",
+      "class": "Inotrope",
+      "indications": "Low cardiac output in RV failure",
+      "adultDose": "2.5-10 mcg/kg/min.",
+      "preparationIndia": "250 mg in 50 mL = 5,000 mcg/mL.",
+      "cautions": "Tachyarrhythmias, hypotension (combine with noradrenaline).",
+      "refs": [
+        "hfa-rv-2016"
+      ]
+    },
+    {
+      "id": "esmolol",
+      "name": "Esmolol",
+      "class": "Short-acting beta-1 blocker",
+      "indications": "Aortic dissection HR control (first line)",
+      "adultDose": "Loading 500 mcg/kg over 1 min, then 50-300 mcg/kg/min infusion; titrate to HR < 60/min.",
+      "preparationIndia": "100 mg/10 mL vials; often run undiluted 10 mg/mL.",
+      "cautions": "Bradycardia, bronchospasm (less than non-selective), avoid in cocaine-related dissection and acute AR with shock.",
+      "refs": [
+        "acc-aha-aorta-2022"
+      ]
+    },
+    {
+      "id": "labetalol",
+      "name": "Labetalol",
+      "class": "Alpha + beta blocker",
+      "indications": "Aortic dissection HR and BP control",
+      "adultDose": "20 mg IV over 2 min, then 20-80 mg every 10 min (max 300 mg) or infusion 0.5-2 mg/min.",
+      "preparationIndia": "20 mg/4 mL (5 mg/mL) ampoules; infusion 200 mg in 200 mL = 1 mg/mL.",
+      "cautions": "Asthma, heart block, decompensated heart failure.",
+      "refs": [
+        "acc-aha-aorta-2022"
+      ]
+    },
+    {
+      "id": "ntg",
+      "name": "Glyceryl trinitrate (nitroglycerin)",
+      "class": "Vasodilator",
+      "indications": "Additional BP control in dissection after beta-blockade",
+      "adultDose": "Start 5-10 mcg/min, increase by 5-10 mcg/min every 3-5 min (usual up to 200 mcg/min).",
+      "preparationIndia": "25 mg/5 mL ampoules; 50 mg in 50 mL = 1,000 mcg/mL (6 mL/h = 100 mcg/min).",
+      "cautions": "Reflex tachycardia if given before beta-blocker; headache; tolerance.",
+      "refs": [
+        "acc-aha-aorta-2022"
+      ]
+    },
+    {
+      "id": "morphine",
+      "name": "Morphine / fentanyl",
+      "class": "Opioid analgesic",
+      "indications": "Pain in aortic dissection (reduces sympathetic drive)",
+      "adultDose": "Morphine 2-4 mg IV titrated every 5-10 min; or fentanyl 25-50 mcg IV.",
+      "preparationIndia": "Morphine 10 mg/mL ampoules; fentanyl 50 mcg/mL.",
+      "refs": [
+        "acc-aha-aorta-2022"
+      ]
+    },
+    {
+      "id": "prbc",
+      "name": "Packed red blood cells (PRBC) with plasma and platelets",
+      "class": "Blood component",
+      "indications": "Haemorrhagic shock (ruptured AAA)",
+      "adultDose": "Massive transfusion: PRBC:FFP:platelets 1:1:1 until bleeding controlled.",
+      "preparationIndia": "~250-350 mL per unit; O-negative/O-positive uncrossmatched in emergency.",
+      "cautions": "Warm products; monitor ionised calcium, potassium and temperature.",
+      "refs": [
+        "esvs-aaa-2024"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "esc-pe-2019",
+      "citation": "Konstantinides SV, Meyer G, Becattini C, et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society. Eur Heart J 2020;41:543-603.",
+      "url": "https://doi.org/10.1093/eurheartj/ehz405",
+      "year": 2019,
+      "type": "guideline",
+      "doi": "10.1093/eurheartj/ehz405"
+    },
+    {
+      "id": "aha-pe-2026",
+      "citation": "Creager MA, et al (writing committee). 2026 AHA/ACC/ACCP/ACEP/CHEST/SCAI/SHM/SIR/SVM/SVN Guideline for the Evaluation and Management of Acute Pulmonary Embolism in Adults. J Am Coll Cardiol 2026.",
+      "url": "https://doi.org/10.1016/j.jacc.2025.11.005",
+      "year": 2026,
+      "type": "guideline",
+      "doi": "10.1016/j.jacc.2025.11.005"
+    },
+    {
+      "id": "peitho",
+      "citation": "Meyer G, Vicaut E, Danays T, et al. Fibrinolysis for patients with intermediate-risk pulmonary embolism (PEITHO). N Engl J Med 2014;370:1402-11.",
+      "url": "https://doi.org/10.1056/NEJMoa1302097",
+      "year": 2014,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1302097"
+    },
+    {
+      "id": "spesi",
+      "citation": "Jimenez D, Aujesky D, Moores L, et al. Simplification of the pulmonary embolism severity index for prognostication in patients with acute symptomatic pulmonary embolism. Arch Intern Med 2010;170:1383-9.",
+      "url": "https://doi.org/10.1001/archinternmed.2010.199",
+      "year": 2010,
+      "type": "trial",
+      "doi": "10.1001/archinternmed.2010.199"
+    },
+    {
+      "id": "hfa-rv-2016",
+      "citation": "Harjola VP, Mebazaa A, Celutkiene J, et al. Contemporary management of acute right ventricular failure: a statement from the Heart Failure Association and the Working Group on Pulmonary Circulation and Right Ventricular Function of the ESC. Eur J Heart Fail 2016;18:226-41.",
+      "url": "https://doi.org/10.1002/ejhf.478",
+      "year": 2016,
+      "type": "consensus",
+      "doi": "10.1002/ejhf.478"
+    },
+    {
+      "id": "esc-pericardial-2015",
+      "citation": "Adler Y, Charron P, Imazio M, et al. 2015 ESC Guidelines for the diagnosis and management of pericardial diseases. Eur Heart J 2015;36:2921-64.",
+      "url": "https://doi.org/10.1093/eurheartj/ehv318",
+      "year": 2015,
+      "type": "guideline",
+      "doi": "10.1093/eurheartj/ehv318"
+    },
+    {
+      "id": "acc-aha-aorta-2022",
+      "citation": "Isselbacher EM, Preventza O, Hamilton Black J 3rd, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease. Circulation 2022;146:e334-482.",
+      "url": "https://doi.org/10.1161/CIR.0000000000001106",
+      "year": 2022,
+      "type": "guideline",
+      "doi": "10.1161/CIR.0000000000001106"
+    },
+    {
+      "id": "esc-aorta-2024",
+      "citation": "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J 2024;45:3538-700.",
+      "url": "https://doi.org/10.1093/eurheartj/ehae179",
+      "year": 2024,
+      "type": "guideline",
+      "doi": "10.1093/eurheartj/ehae179"
+    },
+    {
+      "id": "add-rs",
+      "citation": "Rogers AM, Hermann LK, Booher AM, et al. Sensitivity of the aortic dissection detection risk score, a novel guideline-based tool for identification of acute aortic dissection at initial presentation. Circulation 2011;123:2213-8.",
+      "url": "https://doi.org/10.1161/CIRCULATIONAHA.110.988568",
+      "year": 2011,
+      "type": "trial",
+      "doi": "10.1161/CIRCULATIONAHA.110.988568"
+    },
+    {
+      "id": "esvs-aaa-2024",
+      "citation": "Wanhainen A, Van Herzeele I, Bastos Goncalves F, et al. European Society for Vascular Surgery (ESVS) 2024 Clinical Practice Guidelines on the Management of Abdominal Aorto-Iliac Artery Aneurysms. Eur J Vasc Endovasc Surg 2024;67:192-331.",
+      "url": "https://doi.org/10.1016/j.ejvs.2023.11.002",
+      "year": 2024,
+      "type": "guideline",
+      "doi": "10.1016/j.ejvs.2023.11.002"
+    }
+  ],
+  "verify": [
+    {
+      "item": "AHA/ACC 2026 PE category mapping to ESC risk classes",
+      "reason": "The app shows an approximate mapping; confirm subcategory definitions against the full guideline before publishing."
+    },
+    {
+      "item": "Tenecteplase weight-band dosing for PE",
+      "reason": "Off-label in India; confirm institutional protocol."
+    }
+  ]
+}

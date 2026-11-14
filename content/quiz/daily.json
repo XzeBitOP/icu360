@@ -1,0 +1,101 @@
+{
+  "description": "Daily Quiz sets shown on /quiz, keyed by date (YYYY-MM-DD, India time). Each set has 5 MCQs. New sets are added only after Kenil approves them in chat. The first set below is a sample drawn from existing module quiz items.",
+  "sets": [
+    {
+      "date": "2026-11-15",
+      "title": "Starter set: drawn from the module quizzes",
+      "questions": [
+        {
+          "id": "2026-11-15-1",
+          "stem": "Which hour-1 bundle element carries a STRONG recommendation in SSC 2026?",
+          "options": [
+            "30 mL/kg crystalloid",
+            "Lactate measurement",
+            "Antibiotics within 1 h in septic shock",
+            "Albumin for everyone"
+          ],
+          "answerIndex": 2,
+          "explanation": "Antibiotics immediately (ideally within 1 h) in septic shock or probable sepsis is strong; 'at least 30 mL/kg' remains conditional with low-certainty evidence, and SSC 2026 suggests crystalloid alone over added albumin.",
+          "reference": {
+            "label": "Prescott HC, Antonelli M, Alhazzani W, et al. Surviving Sepsis Campaign: international guidelines for management of sepsis and septic shock 2026. Intensive Care Med. 2026;52(5):863-936. Co-published in Crit Care Med. 2026 (doi:10.1097/CCM.0000000000007075)",
+            "url": "https://doi.org/10.1007/s00134-026-08361-1"
+          },
+          "moduleId": "sepsis-septic-shock",
+          "topicId": "hour-1-bundle"
+        },
+        {
+          "id": "2026-11-15-2",
+          "stem": "First drug for K+ 7.2 with broad QRS:",
+          "options": [
+            "Insulin-dextrose",
+            "Calcium gluconate 10% 30 mL",
+            "Salbutamol",
+            "Sodium bicarbonate"
+          ],
+          "answerIndex": 1,
+          "explanation": "Membrane stabilisation first.",
+          "reference": {
+            "label": "UK Kidney Association. Clinical practice guideline: Treatment of acute hyperkalaemia in adults (October…",
+            "url": "https://www.ukkidney.org/health-professionals/guidelines/treatment-acute-hyperkalaemia-adults-0"
+          },
+          "moduleId": "fluids-electrolytes",
+          "topicId": "hyperkalaemia"
+        },
+        {
+          "id": "2026-11-15-3",
+          "stem": "PBW of a 160 cm man:",
+          "options": [
+            "50 kg",
+            "57 kg",
+            "65 kg",
+            "70 kg"
+          ],
+          "answerIndex": 1,
+          "explanation": "50 + 0.91 × (160 − 152.4) = 56.9 kg.",
+          "reference": {
+            "label": "Acute Respiratory Distress Syndrome Network. Ventilation with lower tidal volumes as compared with…",
+            "url": "https://doi.org/10.1056/NEJM200005043421801"
+          },
+          "moduleId": "mechanical-ventilation",
+          "topicId": "initial-settings"
+        },
+        {
+          "id": "2026-11-15-4",
+          "stem": "Atropine not atropinised after 2 mg at 5 min. Next dose:",
+          "options": [
+            "2 mg",
+            "4 mg",
+            "0.6 mg",
+            "Stop atropine"
+          ],
+          "answerIndex": 1,
+          "explanation": "Double every 5 min.",
+          "reference": {
+            "label": "Eddleston M, Buckley NA, Eyer P, Dawson AH. Management of acute organophosphorus pesticide poisoning.…",
+            "url": "https://doi.org/10.1016/S0140-6736(07)61202-1"
+          },
+          "moduleId": "agrochemical-household-poisons",
+          "topicId": "organophosphate-carbamate"
+        },
+        {
+          "id": "2026-11-15-5",
+          "stem": "pH 7.20, HCO3- 10, PaCO2 30. Compensation?",
+          "options": [
+            "Appropriate (expected 23 ± 2)",
+            "Additional respiratory acidosis (expected 23 ± 2)",
+            "Additional respiratory alkalosis",
+            "Cannot tell"
+          ],
+          "answerIndex": 1,
+          "explanation": "Expected PaCO2 = 1.5 × 10 + 8 = 23 ± 2; 30 is too high.",
+          "reference": {
+            "label": "Berend K, de Vries APJ, Gans ROB. Physiological approach to assessment of acid-base disturbances. N Engl J…",
+            "url": "https://doi.org/10.1056/NEJMra1003327"
+          },
+          "moduleId": "acid-base-abg",
+          "topicId": "stepwise-interpretation"
+        }
+      ]
+    }
+  ]
+}

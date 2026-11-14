@@ -1,0 +1,3713 @@
+{
+  "schemaVersion": "1.0.0",
+  "description": "Shared calculators referenced by modules via calculatorIds. Formula grammar: see CONTENT_FORMAT.md section 6.",
+  "calculators": [
+    {
+      "id": "infusion-rate-weight-min",
+      "name": "Infusion rate from mcg/kg/min",
+      "category": "infusion",
+      "description": "Pump rate in mL/h for drugs dosed in mcg/kg/min (noradrenaline, adrenaline, dobutamine, milrinone, nitroglycerin by weight).",
+      "inputs": [
+        {
+          "id": "dose",
+          "label": "Dose",
+          "type": "number",
+          "unit": "mcg/kg/min",
+          "default": 0.1
+        },
+        {
+          "id": "weight",
+          "label": "Weight",
+          "type": "number",
+          "unit": "kg",
+          "default": 70
+        },
+        {
+          "id": "conc",
+          "label": "Concentration",
+          "type": "number",
+          "unit": "mcg/mL",
+          "default": 80
+        }
+      ],
+      "formula": "dose * weight * 60 / conc",
+      "output": {
+        "label": "Pump rate",
+        "unit": "mL/h",
+        "decimals": 1
+      },
+      "interpretation": [],
+      "references": [],
+      "example": {
+        "inputs": {
+          "dose": 0.1,
+          "weight": 70,
+          "conc": 80
+        },
+        "expected": 5.25
+      },
+      "notes": "Concentration (mcg/mL) = drug mg × 1000 ÷ syringe volume mL. 4 mg in 50 mL = 80 mcg/mL."
+    },
+    {
+      "id": "infusion-dose-from-rate",
+      "name": "Dose from pump rate (mcg/kg/min)",
+      "category": "infusion",
+      "description": "Reverse calculation: what dose is the patient receiving at the current pump rate?",
+      "inputs": [
+        {
+          "id": "rate",
+          "label": "Pump rate",
+          "type": "number",
+          "unit": "mL/h",
+          "default": 5
+        },
+        {
+          "id": "weight",
+          "label": "Weight",
+          "type": "number",
+          "unit": "kg",
+          "default": 70
+        },
+        {
+          "id": "conc",
+          "label": "Concentration",
+          "type": "number",
+          "unit": "mcg/mL",
+          "default": 80
+        }
+      ],
+      "formula": "rate * conc / (weight * 60)",
+      "output": {
+        "label": "Dose",
+        "unit": "mcg/kg/min",
+        "decimals": 3
+      },
+      "interpretation": [],
+      "references": [],
+      "example": {
+        "inputs": {
+          "rate": 5.25,
+          "weight": 70,
+          "conc": 80
+        },
+        "expected": 0.1
+      }
+    },
+    {
+      "id": "infusion-rate-weight-hour",
+      "name": "Infusion rate from per-kg-per-hour dose",
+      "category": "infusion",
+      "description": "Pump rate for drugs dosed per kg per hour (insulin U/kg/h, midazolam mg/kg/h, propofol mg/kg/h, fentanyl mcg/kg/h, dexmedetomidine mcg/kg/h).",
+      "inputs": [
+        {
+          "id": "dose",
+          "label": "Dose per kg per hour",
+          "type": "number",
+          "unit": "unit/kg/h",
+          "default": 0.1
+        },
+        {
+          "id": "weight",
+          "label": "Weight",
+          "type": "number",
+          "unit": "kg",
+          "default": 70
+        },
+        {
+          "id": "conc",
+          "label": "Concentration",
+          "type": "number",
+          "unit": "unit/mL",
+          "default": 1
+        }
+      ],
+      "formula": "dose * weight / conc",
+      "output": {
+        "label": "Pump rate",
+        "unit": "mL/h",
+        "decimals": 1
+      },
+      "interpretation": [],
+      "references": [],
+      "example": {
+        "inputs": {
+          "dose": 0.1,
+          "weight": 70,
+          "conc": 1
+        },
+        "expected": 7
+      },
+      "notes": "Use the same unit for dose and concentration (U with U/mL, mg with mg/mL, mcg with mcg/mL). Example: fixed-rate insulin 0.1 U/kg/h with 50 U in 50 mL (1 U/mL)."
+    },
+    {
+      "id": "infusion-rate-fixed",
+      "name": "Infusion rate from a fixed hourly or per-minute dose",
+      "category": "infusion",
+      "description": "Pump rate for non-weight-based infusions such as vasopressin (U/min), labetalol (mg/min) or amiodarone (mg/h).",
+      "inputs": [
+        {
+          "id": "dose",
+          "label": "Dose",
+          "type": "number",
+          "unit": "unit/h",
+          "default": 2.4
+        },
+        {
+          "id": "conc",
+          "label": "Concentration",
+          "type": "number",
+          "unit": "unit/mL",
+          "default": 0.4
+        }
+      ],
+      "formula": "dose / conc",
+      "output": {
+        "label": "Pump rate",
+        "unit": "mL/h",
+        "decimals": 1
+      },
+      "interpretation": [],
+      "references": [],
+      "example": {
+        "inputs": {
+          "dose": 1.8,
+          "conc": 0.4
+        },
+        "expected": 4.5
+      },
+      "notes": "Convert per-minute doses to per-hour first (×60). Vasopressin 0.03 U/min = 1.8 U/h; with 20 U in 50 mL (0.4 U/mL) = 4.5 mL/h."
+    },
+    {
+      "id": "predicted-body-weight",
+      "name": "Predicted (ideal) body weight",
+      "category": "body-size",
+      "description": "ARDSNet predicted body weight from height and sex. Use for tidal volume, not for most drug doses.",
+      "inputs": [
+        {
+          "id": "sexBase",
+          "label": "Sex",
+          "type": "select",
+          "options": [
+            {
+              "label": "Male",
+              "value": 50
+            },
+            {
+              "label": "Female",
+              "value": 45.5
+            }
+          ],
+          "default": 50
+        },
+        {
+          "id": "height",
+          "label": "Height",
+          "type": "number",
+          "unit": "cm",
+          "default": 170
+        }
+      ],
+      "formula": "sexBase + 0.91 * (height - 152.4)",
+      "output": {
+        "label": "Predicted body weight",
+        "unit": "kg",
+        "decimals": 1
+      },
+      "interpretation": [],
+      "references": [
+        {
+          "citation": "ARDS Network. Ventilation with lower tidal volumes as compared with traditional tidal volumes for acute lung injury and ARDS. N Engl J Med 2000;342:1301-8.",
+          "url": "https://doi.org/10.1056/NEJM200005043421801",
+          "year": 2000
+        },
+        {
+          "citation": "Devine BJ. Gentamicin therapy. Drug Intell Clin Pharm 1974;8:650-5.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Devine+1974+gentamicin+therapy",
+          "year": 1974
+        }
+      ],
+      "example": {
+        "inputs": {
+          "sexBase": 50,
+          "height": 170
+        },
+        "expected": 66.02
+      }
+    },
+    {
+      "id": "tidal-volume-pbw",
+      "name": "Tidal volume from predicted body weight",
+      "category": "ventilation",
+      "description": "Lung-protective tidal volume (usually 6 mL/kg PBW; range 4-8).",
+      "inputs": [
+        {
+          "id": "sexBase",
+          "label": "Sex",
+          "type": "select",
+          "options": [
+            {
+              "label": "Male",
+              "value": 50
+            },
+            {
+              "label": "Female",
+              "value": 45.5
+            }
+          ],
+          "default": 50
+        },
+        {
+          "id": "height",
+          "label": "Height",
+          "type": "number",
+          "unit": "cm",
+          "default": 170
+        },
+        {
+          "id": "mlkg",
+          "label": "mL per kg PBW",
+          "type": "number",
+          "unit": "mL/kg",
+          "default": 6
+        }
+      ],
+      "formula": "(sexBase + 0.91 * (height - 152.4)) * mlkg",
+      "output": {
+        "label": "Tidal volume",
+        "unit": "mL",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "Within lung-protective range if mL/kg ≤ 8",
+          "severity": "normal",
+          "max": 8.0001
+        }
+      ],
+      "references": [
+        {
+          "citation": "ARDS Network. Ventilation with lower tidal volumes as compared with traditional tidal volumes for acute lung injury and ARDS. N Engl J Med 2000;342:1301-8.",
+          "url": "https://doi.org/10.1056/NEJM200005043421801",
+          "year": 2000
+        }
+      ],
+      "example": {
+        "inputs": {
+          "sexBase": 50,
+          "height": 170,
+          "mlkg": 6
+        },
+        "expected": 396.12
+      },
+      "notes": "Interpretation band applies to the mL/kg input, not the output volume."
+    },
+    {
+      "id": "adjusted-body-weight",
+      "name": "Adjusted body weight",
+      "category": "body-size",
+      "description": "IBW + 0.4 × (actual − IBW). Used for some drug doses (e.g. aminoglycosides) and nutrition in obesity.",
+      "inputs": [
+        {
+          "id": "sexBase",
+          "label": "Sex",
+          "type": "select",
+          "options": [
+            {
+              "label": "Male",
+              "value": 50
+            },
+            {
+              "label": "Female",
+              "value": 45.5
+            }
+          ],
+          "default": 50
+        },
+        {
+          "id": "height",
+          "label": "Height",
+          "type": "number",
+          "unit": "cm",
+          "default": 170
+        },
+        {
+          "id": "weight",
+          "label": "Actual weight",
+          "type": "number",
+          "unit": "kg",
+          "default": 110
+        }
+      ],
+      "formula": "(sexBase + 0.91 * (height - 152.4)) + 0.4 * (weight - (sexBase + 0.91 * (height - 152.4)))",
+      "output": {
+        "label": "Adjusted body weight",
+        "unit": "kg",
+        "decimals": 1
+      },
+      "interpretation": [],
+      "references": [
+        {
+          "citation": "Devine BJ. Gentamicin therapy. Drug Intell Clin Pharm 1974;8:650-5.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Devine+1974+gentamicin+therapy",
+          "year": 1974
+        }
+      ],
+      "example": {
+        "inputs": {
+          "sexBase": 50,
+          "height": 170,
+          "weight": 110
+        },
+        "expected": 83.61
+      }
+    },
+    {
+      "id": "bmi",
+      "name": "Body mass index",
+      "category": "body-size",
+      "description": "Weight ÷ height². Asian cut-offs differ (overweight ≥ 23, obese ≥ 25 in Indian guidance).",
+      "inputs": [
+        {
+          "id": "weight",
+          "label": "Weight",
+          "type": "number",
+          "unit": "kg",
+          "default": 70
+        },
+        {
+          "id": "height",
+          "label": "Height",
+          "type": "number",
+          "unit": "cm",
+          "default": 170
+        }
+      ],
+      "formula": "weight / Math.pow(height / 100, 2)",
+      "output": {
+        "label": "BMI",
+        "unit": "kg/m²",
+        "decimals": 1
+      },
+      "interpretation": [
+        {
+          "label": "Underweight",
+          "severity": "mild",
+          "max": 18.5
+        },
+        {
+          "label": "Normal (Asian cut-off)",
+          "severity": "normal",
+          "min": 18.5,
+          "max": 23
+        },
+        {
+          "label": "Overweight (Asian cut-off)",
+          "severity": "mild",
+          "min": 23,
+          "max": 25
+        },
+        {
+          "label": "Obese (Asian cut-off)",
+          "severity": "moderate",
+          "min": 25
+        }
+      ],
+      "references": [
+        {
+          "citation": "Mosteller RD. Simplified calculation of body-surface area. N Engl J Med 1987;317:1098.",
+          "url": "https://doi.org/10.1056/NEJM198710223171717",
+          "year": 1987
+        }
+      ],
+      "example": {
+        "inputs": {
+          "weight": 70,
+          "height": 170
+        },
+        "expected": 24.22
+      },
+      "verify": "Asian BMI cut-offs (23/25) follow Indian consensus; confirm preferred source."
+    },
+    {
+      "id": "bsa-mosteller",
+      "name": "Body surface area (Mosteller)",
+      "category": "body-size",
+      "description": "√(height cm × weight kg ÷ 3600).",
+      "inputs": [
+        {
+          "id": "height",
+          "label": "Height",
+          "type": "number",
+          "unit": "cm",
+          "default": 170
+        },
+        {
+          "id": "weight",
+          "label": "Weight",
+          "type": "number",
+          "unit": "kg",
+          "default": 70
+        }
+      ],
+      "formula": "Math.sqrt(height * weight / 3600)",
+      "output": {
+        "label": "BSA",
+        "unit": "m²",
+        "decimals": 2
+      },
+      "interpretation": [],
+      "references": [
+        {
+          "citation": "Mosteller RD. Simplified calculation of body-surface area. N Engl J Med 1987;317:1098.",
+          "url": "https://doi.org/10.1056/NEJM198710223171717",
+          "year": 1987
+        }
+      ],
+      "example": {
+        "inputs": {
+          "height": 170,
+          "weight": 70
+        },
+        "expected": 1.82
+      }
+    },
+    {
+      "id": "pf-ratio",
+      "name": "PaO₂/FiO₂ ratio",
+      "category": "ventilation",
+      "description": "Oxygenation ratio with ARDS severity bands (Berlin; PEEP ≥ 5 cmH₂O).",
+      "inputs": [
+        {
+          "id": "pao2",
+          "label": "PaO₂",
+          "type": "number",
+          "unit": "mmHg",
+          "default": 80
+        },
+        {
+          "id": "fio2",
+          "label": "FiO₂",
+          "type": "number",
+          "unit": "fraction 0.21-1.0",
+          "default": 0.5
+        }
+      ],
+      "formula": "pao2 / fio2",
+      "output": {
+        "label": "P/F ratio",
+        "unit": "mmHg",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "Severe ARDS range (≤ 100)",
+          "severity": "critical",
+          "max": 100
+        },
+        {
+          "label": "Moderate ARDS range (100-200)",
+          "severity": "severe",
+          "min": 100,
+          "max": 200
+        },
+        {
+          "label": "Mild ARDS range (200-300)",
+          "severity": "moderate",
+          "min": 200,
+          "max": 300
+        },
+        {
+          "label": "Not in ARDS range",
+          "severity": "normal",
+          "min": 300
+        }
+      ],
+      "references": [
+        {
+          "citation": "ARDS Definition Task Force. Acute respiratory distress syndrome: the Berlin Definition. JAMA 2012;307:2526-33.",
+          "url": "https://doi.org/10.1001/jama.2012.5669",
+          "year": 2012
+        },
+        {
+          "citation": "Matthay MA, et al. A new global definition of acute respiratory distress syndrome. Am J Respir Crit Care Med 2024;209:37-47.",
+          "url": "https://doi.org/10.1164/rccm.202303-0558WS",
+          "year": 2024
+        }
+      ],
+      "example": {
+        "inputs": {
+          "pao2": 80,
+          "fio2": 0.5
+        },
+        "expected": 160
+      }
+    },
+    {
+      "id": "sf-ratio",
+      "name": "SpO₂/FiO₂ ratio",
+      "category": "ventilation",
+      "description": "Non-invasive oxygenation ratio; valid only when SpO₂ ≤ 97%. Global ARDS definition uses S/F ≤ 315.",
+      "inputs": [
+        {
+          "id": "spo2",
+          "label": "SpO₂",
+          "type": "number",
+          "unit": "%",
+          "default": 92
+        },
+        {
+          "id": "fio2",
+          "label": "FiO₂",
+          "type": "number",
+          "unit": "fraction 0.21-1.0",
+          "default": 0.4
+        }
+      ],
+      "formula": "spo2 / fio2",
+      "output": {
+        "label": "S/F ratio",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "Consistent with ARDS oxygenation criterion (≤ 315)",
+          "severity": "severe",
+          "max": 315.0001
+        },
+        {
+          "label": "Above ARDS threshold",
+          "severity": "normal",
+          "min": 315.0001
+        }
+      ],
+      "references": [
+        {
+          "citation": "Matthay MA, et al. A new global definition of acute respiratory distress syndrome. Am J Respir Crit Care Med 2024;209:37-47.",
+          "url": "https://doi.org/10.1164/rccm.202303-0558WS",
+          "year": 2024
+        }
+      ],
+      "example": {
+        "inputs": {
+          "spo2": 92,
+          "fio2": 0.4
+        },
+        "expected": 230
+      }
+    },
+    {
+      "id": "oxygenation-index",
+      "name": "Oxygenation index",
+      "category": "ventilation",
+      "description": "OI = FiO₂(%) × mean airway pressure ÷ PaO₂.",
+      "inputs": [
+        {
+          "id": "fio2pct",
+          "label": "FiO₂",
+          "type": "number",
+          "unit": "%",
+          "default": 80
+        },
+        {
+          "id": "mpaw",
+          "label": "Mean airway pressure",
+          "type": "number",
+          "unit": "cmH₂O",
+          "default": 20
+        },
+        {
+          "id": "pao2",
+          "label": "PaO₂",
+          "type": "number",
+          "unit": "mmHg",
+          "default": 60
+        }
+      ],
+      "formula": "fio2pct * mpaw / pao2",
+      "output": {
+        "label": "Oxygenation index",
+        "decimals": 1
+      },
+      "interpretation": [
+        {
+          "label": "Lower severity",
+          "severity": "moderate",
+          "max": 15
+        },
+        {
+          "label": "Severe",
+          "severity": "severe",
+          "min": 15,
+          "max": 25
+        },
+        {
+          "label": "Very severe; consider rescue/ECMO referral",
+          "severity": "critical",
+          "min": 25
+        }
+      ],
+      "references": [
+        {
+          "citation": "Ortiz RM, Cilley RE, Bartlett RH. Extracorporeal membrane oxygenation in pediatric respiratory failure. Pediatr Clin North Am 1987;34:39-46.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Ortiz+Cilley+Bartlett+1987+extracorporeal",
+          "year": 1987
+        }
+      ],
+      "example": {
+        "inputs": {
+          "fio2pct": 80,
+          "mpaw": 20,
+          "pao2": 60
+        },
+        "expected": 26.67
+      },
+      "verify": "OI bands are mainly paediatric/neonatal; adult thresholds are informal."
+    },
+    {
+      "id": "driving-pressure",
+      "name": "Driving pressure",
+      "category": "ventilation",
+      "description": "Plateau pressure − PEEP (volume control, passive patient).",
+      "inputs": [
+        {
+          "id": "pplat",
+          "label": "Plateau pressure",
+          "type": "number",
+          "unit": "cmH₂O",
+          "default": 26
+        },
+        {
+          "id": "peep",
+          "label": "PEEP",
+          "type": "number",
+          "unit": "cmH₂O",
+          "default": 10
+        }
+      ],
+      "formula": "pplat - peep",
+      "output": {
+        "label": "Driving pressure",
+        "unit": "cmH₂O",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "Target ≤ 15",
+          "severity": "normal",
+          "max": 15.0001
+        },
+        {
+          "label": "High (> 15): reduce Vt if possible",
+          "severity": "severe",
+          "min": 15.0001
+        }
+      ],
+      "references": [
+        {
+          "citation": "Amato MBP, et al. Driving pressure and survival in the acute respiratory distress syndrome. N Engl J Med 2015;372:747-55.",
+          "url": "https://doi.org/10.1056/NEJMsa1410639",
+          "year": 2015
+        }
+      ],
+      "example": {
+        "inputs": {
+          "pplat": 26,
+          "peep": 10
+        },
+        "expected": 16
+      }
+    },
+    {
+      "id": "static-compliance",
+      "name": "Static respiratory system compliance",
+      "category": "ventilation",
+      "description": "Vt ÷ (Pplat − PEEP).",
+      "inputs": [
+        {
+          "id": "vt",
+          "label": "Tidal volume",
+          "type": "number",
+          "unit": "mL",
+          "default": 400
+        },
+        {
+          "id": "pplat",
+          "label": "Plateau pressure",
+          "type": "number",
+          "unit": "cmH₂O",
+          "default": 26
+        },
+        {
+          "id": "peep",
+          "label": "PEEP",
+          "type": "number",
+          "unit": "cmH₂O",
+          "default": 10
+        }
+      ],
+      "formula": "vt / (pplat - peep)",
+      "output": {
+        "label": "Compliance",
+        "unit": "mL/cmH₂O",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "Low (< 30)",
+          "severity": "severe",
+          "max": 30
+        },
+        {
+          "label": "Reduced",
+          "severity": "moderate",
+          "min": 30,
+          "max": 50
+        },
+        {
+          "label": "Near normal (≈ 50-100)",
+          "severity": "normal",
+          "min": 50
+        }
+      ],
+      "references": [
+        {
+          "citation": "Amato MBP, et al. Driving pressure and survival in the acute respiratory distress syndrome. N Engl J Med 2015;372:747-55.",
+          "url": "https://doi.org/10.1056/NEJMsa1410639",
+          "year": 2015
+        }
+      ],
+      "example": {
+        "inputs": {
+          "vt": 400,
+          "pplat": 26,
+          "peep": 10
+        },
+        "expected": 25
+      }
+    },
+    {
+      "id": "rox-index",
+      "name": "ROX index",
+      "category": "ventilation",
+      "description": "(SpO₂/FiO₂) ÷ respiratory rate, for patients on HFNC. Assess at 2, 6 and 12 h.",
+      "inputs": [
+        {
+          "id": "spo2",
+          "label": "SpO₂",
+          "type": "number",
+          "unit": "%",
+          "default": 93
+        },
+        {
+          "id": "fio2",
+          "label": "FiO₂",
+          "type": "number",
+          "unit": "fraction",
+          "default": 0.5
+        },
+        {
+          "id": "rr",
+          "label": "Respiratory rate",
+          "type": "number",
+          "unit": "/min",
+          "default": 28
+        }
+      ],
+      "formula": "(spo2 / fio2) / rr",
+      "output": {
+        "label": "ROX",
+        "decimals": 2
+      },
+      "interpretation": [
+        {
+          "label": "High risk of HFNC failure (< 3.85 at 12 h; < 2.85 at 2 h, < 3.47 at 6 h)",
+          "severity": "critical",
+          "max": 3.85
+        },
+        {
+          "label": "Indeterminate: reassess in 1-2 h",
+          "severity": "moderate",
+          "min": 3.85,
+          "max": 4.88
+        },
+        {
+          "label": "Lower risk of intubation (≥ 4.88)",
+          "severity": "normal",
+          "min": 4.88
+        }
+      ],
+      "references": [
+        {
+          "citation": "Roca O, et al. An index combining respiratory rate and oxygenation to predict outcome of nasal high-flow therapy. Am J Respir Crit Care Med 2019;199:1368-76.",
+          "url": "https://doi.org/10.1164/rccm.201803-0589OC",
+          "year": 2019
+        }
+      ],
+      "example": {
+        "inputs": {
+          "spo2": 93,
+          "fio2": 0.5,
+          "rr": 28
+        },
+        "expected": 6.64
+      }
+    },
+    {
+      "id": "rsbi",
+      "name": "Rapid shallow breathing index",
+      "category": "ventilation",
+      "description": "RR ÷ tidal volume in litres during a spontaneous breathing trial.",
+      "inputs": [
+        {
+          "id": "rr",
+          "label": "Respiratory rate",
+          "type": "number",
+          "unit": "/min",
+          "default": 25
+        },
+        {
+          "id": "vt",
+          "label": "Tidal volume",
+          "type": "number",
+          "unit": "mL",
+          "default": 350
+        }
+      ],
+      "formula": "rr / (vt / 1000)",
+      "output": {
+        "label": "RSBI",
+        "unit": "breaths/min/L",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "Favourable for weaning (< 105)",
+          "severity": "normal",
+          "max": 105
+        },
+        {
+          "label": "Weaning failure more likely (≥ 105)",
+          "severity": "severe",
+          "min": 105
+        }
+      ],
+      "references": [
+        {
+          "citation": "Yang KL, Tobin MJ. A prospective study of indexes predicting the outcome of trials of weaning from mechanical ventilation. N Engl J Med 1991;324:1445-50.",
+          "url": "https://doi.org/10.1056/NEJM199105233242101",
+          "year": 1991
+        }
+      ],
+      "example": {
+        "inputs": {
+          "rr": 25,
+          "vt": 350
+        },
+        "expected": 71.43
+      }
+    },
+    {
+      "id": "aa-gradient",
+      "name": "Alveolar-arterial O₂ gradient",
+      "category": "ventilation",
+      "description": "PAO₂ = FiO₂ × (Patm − 47) − PaCO₂/0.8; A-a = PAO₂ − PaO₂.",
+      "inputs": [
+        {
+          "id": "fio2",
+          "label": "FiO₂",
+          "type": "number",
+          "unit": "fraction",
+          "default": 0.21
+        },
+        {
+          "id": "patm",
+          "label": "Barometric pressure",
+          "type": "number",
+          "unit": "mmHg",
+          "default": 760
+        },
+        {
+          "id": "paco2",
+          "label": "PaCO₂",
+          "type": "number",
+          "unit": "mmHg",
+          "default": 40
+        },
+        {
+          "id": "pao2",
+          "label": "PaO₂",
+          "type": "number",
+          "unit": "mmHg",
+          "default": 70
+        },
+        {
+          "id": "age",
+          "label": "Age",
+          "type": "number",
+          "unit": "years",
+          "default": 40
+        }
+      ],
+      "formula": "fio2 * (patm - 47) - paco2 / 0.8 - pao2",
+      "output": {
+        "label": "A-a gradient",
+        "unit": "mmHg",
+        "decimals": 0
+      },
+      "interpretation": [],
+      "references": [
+        {
+          "citation": "Albert MS, Dell RB, Winters RW. Quantitative displacement of acid-base equilibrium in metabolic acidosis. Ann Intern Med 1967;66:312-22.",
+          "url": "https://doi.org/10.7326/0003-4819-66-2-312",
+          "year": 1967
+        }
+      ],
+      "example": {
+        "inputs": {
+          "fio2": 0.21,
+          "patm": 760,
+          "paco2": 40,
+          "pao2": 70,
+          "age": 40
+        },
+        "expected": 29.73
+      },
+      "notes": "Expected upper limit on room air ≈ age/4 + 4 mmHg. Less reliable at high FiO₂.",
+      "verify": "Reference attached is generic; add a physiology textbook citation."
+    },
+    {
+      "id": "o2-cylinder-duration",
+      "name": "Oxygen cylinder duration",
+      "category": "ventilation",
+      "description": "Minutes of oxygen left at a given flow.",
+      "inputs": [
+        {
+          "id": "capacity",
+          "label": "Cylinder capacity when full",
+          "type": "number",
+          "unit": "L",
+          "default": 1500
+        },
+        {
+          "id": "fill",
+          "label": "Pressure gauge reading",
+          "type": "number",
+          "unit": "% of full",
+          "default": 100
+        },
+        {
+          "id": "flow",
+          "label": "Flow",
+          "type": "number",
+          "unit": "L/min",
+          "default": 10
+        }
+      ],
+      "formula": "capacity * (fill / 100) / flow",
+      "output": {
+        "label": "Duration",
+        "unit": "min",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "Under 30 min: arrange a replacement now",
+          "severity": "severe",
+          "max": 30
+        },
+        {
+          "label": "Adequate for short transfer; keep 30 min reserve",
+          "severity": "normal",
+          "min": 30
+        }
+      ],
+      "references": [],
+      "example": {
+        "inputs": {
+          "capacity": 1500,
+          "fill": 50,
+          "flow": 10
+        },
+        "expected": 75
+      },
+      "notes": "Default 1500 L ≈ Indian B-type medical O₂ cylinder (≈ 1.5 m³). Capacities vary by type and filler; read the cylinder label, or use o2-cylinder-contents (water capacity × pressure). Keep a 30-minute reserve.",
+      "verify": "Confirm typical Indian cylinder capacities (B-type ≈ 1.5 m³, D-type ≈ 7 m³ for large cylinders) used in your hospital."
+    },
+    {
+      "id": "o2-cylinder-contents",
+      "name": "Oxygen cylinder contents (Boyle's law)",
+      "category": "ventilation",
+      "description": "Free gas volume ≈ water capacity (L) × gauge pressure (bar). 1 kg/cm² ≈ 0.98 bar; 1 bar ≈ 14.5 psi.",
+      "inputs": [
+        {
+          "id": "water",
+          "label": "Cylinder water capacity (stamped on cylinder)",
+          "type": "number",
+          "unit": "L",
+          "default": 10
+        },
+        {
+          "id": "pressure",
+          "label": "Gauge pressure",
+          "type": "number",
+          "unit": "bar",
+          "default": 150
+        }
+      ],
+      "formula": "water * pressure",
+      "output": {
+        "label": "Oxygen contents",
+        "unit": "L",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "Under 300 L: replace before transfer",
+          "severity": "severe",
+          "max": 300
+        },
+        {
+          "label": "Use o2-cylinder-duration with your flow rate",
+          "severity": "normal",
+          "min": 300
+        }
+      ],
+      "references": [],
+      "example": {
+        "inputs": {
+          "water": 10,
+          "pressure": 150
+        },
+        "expected": 1500
+      },
+      "notes": "Ignores gas compressibility (slight overestimate at high pressure). Gauges in kg/cm² read almost the same as bar; psi ÷ 14.5 = bar.",
+      "verify": "Check the water capacity stamped on your cylinders (B-type commonly ≈ 10 L)."
+    },
+    {
+      "id": "maintenance-fluids-421",
+      "name": "Maintenance fluid rate (4-2-1 rule)",
+      "category": "fluids",
+      "description": "Holliday-Segar hourly maintenance: 4 mL/kg/h for the first 10 kg, 2 mL/kg/h for the next 10 kg, 1 mL/kg/h for each kg above 20.",
+      "inputs": [
+        {
+          "id": "weight",
+          "label": "Weight",
+          "type": "number",
+          "unit": "kg",
+          "default": 70
+        }
+      ],
+      "formula": "4 * Math.min(weight, 10) + 2 * Math.min(Math.max(weight - 10, 0), 10) + Math.max(weight - 20, 0)",
+      "output": {
+        "label": "Maintenance rate",
+        "unit": "mL/h",
+        "decimals": 0
+      },
+      "interpretation": [],
+      "references": [
+        {
+          "citation": "Holliday MA, Segar WE. The maintenance need for water in parenteral fluid therapy. Pediatrics 1957;19:823-32.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/13431307/",
+          "year": 1957
+        }
+      ],
+      "example": {
+        "inputs": {
+          "weight": 70
+        },
+        "expected": 110
+      },
+      "notes": "Use isotonic fluid with glucose in children. In sick adults this overestimates needs (25-30 mL/kg/day is usual; 70 kg ≈ 75-90 mL/h) and enteral feeds and drug diluents count. Fluid-restrict in SIADH, cardiac/renal failure, raised ICP."
+    },
+    {
+      "id": "paeds-ett-size",
+      "name": "Paediatric endotracheal tube size",
+      "category": "body-size",
+      "description": "Internal diameter (mm) = age/4 + 3.5 (cuffed) or age/4 + 4 (uncuffed), for children ≥ 2 years.",
+      "inputs": [
+        {
+          "id": "age",
+          "label": "Age",
+          "type": "number",
+          "unit": "years",
+          "default": 6
+        },
+        {
+          "id": "type",
+          "label": "Tube type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Cuffed (+3.5)",
+              "value": 3.5
+            },
+            {
+              "label": "Uncuffed (+4)",
+              "value": 4
+            }
+          ],
+          "default": 3.5
+        }
+      ],
+      "formula": "age / 4 + type",
+      "output": {
+        "label": "ETT internal diameter",
+        "unit": "mm",
+        "decimals": 1
+      },
+      "interpretation": [],
+      "references": [
+        {
+          "citation": "Van de Voorde P, et al. European Resuscitation Council Guidelines 2021: Paediatric Life Support. Resuscitation 2021;161:327-87.",
+          "url": "https://doi.org/10.1016/j.resuscitation.2021.02.015",
+          "year": 2021
+        }
+      ],
+      "example": {
+        "inputs": {
+          "age": 6,
+          "type": 3.5
+        },
+        "expected": 5
+      },
+      "notes": "Round to the nearest 0.5 mm and keep one size above and below ready. Under 2 years: term neonate 3.0-3.5 uncuffed / 3.0 cuffed; infant 3.0-3.5 cuffed. Depth: see paeds-ett-depth."
+    },
+    {
+      "id": "paeds-ett-depth",
+      "name": "Paediatric oral ETT depth at the lips",
+      "category": "body-size",
+      "description": "Oral tube depth (cm at lips) = age/2 + 12 for children ≥ 2 years (≈ 3 × ETT ID).",
+      "inputs": [
+        {
+          "id": "age",
+          "label": "Age",
+          "type": "number",
+          "unit": "years",
+          "default": 6
+        }
+      ],
+      "formula": "age / 2 + 12",
+      "output": {
+        "label": "Oral depth at lips",
+        "unit": "cm",
+        "decimals": 1
+      },
+      "interpretation": [],
+      "references": [
+        {
+          "citation": "Van de Voorde P, et al. European Resuscitation Council Guidelines 2021: Paediatric Life Support. Resuscitation 2021;161:327-87.",
+          "url": "https://doi.org/10.1016/j.resuscitation.2021.02.015",
+          "year": 2021
+        }
+      ],
+      "example": {
+        "inputs": {
+          "age": 6
+        },
+        "expected": 15
+      },
+      "notes": "Nasal tube: age/2 + 15. Always confirm with capnography, auscultation and chest X-ray (tip at T2-T3).",
+      "verify": "Formula is the widely taught APLS rule; confirm against your local PALS/APLS chart."
+    },
+    {
+      "id": "paeds-weight-estimate",
+      "name": "Paediatric weight estimate (APLS)",
+      "category": "body-size",
+      "description": "1-5 years: 2 × age + 8. 6-12 years: 3 × age + 7.",
+      "inputs": [
+        {
+          "id": "age",
+          "label": "Age",
+          "type": "number",
+          "unit": "years",
+          "default": 4
+        },
+        {
+          "id": "older",
+          "label": "Age 6-12 years",
+          "type": "boolean",
+          "points": 1
+        }
+      ],
+      "formula": "2 * age + 8 + older * (age - 1)",
+      "output": {
+        "label": "Estimated weight",
+        "unit": "kg",
+        "decimals": 0
+      },
+      "interpretation": [],
+      "references": [
+        {
+          "citation": "Luscombe M, Owens B. Weight estimation in resuscitation: is the current formula still valid? Arch Dis Child 2007;92:412-5.",
+          "url": "https://doi.org/10.1136/adc.2006.107284",
+          "year": 2007
+        }
+      ],
+      "example": {
+        "inputs": {
+          "age": 8,
+          "older": 1
+        },
+        "expected": 31
+      },
+      "notes": "Infants < 12 months: (0.5 × age in months) + 4. Tick 'Age 6-12 years' for older children (formula becomes 3 × age + 7). Use measured weight or a length-based tape (Broselow) when available; Indian children are often lighter than these UK-derived estimates.",
+      "verify": "APLS formulas may overestimate weight in undernourished Indian children; prefer measured weight."
+    },
+    {
+      "id": "croup-score",
+      "name": "Westley croup score",
+      "category": "score",
+      "description": "Severity of croup (0-17).",
+      "inputs": [
+        {
+          "id": "stridor",
+          "label": "Stridor",
+          "type": "select",
+          "options": [
+            {
+              "label": "None",
+              "value": 0
+            },
+            {
+              "label": "With agitation",
+              "value": 1
+            },
+            {
+              "label": "At rest",
+              "value": 2
+            }
+          ],
+          "default": 0
+        },
+        {
+          "id": "retractions",
+          "label": "Retractions",
+          "type": "select",
+          "options": [
+            {
+              "label": "None",
+              "value": 0
+            },
+            {
+              "label": "Mild",
+              "value": 1
+            },
+            {
+              "label": "Moderate",
+              "value": 2
+            },
+            {
+              "label": "Severe",
+              "value": 3
+            }
+          ],
+          "default": 0
+        },
+        {
+          "id": "air",
+          "label": "Air entry",
+          "type": "select",
+          "options": [
+            {
+              "label": "Normal",
+              "value": 0
+            },
+            {
+              "label": "Decreased",
+              "value": 1
+            },
+            {
+              "label": "Markedly decreased",
+              "value": 2
+            }
+          ],
+          "default": 0
+        },
+        {
+          "id": "cyanosis",
+          "label": "Cyanosis",
+          "type": "select",
+          "options": [
+            {
+              "label": "None",
+              "value": 0
+            },
+            {
+              "label": "With agitation",
+              "value": 4
+            },
+            {
+              "label": "At rest",
+              "value": 5
+            }
+          ],
+          "default": 0
+        },
+        {
+          "id": "loc",
+          "label": "Level of consciousness",
+          "type": "select",
+          "options": [
+            {
+              "label": "Normal",
+              "value": 0
+            },
+            {
+              "label": "Disoriented",
+              "value": 5
+            }
+          ],
+          "default": 0
+        }
+      ],
+      "formula": "stridor + retractions + air + cyanosis + loc",
+      "output": {
+        "label": "Westley score",
+        "unit": "/17",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "≤ 2: mild – oral dexamethasone 0.15-0.6 mg/kg",
+          "severity": "mild",
+          "max": 3
+        },
+        {
+          "label": "3-5: moderate – dexamethasone; observe",
+          "severity": "moderate",
+          "min": 3,
+          "max": 6
+        },
+        {
+          "label": "6-11: severe – nebulised adrenaline + dexamethasone; HDU",
+          "severity": "severe",
+          "min": 6,
+          "max": 12
+        },
+        {
+          "label": "≥ 12: impending respiratory failure – senior airway help",
+          "severity": "critical",
+          "min": 12
+        }
+      ],
+      "references": [
+        {
+          "citation": "Westley CR, Cotton EK, Brooks JG. Nebulized racemic epinephrine by IPPB for the treatment of croup: a double-blind study. Am J Dis Child 1978;132:484-7.",
+          "url": "https://doi.org/10.1001/archpedi.1978.02120300044008",
+          "year": 1978
+        }
+      ],
+      "example": {
+        "inputs": {
+          "stridor": 2,
+          "retractions": 2,
+          "air": 1,
+          "cyanosis": 0,
+          "loc": 0
+        },
+        "expected": 5
+      }
+    },
+    {
+      "id": "clinical-frailty-scale",
+      "name": "Clinical Frailty Scale (CFS v2.0)",
+      "category": "score",
+      "description": "Baseline frailty 2 weeks before acute illness, scored 1-9. Validated for age ≥ 65.",
+      "inputs": [
+        {
+          "id": "cfs",
+          "label": "Baseline status",
+          "type": "select",
+          "options": [
+            {
+              "label": "1 Very fit",
+              "value": 1
+            },
+            {
+              "label": "2 Fit",
+              "value": 2
+            },
+            {
+              "label": "3 Managing well",
+              "value": 3
+            },
+            {
+              "label": "4 Living with very mild frailty",
+              "value": 4
+            },
+            {
+              "label": "5 Living with mild frailty",
+              "value": 5
+            },
+            {
+              "label": "6 Living with moderate frailty",
+              "value": 6
+            },
+            {
+              "label": "7 Living with severe frailty",
+              "value": 7
+            },
+            {
+              "label": "8 Living with very severe frailty",
+              "value": 8
+            },
+            {
+              "label": "9 Terminally ill",
+              "value": 9
+            }
+          ],
+          "default": 3
+        }
+      ],
+      "formula": "cfs",
+      "output": {
+        "label": "CFS",
+        "unit": "/9",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "1-4: not frail / very mild",
+          "severity": "normal",
+          "max": 5
+        },
+        {
+          "label": "5-6: mild-moderate frailty",
+          "severity": "moderate",
+          "min": 5,
+          "max": 7
+        },
+        {
+          "label": "7-9: severe frailty or terminally ill: discuss goals of care",
+          "severity": "severe",
+          "min": 7
+        }
+      ],
+      "references": [
+        {
+          "citation": "Rockwood K, et al. A global clinical measure of fitness and frailty in elderly people. CMAJ 2005;173:489-95.",
+          "url": "https://doi.org/10.1503/cmaj.050051",
+          "year": 2005
+        },
+        {
+          "citation": "Rockwood K, Theou O. Using the Clinical Frailty Scale in allocating scarce health care resources. Can Geriatr J 2020;23:210-5.",
+          "url": "https://doi.org/10.5770/cgj.23.463",
+          "year": 2020
+        }
+      ],
+      "example": {
+        "inputs": {
+          "cfs": 6
+        },
+        "expected": 6
+      },
+      "notes": "Score the baseline, not the acute state. Not validated for younger people or stable single-limb disability. Use as one input to shared decisions, never as a sole triage rule."
+    },
+    {
+      "id": "stop-bang",
+      "name": "STOP-BANG",
+      "category": "score",
+      "description": "Screening for obstructive sleep apnoea (0-8).",
+      "inputs": [
+        {
+          "id": "snore",
+          "label": "Snoring loudly",
+          "type": "boolean",
+          "points": 1
+        },
+        {
+          "id": "tired",
+          "label": "Tired / daytime sleepiness",
+          "type": "boolean",
+          "points": 1
+        },
+        {
+          "id": "observed",
+          "label": "Observed apnoea",
+          "type": "boolean",
+          "points": 1
+        },
+        {
+          "id": "pressure",
+          "label": "Treated or high blood pressure",
+          "type": "boolean",
+          "points": 1
+        },
+        {
+          "id": "bmi",
+          "label": "BMI > 35 kg/m²",
+          "type": "boolean",
+          "points": 1
+        },
+        {
+          "id": "age",
+          "label": "Age > 50",
+          "type": "boolean",
+          "points": 1
+        },
+        {
+          "id": "neck",
+          "label": "Neck circumference > 40 cm",
+          "type": "boolean",
+          "points": 1
+        },
+        {
+          "id": "male",
+          "label": "Male sex",
+          "type": "boolean",
+          "points": 1
+        }
+      ],
+      "formula": "snore + tired + observed + pressure + bmi + age + neck + male",
+      "output": {
+        "label": "STOP-BANG",
+        "unit": "/8",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "0-2: low risk of moderate-severe OSA",
+          "severity": "mild",
+          "max": 3
+        },
+        {
+          "label": "3-4: intermediate risk",
+          "severity": "moderate",
+          "min": 3,
+          "max": 5
+        },
+        {
+          "label": "5-8: high risk: plan for difficult mask ventilation, opioid-sparing, post-extubation CPAP/NIV",
+          "severity": "severe",
+          "min": 5
+        }
+      ],
+      "references": [
+        {
+          "citation": "Chung F, et al. STOP questionnaire: a tool to screen patients for obstructive sleep apnea. Anesthesiology 2008;108:812-21.",
+          "url": "https://doi.org/10.1097/ALN.0b013e31816d83e4",
+          "year": 2008
+        }
+      ],
+      "example": {
+        "inputs": {
+          "snore": 1,
+          "tired": 1,
+          "observed": 0,
+          "pressure": 1,
+          "bmi": 1,
+          "age": 1,
+          "neck": 0,
+          "male": 1
+        },
+        "expected": 6
+      },
+      "notes": "Asian populations: some studies use BMI > 30 or neck > 38 cm cut-offs; the original thresholds are kept here."
+    },
+    {
+      "id": "anion-gap",
+      "name": "Anion gap",
+      "category": "acid-base",
+      "description": "Na⁺ − (Cl⁻ + HCO₃⁻). Correct for albumin.",
+      "inputs": [
+        {
+          "id": "na",
+          "label": "Sodium",
+          "type": "number",
+          "unit": "mmol/L",
+          "default": 140
+        },
+        {
+          "id": "cl",
+          "label": "Chloride",
+          "type": "number",
+          "unit": "mmol/L",
+          "default": 100
+        },
+        {
+          "id": "hco3",
+          "label": "Bicarbonate",
+          "type": "number",
+          "unit": "mmol/L",
+          "default": 14
+        }
+      ],
+      "formula": "na - (cl + hco3)",
+      "output": {
+        "label": "Anion gap",
+        "unit": "mmol/L",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "Low: check albumin, lab error, myeloma, lithium/bromide",
+          "severity": "mild",
+          "max": 3
+        },
+        {
+          "label": "Normal (lab dependent, ≈ 8-12)",
+          "severity": "normal",
+          "min": 3,
+          "max": 12.0001
+        },
+        {
+          "label": "High anion gap",
+          "severity": "severe",
+          "min": 12.0001
+        }
+      ],
+      "references": [
+        {
+          "citation": "Figge J, Jabor A, Kazda A, Fencl V. Anion gap and hypoalbuminemia. Crit Care Med 1998;26:1807-10.",
+          "url": "https://doi.org/10.1097/00003246-199811000-00019",
+          "year": 1998
+        }
+      ],
+      "example": {
+        "inputs": {
+          "na": 140,
+          "cl": 100,
+          "hco3": 14
+        },
+        "expected": 26
+      },
+      "verify": "Normal AG range depends on the analyser; use the local lab range."
+    },
+    {
+      "id": "anion-gap-albumin-corrected",
+      "name": "Albumin-corrected anion gap",
+      "category": "acid-base",
+      "description": "AG + 2.5 × (4.0 − albumin g/dL).",
+      "inputs": [
+        {
+          "id": "na",
+          "label": "Sodium",
+          "type": "number",
+          "unit": "mmol/L",
+          "default": 138
+        },
+        {
+          "id": "cl",
+          "label": "Chloride",
+          "type": "number",
+          "unit": "mmol/L",
+          "default": 108
+        },
+        {
+          "id": "hco3",
+          "label": "Bicarbonate",
+          "type": "number",
+          "unit": "mmol/L",
+          "default": 18
+        },
+        {
+          "id": "alb",
+          "label": "Albumin",
+          "type": "number",
+          "unit": "g/dL",
+          "default": 2.0
+        }
+      ],
+      "formula": "na - (cl + hco3) + 2.5 * (4 - alb)",
+      "output": {
+        "label": "Corrected AG",
+        "unit": "mmol/L",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "Normal",
+          "severity": "normal",
+          "max": 12.0001
+        },
+        {
+          "label": "High anion gap (unmasked by hypoalbuminaemia?)",
+          "severity": "severe",
+          "min": 12.0001
+        }
+      ],
+      "references": [
+        {
+          "citation": "Figge J, Jabor A, Kazda A, Fencl V. Anion gap and hypoalbuminemia. Crit Care Med 1998;26:1807-10.",
+          "url": "https://doi.org/10.1097/00003246-199811000-00019",
+          "year": 1998
+        }
+      ],
+      "example": {
+        "inputs": {
+          "na": 138,
+          "cl": 108,
+          "hco3": 18,
+          "alb": 2.0
+        },
+        "expected": 17
+      }
+    },
+    {
+      "id": "delta-ratio",
+      "name": "Delta ratio",
+      "category": "acid-base",
+      "description": "(AG − 12) ÷ (24 − HCO₃⁻). Detects a second metabolic process in a high-AG acidosis.",
+      "inputs": [
+        {
+          "id": "ag",
+          "label": "Anion gap (albumin corrected)",
+          "type": "number",
+          "unit": "mmol/L",
+          "default": 26
+        },
+        {
+          "id": "hco3",
+          "label": "Bicarbonate",
+          "type": "number",
+          "unit": "mmol/L",
+          "default": 14
+        }
+      ],
+      "formula": "(ag - 12) / (24 - hco3)",
+      "output": {
+        "label": "Delta ratio",
+        "decimals": 2
+      },
+      "interpretation": [
+        {
+          "label": "Hyperchloraemic normal-AG acidosis",
+          "severity": "moderate",
+          "max": 0.4
+        },
+        {
+          "label": "Mixed high-AG and normal-AG acidosis",
+          "severity": "moderate",
+          "min": 0.4,
+          "max": 0.8
+        },
+        {
+          "label": "Pure high-AG acidosis (1-2; DKA can be ≈ 1)",
+          "severity": "moderate",
+          "min": 0.8,
+          "max": 2.0001
+        },
+        {
+          "label": "High-AG acidosis plus metabolic alkalosis or chronic respiratory acidosis",
+          "severity": "moderate",
+          "min": 2.0001
+        }
+      ],
+      "references": [
+        {
+          "citation": "Figge J, Jabor A, Kazda A, Fencl V. Anion gap and hypoalbuminemia. Crit Care Med 1998;26:1807-10.",
+          "url": "https://doi.org/10.1097/00003246-199811000-00019",
+          "year": 1998
+        }
+      ],
+      "example": {
+        "inputs": {
+          "ag": 26,
+          "hco3": 14
+        },
+        "expected": 1.4
+      },
+      "verify": "Reference is for AG/albumin; add a delta-ratio source (e.g. LITFL/Rastegar)."
+    },
+    {
+      "id": "winters-formula",
+      "name": "Expected PaCO₂ (Winter's formula)",
+      "category": "acid-base",
+      "description": "Expected PaCO₂ = 1.5 × HCO₃⁻ + 8 (± 2) in metabolic acidosis.",
+      "inputs": [
+        {
+          "id": "hco3",
+          "label": "Bicarbonate",
+          "type": "number",
+          "unit": "mmol/L",
+          "default": 12
+        }
+      ],
+      "formula": "1.5 * hco3 + 8",
+      "output": {
+        "label": "Expected PaCO₂",
+        "unit": "mmHg (± 2)",
+        "decimals": 0
+      },
+      "interpretation": [],
+      "references": [
+        {
+          "citation": "Albert MS, Dell RB, Winters RW. Quantitative displacement of acid-base equilibrium in metabolic acidosis. Ann Intern Med 1967;66:312-22.",
+          "url": "https://doi.org/10.7326/0003-4819-66-2-312",
+          "year": 1967
+        }
+      ],
+      "example": {
+        "inputs": {
+          "hco3": 12
+        },
+        "expected": 26
+      },
+      "notes": "Measured PaCO₂ above the range = additional respiratory acidosis; below = additional respiratory alkalosis."
+    },
+    {
+      "id": "serum-osmolality",
+      "name": "Calculated serum osmolality (Indian units)",
+      "category": "acid-base",
+      "description": "2 × Na + glucose (mg/dL)/18 + urea (mg/dL)/6. Uses blood urea, as reported by most Indian labs.",
+      "inputs": [
+        {
+          "id": "na",
+          "label": "Sodium",
+          "type": "number",
+          "unit": "mmol/L",
+          "default": 140
+        },
+        {
+          "id": "glucose",
+          "label": "Glucose",
+          "type": "number",
+          "unit": "mg/dL",
+          "default": 100
+        },
+        {
+          "id": "urea",
+          "label": "Blood urea",
+          "type": "number",
+          "unit": "mg/dL",
+          "default": 30
+        }
+      ],
+      "formula": "2 * na + glucose / 18 + urea / 6",
+      "output": {
+        "label": "Calculated osmolality",
+        "unit": "mOsm/kg",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "Low",
+          "severity": "moderate",
+          "max": 275
+        },
+        {
+          "label": "Normal (≈ 275-295)",
+          "severity": "normal",
+          "min": 275,
+          "max": 295.0001
+        },
+        {
+          "label": "High",
+          "severity": "moderate",
+          "min": 295.0001,
+          "max": 320
+        },
+        {
+          "label": "Markedly high (HHS range > 320)",
+          "severity": "severe",
+          "min": 320
+        }
+      ],
+      "references": [
+        {
+          "citation": "Hillier TA, Abbott RD, Barrett EJ. Hyponatremia: evaluating the correction factor for hyperglycemia. Am J Med 1999;106:399-403.",
+          "url": "https://doi.org/10.1016/S0002-9343(99)00055-8",
+          "year": 1999
+        }
+      ],
+      "example": {
+        "inputs": {
+          "na": 140,
+          "glucose": 100,
+          "urea": 30
+        },
+        "expected": 290.56
+      },
+      "notes": "If your lab reports BUN instead of urea: urea = BUN × 2.14, or use BUN/2.8."
+    },
+    {
+      "id": "osmolal-gap",
+      "name": "Osmolal gap",
+      "category": "acid-base",
+      "description": "Measured − calculated osmolality. Raised in toxic alcohol poisoning.",
+      "inputs": [
+        {
+          "id": "measured",
+          "label": "Measured osmolality",
+          "type": "number",
+          "unit": "mOsm/kg",
+          "default": 320
+        },
+        {
+          "id": "na",
+          "label": "Sodium",
+          "type": "number",
+          "unit": "mmol/L",
+          "default": 140
+        },
+        {
+          "id": "glucose",
+          "label": "Glucose",
+          "type": "number",
+          "unit": "mg/dL",
+          "default": 100
+        },
+        {
+          "id": "urea",
+          "label": "Blood urea",
+          "type": "number",
+          "unit": "mg/dL",
+          "default": 30
+        }
+      ],
+      "formula": "measured - (2 * na + glucose / 18 + urea / 6)",
+      "output": {
+        "label": "Osmolal gap",
+        "unit": "mOsm/kg",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "Normal (< 10)",
+          "severity": "normal",
+          "max": 10.0001
+        },
+        {
+          "label": "Raised: consider methanol, ethylene glycol, ethanol, mannitol",
+          "severity": "severe",
+          "min": 10.0001
+        }
+      ],
+      "references": [
+        {
+          "citation": "Hillier TA, Abbott RD, Barrett EJ. Hyponatremia: evaluating the correction factor for hyperglycemia. Am J Med 1999;106:399-403.",
+          "url": "https://doi.org/10.1016/S0002-9343(99)00055-8",
+          "year": 1999
+        }
+      ],
+      "example": {
+        "inputs": {
+          "measured": 320,
+          "na": 140,
+          "glucose": 100,
+          "urea": 30
+        },
+        "expected": 29.44
+      },
+      "verify": "A normal osmolal gap does not exclude late toxic alcohol poisoning."
+    },
+    {
+      "id": "corrected-sodium-glucose",
+      "name": "Sodium corrected for glucose",
+      "category": "electrolytes",
+      "description": "Na + 2.4 × (glucose − 100)/100 (Hillier; Katz uses 1.6).",
+      "inputs": [
+        {
+          "id": "na",
+          "label": "Sodium",
+          "type": "number",
+          "unit": "mmol/L",
+          "default": 128
+        },
+        {
+          "id": "glucose",
+          "label": "Glucose",
+          "type": "number",
+          "unit": "mg/dL",
+          "default": 600
+        }
+      ],
+      "formula": "na + 2.4 * (glucose - 100) / 100",
+      "output": {
+        "label": "Corrected Na",
+        "unit": "mmol/L",
+        "decimals": 0
+      },
+      "interpretation": [],
+      "references": [
+        {
+          "citation": "Hillier TA, Abbott RD, Barrett EJ. Hyponatremia: evaluating the correction factor for hyperglycemia. Am J Med 1999;106:399-403.",
+          "url": "https://doi.org/10.1016/S0002-9343(99)00055-8",
+          "year": 1999
+        }
+      ],
+      "example": {
+        "inputs": {
+          "na": 128,
+          "glucose": 600
+        },
+        "expected": 140
+      }
+    },
+    {
+      "id": "sodium-change-per-litre",
+      "name": "Expected Na change per litre of infusate (Adrogue-Madias)",
+      "category": "electrolytes",
+      "description": "ΔNa = (infusate Na + K − serum Na) ÷ (TBW + 1). Estimate only; recheck Na every 2-4 h.",
+      "inputs": [
+        {
+          "id": "serumNa",
+          "label": "Serum sodium",
+          "type": "number",
+          "unit": "mmol/L",
+          "default": 115
+        },
+        {
+          "id": "infNa",
+          "label": "Infusate Na + K",
+          "type": "number",
+          "unit": "mmol/L",
+          "default": 513
+        },
+        {
+          "id": "weight",
+          "label": "Weight",
+          "type": "number",
+          "unit": "kg",
+          "default": 60
+        },
+        {
+          "id": "tbwFactor",
+          "label": "Patient group",
+          "type": "select",
+          "options": [
+            {
+              "label": "Adult male 0.6",
+              "value": 0.6
+            },
+            {
+              "label": "Adult female 0.5",
+              "value": 0.5
+            },
+            {
+              "label": "Elderly male 0.5",
+              "value": 0.5
+            },
+            {
+              "label": "Elderly female 0.45",
+              "value": 0.45
+            }
+          ],
+          "default": 0.5
+        }
+      ],
+      "formula": "(infNa - serumNa) / (weight * tbwFactor + 1)",
+      "output": {
+        "label": "Expected change per 1 L",
+        "unit": "mmol/L",
+        "decimals": 1
+      },
+      "interpretation": [],
+      "references": [
+        {
+          "citation": "Adrogue HJ, Madias NE. Hyponatremia. N Engl J Med 2000;342:1581-9.",
+          "url": "https://doi.org/10.1056/NEJM200005253422107",
+          "year": 2000
+        },
+        {
+          "citation": "Spasovski G, et al. Clinical practice guideline on diagnosis and treatment of hyponatraemia. Eur J Endocrinol 2014;170:G1-47.",
+          "url": "https://doi.org/10.1530/EJE-13-1020",
+          "year": 2014
+        }
+      ],
+      "example": {
+        "inputs": {
+          "serumNa": 115,
+          "infNa": 513,
+          "weight": 60,
+          "tbwFactor": 0.5
+        },
+        "expected": 12.84
+      },
+      "notes": "3% saline = 513 mmol/L Na; 0.9% saline = 154; Ringer's lactate ≈ 130 (+4 K); D5W = 0. Limit correction to ≤ 10 mmol/L in 24 h (≤ 8 if high risk of osmotic demyelination)."
+    },
+    {
+      "id": "free-water-deficit",
+      "name": "Free water deficit",
+      "category": "electrolytes",
+      "description": "TBW × (Na/140 − 1).",
+      "inputs": [
+        {
+          "id": "na",
+          "label": "Sodium",
+          "type": "number",
+          "unit": "mmol/L",
+          "default": 160
+        },
+        {
+          "id": "weight",
+          "label": "Weight",
+          "type": "number",
+          "unit": "kg",
+          "default": 70
+        },
+        {
+          "id": "tbwFactor",
+          "label": "Patient group",
+          "type": "select",
+          "options": [
+            {
+              "label": "Adult male 0.6",
+              "value": 0.6
+            },
+            {
+              "label": "Adult female 0.5",
+              "value": 0.5
+            },
+            {
+              "label": "Elderly male 0.5",
+              "value": 0.5
+            },
+            {
+              "label": "Elderly female 0.45",
+              "value": 0.45
+            }
+          ],
+          "default": 0.6
+        }
+      ],
+      "formula": "weight * tbwFactor * (na / 140 - 1)",
+      "output": {
+        "label": "Free water deficit",
+        "unit": "L",
+        "decimals": 1
+      },
+      "interpretation": [],
+      "references": [
+        {
+          "citation": "Adrogue HJ, Madias NE. Hyponatremia. N Engl J Med 2000;342:1581-9.",
+          "url": "https://doi.org/10.1056/NEJM200005253422107",
+          "year": 2000
+        }
+      ],
+      "example": {
+        "inputs": {
+          "na": 160,
+          "weight": 70,
+          "tbwFactor": 0.6
+        },
+        "expected": 6.0
+      },
+      "notes": "Add ongoing losses. In chronic hypernatraemia lower Na by ≤ 10-12 mmol/L per 24 h."
+    },
+    {
+      "id": "corrected-calcium",
+      "name": "Albumin-corrected calcium",
+      "category": "electrolytes",
+      "description": "Ca (mg/dL) + 0.8 × (4.0 − albumin g/dL). Prefer ionised calcium in ICU.",
+      "inputs": [
+        {
+          "id": "ca",
+          "label": "Total calcium",
+          "type": "number",
+          "unit": "mg/dL",
+          "default": 7.6
+        },
+        {
+          "id": "alb",
+          "label": "Albumin",
+          "type": "number",
+          "unit": "g/dL",
+          "default": 2.5
+        }
+      ],
+      "formula": "ca + 0.8 * (4 - alb)",
+      "output": {
+        "label": "Corrected calcium",
+        "unit": "mg/dL",
+        "decimals": 1
+      },
+      "interpretation": [
+        {
+          "label": "Low",
+          "severity": "moderate",
+          "max": 8.5
+        },
+        {
+          "label": "Normal (≈ 8.5-10.5)",
+          "severity": "normal",
+          "min": 8.5,
+          "max": 10.5001
+        },
+        {
+          "label": "High",
+          "severity": "moderate",
+          "min": 10.5001
+        }
+      ],
+      "references": [
+        {
+          "citation": "Payne RB, et al. Interpretation of serum calcium in patients with abnormal serum proteins. Br Med J 1973;4:643-6.",
+          "url": "https://doi.org/10.1136/bmj.4.5893.643",
+          "year": 1973
+        }
+      ],
+      "example": {
+        "inputs": {
+          "ca": 7.6,
+          "alb": 2.5
+        },
+        "expected": 8.8
+      }
+    },
+    {
+      "id": "creatinine-clearance-cg",
+      "name": "Creatinine clearance (Cockcroft-Gault)",
+      "category": "renal",
+      "description": "(140 − age) × weight ÷ (72 × creatinine), × 0.85 if female. Not valid in unstable AKI.",
+      "inputs": [
+        {
+          "id": "age",
+          "label": "Age",
+          "type": "number",
+          "unit": "years",
+          "default": 60
+        },
+        {
+          "id": "weight",
+          "label": "Weight",
+          "type": "number",
+          "unit": "kg",
+          "default": 70
+        },
+        {
+          "id": "cr",
+          "label": "Serum creatinine",
+          "type": "number",
+          "unit": "mg/dL",
+          "default": 1.2
+        },
+        {
+          "id": "sexFactor",
+          "label": "Sex",
+          "type": "select",
+          "options": [
+            {
+              "label": "Male",
+              "value": 1
+            },
+            {
+              "label": "Female",
+              "value": 0.85
+            }
+          ],
+          "default": 1
+        }
+      ],
+      "formula": "(140 - age) * weight / (72 * cr) * sexFactor",
+      "output": {
+        "label": "CrCl",
+        "unit": "mL/min",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "< 15",
+          "severity": "critical",
+          "max": 15
+        },
+        {
+          "label": "15-29",
+          "severity": "severe",
+          "min": 15,
+          "max": 30
+        },
+        {
+          "label": "30-59",
+          "severity": "moderate",
+          "min": 30,
+          "max": 60
+        },
+        {
+          "label": "≥ 60",
+          "severity": "normal",
+          "min": 60
+        }
+      ],
+      "references": [
+        {
+          "citation": "Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron 1976;16:31-41.",
+          "url": "https://doi.org/10.1159/000180580",
+          "year": 1976
+        }
+      ],
+      "example": {
+        "inputs": {
+          "age": 60,
+          "weight": 70,
+          "cr": 1.2,
+          "sexFactor": 1
+        },
+        "expected": 64.81
+      },
+      "notes": "Use actual weight if below IBW; consider adjusted weight in obesity."
+    },
+    {
+      "id": "fena",
+      "name": "Fractional excretion of sodium",
+      "category": "renal",
+      "description": "(Urine Na × Plasma Cr) ÷ (Plasma Na × Urine Cr) × 100.",
+      "inputs": [
+        {
+          "id": "una",
+          "label": "Urine Na",
+          "type": "number",
+          "unit": "mmol/L",
+          "default": 20
+        },
+        {
+          "id": "pcr",
+          "label": "Plasma creatinine",
+          "type": "number",
+          "unit": "mg/dL",
+          "default": 2.0
+        },
+        {
+          "id": "pna",
+          "label": "Plasma Na",
+          "type": "number",
+          "unit": "mmol/L",
+          "default": 140
+        },
+        {
+          "id": "ucr",
+          "label": "Urine creatinine",
+          "type": "number",
+          "unit": "mg/dL",
+          "default": 100
+        }
+      ],
+      "formula": "(una * pcr) / (pna * ucr) * 100",
+      "output": {
+        "label": "FeNa",
+        "unit": "%",
+        "decimals": 2
+      },
+      "interpretation": [
+        {
+          "label": "< 1%: pre-renal pattern (unreliable on diuretics)",
+          "severity": "moderate",
+          "max": 1
+        },
+        {
+          "label": "1-2%: indeterminate",
+          "severity": "moderate",
+          "min": 1,
+          "max": 2
+        },
+        {
+          "label": "> 2%: intrinsic renal (ATN) pattern",
+          "severity": "severe",
+          "min": 2
+        }
+      ],
+      "references": [
+        {
+          "citation": "Espinel CH. The FENa test: use in the differential diagnosis of acute renal failure. JAMA 1976;236:579-81.",
+          "url": "https://doi.org/10.1001/jama.1976.03270060029022",
+          "year": 1976
+        }
+      ],
+      "example": {
+        "inputs": {
+          "una": 20,
+          "pcr": 2.0,
+          "pna": 140,
+          "ucr": 100
+        },
+        "expected": 0.29
+      }
+    },
+    {
+      "id": "mean-arterial-pressure",
+      "name": "Mean arterial pressure",
+      "category": "haemodynamics",
+      "description": "(SBP + 2 × DBP) ÷ 3 (estimate; use the arterial line value when available).",
+      "inputs": [
+        {
+          "id": "sbp",
+          "label": "Systolic BP",
+          "type": "number",
+          "unit": "mmHg",
+          "default": 90
+        },
+        {
+          "id": "dbp",
+          "label": "Diastolic BP",
+          "type": "number",
+          "unit": "mmHg",
+          "default": 50
+        }
+      ],
+      "formula": "(sbp + 2 * dbp) / 3",
+      "output": {
+        "label": "MAP",
+        "unit": "mmHg",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "Below usual target (< 65)",
+          "severity": "severe",
+          "max": 65
+        },
+        {
+          "label": "At or above 65",
+          "severity": "normal",
+          "min": 65
+        }
+      ],
+      "references": [
+        {
+          "citation": "Singer M, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3). JAMA 2016;315:801-10.",
+          "url": "https://doi.org/10.1001/jama.2016.0287",
+          "year": 2016
+        }
+      ],
+      "example": {
+        "inputs": {
+          "sbp": 90,
+          "dbp": 50
+        },
+        "expected": 63.33
+      }
+    },
+    {
+      "id": "shock-index",
+      "name": "Shock index",
+      "category": "haemodynamics",
+      "description": "Heart rate ÷ systolic BP.",
+      "inputs": [
+        {
+          "id": "hr",
+          "label": "Heart rate",
+          "type": "number",
+          "unit": "/min",
+          "default": 120
+        },
+        {
+          "id": "sbp",
+          "label": "Systolic BP",
+          "type": "number",
+          "unit": "mmHg",
+          "default": 90
+        }
+      ],
+      "formula": "hr / sbp",
+      "output": {
+        "label": "Shock index",
+        "decimals": 2
+      },
+      "interpretation": [
+        {
+          "label": "Normal (0.5-0.7)",
+          "severity": "normal",
+          "max": 0.7
+        },
+        {
+          "label": "Borderline",
+          "severity": "moderate",
+          "min": 0.7,
+          "max": 1.0
+        },
+        {
+          "label": "≥ 1: suggests significant shock",
+          "severity": "severe",
+          "min": 1.0
+        }
+      ],
+      "references": [
+        {
+          "citation": "Allgower M, Burri C. Shock index. Dtsch Med Wochenschr 1967;92:1947-50.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Allgower+Burri+1967+shock+index",
+          "year": 1967
+        }
+      ],
+      "example": {
+        "inputs": {
+          "hr": 120,
+          "sbp": 90
+        },
+        "expected": 1.33
+      }
+    },
+    {
+      "id": "qtc-bazett",
+      "name": "Corrected QT (Bazett)",
+      "category": "cardiac",
+      "description": "QT ÷ √(RR in seconds). Over-corrects at fast heart rates.",
+      "inputs": [
+        {
+          "id": "qt",
+          "label": "QT interval",
+          "type": "number",
+          "unit": "ms",
+          "default": 400
+        },
+        {
+          "id": "hr",
+          "label": "Heart rate",
+          "type": "number",
+          "unit": "/min",
+          "default": 75
+        }
+      ],
+      "formula": "qt / Math.sqrt(60 / hr)",
+      "output": {
+        "label": "QTc",
+        "unit": "ms",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "Normal",
+          "severity": "normal",
+          "max": 450
+        },
+        {
+          "label": "Prolonged",
+          "severity": "moderate",
+          "min": 450,
+          "max": 500
+        },
+        {
+          "label": "> 500 ms: high torsades risk",
+          "severity": "critical",
+          "min": 500
+        }
+      ],
+      "references": [
+        {
+          "citation": "Bazett HC. An analysis of the time-relations of electrocardiograms. Heart 1920;7:353-70.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Bazett+1920+time-relations+electrocardiograms",
+          "year": 1920
+        }
+      ],
+      "example": {
+        "inputs": {
+          "qt": 400,
+          "hr": 75
+        },
+        "expected": 447.21
+      }
+    },
+    {
+      "id": "burns-fluid-24h",
+      "name": "Burns fluid in first 24 h",
+      "category": "fluids",
+      "description": "mL/kg/%TBSA × weight × %TBSA (partial + full thickness). Half in the first 8 h from the time of burn.",
+      "inputs": [
+        {
+          "id": "mlkg",
+          "label": "mL per kg per %TBSA",
+          "type": "number",
+          "unit": "mL",
+          "default": 2
+        },
+        {
+          "id": "weight",
+          "label": "Weight",
+          "type": "number",
+          "unit": "kg",
+          "default": 70
+        },
+        {
+          "id": "tbsa",
+          "label": "Burn size",
+          "type": "number",
+          "unit": "% TBSA",
+          "default": 30
+        }
+      ],
+      "formula": "mlkg * weight * tbsa",
+      "output": {
+        "label": "24-h crystalloid",
+        "unit": "mL",
+        "decimals": 0
+      },
+      "interpretation": [],
+      "references": [
+        {
+          "citation": "American College of Surgeons Committee on Trauma. Advanced Trauma Life Support (ATLS) Student Course Manual, 10th ed. Chicago: ACS; 2018.",
+          "url": "https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support/",
+          "year": 2018
+        }
+      ],
+      "example": {
+        "inputs": {
+          "mlkg": 2,
+          "weight": 70,
+          "tbsa": 30
+        },
+        "expected": 4200
+      },
+      "notes": "ATLS 10th ed. starts adults at 2 mL/kg/%TBSA (Parkland formula uses 4). Titrate to urine output 0.5 mL/kg/h (1 mL/kg/h in electrical injury)."
+    },
+    {
+      "id": "gcs",
+      "name": "Glasgow Coma Scale",
+      "category": "score",
+      "description": "Eye + Verbal + Motor (3-15). Record components, e.g. E3 V4 M5.",
+      "inputs": [
+        {
+          "id": "eye",
+          "label": "Eye opening",
+          "type": "select",
+          "options": [
+            {
+              "label": "Spontaneous",
+              "value": 4
+            },
+            {
+              "label": "To sound",
+              "value": 3
+            },
+            {
+              "label": "To pressure",
+              "value": 2
+            },
+            {
+              "label": "None",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "verbal",
+          "label": "Verbal response",
+          "type": "select",
+          "options": [
+            {
+              "label": "Oriented",
+              "value": 5
+            },
+            {
+              "label": "Confused",
+              "value": 4
+            },
+            {
+              "label": "Words",
+              "value": 3
+            },
+            {
+              "label": "Sounds",
+              "value": 2
+            },
+            {
+              "label": "None",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "motor",
+          "label": "Motor response",
+          "type": "select",
+          "options": [
+            {
+              "label": "Obeys commands",
+              "value": 6
+            },
+            {
+              "label": "Localising",
+              "value": 5
+            },
+            {
+              "label": "Normal flexion",
+              "value": 4
+            },
+            {
+              "label": "Abnormal flexion",
+              "value": 3
+            },
+            {
+              "label": "Extension",
+              "value": 2
+            },
+            {
+              "label": "None",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "formula": "eye + verbal + motor",
+      "output": {
+        "label": "GCS",
+        "unit": "/15",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "Severe (3-8): protect the airway",
+          "severity": "critical",
+          "max": 9
+        },
+        {
+          "label": "Moderate (9-12)",
+          "severity": "severe",
+          "min": 9,
+          "max": 13
+        },
+        {
+          "label": "Mild (13-15)",
+          "severity": "mild",
+          "min": 13
+        }
+      ],
+      "references": [
+        {
+          "citation": "Teasdale G, et al. The Glasgow Coma Scale at 40 years: standing the test of time. Lancet Neurol 2014;13:844-54.",
+          "url": "https://doi.org/10.1016/S1474-4422(14)70120-6",
+          "year": 2014
+        }
+      ],
+      "example": {
+        "inputs": {
+          "eye": 3,
+          "verbal": 4,
+          "motor": 5
+        },
+        "expected": 12
+      },
+      "notes": "If a component is untestable (e.g. intubated), record NT/T and do not sum."
+    },
+    {
+      "id": "qsofa",
+      "name": "qSOFA",
+      "category": "score",
+      "description": "Bedside prompt for poor outcome in suspected infection. Not a diagnostic test for sepsis.",
+      "inputs": [
+        {
+          "id": "rr",
+          "label": "Respiratory rate ≥ 22/min",
+          "type": "boolean",
+          "points": 1
+        },
+        {
+          "id": "mentation",
+          "label": "Altered mentation (GCS < 15)",
+          "type": "boolean",
+          "points": 1
+        },
+        {
+          "id": "sbp",
+          "label": "Systolic BP ≤ 100 mmHg",
+          "type": "boolean",
+          "points": 1
+        }
+      ],
+      "formula": "rr + mentation + sbp",
+      "output": {
+        "label": "qSOFA",
+        "unit": "/3",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "0-1: lower risk (does not exclude sepsis)",
+          "severity": "mild",
+          "max": 2
+        },
+        {
+          "label": "≥ 2: higher risk of poor outcome; assess for organ dysfunction",
+          "severity": "severe",
+          "min": 2
+        }
+      ],
+      "references": [
+        {
+          "citation": "Singer M, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3). JAMA 2016;315:801-10.",
+          "url": "https://doi.org/10.1001/jama.2016.0287",
+          "year": 2016
+        },
+        {
+          "citation": "Prescott HC, Antonelli M, Alhazzani W, et al. Surviving Sepsis Campaign: international guidelines for management of sepsis and septic shock 2026. Intensive Care Med. 2026;52(5):863-936.",
+          "url": "https://doi.org/10.1007/s00134-026-08361-1",
+          "year": 2026
+        }
+      ],
+      "example": {
+        "inputs": {
+          "rr": 1,
+          "mentation": 0,
+          "sbp": 1
+        },
+        "expected": 2
+      },
+      "notes": "SSC 2026 recommends NEWS, NEWS2, MEWS or SIRS over qSOFA as a single screening tool (strong, moderate certainty). A positive qSOFA still signals higher risk."
+    },
+    {
+      "id": "sofa",
+      "name": "SOFA score",
+      "category": "score",
+      "description": "Sequential Organ Failure Assessment: 0-4 per organ system, total 0-24. A rise of ≥ 2 from baseline with infection = sepsis.",
+      "inputs": [
+        {
+          "id": "resp",
+          "label": "Respiration: PaO₂/FiO₂ (mmHg)",
+          "type": "select",
+          "options": [
+            {
+              "label": "≥ 400",
+              "value": 0
+            },
+            {
+              "label": "< 400",
+              "value": 1
+            },
+            {
+              "label": "< 300",
+              "value": 2
+            },
+            {
+              "label": "< 200 with respiratory support",
+              "value": 3
+            },
+            {
+              "label": "< 100 with respiratory support",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "id": "coag",
+          "label": "Coagulation: platelets (×10³/µL)",
+          "type": "select",
+          "options": [
+            {
+              "label": "≥ 150",
+              "value": 0
+            },
+            {
+              "label": "< 150",
+              "value": 1
+            },
+            {
+              "label": "< 100",
+              "value": 2
+            },
+            {
+              "label": "< 50",
+              "value": 3
+            },
+            {
+              "label": "< 20",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "id": "liver",
+          "label": "Liver: bilirubin (mg/dL)",
+          "type": "select",
+          "options": [
+            {
+              "label": "< 1.2",
+              "value": 0
+            },
+            {
+              "label": "1.2-1.9",
+              "value": 1
+            },
+            {
+              "label": "2.0-5.9",
+              "value": 2
+            },
+            {
+              "label": "6.0-11.9",
+              "value": 3
+            },
+            {
+              "label": "≥ 12.0",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "id": "cvs",
+          "label": "Cardiovascular",
+          "type": "select",
+          "options": [
+            {
+              "label": "MAP ≥ 70 mmHg",
+              "value": 0
+            },
+            {
+              "label": "MAP < 70 mmHg",
+              "value": 1
+            },
+            {
+              "label": "Dopamine ≤ 5 or any dobutamine",
+              "value": 2
+            },
+            {
+              "label": "Dopamine > 5, or adrenaline/noradrenaline ≤ 0.1 mcg/kg/min",
+              "value": 3
+            },
+            {
+              "label": "Dopamine > 15, or adrenaline/noradrenaline > 0.1 mcg/kg/min",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "id": "cns",
+          "label": "CNS: GCS",
+          "type": "select",
+          "options": [
+            {
+              "label": "15",
+              "value": 0
+            },
+            {
+              "label": "13-14",
+              "value": 1
+            },
+            {
+              "label": "10-12",
+              "value": 2
+            },
+            {
+              "label": "6-9",
+              "value": 3
+            },
+            {
+              "label": "< 6",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "id": "renal",
+          "label": "Renal: creatinine (mg/dL) or urine output",
+          "type": "select",
+          "options": [
+            {
+              "label": "< 1.2",
+              "value": 0
+            },
+            {
+              "label": "1.2-1.9",
+              "value": 1
+            },
+            {
+              "label": "2.0-3.4",
+              "value": 2
+            },
+            {
+              "label": "3.5-4.9 or UO < 500 mL/day",
+              "value": 3
+            },
+            {
+              "label": "≥ 5.0 or UO < 200 mL/day",
+              "value": 4
+            }
+          ]
+        }
+      ],
+      "formula": "resp + coag + liver + cvs + cns + renal",
+      "output": {
+        "label": "SOFA",
+        "unit": "/24",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "0-1",
+          "severity": "mild",
+          "max": 2
+        },
+        {
+          "label": "2-6",
+          "severity": "moderate",
+          "min": 2,
+          "max": 7
+        },
+        {
+          "label": "7-11",
+          "severity": "severe",
+          "min": 7,
+          "max": 12
+        },
+        {
+          "label": "≥ 12",
+          "severity": "critical",
+          "min": 12
+        }
+      ],
+      "references": [
+        {
+          "citation": "Vincent JL, et al. The SOFA (Sepsis-related Organ Failure Assessment) score to describe organ dysfunction/failure. Intensive Care Med 1996;22:707-10.",
+          "url": "https://doi.org/10.1007/BF01709751",
+          "year": 1996
+        },
+        {
+          "citation": "Singer M, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3). JAMA 2016;315:801-10.",
+          "url": "https://doi.org/10.1001/jama.2016.0287",
+          "year": 2016
+        }
+      ],
+      "example": {
+        "inputs": {
+          "resp": 2,
+          "coag": 1,
+          "liver": 0,
+          "cvs": 3,
+          "cns": 1,
+          "renal": 2
+        },
+        "expected": 9
+      },
+      "verify": "An updated SOFA-2 score was published in 2025; decide whether the app should use original SOFA, SOFA-2 or both. Severity bands here are descriptive, not validated mortality cut-offs."
+    },
+    {
+      "id": "news2",
+      "name": "NEWS2",
+      "category": "score",
+      "description": "National Early Warning Score 2 (SpO₂ scale 1).",
+      "inputs": [
+        {
+          "id": "rr",
+          "label": "Respiratory rate",
+          "type": "select",
+          "options": [
+            {
+              "label": "≤ 8",
+              "value": 3
+            },
+            {
+              "label": "9-11",
+              "value": 1
+            },
+            {
+              "label": "12-20",
+              "value": 0
+            },
+            {
+              "label": "21-24",
+              "value": 2
+            },
+            {
+              "label": "≥ 25",
+              "value": 3
+            }
+          ],
+          "default": 0
+        },
+        {
+          "id": "spo2",
+          "label": "SpO₂ (scale 1)",
+          "type": "select",
+          "options": [
+            {
+              "label": "≤ 91%",
+              "value": 3
+            },
+            {
+              "label": "92-93%",
+              "value": 2
+            },
+            {
+              "label": "94-95%",
+              "value": 1
+            },
+            {
+              "label": "≥ 96%",
+              "value": 0
+            }
+          ],
+          "default": 0
+        },
+        {
+          "id": "o2",
+          "label": "Air or oxygen",
+          "type": "select",
+          "options": [
+            {
+              "label": "Air",
+              "value": 0
+            },
+            {
+              "label": "Oxygen",
+              "value": 2
+            }
+          ],
+          "default": 0
+        },
+        {
+          "id": "sbp",
+          "label": "Systolic BP",
+          "type": "select",
+          "options": [
+            {
+              "label": "≤ 90",
+              "value": 3
+            },
+            {
+              "label": "91-100",
+              "value": 2
+            },
+            {
+              "label": "101-110",
+              "value": 1
+            },
+            {
+              "label": "111-219",
+              "value": 0
+            },
+            {
+              "label": "≥ 220",
+              "value": 3
+            }
+          ],
+          "default": 0
+        },
+        {
+          "id": "hr",
+          "label": "Pulse",
+          "type": "select",
+          "options": [
+            {
+              "label": "≤ 40",
+              "value": 3
+            },
+            {
+              "label": "41-50",
+              "value": 1
+            },
+            {
+              "label": "51-90",
+              "value": 0
+            },
+            {
+              "label": "91-110",
+              "value": 1
+            },
+            {
+              "label": "111-130",
+              "value": 2
+            },
+            {
+              "label": "≥ 131",
+              "value": 3
+            }
+          ],
+          "default": 0
+        },
+        {
+          "id": "avpu",
+          "label": "Consciousness",
+          "type": "select",
+          "options": [
+            {
+              "label": "Alert",
+              "value": 0
+            },
+            {
+              "label": "New confusion, voice, pain or unresponsive",
+              "value": 3
+            }
+          ],
+          "default": 0
+        },
+        {
+          "id": "temp",
+          "label": "Temperature (°C)",
+          "type": "select",
+          "options": [
+            {
+              "label": "≤ 35.0",
+              "value": 3
+            },
+            {
+              "label": "35.1-36.0",
+              "value": 1
+            },
+            {
+              "label": "36.1-38.0",
+              "value": 0
+            },
+            {
+              "label": "38.1-39.0",
+              "value": 1
+            },
+            {
+              "label": "≥ 39.1",
+              "value": 2
+            }
+          ],
+          "default": 0
+        }
+      ],
+      "formula": "rr + spo2 + o2 + sbp + hr + avpu + temp",
+      "output": {
+        "label": "NEWS2",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "0-4: low (a single parameter scoring 3 = low-medium: urgent ward review)",
+          "severity": "mild",
+          "max": 5
+        },
+        {
+          "label": "5-6: medium: urgent response",
+          "severity": "severe",
+          "min": 5,
+          "max": 7
+        },
+        {
+          "label": "≥ 7: high: emergency response / critical care team",
+          "severity": "critical",
+          "min": 7
+        }
+      ],
+      "references": [
+        {
+          "citation": "Royal College of Physicians. National Early Warning Score (NEWS) 2. London: RCP; 2017.",
+          "url": "https://www.rcp.ac.uk/improving-care/resources/national-early-warning-score-news-2/",
+          "year": 2017
+        }
+      ],
+      "example": {
+        "inputs": {
+          "rr": 2,
+          "spo2": 1,
+          "o2": 2,
+          "sbp": 1,
+          "hr": 1,
+          "avpu": 0,
+          "temp": 1
+        },
+        "expected": 8
+      }
+    },
+    {
+      "id": "curb-65",
+      "name": "CURB-65",
+      "category": "score",
+      "description": "Severity of community-acquired pneumonia.",
+      "inputs": [
+        {
+          "id": "confusion",
+          "label": "New confusion",
+          "type": "boolean",
+          "points": 1
+        },
+        {
+          "id": "urea",
+          "label": "Urea > 7 mmol/L (blood urea > 42 mg/dL; BUN > 19 mg/dL)",
+          "type": "boolean",
+          "points": 1
+        },
+        {
+          "id": "rr",
+          "label": "Respiratory rate ≥ 30/min",
+          "type": "boolean",
+          "points": 1
+        },
+        {
+          "id": "bp",
+          "label": "SBP < 90 or DBP ≤ 60 mmHg",
+          "type": "boolean",
+          "points": 1
+        },
+        {
+          "id": "age",
+          "label": "Age ≥ 65",
+          "type": "boolean",
+          "points": 1
+        }
+      ],
+      "formula": "confusion + urea + rr + bp + age",
+      "output": {
+        "label": "CURB-65",
+        "unit": "/5",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "0-1: low risk",
+          "severity": "mild",
+          "max": 2
+        },
+        {
+          "label": "2: moderate: consider admission",
+          "severity": "moderate",
+          "min": 2,
+          "max": 3
+        },
+        {
+          "label": "3-5: severe: consider HDU/ICU",
+          "severity": "severe",
+          "min": 3
+        }
+      ],
+      "references": [
+        {
+          "citation": "Lim WS, et al. Defining community acquired pneumonia severity on presentation to hospital: an international derivation and validation study. Thorax 2003;58:377-82.",
+          "url": "https://doi.org/10.1136/thorax.58.5.377",
+          "year": 2003
+        }
+      ],
+      "example": {
+        "inputs": {
+          "confusion": 1,
+          "urea": 1,
+          "rr": 0,
+          "bp": 1,
+          "age": 0
+        },
+        "expected": 3
+      }
+    },
+    {
+      "id": "wells-pe",
+      "name": "Wells score for PE",
+      "category": "score",
+      "description": "Pre-test probability of pulmonary embolism.",
+      "inputs": [
+        {
+          "id": "dvt",
+          "label": "Clinical signs of DVT",
+          "type": "boolean",
+          "points": 3
+        },
+        {
+          "id": "likely",
+          "label": "PE the most likely diagnosis",
+          "type": "boolean",
+          "points": 3
+        },
+        {
+          "id": "hr",
+          "label": "Heart rate > 100",
+          "type": "boolean",
+          "points": 1.5
+        },
+        {
+          "id": "immob",
+          "label": "Immobilisation ≥ 3 days or surgery in past 4 weeks",
+          "type": "boolean",
+          "points": 1.5
+        },
+        {
+          "id": "prior",
+          "label": "Previous DVT/PE",
+          "type": "boolean",
+          "points": 1.5
+        },
+        {
+          "id": "haemoptysis",
+          "label": "Haemoptysis",
+          "type": "boolean",
+          "points": 1
+        },
+        {
+          "id": "cancer",
+          "label": "Active malignancy",
+          "type": "boolean",
+          "points": 1
+        }
+      ],
+      "formula": "dvt + likely + hr + immob + prior + haemoptysis + cancer",
+      "output": {
+        "label": "Wells (PE)",
+        "decimals": 1
+      },
+      "interpretation": [
+        {
+          "label": "≤ 4: PE unlikely (two-tier): D-dimer first",
+          "severity": "mild",
+          "max": 4.0001
+        },
+        {
+          "label": "> 4: PE likely: imaging (CTPA)",
+          "severity": "severe",
+          "min": 4.0001
+        }
+      ],
+      "references": [
+        {
+          "citation": "Wells PS, et al. Derivation of a simple clinical model to categorize patients probability of pulmonary embolism. Thromb Haemost 2000;83:416-20.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Wells+PS+2000+Thromb+Haemost+pulmonary+embolism+simple+clinical+model",
+          "year": 2000
+        }
+      ],
+      "example": {
+        "inputs": {
+          "dvt": 3,
+          "likely": 3,
+          "hr": 1.5,
+          "immob": 0,
+          "prior": 0,
+          "haemoptysis": 0,
+          "cancer": 0
+        },
+        "expected": 7.5
+      },
+      "notes": "Boolean inputs contribute their 'points' value when true."
+    },
+    {
+      "id": "rass",
+      "name": "Richmond Agitation-Sedation Scale",
+      "category": "score",
+      "description": "Single-item sedation/agitation score from +4 to −5.",
+      "inputs": [
+        {
+          "id": "rass",
+          "label": "Observed level",
+          "type": "select",
+          "options": [
+            {
+              "label": "+4 Combative",
+              "value": 4
+            },
+            {
+              "label": "+3 Very agitated",
+              "value": 3
+            },
+            {
+              "label": "+2 Agitated",
+              "value": 2
+            },
+            {
+              "label": "+1 Restless",
+              "value": 1
+            },
+            {
+              "label": "0 Alert and calm",
+              "value": 0
+            },
+            {
+              "label": "−1 Drowsy (eye contact > 10 s to voice)",
+              "value": -1
+            },
+            {
+              "label": "−2 Light sedation (< 10 s to voice)",
+              "value": -2
+            },
+            {
+              "label": "−3 Moderate sedation (movement to voice, no eye contact)",
+              "value": -3
+            },
+            {
+              "label": "−4 Deep sedation (movement to physical stimulation only)",
+              "value": -4
+            },
+            {
+              "label": "−5 Unrousable",
+              "value": -5
+            }
+          ],
+          "default": 0
+        }
+      ],
+      "formula": "rass",
+      "output": {
+        "label": "RASS",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "Deep sedation (−4 to −5)",
+          "severity": "severe",
+          "max": -3
+        },
+        {
+          "label": "Light to moderate sedation (target usually −2 to 0)",
+          "severity": "normal",
+          "min": -3,
+          "max": -0.5
+        },
+        {
+          "label": "Alert and calm",
+          "severity": "normal",
+          "min": -0.5,
+          "max": 0.5
+        },
+        {
+          "label": "Agitated: look for pain, delirium, hypoxia, withdrawal",
+          "severity": "moderate",
+          "min": 0.5
+        }
+      ],
+      "references": [
+        {
+          "citation": "Sessler CN, et al. The Richmond Agitation-Sedation Scale: validity and reliability in adult intensive care unit patients. Am J Respir Crit Care Med 2002;166:1338-44.",
+          "url": "https://doi.org/10.1164/rccm.2107138",
+          "year": 2002
+        }
+      ],
+      "example": {
+        "inputs": {
+          "rass": -2
+        },
+        "expected": -2
+      }
+    },
+    {
+      "id": "pop-scale",
+      "name": "Peradeniya Organophosphorus Poisoning (POP) scale",
+      "category": "toxicology",
+      "description": "Severity of OP poisoning at presentation (0-11).",
+      "inputs": [
+        {
+          "id": "pupil",
+          "label": "Pupil size",
+          "type": "select",
+          "options": [
+            {
+              "label": "> 2 mm",
+              "value": 0
+            },
+            {
+              "label": "< 2 mm",
+              "value": 1
+            },
+            {
+              "label": "Pinpoint",
+              "value": 2
+            }
+          ],
+          "default": 0
+        },
+        {
+          "id": "fasc",
+          "label": "Fasciculations",
+          "type": "select",
+          "options": [
+            {
+              "label": "None",
+              "value": 0
+            },
+            {
+              "label": "Present, not generalised or continuous",
+              "value": 1
+            },
+            {
+              "label": "Generalised and continuous",
+              "value": 2
+            }
+          ],
+          "default": 0
+        },
+        {
+          "id": "resp",
+          "label": "Respiration",
+          "type": "select",
+          "options": [
+            {
+              "label": "≤ 20/min",
+              "value": 0
+            },
+            {
+              "label": "> 20/min",
+              "value": 1
+            },
+            {
+              "label": "> 20/min with central cyanosis",
+              "value": 2
+            }
+          ],
+          "default": 0
+        },
+        {
+          "id": "hr",
+          "label": "Heart rate",
+          "type": "select",
+          "options": [
+            {
+              "label": "> 60/min",
+              "value": 0
+            },
+            {
+              "label": "41-60/min",
+              "value": 1
+            },
+            {
+              "label": "< 40/min",
+              "value": 2
+            }
+          ],
+          "default": 0
+        },
+        {
+          "id": "loc",
+          "label": "Level of consciousness",
+          "type": "select",
+          "options": [
+            {
+              "label": "Conscious and rational",
+              "value": 0
+            },
+            {
+              "label": "Impaired, responds to verbal commands",
+              "value": 1
+            },
+            {
+              "label": "Impaired, no response to verbal commands",
+              "value": 2
+            }
+          ],
+          "default": 0
+        },
+        {
+          "id": "seizure",
+          "label": "Seizures",
+          "type": "select",
+          "options": [
+            {
+              "label": "Absent",
+              "value": 0
+            },
+            {
+              "label": "Present",
+              "value": 1
+            }
+          ],
+          "default": 0
+        }
+      ],
+      "formula": "pupil + fasc + resp + hr + loc + seizure",
+      "output": {
+        "label": "POP scale",
+        "unit": "/11",
+        "decimals": 0
+      },
+      "interpretation": [
+        {
+          "label": "0-3: mild",
+          "severity": "mild",
+          "max": 4
+        },
+        {
+          "label": "4-7: moderate",
+          "severity": "severe",
+          "min": 4,
+          "max": 8
+        },
+        {
+          "label": "8-11: severe",
+          "severity": "critical",
+          "min": 8
+        }
+      ],
+      "references": [
+        {
+          "citation": "Senanayake N, et al. A proposed oral poisoning scale: Peradeniya Organophosphorus Poisoning (POP) scale. In: Senanayake N, ed. Clinical toxicology. 1993.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Peradeniya+organophosphorus+poisoning+scale",
+          "year": 1993
+        }
+      ],
+      "example": {
+        "inputs": {
+          "pupil": 2,
+          "fasc": 1,
+          "resp": 1,
+          "hr": 1,
+          "loc": 1,
+          "seizure": 0
+        },
+        "expected": 6
+      },
+      "verify": "Confirm the six POP items and the seizure item (some versions list 5 items scoring 0-10)."
+    }
+  ]
+}

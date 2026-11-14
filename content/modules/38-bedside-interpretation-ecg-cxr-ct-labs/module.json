@@ -1,0 +1,1429 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "bedside-interpretation-ecg-cxr-ct-labs",
+  "number": 38,
+  "folder": "38-bedside-interpretation-ecg-cxr-ct-labs",
+  "section": {
+    "id": "K",
+    "title": "Skills and professional practice"
+  },
+  "phase": 2,
+  "title": "Bedside interpretation: ECG, CXR, CT and labs",
+  "summary": "Bedside interpretation for the ICU: systematic ECG reading and troponin, chest X-ray device and lung patterns, CT head indications and reading, liver, coagulation and cardiac biomarkers, and microbiology results.",
+  "tags": [
+    "ECG",
+    "troponin",
+    "QTc",
+    "chest X-ray",
+    "lines and tubes",
+    "ARDS",
+    "CT head",
+    "liver function tests",
+    "DIC score",
+    "BNP",
+    "procalcitonin",
+    "blood cultures",
+    "antibiogram"
+  ],
+  "relatedModules": [
+    "cardiac-emergencies-arrhythmias",
+    "acid-base-abg",
+    "fluids-electrolytes",
+    "raised-icp-neurotrauma-brain-death",
+    "neuro-emergencies",
+    "liver-failure",
+    "haematology-coagulation-transfusion",
+    "icu-infections-stewardship-immunocompromised",
+    "pocus-critical-care-echo",
+    "ards-refractory-hypoxaemia"
+  ],
+  "version": "0.2.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "file-search",
+    "accent": "standard"
+  },
+  "viewKey": "module:bedside-interpretation-ecg-cxr-ct-labs",
+  "topics": [
+    {
+      "id": "icu-ecg",
+      "title": "ECG interpretation in the ICU",
+      "summary": "A systematic 12-lead read, STEMI criteria and their mimics, troponin in critical illness, QTc risk and electrolyte patterns.",
+      "viewKey": "topic:bedside-interpretation-ecg-cxr-ct-labs/icu-ecg",
+      "uiHints": {
+        "icon": "heart-pulse",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Use a fixed sequence for every ECG: rate, rhythm, axis, intervals (PR, QRS, QTc), P waves, QRS morphology, ST segments, T waves, and comparison with previous tracings. In the ICU most troponin rises are myocardial injury or type 2 MI rather than type 1 (plaque rupture) MI.",
+          "refs": [
+            "udmi4",
+            "ibcc"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Rate and rhythm",
+            "detail": "Regular or irregular; P before every QRS; narrow vs broad complex (see cardiac-emergencies-arrhythmias module for management).",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Intervals",
+            "detail": "PR 120-200 ms; QRS < 120 ms; QTc (Bazett, or Fridericia when HR > 100): > 500 ms or rise > 60 ms from baseline = high torsades risk.",
+            "refs": [
+              "aha-qt-2010"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "ST elevation (STEMI)",
+            "detail": "New ST elevation at the J point in ≥ 2 contiguous leads: ≥ 1 mm in all leads except V2-V3, where ≥ 2 mm (men ≥ 40 y), ≥ 2.5 mm (men < 40 y), ≥ 1.5 mm (women).",
+            "refs": [
+              "udmi4",
+              "esc-acs-2023"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "STEMI equivalents",
+            "detail": "Posterior MI (ST depression V1-V3, tall R; check V7-V9), new LBBB with ischaemic symptoms or Sgarbossa criteria, de Winter T waves, diffuse ST depression with aVR elevation (left main / multivessel ischaemia).",
+            "refs": [
+              "esc-acs-2023"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Mimics",
+            "detail": "Pericarditis (diffuse concave ST elevation, PR depression), LV aneurysm, early repolarisation, hyperkalaemia, Brugada, Takotsubo, raised ICP (deep T inversion).",
+            "refs": [
+              "esc-acs-2023",
+              "ibcc"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Troponin",
+            "detail": "Above the 99th percentile with a rise/fall = myocardial injury; MI requires ischaemic symptoms, ECG changes, imaging or angiographic evidence. Sepsis, PE, tachyarrhythmia, AKI and shock cause type 2 MI or non-ischaemic injury.",
+            "refs": [
+              "udmi4"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Electrolytes",
+            "detail": "Hyperkalaemia: peaked T → PR prolongation, P loss → broad QRS → sine wave. Hypokalaemia: U waves, ST depression. Hypocalcaemia: long QT. Hypercalcaemia: short QT.",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "qt-drugs",
+            "title": "Common ICU drugs that prolong QT",
+            "columns": [
+              "Class",
+              "Examples"
+            ],
+            "rows": [
+              [
+                "Antiarrhythmics",
+                "Amiodarone, sotalol, procainamide"
+              ],
+              [
+                "Antipsychotics",
+                "Haloperidol (IV), quetiapine, olanzapine"
+              ],
+              [
+                "Antimicrobials",
+                "Macrolides, fluoroquinolones, azoles, chloroquine/hydroxychloroquine"
+              ],
+              [
+                "Antiemetics/GI",
+                "Ondansetron, domperidone, metoclopramide"
+              ],
+              [
+                "Others",
+                "Methadone, tricyclics, citalopram"
+              ]
+            ],
+            "caption": "Stop QT-prolonging drugs and correct K (to 4-5 mmol/L) and Mg when QTc > 500 ms.",
+            "refs": [
+              "aha-qt-2010"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "STEMI or STEMI-equivalent in an ICU patient: immediate cardiology discussion for reperfusion even if the admission diagnosis was non-cardiac.",
+            "refs": [
+              "esc-acs-2023"
+            ]
+          },
+          {
+            "text": "QTc > 500 ms with bradycardia, hypokalaemia or hypomagnesaemia: high risk of torsades.",
+            "refs": [
+              "aha-qt-2010"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Labelling every troponin rise in sepsis as 'NSTEMI' and starting dual antiplatelets.",
+            "refs": [
+              "udmi4"
+            ]
+          },
+          {
+            "text": "Machine QTc in AF, bundle branch block or with wide U waves - measure manually.",
+            "refs": [
+              "aha-qt-2010"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Always compare with the previous ECG - new changes matter more than absolute values.",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Troponin rise in an ICU patient",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Troponin above 99th percentile"
+          },
+          {
+            "id": "dyn",
+            "type": "decision",
+            "text": "Rise/fall on repeat testing?"
+          },
+          {
+            "id": "chronic",
+            "type": "end",
+            "text": "Chronic myocardial injury (CKD, heart failure)"
+          },
+          {
+            "id": "ecg",
+            "type": "decision",
+            "text": "STEMI or STEMI-equivalent on ECG?"
+          },
+          {
+            "id": "stemi",
+            "type": "end",
+            "text": "Activate reperfusion pathway (cardiology)",
+            "severity": "critical"
+          },
+          {
+            "id": "isch",
+            "type": "decision",
+            "text": "Ischaemic symptoms, new wall motion abnormality or new ischaemic ECG changes?"
+          },
+          {
+            "id": "t2",
+            "type": "action",
+            "text": "Type 1 vs type 2 MI: echo; treat supply-demand cause (shock, anaemia, tachyarrhythmia, hypoxaemia)"
+          },
+          {
+            "id": "inj",
+            "type": "end",
+            "text": "Acute non-ischaemic myocardial injury: treat cause (sepsis, PE, myocarditis)"
+          },
+          {
+            "id": "card",
+            "type": "end",
+            "text": "Cardiology review: antithrombotic plan and angiography decision"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "dyn"
+          },
+          {
+            "from": "dyn",
+            "to": "chronic",
+            "label": "No"
+          },
+          {
+            "from": "dyn",
+            "to": "ecg",
+            "label": "Yes"
+          },
+          {
+            "from": "ecg",
+            "to": "stemi",
+            "label": "Yes"
+          },
+          {
+            "from": "ecg",
+            "to": "isch",
+            "label": "No"
+          },
+          {
+            "from": "isch",
+            "to": "t2",
+            "label": "Yes"
+          },
+          {
+            "from": "isch",
+            "to": "inj",
+            "label": "No"
+          },
+          {
+            "from": "t2",
+            "to": "card"
+          }
+        ],
+        "refs": [
+          "udmi4",
+          "esc-acs-2023"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Critical illness raises myocardial oxygen demand (tachycardia, catecholamines) and reduces supply (hypotension, anaemia, hypoxaemia), causing type 2 MI; direct injury comes from sepsis, myocarditis, PE (RV strain) and toxins.",
+        "evidence": "- Fourth universal definition of MI [Thygesen 2018].\n- ESC 2023 ACS guideline: STEMI criteria and equivalents [Byrne 2023].\n- AHA/ACCF 2010 statement on torsades prevention in hospital [Drew 2010].",
+        "controversies": "- Benefit of coronary angiography for type 2 MI; QT correction formula at high heart rates.",
+        "indiaNotes": "- Indian patients present with ACS at younger ages; STEMI equivalents in ICU are under-recognised.\n- High-sensitivity troponin assays and cut-offs differ by laboratory - always use the local 99th percentile."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "qtc-bazett"
+      ],
+      "references": [
+        "udmi4",
+        "esc-acs-2023",
+        "aha-qt-2010",
+        "ibcc"
+      ],
+      "quiz": [
+        {
+          "id": "icu-ecg-q1",
+          "stem": "ST elevation threshold in V2-V3 for a 55-year-old man:",
+          "options": [
+            "≥ 1 mm",
+            "≥ 1.5 mm",
+            "≥ 2 mm",
+            "≥ 2.5 mm"
+          ],
+          "answerIndex": 2,
+          "explanation": "UDMI4."
+        },
+        {
+          "id": "icu-ecg-q2",
+          "stem": "QTc associated with high torsades risk:",
+          "options": [
+            "> 440 ms",
+            "> 470 ms",
+            "> 500 ms",
+            "> 600 ms only"
+          ],
+          "answerIndex": 2,
+          "explanation": "Drew 2010."
+        },
+        {
+          "id": "icu-ecg-q3",
+          "stem": "Troponin rise from tachyarrhythmia and hypotension in sepsis:",
+          "options": [
+            "Type 1 MI",
+            "Type 2 MI or myocardial injury",
+            "Type 4 MI",
+            "Lab error"
+          ],
+          "answerIndex": 1,
+          "explanation": "Supply-demand."
+        },
+        {
+          "id": "icu-ecg-q4",
+          "stem": "ST depression V1-V3 with tall R waves suggests:",
+          "options": [
+            "Pericarditis",
+            "Posterior MI",
+            "Hypercalcaemia",
+            "Normal"
+          ],
+          "answerIndex": 1,
+          "explanation": "Record V7-V9."
+        }
+      ]
+    },
+    {
+      "id": "cxr-lines-tubes-ards",
+      "title": "Chest X-ray in the ICU: lines, tubes and lung patterns",
+      "summary": "Checking devices on supine films, recognising ARDS, oedema, pneumothorax and effusion, and when ultrasound beats the X-ray.",
+      "viewKey": "topic:bedside-interpretation-ecg-cxr-ct-labs/cxr-lines-tubes-ards",
+      "uiHints": {
+        "icon": "scan",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "The ICU portable (AP supine) film is mainly for device position and gross pathology; it underestimates effusions and pneumothoraces. Bilateral opacities not fully explained by effusion, collapse or nodules are part of the ARDS definition (CXR, CT or lung ultrasound under the 2023 global definition).",
+          "refs": [
+            "ards-global-2023",
+            "ibcc"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Check the film",
+            "detail": "Patient, date, AP/PA, supine/erect, rotation (clavicle heads vs spinous processes), inspiration.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Endotracheal tube",
+            "detail": "Tip 3-7 cm above the carina (about T2-T4, between clavicle heads); head flexion moves the tip down, extension up.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Central venous catheter",
+            "detail": "Tip at the lower SVC / cavo-atrial junction (about at or just below the carina); check for loops, crossing into the contralateral subclavian or the azygos vein; exclude pneumothorax.",
+            "refs": [
+              "asa-cvc-2020",
+              "ibcc"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Nasogastric tube",
+            "detail": "Follows midline down the oesophagus, bisects the carina, crosses the diaphragm and the tip lies below the left hemidiaphragm in the stomach; never feed if uncertain.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Other devices",
+            "detail": "Chest drain side hole inside the pleura; IABP tip 2-3 cm below the top of the aortic arch (aortic knob); pacing wire in the RV apex.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Lungs",
+            "detail": "ARDS: bilateral opacities, often peripheral, normal heart size; cardiogenic oedema: upper-lobe diversion, septal lines, perihilar 'bat-wing', effusions, cardiomegaly; pneumonia: lobar consolidation with air bronchograms.",
+            "refs": [
+              "ards-global-2023",
+              "ibcc"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Pleura on a supine film",
+            "detail": "Pneumothorax: deep sulcus sign, hyperlucent hemithorax; effusion: hazy veil over the hemithorax with preserved vascular markings.",
+            "refs": [
+              "bts-pleural-2023",
+              "ibcc"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Use ultrasound",
+            "detail": "Lung ultrasound detects pneumothorax (absent sliding, lung point), effusion and B-lines more accurately than a supine CXR.",
+            "refs": [
+              "ards-global-2023",
+              "bts-pleural-2023"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "device-positions",
+            "title": "Device position targets",
+            "columns": [
+              "Device",
+              "Correct position",
+              "Common error"
+            ],
+            "rows": [
+              [
+                "ETT",
+                "3-7 cm above carina",
+                "Right main bronchus intubation"
+              ],
+              [
+                "CVC (IJ/SC)",
+                "Lower SVC / cavo-atrial junction",
+                "Contralateral subclavian, IJ loop, too deep in RA"
+              ],
+              [
+                "NG tube",
+                "Below left hemidiaphragm, ≥ 10 cm into stomach",
+                "Bronchial placement"
+              ],
+              [
+                "IABP",
+                "2-3 cm below aortic knob",
+                "Too high (left subclavian) or low (renal/mesenteric)"
+              ],
+              [
+                "Chest drain",
+                "All side holes inside pleura",
+                "Subcutaneous or fissural placement"
+              ]
+            ],
+            "refs": [
+              "ibcc",
+              "asa-cvc-2020"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "NG tube in a bronchus on X-ray: remove before any feed is given.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "text": "Deep sulcus sign in a ventilated patient with hypotension: tension pneumothorax until proven otherwise.",
+            "refs": [
+              "bts-pleural-2023"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Accepting radiology of a different tube position after repositioning without a repeat check.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "text": "Diagnosing ARDS without excluding cardiogenic oedema (echo).",
+            "refs": [
+              "ards-global-2023"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "The 2023 global ARDS definition allows SpO₂/FiO₂ ≤ 315 (with SpO₂ ≤ 97%) and lung ultrasound for bilateral opacities - useful where ABG or CT is limited.",
+            "refs": [
+              "ards-global-2023"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "In supine films, air rises anteriorly and fluid layers posteriorly, so pneumothoraces appear as basal lucency and effusions as diffuse haze. Magnification of the heart (AP projection) limits assessment of cardiomegaly.",
+        "evidence": "- New global definition of ARDS [Matthay 2024].\n- ASA 2020 on catheter tip confirmation [ASA 2020]; BTS 2023 on pleural imaging [Roberts 2023].",
+        "controversies": "- Routine daily CXR in ventilated patients (on-demand imaging is as safe in trials and reduces cost).",
+        "indiaNotes": "- Portable X-ray availability and quality vary; lung ultrasound is a cheap, radiation-free supplement.\n- The global ARDS definition was designed to include resource-limited settings, relevant to many Indian ICUs."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "pf-ratio"
+      ],
+      "references": [
+        "ards-global-2023",
+        "asa-cvc-2020",
+        "bts-pleural-2023",
+        "ibcc"
+      ],
+      "quiz": [
+        {
+          "id": "cxr-lines-tubes-ards-q1",
+          "stem": "Ideal ETT tip position:",
+          "options": [
+            "At the carina",
+            "3-7 cm above the carina",
+            "In the right main bronchus",
+            "At the vocal cords"
+          ],
+          "answerIndex": 1,
+          "explanation": "IBCC."
+        },
+        {
+          "id": "cxr-lines-tubes-ards-q2",
+          "stem": "Sign of pneumothorax on a supine film:",
+          "options": [
+            "Meniscus",
+            "Deep sulcus sign",
+            "Kerley B lines",
+            "Air bronchogram"
+          ],
+          "answerIndex": 1,
+          "explanation": "Air collects anteriorly/basally."
+        },
+        {
+          "id": "cxr-lines-tubes-ards-q3",
+          "stem": "2023 global ARDS definition allows:",
+          "options": [
+            "Only CT",
+            "SpO₂/FiO₂ ≤ 315 and lung ultrasound",
+            "Unilateral opacities",
+            "PEEP ≥ 10 required"
+          ],
+          "answerIndex": 1,
+          "explanation": "Matthay 2024."
+        }
+      ]
+    },
+    {
+      "id": "ct-head",
+      "title": "CT head: when to scan and how to read it",
+      "summary": "Indications after head injury, a systematic read (blood, cisterns, brain, ventricles, bone), and early stroke and herniation signs.",
+      "viewKey": "topic:bedside-interpretation-ecg-cxr-ct-labs/ct-head",
+      "uiHints": {
+        "icon": "brain",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Non-contrast CT is the first-line brain imaging in the ICU for trauma, sudden neurological deterioration, suspected stroke and before LP when indicated. Read systematically: Blood, Cisterns, Brain, Ventricles, Bone ('Blood Can Be Very Bad').",
+          "refs": [
+            "nice-ng232",
+            "ibcc"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Head injury - scan within 1 h (NICE)",
+            "detail": "GCS < 13 on initial assessment, GCS < 15 at 2 h, suspected open or depressed skull fracture, signs of basal skull fracture, post-traumatic seizure, focal deficit, more than 1 episode of vomiting.",
+            "time": "≤ 1 h",
+            "refs": [
+              "nice-ng232"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Anticoagulated patients",
+            "detail": "Head injury on anticoagulants: CT within 8 h even without other risk factors (sooner if other criteria).",
+            "time": "≤ 8 h",
+            "refs": [
+              "nice-ng232"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Blood",
+            "detail": "Hyperdense (acute blood 50-100 HU): extradural (lentiform, crosses no sutures), subdural (crescentic, crosses sutures), subarachnoid (in sulci/cisterns), intraparenchymal, intraventricular.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Cisterns",
+            "detail": "Effaced basal cisterns (perimesencephalic) suggest raised ICP and herniation risk.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Brain",
+            "detail": "Grey-white differentiation loss, insular ribbon sign, hyperdense MCA sign (early ischaemia); midline shift; oedema.",
+            "refs": [
+              "aha-stroke-2019"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Ventricles",
+            "detail": "Hydrocephalus (temporal horn dilatation), effacement from mass effect, intraventricular blood.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Bone",
+            "detail": "Fractures on bone windows; air in the cranium (pneumocephalus) suggests open or basal fracture.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Stroke",
+            "detail": "Non-contrast CT excludes haemorrhage before thrombolysis; ASPECTS scores early MCA ischaemia; CT angiography for large-vessel occlusion if thrombectomy is possible.",
+            "refs": [
+              "aha-stroke-2019"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "ct-findings",
+            "title": "CT patterns and action",
+            "columns": [
+              "Finding",
+              "Meaning",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Lentiform extra-axial bleed",
+                "Extradural haematoma",
+                "Urgent neurosurgery"
+              ],
+              [
+                "Crescentic extra-axial bleed",
+                "Subdural haematoma",
+                "Neurosurgery if thick, shift, or deteriorating"
+              ],
+              [
+                "Blood in basal cisterns",
+                "Subarachnoid haemorrhage",
+                "CT angiogram; neurosurgery/neurointervention"
+              ],
+              [
+                "Effaced cisterns, midline shift > 5 mm",
+                "Raised ICP / herniation risk",
+                "ICP measures (raised-icp module)"
+              ],
+              [
+                "Hyperdense MCA sign",
+                "Acute MCA thrombus",
+                "Stroke pathway (CTA, thrombolysis/thrombectomy)"
+              ]
+            ],
+            "refs": [
+              "ibcc",
+              "aha-stroke-2019"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Falling GCS with a new dilated pupil: treat as herniation (osmotherapy, brief hyperventilation) and arrange immediate CT and neurosurgery.",
+            "refs": [
+              "nice-ng232"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Reading only the brain window - always review bone and subdural windows.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "text": "A normal early CT does not exclude ischaemic stroke, diffuse axonal injury or encephalitis.",
+            "refs": [
+              "aha-stroke-2019"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Isodense subacute subdurals (about 1-3 weeks) are easily missed - look for sulcal effacement and midline shift.",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "CT density depends on haemoglobin concentration: acute clot is bright, then becomes isodense and later hypodense; ischaemic oedema reduces density progressively over hours.",
+        "evidence": "- NICE NG232 head injury guideline [NICE 2023]; Canadian CT Head Rule [Stiell 2001].\n- AHA/ASA 2019 stroke guideline for imaging pathways [Powers 2019].",
+        "controversies": "- CT for minor head injury in elderly anticoagulated patients; routine repeat CT in stable traumatic bleeds.",
+        "indiaNotes": "- Road traffic injuries are the commonest cause of head injury in India; CT access may require transfer - stabilise and follow transport safety rules (handover-transport module).\n- Thrombolysis-capable stroke units are expanding but uneven; know the nearest thrombectomy centre."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "gcs"
+      ],
+      "references": [
+        "nice-ng232",
+        "canadian-ct-head",
+        "aha-stroke-2019",
+        "ibcc"
+      ],
+      "quiz": [
+        {
+          "id": "ct-head-q1",
+          "stem": "Lentiform (biconvex) hyperdense collection:",
+          "options": [
+            "Subdural",
+            "Extradural",
+            "SAH",
+            "Infarct"
+          ],
+          "answerIndex": 1,
+          "explanation": "Does not cross sutures."
+        },
+        {
+          "id": "ct-head-q2",
+          "stem": "NICE: head-injured patient on warfarin with no other risk factors:",
+          "options": [
+            "No CT",
+            "CT within 8 h",
+            "CT within 1 h",
+            "MRI only"
+          ],
+          "answerIndex": 1,
+          "explanation": "NG232."
+        },
+        {
+          "id": "ct-head-q3",
+          "stem": "Effaced basal cisterns indicate:",
+          "options": [
+            "Normal ageing",
+            "Raised ICP / herniation risk",
+            "Hydrocephalus ex vacuo",
+            "SAH only"
+          ],
+          "answerIndex": 1,
+          "explanation": "Mass effect."
+        }
+      ]
+    },
+    {
+      "id": "labs-liver-coag-cardiac",
+      "title": "Liver tests, coagulation and cardiac biomarkers",
+      "summary": "Patterns of LFT derangement, ischaemic hepatitis, interpreting PT/INR, fibrinogen and DIC scores, natriuretic peptides, lactate and procalcitonin.",
+      "viewKey": "topic:bedside-interpretation-ecg-cxr-ct-labs/labs-liver-coag-cardiac",
+      "uiHints": {
+        "icon": "flask-conical",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "ICU labs are best interpreted as patterns and trends. LFT patterns are classified by the R ratio [(ALT/ULN)/(ALP/ULN)]: ≥ 5 hepatocellular, ≤ 2 cholestatic, 2-5 mixed.",
+          "refs": [
+            "acg-lft-2017"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "LFT pattern",
+            "detail": "Calculate R ratio; ALT > 1,000 units/L suggests ischaemic hepatitis, paracetamol or acute viral hepatitis; cholestasis in ICU is often sepsis, drugs or PN.",
+            "refs": [
+              "acg-lft-2017"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Ischaemic hepatitis",
+            "detail": "Very high ALT/AST with high LDH (ALT/LDH < 1.5) after shock, peaking at 1-3 days and falling rapidly.",
+            "refs": [
+              "acg-lft-2017"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Synthetic function",
+            "detail": "INR, albumin and bilirubin reflect liver function; INR in cirrhosis does not predict bleeding (see liver-coagulopathy topic).",
+            "refs": [
+              "acg-lft-2017",
+              "ibcc"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Coagulation",
+            "detail": "Prolonged PT/APTT: dilution, consumption (DIC), liver failure, vitamin K deficiency, anticoagulants, heparin contamination of samples; check fibrinogen and platelets; viscoelastic tests where available.",
+            "refs": [
+              "isth-dic-2001",
+              "ibcc"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "DIC score (ISTH)",
+            "detail": "Calculate in a patient with a disorder associated with DIC; ≥ 5 = overt DIC; repeat daily.",
+            "refs": [
+              "isth-dic-2001"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Natriuretic peptides",
+            "detail": "Acute heart failure unlikely if NT-proBNP < 300 pg/mL or BNP < 100 pg/mL; values rise with AKI, age, sepsis and PE; lower in obesity.",
+            "refs": [
+              "esc-hf-2021"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Lactate",
+            "detail": "Elevated lactate (> 2 mmol/L) marks hypoperfusion or impaired clearance; follow trends to guide resuscitation.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Procalcitonin",
+            "detail": "Do not use PCT to decide whether to start antibiotics in suspected sepsis; use PCT with clinical review to support stopping antibiotics.",
+            "refs": [
+              "ssc2026",
+              "saps-pct"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "isth-dic",
+            "title": "ISTH overt DIC score",
+            "columns": [
+              "Parameter",
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "rows": [
+              [
+                "Platelets (× 10⁹/L)",
+                "> 100",
+                "50-100",
+                "< 50",
+                "-"
+              ],
+              [
+                "D-dimer / fibrin markers",
+                "No increase",
+                "-",
+                "Moderate increase",
+                "Strong increase"
+              ],
+              [
+                "PT prolongation (s)",
+                "< 3",
+                "3-6",
+                "> 6",
+                "-"
+              ],
+              [
+                "Fibrinogen (g/L)",
+                "> 1.0",
+                "< 1.0",
+                "-",
+                "-"
+              ]
+            ],
+            "caption": "Score ≥ 5 compatible with overt DIC.",
+            "refs": [
+              "isth-dic-2001"
+            ]
+          },
+          {
+            "id": "lft-patterns",
+            "title": "LFT patterns",
+            "columns": [
+              "Pattern",
+              "R ratio",
+              "ICU causes"
+            ],
+            "rows": [
+              [
+                "Hepatocellular",
+                "≥ 5",
+                "Ischaemic hepatitis, paracetamol, viral (hepatitis A/E, dengue), drugs"
+              ],
+              [
+                "Cholestatic",
+                "≤ 2",
+                "Sepsis cholestasis, biliary obstruction, PN, drugs (co-amoxiclav, ceftriaxone sludge)"
+              ],
+              [
+                "Mixed",
+                "2-5",
+                "Drug-induced liver injury, infiltrative disease"
+              ]
+            ],
+            "refs": [
+              "acg-lft-2017"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Rising INR with encephalopathy in a patient without cirrhosis: acute liver failure - contact a liver centre (liver-failure module).",
+            "refs": [
+              "acg-lft-2017"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Treating an abnormal INR with FFP in a non-bleeding patient before a low-risk procedure.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "text": "Starting or continuing antibiotics because of a single PCT value.",
+            "refs": [
+              "ssc2026"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Isolated high unconjugated bilirubin in ICU: consider haemolysis (LDH, haptoglobin, smear) and large haematoma resorption.",
+            "refs": [
+              "acg-lft-2017"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Hepatocyte necrosis releases transaminases; cholestasis raises ALP and GGT. In sepsis, cytokines impair bile transport. Consumptive coagulopathy depletes platelets and fibrinogen while fibrin breakdown raises D-dimer.",
+        "evidence": "- ACG 2017 abnormal liver chemistry guideline [Kwo 2017].\n- ISTH DIC score [Taylor 2001]; ESC 2021 HF natriuretic peptide thresholds [McDonagh 2021].\n- SSC 2026 on lactate (measure and trend) and procalcitonin (not to decide starting; with clinical review to decide stopping) [Prescott 2026]; SAPS PCT-guided discontinuation trial [de Jong 2016].",
+        "controversies": "- Lactate as a perfusion target vs capillary refill time; troponin and BNP prognostication in sepsis.",
+        "indiaNotes": "- Dengue, leptospirosis, malaria, scrub typhus and hepatitis E commonly cause raised transaminases in Indian ICUs (tropical-monsoon-fevers module).\n- PCT is costly; reserve it for stewardship decisions about stopping antibiotics."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "acg-lft-2017",
+        "isth-dic-2001",
+        "esc-hf-2021",
+        "ssc2026",
+        "saps-pct",
+        "ibcc"
+      ],
+      "quiz": [
+        {
+          "id": "labs-liver-coag-cardiac-q1",
+          "stem": "R ratio of 8 indicates:",
+          "options": [
+            "Cholestatic",
+            "Hepatocellular",
+            "Mixed",
+            "Normal"
+          ],
+          "answerIndex": 1,
+          "explanation": "≥ 5."
+        },
+        {
+          "id": "labs-liver-coag-cardiac-q2",
+          "stem": "ISTH overt DIC score threshold:",
+          "options": [
+            "≥ 3",
+            "≥ 4",
+            "≥ 5",
+            "≥ 7"
+          ],
+          "answerIndex": 2,
+          "explanation": "Taylor 2001."
+        },
+        {
+          "id": "labs-liver-coag-cardiac-q3",
+          "stem": "NT-proBNP value making acute heart failure unlikely:",
+          "options": [
+            "< 300 pg/mL",
+            "< 1,000 pg/mL",
+            "< 3,000 pg/mL",
+            "Any value"
+          ],
+          "answerIndex": 0,
+          "explanation": "ESC 2021."
+        },
+        {
+          "id": "labs-liver-coag-cardiac-q4",
+          "stem": "SSC 2026 on procalcitonin:",
+          "options": [
+            "Use to start antibiotics",
+            "Use with clinical evaluation to decide discontinuation",
+            "Never measure",
+            "Replace cultures"
+          ],
+          "answerIndex": 1,
+          "explanation": "Evans 2021."
+        }
+      ]
+    },
+    {
+      "id": "cultures-microbiology",
+      "title": "Cultures and microbiology interpretation",
+      "summary": "Blood culture technique, contaminants vs true pathogens, respiratory and urine samples, rapid diagnostics and reading an antibiogram.",
+      "viewKey": "topic:bedside-interpretation-ecg-cxr-ct-labs/cultures-microbiology",
+      "uiHints": {
+        "icon": "microscope",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Microbiology results are only as good as the sample: take cultures before antibiotics when this causes no meaningful delay, use correct volume and technique, and interpret the organism in the clinical context.",
+          "refs": [
+            "idsa-asm-micro-2024",
+            "ssc2026"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Blood cultures",
+            "detail": "At least 2 sets (aerobic + anaerobic bottles) from separate venepunctures, 20 mL per set in adults; before antibiotics if no significant delay.",
+            "time": "Before antibiotics",
+            "refs": [
+              "idsa-asm-micro-2024",
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Suspected line infection",
+            "detail": "Paired cultures from the catheter and a peripheral vein; catheter culture positive ≥ 2 h earlier than peripheral (differential time to positivity) suggests catheter-related bacteraemia.",
+            "refs": [
+              "idsa-asm-micro-2024"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Contaminants vs pathogens",
+            "detail": "Coagulase-negative staphylococci, Corynebacterium, Bacillus (non-anthracis) or Cutibacterium in a single set usually = contamination; S. aureus, Gram-negative bacilli, Candida or S. pneumoniae in any bottle = true bacteraemia.",
+            "refs": [
+              "idsa-asm-micro-2024"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Respiratory samples",
+            "detail": "Endotracheal aspirate (semi-quantitative) or BAL; Candida in respiratory samples is almost always colonisation.",
+            "refs": [
+              "idsa-asm-micro-2024",
+              "ibcc"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Urine",
+            "detail": "Culture only with symptoms or sepsis without another source; from the sampling port of a freshly replaced catheter if in situ > 2 weeks.",
+            "refs": [
+              "idsa-asm-micro-2024",
+              "shea-cauti-2023"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Rapid diagnostics",
+            "detail": "Rapid identification/resistance tests on positive blood cultures (e.g. multiplex PCR, carbapenemase detection) speed targeted therapy; interpret with stewardship input.",
+            "refs": [
+              "idsa-asm-micro-2024"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Antibiogram",
+            "detail": "Read MICs against breakpoints (S, I/SDD, R); use the local unit antibiogram for empirical choices and the isolate report for targeted therapy.",
+            "refs": [
+              "idsa-asm-micro-2024",
+              "icmr-amrsn-2023"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "bc-interpretation",
+            "title": "Positive blood culture: first response",
+            "columns": [
+              "Organism",
+              "Usual meaning",
+              "Action"
+            ],
+            "rows": [
+              [
+                "S. aureus",
+                "True bacteraemia always",
+                "Treat; repeat cultures; echo; ID consult; source control"
+              ],
+              [
+                "Candida spp.",
+                "True candidaemia",
+                "Echinocandin; remove CVC; ophthalmology review"
+              ],
+              [
+                "Gram-negative bacilli",
+                "True bacteraemia",
+                "Review empirical cover against local resistance; source control"
+              ],
+              [
+                "CoNS in 1 of 2 sets",
+                "Usually contaminant",
+                "Repeat cultures if prosthetic material or line infection suspected"
+              ]
+            ],
+            "refs": [
+              "idsa-asm-micro-2024"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "S. aureus or Candida in a blood culture is never a contaminant - start appropriate therapy and look for a source.",
+            "refs": [
+              "idsa-asm-micro-2024"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "A single blood culture set - lower sensitivity and impossible to judge contaminants.",
+            "refs": [
+              "idsa-asm-micro-2024"
+            ]
+          },
+          {
+            "text": "Treating Candida in sputum or asymptomatic bacteriuria.",
+            "refs": [
+              "idsa-asm-micro-2024"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Underfilled bottles are the commonest reason for false-negative blood cultures - blood volume matters more than timing with fever spikes.",
+            "refs": [
+              "idsa-asm-micro-2024"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Bacteraemia is often low-grade (< 1 CFU/mL), so sensitivity depends on volume; skin flora contaminate when antisepsis or technique is poor.",
+        "evidence": "- IDSA/ASM 2024 guide to microbiology laboratory use [Miller 2024].\n- SSC 2026: blood cultures as soon as possible, ideally before antimicrobials (strong); a single set is acceptable where resources are limited; pathogen-specific rapid tests case by case [Prescott 2026].\n- ICMR AMRSN surveillance data on Indian resistance [ICMR 2023].",
+        "controversies": "- Routine surveillance cultures in ICU; molecular panels on direct samples versus culture.",
+        "indiaNotes": "- Automated blood culture systems are available in most tertiary hospitals but not in many district hospitals; rapid carbapenemase tests (e.g. mCIM, lateral flow) are increasingly used in India and guide choice between ceftazidime-avibactam ± aztreonam and polymyxins.\n- High CRE/CRAB rates (ICMR AMRSN) mean the local antibiogram must be updated at least yearly."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "idsa-asm-micro-2024",
+        "ssc2026",
+        "shea-cauti-2023",
+        "icmr-amrsn-2023",
+        "ibcc"
+      ],
+      "quiz": [
+        {
+          "id": "cultures-microbiology-q1",
+          "stem": "Minimum blood culture sets before antibiotics in sepsis:",
+          "options": [
+            "1",
+            "2",
+            "4",
+            "None"
+          ],
+          "answerIndex": 1,
+          "explanation": "IDSA/ASM."
+        },
+        {
+          "id": "cultures-microbiology-q2",
+          "stem": "Organism in 1 of 2 blood culture sets most likely a contaminant:",
+          "options": [
+            "S. aureus",
+            "Coagulase-negative staphylococcus",
+            "Candida albicans",
+            "E. coli"
+          ],
+          "answerIndex": 1,
+          "explanation": "Skin flora."
+        },
+        {
+          "id": "cultures-microbiology-q3",
+          "stem": "Differential time to positivity suggesting catheter-related bacteraemia:",
+          "options": [
+            "Catheter positive ≥ 2 h before peripheral",
+            "Peripheral positive first",
+            "Same time",
+            "≥ 12 h difference"
+          ],
+          "answerIndex": 0,
+          "explanation": "Paired cultures."
+        },
+        {
+          "id": "cultures-microbiology-q4",
+          "stem": "Candida in endotracheal aspirate in a ventilated patient usually means:",
+          "options": [
+            "Candida pneumonia",
+            "Colonisation",
+            "Candidaemia",
+            "Lab error"
+          ],
+          "answerIndex": 1,
+          "explanation": "Do not treat."
+        }
+      ]
+    }
+  ],
+  "drugs": [],
+  "references": [
+    {
+      "id": "ssc2026",
+      "citation": "Prescott HC, Antonelli M, Alhazzani W, et al. Surviving Sepsis Campaign: international guidelines for management of sepsis and septic shock 2026. Intensive Care Med. 2026;52(5):863-936. Co-published in Crit Care Med. 2026 (doi:10.1097/CCM.0000000000007075)",
+      "url": "https://doi.org/10.1007/s00134-026-08361-1",
+      "year": 2026,
+      "doi": "10.1007/s00134-026-08361-1",
+      "type": "guideline"
+    },
+    {
+      "id": "asa-cvc-2020",
+      "citation": "American Society of Anesthesiologists Task Force on Central Venous Access. Practice Guidelines for Central Venous Access 2020. Anesthesiology 2020;132:8-43.",
+      "url": "https://doi.org/10.1097/ALN.0000000000002864",
+      "year": 2020,
+      "type": "guideline",
+      "doi": "10.1097/ALN.0000000000002864"
+    },
+    {
+      "id": "bts-pleural-2023",
+      "citation": "Roberts ME, Rahman NM, Maskell NA, et al. British Thoracic Society Guideline for pleural disease. Thorax 2023;78(Suppl 3):s1-42.",
+      "url": "https://doi.org/10.1136/thorax-2022-219784",
+      "year": 2023,
+      "type": "guideline",
+      "doi": "10.1136/thorax-2022-219784"
+    },
+    {
+      "id": "ibcc",
+      "citation": "Farkas J. The Internet Book of Critical Care (IBCC). EMCrit Project; continuously updated.",
+      "url": "https://emcrit.org/ibcc/toc/",
+      "year": 2024,
+      "type": "textbook"
+    },
+    {
+      "id": "icmr-amrsn-2023",
+      "citation": "Indian Council of Medical Research. Annual Report: Antimicrobial Resistance Research and Surveillance Network, January 2023-December 2023. New Delhi: ICMR; 2024.",
+      "url": "https://www.icmr.gov.in/icmrobject/uploads/Documents/1725536060_annual_report_2023.pdf",
+      "year": 2024,
+      "type": "web"
+    },
+    {
+      "id": "saps-pct",
+      "citation": "de Jong E, van Oers JA, Beishuizen A, et al. Efficacy and safety of procalcitonin guidance in reducing the duration of antibiotic treatment in critically ill patients (SAPS). Lancet Infect Dis 2016;16:819-27.",
+      "url": "https://doi.org/10.1016/S1473-3099(16)00053-0",
+      "year": 2016,
+      "type": "trial",
+      "doi": "10.1016/S1473-3099(16)00053-0"
+    },
+    {
+      "id": "udmi4",
+      "citation": "Thygesen K, Alpert JS, Jaffe AS, et al. Fourth universal definition of myocardial infarction (2018). Eur Heart J 2019;40:237-69.",
+      "url": "https://doi.org/10.1093/eurheartj/ehy462",
+      "year": 2018,
+      "type": "consensus",
+      "doi": "10.1093/eurheartj/ehy462"
+    },
+    {
+      "id": "shea-cauti-2023",
+      "citation": "Patel PK, Advani SD, Kofman AD, et al. Strategies to prevent catheter-associated urinary tract infections in acute-care hospitals: 2022 update. Infect Control Hosp Epidemiol 2023;44:1209-31.",
+      "url": "https://doi.org/10.1017/ice.2023.137",
+      "year": 2023,
+      "type": "consensus",
+      "doi": "10.1017/ice.2023.137"
+    },
+    {
+      "id": "esc-acs-2023",
+      "citation": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC guidelines for the management of acute coronary syndromes. Eur Heart J 2023;44:3720-826.",
+      "url": "https://doi.org/10.1093/eurheartj/ehad191",
+      "year": 2023,
+      "type": "guideline",
+      "doi": "10.1093/eurheartj/ehad191"
+    },
+    {
+      "id": "aha-qt-2010",
+      "citation": "Drew BJ, Ackerman MJ, Funk M, et al. Prevention of torsade de pointes in hospital settings: a scientific statement from the American Heart Association and the American College of Cardiology Foundation. Circulation 2010;121:1047-60.",
+      "url": "https://doi.org/10.1161/CIRCULATIONAHA.109.192704",
+      "year": 2010,
+      "type": "consensus",
+      "doi": "10.1161/CIRCULATIONAHA.109.192704"
+    },
+    {
+      "id": "ards-global-2023",
+      "citation": "Matthay MA, Arabi Y, Arroliga AC, et al. A new global definition of acute respiratory distress syndrome. Am J Respir Crit Care Med 2024;209:37-47.",
+      "url": "https://doi.org/10.1164/rccm.202303-0558WS",
+      "year": 2024,
+      "type": "consensus",
+      "doi": "10.1164/rccm.202303-0558WS"
+    },
+    {
+      "id": "canadian-ct-head",
+      "citation": "Stiell IG, Wells GA, Vandemheen K, et al. The Canadian CT Head Rule for patients with minor head injury. Lancet 2001;357:1391-6.",
+      "url": "https://doi.org/10.1016/S0140-6736(00)04561-X",
+      "year": 2001,
+      "type": "trial",
+      "doi": "10.1016/S0140-6736(00)04561-X"
+    },
+    {
+      "id": "nice-ng232",
+      "citation": "National Institute for Health and Care Excellence. Head injury: assessment and early management (NG232). London: NICE; 2023.",
+      "url": "https://www.nice.org.uk/guidance/ng232",
+      "year": 2023,
+      "type": "guideline"
+    },
+    {
+      "id": "aha-stroke-2019",
+      "citation": "Powers WJ, Rabinstein AA, Ackerson T, et al. Guidelines for the early management of patients with acute ischemic stroke: 2019 update to the 2018 guidelines. Stroke 2019;50:e344-418.",
+      "url": "https://doi.org/10.1161/STR.0000000000000211",
+      "year": 2019,
+      "type": "guideline",
+      "doi": "10.1161/STR.0000000000000211"
+    },
+    {
+      "id": "acg-lft-2017",
+      "citation": "Kwo PY, Cohen SM, Lim JK. ACG clinical guideline: evaluation of abnormal liver chemistries. Am J Gastroenterol 2017;112:18-35.",
+      "url": "https://doi.org/10.1038/ajg.2016.517",
+      "year": 2017,
+      "type": "guideline",
+      "doi": "10.1038/ajg.2016.517"
+    },
+    {
+      "id": "esc-hf-2021",
+      "citation": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J 2021;42:3599-726.",
+      "url": "https://doi.org/10.1093/eurheartj/ehab368",
+      "year": 2021,
+      "type": "guideline",
+      "doi": "10.1093/eurheartj/ehab368"
+    },
+    {
+      "id": "isth-dic-2001",
+      "citation": "Taylor FB Jr, Toh CH, Hoots WK, Wada H, Levi M. Towards definition, clinical and laboratory criteria, and a scoring system for disseminated intravascular coagulation. Thromb Haemost 2001;86:1327-30.",
+      "url": "https://doi.org/10.1055/s-0037-1616068",
+      "year": 2001,
+      "type": "consensus",
+      "doi": "10.1055/s-0037-1616068"
+    },
+    {
+      "id": "idsa-asm-micro-2024",
+      "citation": "Miller JM, Binnicker MJ, Campbell S, et al. Guide to utilization of the microbiology laboratory for diagnosis of infectious diseases: 2024 update by the IDSA and ASM. Clin Infect Dis 2024.",
+      "url": "https://doi.org/10.1093/cid/ciae104",
+      "year": 2024,
+      "type": "guideline",
+      "doi": "10.1093/cid/ciae104"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Local laboratory cut-offs",
+      "reason": "Troponin 99th percentile, BNP/NT-proBNP and PCT cut-offs vary by assay; use local values."
+    },
+    {
+      "item": "Device position targets",
+      "reason": "Practical targets from IBCC and ASA 2020; confirm against local radiology protocol."
+    }
+  ]
+}

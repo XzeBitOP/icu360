@@ -1,0 +1,2191 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "poisoning-approach-drug-overdoses",
+  "number": 27,
+  "folder": "27-poisoning-approach-drug-overdoses",
+  "section": {
+    "id": "H",
+    "title": "Toxicology and envenomation"
+  },
+  "phase": 2,
+  "title": "Poisoning approach and drug overdoses",
+  "summary": "Poisoning in the ICU: initial approach and toxidromes, decontamination and enhanced elimination (AACT/EXTRIP), paracetamol, cardiotoxic overdoses (TCA, CCB, beta-blocker, digoxin), toxic alcohols, and an antidote reference with Indian availability notes.",
+  "tags": [
+    "poisoning",
+    "overdose",
+    "toxidrome",
+    "activated charcoal",
+    "EXTRIP",
+    "paracetamol",
+    "acetylcysteine",
+    "TCA",
+    "calcium channel blocker",
+    "HIET",
+    "digoxin",
+    "methanol",
+    "fomepizole",
+    "antidotes"
+  ],
+  "relatedModules": [
+    "agrochemical-household-poisons",
+    "snakebite-scorpion-envenomation",
+    "liver-failure",
+    "renal-replacement-therapy",
+    "acid-base-abg",
+    "cardiac-emergencies-arrhythmias"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "pill",
+    "accent": "critical"
+  },
+  "viewKey": "module:poisoning-approach-drug-overdoses",
+  "topics": [
+    {
+      "id": "approach-toxidromes",
+      "title": "Initial approach and toxidromes",
+      "summary": "Resuscitate first, recognise the toxidrome, run the standard poisoning screen, and use the poisons information centre.",
+      "viewKey": "topic:poisoning-approach-drug-overdoses/approach-toxidromes",
+      "uiHints": {
+        "icon": "skull",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Most poisoned patients survive with good supportive care. The priority is airway, breathing, circulation, glucose and seizure control, then a focused toxicological assessment.",
+          "refs": [
+            "ibcc"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "ABCDE with glucose",
+            "detail": "Airway (aspiration risk with GCS ≤ 8 - but avoid reflex intubation in opioid toxicity if naloxone works), oxygen, IV access, capillary glucose, temperature.",
+            "time": "0 min",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "History from all sources",
+            "detail": "What, how much (mg/kg), when, route, co-ingestants (alcohol), intent, pill bottles, family members, prescriptions; ask about household pesticides and plants.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Examine for a toxidrome",
+            "detail": "Pupils, skin (sweat/dry), temperature, HR, BP, RR, bowel sounds, mental status, clonus/rigidity.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Standard investigations",
+            "detail": "12-lead ECG (QRS, QTc, R in aVR), VBG/ABG with lactate, electrolytes, creatinine, LFT, paracetamol (all intentional overdoses) and salicylate levels, serum osmolality (osmolal gap), CK, pregnancy test.",
+            "refs": [
+              "anz-paracetamol"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Specific measures",
+            "detail": "Decontamination if indicated, antidote if available, enhanced elimination if criteria met (see topics).",
+            "refs": [
+              "aact-charcoal-2005"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Seizures and agitation",
+            "detail": "Benzodiazepines first line (lorazepam 4 mg or midazolam 10 mg IM); avoid phenytoin in toxic seizures.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Psychiatric assessment",
+            "detail": "All deliberate self-harm needs psychiatric evaluation before discharge; document capacity.",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "naloxone",
+            "role": "Opioid toxicity",
+            "route": "IV/IM",
+            "dose": "0.04-0.4 mg, repeat every 2-3 min to RR > 10",
+            "workedExample": "Apnoeic: 0.4 mg IV; partial response: 0.1 mg aliquots; infusion 2/3 of total effective dose per hour",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "toxidromes",
+            "title": "Toxidromes",
+            "columns": [
+              "Toxidrome",
+              "Features",
+              "Examples"
+            ],
+            "rows": [
+              [
+                "Anticholinergic",
+                "Hot, dry, flushed, mydriasis, delirium, urinary retention, tachycardia, reduced bowel sounds",
+                "TCA, antihistamines, datura (common in India), atropine"
+              ],
+              [
+                "Cholinergic",
+                "SLUDGE/DUMBELS, miosis, bradycardia, bronchorrhoea, fasciculations, weakness",
+                "Organophosphates, carbamates (see agrochemical module)"
+              ],
+              [
+                "Sympathomimetic",
+                "Agitation, mydriasis, sweating, tachycardia, hypertension, hyperthermia",
+                "Amphetamines, cocaine, caffeine, theophylline"
+              ],
+              [
+                "Opioid",
+                "Coma, miosis, respiratory depression",
+                "Morphine, tramadol, heroin, codeine syrups"
+              ],
+              [
+                "Sedative-hypnotic",
+                "Coma with relatively normal vital signs",
+                "Benzodiazepines, barbiturates, zolpidem"
+              ],
+              [
+                "Serotonin syndrome",
+                "Clonus (inducible/ocular), hyperreflexia, agitation, sweating, hyperthermia",
+                "SSRIs, tramadol, linezolid, methylene blue combinations"
+              ]
+            ],
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "QRS > 100 ms, seizures, hyperthermia > 40 °C, or refractory hypotension: high-risk poisoning - ICU and toxicology advice.",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Missing paracetamol co-ingestion: check levels in all intentional overdoses.",
+            "refs": [
+              "anz-paracetamol"
+            ]
+          },
+          {
+            "text": "Attributing coma to alcohol without checking glucose, head CT and other toxins.",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Serotonin syndrome develops over hours with clonus; neuroleptic malignant syndrome develops over days with lead-pipe rigidity.",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Poisoned patient: first steps",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Suspected poisoning"
+          },
+          {
+            "id": "abc",
+            "type": "action",
+            "text": "ABC, glucose, ECG, VBG, temperature",
+            "severity": "critical"
+          },
+          {
+            "id": "tox",
+            "type": "decision",
+            "text": "Toxidrome or known agent?"
+          },
+          {
+            "id": "spec",
+            "type": "action",
+            "text": "Agent-specific antidote/therapy"
+          },
+          {
+            "id": "gen",
+            "type": "action",
+            "text": "Supportive care; paracetamol + salicylate levels"
+          },
+          {
+            "id": "decon",
+            "type": "decision",
+            "text": "Decontamination indicated (time, dose, airway)?"
+          },
+          {
+            "id": "ac",
+            "type": "action",
+            "text": "Activated charcoal / WBI"
+          },
+          {
+            "id": "elim",
+            "type": "decision",
+            "text": "Enhanced elimination criteria met?"
+          },
+          {
+            "id": "hd",
+            "type": "end",
+            "text": "Haemodialysis / MDAC / alkalinisation",
+            "severity": "high"
+          },
+          {
+            "id": "obs",
+            "type": "end",
+            "text": "Monitor in HDU/ICU; psychiatric assessment"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "abc"
+          },
+          {
+            "from": "abc",
+            "to": "tox"
+          },
+          {
+            "from": "tox",
+            "to": "spec",
+            "label": "Yes"
+          },
+          {
+            "from": "tox",
+            "to": "gen",
+            "label": "No/unknown"
+          },
+          {
+            "from": "spec",
+            "to": "decon"
+          },
+          {
+            "from": "gen",
+            "to": "decon"
+          },
+          {
+            "from": "decon",
+            "to": "ac",
+            "label": "Yes"
+          },
+          {
+            "from": "decon",
+            "to": "elim",
+            "label": "No"
+          },
+          {
+            "from": "ac",
+            "to": "elim"
+          },
+          {
+            "from": "elim",
+            "to": "hd",
+            "label": "Yes"
+          },
+          {
+            "from": "elim",
+            "to": "obs",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "ibcc",
+          "aact-charcoal-2005"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Toxidromes reflect receptor systems: muscarinic blockade (anticholinergic), acetylcholinesterase inhibition (cholinergic), catecholamine excess (sympathomimetic), mu-opioid agonism, and GABA-A potentiation (sedative-hypnotics).",
+        "evidence": "- Management is largely based on toxicology consensus statements and observational evidence; RCTs are few [IBCC].",
+        "controversies": "- Flumazenil in mixed overdoses (seizure risk); routine urine drug screens (low yield).",
+        "indiaNotes": "- In India, pesticides (organophosphates, aluminium phosphide, paraquat), rodenticides (yellow phosphorus), datura, oleander and drug overdoses are leading causes; see agrochemical and snakebite modules.\n- National Poisons Information Centre (AIIMS New Delhi) and regional centres provide 24-h advice.\n- Medicolegal: every poisoning is a medico-legal case in India - inform police (MLC), preserve samples (gastric aspirate, blood, urine) for forensic analysis."
+      },
+      "drugIds": [
+        "naloxone"
+      ],
+      "calculatorIds": [
+        "gcs",
+        "osmolal-gap",
+        "qtc-bazett"
+      ],
+      "references": [
+        "ibcc",
+        "anz-paracetamol",
+        "aact-charcoal-2005"
+      ],
+      "quiz": [
+        {
+          "id": "approach-toxidromes-q1",
+          "stem": "Hot, dry, flushed skin with mydriasis and urinary retention after eating seeds:",
+          "options": [
+            "Cholinergic",
+            "Anticholinergic (datura)",
+            "Opioid",
+            "Serotonin"
+          ],
+          "answerIndex": 1,
+          "explanation": "Datura is a common Indian cause."
+        },
+        {
+          "id": "approach-toxidromes-q2",
+          "stem": "Which test should be sent in every intentional overdose?",
+          "options": [
+            "Urine drug screen",
+            "Paracetamol level",
+            "Lithium level",
+            "Digoxin level"
+          ],
+          "answerIndex": 1,
+          "explanation": "Co-ingestion is often silent."
+        },
+        {
+          "id": "approach-toxidromes-q3",
+          "stem": "First-line treatment for toxic seizures:",
+          "options": [
+            "Phenytoin",
+            "Benzodiazepine",
+            "Lidocaine",
+            "Valproate"
+          ],
+          "answerIndex": 1,
+          "explanation": "Avoid phenytoin."
+        }
+      ]
+    },
+    {
+      "id": "decontamination-elimination",
+      "title": "Decontamination and enhanced elimination",
+      "summary": "When to use activated charcoal, gastric lavage and whole bowel irrigation, and when to dialyse (EXTRIP).",
+      "viewKey": "topic:poisoning-approach-drug-overdoses/decontamination-elimination",
+      "uiHints": {
+        "icon": "filter",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Decontamination reduces absorption (activated charcoal, whole bowel irrigation, rarely lavage); enhanced elimination increases clearance (MDAC, urinary alkalinisation, extracorporeal treatment).",
+          "refs": [
+            "aact-charcoal-2005",
+            "extrip-lithium"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Single-dose activated charcoal",
+            "detail": "50 g within 1 h of a potentially toxic ingestion of an adsorbable drug (consider up to 2-4 h for large or sustained-release ingestions) if the airway is protected.",
+            "refs": [
+              "aact-charcoal-2005"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Gastric lavage",
+            "detail": "Not routine. Consider only within 60 min of a life-threatening ingestion with a protected airway and no effective alternative. Contraindicated for corrosives and hydrocarbons.",
+            "refs": [
+              "aact-lavage-2013"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Whole bowel irrigation",
+            "detail": "PEG-electrolyte 1.5-2 L/h by NG until rectal effluent is clear: iron, lithium, sustained-release CCB/beta-blockers, body packers.",
+            "refs": [
+              "aact-wbi-2015"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Multiple-dose charcoal",
+            "detail": "Life-threatening carbamazepine, dapsone, phenobarbital, quinine or theophylline: 50 g then 25 g every 4 h if bowel sounds present.",
+            "refs": [
+              "aact-mdac-1999"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Urinary alkalinisation",
+            "detail": "Salicylate (and phenobarbital, chlorpropamide): bicarbonate to urine pH 7.5-8.0 with K replacement.",
+            "refs": [
+              "extrip-salicylate"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Extracorporeal treatment (EXTRIP)",
+            "detail": "Small, water-soluble, low protein-binding, low Vd toxins: lithium, salicylate, toxic alcohols, metformin (lactic acidosis), valproate, theophylline, carbamazepine, barbiturates. Intermittent HD preferred; CRRT if unstable.",
+            "refs": [
+              "extrip-lithium",
+              "extrip-salicylate",
+              "extrip-methanol"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "charcoal",
+            "role": "Single-dose decontamination",
+            "route": "Oral/NG",
+            "dose": "50 g (1 g/kg)",
+            "workedExample": "70 kg: 50 g in 200-300 mL water; NG if intubated",
+            "refs": [
+              "aact-charcoal-2005"
+            ]
+          },
+          {
+            "drugId": "charcoal",
+            "role": "MDAC",
+            "route": "Oral/NG",
+            "dose": "50 g, then 25 g every 4 h",
+            "refs": [
+              "aact-mdac-1999"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "extrip",
+            "title": "EXTRIP haemodialysis indications (selected)",
+            "columns": [
+              "Toxin",
+              "Recommended when"
+            ],
+            "rows": [
+              [
+                "Lithium",
+                "Impaired kidney function and Li > 4.0 mEq/L, or decreased consciousness, seizures or life-threatening arrhythmia"
+              ],
+              [
+                "Salicylate",
+                "Level > 100 mg/dL (> 90 with impaired kidneys), altered mental status, new hypoxaemia, or pH ≤ 7.20 despite treatment"
+              ],
+              [
+                "Methanol",
+                "Coma, seizures, new visual loss, pH ≤ 7.15, persistent acidosis, anion gap > 24, or methanol > 70 mg/dL with fomepizole (> 60 with ethanol, > 50 without ADH blockade)"
+              ]
+            ],
+            "caption": "Summarised from EXTRIP workgroup statements; see full documents for 'suggested' indications.",
+            "refs": [
+              "extrip-lithium",
+              "extrip-salicylate",
+              "extrip-methanol"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Salicylate poisoning with altered mental status or rising level: dialyse - and avoid intubation if possible (loss of respiratory compensation can be fatal); if intubated, match high minute ventilation.",
+            "refs": [
+              "extrip-salicylate"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Charcoal for alcohols, iron, lithium, acids, alkalis or hydrocarbons - they do not bind.",
+            "refs": [
+              "aact-charcoal-2005"
+            ]
+          },
+          {
+            "text": "Routine gastric lavage in drowsy patients without airway protection: aspiration risk outweighs benefit.",
+            "refs": [
+              "aact-lavage-2013"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Lithium: chronic toxicity with modest levels can be more dangerous neurologically than acute ingestion with higher levels.",
+            "refs": [
+              "extrip-lithium"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Charcoal adsorbs drugs in the gut and, with repeated doses, creates 'gut dialysis' by back-diffusion from blood. Dialysability depends on molecular weight, protein binding, volume of distribution and endogenous clearance.",
+        "evidence": "- AACT/EAPCCT position papers on charcoal, lavage, WBI and MDAC [Chyka 2005; Benson 2013; Thanacoody 2015; AACT 1999].\n- EXTRIP systematic reviews and recommendations [Decker 2015; Juurlink 2015; Roberts 2015].",
+        "controversies": "- Charcoal beyond 1 h; lavage in Indian pesticide poisoning (common practice but weak evidence).",
+        "indiaNotes": "- Gastric lavage is widely performed in Indian emergency departments for pesticide poisoning; ensure airway protection and avoid it in hydrocarbon (kerosene) and corrosive ingestions.\n- Intermittent haemodialysis is the most widely available ECTR in Indian hospitals."
+      },
+      "drugIds": [
+        "charcoal"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "aact-charcoal-2005",
+        "aact-lavage-2013",
+        "aact-wbi-2015",
+        "aact-mdac-1999",
+        "extrip-lithium",
+        "extrip-salicylate",
+        "extrip-methanol"
+      ],
+      "quiz": [
+        {
+          "id": "decontamination-elimination-q1",
+          "stem": "Activated charcoal does NOT bind:",
+          "options": [
+            "Carbamazepine",
+            "Lithium",
+            "Phenobarbital",
+            "Theophylline"
+          ],
+          "answerIndex": 1,
+          "explanation": "Metals, alcohols and lithium are not adsorbed."
+        },
+        {
+          "id": "decontamination-elimination-q2",
+          "stem": "Whole bowel irrigation is indicated for:",
+          "options": [
+            "Paracetamol",
+            "Iron or sustained-release preparations",
+            "Methanol",
+            "Corrosives"
+          ],
+          "answerIndex": 1,
+          "explanation": "AACT WBI position paper."
+        },
+        {
+          "id": "decontamination-elimination-q3",
+          "stem": "Lithium dialysis (EXTRIP) recommended when:",
+          "options": [
+            "Li 1.5 with tremor",
+            "Impaired kidneys and Li > 4.0 mEq/L",
+            "Any lithium ingestion",
+            "Never"
+          ],
+          "answerIndex": 1,
+          "explanation": "EXTRIP 2015."
+        }
+      ]
+    },
+    {
+      "id": "paracetamol",
+      "title": "Paracetamol poisoning",
+      "summary": "Risk-assess with the nomogram, give acetylcysteine by the two-bag regimen, extend for massive ingestion, and know when to refer for transplant.",
+      "viewKey": "topic:poisoning-approach-drug-overdoses/paracetamol",
+      "uiHints": {
+        "icon": "pill",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Toxicity is possible after ≥ 200 mg/kg or ≥ 10 g (whichever is less) in 24 h. For single acute ingestion with known time (4-24 h), plot the level on the nomogram (ANZ/US treatment line 150 mg/L at 4 h; UK uses 100 mg/L).",
+          "refs": [
+            "anz-paracetamol",
+            "uscan-apap-2023"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Activated charcoal",
+            "detail": "Within 2 h of ingestion ≥ 10 g/200 mg/kg (within 4 h for massive ingestion ≥ 30 g or ≥ 500 mg/kg).",
+            "refs": [
+              "anz-paracetamol"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Level at ≥ 4 h",
+            "detail": "Plot on nomogram; treat if above line. Unknown time, staggered ingestion, or presentation > 8 h after a toxic dose: start NAC immediately and check level and ALT.",
+            "refs": [
+              "anz-paracetamol",
+              "uscan-apap-2023"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Acetylcysteine",
+            "detail": "Two-bag: 200 mg/kg over 4 h, then 100 mg/kg over 16 h. Do not wait for levels if > 8 h after ingestion.",
+            "refs": [
+              "anz-paracetamol",
+              "snap"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Massive ingestion",
+            "detail": "Level > 2 × nomogram line (> 300 mg/L at 4 h) or ≥ 30 g: double the second bag (200 mg/kg over 16 h); consider haemodialysis if level very high with coma and lactic acidosis.",
+            "refs": [
+              "anz-paracetamol"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "End of infusion",
+            "detail": "Check paracetamol and ALT: stop if paracetamol < 10-20 mg/L and ALT normal/falling; otherwise continue 100 mg/kg/16 h and repeat.",
+            "refs": [
+              "anz-paracetamol",
+              "uscan-apap-2023"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Liver failure",
+            "detail": "INR rising, encephalopathy, acidosis: continue NAC, refer to liver unit, apply King's College criteria (see liver failure module).",
+            "refs": [
+              "anz-paracetamol"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "nac",
+            "role": "Paracetamol poisoning (two-bag)",
+            "route": "IV",
+            "dose": "200 mg/kg over 4 h, then 100 mg/kg over 16 h",
+            "dilution": "Bag 1 in 500 mL 5% dextrose; bag 2 in 1,000 mL",
+            "workedExample": "70 kg: 14 g in 500 mL over 4 h (125 mL/h), then 7 g in 1,000 mL over 16 h (62.5 mL/h)",
+            "verify": "Weight cap and local regimen (2-bag vs 3-bag).",
+            "refs": [
+              "anz-paracetamol"
+            ]
+          },
+          {
+            "drugId": "charcoal",
+            "role": "Early presentation",
+            "route": "Oral",
+            "dose": "50 g",
+            "refs": [
+              "anz-paracetamol"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "apap-risk",
+            "title": "Paracetamol risk assessment",
+            "columns": [
+              "Scenario",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Single acute, 4-24 h, known time",
+                "Level; NAC if above 150 mg/L line at 4 h (nomogram)"
+              ],
+              [
+                "Presentation < 4 h",
+                "Charcoal if < 2 h; level at 4 h"
+              ],
+              [
+                "> 8 h after ≥ 200 mg/kg / 10 g",
+                "Start NAC now; level + ALT"
+              ],
+              [
+                "Staggered or unknown time",
+                "NAC if ≥ 200 mg/kg or 10 g in 24 h, or level > 20 mg/L, or ALT raised"
+              ],
+              [
+                "Massive (≥ 30 g or level ≥ 2× line)",
+                "Charcoal up to 4 h; double second NAC bag; toxicology advice"
+              ]
+            ],
+            "refs": [
+              "anz-paracetamol",
+              "uscan-apap-2023"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Early coma and lactic acidosis with a very high level (> 700-800 mg/L): mitochondrial toxicity - consider haemodialysis with NAC.",
+            "refs": [
+              "anz-paracetamol"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Using the nomogram for staggered or modified-release ingestions.",
+            "refs": [
+              "anz-paracetamol"
+            ]
+          },
+          {
+            "text": "Stopping NAC at a fixed time despite rising ALT or detectable paracetamol.",
+            "refs": [
+              "uscan-apap-2023"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "NAC is almost completely protective if started within 8 h of ingestion.",
+            "refs": [
+              "anz-paracetamol"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Acute paracetamol overdose",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Paracetamol ingestion ≥ 10 g or 200 mg/kg"
+          },
+          {
+            "id": "time",
+            "type": "decision",
+            "text": "Time since ingestion?"
+          },
+          {
+            "id": "ac",
+            "type": "action",
+            "text": "Charcoal if < 2 h; level at 4 h"
+          },
+          {
+            "id": "lvl",
+            "type": "decision",
+            "text": "Level above 150 mg/L-at-4 h line?"
+          },
+          {
+            "id": "late",
+            "type": "action",
+            "text": "Start NAC immediately; level + ALT"
+          },
+          {
+            "id": "nac",
+            "type": "action",
+            "text": "NAC 200 mg/kg/4 h + 100 mg/kg/16 h",
+            "severity": "high"
+          },
+          {
+            "id": "no",
+            "type": "end",
+            "text": "No NAC; medical/psychiatric review"
+          },
+          {
+            "id": "end",
+            "type": "decision",
+            "text": "End: paracetamol < 20 mg/L and ALT normal?"
+          },
+          {
+            "id": "stop",
+            "type": "end",
+            "text": "Stop NAC"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Continue NAC; liver unit if INR rising",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "time"
+          },
+          {
+            "from": "time",
+            "to": "ac",
+            "label": "< 8 h"
+          },
+          {
+            "from": "time",
+            "to": "late",
+            "label": "> 8 h / unknown"
+          },
+          {
+            "from": "ac",
+            "to": "lvl"
+          },
+          {
+            "from": "lvl",
+            "to": "nac",
+            "label": "Yes"
+          },
+          {
+            "from": "lvl",
+            "to": "no",
+            "label": "No"
+          },
+          {
+            "from": "late",
+            "to": "nac"
+          },
+          {
+            "from": "nac",
+            "to": "end"
+          },
+          {
+            "from": "end",
+            "to": "stop",
+            "label": "Yes"
+          },
+          {
+            "from": "end",
+            "to": "cont",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "anz-paracetamol"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "In overdose, glucuronidation and sulfation saturate; more paracetamol is oxidised by CYP2E1 to NAPQI, which depletes glutathione and binds hepatocyte proteins, causing centrilobular necrosis. NAC replenishes glutathione.",
+        "evidence": "- ANZ 2020 guideline: two-bag NAC, massive ingestion modifications [Chiew 2020].\n- US/Canada 2023 consensus [Dart 2023].\n- SNAP: 12-h modified regimen reduced vomiting and anaphylactoid reactions [Bateman 2014].",
+        "controversies": "- Treatment line (100 vs 150 mg/L); fomepizole as adjunct in massive ingestion.",
+        "indiaNotes": "- Paracetamol overdose is less common in India than pesticide poisoning but is rising in urban areas; IV NAC is available (2 g/10 mL ampoules).\n- Paracetamol levels may not be available 24 × 7 in smaller hospitals: start NAC empirically if a toxic dose is possible."
+      },
+      "drugIds": [
+        "nac",
+        "charcoal"
+      ],
+      "calculatorIds": [
+        "infusion-rate-fixed"
+      ],
+      "references": [
+        "anz-paracetamol",
+        "uscan-apap-2023",
+        "snap"
+      ],
+      "quiz": [
+        {
+          "id": "paracetamol-q1",
+          "stem": "ANZ treatment line at 4 h:",
+          "options": [
+            "100 mg/L",
+            "150 mg/L",
+            "200 mg/L",
+            "300 mg/L"
+          ],
+          "answerIndex": 1,
+          "explanation": "ANZ/US use 150; UK 100."
+        },
+        {
+          "id": "paracetamol-q2",
+          "stem": "Presentation 12 h after 15 g ingestion:",
+          "options": [
+            "Wait for level",
+            "Start NAC immediately",
+            "Charcoal only",
+            "Discharge"
+          ],
+          "answerIndex": 1,
+          "explanation": "> 8 h: treat first."
+        },
+        {
+          "id": "paracetamol-q3",
+          "stem": "Two-bag NAC first bag:",
+          "options": [
+            "150 mg/kg over 15 min",
+            "200 mg/kg over 4 h",
+            "50 mg/kg over 1 h",
+            "10 mg/kg/h"
+          ],
+          "answerIndex": 1,
+          "explanation": "ANZ regimen."
+        }
+      ]
+    },
+    {
+      "id": "cardiotoxic-overdoses",
+      "title": "Cardiotoxic overdoses: TCA, beta-blockers, CCB, digoxin",
+      "summary": "Sodium bicarbonate for sodium-channel blockade, calcium and high-dose insulin for CCB/beta-blocker shock, digoxin Fab, lipid and ECMO as rescue.",
+      "viewKey": "topic:poisoning-approach-drug-overdoses/cardiotoxic-overdoses",
+      "uiHints": {
+        "icon": "heart-crack",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Drugs causing shock and arrhythmia: sodium-channel blockers (TCA, flecainide, carbamazepine) widen QRS; CCBs (especially amlodipine, verapamil, diltiazem) and beta-blockers cause bradycardia, vasodilation and myocardial depression; digoxin causes arrhythmias and hyperkalaemia.",
+          "refs": [
+            "ccb-2017",
+            "digifab-2014"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "TCA / sodium-channel blockade",
+            "detail": "QRS > 100 ms, R in aVR > 3 mm, arrhythmia or hypotension: sodium bicarbonate 1-2 mEq/kg bolus, repeat to narrow QRS; keep pH 7.45-7.55; hyperventilate if intubated. Benzodiazepines for seizures.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "CCB poisoning (consensus 2017)",
+            "detail": "First line: IV calcium, high-dose insulin (with dextrose), vasopressors/inotropes (noradrenaline or adrenaline), atropine for symptomatic bradycardia. Decontaminate (WBI for sustained-release).",
+            "refs": [
+              "ccb-2017"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Refractory CCB",
+            "detail": "Increase insulin up to 10 units/kg/h, pacing for bradycardia, lipid emulsion in peri-arrest, VA-ECMO for cardiogenic shock in centres where available.",
+            "refs": [
+              "ccb-2017",
+              "lipid-2016"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Beta-blocker poisoning",
+            "detail": "Atropine, glucagon (bolus then infusion), high-dose insulin, adrenaline/noradrenaline; propranolol behaves like a sodium-channel blocker (bicarbonate for wide QRS).",
+            "refs": [
+              "hiet-2011",
+              "ibcc"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Digoxin",
+            "detail": "Fab for life-threatening arrhythmia, K > 6 mmol/L in acute toxicity, or end-organ hypoperfusion. Treat hyperkalaemia with insulin-dextrose; avoid electrical pacing if possible.",
+            "refs": [
+              "digifab-2014"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Monitor",
+            "detail": "Continuous ECG, arterial line, glucose every 15-30 min on HIET, K hourly, echocardiography to distinguish vasoplegia from pump failure.",
+            "refs": [
+              "ccb-2017"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "sodium-bicarbonate",
+            "role": "TCA with QRS > 100 ms",
+            "route": "IV",
+            "dose": "1-2 mEq/kg bolus, repeat to QRS < 100 ms",
+            "target": "pH 7.45-7.55, Na < 155 mmol/L",
+            "workedExample": "70 kg: 70-140 mL of 8.4% over 2-5 min",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "drugId": "calcium-chloride",
+            "role": "CCB toxicity",
+            "route": "IV (central)",
+            "dose": "10% chloride 10-20 mL (or gluconate 30-60 mL), repeat every 10-20 min",
+            "workedExample": "70 kg: 20 mL 10% CaCl2 over 5-10 min; infusion 14-28 mL/h",
+            "refs": [
+              "ccb-2017"
+            ]
+          },
+          {
+            "drugId": "insulin-hiet",
+            "role": "CCB / beta-blocker shock",
+            "route": "IV",
+            "dose": "1 units/kg bolus, then 1 units/kg/h up to 10 units/kg/h",
+            "dilution": "500 units in 50 mL NS = 10 units/mL",
+            "workedExample": "70 kg: 70 units bolus; infusion 70 units/h = 7 mL/h; dextrose 35 g/h (e.g. 25% dextrose 140 mL/h via central line)",
+            "calculatorId": "infusion-rate-weight-hour",
+            "refs": [
+              "ccb-2017",
+              "hiet-2011"
+            ]
+          },
+          {
+            "drugId": "glucagon",
+            "role": "Beta-blocker toxicity",
+            "route": "IV",
+            "dose": "5 mg bolus (repeat to 10 mg), then 3-5 mg/h",
+            "verify": "Stock is usually insufficient for infusions in India.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "drugId": "lipid-emulsion",
+            "role": "Peri-arrest lipophilic drug toxicity",
+            "route": "IV",
+            "dose": "1.5 mL/kg bolus, then 0.25 mL/kg/min",
+            "workedExample": "70 kg: 100 mL bolus, then 17.5 mL/min for 30-60 min",
+            "refs": [
+              "lipid-2016"
+            ]
+          },
+          {
+            "drugId": "digifab",
+            "role": "Digoxin toxicity",
+            "route": "IV",
+            "dose": "Acute: 2-5 vials titrated; chronic 1-2 vials",
+            "refs": [
+              "digifab-2014"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Amlodipine overdose can cause delayed (12-24 h) severe vasoplegia and non-cardiogenic pulmonary oedema; monitor in ICU for at least 24 h.",
+            "refs": [
+              "ccb-2017"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Stopping high-dose insulin because glucose falls: give more dextrose instead.",
+            "refs": [
+              "hiet-2011"
+            ]
+          },
+          {
+            "text": "Class IA/IC antiarrhythmics or physostigmine in TCA toxicity.",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Use echo: CCB shock with good contractility needs vasopressors; poor contractility needs insulin/inotropes.",
+            "refs": [
+              "ccb-2017"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Cardiotoxic overdose with shock",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Overdose with hypotension / brady / wide QRS"
+          },
+          {
+            "id": "qrs",
+            "type": "decision",
+            "text": "QRS > 100 ms?"
+          },
+          {
+            "id": "bic",
+            "type": "action",
+            "text": "Sodium bicarbonate 1-2 mEq/kg; repeat",
+            "severity": "critical"
+          },
+          {
+            "id": "agent",
+            "type": "decision",
+            "text": "Agent?"
+          },
+          {
+            "id": "ccb",
+            "type": "action",
+            "text": "Calcium + HIET + vasopressors; atropine"
+          },
+          {
+            "id": "bb",
+            "type": "action",
+            "text": "Atropine, glucagon, HIET, adrenaline"
+          },
+          {
+            "id": "dig",
+            "type": "end",
+            "text": "Digoxin Fab; treat K",
+            "severity": "critical"
+          },
+          {
+            "id": "ref",
+            "type": "decision",
+            "text": "Refractory shock?"
+          },
+          {
+            "id": "rescue",
+            "type": "end",
+            "text": "Pacing, lipid (arrest), VA-ECMO",
+            "severity": "critical"
+          },
+          {
+            "id": "icu",
+            "type": "end",
+            "text": "Continue; ICU monitoring ≥ 24 h"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "qrs"
+          },
+          {
+            "from": "qrs",
+            "to": "bic",
+            "label": "Yes"
+          },
+          {
+            "from": "qrs",
+            "to": "agent",
+            "label": "No"
+          },
+          {
+            "from": "bic",
+            "to": "agent"
+          },
+          {
+            "from": "agent",
+            "to": "ccb",
+            "label": "CCB"
+          },
+          {
+            "from": "agent",
+            "to": "bb",
+            "label": "Beta-blocker"
+          },
+          {
+            "from": "agent",
+            "to": "dig",
+            "label": "Digoxin"
+          },
+          {
+            "from": "ccb",
+            "to": "ref"
+          },
+          {
+            "from": "bb",
+            "to": "ref"
+          },
+          {
+            "from": "ref",
+            "to": "rescue",
+            "label": "Yes"
+          },
+          {
+            "from": "ref",
+            "to": "icu",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "ccb-2017",
+          "ibcc"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Sodium-channel blockade slows phase 0 depolarisation (wide QRS); hypertonic sodium and alkalaemia overcome it. CCBs block L-type channels, causing vasodilation, bradycardia and insulin resistance (myocardium shifts to glucose); high-dose insulin improves myocardial carbohydrate uptake and contractility.",
+        "evidence": "- CCB poisoning expert consensus (2017) [St-Onge 2017]. HIET review [Engebretsen 2011]. Lipid emulsion recommendations [Gosselin 2016]. Digoxin Fab review [Chan 2014].",
+        "controversies": "- Lipid emulsion outside local anaesthetic toxicity; methylene blue for refractory vasoplegia.",
+        "indiaNotes": "- Digoxin Fab and glucagon are rarely available in Indian hospitals; HIET with dextrose, calcium and vasopressors are the practical mainstays.\n- Yellow oleander (Thevetia) seed poisoning causes digoxin-like toxicity in South India and Sri Lanka; Fab is effective but scarce, so supportive care, atropine and pacing are used."
+      },
+      "drugIds": [
+        "sodium-bicarbonate",
+        "calcium-chloride",
+        "insulin-hiet",
+        "glucagon",
+        "lipid-emulsion",
+        "digifab"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-hour",
+        "qtc-bazett"
+      ],
+      "references": [
+        "ccb-2017",
+        "hiet-2011",
+        "lipid-2016",
+        "digifab-2014",
+        "ibcc"
+      ],
+      "quiz": [
+        {
+          "id": "cardiotoxic-overdoses-q1",
+          "stem": "TCA overdose with QRS 140 ms. First drug:",
+          "options": [
+            "Amiodarone",
+            "Sodium bicarbonate",
+            "Physostigmine",
+            "Flecainide"
+          ],
+          "answerIndex": 1,
+          "explanation": "Bicarbonate overcomes sodium-channel blockade."
+        },
+        {
+          "id": "cardiotoxic-overdoses-q2",
+          "stem": "High-dose insulin starting infusion:",
+          "options": [
+            "0.1 units/kg/h",
+            "1 units/kg/h",
+            "50 units/h fixed",
+            "0.01 units/kg/h"
+          ],
+          "answerIndex": 1,
+          "explanation": "Titrate up to 10 units/kg/h."
+        },
+        {
+          "id": "cardiotoxic-overdoses-q3",
+          "stem": "Yellow oleander poisoning resembles:",
+          "options": [
+            "Opioid toxicity",
+            "Digoxin toxicity",
+            "OP poisoning",
+            "Serotonin syndrome"
+          ],
+          "answerIndex": 1,
+          "explanation": "Cardiac glycosides."
+        },
+        {
+          "id": "cardiotoxic-overdoses-q4",
+          "stem": "CCB consensus first-line therapies include:",
+          "options": [
+            "Lipid emulsion first",
+            "IV calcium, HIET, vasopressors",
+            "ECMO first",
+            "Beta-blockers"
+          ],
+          "answerIndex": 1,
+          "explanation": "St-Onge 2017."
+        }
+      ]
+    },
+    {
+      "id": "toxic-alcohols",
+      "title": "Methanol and other toxic alcohols",
+      "summary": "Suspect methanol in hooch clusters, use osmolal and anion gaps, block alcohol dehydrogenase (fomepizole or ethanol), give folinic acid, correct acidosis and dialyse early.",
+      "viewKey": "topic:poisoning-approach-drug-overdoses/toxic-alcohols",
+      "uiHints": {
+        "icon": "flask-conical",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Methanol (illicit liquor, solvents) and ethylene glycol (antifreeze) are metabolised by alcohol dehydrogenase to toxic acids (formic acid; glycolate/oxalate), causing high anion gap metabolic acidosis, blindness (methanol), AKI (ethylene glycol) and death.",
+          "refs": [
+            "aact-methanol-2002"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Suspect",
+            "detail": "Clusters after drinking illicit liquor, visual blurring ('snowfield'), abdominal pain, Kussmaul breathing; may follow a latent period of 12-24 h.",
+            "refs": [
+              "aact-methanol-2002"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Investigate",
+            "detail": "ABG (HAGMA), anion gap, measured osmolality (osmolal gap > 10-20 suggests toxic alcohol early), ethanol level, methanol level if available, creatinine, lactate; CT head (putaminal necrosis).",
+            "refs": [
+              "aact-methanol-2002",
+              "extrip-methanol"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Block alcohol dehydrogenase",
+            "detail": "Fomepizole (preferred) or ethanol when methanol > 20 mg/dL, or strong history with osmolal gap > 10 or acidosis. Ethanol target blood level 100-150 mg/dL.",
+            "time": "Now",
+            "refs": [
+              "aact-methanol-2002"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Correct acidosis",
+            "detail": "Sodium bicarbonate to pH > 7.3 (reduces formate entry into CNS).",
+            "refs": [
+              "aact-methanol-2002"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Cofactors",
+            "detail": "Methanol: folinic acid 50 mg IV q4-6h. Ethylene glycol: thiamine 100 mg and pyridoxine 50 mg IV q6h.",
+            "refs": [
+              "aact-methanol-2002"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Haemodialysis (EXTRIP)",
+            "detail": "Coma, seizures, new visual deficit, pH ≤ 7.15, persistent acidosis, AG > 24, or high methanol level. Continue ADH blockade during and after HD (double ethanol dose or fomepizole q4h).",
+            "refs": [
+              "extrip-methanol"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "fomepizole",
+            "role": "ADH blockade",
+            "route": "IV",
+            "dose": "15 mg/kg, then 10 mg/kg q12h × 4, then 15 mg/kg q12h",
+            "workedExample": "70 kg: 1,050 mg load in 100 mL NS over 30 min; then 700 mg q12h",
+            "verify": "Availability in India.",
+            "refs": [
+              "aact-methanol-2002"
+            ]
+          },
+          {
+            "drugId": "ethanol",
+            "role": "ADH blockade when fomepizole unavailable",
+            "route": "IV/oral",
+            "dose": "Load ~800 mg/kg, maintain 80-130 mg/kg/h; target 100-150 mg/dL",
+            "workedExample": "70 kg oral: 56 g ethanol ≈ 175 mL of 40% spirit (diluted) load; maintenance 5.6-9.1 g/h ≈ 18-29 mL/h of 40% (double during HD)",
+            "verify": "Measure ethanol levels every 2-4 h; pharmacy protocol.",
+            "refs": [
+              "aact-methanol-2002"
+            ]
+          },
+          {
+            "drugId": "folinic-acid",
+            "role": "Methanol",
+            "route": "IV",
+            "dose": "50 mg q4-6h",
+            "refs": [
+              "aact-methanol-2002"
+            ]
+          },
+          {
+            "drugId": "sodium-bicarbonate",
+            "role": "Acidosis",
+            "route": "IV",
+            "dose": "1-2 mEq/kg boluses to pH > 7.3",
+            "refs": [
+              "aact-methanol-2002"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Visual symptoms, pH < 7.15 or coma after illicit liquor: dialyse urgently - prognosis depends on time to HD.",
+            "refs": [
+              "extrip-methanol"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "A normal osmolal gap does not exclude late toxic alcohol poisoning (parent alcohol already metabolised).",
+            "refs": [
+              "aact-methanol-2002"
+            ]
+          },
+          {
+            "text": "Forgetting to increase ethanol/fomepizole dosing during haemodialysis.",
+            "refs": [
+              "extrip-methanol"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Calculated osmolality = 2 Na + glucose/18 + urea/6 (mg/dL); each 10 mg/dL ethanol adds about 2 mOsm/kg.",
+            "refs": [
+              "aact-methanol-2002"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Suspected methanol poisoning",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Illicit liquor / HAGMA / visual symptoms"
+          },
+          {
+            "id": "tests",
+            "type": "action",
+            "text": "ABG, AG, osmolal gap, ethanol, methanol level"
+          },
+          {
+            "id": "susp",
+            "type": "decision",
+            "text": "Methanol > 20 mg/dL or OG > 10 / acidosis with history?"
+          },
+          {
+            "id": "obs",
+            "type": "end",
+            "text": "Monitor; repeat ABG/osmolality"
+          },
+          {
+            "id": "block",
+            "type": "action",
+            "text": "Fomepizole or ethanol; bicarbonate; folinic acid",
+            "severity": "critical"
+          },
+          {
+            "id": "hd",
+            "type": "decision",
+            "text": "Coma, seizures, vision loss, pH ≤ 7.15, AG > 24?"
+          },
+          {
+            "id": "dial",
+            "type": "end",
+            "text": "Urgent haemodialysis; continue ADH blockade",
+            "severity": "critical"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Continue blockade until methanol < 20 mg/dL and pH normal"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "tests"
+          },
+          {
+            "from": "tests",
+            "to": "susp"
+          },
+          {
+            "from": "susp",
+            "to": "obs",
+            "label": "No"
+          },
+          {
+            "from": "susp",
+            "to": "block",
+            "label": "Yes"
+          },
+          {
+            "from": "block",
+            "to": "hd"
+          },
+          {
+            "from": "hd",
+            "to": "dial",
+            "label": "Yes"
+          },
+          {
+            "from": "hd",
+            "to": "cont",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "aact-methanol-2002",
+          "extrip-methanol"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Methanol → formaldehyde → formic acid, which inhibits mitochondrial cytochrome oxidase, causing optic nerve and basal ganglia injury and lactic acidosis. Folate-dependent metabolism clears formate. ADH blockade stops formation of toxic metabolites; HD removes both parent alcohol and formate.",
+        "evidence": "- AACT methanol guideline 2002 [Barceloux 2002]. EXTRIP methanol recommendations 2015 [Roberts 2015].",
+        "controversies": "- Fomepizole vs ethanol cost-effectiveness in mass casualty settings; CRRT vs intermittent HD.",
+        "indiaNotes": "- India regularly experiences 'hooch tragedies' with dozens to hundreds of victims; prepare a mass-casualty plan (triage by pH, ventilators, HD slots).\n- Fomepizole is rarely available; oral ethanol (pharmacy-diluted spirit via NG) and early HD are the practical options. Methanol levels are usually unavailable - use osmolal and anion gaps."
+      },
+      "drugIds": [
+        "fomepizole",
+        "ethanol",
+        "folinic-acid",
+        "sodium-bicarbonate"
+      ],
+      "calculatorIds": [
+        "anion-gap",
+        "osmolal-gap",
+        "serum-osmolality"
+      ],
+      "references": [
+        "aact-methanol-2002",
+        "extrip-methanol"
+      ],
+      "quiz": [
+        {
+          "id": "toxic-alcohols-q1",
+          "stem": "Key early clue to toxic alcohol ingestion:",
+          "options": [
+            "Normal anion gap",
+            "Raised osmolal gap",
+            "Hypoglycaemia",
+            "Respiratory alkalosis"
+          ],
+          "answerIndex": 1,
+          "explanation": "Before metabolism to acids."
+        },
+        {
+          "id": "toxic-alcohols-q2",
+          "stem": "Target blood ethanol for ADH blockade:",
+          "options": [
+            "20-50 mg/dL",
+            "100-150 mg/dL",
+            "300 mg/dL",
+            "Any detectable"
+          ],
+          "answerIndex": 1,
+          "explanation": "AACT."
+        },
+        {
+          "id": "toxic-alcohols-q3",
+          "stem": "Cofactor in methanol poisoning:",
+          "options": [
+            "Thiamine only",
+            "Folinic acid",
+            "Vitamin K",
+            "Pyridoxine only"
+          ],
+          "answerIndex": 1,
+          "explanation": "Folate-dependent formate metabolism."
+        },
+        {
+          "id": "toxic-alcohols-q4",
+          "stem": "Indication for HD in methanol poisoning:",
+          "options": [
+            "pH 7.32, alert",
+            "New visual loss",
+            "Methanol 10 mg/dL",
+            "Mild headache"
+          ],
+          "answerIndex": 1,
+          "explanation": "EXTRIP."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Oral ethanol volumes",
+          "reason": "Worked example assumes 40% v/v spirit (0.32 g ethanol/mL); adjust to product and levels."
+        }
+      ]
+    },
+    {
+      "id": "antidotes",
+      "title": "Antidote quick reference",
+      "summary": "Antidote, indication and adult dose for the agents an Indian ICU should be able to access.",
+      "viewKey": "topic:poisoning-approach-drug-overdoses/antidotes",
+      "uiHints": {
+        "icon": "flask-round",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Antidotes are few but time-critical. Each ICU should know which antidotes are stocked on site, in the hospital, and regionally.",
+          "refs": [
+            "ibcc"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Know your stock",
+            "detail": "Keep an antidote list with location, quantity and alternative suppliers; review annually.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Dose for the whole course",
+            "detail": "Many antidotes need large total quantities (e.g. glucagon, NAC, hydroxocobalamin); order more early.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Hypoglycaemic agents",
+            "detail": "Sulfonylurea overdose: dextrose for immediate correction, then octreotide 50 mcg q6h to prevent recurrence; observe 24 h.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Methaemoglobinaemia",
+            "detail": "Dapsone, nitrites, aniline dyes, local anaesthetics: methylene blue 1-2 mg/kg if MetHb > 20-30% or symptomatic (not in G6PD deficiency).",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Cyanide",
+            "detail": "Smoke inhalation with lactate > 8 mmol/L, coma, shock: hydroxocobalamin 5 g IV; thiosulfate alternative.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Isoniazid",
+            "detail": "Refractory seizures (common with TB drugs in India): pyridoxine 1 g per g ingested (5 g if unknown) plus benzodiazepines.",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "octreotide",
+            "role": "Sulfonylurea hypoglycaemia",
+            "route": "SC/IV",
+            "dose": "50 mcg every 6 h",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "drugId": "methylene-blue",
+            "role": "Methaemoglobinaemia",
+            "route": "IV",
+            "dose": "1-2 mg/kg over 5 min",
+            "workedExample": "70 kg: 70-140 mg (7-14 mL of 1%)",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "drugId": "hydroxocobalamin",
+            "role": "Cyanide",
+            "route": "IV",
+            "dose": "5 g over 15 min",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "drugId": "pyridoxine",
+            "role": "Isoniazid seizures",
+            "route": "IV",
+            "dose": "1 g per g INH (5 g if unknown)",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "antidotes",
+            "title": "Antidote table",
+            "columns": [
+              "Poison",
+              "Antidote",
+              "Adult dose (summary)"
+            ],
+            "rows": [
+              [
+                "Opioids",
+                "Naloxone",
+                "0.04-0.4 mg IV titrated; infusion 2/3 effective dose/h"
+              ],
+              [
+                "Paracetamol",
+                "Acetylcysteine",
+                "200 mg/kg over 4 h, then 100 mg/kg over 16 h"
+              ],
+              [
+                "Methanol / ethylene glycol",
+                "Fomepizole or ethanol",
+                "Fomepizole 15 mg/kg then 10 mg/kg q12h; ethanol to 100-150 mg/dL"
+              ],
+              [
+                "Sodium-channel blockers (TCA)",
+                "Sodium bicarbonate",
+                "1-2 mEq/kg bolus, repeat"
+              ],
+              [
+                "Calcium-channel blockers",
+                "Calcium, high-dose insulin",
+                "CaCl2 10% 10-20 mL; insulin 1 units/kg bolus then 1-10 units/kg/h"
+              ],
+              [
+                "Beta-blockers",
+                "Glucagon, high-dose insulin",
+                "Glucagon 5-10 mg IV then 3-5 mg/h"
+              ],
+              [
+                "Digoxin / oleander",
+                "Digoxin Fab",
+                "Acute 2-5 vials titrated; arrest 10 vials"
+              ],
+              [
+                "Local anaesthetics",
+                "Lipid emulsion 20%",
+                "1.5 mL/kg then 0.25 mL/kg/min"
+              ],
+              [
+                "Benzodiazepines",
+                "Flumazenil (rarely)",
+                "0.2 mg IV increments; avoid in mixed overdose/seizure risk"
+              ],
+              [
+                "Organophosphates",
+                "Atropine (± oxime)",
+                "See agrochemical module"
+              ],
+              [
+                "Cyanide",
+                "Hydroxocobalamin",
+                "5 g IV"
+              ],
+              [
+                "Methaemoglobinaemia",
+                "Methylene blue",
+                "1-2 mg/kg IV"
+              ],
+              [
+                "Isoniazid",
+                "Pyridoxine",
+                "1 g per g ingested (5 g empirical)"
+              ],
+              [
+                "Sulfonylureas",
+                "Octreotide",
+                "50 mcg SC q6h"
+              ],
+              [
+                "Heparin",
+                "Protamine",
+                "1 mg per 100 units (see haematology)"
+              ],
+              [
+                "Warfarin",
+                "Vitamin K + PCC",
+                "See haematology module"
+              ]
+            ],
+            "refs": [
+              "ibcc",
+              "anz-paracetamol",
+              "aact-methanol-2002",
+              "ccb-2017",
+              "lipid-2016",
+              "digifab-2014"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Recurrent hypoglycaemia after sulfonylurea ingestion: may last > 24 h (especially glibenclamide and in renal failure).",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Flumazenil in an unknown overdose: may precipitate seizures (TCA co-ingestion, benzodiazepine dependence).",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "In methylene blue-refractory methaemoglobinaemia think G6PD deficiency or sulfhaemoglobinaemia; consider exchange transfusion.",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Antidotes act by receptor antagonism (naloxone, flumazenil, atropine), metabolic blockade (fomepizole), replacing depleted substrates (NAC, pyridoxine), binding the toxin (Fab, hydroxocobalamin), or bypassing the toxic effect (calcium, insulin, glucagon).",
+        "evidence": "- Mostly consensus- and case-series-based; see individual topic references [IBCC; St-Onge 2017; Chiew 2020].",
+        "controversies": "- Optimal stocking quantities in resource-limited settings.",
+        "indiaNotes": "- Many antidotes (fomepizole, Fab, hydroxocobalamin, glucagon in quantity) are scarce in India; regional antidote banks and poison centres (AIIMS NPIC) can help locate stock.\n- Pralidoxime and atropine are widely stocked because of high OP poisoning burden."
+      },
+      "drugIds": [
+        "octreotide",
+        "methylene-blue",
+        "hydroxocobalamin",
+        "pyridoxine"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "ibcc",
+        "anz-paracetamol",
+        "aact-methanol-2002",
+        "ccb-2017",
+        "lipid-2016",
+        "digifab-2014"
+      ],
+      "quiz": [
+        {
+          "id": "antidotes-q1",
+          "stem": "Sulfonylurea overdose with recurrent hypoglycaemia despite dextrose:",
+          "options": [
+            "Glucagon infusion",
+            "Octreotide",
+            "Insulin",
+            "Naloxone"
+          ],
+          "answerIndex": 1,
+          "explanation": "Octreotide inhibits insulin release."
+        },
+        {
+          "id": "antidotes-q2",
+          "stem": "Methylene blue is contraindicated in:",
+          "options": [
+            "Diabetes",
+            "G6PD deficiency",
+            "Asthma",
+            "Pregnancy always"
+          ],
+          "answerIndex": 1,
+          "explanation": "Haemolysis and failure of reduction."
+        },
+        {
+          "id": "antidotes-q3",
+          "stem": "Isoniazid overdose with seizures. Antidote:",
+          "options": [
+            "Pyridoxine",
+            "Thiamine",
+            "Naloxone",
+            "Atropine"
+          ],
+          "answerIndex": 0,
+          "explanation": "1 g per g ingested."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "naloxone",
+      "name": "Naloxone",
+      "class": "Opioid antagonist",
+      "indications": "Opioid toxicity with respiratory depression",
+      "adultDose": "0.04-0.4 mg IV, repeat every 2-3 min to adequate breathing (up to 10 mg); infusion two-thirds of the effective reversal dose per hour.",
+      "preparationIndia": "0.4 mg/mL ampoules.",
+      "cautions": "Precipitated withdrawal and pulmonary oedema with large doses; shorter half-life than many opioids.",
+      "refs": [
+        "ibcc"
+      ]
+    },
+    {
+      "id": "charcoal",
+      "name": "Activated charcoal",
+      "class": "Adsorbent",
+      "indications": "Recent ingestion (usually < 1-2 h) of a toxic amount of an adsorbable drug, airway protected",
+      "adultDose": "Single dose 50 g (1 g/kg) orally/NG. Multiple-dose (carbamazepine, dapsone, phenobarbital, quinine, theophylline): 50 g, then 25 g every 4 h (or 12.5 g/h).",
+      "cautions": "Aspiration; contraindicated with unprotected airway, ileus/obstruction, corrosives, hydrocarbons. Does not bind alcohols, metals (iron, lithium), acids/alkalis.",
+      "refs": [
+        "aact-charcoal-2005",
+        "aact-mdac-1999"
+      ]
+    },
+    {
+      "id": "nac",
+      "name": "N-acetylcysteine",
+      "class": "Antidote (glutathione precursor)",
+      "indications": "Paracetamol poisoning above nomogram line or with liver injury",
+      "adultDose": "Two-bag regimen (ANZ): 200 mg/kg over 4 h, then 100 mg/kg over 16 h. Traditional 3-bag: 150 mg/kg over 1 h, 50 mg/kg over 4 h, 100 mg/kg over 16 h. Continue 100 mg/kg/16 h until criteria met.",
+      "preparationIndia": "200 mg/mL; Indian 2 g/10 mL ampoules; dilute in 5% dextrose or NS.",
+      "cautions": "Anaphylactoid reactions (fewer with 2-bag/12-h regimens): pause, antihistamine, restart slower.",
+      "verify": "Weight cap (ANZ: actual weight up to 110 kg) and doubled second bag for massive ingestion.",
+      "refs": [
+        "anz-paracetamol",
+        "uscan-apap-2023",
+        "snap"
+      ]
+    },
+    {
+      "id": "sodium-bicarbonate",
+      "name": "Sodium bicarbonate 8.4%",
+      "class": "Alkalinising agent",
+      "indications": "TCA/sodium-channel blocker cardiotoxicity (QRS > 100 ms); salicylate; methanol acidosis",
+      "adultDose": "Sodium-channel blockade: 1-2 mEq/kg (mmol/kg) IV bolus, repeat to QRS narrowing, target pH 7.45-7.55. Salicylate: 1-2 mEq/kg bolus then infusion to urine pH 7.5-8.",
+      "preparationIndia": "8.4% = 1 mEq/mL; 7.5% (0.9 mEq/mL) in many Indian hospitals.",
+      "cautions": "Hypokalaemia, hypernatraemia, volume overload.",
+      "refs": [
+        "ibcc",
+        "extrip-salicylate"
+      ]
+    },
+    {
+      "id": "calcium-chloride",
+      "name": "Calcium chloride 10% / gluconate 10%",
+      "class": "Electrolyte",
+      "indications": "CCB poisoning; hyperkalaemia; hypocalcaemia",
+      "adultDose": "CCB: calcium chloride 10% 10-20 mL (or gluconate 10% 30-60 mL) IV, repeat every 10-20 min or infusion (chloride 0.2-0.4 mL/kg/h); target ionised Ca up to 2× normal.",
+      "cautions": "Chloride via central line (tissue necrosis).",
+      "refs": [
+        "ccb-2017"
+      ]
+    },
+    {
+      "id": "insulin-hiet",
+      "name": "Insulin (high-dose insulin euglycaemic therapy)",
+      "class": "Inotrope (metabolic)",
+      "indications": "CCB and beta-blocker poisoning with myocardial dysfunction",
+      "adultDose": "1 units/kg IV bolus, then 1 units/kg/h, titrate every 10-15 min up to 10 units/kg/h; dextrose 25 g bolus if glucose < 250 mg/dL, then 0.5 g/kg/h; glucose every 15-30 min, potassium hourly.",
+      "preparationIndia": "Concentrated infusion e.g. 500 units in 50 mL NS (10 units/mL) to limit volume.",
+      "cautions": "Hypoglycaemia (may persist for hours after stopping), hypokalaemia.",
+      "verify": "Unit protocol for high-concentration insulin.",
+      "refs": [
+        "ccb-2017",
+        "hiet-2011"
+      ]
+    },
+    {
+      "id": "glucagon",
+      "name": "Glucagon",
+      "class": "Inotrope/chronotrope (cAMP)",
+      "indications": "Beta-blocker poisoning (adjunct)",
+      "adultDose": "3-10 mg (0.05-0.15 mg/kg) IV over 2-5 min, then 3-5 mg/h infusion.",
+      "cautions": "Vomiting (protect airway), hyperglycaemia; expensive and often unavailable in large quantities in India.",
+      "verify": "Availability and stock quantity.",
+      "refs": [
+        "ibcc"
+      ]
+    },
+    {
+      "id": "lipid-emulsion",
+      "name": "Lipid emulsion 20%",
+      "class": "Lipid sink",
+      "indications": "Local anaesthetic systemic toxicity; refractory lipophilic drug cardiotoxicity (bupivacaine, some CCB, TCA) as rescue",
+      "adultDose": "1.5 mL/kg bolus over 1 min, then 0.25 mL/kg/min (repeat bolus once or twice; max ~10-12 mL/kg).",
+      "cautions": "Interferes with lab tests, pancreatitis, ARDS; recommended for LAST; only rescue for other drugs.",
+      "refs": [
+        "lipid-2016"
+      ]
+    },
+    {
+      "id": "digifab",
+      "name": "Digoxin-specific antibody fragments (Fab)",
+      "class": "Antidote",
+      "indications": "Digoxin toxicity with life-threatening arrhythmia, K > 6 mmol/L, end-organ dysfunction",
+      "adultDose": "Acute: 2-5 vials (40 mg each) titrated; empirical 10 vials for cardiac arrest. Chronic: 1-2 vials.",
+      "verify": "Availability in India extremely limited.",
+      "refs": [
+        "digifab-2014"
+      ]
+    },
+    {
+      "id": "fomepizole",
+      "name": "Fomepizole",
+      "class": "Alcohol dehydrogenase inhibitor",
+      "indications": "Methanol or ethylene glycol poisoning",
+      "adultDose": "15 mg/kg IV over 30 min, then 10 mg/kg q12h × 4 doses, then 15 mg/kg q12h; q4h during haemodialysis.",
+      "verify": "Very limited availability in India.",
+      "refs": [
+        "aact-methanol-2002",
+        "extrip-methanol"
+      ]
+    },
+    {
+      "id": "ethanol",
+      "name": "Ethanol (antidote)",
+      "class": "Alcohol dehydrogenase competitive substrate",
+      "indications": "Methanol/ethylene glycol when fomepizole unavailable",
+      "adultDose": "Load 600-800 mg/kg (IV 10% ethanol ~8 mL/kg, or oral 40% spirit ~2 mL/kg diluted); maintenance 80-130 mg/kg/h (higher in drinkers and doubled on haemodialysis); target blood ethanol 100-150 mg/dL.",
+      "cautions": "CNS depression, hypoglycaemia, phlebitis; needs ethanol levels every 2-4 h.",
+      "verify": "Pharmacy-prepared IV ethanol or oral spirit protocol; volumes depend on concentration.",
+      "refs": [
+        "aact-methanol-2002"
+      ]
+    },
+    {
+      "id": "folinic-acid",
+      "name": "Folinic acid (or folic acid)",
+      "class": "Cofactor",
+      "indications": "Methanol poisoning (formate metabolism)",
+      "adultDose": "Folinic acid 1 mg/kg (max 50 mg) IV q4-6h (folic acid 50 mg IV q6h if unavailable).",
+      "refs": [
+        "aact-methanol-2002"
+      ]
+    },
+    {
+      "id": "octreotide",
+      "name": "Octreotide",
+      "class": "Somatostatin analogue",
+      "indications": "Sulfonylurea-induced recurrent hypoglycaemia",
+      "adultDose": "50 mcg SC/IV every 6 h (or 25-50 mcg/h infusion).",
+      "refs": [
+        "ibcc"
+      ]
+    },
+    {
+      "id": "methylene-blue",
+      "name": "Methylene blue",
+      "class": "Reducing agent",
+      "indications": "Methaemoglobinaemia (> 20-30% or symptomatic)",
+      "adultDose": "1-2 mg/kg IV over 5 min; repeat after 1 h if needed.",
+      "cautions": "Contraindicated in G6PD deficiency; serotonin syndrome with SSRIs.",
+      "refs": [
+        "ibcc"
+      ]
+    },
+    {
+      "id": "hydroxocobalamin",
+      "name": "Hydroxocobalamin",
+      "class": "Cyanide antidote",
+      "indications": "Cyanide poisoning (smoke inhalation, nitroprusside, cassava/amygdalin)",
+      "adultDose": "5 g IV over 15 min (repeat 5 g if needed).",
+      "verify": "Availability in India limited; sodium nitrite + sodium thiosulfate alternative.",
+      "refs": [
+        "ibcc"
+      ]
+    },
+    {
+      "id": "pyridoxine",
+      "name": "Pyridoxine",
+      "class": "Vitamin B6",
+      "indications": "Isoniazid-induced seizures",
+      "adultDose": "1 g per g of isoniazid ingested (unknown: 5 g IV over 5-15 min).",
+      "verify": "High-dose IV pyridoxine availability in India.",
+      "refs": [
+        "ibcc"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "ibcc",
+      "citation": "Farkas J. The Internet Book of Critical Care (IBCC). EMCrit Project; continuously updated.",
+      "url": "https://emcrit.org/ibcc/toc/",
+      "year": 2024,
+      "type": "textbook"
+    },
+    {
+      "id": "aact-charcoal-2005",
+      "citation": "Chyka PA, Seger D, Krenzelok EP, Vale JA; AACT/EAPCCT. Position paper: single-dose activated charcoal. Clin Toxicol 2005;43:61-87.",
+      "url": "https://doi.org/10.1081/CLT-200051867",
+      "year": 2005,
+      "type": "consensus",
+      "doi": "10.1081/CLT-200051867"
+    },
+    {
+      "id": "aact-lavage-2013",
+      "citation": "Benson BE, Hoppu K, Troutman WG, et al. Position paper update: gastric lavage for gastrointestinal decontamination. Clin Toxicol 2013;51:140-6.",
+      "url": "https://doi.org/10.3109/15563650.2013.770154",
+      "year": 2013,
+      "type": "consensus",
+      "doi": "10.3109/15563650.2013.770154"
+    },
+    {
+      "id": "aact-wbi-2015",
+      "citation": "Thanacoody R, Caravati EM, Troutman B, et al. Position paper update: whole bowel irrigation for gastrointestinal decontamination of overdose patients. Clin Toxicol 2015;53:5-12.",
+      "url": "https://doi.org/10.3109/15563650.2014.989326",
+      "year": 2015,
+      "type": "consensus",
+      "doi": "10.3109/15563650.2014.989326"
+    },
+    {
+      "id": "aact-mdac-1999",
+      "citation": "American Academy of Clinical Toxicology; European Association of Poisons Centres and Clinical Toxicologists. Position statement and practice guidelines on the use of multi-dose activated charcoal in the treatment of acute poisoning. J Toxicol Clin Toxicol 1999;37:731-51.",
+      "url": "https://doi.org/10.1081/CLT-100102451",
+      "year": 1999,
+      "type": "consensus",
+      "doi": "10.1081/CLT-100102451"
+    },
+    {
+      "id": "anz-paracetamol",
+      "citation": "Chiew AL, Reith D, Pomerleau A, et al. Updated guidelines for the management of paracetamol poisoning in Australia and New Zealand. Med J Aust 2020;212:175-83.",
+      "url": "https://doi.org/10.5694/mja2.50428",
+      "year": 2020,
+      "type": "guideline",
+      "doi": "10.5694/mja2.50428"
+    },
+    {
+      "id": "uscan-apap-2023",
+      "citation": "Dart RC, Mullins ME, Matoushek T, et al. Management of acetaminophen poisoning in the US and Canada: a consensus statement. JAMA Netw Open 2023;6:e2327739.",
+      "url": "https://doi.org/10.1001/jamanetworkopen.2023.27739",
+      "year": 2023,
+      "type": "consensus",
+      "doi": "10.1001/jamanetworkopen.2023.27739"
+    },
+    {
+      "id": "snap",
+      "citation": "Bateman DN, Dear JW, Thanacoody HKR, et al. Reduction of adverse effects from intravenous acetylcysteine treatment for paracetamol poisoning (SNAP): a randomised controlled trial. Lancet 2014;383:697-704.",
+      "url": "https://doi.org/10.1016/S0140-6736(13)62062-0",
+      "year": 2014,
+      "type": "trial",
+      "doi": "10.1016/S0140-6736(13)62062-0"
+    },
+    {
+      "id": "ccb-2017",
+      "citation": "St-Onge M, Anseeuw K, Cantrell FL, et al. Experts consensus recommendations for the management of calcium channel blocker poisoning in adults. Crit Care Med 2017;45:e306-15.",
+      "url": "https://doi.org/10.1097/CCM.0000000000002087",
+      "year": 2017,
+      "type": "consensus",
+      "doi": "10.1097/CCM.0000000000002087"
+    },
+    {
+      "id": "hiet-2011",
+      "citation": "Engebretsen KM, Kaczmarek KM, Morgan J, Holger JS. High-dose insulin therapy in beta-blocker and calcium channel-blocker poisoning. Clin Toxicol 2011;49:277-83.",
+      "url": "https://doi.org/10.3109/15563650.2011.582471",
+      "year": 2011,
+      "type": "review",
+      "doi": "10.3109/15563650.2011.582471"
+    },
+    {
+      "id": "lipid-2016",
+      "citation": "Gosselin S, Hoegberg LCG, Hoffman RS, et al. Evidence-based recommendations on the use of intravenous lipid emulsion therapy in poisoning. Clin Toxicol 2016;54:899-923.",
+      "url": "https://doi.org/10.1080/15563650.2016.1214275",
+      "year": 2016,
+      "type": "consensus",
+      "doi": "10.1080/15563650.2016.1214275"
+    },
+    {
+      "id": "digifab-2014",
+      "citation": "Chan BS, Buckley NA. Digoxin-specific antibody fragments in the treatment of digoxin toxicity. Clin Toxicol 2014;52:824-36.",
+      "url": "https://doi.org/10.3109/15563650.2014.943907",
+      "year": 2014,
+      "type": "review",
+      "doi": "10.3109/15563650.2014.943907"
+    },
+    {
+      "id": "aact-methanol-2002",
+      "citation": "Barceloux DG, Bond GR, Krenzelok EP, Cooper H, Vale JA. American Academy of Clinical Toxicology practice guidelines on the treatment of methanol poisoning. J Toxicol Clin Toxicol 2002;40:415-46.",
+      "url": "https://doi.org/10.1081/CLT-120006745",
+      "year": 2002,
+      "type": "guideline",
+      "doi": "10.1081/CLT-120006745"
+    },
+    {
+      "id": "extrip-methanol",
+      "citation": "Roberts DM, Yates C, Megarbane B, et al. Recommendations for the role of extracorporeal treatments in the management of acute methanol poisoning: a systematic review and consensus statement. Crit Care Med 2015;43:461-72.",
+      "url": "https://doi.org/10.1097/CCM.0000000000000708",
+      "year": 2015,
+      "type": "consensus",
+      "doi": "10.1097/CCM.0000000000000708"
+    },
+    {
+      "id": "extrip-lithium",
+      "citation": "Decker BS, Goldfarb DS, Dargan PI, et al. Extracorporeal treatment for lithium poisoning: systematic review and recommendations from the EXTRIP workgroup. Clin J Am Soc Nephrol 2015;10:875-87.",
+      "url": "https://doi.org/10.2215/CJN.10021014",
+      "year": 2015,
+      "type": "consensus",
+      "doi": "10.2215/CJN.10021014"
+    },
+    {
+      "id": "extrip-salicylate",
+      "citation": "Juurlink DN, Gosselin S, Kielstein JT, et al. Extracorporeal treatment for salicylate poisoning: systematic review and recommendations from the EXTRIP workgroup. Ann Emerg Med 2015;66:165-81.",
+      "url": "https://doi.org/10.1016/j.annemergmed.2015.03.031",
+      "year": 2015,
+      "type": "consensus",
+      "doi": "10.1016/j.annemergmed.2015.03.031"
+    }
+  ]
+}

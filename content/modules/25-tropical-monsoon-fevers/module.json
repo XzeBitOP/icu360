@@ -1,0 +1,1722 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "tropical-monsoon-fevers",
+  "number": 25,
+  "folder": "25-tropical-monsoon-fevers",
+  "section": {
+    "id": "G",
+    "title": "Infections"
+  },
+  "phase": 1,
+  "title": "Tropical and monsoon fevers",
+  "summary": "Monsoon and tropical fevers that fill Indian ICUs: a syndromic approach to acute febrile illness with empirical cover, then severe malaria, severe dengue, leptospirosis, scrub typhus and enteric fever, each with Indian national and WHO guidance.",
+  "tags": [
+    "acute febrile illness",
+    "AUFI",
+    "monsoon",
+    "malaria",
+    "falciparum",
+    "vivax",
+    "artesunate",
+    "dengue",
+    "plasma leakage",
+    "haematocrit",
+    "platelets",
+    "leptospirosis",
+    "Weil's disease",
+    "pulmonary haemorrhage",
+    "scrub typhus",
+    "eschar",
+    "doxycycline",
+    "azithromycin",
+    "enteric fever",
+    "typhoid",
+    "ceftriaxone"
+  ],
+  "relatedModules": [
+    "sepsis-septic-shock",
+    "fluids-electrolytes",
+    "neuro-emergencies",
+    "ards-refractory-hypoxaemia",
+    "aki-renal-drug-dosing",
+    "haematology-coagulation-transfusion"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "cloud-rain",
+    "accent": "high"
+  },
+  "viewKey": "module:tropical-monsoon-fevers",
+  "topics": [
+    {
+      "id": "afi-approach",
+      "title": "Approach to severe acute febrile illness",
+      "summary": "In the monsoon, a febrile patient with thrombocytopenia, jaundice, AKI or ARDS could have malaria, dengue, leptospirosis, scrub typhus or enteric fever, alone or together. Send the core tests, then start empirical ceftriaxone plus doxycycline (or azithromycin), with artesunate if malaria is not yet excluded.",
+      "viewKey": "topic:tropical-monsoon-fevers/afi-approach",
+      "uiHints": {
+        "icon": "cloud-rain",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Clues",
+            "title": "Bedside",
+            "detail": "Eschar (groin, axilla, under breasts/waistband): scrub typhus. Conjunctival suffusion, calf tenderness, flood/sewage exposure: leptospirosis. Rash, retro-orbital pain, rising haematocrit: dengue. Travel/endemic zone, rigors: malaria. Step-ladder fever, relative bradycardia: enteric.",
+            "refs": [
+              "icmr2019"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Tests",
+            "title": "Core panel",
+            "detail": "Peripheral smear + malaria RDT (repeat if negative), dengue NS1 (days 1-5)/IgM (after day 5), scrub typhus IgM ELISA, leptospira IgM, blood cultures ×2, CBC with haematocrit, LFT, creatinine, lactate, urine, CXR.",
+            "refs": [
+              "isccm-tf2014"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Empirical",
+            "title": "Severe AFI",
+            "detail": "Ceftriaxone 2 g IV daily + doxycycline 100 mg 12-hourly (azithromycin in pregnancy). Add IV artesunate if smear/RDT unavailable or pending in an endemic area.",
+            "refs": [
+              "isccm-tf2014"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Organ support",
+            "title": "Common patterns",
+            "detail": "ARDS (scrub, lepto, falciparum), AKI (lepto, falciparum), shock (dengue leakage vs septic), encephalopathy (cerebral malaria, scrub, JE), bleeding (dengue, lepto)."
+          },
+          {
+            "n": 5,
+            "time": "Review",
+            "title": "48-72 h",
+            "detail": "Narrow therapy once a diagnosis is confirmed; consider co-infection (up to 10-15% in some series) if not improving."
+          }
+        ],
+        "tables": [
+          {
+            "id": "afi-diff",
+            "title": "Distinguishing features of tropical fevers",
+            "columns": [
+              "Disease",
+              "Key clues",
+              "Typical labs",
+              "First-line ICU treatment"
+            ],
+            "rows": [
+              [
+                "Falciparum malaria",
+                "Endemic area, rigors, coma, jaundice, AKI",
+                "Parasitaemia, anaemia, low platelets, hypoglycaemia",
+                "IV artesunate"
+              ],
+              [
+                "Dengue",
+                "Retro-orbital pain, rash, defervescence day 3-7 then shock",
+                "Rising haematocrit + falling platelets, leucopenia",
+                "Fluids by phase; no antibiotics"
+              ],
+              [
+                "Leptospirosis",
+                "Water/sewage exposure, calf pain, conjunctival suffusion",
+                "Non-oliguric hypokalaemic AKI, high bilirubin with modest ALT, high CPK",
+                "Penicillin G or ceftriaxone"
+              ],
+              [
+                "Scrub typhus",
+                "Eschar, lymphadenopathy, rural/bush exposure",
+                "ALT > AST, thrombocytopenia, ARDS",
+                "Doxycycline ± azithromycin"
+              ],
+              [
+                "Enteric fever",
+                "Step-ladder fever, abdominal pain, relative bradycardia",
+                "Normal/low WBC, blood culture positive in week 1",
+                "Ceftriaxone or azithromycin"
+              ]
+            ],
+            "caption": "Overlap is the rule; empirical dual cover is justified in severe disease until results return.",
+            "refs": [
+              "isccm-tf2014",
+              "icmr2019"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Fever with altered sensorium, shock, SpO2 < 92% or bleeding: ICU-level care."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "A single negative smear does not exclude malaria; repeat 12-24 hourly ×3."
+          },
+          {
+            "text": "Labelling all fever with thrombocytopenia as dengue and missing scrub typhus or malaria."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Look for the eschar under clothing: painless, black, often in skin folds."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Severe acute febrile illness",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Fever + organ dysfunction (monsoon)"
+          },
+          {
+            "id": "tests",
+            "type": "action",
+            "text": "Smear/RDT, NS1/IgM, scrub/lepto IgM, cultures, lactate"
+          },
+          {
+            "id": "mal",
+            "type": "decision",
+            "text": "Malaria positive (or test unavailable)?"
+          },
+          {
+            "id": "as",
+            "type": "action",
+            "text": "IV artesunate"
+          },
+          {
+            "id": "emp",
+            "type": "action",
+            "text": "Ceftriaxone + doxycycline (azithromycin if pregnant)"
+          },
+          {
+            "id": "dx",
+            "type": "decision",
+            "text": "Specific diagnosis at 48-72 h?"
+          },
+          {
+            "id": "narrow",
+            "type": "end",
+            "text": "Narrow to targeted therapy"
+          },
+          {
+            "id": "co",
+            "type": "end",
+            "text": "Reassess: co-infection, other sepsis source, HLH"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "tests"
+          },
+          {
+            "from": "tests",
+            "to": "mal"
+          },
+          {
+            "from": "mal",
+            "to": "as",
+            "label": "Yes"
+          },
+          {
+            "from": "mal",
+            "to": "emp",
+            "label": "No"
+          },
+          {
+            "from": "as",
+            "to": "emp"
+          },
+          {
+            "from": "emp",
+            "to": "dx"
+          },
+          {
+            "from": "dx",
+            "to": "narrow",
+            "label": "Yes"
+          },
+          {
+            "from": "dx",
+            "to": "co",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "isccm-tf2014"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **ISCCM 2014 tropical fevers guideline** and **ICMR 2019 treatment guidelines**: syndromic approach, tests and empirical regimens.",
+        "controversies": "- Routine empirical doxycycline in all AFI vs test-and-treat depends on local scrub typhus prevalence.",
+        "indiaNotes": "- Seasonal peaks July-November; regional patterns: scrub typhus in hilly and southern states, leptospirosis in coastal Maharashtra, Kerala, Gujarat; falciparum in Odisha, Chhattisgarh, Jharkhand and the north-east."
+      },
+      "drugIds": [
+        "ceftriaxone",
+        "doxycycline",
+        "azithromycin",
+        "artesunate"
+      ],
+      "calculatorIds": [
+        "qsofa",
+        "sofa"
+      ],
+      "references": [
+        "isccm-tf2014",
+        "icmr2019"
+      ],
+      "quiz": [
+        {
+          "id": "afi-approach-q1",
+          "stem": "Empirical regimen for severe undifferentiated fever in monsoon (malaria excluded):",
+          "options": [
+            "Ceftriaxone + doxycycline",
+            "Meropenem + colistin",
+            "Vancomycin alone",
+            "Oseltamivir"
+          ],
+          "answerIndex": 0,
+          "explanation": "Covers enteric, lepto, scrub/rickettsia."
+        },
+        {
+          "id": "afi-approach-q2",
+          "stem": "ALT > AST, eschar, thrombocytopenia suggests:",
+          "options": [
+            "Dengue",
+            "Scrub typhus",
+            "Leptospirosis",
+            "Typhoid"
+          ],
+          "answerIndex": 1,
+          "explanation": "Classic scrub typhus picture."
+        },
+        {
+          "id": "afi-approach-q3",
+          "stem": "Malaria smear negative once, high suspicion:",
+          "options": [
+            "Exclude malaria",
+            "Repeat smear 12-24 hourly and RDT",
+            "Start chloroquine",
+            "Bone marrow"
+          ],
+          "answerIndex": 1,
+          "explanation": "Sequestration lowers peripheral parasitaemia."
+        }
+      ]
+    },
+    {
+      "id": "severe-malaria",
+      "title": "Severe malaria",
+      "summary": "Any severity criterion with asexual parasites (P. falciparum, and also P. vivax or knowlesi) = severe malaria: IV artesunate 2.4 mg/kg at 0, 12, 24 h then daily, followed by a full oral ACT course, plus glucose monitoring, careful fluids, and organ support.",
+      "viewKey": "topic:tropical-monsoon-fevers/severe-malaria",
+      "uiHints": {
+        "icon": "cloud-rain",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Confirm",
+            "title": "Smear + RDT",
+            "detail": "Parasite count; but treat on clinical grounds if testing is delayed.",
+            "refs": [
+              "icmr2019"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0 h",
+            "title": "Artesunate",
+            "detail": "2.4 mg/kg IV (or IM) at 0, 12, 24 h, then daily until oral intake (≥ 24 h), then complete 3-day ACT (+ single-dose primaquine for falciparum per national policy).",
+            "refs": [
+              "icmr2019",
+              "who-malaria"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Glucose",
+            "title": "Hourly-4 hourly",
+            "detail": "Hypoglycaemia (< 40 mg/dL) is common, especially in pregnancy and with quinine; give dextrose."
+          },
+          {
+            "n": 4,
+            "time": "Fluids",
+            "title": "Restrictive",
+            "detail": "No aggressive boluses (FEAST-type harm; ARDS risk); treat hypovolaemia cautiously; early RRT for AKI or severe acidosis."
+          },
+          {
+            "n": 5,
+            "time": "Other",
+            "title": "Supportive",
+            "detail": "Transfuse if Hb < 7 g/dL; antibiotics if shock or suspected bacteraemia; treat seizures; no steroids, mannitol or exchange transfusion.",
+            "refs": [
+              "who-malaria"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Follow-up",
+            "title": "Late haemolysis",
+            "detail": "Hb at day 7, 14 and 28 after artesunate (PADH). Vivax: G6PD test, then primaquine 0.25 mg/kg daily × 14 days for radical cure.",
+            "refs": [
+              "icmr2019"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "artesunate",
+            "role": "Severe malaria",
+            "route": "IV bolus (or IM)",
+            "dose": "2.4 mg/kg at 0, 12, 24 h, then every 24 h",
+            "workedExample": "55 kg: 132 mg ≈ 2.2 vials (60 mg); reconstitute each vial with 1 mL bicarbonate + 5 mL saline (10 mg/mL) → 13.2 mL IV",
+            "refs": [
+              "icmr2019"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "severe-malaria-criteria",
+            "title": "WHO criteria for severe malaria (adults; any one with parasitaemia)",
+            "columns": [
+              "Feature",
+              "Threshold"
+            ],
+            "rows": [
+              [
+                "Impaired consciousness",
+                "GCS < 11"
+              ],
+              [
+                "Prostration",
+                "Unable to sit/stand/walk without help"
+              ],
+              [
+                "Multiple convulsions",
+                "> 2 in 24 h"
+              ],
+              [
+                "Acidosis",
+                "Base deficit > 8, HCO3- < 15 mmol/L or lactate ≥ 5 mmol/L"
+              ],
+              [
+                "Hypoglycaemia",
+                "< 40 mg/dL (2.2 mmol/L)"
+              ],
+              [
+                "Severe anaemia",
+                "Hb < 7 g/dL with parasitaemia > 10,000/µL"
+              ],
+              [
+                "Renal impairment",
+                "Creatinine > 3 mg/dL or urea > 20 mmol/L"
+              ],
+              [
+                "Jaundice",
+                "Bilirubin > 3 mg/dL with parasitaemia > 100,000/µL"
+              ],
+              [
+                "Pulmonary oedema",
+                "Radiological, or SpO2 < 92% on air with RR > 30"
+              ],
+              [
+                "Significant bleeding",
+                "Recurrent/prolonged nose, gum or venepuncture bleeding, haematemesis, melaena"
+              ],
+              [
+                "Shock",
+                "SBP < 80 mmHg with impaired perfusion"
+              ],
+              [
+                "Hyperparasitaemia",
+                "> 10% parasitised red cells"
+              ]
+            ],
+            "caption": "From WHO severe malaria definitions (WHO malaria guidelines).",
+            "refs": [
+              "who-malaria"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Pregnant woman with falciparum malaria: high risk of hypoglycaemia, pulmonary oedema and fetal loss; artesunate in all trimesters."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Using quinine when artesunate is available (higher mortality)."
+          },
+          {
+            "text": "Liberal fluid boluses precipitating pulmonary oedema."
+          },
+          {
+            "text": "Ignoring severe vivax malaria (ARDS, AKI, thrombocytopenia occur in India)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Artesunate reduced mortality vs quinine by 35% in Asian adults (SEAQUAMAT) and 22.5% in African children (AQUAMAT)."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Severe malaria",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Parasitaemia + any severity criterion"
+          },
+          {
+            "id": "as",
+            "type": "action",
+            "text": "IV artesunate 2.4 mg/kg 0, 12, 24 h",
+            "severity": "critical"
+          },
+          {
+            "id": "glu",
+            "type": "action",
+            "text": "Glucose checks; cautious fluids; transfuse Hb < 7"
+          },
+          {
+            "id": "org",
+            "type": "decision",
+            "text": "AKI/acidosis/ARDS?"
+          },
+          {
+            "id": "rrt",
+            "type": "action",
+            "text": "Early RRT; lung-protective ventilation"
+          },
+          {
+            "id": "oral",
+            "type": "decision",
+            "text": "Tolerating oral after ≥ 24 h?"
+          },
+          {
+            "id": "act",
+            "type": "end",
+            "text": "Full 3-day ACT + primaquine per policy; Hb days 7/14/28"
+          },
+          {
+            "id": "cont",
+            "type": "action",
+            "text": "Continue artesunate daily"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "as"
+          },
+          {
+            "from": "as",
+            "to": "glu"
+          },
+          {
+            "from": "glu",
+            "to": "org"
+          },
+          {
+            "from": "org",
+            "to": "rrt",
+            "label": "Yes"
+          },
+          {
+            "from": "org",
+            "to": "oral",
+            "label": "No"
+          },
+          {
+            "from": "rrt",
+            "to": "oral"
+          },
+          {
+            "from": "oral",
+            "to": "act",
+            "label": "Yes"
+          },
+          {
+            "from": "oral",
+            "to": "cont",
+            "label": "No"
+          },
+          {
+            "from": "cont",
+            "to": "oral"
+          }
+        ],
+        "refs": [
+          "who-malaria"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **SEAQUAMAT 2005:** mortality 15% artesunate vs 22% quinine in adults.\n- **AQUAMAT 2010:** 8.5% vs 10.9% in African children.",
+        "indiaNotes": "- Artesunate is supplied by the national programme; severe vivax malaria and mixed infections are increasingly reported. ACT choice differs: AS+SP nationally, artemether-lumefantrine in the north-east."
+      },
+      "drugIds": [
+        "artesunate",
+        "primaquine"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "who-malaria",
+        "icmr2019",
+        "seaquamat",
+        "aquamat"
+      ],
+      "quiz": [
+        {
+          "id": "severe-malaria-q1",
+          "stem": "Artesunate dose for a 50 kg adult with severe malaria:",
+          "options": [
+            "60 mg",
+            "120 mg at 0, 12, 24 h then daily",
+            "240 mg once",
+            "2.4 g"
+          ],
+          "answerIndex": 1,
+          "explanation": "2.4 mg/kg."
+        },
+        {
+          "id": "severe-malaria-q2",
+          "stem": "After artesunate, check Hb at days 7, 14, 28 because of:",
+          "options": [
+            "Aplastic anaemia",
+            "Post-artesunate delayed haemolysis",
+            "Iron deficiency",
+            "Recurrence only"
+          ],
+          "answerIndex": 1,
+          "explanation": "PADH occurs in 5-15%."
+        },
+        {
+          "id": "severe-malaria-q3",
+          "stem": "Not recommended in severe malaria:",
+          "options": [
+            "Artesunate",
+            "Glucose monitoring",
+            "Corticosteroids",
+            "Transfusion for Hb < 7"
+          ],
+          "answerIndex": 2,
+          "explanation": "Steroids increase harm in cerebral malaria."
+        }
+      ]
+    },
+    {
+      "id": "severe-dengue",
+      "title": "Severe dengue and dengue shock",
+      "summary": "Plasma leakage peaks in the critical phase around defervescence (days 3-7). Guide crystalloid by haematocrit, capillary refill, lactate and urine output; step fluids down quickly; avoid prophylactic platelets; and recognise reabsorption-phase overload.",
+      "viewKey": "topic:tropical-monsoon-fevers/severe-dengue",
+      "uiHints": {
+        "icon": "cloud-rain",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Phase",
+            "title": "Know the timeline",
+            "detail": "Febrile (days 1-3), critical (around defervescence, 24-48 h of leakage), recovery (reabsorption; fluid overload risk).",
+            "refs": [
+              "who-dengue2009"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Warning signs",
+            "title": "Admit",
+            "detail": "Abdominal pain, persistent vomiting, fluid accumulation, mucosal bleeding, lethargy, liver > 2 cm, rising haematocrit with falling platelets.",
+            "refs": [
+              "who-dengue2009"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Warning signs",
+            "title": "Fluids",
+            "detail": "Crystalloid 5-7 mL/kg/h for 1-2 h, then 3-5 mL/kg/h for 2-4 h, then 2-3 mL/kg/h, adjusted to haematocrit and clinical response.",
+            "refs": [
+              "icmr2019",
+              "who-dengue2009"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Compensated shock",
+            "title": "5-10 mL/kg/h",
+            "detail": "Crystalloid 5-10 mL/kg over 1 h; if improving, step down to 5-7, 3-5, 2-3 mL/kg/h over 24-48 h.",
+            "refs": [
+              "who-dengue2009"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Hypotensive shock",
+            "title": "Bolus",
+            "detail": "20 mL/kg crystalloid over 15-30 min; repeat; if haematocrit falls with persistent shock, suspect occult bleeding and transfuse blood. Guide with capillary refill time and lactate.",
+            "refs": [
+              "who-dengue2009",
+              "who-arbo2025"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Platelets",
+            "title": "Only for bleeding",
+            "detail": "Prophylactic platelet transfusion does not reduce bleeding (Lye 2017); transfuse for significant bleeding or procedures.",
+            "refs": [
+              "lye2017"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Avoid",
+            "title": "Harmful",
+            "detail": "NSAIDs and aspirin, IM injections, steroids, immunoglobulins; minimise invasive procedures.",
+            "refs": [
+              "who-arbo2025"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "dengue-fluids",
+            "title": "Crystalloid step-down in compensated dengue shock (adult)",
+            "columns": [
+              "Step",
+              "Rate",
+              "Duration"
+            ],
+            "rows": [
+              [
+                "Initial",
+                "5-10 mL/kg/h",
+                "1 h"
+              ],
+              [
+                "If improving",
+                "5-7 mL/kg/h",
+                "1-2 h"
+              ],
+              [
+                "Then",
+                "3-5 mL/kg/h",
+                "2-4 h"
+              ],
+              [
+                "Then",
+                "2-3 mL/kg/h",
+                "2-4 h, then stop by 24-48 h"
+              ]
+            ],
+            "caption": "Reassess at each step: vital signs, CRT, haematocrit, urine output (target ~0.5 mL/kg/h). If not improving, check haematocrit: rising → more crystalloid/colloid; falling → bleeding, transfuse.",
+            "refs": [
+              "who-dengue2009"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Narrow pulse pressure (≤ 20 mmHg) with normal systolic BP: compensated shock."
+          },
+          {
+            "text": "Shock with falling haematocrit: internal bleeding."
+          },
+          {
+            "text": "Breathlessness with effusions after day 7: reabsorption overload; stop IV fluid, consider diuretic."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Treating the platelet count rather than the patient."
+          },
+          {
+            "text": "Continuing IV fluids at a high rate after leakage stops."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Haematocrit rise ≥ 20% from baseline signals significant leakage."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Dengue with shock",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Dengue + shock signs"
+          },
+          {
+            "id": "hyp",
+            "type": "decision",
+            "text": "Hypotensive?"
+          },
+          {
+            "id": "b20",
+            "type": "action",
+            "text": "20 mL/kg crystalloid over 15-30 min",
+            "severity": "critical"
+          },
+          {
+            "id": "b10",
+            "type": "action",
+            "text": "5-10 mL/kg over 1 h"
+          },
+          {
+            "id": "imp",
+            "type": "decision",
+            "text": "Improving?"
+          },
+          {
+            "id": "step",
+            "type": "end",
+            "text": "Step down 5-7 → 3-5 → 2-3 mL/kg/h over 24-48 h"
+          },
+          {
+            "id": "hct",
+            "type": "decision",
+            "text": "Haematocrit rising?"
+          },
+          {
+            "id": "more",
+            "type": "action",
+            "text": "Repeat bolus; consider colloid"
+          },
+          {
+            "id": "bleed",
+            "type": "end",
+            "text": "Falling Hct: bleeding; transfuse blood"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "hyp"
+          },
+          {
+            "from": "hyp",
+            "to": "b20",
+            "label": "Yes"
+          },
+          {
+            "from": "hyp",
+            "to": "b10",
+            "label": "No"
+          },
+          {
+            "from": "b20",
+            "to": "imp"
+          },
+          {
+            "from": "b10",
+            "to": "imp"
+          },
+          {
+            "from": "imp",
+            "to": "step",
+            "label": "Yes"
+          },
+          {
+            "from": "imp",
+            "to": "hct",
+            "label": "No"
+          },
+          {
+            "from": "hct",
+            "to": "more",
+            "label": "Yes"
+          },
+          {
+            "from": "hct",
+            "to": "bleed",
+            "label": "No"
+          },
+          {
+            "from": "more",
+            "to": "imp"
+          }
+        ],
+        "refs": [
+          "who-dengue2009"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **WHO 2009 dengue guideline:** phase-based fluid protocols.\n- **WHO 2025 arboviral guideline:** crystalloids over colloids; CRT and lactate to guide fluids; against NSAIDs, steroids and immunoglobulins.\n- **Lye 2017:** prophylactic platelets did not reduce bleeding and caused more adverse events.",
+        "indiaNotes": "- India reports hundreds of thousands of dengue cases yearly; platelet transfusion demand driven by counts is a major waste of blood products."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "shock-index"
+      ],
+      "references": [
+        "who-dengue2009",
+        "who-arbo2025",
+        "lye2017",
+        "icmr2019"
+      ],
+      "quiz": [
+        {
+          "id": "severe-dengue-q1",
+          "stem": "Prophylactic platelet transfusion in dengue with platelets 15,000 and no bleeding:",
+          "options": [
+            "Indicated",
+            "Not recommended",
+            "Mandatory below 20,000",
+            "Give 4 units"
+          ],
+          "answerIndex": 1,
+          "explanation": "Lye 2017."
+        },
+        {
+          "id": "severe-dengue-q2",
+          "stem": "Shock with falling haematocrit suggests:",
+          "options": [
+            "Ongoing leakage",
+            "Bleeding",
+            "Recovery",
+            "Overload"
+          ],
+          "answerIndex": 1,
+          "explanation": "Transfuse blood."
+        },
+        {
+          "id": "severe-dengue-q3",
+          "stem": "Dengue critical phase is around:",
+          "options": [
+            "Day 1",
+            "Defervescence, days 3-7",
+            "Day 14",
+            "Before fever"
+          ],
+          "answerIndex": 1,
+          "explanation": "Leakage peaks then."
+        }
+      ]
+    },
+    {
+      "id": "leptospirosis",
+      "title": "Leptospirosis (Weil's disease)",
+      "summary": "After flood or sewage exposure: fever, myalgia, conjunctival suffusion, then jaundice, non-oliguric hypokalaemic AKI, pulmonary haemorrhage and myocarditis. Give penicillin G or ceftriaxone early; dialyse early; lung-protective ventilation for pulmonary haemorrhage.",
+      "viewKey": "topic:tropical-monsoon-fevers/leptospirosis",
+      "uiHints": {
+        "icon": "cloud-rain",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Suspect",
+            "title": "Exposure",
+            "detail": "Wading in flood water, farming (paddy), sewer work, animal contact, 2-20 days before."
+          },
+          {
+            "n": 2,
+            "time": "Severe",
+            "title": "Weil's",
+            "detail": "Jaundice with modest transaminase rise, AKI (often non-oliguric with hypokalaemia), thrombocytopenia, haemoptysis/pulmonary haemorrhage, myocarditis, aseptic meningitis."
+          },
+          {
+            "n": 3,
+            "time": "Diagnose",
+            "title": "Tests",
+            "detail": "IgM ELISA (after day 5), MAT (reference), PCR in first week; do not wait for results to treat.",
+            "refs": [
+              "who-lepto2003"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Treat",
+            "title": "Antibiotics",
+            "detail": "Penicillin G 1.5 MU IV 6-hourly or ceftriaxone 1-2 g IV daily for 7 days; doxycycline 100 mg 12-hourly for milder disease.",
+            "refs": [
+              "icmr2019"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Organ support",
+            "title": "Kidney and lung",
+            "detail": "Replace K+; early daily dialysis for oliguria, hyperkalaemia, acidosis or overload; pulmonary haemorrhage: intubation, low tidal volume, high PEEP; consider plasma exchange or steroids only in trials/selected cases."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "benzylpenicillin",
+            "role": "Severe leptospirosis",
+            "route": "IV",
+            "dose": "1.5 million units every 6 h for 7 days",
+            "refs": [
+              "icmr2019"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "New haemoptysis or falling Hb with infiltrates: pulmonary haemorrhage; high mortality; intubate early."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Missing hypokalaemia in polyuric leptospiral AKI."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Bilirubin very high with only modestly raised ALT and high CPK points to leptospirosis rather than viral hepatitis."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Suspected leptospirosis",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Fever + exposure + myalgia/suffusion"
+          },
+          {
+            "id": "sev",
+            "type": "decision",
+            "text": "Jaundice, AKI, bleeding or lung involvement?"
+          },
+          {
+            "id": "oral",
+            "type": "end",
+            "text": "Doxycycline 100 mg 12-hourly × 7 days"
+          },
+          {
+            "id": "iv",
+            "type": "action",
+            "text": "Penicillin G or ceftriaxone IV"
+          },
+          {
+            "id": "lung",
+            "type": "decision",
+            "text": "Pulmonary haemorrhage?"
+          },
+          {
+            "id": "vent",
+            "type": "end",
+            "text": "Early intubation, lung-protective ventilation, high PEEP"
+          },
+          {
+            "id": "kid",
+            "type": "end",
+            "text": "K+ replacement; early dialysis if needed"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "sev"
+          },
+          {
+            "from": "sev",
+            "to": "oral",
+            "label": "No"
+          },
+          {
+            "from": "sev",
+            "to": "iv",
+            "label": "Yes"
+          },
+          {
+            "from": "iv",
+            "to": "lung"
+          },
+          {
+            "from": "lung",
+            "to": "vent",
+            "label": "Yes"
+          },
+          {
+            "from": "lung",
+            "to": "kid",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "who-lepto2003"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **WHO 2003 guidance** for diagnosis; antibiotic choice from ICMR 2019 and ISCCM 2014.",
+        "controversies": "- Benefit of antibiotics late in disease and of steroids/plasma exchange for pulmonary haemorrhage is uncertain.",
+        "indiaNotes": "- Outbreaks follow monsoon floods in Mumbai, Kerala, Gujarat, coastal Karnataka and the Andaman Islands."
+      },
+      "drugIds": [
+        "benzylpenicillin",
+        "ceftriaxone",
+        "doxycycline"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "who-lepto2003",
+        "icmr2019",
+        "isccm-tf2014"
+      ],
+      "quiz": [
+        {
+          "id": "leptospirosis-q1",
+          "stem": "Typical AKI in leptospirosis:",
+          "options": [
+            "Oliguric hyperkalaemic",
+            "Non-oliguric hypokalaemic",
+            "Post-renal",
+            "Glomerulonephritis"
+          ],
+          "answerIndex": 1,
+          "explanation": "Proximal tubular injury."
+        },
+        {
+          "id": "leptospirosis-q2",
+          "stem": "Drug for severe leptospirosis:",
+          "options": [
+            "Penicillin G",
+            "Vancomycin",
+            "Fluconazole",
+            "Metronidazole"
+          ],
+          "answerIndex": 0,
+          "explanation": "Or ceftriaxone."
+        },
+        {
+          "id": "leptospirosis-q3",
+          "stem": "Most lethal complication:",
+          "options": [
+            "Conjunctivitis",
+            "Pulmonary haemorrhage",
+            "Rash",
+            "Myalgia"
+          ],
+          "answerIndex": 1,
+          "explanation": "Severe pulmonary haemorrhage syndrome."
+        }
+      ]
+    },
+    {
+      "id": "scrub-typhus",
+      "title": "Scrub typhus",
+      "summary": "Orientia tsutsugamushi infection with fever, eschar and lymphadenopathy that can progress to ARDS, AKI, shock, myocarditis and meningoencephalitis. Severe disease: IV doxycycline plus azithromycin for 7 days (INTREST).",
+      "viewKey": "topic:tropical-monsoon-fevers/scrub-typhus",
+      "uiHints": {
+        "icon": "cloud-rain",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Suspect",
+            "title": "Clues",
+            "detail": "Rural/bush/farm exposure, eschar (present in ~50% of Indian cases), regional lymphadenopathy, hepatosplenomegaly, ALT > AST, thrombocytopenia, ARDS.",
+            "refs": [
+              "icmr2019"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Test",
+            "title": "IgM ELISA",
+            "detail": "IgM ELISA is the mainstay; IFA is gold standard; Weil-Felix is specific but insensitive; PCR of eschar or blood early.",
+            "refs": [
+              "icmr2019"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Treat",
+            "title": "Non-severe",
+            "detail": "Doxycycline 100 mg 12-hourly for 7 days; azithromycin 500 mg daily in pregnancy and children.",
+            "refs": [
+              "icmr2019"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Treat",
+            "title": "Severe",
+            "detail": "IV doxycycline + IV azithromycin for 7 days: INTREST composite of death, persistent complications or fever at day 7: 33% combination vs 47% doxycycline vs 48% azithromycin.",
+            "refs": [
+              "intrest"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Support",
+            "title": "Organs",
+            "detail": "Lung-protective ventilation for ARDS; RRT; vasopressors; meningoencephalitis care; monitor for myocarditis and conduction defects."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "doxycycline",
+            "role": "Severe scrub typhus (with azithromycin)",
+            "route": "IV",
+            "dose": "200 mg load, then 100 mg every 12 h for 7 days",
+            "verify": "INTREST used IV doxycycline 200 mg loading dose followed by 100 mg twice daily; confirm against the trial protocol.",
+            "refs": [
+              "intrest"
+            ]
+          },
+          {
+            "drugId": "azithromycin",
+            "role": "Severe scrub typhus (with doxycycline)",
+            "route": "IV",
+            "dose": "1 g on day 1, then 500 mg daily for 7 days",
+            "refs": [
+              "intrest"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Hypoxaemia, hypotension, GCS fall or creatinine rising in a febrile patient with eschar: severe scrub typhus; combination IV therapy."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Treating with β-lactams alone (no activity against Orientia)."
+          },
+          {
+            "text": "Rifampicin monotherapy in TB-endemic India (discouraged)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Defervescence within 48 h of doxycycline is so typical that persistent fever should prompt re-evaluation."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Scrub typhus",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Fever ± eschar, endemic area"
+          },
+          {
+            "id": "sev",
+            "type": "decision",
+            "text": "Organ dysfunction (ARDS, shock, AKI, CNS)?"
+          },
+          {
+            "id": "po",
+            "type": "end",
+            "text": "Oral doxycycline 7 days (azithromycin if pregnant)"
+          },
+          {
+            "id": "iv",
+            "type": "action",
+            "text": "IV doxycycline + IV azithromycin × 7 days",
+            "severity": "high"
+          },
+          {
+            "id": "resp",
+            "type": "decision",
+            "text": "Afebrile in 48-72 h?"
+          },
+          {
+            "id": "done",
+            "type": "end",
+            "text": "Complete 7 days"
+          },
+          {
+            "id": "re",
+            "type": "end",
+            "text": "Re-evaluate: co-infection, other diagnosis"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "sev"
+          },
+          {
+            "from": "sev",
+            "to": "po",
+            "label": "No"
+          },
+          {
+            "from": "sev",
+            "to": "iv",
+            "label": "Yes"
+          },
+          {
+            "from": "iv",
+            "to": "resp"
+          },
+          {
+            "from": "resp",
+            "to": "done",
+            "label": "Yes"
+          },
+          {
+            "from": "resp",
+            "to": "re",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "intrest"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **INTREST 2023 (n = 794, India):** combination IV doxycycline + azithromycin reduced the composite primary outcome vs either alone.",
+        "indiaNotes": "- Endemic across the \"tsutsugamushi triangle\"; major cause of AFI and AES in Himachal, Uttarakhand, Tamil Nadu, Andhra, Northeast and Gorakhpur (AES)."
+      },
+      "drugIds": [
+        "doxycycline",
+        "azithromycin"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "intrest",
+        "icmr2019",
+        "isccm-tf2014"
+      ],
+      "quiz": [
+        {
+          "id": "scrub-typhus-q1",
+          "stem": "INTREST showed best outcome with:",
+          "options": [
+            "IV doxycycline alone",
+            "IV azithromycin alone",
+            "IV doxycycline + azithromycin",
+            "Chloramphenicol"
+          ],
+          "answerIndex": 2,
+          "explanation": "Composite outcome 33% vs 47-48%."
+        },
+        {
+          "id": "scrub-typhus-q2",
+          "stem": "Typical LFT pattern:",
+          "options": [
+            "AST > ALT",
+            "ALT > AST",
+            "Isolated ALP",
+            "Normal"
+          ],
+          "answerIndex": 1,
+          "explanation": "ICMR notes ALT > AST."
+        },
+        {
+          "id": "scrub-typhus-q3",
+          "stem": "Scrub typhus in pregnancy:",
+          "options": [
+            "Doxycycline",
+            "Azithromycin",
+            "Ciprofloxacin",
+            "Rifampicin alone"
+          ],
+          "answerIndex": 1,
+          "explanation": "Avoid tetracyclines."
+        }
+      ]
+    },
+    {
+      "id": "enteric-fever",
+      "title": "Enteric fever (typhoid and paratyphoid)",
+      "summary": "Complicated enteric fever (encephalopathy, shock, perforation, GI bleeding) needs IV ceftriaxone (or azithromycin combination), blood cultures before antibiotics, and early surgical review for perforation. Fluoroquinolone resistance is high in India.",
+      "viewKey": "topic:tropical-monsoon-fevers/enteric-fever",
+      "uiHints": {
+        "icon": "cloud-rain",
+        "accent": "standard"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Diagnose",
+            "title": "Cultures",
+            "detail": "Blood culture (best in week 1, ~40-80% sensitive); bone marrow culture more sensitive; Widal is unreliable.",
+            "refs": [
+              "parry2002"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Treat",
+            "title": "Uncomplicated",
+            "detail": "Azithromycin 500 mg-1 g daily for 7 days or cefixime orally; fluoroquinolones only if susceptible.",
+            "refs": [
+              "icmr2019"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Treat",
+            "title": "Severe",
+            "detail": "Ceftriaxone 2 g IV daily (some use 2 g 12-hourly or 4 g/day in severe cases) for 10-14 days ± azithromycin; adjust to susceptibility. XDR typhoid (travel from Pakistan): meropenem + azithromycin.",
+            "refs": [
+              "icmr2019"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Complications",
+            "title": "Week 2-3",
+            "detail": "Perforation (abdominal pain, guarding, free gas): resuscitate, add anaerobic cover, urgent laparotomy. GI bleed: transfusion, endoscopy. Encephalopathy/shock: consider high-dose dexamethasone (3 mg/kg then 1 mg/kg 6-hourly × 8 doses).",
+            "refs": [
+              "parry2002"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "ceftriaxone",
+            "role": "Complicated enteric fever",
+            "route": "IV",
+            "dose": "2 g once daily for 10-14 days",
+            "refs": [
+              "icmr2019"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "New abdominal pain and tachycardia in the second week: perforation."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Diagnosing typhoid on a single Widal titre."
+          },
+          {
+            "text": "Ciprofloxacin as empirical therapy in India (high resistance)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Fever often takes 4-7 days to settle even on effective therapy; do not switch antibiotics too early."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Enteric fever",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Suspected enteric fever"
+          },
+          {
+            "id": "bc",
+            "type": "action",
+            "text": "Blood cultures"
+          },
+          {
+            "id": "sev",
+            "type": "decision",
+            "text": "Complicated (shock, encephalopathy, perforation, bleed)?"
+          },
+          {
+            "id": "oral",
+            "type": "end",
+            "text": "Azithromycin or cefixime; tailor to culture"
+          },
+          {
+            "id": "iv",
+            "type": "action",
+            "text": "IV ceftriaxone ± azithromycin"
+          },
+          {
+            "id": "perf",
+            "type": "decision",
+            "text": "Perforation?"
+          },
+          {
+            "id": "surg",
+            "type": "end",
+            "text": "Resuscitate + anaerobic cover + urgent surgery"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Continue 10-14 days; dexamethasone if severe toxaemia"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "bc"
+          },
+          {
+            "from": "bc",
+            "to": "sev"
+          },
+          {
+            "from": "sev",
+            "to": "oral",
+            "label": "No"
+          },
+          {
+            "from": "sev",
+            "to": "iv",
+            "label": "Yes"
+          },
+          {
+            "from": "iv",
+            "to": "perf"
+          },
+          {
+            "from": "perf",
+            "to": "surg",
+            "label": "Yes"
+          },
+          {
+            "from": "perf",
+            "to": "cont",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "parry2002"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Parry 2002 NEJM review:** clinical features, diagnosis, complications, dexamethasone in severe typhoid (Hoffman 1984).\n- **ICMR 2019:** regimen choices and resistance data for India.",
+        "indiaNotes": "- Fluoroquinolone non-susceptibility in Salmonella Typhi is very high in India; ceftriaxone MICs are rising. Typhoid conjugate vaccine is being introduced."
+      },
+      "drugIds": [
+        "ceftriaxone",
+        "azithromycin"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "parry2002",
+        "icmr2019"
+      ],
+      "quiz": [
+        {
+          "id": "enteric-fever-q1",
+          "stem": "Best diagnostic test in week 1:",
+          "options": [
+            "Widal",
+            "Blood culture",
+            "Stool culture",
+            "Urine culture"
+          ],
+          "answerIndex": 1,
+          "explanation": "Widal is unreliable."
+        },
+        {
+          "id": "enteric-fever-q2",
+          "stem": "Empirical ciprofloxacin for typhoid in India:",
+          "options": [
+            "First choice",
+            "Avoid (high resistance)",
+            "Only IV",
+            "With steroids"
+          ],
+          "answerIndex": 1,
+          "explanation": "Use ceftriaxone or azithromycin."
+        },
+        {
+          "id": "enteric-fever-q3",
+          "stem": "Second-week abdominal pain and guarding:",
+          "options": [
+            "Relapse",
+            "Perforation",
+            "Cholecystitis only",
+            "Normal"
+          ],
+          "answerIndex": 1,
+          "explanation": "Urgent surgery."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "artesunate",
+      "name": "Artesunate (IV/IM)",
+      "class": "Artemisinin antimalarial",
+      "indications": "Severe malaria of any species, all ages, all trimesters of pregnancy.",
+      "adultDose": "2.4 mg/kg IV/IM at 0, 12 and 24 h, then every 24 h until able to take oral (minimum 24 h); then full 3-day oral ACT. Children < 20 kg: 3 mg/kg per dose.",
+      "preparationIndia": "60 mg vial with 1 mL 5% sodium bicarbonate (reconstitute) then 5 mL 0.9% saline/5% dextrose for IV (10 mg/mL). Supplied free through the national programme in many states.",
+      "cautions": "Post-artesunate delayed haemolysis (check Hb at days 7, 14, 28).",
+      "refs": [
+        "icmr2019",
+        "who-malaria",
+        "seaquamat"
+      ]
+    },
+    {
+      "id": "ceftriaxone",
+      "name": "Ceftriaxone",
+      "class": "Third-generation cephalosporin",
+      "indications": "Empirical severe AFI; enteric fever; leptospirosis.",
+      "adultDose": "2 g IV once daily (2 g 12-hourly if meningitis suspected).",
+      "cautions": "Rising MICs in Salmonella Typhi; biliary sludge.",
+      "refs": [
+        "isccm-tf2014",
+        "icmr2019"
+      ]
+    },
+    {
+      "id": "doxycycline",
+      "name": "Doxycycline",
+      "class": "Tetracycline",
+      "indications": "Scrub typhus and other rickettsioses; leptospirosis; empirical AFI cover.",
+      "adultDose": "100 mg orally/IV every 12 h for 7 days (INTREST IV regimen: 200 mg load then 100 mg 12-hourly).",
+      "preparationIndia": "Oral widely available; IV doxycycline 100 mg vials have intermittent availability.",
+      "cautions": "Avoid in pregnancy (use azithromycin); oesophagitis with oral tablets.",
+      "verify": "Confirm IV doxycycline availability and the INTREST loading regimen.",
+      "refs": [
+        "icmr2019",
+        "intrest"
+      ]
+    },
+    {
+      "id": "azithromycin",
+      "name": "Azithromycin",
+      "class": "Macrolide",
+      "indications": "Scrub typhus (pregnancy, children, or with doxycycline in severe disease); enteric fever.",
+      "adultDose": "Scrub typhus: 500 mg daily IV/oral (INTREST: 1 g day 1 then 500 mg daily) for 5-7 days. Enteric fever: 1 g day 1 then 500 mg daily, or 20 mg/kg/day for 7 days.",
+      "cautions": "QT prolongation.",
+      "refs": [
+        "intrest",
+        "icmr2019"
+      ]
+    },
+    {
+      "id": "benzylpenicillin",
+      "name": "Benzylpenicillin (penicillin G)",
+      "class": "Penicillin",
+      "indications": "Severe leptospirosis.",
+      "adultDose": "1.5 million units IV every 6 h for 7 days.",
+      "cautions": "Jarisch-Herxheimer reaction.",
+      "refs": [
+        "who-lepto2003",
+        "icmr2019"
+      ]
+    },
+    {
+      "id": "primaquine",
+      "name": "Primaquine",
+      "class": "8-aminoquinoline",
+      "indications": "Radical cure of P. vivax/ovale; single low dose for P. falciparum gametocytes.",
+      "adultDose": "Vivax: 0.25 mg/kg daily for 14 days. Falciparum: 0.75 mg/kg single dose (national programme).",
+      "cautions": "Haemolysis in G6PD deficiency; avoid in pregnancy and infants.",
+      "refs": [
+        "icmr2019"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "isccm-tf2014",
+      "citation": "Singhi S, Chaudhary D, Varghese GM, et al. Tropical fevers: management guidelines. Indian J Crit Care Med. 2014;18(2):62-69",
+      "url": "https://doi.org/10.4103/0972-5229.126074",
+      "year": 2014,
+      "doi": "10.4103/0972-5229.126074",
+      "type": "guideline"
+    },
+    {
+      "id": "icmr2019",
+      "citation": "Indian Council of Medical Research. Treatment Guidelines for Antimicrobial Use in Common Syndromes, 2nd edition. New Delhi: ICMR; 2019",
+      "url": "https://www.icmr.gov.in/icmrobject/custom_data/pdf/resource-guidelines/Treatment_Guidelines_2019_Final.pdf",
+      "year": 2019,
+      "type": "guideline"
+    },
+    {
+      "id": "who-malaria",
+      "citation": "World Health Organization. WHO guidelines for malaria (living guideline; current version). Geneva: WHO",
+      "url": "https://www.who.int/publications/i/item/guidelines-for-malaria",
+      "year": 2025,
+      "type": "guideline"
+    },
+    {
+      "id": "seaquamat",
+      "citation": "Dondorp A, Nosten F, Stepniewska K, Day N, White N; SEAQUAMAT group. Artesunate versus quinine for treatment of severe falciparum malaria: a randomised trial. Lancet. 2005;366(9487):717-725",
+      "url": "https://doi.org/10.1016/S0140-6736(05)67176-0",
+      "year": 2005,
+      "doi": "10.1016/S0140-6736(05)67176-0",
+      "type": "trial"
+    },
+    {
+      "id": "aquamat",
+      "citation": "Dondorp AM, Fanello CI, Hendriksen IC, et al. Artesunate versus quinine in the treatment of severe falciparum malaria in African children (AQUAMAT). Lancet. 2010;376(9753):1647-1657",
+      "url": "https://doi.org/10.1016/S0140-6736(10)61924-1",
+      "year": 2010,
+      "doi": "10.1016/S0140-6736(10)61924-1",
+      "type": "trial"
+    },
+    {
+      "id": "who-dengue2009",
+      "citation": "World Health Organization. Dengue: guidelines for diagnosis, treatment, prevention and control. New edition. Geneva: WHO; 2009",
+      "url": "https://www.who.int/publications/i/item/9789241547871",
+      "year": 2009,
+      "type": "guideline"
+    },
+    {
+      "id": "who-arbo2025",
+      "citation": "World Health Organization. WHO guidelines for clinical management of arboviral diseases: dengue, chikungunya, Zika and yellow fever. Geneva: WHO; 2025",
+      "url": "https://www.who.int/publications/i/item/9789240111110",
+      "year": 2025,
+      "type": "guideline"
+    },
+    {
+      "id": "lye2017",
+      "citation": "Lye DC, Archuleta S, Syed-Omar SF, et al. Prophylactic platelet transfusion plus supportive care versus supportive care alone in adults with dengue and thrombocytopenia: a multicentre, open-label, randomised, superiority trial. Lancet. 2017;389(10079):1611-1618",
+      "url": "https://doi.org/10.1016/S0140-6736(17)30269-6",
+      "year": 2017,
+      "doi": "10.1016/S0140-6736(17)30269-6",
+      "type": "trial"
+    },
+    {
+      "id": "who-lepto2003",
+      "citation": "World Health Organization, International Leptospirosis Society. Human leptospirosis: guidance for diagnosis, surveillance and control. Geneva: WHO; 2003",
+      "url": "https://iris.who.int/handle/10665/42667",
+      "year": 2003,
+      "type": "guideline"
+    },
+    {
+      "id": "intrest",
+      "citation": "Varghese GM, Dayanand D, Gunasekaran K, et al. Intravenous doxycycline, azithromycin, or both for severe scrub typhus (INTREST). N Engl J Med. 2023;388(9):792-803",
+      "url": "https://doi.org/10.1056/NEJMoa2208449",
+      "year": 2023,
+      "doi": "10.1056/NEJMoa2208449",
+      "type": "trial"
+    },
+    {
+      "id": "parry2002",
+      "citation": "Parry CM, Hien TT, Dougan G, White NJ, Farrar JJ. Typhoid fever. N Engl J Med. 2002;347(22):1770-1782",
+      "url": "https://doi.org/10.1056/NEJMra020201",
+      "year": 2002,
+      "doi": "10.1056/NEJMra020201",
+      "type": "review"
+    }
+  ],
+  "verify": [
+    {
+      "item": "National programme updates",
+      "reason": "India's NCVBDC periodically updates malaria and dengue guidance; check the current national drug policy for regional ACT choice (AS+SP vs artemether-lumefantrine in the north-east)."
+    }
+  ]
+}

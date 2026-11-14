@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://icu360.local/schema/calculators.schema.json",
+  "title": "ICU 360 shared calculators",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "calculators"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "description": { "type": "string" },
+    "calculators": { "type": "array", "items": { "$ref": "#/$defs/calculator" } }
+  },
+  "$defs": {
+    "calculator": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "name", "category", "description", "inputs", "formula", "output", "interpretation", "references", "example"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+        "name": { "type": "string" },
+        "category": { "enum": ["infusion", "body-size", "ventilation", "acid-base", "electrolytes", "renal", "haemodynamics", "cardiac", "fluids", "score", "toxicology", "dosing", "other"] },
+        "description": { "type": "string" },
+        "inputs": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/input" } },
+        "formula": { "type": "string", "description": "Arithmetic expression over input ids; allowed: + - * / ( ) and Math.sqrt Math.pow Math.min Math.max Math.abs Math.log10 Math.round" },
+        "output": {
+          "type": "object", "additionalProperties": false, "required": ["label", "decimals"],
+          "properties": { "label": { "type": "string" }, "unit": { "type": "string" }, "decimals": { "type": "integer", "minimum": 0, "maximum": 4 } }
+        },
+        "interpretation": { "type": "array", "items": {
+          "type": "object", "additionalProperties": false, "required": ["label", "severity"],
+          "properties": { "min": { "type": "number", "description": "inclusive" }, "max": { "type": "number", "description": "exclusive" }, "label": { "type": "string" }, "severity": { "enum": ["normal", "mild", "moderate", "severe", "critical"] } } } },
+        "references": { "type": "array", "items": {
+          "type": "object", "additionalProperties": false, "required": ["citation", "url", "year"],
+          "properties": { "citation": { "type": "string" }, "url": { "type": "string", "pattern": "^https://" }, "year": { "type": "integer" } } } },
+        "example": { "type": "object", "additionalProperties": false, "required": ["inputs", "expected"],
+          "properties": { "inputs": { "type": "object" }, "expected": { "type": "number" } } },
+        "notes": { "type": "string" },
+        "verify": { "type": "string" }
+      }
+    },
+    "input": {
+      "type": "object", "additionalProperties": false, "required": ["id", "label", "type"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-zA-Z][a-zA-Z0-9]*$" },
+        "label": { "type": "string" },
+        "type": { "enum": ["number", "select", "boolean"] },
+        "unit": { "type": "string" },
+        "default": { "type": "number" },
+        "min": { "type": "number" }, "max": { "type": "number" },
+        "points": { "type": "number", "description": "boolean only: value contributed when true (default 1)" },
+        "options": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["label", "value"], "properties": { "label": { "type": "string" }, "value": { "type": "number" } } } }
+      }
+    }
+  }
+}

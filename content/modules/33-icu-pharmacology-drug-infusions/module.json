@@ -1,0 +1,1845 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "icu-pharmacology-drug-infusions",
+  "number": 33,
+  "folder": "33-icu-pharmacology-drug-infusions",
+  "section": {
+    "id": "J",
+    "title": "ICU care and pharmacology"
+  },
+  "phase": 1,
+  "title": "ICU pharmacology and drug infusions",
+  "summary": "Practical ICU pharmacology: standard infusion dilutions and rate maths for vasoactive, sedative and other common infusions, dosing in obesity, AKI/CRRT and augmented renal clearance, liver dysfunction, QT-prolonging drugs and key interactions, and IV compatibility and line safety.",
+  "tags": [
+    "infusion",
+    "dilution",
+    "mcg/kg/min",
+    "syringe pump",
+    "noradrenaline",
+    "vasopressin",
+    "dobutamine",
+    "sedation infusion",
+    "insulin U-40",
+    "heparin",
+    "obesity dosing",
+    "ideal body weight",
+    "adjusted body weight",
+    "renal dosing",
+    "CRRT",
+    "augmented renal clearance",
+    "beta-lactam prolonged infusion",
+    "hepatic impairment",
+    "Child-Pugh",
+    "QT prolongation",
+    "torsades",
+    "drug interactions",
+    "IV compatibility",
+    "extravasation",
+    "peripheral vasopressor"
+  ],
+  "relatedModules": [
+    "shock-vasoactive-support",
+    "analgesia-sedation-delirium",
+    "aki-renal-drug-dosing",
+    "renal-replacement-therapy",
+    "liver-failure",
+    "cardiac-emergencies-arrhythmias",
+    "icu-infections-stewardship-immunocompromised"
+  ],
+  "version": "0.2.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "calculator",
+    "accent": "standard"
+  },
+  "viewKey": "module:icu-pharmacology-drug-infusions",
+  "topics": [
+    {
+      "id": "infusion-dilutions",
+      "title": "Standard infusion dilutions and rate maths",
+      "summary": "Use one standard concentration per drug across the ICU, label the final concentration, and convert doses to mL/h with a single formula: rate (mL/h) = dose (mcg/kg/min) × weight (kg) × 60 ÷ concentration (mcg/mL). Double-check every high-alert infusion.",
+      "viewKey": "topic:icu-pharmacology-drug-infusions/infusion-dilutions",
+      "uiHints": {
+        "icon": "calculator",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Prepare",
+            "title": "Standardise",
+            "detail": "One concentration per drug per unit; prefilled or pharmacy-made syringes where possible; label drug, total amount, volume, final concentration, time and preparer."
+          },
+          {
+            "n": 2,
+            "time": "Calculate",
+            "title": "Weight-based per minute",
+            "detail": "mL/h = dose (mcg/kg/min) × kg × 60 ÷ mcg/mL. Example: noradrenaline 0.1 mcg/kg/min, 70 kg, 160 mcg/mL → 2.6 mL/h."
+          },
+          {
+            "n": 3,
+            "time": "Calculate",
+            "title": "Weight-based per hour",
+            "detail": "mL/h = dose (mg/kg/h) × kg ÷ mg/mL. Example: midazolam 0.05 mg/kg/h, 70 kg, 1 mg/mL → 3.5 mL/h."
+          },
+          {
+            "n": 4,
+            "time": "Calculate",
+            "title": "Fixed dose",
+            "detail": "mL/h = dose per hour ÷ concentration. Example: vasopressin 0.03 U/min = 1.8 U/h ÷ 0.4 U/mL = 4.5 mL/h."
+          },
+          {
+            "n": 5,
+            "time": "Check",
+            "title": "Independent double check",
+            "detail": "Second nurse/doctor verifies drug, concentration, pump programme and line for vasoactives, insulin, heparin, potassium, sedatives. Use pump drug libraries where available."
+          },
+          {
+            "n": 6,
+            "time": "Change over",
+            "title": "Avoid gaps",
+            "detail": "'Double-pump' or piggyback vasopressor syringe changes; never flush a vasopressor lumen.",
+            "refs": [
+              "kanji2010"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "noradrenaline",
+            "role": "Septic shock first-line vasopressor",
+            "route": "IV infusion (central preferred; peripheral short-term acceptable)",
+            "dose": "0.05-0.5 mcg/kg/min",
+            "doseRange": {
+              "min": 0.05,
+              "max": 0.5,
+              "unit": "mcg/kg/min"
+            },
+            "workedExample": "70 kg at 0.1 mcg/kg/min with 160 mcg/mL = 2.6 mL/h.",
+            "verify": "Confirm salt vs base labelling.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "drugId": "vasopressin",
+            "role": "Add-on vasopressor",
+            "route": "IV infusion",
+            "dose": "0.03 U/min fixed",
+            "doseRange": {
+              "min": 0.01,
+              "max": 0.04,
+              "unit": "U/min"
+            },
+            "workedExample": "20 U in 50 mL (0.4 U/mL): 0.03 U/min = 4.5 mL/h.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "drugId": "dexmedetomidine",
+            "role": "Light sedation",
+            "route": "IV infusion",
+            "dose": "0.2-1.4 mcg/kg/h, no loading dose",
+            "doseRange": {
+              "min": 0.2,
+              "max": 1.4,
+              "unit": "mcg/kg/h"
+            },
+            "workedExample": "70 kg at 0.5 mcg/kg/h with 4 mcg/mL = 8.75 mL/h.",
+            "refs": [
+              "erstad2020"
+            ]
+          },
+          {
+            "drugId": "insulin-regular",
+            "role": "DKA fixed-rate infusion",
+            "route": "IV infusion",
+            "dose": "0.1 U/kg/h",
+            "workedExample": "70 kg: 7 U/h = 7 mL/h of 1 U/mL.",
+            "verify": "Check U-40 vs U-100 vial before drawing up.",
+            "refs": [
+              "kanji2010"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "standard-dilutions",
+            "title": "Common adult ICU syringe-pump dilutions (example chart)",
+            "columns": [
+              "Drug",
+              "Amount in 50 mL",
+              "Concentration",
+              "Usual dose range",
+              "70 kg example"
+            ],
+            "rows": [
+              [
+                "Noradrenaline",
+                "8 mg",
+                "160 mcg/mL",
+                "0.05-0.5 mcg/kg/min",
+                "0.1 mcg/kg/min = 2.6 mL/h"
+              ],
+              [
+                "Adrenaline",
+                "4 mg",
+                "80 mcg/mL",
+                "0.05-0.5 mcg/kg/min",
+                "0.1 mcg/kg/min = 5.25 mL/h"
+              ],
+              [
+                "Vasopressin",
+                "20 U",
+                "0.4 U/mL",
+                "0.03-0.04 U/min (fixed)",
+                "0.03 U/min = 4.5 mL/h"
+              ],
+              [
+                "Dobutamine",
+                "250 mg",
+                "5000 mcg/mL",
+                "2.5-20 mcg/kg/min",
+                "5 mcg/kg/min = 4.2 mL/h"
+              ],
+              [
+                "Glyceryl trinitrate",
+                "50 mg",
+                "1000 mcg/mL",
+                "5-200 mcg/min",
+                "50 mcg/min = 3 mL/h"
+              ],
+              [
+                "Midazolam",
+                "50 mg",
+                "1 mg/mL",
+                "0.02-0.1 mg/kg/h",
+                "0.05 mg/kg/h = 3.5 mL/h"
+              ],
+              [
+                "Fentanyl",
+                "500 mcg",
+                "10 mcg/mL",
+                "0.5-2 mcg/kg/h",
+                "1 mcg/kg/h = 7 mL/h"
+              ],
+              [
+                "Propofol 1%",
+                "Neat",
+                "10 mg/mL",
+                "0.3-3 mg/kg/h",
+                "2 mg/kg/h = 14 mL/h"
+              ],
+              [
+                "Dexmedetomidine",
+                "200 mcg",
+                "4 mcg/mL",
+                "0.2-1.4 mcg/kg/h",
+                "0.5 mcg/kg/h = 8.75 mL/h"
+              ],
+              [
+                "Regular insulin",
+                "50 U",
+                "1 U/mL",
+                "Per protocol (DKA 0.1 U/kg/h)",
+                "0.1 U/kg/h = 7 mL/h"
+              ],
+              [
+                "Unfractionated heparin",
+                "25,000 U",
+                "500 U/mL",
+                "18 U/kg/h (VTE), by aPTT/anti-Xa",
+                "18 U/kg/h = 2.5 mL/h"
+              ]
+            ],
+            "caption": "Example concentrations only; use your unit's approved chart. Diluent NS or D5 as per product (amiodarone and GTN prefer D5).",
+            "refs": [
+              "ssc2026",
+              "kanji2010"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "A vasopressor syringe running out or a line flushed: abrupt hypotension or hypertensive surge."
+          },
+          {
+            "text": "mcg vs mg or per-minute vs per-hour errors produce 60-1000-fold overdoses."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Drawing U-40 insulin with a U-100 syringe (2.5-fold error)."
+          },
+          {
+            "text": "Bolusing other drugs through the vasopressor lumen."
+          },
+          {
+            "text": "Mixing concentrations between shifts ('double strength' noradrenaline without relabelling)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Write orders in dose units (mcg/kg/min), not mL/h; let the chart convert."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Starting a high-alert infusion",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Infusion prescribed in dose units"
+          },
+          {
+            "id": "c",
+            "type": "action",
+            "text": "Prepare standard concentration and label"
+          },
+          {
+            "id": "r",
+            "type": "action",
+            "text": "Calculate mL/h (calculator) and programme pump"
+          },
+          {
+            "id": "d",
+            "type": "decision",
+            "text": "Independent double check matches?"
+          },
+          {
+            "id": "fix",
+            "type": "action",
+            "text": "Stop, recalculate and re-prepare"
+          },
+          {
+            "id": "go",
+            "type": "end",
+            "text": "Start via dedicated labelled line; document"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "c"
+          },
+          {
+            "from": "c",
+            "to": "r"
+          },
+          {
+            "from": "r",
+            "to": "d"
+          },
+          {
+            "from": "d",
+            "to": "go",
+            "label": "Yes"
+          },
+          {
+            "from": "d",
+            "to": "fix",
+            "label": "No"
+          },
+          {
+            "from": "fix",
+            "to": "r"
+          }
+        ],
+        "refs": [
+          "kanji2010"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- Standard concentrations and smart pumps are patient-safety consensus recommendations to reduce infusion errors; Kanji 2010 shows how thin the compatibility evidence for shared lines is.",
+        "indiaNotes": "- Many Indian ICUs still dilute per patient; adopting a unit-wide chart (laminated on each pump) is a cheap safety win."
+      },
+      "drugIds": [
+        "noradrenaline",
+        "adrenaline",
+        "vasopressin",
+        "dobutamine",
+        "nitroglycerin",
+        "midazolam",
+        "fentanyl",
+        "propofol",
+        "dexmedetomidine",
+        "insulin-regular",
+        "heparin"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-min",
+        "infusion-dose-from-rate",
+        "infusion-rate-weight-hour",
+        "infusion-rate-fixed"
+      ],
+      "references": [
+        "kanji2010",
+        "ssc2026"
+      ],
+      "quiz": [
+        {
+          "id": "infusion-dilutions-q1",
+          "stem": "Noradrenaline 0.2 mcg/kg/min, 50 kg, 80 mcg/mL. Rate?",
+          "options": [
+            "3.75 mL/h",
+            "7.5 mL/h",
+            "12 mL/h",
+            "0.75 mL/h"
+          ],
+          "answerIndex": 1,
+          "explanation": "0.2 × 50 × 60 / 80 = 7.5 mL/h."
+        },
+        {
+          "id": "infusion-dilutions-q2",
+          "stem": "Vasopressin 20 U in 50 mL at 4.5 mL/h delivers:",
+          "options": [
+            "0.03 U/min",
+            "0.3 U/min",
+            "0.003 U/min",
+            "3 U/min"
+          ],
+          "answerIndex": 0,
+          "explanation": "1.8 U/h = 0.03 U/min."
+        },
+        {
+          "id": "infusion-dilutions-q3",
+          "stem": "U-40 insulin drawn to the 10-unit mark of a U-100 syringe gives:",
+          "options": [
+            "10 U",
+            "4 U",
+            "25 U",
+            "40 U"
+          ],
+          "answerIndex": 1,
+          "explanation": "0.1 mL × 40 U/mL = 4 U."
+        }
+      ]
+    },
+    {
+      "id": "obesity-dosing",
+      "title": "Drug dosing in obesity",
+      "summary": "Pick the dosing weight per drug: lipophilic loading doses and some antimicrobials by actual weight, most maintenance infusions and neuromuscular blockers by ideal or adjusted weight, and titrate sedatives to effect. Use therapeutic drug monitoring where available.",
+      "viewKey": "topic:icu-pharmacology-drug-infusions/obesity-dosing",
+      "uiHints": {
+        "icon": "calculator",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Weigh",
+            "title": "Measure",
+            "detail": "Record actual (total) body weight and height; estimate in bed with weighing scales or bed scales rather than guess."
+          },
+          {
+            "n": 2,
+            "time": "Calculate",
+            "title": "Weight scalars",
+            "detail": "IBW (Devine): men 50 + 0.91 × (height cm − 152.4); women 45.5 + 0.91 × (height cm − 152.4). Adjusted BW = IBW + 0.4 × (TBW − IBW).",
+            "refs": [
+              "pai2000"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Sedation",
+            "title": "Titrate",
+            "detail": "Propofol, fentanyl and midazolam accumulate in adipose tissue with prolonged infusion; start on IBW/adjusted weight and titrate to RASS.",
+            "refs": [
+              "erstad2020"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Antimicrobials",
+            "title": "Load generously",
+            "detail": "Hydrophilic drugs (beta-lactams, aminoglycosides) need full or higher loading doses; vancomycin load on actual weight (cap ~3 g) then TDM-guided; aminoglycosides on adjusted weight.",
+            "refs": [
+              "roberts2014"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "NMB",
+            "title": "Intubation",
+            "detail": "Suxamethonium 1-1.5 mg/kg actual weight; rocuronium 1.2 mg/kg on ideal (or lean) weight.",
+            "refs": [
+              "erstad2020"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Anticoagulation",
+            "title": "Monitor",
+            "detail": "UFH by actual weight with local cap and aPTT/anti-Xa; LMWH prophylaxis dose often increased when BMI ≥ 40 (local protocol, anti-Xa if available).",
+            "refs": [
+              "erstad2020"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "vancomycin",
+            "role": "Loading dose in obesity",
+            "route": "IV",
+            "dose": "20-35 mg/kg actual body weight, max ~3 g",
+            "workedExample": "130 kg man: 25 mg/kg = 3250 mg → cap 3 g, infused over ≥ 3 h; then 15-20 mg/kg/dose guided by levels.",
+            "verify": "Loading range and cap differ between guidelines.",
+            "refs": [
+              "roberts2014"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "obesity-weights",
+            "title": "Which weight? (common ICU drugs)",
+            "columns": [
+              "Drug",
+              "Loading",
+              "Maintenance"
+            ],
+            "rows": [
+              [
+                "Propofol",
+                "Lean/ideal weight (induction)",
+                "Adjusted weight, titrate to RASS"
+              ],
+              [
+                "Fentanyl / midazolam",
+                "Ideal weight",
+                "Ideal/adjusted weight, titrate"
+              ],
+              [
+                "Dexmedetomidine",
+                "Not usually loaded",
+                "Actual or adjusted weight, titrate"
+              ],
+              [
+                "Suxamethonium",
+                "Actual weight",
+                "–"
+              ],
+              [
+                "Rocuronium / atracurium",
+                "Ideal weight",
+                "Ideal weight"
+              ],
+              [
+                "Vancomycin",
+                "Actual weight (cap ~3 g)",
+                "TDM-guided (AUC/trough)"
+              ],
+              [
+                "Aminoglycosides",
+                "Adjusted weight",
+                "Levels"
+              ],
+              [
+                "Unfractionated heparin",
+                "Actual weight (capped)",
+                "aPTT/anti-Xa"
+              ]
+            ],
+            "caption": "Conventions differ between sources; follow local protocol and monitor effect or levels.",
+            "refs": [
+              "erstad2020",
+              "roberts2014"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Delayed awakening after days of midazolam/fentanyl in a patient with BMI > 35: accumulation."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Dosing all sedative infusions on actual weight."
+          },
+          {
+            "text": "Under-loading antibiotics for fear of toxicity in sepsis."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Example: 170 cm man, 130 kg → IBW 66 kg, adjusted 91.6 kg."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Choosing a dosing weight",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "BMI ≥ 30 patient needs a drug"
+          },
+          {
+            "id": "l",
+            "type": "decision",
+            "text": "Loading dose of hydrophilic antimicrobial or suxamethonium?"
+          },
+          {
+            "id": "tbw",
+            "type": "end",
+            "text": "Use actual weight (with caps) then monitor levels"
+          },
+          {
+            "id": "sed",
+            "type": "decision",
+            "text": "Sedative, opioid or NMB?"
+          },
+          {
+            "id": "ibw",
+            "type": "end",
+            "text": "Ideal/adjusted weight, titrate to effect"
+          },
+          {
+            "id": "loc",
+            "type": "end",
+            "text": "Check drug-specific reference or pharmacist"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "l"
+          },
+          {
+            "from": "l",
+            "to": "tbw",
+            "label": "Yes"
+          },
+          {
+            "from": "l",
+            "to": "sed",
+            "label": "No"
+          },
+          {
+            "from": "sed",
+            "to": "ibw",
+            "label": "Yes"
+          },
+          {
+            "from": "sed",
+            "to": "loc",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "erstad2020"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "- Obesity increases volume of distribution for lipophilic drugs and raises lean mass, cardiac output and often renal clearance early; fat-laden liver may alter metabolism.",
+        "evidence": "- **Erstad & Barletta 2020:** review of sedative and analgesic dosing; little high-quality data, favours titration and lean/ideal scalars.\n- **Pai 2000:** origin and limitations of IBW equations.",
+        "indiaNotes": "- Asian body composition: higher fat percentage at lower BMI; WHO Asian cut-offs (overweight ≥ 23, obese ≥ 25 kg/m²) are used in India."
+      },
+      "drugIds": [
+        "vancomycin",
+        "propofol",
+        "fentanyl",
+        "midazolam",
+        "heparin"
+      ],
+      "calculatorIds": [
+        "predicted-body-weight",
+        "adjusted-body-weight",
+        "bmi"
+      ],
+      "references": [
+        "erstad2020",
+        "pai2000",
+        "roberts2014"
+      ],
+      "quiz": [
+        {
+          "id": "obesity-dosing-q1",
+          "stem": "Rocuronium RSI dose in obesity is based on:",
+          "options": [
+            "Actual weight",
+            "Ideal/lean weight",
+            "Adjusted weight + 20%",
+            "BSA"
+          ],
+          "answerIndex": 1,
+          "explanation": "Erstad 2020."
+        },
+        {
+          "id": "obesity-dosing-q2",
+          "stem": "Adjusted body weight for IBW 60 kg, TBW 110 kg:",
+          "options": [
+            "70 kg",
+            "80 kg",
+            "85 kg",
+            "110 kg"
+          ],
+          "answerIndex": 1,
+          "explanation": "60 + 0.4 × 50 = 80 kg."
+        },
+        {
+          "id": "obesity-dosing-q3",
+          "stem": "Vancomycin loading in obesity uses:",
+          "options": [
+            "Ideal weight",
+            "Actual weight with a cap",
+            "BSA",
+            "Fixed 1 g"
+          ],
+          "answerIndex": 1,
+          "explanation": "Hydrophilic, large Vd."
+        }
+      ]
+    },
+    {
+      "id": "renal-dosing",
+      "title": "Dosing in AKI, CRRT and augmented renal clearance",
+      "summary": "Never reduce loading doses for renal function. Adjust maintenance doses to measured or estimated clearance, recognising that creatinine is unreliable in unstable AKI, that CRRT removes many antibiotics, and that young septic or trauma patients often clear drugs faster than normal.",
+      "viewKey": "topic:icu-pharmacology-drug-infusions/renal-dosing",
+      "uiHints": {
+        "icon": "calculator",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Load",
+            "title": "Full dose",
+            "detail": "Loading dose depends on volume of distribution, not clearance – give the full dose in AKI and on RRT.",
+            "refs": [
+              "roberts2014"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Estimate",
+            "title": "Clearance",
+            "detail": "Cockcroft-Gault or measured 8-24 h urinary creatinine clearance; eGFR equations assume steady state and mislead in changing AKI.",
+            "refs": [
+              "kdigo-drug2011"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Early sepsis AKI",
+            "title": "Don't under-dose",
+            "detail": "Many AKIs resolve within 48 h; for wide-therapeutic-index antibiotics (beta-lactams) delay renal down-adjustment for the first 24-48 h.",
+            "refs": [
+              "roberts2014"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "CRRT",
+            "title": "Account for removal",
+            "detail": "Effluent 25 mL/kg/h gives roughly 25-35 mL/min of clearance for small, unbound drugs; dose accordingly and use TDM.",
+            "refs": [
+              "kdigo-drug2011"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "ARC",
+            "title": "Recognise",
+            "detail": "Measured CrCl > 130 mL/min (young, trauma, sepsis, TBI) leads to sub-therapeutic beta-lactam and vancomycin levels: higher or more frequent doses, prolonged infusions, TDM.",
+            "refs": [
+              "udy2011"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Beta-lactams",
+            "title": "Prolonged infusion",
+            "detail": "Meta-analysis: prolonged infusion lowered 90-day mortality; BLING III alone was not significant. Consider extended (3-4 h) or continuous infusion after a loading dose.",
+            "refs": [
+              "abdulaziz2024",
+              "bling3"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "vancomycin",
+            "role": "Maintenance in AKI/CRRT",
+            "route": "IV",
+            "dose": "Full loading dose, then redose by levels (e.g. when level < 15-20 mg/L on intermittent HD; ~15 mg/kg every 24 h on CRRT as a starting point)",
+            "verify": "Highly variable; always level-guided.",
+            "refs": [
+              "kdigo-drug2011",
+              "roberts2014"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Rising creatinine with nephrotoxin stacking (vancomycin + piperacillin-tazobactam, aminoglycoside, contrast, NSAID)."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Halving a meropenem dose on day 1 of septic AKI because creatinine is 2.5."
+          },
+          {
+            "text": "Ignoring augmented clearance in a 25-year-old trauma patient."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Example CG: 70 y man, 60 kg, creatinine 1.2 mg/dL → (140 − 70) × 60 ÷ (72 × 1.2) ≈ 49 mL/min."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Renal dose adjustment",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Renally cleared drug prescribed"
+          },
+          {
+            "id": "ld",
+            "type": "action",
+            "text": "Give full loading dose"
+          },
+          {
+            "id": "rrt",
+            "type": "decision",
+            "text": "On RRT?"
+          },
+          {
+            "id": "crrt",
+            "type": "end",
+            "text": "Dose for CRRT/IHD clearance; TDM"
+          },
+          {
+            "id": "arc",
+            "type": "decision",
+            "text": "Measured CrCl > 130 mL/min?"
+          },
+          {
+            "id": "hi",
+            "type": "end",
+            "text": "Higher/frequent dosing, prolonged infusion, TDM"
+          },
+          {
+            "id": "adj",
+            "type": "end",
+            "text": "Adjust maintenance to estimated CrCl (delay 24-48 h in early sepsis AKI for wide-index drugs)"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "ld"
+          },
+          {
+            "from": "ld",
+            "to": "rrt"
+          },
+          {
+            "from": "rrt",
+            "to": "crrt",
+            "label": "Yes"
+          },
+          {
+            "from": "rrt",
+            "to": "arc",
+            "label": "No"
+          },
+          {
+            "from": "arc",
+            "to": "hi",
+            "label": "Yes"
+          },
+          {
+            "from": "arc",
+            "to": "adj",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "kdigo-drug2011",
+          "udy2011"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **KDIGO 2011 update (Matzke):** framework for dosing in AKI and CKD.\n- **Udy 2011:** ARC common in critically ill; sub-therapeutic levels.\n- **BLING III 2024:** 7031 patients, continuous vs intermittent beta-lactam; 90-day mortality difference not significant.\n- **Abdul-Aziz 2024 meta-analysis:** prolonged infusion associated with lower 90-day mortality.",
+        "controversies": "- CRRT antibiotic dosing tables vary widely; therapeutic drug monitoring is limited to vancomycin and aminoglycosides in most Indian ICUs.",
+        "indiaNotes": "- Beta-lactam TDM is rarely available; extended infusions of meropenem (e.g. 1-2 g over 3 h every 8 h) are a pragmatic option."
+      },
+      "drugIds": [
+        "vancomycin"
+      ],
+      "calculatorIds": [
+        "creatinine-clearance-cg"
+      ],
+      "references": [
+        "kdigo-drug2011",
+        "udy2011",
+        "roberts2014",
+        "bling3",
+        "abdulaziz2024"
+      ],
+      "quiz": [
+        {
+          "id": "renal-dosing-q1",
+          "stem": "Loading doses in AKI should be:",
+          "options": [
+            "Halved",
+            "Unchanged",
+            "Omitted",
+            "Doubled"
+          ],
+          "answerIndex": 1,
+          "explanation": "Depends on Vd."
+        },
+        {
+          "id": "renal-dosing-q2",
+          "stem": "Augmented renal clearance is defined as CrCl above about:",
+          "options": [
+            "60",
+            "90",
+            "130",
+            "200"
+          ],
+          "answerIndex": 2,
+          "explanation": "mL/min/1.73 m²."
+        },
+        {
+          "id": "renal-dosing-q3",
+          "stem": "Best estimate of clearance in unstable AKI:",
+          "options": [
+            "eGFR (CKD-EPI)",
+            "Measured urinary creatinine clearance",
+            "Serum urea",
+            "Urine output only"
+          ],
+          "answerIndex": 1,
+          "explanation": "eGFR assumes steady state."
+        }
+      ]
+    },
+    {
+      "id": "hepatic-dosing",
+      "title": "Dosing in liver dysfunction",
+      "summary": "No liver test predicts drug clearance well. In cirrhosis and acute liver failure prefer drugs with short half-lives or non-hepatic elimination, avoid long-acting sedatives, lower and titrate high-extraction and highly protein-bound drugs, and watch for encephalopathy and bleeding.",
+      "viewKey": "topic:icu-pharmacology-drug-infusions/hepatic-dosing",
+      "uiHints": {
+        "icon": "calculator",
+        "accent": "standard"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Assess",
+            "title": "Severity",
+            "detail": "Child-Pugh class guides labels (B: reduce, C: avoid or major reduction); MELD does not predict PK.",
+            "refs": [
+              "verbeeck2008"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Sedation",
+            "title": "Choose",
+            "detail": "Propofol or low-dose dexmedetomidine titrated; avoid midazolam and lorazepam infusions; fentanyl in small boluses rather than morphine (M6G accumulates in hepatorenal syndrome).",
+            "refs": [
+              "verbeeck2008"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "High-extraction drugs",
+            "title": "Oral route",
+            "detail": "Oral bioavailability rises with portosystemic shunting (e.g. propranolol, morphine, midazolam) – reduce oral doses.",
+            "refs": [
+              "verbeeck2008"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Low albumin",
+            "title": "Free fraction",
+            "detail": "Highly protein-bound drugs (phenytoin, valproate, ceftriaxone) have higher free levels; interpret total levels cautiously (use free phenytoin)."
+          },
+          {
+            "n": 5,
+            "time": "Avoid",
+            "title": "Hepatotoxic and nephrotoxic",
+            "detail": "NSAIDs (renal failure, bleeding), aminoglycosides; paracetamol at 2-3 g/day is acceptable in cirrhosis."
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "New confusion after sedative or opioid in cirrhosis: drug-precipitated encephalopathy."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Using midazolam infusions for agitation in hepatic encephalopathy."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Remifentanil (plasma esterases) and atracurium/cisatracurium (Hofmann) are organ-independent options."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Drug choice in liver disease",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Drug needed in liver dysfunction"
+          },
+          {
+            "id": "cp",
+            "type": "decision",
+            "text": "Child-Pugh C or acute liver failure?"
+          },
+          {
+            "id": "alt",
+            "type": "action",
+            "text": "Prefer non-hepatic or short-acting alternative"
+          },
+          {
+            "id": "red",
+            "type": "action",
+            "text": "Start low, titrate, monitor sedation and levels"
+          },
+          {
+            "id": "e",
+            "type": "end",
+            "text": "Reassess daily for encephalopathy and bleeding"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "cp"
+          },
+          {
+            "from": "cp",
+            "to": "alt",
+            "label": "Yes"
+          },
+          {
+            "from": "cp",
+            "to": "red",
+            "label": "No"
+          },
+          {
+            "from": "alt",
+            "to": "e"
+          },
+          {
+            "from": "red",
+            "to": "e"
+          }
+        ],
+        "refs": [
+          "verbeeck2008"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "- Clearance of high-extraction drugs depends on hepatic blood flow; low-extraction drugs on enzyme capacity and protein binding. Glucuronidation is relatively preserved compared with CYP oxidation.",
+        "evidence": "- **Verbeeck 2008:** review of PK changes and dose-adjustment principles in hepatic dysfunction.",
+        "indiaNotes": "- Alcohol, viral hepatitis and NASH-related cirrhosis are common; many patients also take unregulated herbal remedies with hepatotoxic potential."
+      },
+      "drugIds": [
+        "midazolam",
+        "fentanyl",
+        "propofol",
+        "dexmedetomidine"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "verbeeck2008"
+      ],
+      "quiz": [
+        {
+          "id": "hepatic-dosing-q1",
+          "stem": "Preferred sedative in a ventilated Child-Pugh C patient:",
+          "options": [
+            "Midazolam infusion",
+            "Lorazepam",
+            "Propofol titrated",
+            "Diazepam"
+          ],
+          "answerIndex": 2,
+          "explanation": "Short context-sensitive half-life."
+        },
+        {
+          "id": "hepatic-dosing-q2",
+          "stem": "Portosystemic shunting increases oral bioavailability of:",
+          "options": [
+            "High-extraction drugs",
+            "Low-extraction drugs",
+            "Renally cleared drugs",
+            "None"
+          ],
+          "answerIndex": 0,
+          "explanation": "Bypass first-pass metabolism."
+        },
+        {
+          "id": "hepatic-dosing-q3",
+          "stem": "Organ-independent neuromuscular blocker:",
+          "options": [
+            "Vecuronium",
+            "Rocuronium",
+            "Cisatracurium",
+            "Pancuronium"
+          ],
+          "answerIndex": 2,
+          "explanation": "Hofmann elimination."
+        }
+      ]
+    },
+    {
+      "id": "qt-interactions",
+      "title": "QT prolongation, torsades and key ICU drug interactions",
+      "summary": "Stack-check QT drugs and risk factors (low K/Mg, bradycardia, female sex, structural heart disease). Stop offending drugs when QTc exceeds 500 ms or rises more than 60 ms, give IV magnesium for torsades, and watch the handful of interactions that cause real ICU harm.",
+      "viewKey": "topic:icu-pharmacology-drug-infusions/qt-interactions",
+      "uiHints": {
+        "icon": "calculator",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Screen",
+            "title": "Baseline ECG",
+            "detail": "QTc before and after starting QT drugs; correct K to ≥ 4.0 mmol/L and Mg ≥ 2 mg/dL.",
+            "refs": [
+              "drew2010"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Threshold",
+            "title": "Act",
+            "detail": "QTc > 500 ms or increase > 60 ms: stop or switch QT-prolonging drugs, continuous monitoring.",
+            "refs": [
+              "drew2010"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Torsades",
+            "title": "Treat",
+            "detail": "Magnesium 2 g IV; unstable or pulseless: defibrillate; recurrent: overdrive pacing or isoprenaline to raise heart rate (if not congenital LQT).",
+            "refs": [
+              "drew2010"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Interactions",
+            "title": "Check",
+            "detail": "Carbapenem + valproate (valproate levels collapse – seizures; avoid); linezolid + SSRIs/fentanyl/methylene blue (serotonin syndrome); fluconazole/voriconazole + midazolam, fentanyl, tacrolimus (CYP3A4 inhibition); rifampicin (induction); amiodarone + warfarin/digoxin (halve digoxin)."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "magnesium-sulphate",
+            "role": "Torsades de pointes",
+            "route": "IV",
+            "dose": "2 g over 1-2 min if pulseless, otherwise over 10-15 min; repeat once or infuse 0.5-1 g/h",
+            "doseRange": {
+              "min": 1,
+              "max": 2,
+              "unit": "g"
+            },
+            "workedExample": "2 g = 4 mL of 50% solution diluted to 20 mL.",
+            "refs": [
+              "drew2010"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "qt-drugs",
+            "title": "Common QT-prolonging ICU drugs",
+            "columns": [
+              "Class",
+              "Examples",
+              "Notes"
+            ],
+            "rows": [
+              [
+                "Antipsychotics",
+                "Haloperidol IV, quetiapine, olanzapine",
+                "IV haloperidol highest risk; ECG monitoring"
+              ],
+              [
+                "Antiemetics",
+                "Ondansetron, domperidone, metoclopramide",
+                "Dose-related"
+              ],
+              [
+                "Antimicrobials",
+                "Azithromycin, clarithromycin, levofloxacin, moxifloxacin, fluconazole, voriconazole, hydroxychloroquine, bedaquiline",
+                "Combined use common in India"
+              ],
+              [
+                "Antiarrhythmics",
+                "Amiodarone, sotalol, procainamide",
+                "Amiodarone TdP uncommon"
+              ],
+              [
+                "Others",
+                "Methadone, tricyclics, citalopram/escitalopram, terlipressin (bradycardia)",
+                "Check before combining"
+              ]
+            ],
+            "caption": "Use CredibleMeds (crediblemeds.org) for a current list.",
+            "refs": [
+              "drew2010"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "QTc > 500 ms with ventricular ectopy or pauses (short-long-short sequences)."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Treating torsades with amiodarone."
+          },
+          {
+            "text": "Bazett over-corrects at high heart rates; use Fridericia when HR > 100."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Hypokalaemia and hypomagnesaemia are the most fixable QT risks."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "QT-prolonging drug in ICU",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "QT-prolonging drug considered"
+          },
+          {
+            "id": "e",
+            "type": "action",
+            "text": "ECG (QTc), K and Mg; correct electrolytes"
+          },
+          {
+            "id": "q",
+            "type": "decision",
+            "text": "QTc > 500 ms or rise > 60 ms?"
+          },
+          {
+            "id": "st",
+            "type": "action",
+            "text": "Stop/switch drug; monitor; Mg if TdP"
+          },
+          {
+            "id": "c",
+            "type": "end",
+            "text": "Continue with ECG monitoring"
+          },
+          {
+            "id": "m",
+            "type": "end",
+            "text": "Reassess need and alternatives"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "e"
+          },
+          {
+            "from": "e",
+            "to": "q"
+          },
+          {
+            "from": "q",
+            "to": "st",
+            "label": "Yes"
+          },
+          {
+            "from": "q",
+            "to": "c",
+            "label": "No"
+          },
+          {
+            "from": "st",
+            "to": "m"
+          }
+        ],
+        "refs": [
+          "drew2010"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **AHA/ACCF 2010 (Drew):** recommendations for ECG monitoring and QT thresholds in hospital.",
+        "indiaNotes": "- Azithromycin, levofloxacin, ondansetron and haloperidol are often co-prescribed; deliberate stack-checking at rounds avoids cumulative risk."
+      },
+      "drugIds": [
+        "magnesium-sulphate",
+        "amiodarone",
+        "midazolam",
+        "fentanyl"
+      ],
+      "calculatorIds": [
+        "qtc-bazett"
+      ],
+      "references": [
+        "drew2010"
+      ],
+      "quiz": [
+        {
+          "id": "qt-interactions-q1",
+          "stem": "First-line drug for torsades de pointes:",
+          "options": [
+            "Amiodarone",
+            "Magnesium sulphate",
+            "Lidocaine",
+            "Adenosine"
+          ],
+          "answerIndex": 1,
+          "explanation": "Mg 2 g IV."
+        },
+        {
+          "id": "qt-interactions-q2",
+          "stem": "Stop QT drugs when QTc exceeds:",
+          "options": [
+            "440 ms",
+            "470 ms",
+            "500 ms",
+            "600 ms"
+          ],
+          "answerIndex": 2,
+          "explanation": "Or > 60 ms rise."
+        },
+        {
+          "id": "qt-interactions-q3",
+          "stem": "Meropenem started in a patient on valproate. Expected:",
+          "options": [
+            "Valproate toxicity",
+            "Fall in valproate level and seizures",
+            "No effect",
+            "Serotonin syndrome"
+          ],
+          "answerIndex": 1,
+          "explanation": "Avoid the combination."
+        }
+      ]
+    },
+    {
+      "id": "iv-compatibility",
+      "title": "IV compatibility, line management and extravasation",
+      "summary": "Give vasoactives through a dedicated labelled lumen, never Y-site unknown combinations, keep blood, parenteral nutrition and bicarbonate separate, and recognise extravasation early. Peripheral vasopressors are acceptable short-term with a good proximal vein, hourly checks and an extravasation plan.",
+      "viewKey": "topic:icu-pharmacology-drug-infusions/iv-compatibility",
+      "uiHints": {
+        "icon": "calculator",
+        "accent": "standard"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Plan lumens",
+            "title": "Dedicate",
+            "detail": "Vasopressors/inotropes on one lumen (no boluses); sedation/analgesia on another; PN and blood products separate; label every line at the hub.",
+            "refs": [
+              "kanji2010"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Check",
+            "title": "Compatibility",
+            "detail": "Use a compatibility chart before Y-siting; incompatible pairs include furosemide with midazolam or dobutamine, phenytoin with dextrose, pantoprazole with many drugs, ceftriaxone with calcium-containing fluids.",
+            "refs": [
+              "kanji2010"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Peripheral vasopressor",
+            "title": "Safe practice",
+            "detail": "Large vein proximal to wrist/antecubital fossa, ultrasound-guided if needed, hourly site checks, plan central access if > 24-48 h or rising dose.",
+            "refs": [
+              "cardenas2015",
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Extravasation",
+            "title": "Act fast",
+            "detail": "Stop infusion, aspirate through cannula, elevate, infiltrate phentolamine 5-10 mg in 10 mL SC; mark area and photograph.",
+            "refs": [
+              "cardenas2015"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Filters & sets",
+            "title": "Product specifics",
+            "detail": "Amiodarone and GTN in non-PVC or recommended sets; propofol sets changed every 12 h; insulin line primed to saturate binding."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "phentolamine",
+            "role": "Vasopressor extravasation",
+            "route": "SC infiltration",
+            "dose": "5-10 mg in 10 mL NS around the site within 12 h",
+            "verify": "Phentolamine supply in India is irregular; know your local alternative.",
+            "refs": [
+              "cardenas2015"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Blanching, coolness or pain at a peripheral vasopressor site."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Flushing a vasopressor line to 'clear' it, giving the patient a bolus."
+          },
+          {
+            "text": "Running phenytoin in dextrose (precipitates)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Cardenas-Garcia 2015: extravasation in 2% of 734 patients receiving peripheral vasoactives, none with tissue injury after phentolamine and nitroglycerin paste."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Peripheral vasopressor extravasation",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Suspected extravasation"
+          },
+          {
+            "id": "st",
+            "type": "action",
+            "text": "Stop infusion, aspirate, elevate; resite elsewhere"
+          },
+          {
+            "id": "ph",
+            "type": "decision",
+            "text": "Phentolamine available?"
+          },
+          {
+            "id": "inf",
+            "type": "end",
+            "text": "Infiltrate 5-10 mg SC; monitor site"
+          },
+          {
+            "id": "alt",
+            "type": "end",
+            "text": "Local alternative (topical GTN/terbutaline per policy); surgical review if necrosis"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "st"
+          },
+          {
+            "from": "st",
+            "to": "ph"
+          },
+          {
+            "from": "ph",
+            "to": "inf",
+            "label": "Yes"
+          },
+          {
+            "from": "ph",
+            "to": "alt",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "cardenas2015"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Kanji 2010:** systematic review of 41 common ICU infusions (820 possible pairs): compatibility data exist for only 54% of pairs; 15% of studied pairs were incompatible and 9% had conflicting data.\n- **Cardenas-Garcia 2015:** 734 patients, protocolised peripheral noradrenaline/dopamine/phenylephrine for 49 ± 22 h; extravasation in 2% with no tissue injury after phentolamine plus nitroglycerin paste; 13% eventually needed central access.\n- **SSC 2026:** still suggests starting vasopressors peripherally rather than delaying for central access (conditional, very low certainty). Data are insufficient to set a safe duration, dose or cannula size; pooled complication rate ~6%. Use with caution where hourly site checks are not possible.",
+        "indiaNotes": "- Triple-lumen CVCs are standard; where only two lumens are available, prioritise a dedicated vasopressor lumen."
+      },
+      "drugIds": [
+        "noradrenaline",
+        "phentolamine",
+        "amiodarone"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "kanji2010",
+        "cardenas2015"
+      ],
+      "quiz": [
+        {
+          "id": "iv-compatibility-q1",
+          "stem": "Phenytoin should be diluted in:",
+          "options": [
+            "5% dextrose",
+            "Normal saline",
+            "Ringer's lactate",
+            "Any fluid"
+          ],
+          "answerIndex": 1,
+          "explanation": "Precipitates in dextrose."
+        },
+        {
+          "id": "iv-compatibility-q2",
+          "stem": "Peripheral noradrenaline according to SSC 2026:",
+          "options": [
+            "Never",
+            "Acceptable to start rather than delay",
+            "Only in children",
+            "Only below 0.05 mcg/kg/min"
+          ],
+          "answerIndex": 1,
+          "explanation": "SSC 2026 suggests starting peripherally rather than delaying for central access: short term, through a good proximal vein, with hourly site checks."
+        },
+        {
+          "id": "iv-compatibility-q3",
+          "stem": "Antidote infiltrated for noradrenaline extravasation:",
+          "options": [
+            "Hyaluronidase",
+            "Phentolamine",
+            "Atropine",
+            "Adrenaline"
+          ],
+          "answerIndex": 1,
+          "explanation": "Alpha-blocker."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "noradrenaline",
+      "name": "Noradrenaline (norepinephrine)",
+      "class": "Alpha-1 > beta-1 agonist vasopressor",
+      "indications": "First-line vasopressor in septic and most vasodilatory shock.",
+      "adultDose": "0.05-0.5 mcg/kg/min (higher in refractory shock); start ~0.05-0.1 mcg/kg/min titrated to MAP ≥ 65 mmHg.",
+      "preparationIndia": "2 mg/2 mL ampoules. Common syringe: 8 mg in 50 mL (160 mcg/mL) or 4 mg in 50 mL (80 mcg/mL) of NS or D5.",
+      "cautions": "Extravasation necrosis; peripheral use acceptable short-term via a good proximal vein with monitoring. Digital/mesenteric ischaemia at high doses.",
+      "verify": "Confirm salt vs base labelling of local ampoules.",
+      "refs": [
+        "ssc2026",
+        "cardenas2015"
+      ]
+    },
+    {
+      "id": "adrenaline",
+      "name": "Adrenaline (epinephrine)",
+      "class": "Alpha and beta agonist",
+      "indications": "Second vasopressor/inotrope in shock; anaphylaxis infusion.",
+      "adultDose": "0.05-0.5 mcg/kg/min infusion.",
+      "preparationIndia": "1 mg/mL ampoules. Syringe: 4 mg in 50 mL (80 mcg/mL).",
+      "cautions": "Lactate rise (beta-2), tachyarrhythmia, hyperglycaemia.",
+      "refs": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "vasopressin",
+      "name": "Vasopressin",
+      "class": "V1 receptor agonist",
+      "indications": "Add-on in septic shock when noradrenaline doses are escalating (commonly 0.25-0.5 mcg/kg/min; SSC 2026).",
+      "adultDose": "0.03 U/min fixed (up to 0.04 U/min); not weight-based.",
+      "preparationIndia": "20 U/mL 1 mL ampoules. Syringe: 20 U in 50 mL (0.4 U/mL); 0.03 U/min = 4.5 mL/h.",
+      "cautions": "Digital, mesenteric and myocardial ischaemia; hyponatraemia. Terlipressin is a different drug (bolus doses in mg), and SSC 2026 suggests against it in septic shock.",
+      "refs": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "dobutamine",
+      "name": "Dobutamine",
+      "class": "Beta-1 agonist inotrope",
+      "indications": "Low cardiac output with adequate MAP and filling.",
+      "adultDose": "2.5-20 mcg/kg/min.",
+      "preparationIndia": "250 mg vials/ampoules (volume varies by brand). Syringe: 250 mg in 50 mL (5000 mcg/mL).",
+      "cautions": "Tachycardia, arrhythmia, hypotension from beta-2 vasodilatation.",
+      "refs": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "nitroglycerin",
+      "name": "Glyceryl trinitrate (nitroglycerin)",
+      "class": "Nitrate venodilator",
+      "indications": "Hypertensive acute pulmonary oedema, ACS with ongoing pain or hypertension.",
+      "adultDose": "5-200 mcg/min titrated every 3-5 min (high-dose boluses used in SCAPE).",
+      "preparationIndia": "5 mg/mL ampoules (5 mL = 25 mg). Syringe: 50 mg in 50 mL (1 mg/mL = 1000 mcg/mL); 10 mcg/min = 0.6 mL/h.",
+      "cautions": "Hypotension in RV infarct or preload dependence; avoid within 24-48 h of PDE-5 inhibitors; PVC adsorption (use non-PVC sets).",
+      "refs": [
+        "kanji2010"
+      ]
+    },
+    {
+      "id": "midazolam",
+      "name": "Midazolam",
+      "class": "Benzodiazepine",
+      "indications": "Sedation when propofol/dexmedetomidine unsuitable; status epilepticus.",
+      "adultDose": "Infusion 0.02-0.1 mg/kg/h (use lowest effective, daily interruption).",
+      "preparationIndia": "1 mg/mL (5 mL) and 5 mg/mL (1 mL, 10 mL) ampoules. Syringe: 50 mg in 50 mL (1 mg/mL).",
+      "cautions": "Accumulates in obesity, AKI (active metabolite) and liver failure; CYP3A4 inhibitors (azoles, macrolides) prolong effect; delirium.",
+      "refs": [
+        "erstad2020",
+        "verbeeck2008"
+      ]
+    },
+    {
+      "id": "fentanyl",
+      "name": "Fentanyl",
+      "class": "Synthetic opioid",
+      "indications": "Analgesia-first sedation in ventilated patients.",
+      "adultDose": "Infusion 0.5-2 mcg/kg/h (typical 25-150 mcg/h) dosed on ideal/adjusted weight in obesity.",
+      "preparationIndia": "50 mcg/mL in 2 mL and 10 mL ampoules. Syringe: 500 mcg in 50 mL (10 mcg/mL) or neat 50 mcg/mL.",
+      "cautions": "Context-sensitive accumulation with prolonged infusion and obesity; chest wall rigidity with rapid bolus; CYP3A4 interactions; serotonin syndrome with linezolid/SSRIs.",
+      "refs": [
+        "erstad2020"
+      ]
+    },
+    {
+      "id": "propofol",
+      "name": "Propofol",
+      "class": "GABA-A agonist hypnotic",
+      "indications": "Light sedation in ventilated patients; refractory status epilepticus.",
+      "adultDose": "5-50 mcg/kg/min (0.3-3 mg/kg/h); avoid > 4 mg/kg/h for > 48 h.",
+      "preparationIndia": "1% (10 mg/mL) 20 mL ampoules and 50 mL vials; run neat. 2% available.",
+      "cautions": "Hypotension; propofol infusion syndrome (acidosis, rhabdomyolysis, arrhythmia, hypertriglyceridaemia); lipid calories 1.1 kcal/mL; change giving set every 12 h (6-12 h for open vials).",
+      "refs": [
+        "erstad2020"
+      ]
+    },
+    {
+      "id": "dexmedetomidine",
+      "name": "Dexmedetomidine",
+      "class": "Alpha-2 agonist",
+      "indications": "Light sedation, agitation/delirium, facilitation of NIV and extubation.",
+      "adultDose": "0.2-1.4 mcg/kg/h; loading doses usually omitted in ICU because of bradycardia/hypotension.",
+      "preparationIndia": "100 mcg/mL ampoules (1 mL, 2 mL). Syringe: 200 mcg in 50 mL (4 mcg/mL).",
+      "cautions": "Bradycardia, hypotension; does not provide deep sedation or amnesia.",
+      "refs": [
+        "erstad2020"
+      ]
+    },
+    {
+      "id": "insulin-regular",
+      "name": "Regular (soluble) insulin",
+      "class": "Insulin",
+      "indications": "DKA/HHS, ICU hyperglycaemia > 180 mg/dL, hyperkalaemia.",
+      "adultDose": "DKA 0.1 U/kg/h (or 0.14 U/kg/h without bolus); ICU glucose by protocol targeting 140-180 mg/dL.",
+      "preparationIndia": "40 U/mL (U-40) and 100 U/mL vials. Syringe: 50 U in 50 mL NS (1 U/mL).",
+      "cautions": "U-40 vs U-100 confusion; adsorption to tubing (prime the line); hypokalaemia and hypoglycaemia.",
+      "verify": "Check vial strength every time; use an insulin syringe matched to strength or measure in units only.",
+      "refs": [
+        "kanji2010"
+      ]
+    },
+    {
+      "id": "heparin",
+      "name": "Unfractionated heparin",
+      "class": "Indirect thrombin/Xa inhibitor",
+      "indications": "Therapeutic anticoagulation where rapid reversal or AKI precludes LMWH; CRRT circuits.",
+      "adultDose": "VTE: 80 U/kg bolus then 18 U/kg/h (ACS: 60 U/kg max 4000 U, then 12 U/kg/h max 1000 U/h), adjusted to aPTT/anti-Xa.",
+      "preparationIndia": "5000 U/mL 5 mL vials (25,000 U). Syringe: 25,000 U in 50 mL (500 U/mL).",
+      "cautions": "Use actual weight with a cap per local nomogram in obesity; HIT; bleeding.",
+      "verify": "Obesity dosing caps vary by institutional nomogram.",
+      "refs": [
+        "erstad2020"
+      ]
+    },
+    {
+      "id": "amiodarone",
+      "name": "Amiodarone",
+      "class": "Class III antiarrhythmic",
+      "indications": "AF with rapid ventricular response in haemodynamically fragile patients; VT; shock-refractory VF.",
+      "adultDose": "300 mg IV over 20-60 min, then 900 mg over 24 h.",
+      "preparationIndia": "150 mg/3 mL ampoules. Dilute in 5% dextrose; infusions > 2 mg/mL via central line; use in-line filter per product.",
+      "cautions": "Phlebitis peripherally; hypotension; QT prolongation (TdP uncommon); raises digoxin and warfarin effect.",
+      "refs": [
+        "drew2010"
+      ]
+    },
+    {
+      "id": "magnesium-sulphate",
+      "name": "Magnesium sulphate",
+      "class": "Electrolyte / antiarrhythmic",
+      "indications": "Torsades de pointes; hypomagnesaemia; QT-risk mitigation.",
+      "adultDose": "TdP: 2 g IV over 1-2 min (pulseless) or 10-15 min; repeat or infuse 0.5-1 g/h.",
+      "preparationIndia": "50% w/v 2 mL ampoules (1 g = ~4 mmol).",
+      "cautions": "Hypotension with rapid infusion; accumulates in AKI (monitor levels and reflexes).",
+      "refs": [
+        "drew2010"
+      ]
+    },
+    {
+      "id": "vancomycin",
+      "name": "Vancomycin",
+      "class": "Glycopeptide antibiotic",
+      "indications": "MRSA and other resistant Gram-positive infection.",
+      "adultDose": "Loading 20-35 mg/kg actual body weight (max ~3 g), then 15-20 mg/kg every 8-12 h adjusted to AUC 400-600 or trough levels.",
+      "preparationIndia": "500 mg and 1 g vials; infuse ≤ 10 mg/min (1 g over ≥ 1 h).",
+      "cautions": "Nephrotoxicity (especially with piperacillin-tazobactam), vancomycin infusion reaction with fast infusion.",
+      "verify": "Loading ranges and caps vary between guidelines; follow local TDM protocol.",
+      "refs": [
+        "roberts2014"
+      ]
+    },
+    {
+      "id": "phentolamine",
+      "name": "Phentolamine",
+      "class": "Alpha-adrenergic blocker",
+      "indications": "Extravasation of noradrenaline, adrenaline, dopamine or vasopressin.",
+      "adultDose": "5-10 mg diluted in 10 mL NS, infiltrated subcutaneously around the extravasation site within 12 h.",
+      "preparationIndia": "10 mg/mL ampoules – supply is irregular in India; keep in the ICU or know the alternative (topical nitroglycerin, SC terbutaline) per local policy.",
+      "cautions": "Hypotension, tachycardia.",
+      "verify": "Availability and alternatives depend on local formulary.",
+      "refs": [
+        "cardenas2015"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "roberts2014",
+      "citation": "Roberts JA, Abdul-Aziz MH, Lipman J, et al. Individualised antibiotic dosing for patients who are critically ill: challenges and potential solutions. Lancet Infect Dis. 2014;14(6):498-509",
+      "url": "https://doi.org/10.1016/S1473-3099(14)70036-2",
+      "year": 2014,
+      "doi": "10.1016/S1473-3099(14)70036-2",
+      "type": "review"
+    },
+    {
+      "id": "erstad2020",
+      "citation": "Erstad BL, Barletta JF. Drug dosing in the critically ill obese patient – a focus on sedation, analgesia, and delirium. Crit Care. 2020;24:315",
+      "url": "https://doi.org/10.1186/s13054-020-03040-z",
+      "year": 2020,
+      "doi": "10.1186/s13054-020-03040-z",
+      "type": "review"
+    },
+    {
+      "id": "pai2000",
+      "citation": "Pai MP, Paloucek FP. The origin of the 'ideal' body weight equations. Ann Pharmacother. 2000;34(9):1066-1069",
+      "url": "https://doi.org/10.1345/aph.19381",
+      "year": 2000,
+      "doi": "10.1345/aph.19381",
+      "type": "review"
+    },
+    {
+      "id": "kdigo-drug2011",
+      "citation": "Matzke GR, Aronoff GR, Atkinson AJ, et al. Drug dosing consideration in patients with acute and chronic kidney disease – a clinical update from Kidney Disease: Improving Global Outcomes (KDIGO). Kidney Int. 2011;80(11):1122-1137",
+      "url": "https://doi.org/10.1038/ki.2011.322",
+      "year": 2011,
+      "doi": "10.1038/ki.2011.322",
+      "type": "consensus"
+    },
+    {
+      "id": "udy2011",
+      "citation": "Udy AA, Roberts JA, Lipman J. Implications of augmented renal clearance in critically ill patients. Nat Rev Nephrol. 2011;7(9):539-543",
+      "url": "https://doi.org/10.1038/nrneph.2011.92",
+      "year": 2011,
+      "doi": "10.1038/nrneph.2011.92",
+      "type": "review"
+    },
+    {
+      "id": "bling3",
+      "citation": "Dulhunty JM, Brett SJ, De Waele JJ, et al. Continuous vs intermittent β-lactam antibiotic infusions in critically ill patients with sepsis: the BLING III randomized clinical trial. JAMA. 2024;332(8):629-637",
+      "url": "https://doi.org/10.1001/jama.2024.9779",
+      "year": 2024,
+      "doi": "10.1001/jama.2024.9779",
+      "type": "trial"
+    },
+    {
+      "id": "abdulaziz2024",
+      "citation": "Abdul-Aziz MH, Hammond NE, Brett SJ, et al. Prolonged vs intermittent infusions of β-lactam antibiotics in adults with sepsis or septic shock: a systematic review and meta-analysis. JAMA. 2024;332(8):638-648",
+      "url": "https://doi.org/10.1001/jama.2024.9803",
+      "year": 2024,
+      "doi": "10.1001/jama.2024.9803",
+      "type": "review"
+    },
+    {
+      "id": "verbeeck2008",
+      "citation": "Verbeeck RK. Pharmacokinetics and dosage adjustment in patients with hepatic dysfunction. Eur J Clin Pharmacol. 2008;64(12):1147-1161",
+      "url": "https://doi.org/10.1007/s00228-008-0553-z",
+      "year": 2008,
+      "doi": "10.1007/s00228-008-0553-z",
+      "type": "review"
+    },
+    {
+      "id": "drew2010",
+      "citation": "Drew BJ, Ackerman MJ, Funk M, et al. Prevention of torsade de pointes in hospital settings: a scientific statement from the American Heart Association and the American College of Cardiology Foundation. Circulation. 2010;121(8):1047-1060",
+      "url": "https://doi.org/10.1161/CIRCULATIONAHA.109.192704",
+      "year": 2010,
+      "doi": "10.1161/CIRCULATIONAHA.109.192704",
+      "type": "consensus"
+    },
+    {
+      "id": "kanji2010",
+      "citation": "Kanji S, Lam J, Johanson C, et al. Systematic review of physical and chemical compatibility of commonly used medications administered by continuous infusion in intensive care units. Crit Care Med. 2010;38(9):1890-1898",
+      "url": "https://doi.org/10.1097/CCM.0b013e3181e8adcc",
+      "year": 2010,
+      "doi": "10.1097/CCM.0b013e3181e8adcc",
+      "type": "review"
+    },
+    {
+      "id": "cardenas2015",
+      "citation": "Cardenas-Garcia J, Schaub KF, Belchikov YG, Narasimhan M, Koenig SJ, Mayo PH. Safety of peripheral intravenous administration of vasoactive medication. J Hosp Med. 2015;10(9):581-585",
+      "url": "https://doi.org/10.1002/jhm.2394",
+      "year": 2015,
+      "doi": "10.1002/jhm.2394",
+      "type": "trial"
+    },
+    {
+      "id": "ssc2026",
+      "citation": "Prescott HC, Antonelli M, Alhazzani W, et al. Surviving Sepsis Campaign: international guidelines for management of sepsis and septic shock 2026. Intensive Care Med. 2026;52(5):863-936. Co-published in Crit Care Med. 2026 (doi:10.1097/CCM.0000000000007075)",
+      "url": "https://doi.org/10.1007/s00134-026-08361-1",
+      "year": 2026,
+      "doi": "10.1007/s00134-026-08361-1",
+      "type": "guideline"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Local concentrations",
+      "reason": "Standard dilutions listed are common Indian ICU practice and examples; every unit must use its own approved concentration chart, and labels must state the final concentration."
+    },
+    {
+      "item": "Noradrenaline salt vs base",
+      "reason": "Indian noradrenaline ampoules are labelled variously as noradrenaline bitartrate or base equivalent; confirm whether doses are expressed as base (SSC convention) for your product."
+    },
+    {
+      "item": "Insulin strength",
+      "reason": "U-40 (40 U/mL) and U-100 vials both circulate in India; confirm strength before preparing an infusion."
+    }
+  ]
+}

@@ -1,0 +1,2411 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "haematology-coagulation-transfusion",
+  "number": 24,
+  "folder": "24-haematology-coagulation-transfusion",
+  "section": {
+    "id": "F",
+    "title": "GI, liver and haematology"
+  },
+  "phase": 2,
+  "title": "Haematology, coagulation and transfusion",
+  "summary": "Haematology for the ICU: restrictive transfusion and reactions, anticoagulant reversal, DIC and sepsis-induced coagulopathy, HIT, TTP/TMA, and ICU thrombocytopenia with viscoelastic-guided therapy.",
+  "tags": [
+    "transfusion",
+    "AABB",
+    "TRALI",
+    "TACO",
+    "PCC",
+    "anticoagulant reversal",
+    "DIC",
+    "SIC",
+    "HIT",
+    "4Ts",
+    "argatroban",
+    "TTP",
+    "PLASMIC",
+    "ROTEM",
+    "TEG",
+    "thrombocytopenia"
+  ],
+  "relatedModules": [
+    "trauma-burns-environmental",
+    "gi-bleeding-abdominal-emergencies",
+    "liver-failure",
+    "sepsis-septic-shock",
+    "obstetric-critical-care",
+    "snakebite-scorpion-envenomation",
+    "tropical-monsoon-fevers"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "test-tube",
+    "accent": "high"
+  },
+  "viewKey": "module:haematology-coagulation-transfusion",
+  "topics": [
+    {
+      "id": "transfusion-thresholds-reactions",
+      "title": "Red cell, platelet and plasma transfusion; reactions",
+      "summary": "Restrictive thresholds (AABB 2023), platelet and plasma indications, and recognising transfusion reactions (TACO, TRALI, haemolysis).",
+      "viewKey": "topic:haematology-coagulation-transfusion/transfusion-thresholds-reactions",
+      "uiHints": {
+        "icon": "droplet",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Restrictive transfusion is safe for most critically ill adults: transfuse red cells at Hb < 7 g/dL; higher thresholds for specific groups.",
+          "refs": [
+            "aabb-2023"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Red cells",
+            "detail": "Hb < 7 g/dL for hospitalised and ICU patients including septic shock; < 7.5 for cardiac surgery; < 8 for orthopaedic surgery or pre-existing cardiovascular disease. Give 1 unit, then reassess.",
+            "refs": [
+              "aabb-2023",
+              "triss"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Acute MI",
+            "detail": "MINT suggested a possible benefit of a liberal (Hb < 10) strategy in MI with anaemia; consider a higher threshold.",
+            "refs": [
+              "mint"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Platelets",
+            "detail": "Prophylactic < 10 × 10⁹/L (hypoproliferative); < 20 for CVC insertion; < 50 for LP or major non-neuraxial surgery; < 100 for neurosurgery/eye surgery or ICH; > 50 in active bleeding.",
+            "refs": [
+              "aabb-platelet-2015"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Plasma",
+            "detail": "Not for isolated raised INR without bleeding or before low-risk procedures; 15-20 mL/kg for bleeding with factor deficiency.",
+            "refs": [
+              "esicm-transfusion-2021",
+              "esaic-bleeding-2023"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Massive haemorrhage",
+            "detail": "Use the massive transfusion protocol with balanced ratios (see trauma module); monitor Ca²⁺, temperature and viscoelastic tests.",
+            "refs": [
+              "eu-trauma-2023"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Bedside safety",
+            "detail": "Two-person ID check, baseline obs; observe first 15 min closely; stop transfusion at first sign of a reaction.",
+            "refs": [
+              "aabb-2023"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "prbc",
+            "role": "Anaemia below threshold",
+            "route": "IV",
+            "dose": "1 unit then recheck Hb",
+            "workedExample": "70 kg with Hb 6.4: 1 unit over 2-3 h → expected Hb ~7.4 g/dL",
+            "refs": [
+              "aabb-2023"
+            ]
+          },
+          {
+            "drugId": "platelets",
+            "role": "Thrombocytopenia",
+            "route": "IV",
+            "dose": "1 apheresis unit or 4-6 random-donor units",
+            "workedExample": "70 kg: 1 SDP or 6 RDP; check 1-h post-count",
+            "refs": [
+              "aabb-platelet-2015"
+            ]
+          },
+          {
+            "drugId": "ffp",
+            "role": "Bleeding with coagulopathy",
+            "route": "IV",
+            "dose": "15-20 mL/kg",
+            "workedExample": "70 kg: 1,050-1,400 mL ≈ 4-6 units",
+            "refs": [
+              "esaic-bleeding-2023"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "reactions",
+            "title": "Acute transfusion reactions",
+            "columns": [
+              "Reaction",
+              "Key features",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Febrile non-haemolytic",
+                "Fever < 2 °C rise, no other signs",
+                "Stop, exclude haemolysis/sepsis, paracetamol; may restart"
+              ],
+              [
+                "Allergic / anaphylaxis",
+                "Urticaria; or hypotension, bronchospasm, angioedema",
+                "Stop; antihistamine; adrenaline 0.5 mg IM for anaphylaxis"
+              ],
+              [
+                "Acute haemolytic (ABO)",
+                "Fever, loin pain, hypotension, haemoglobinuria, DIC",
+                "Stop, keep line open, fluids, recheck ID, DAT, haemolysis screen, inform blood bank"
+              ],
+              [
+                "TACO",
+                "Dyspnoea, hypertension, raised JVP, pulmonary oedema within 12 h",
+                "Stop/slow, sit up, diuretic, oxygen/NIV"
+              ],
+              [
+                "TRALI",
+                "Hypoxaemia, bilateral infiltrates within 6 h, often hypotension, no volume overload",
+                "Stop, supportive (lung-protective ventilation), avoid diuretics, report donor"
+              ],
+              [
+                "Septic (bacterial contamination)",
+                "High fever, rigors, shock (especially platelets)",
+                "Stop, culture bag and patient, broad-spectrum antibiotics"
+              ]
+            ],
+            "refs": [
+              "aabb-2023"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Fever, hypotension and loin pain within minutes of starting blood: suspect ABO incompatibility - stop immediately.",
+            "refs": [
+              "aabb-2023"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Transfusing 2 units reflexively in stable patients: give single units and reassess.",
+            "refs": [
+              "aabb-2023"
+            ]
+          },
+          {
+            "text": "Giving FFP to correct mildly raised INR before a central line.",
+            "refs": [
+              "esicm-transfusion-2021"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "TACO is the commonest cause of transfusion-related death in many haemovigilance systems; watch fluid balance in elderly and cardiac patients.",
+            "refs": [
+              "aabb-2023"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Should I transfuse red cells?",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Anaemic ICU patient"
+          },
+          {
+            "id": "bleed",
+            "type": "decision",
+            "text": "Active major haemorrhage?"
+          },
+          {
+            "id": "mtp",
+            "type": "end",
+            "text": "Activate MTP; balanced ratios",
+            "severity": "critical"
+          },
+          {
+            "id": "group",
+            "type": "decision",
+            "text": "Acute MI / ongoing myocardial ischaemia?"
+          },
+          {
+            "id": "mi",
+            "type": "end",
+            "text": "Consider threshold up to Hb 10 (MINT)"
+          },
+          {
+            "id": "thr",
+            "type": "decision",
+            "text": "Hb below threshold (7; 7.5 cardiac surgery; 8 CVD/ortho)?"
+          },
+          {
+            "id": "tx",
+            "type": "end",
+            "text": "Transfuse 1 unit and reassess"
+          },
+          {
+            "id": "no",
+            "type": "end",
+            "text": "Do not transfuse; treat cause (iron, B12, bleeding)"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "bleed"
+          },
+          {
+            "from": "bleed",
+            "to": "mtp",
+            "label": "Yes"
+          },
+          {
+            "from": "bleed",
+            "to": "group",
+            "label": "No"
+          },
+          {
+            "from": "group",
+            "to": "mi",
+            "label": "Yes"
+          },
+          {
+            "from": "group",
+            "to": "thr",
+            "label": "No"
+          },
+          {
+            "from": "thr",
+            "to": "tx",
+            "label": "Yes"
+          },
+          {
+            "from": "thr",
+            "to": "no",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "aabb-2023",
+          "mint"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Oxygen delivery is maintained at Hb 7 g/dL in most patients by increased cardiac output and extraction. Stored red cells have storage lesions, and transfusion carries immunomodulatory, infectious and volume risks.",
+        "evidence": "- AABB 2023 international guideline: restrictive thresholds for most patients [Carson 2023].\n- TRISS: Hb 7 vs 9 in septic shock - similar mortality with half the transfusions [Holst 2014].\n- MINT (3,504 patients with MI): liberal strategy did not significantly reduce death/MI (16.9% vs 14.5%) but the direction favoured liberal [Carson 2023 MINT].",
+        "controversies": "- Thresholds in acute brain injury (TRAIN trial suggested benefit of liberal) and in MI.",
+        "indiaNotes": "- India relies on voluntary and replacement donation; blood components (PRBC, SDP, cryo) availability varies by district. NAT testing is not universal; transfusion-transmitted infection risk is higher than in high-income countries, reinforcing restrictive use.\n- Haemovigilance Programme of India (IPC/NIB) accepts reports of adverse reactions."
+      },
+      "drugIds": [
+        "prbc",
+        "platelets",
+        "ffp"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "aabb-2023",
+        "triss",
+        "mint",
+        "aabb-platelet-2015",
+        "esicm-transfusion-2021",
+        "esaic-bleeding-2023",
+        "eu-trauma-2023"
+      ],
+      "quiz": [
+        {
+          "id": "transfusion-thresholds-reactions-q1",
+          "stem": "Transfusion threshold for most ICU patients (AABB 2023):",
+          "options": [
+            "Hb 10",
+            "Hb 9",
+            "Hb 7 g/dL",
+            "Hb 5"
+          ],
+          "answerIndex": 2,
+          "explanation": "Restrictive."
+        },
+        {
+          "id": "transfusion-thresholds-reactions-q2",
+          "stem": "Hypoxaemia, bilateral infiltrates, hypotension within 6 h of plasma, normal JVP:",
+          "options": [
+            "TACO",
+            "TRALI",
+            "Febrile reaction",
+            "Allergy"
+          ],
+          "answerIndex": 1,
+          "explanation": "TRALI: no volume overload."
+        },
+        {
+          "id": "transfusion-thresholds-reactions-q3",
+          "stem": "Prophylactic platelet threshold for CVC insertion (AABB):",
+          "options": [
+            "< 100",
+            "< 50",
+            "< 20 × 10⁹/L",
+            "Never"
+          ],
+          "answerIndex": 2,
+          "explanation": "AABB 2015."
+        },
+        {
+          "id": "transfusion-thresholds-reactions-q4",
+          "stem": "TRISS trial compared:",
+          "options": [
+            "Hb 7 vs 9 in septic shock",
+            "Platelets in ICH",
+            "FFP vs PCC",
+            "TXA in GI bleed"
+          ],
+          "answerIndex": 0,
+          "explanation": "Similar mortality."
+        }
+      ]
+    },
+    {
+      "id": "anticoagulant-reversal",
+      "title": "Anticoagulant and antiplatelet reversal",
+      "summary": "Agent-specific reversal for warfarin, dabigatran, factor Xa inhibitors, heparin/LMWH and antiplatelets in major bleeding.",
+      "viewKey": "topic:haematology-coagulation-transfusion/anticoagulant-reversal",
+      "uiHints": {
+        "icon": "rotate-ccw",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Major bleeding = haemodynamic instability, bleeding at a critical site (intracranial, spinal, pericardial, airway, retroperitoneal, intra-ocular), or Hb drop ≥ 2 g/dL / ≥ 2 units needed. Reverse anticoagulation for major bleeding or emergency surgery.",
+          "refs": [
+            "acc-bleeding-2020"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Assess",
+            "detail": "Site and severity, last dose time, renal function, INR/aPTT/anti-Xa/TT. General measures: compression, source control, transfusion, stop antithrombotics.",
+            "refs": [
+              "acc-bleeding-2020"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Warfarin",
+            "detail": "Vitamin K 5-10 mg IV + 4F-PCC (INR-based 25-50 units/kg, or fixed 1,000-1,500 units); recheck INR 30 min after. FFP 15-20 mL/kg only if PCC unavailable.",
+            "refs": [
+              "acc-bleeding-2020"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Dabigatran",
+            "detail": "Idarucizumab 5 g IV; if unavailable, PCC 50 units/kg; haemodialysis removes dabigatran.",
+            "refs": [
+              "acc-bleeding-2020"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Rivaroxaban/apixaban",
+            "detail": "Andexanet alfa where available; otherwise 4F-PCC 50 units/kg (or 2,000 units). Activated charcoal if ingested within 2-4 h.",
+            "refs": [
+              "acc-bleeding-2020"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Heparin/LMWH",
+            "detail": "Protamine 1 mg per 100 units UFH given in last 2-3 h (max 50 mg); enoxaparin 1 mg per mg (≤ 8 h) or 0.5 mg per mg (8-12 h).",
+            "refs": [
+              "acc-bleeding-2020"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Antiplatelets",
+            "detail": "Platelet transfusion not recommended for antiplatelet-associated ICH (PATCH: worse outcome) unless emergency neurosurgery; consider desmopressin 0.3 mcg/kg.",
+            "refs": [
+              "patch",
+              "esaic-bleeding-2023"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Thrombolytic-associated bleeding",
+            "detail": "Cryoprecipitate to fibrinogen > 150 mg/dL and tranexamic acid.",
+            "refs": [
+              "esaic-bleeding-2023"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Restart plan",
+            "detail": "Decide when to restart anticoagulation (often 7-14 days after ICH, 1-3 days after GI bleed control) with the specialist team.",
+            "refs": [
+              "acc-bleeding-2020"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "pcc",
+            "role": "Warfarin reversal",
+            "route": "IV",
+            "dose": "INR 2-4: 25 units/kg; 4-6: 35 units/kg; > 6: 50 units/kg",
+            "workedExample": "70 kg, INR 5: 35 × 70 = 2,450 units (≈ 5 × 500-unit vials)",
+            "verify": "Check vial size and brand.",
+            "refs": [
+              "acc-bleeding-2020"
+            ]
+          },
+          {
+            "drugId": "vitamin-k",
+            "role": "Warfarin reversal",
+            "route": "IV",
+            "dose": "5-10 mg slowly",
+            "refs": [
+              "acc-bleeding-2020"
+            ]
+          },
+          {
+            "drugId": "idarucizumab",
+            "role": "Dabigatran reversal",
+            "route": "IV",
+            "dose": "5 g",
+            "refs": [
+              "acc-bleeding-2020"
+            ]
+          },
+          {
+            "drugId": "pcc",
+            "role": "Factor Xa inhibitor bleeding (no andexanet)",
+            "route": "IV",
+            "dose": "50 units/kg (or 2,000 units fixed)",
+            "workedExample": "70 kg: 3,500 units (fixed alternative 2,000 units)",
+            "refs": [
+              "acc-bleeding-2020"
+            ]
+          },
+          {
+            "drugId": "protamine",
+            "role": "Heparin reversal",
+            "route": "IV slow",
+            "dose": "1 mg per 100 units UFH in last 2-3 h (max 50 mg)",
+            "workedExample": "Infusion 1,000 units/h: about 2,500 units in last 2.5 h → 25 mg protamine over 10 min",
+            "refs": [
+              "acc-bleeding-2020"
+            ]
+          },
+          {
+            "drugId": "desmopressin",
+            "role": "Antiplatelet/uraemic bleeding",
+            "route": "IV",
+            "dose": "0.3 mcg/kg over 30 min",
+            "workedExample": "70 kg: 21 mcg in 50 mL NS over 30 min",
+            "refs": [
+              "acc-bleeding-2020"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "reversal",
+            "title": "Reversal summary",
+            "columns": [
+              "Agent",
+              "First line",
+              "Alternative"
+            ],
+            "rows": [
+              [
+                "Warfarin",
+                "Vitamin K IV + 4F-PCC",
+                "FFP 15-20 mL/kg"
+              ],
+              [
+                "Dabigatran",
+                "Idarucizumab 5 g",
+                "PCC 50 units/kg; dialysis"
+              ],
+              [
+                "Apixaban/rivaroxaban",
+                "Andexanet alfa",
+                "4F-PCC 50 units/kg"
+              ],
+              [
+                "UFH",
+                "Protamine",
+                "-"
+              ],
+              [
+                "Enoxaparin",
+                "Protamine (partial)",
+                "-"
+              ],
+              [
+                "Fondaparinux",
+                "No specific antidote",
+                "Consider PCC/rFVIIa (limited data)"
+              ],
+              [
+                "Antiplatelets",
+                "Supportive; desmopressin",
+                "Platelets only for neurosurgery"
+              ],
+              [
+                "Thrombolytics",
+                "Cryoprecipitate + TXA",
+                "-"
+              ]
+            ],
+            "refs": [
+              "acc-bleeding-2020"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Intracranial haemorrhage on any anticoagulant: reverse immediately, do not wait for coagulation results.",
+            "refs": [
+              "acc-bleeding-2020"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Giving PCC without vitamin K for warfarin: INR rebounds after 6-8 h.",
+            "refs": [
+              "acc-bleeding-2020"
+            ]
+          },
+          {
+            "text": "Transfusing platelets for antiplatelet-associated ICH without surgery.",
+            "refs": [
+              "patch"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Normal thrombin time essentially excludes significant dabigatran effect.",
+            "refs": [
+              "acc-bleeding-2020"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Major bleed on an anticoagulant",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Major / critical-site bleeding"
+          },
+          {
+            "id": "gen",
+            "type": "action",
+            "text": "Stop drug, local control, transfuse, labs"
+          },
+          {
+            "id": "agent",
+            "type": "decision",
+            "text": "Which agent?"
+          },
+          {
+            "id": "w",
+            "type": "end",
+            "text": "Vitamin K 10 mg IV + 4F-PCC",
+            "severity": "critical"
+          },
+          {
+            "id": "d",
+            "type": "end",
+            "text": "Idarucizumab 5 g (or PCC; dialysis)",
+            "severity": "critical"
+          },
+          {
+            "id": "x",
+            "type": "end",
+            "text": "Andexanet or 4F-PCC 50 units/kg",
+            "severity": "critical"
+          },
+          {
+            "id": "h",
+            "type": "end",
+            "text": "Protamine per dose in last 2-3 h"
+          },
+          {
+            "id": "ap",
+            "type": "end",
+            "text": "Supportive; desmopressin; platelets only if surgery"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "gen"
+          },
+          {
+            "from": "gen",
+            "to": "agent"
+          },
+          {
+            "from": "agent",
+            "to": "w",
+            "label": "Warfarin"
+          },
+          {
+            "from": "agent",
+            "to": "d",
+            "label": "Dabigatran"
+          },
+          {
+            "from": "agent",
+            "to": "x",
+            "label": "Xa inhibitor"
+          },
+          {
+            "from": "agent",
+            "to": "h",
+            "label": "Heparin/LMWH"
+          },
+          {
+            "from": "agent",
+            "to": "ap",
+            "label": "Antiplatelet"
+          }
+        ],
+        "refs": [
+          "acc-bleeding-2020"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Warfarin depletes vitamin K-dependent factors II, VII, IX, X (PCC replaces them immediately; vitamin K restores synthesis over 6-24 h). DOACs directly inhibit thrombin or factor Xa; reversal requires antidotes or overwhelming the inhibition with factor concentrates.",
+        "evidence": "- ACC 2020 ECDP on bleeding with oral anticoagulants [Tomaselli 2020].\n- PATCH: platelet transfusion increased death or dependence in antiplatelet-associated ICH (OR 2.05) [Baharoglu 2016].",
+        "controversies": "- Andexanet thrombosis risk and cost; PCC for DOACs is off-label with limited evidence.",
+        "indiaNotes": "- Andexanet is not available in India and idarucizumab is expensive; 4F-PCC (or FFP if unavailable) is the practical option.\n- Acenocoumarol (more commonly used than warfarin in India) is reversed the same way."
+      },
+      "drugIds": [
+        "pcc",
+        "vitamin-k",
+        "idarucizumab",
+        "protamine",
+        "desmopressin"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "acc-bleeding-2020",
+        "patch",
+        "esaic-bleeding-2023"
+      ],
+      "quiz": [
+        {
+          "id": "anticoagulant-reversal-q1",
+          "stem": "Warfarin ICH, INR 4.5, 80 kg. Best reversal:",
+          "options": [
+            "FFP 2 units",
+            "Vitamin K 10 mg IV + 4F-PCC 35 units/kg",
+            "Protamine",
+            "Platelets"
+          ],
+          "answerIndex": 1,
+          "explanation": "INR 4-6 band."
+        },
+        {
+          "id": "anticoagulant-reversal-q2",
+          "stem": "Antiplatelet-associated ICH not needing surgery:",
+          "options": [
+            "Platelet transfusion",
+            "No platelet transfusion (PATCH)",
+            "PCC",
+            "Idarucizumab"
+          ],
+          "answerIndex": 1,
+          "explanation": "Platelets were harmful."
+        },
+        {
+          "id": "anticoagulant-reversal-q3",
+          "stem": "Protamine for UFH infusion 1,200 units/h (last 2 h ≈ 2,400 units):",
+          "options": [
+            "5 mg",
+            "24 mg",
+            "100 mg",
+            "50 mg per hour"
+          ],
+          "answerIndex": 1,
+          "explanation": "1 mg per 100 units."
+        }
+      ]
+    },
+    {
+      "id": "dic",
+      "title": "Disseminated intravascular coagulation",
+      "summary": "Score DIC (ISTH) and sepsis-induced coagulopathy, treat the cause, and give products only for bleeding or procedures.",
+      "viewKey": "topic:haematology-coagulation-transfusion/dic",
+      "uiHints": {
+        "icon": "network",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "DIC is an acquired syndrome of systemic intravascular coagulation activation causing microvascular thrombosis and consumption of platelets and factors. Causes: sepsis, trauma, obstetric (abruption, AFE), malignancy (APML), severe pancreatitis, snakebite (venom-induced consumption coagulopathy in India).",
+          "refs": [
+            "isth-dic-2001",
+            "wada-dic-2013"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Score",
+            "detail": "ISTH overt DIC score ≥ 5 (platelets, D-dimer, PT, fibrinogen); in sepsis, SIC score ≥ 4 identifies earlier coagulopathy. Repeat daily: trends matter.",
+            "refs": [
+              "isth-dic-2001",
+              "sic-2017"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Treat the cause",
+            "detail": "Source control and antibiotics in sepsis; delivery in obstetric DIC; ATRA for APML; antivenom for snakebite coagulopathy.",
+            "refs": [
+              "wada-dic-2013"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Bleeding or procedure",
+            "detail": "Platelets if < 50 × 10⁹/L and bleeding; FFP 15-30 mL/kg if PT/aPTT > 1.5× with bleeding; fibrinogen < 150 mg/dL with bleeding: cryoprecipitate.",
+            "refs": [
+              "wada-dic-2013"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "No bleeding",
+            "detail": "Platelets only if < 10-20 × 10⁹/L; do not give FFP for lab values alone.",
+            "refs": [
+              "wada-dic-2013"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Thrombosis-predominant",
+            "detail": "Therapeutic heparin in DIC with thrombosis (e.g. purpura fulminans, solid tumour) if not bleeding; VTE prophylaxis in all non-bleeding DIC.",
+            "refs": [
+              "wada-dic-2013"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Antifibrinolytics",
+            "detail": "Generally avoid TXA in sepsis-DIC; consider in hyperfibrinolytic DIC (APML, trauma, some obstetric).",
+            "refs": [
+              "wada-dic-2013"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "isth-dic",
+            "title": "ISTH overt DIC score (with an underlying cause)",
+            "columns": [
+              "Parameter",
+              "Points"
+            ],
+            "rows": [
+              [
+                "Platelets > 100 × 10⁹/L",
+                "0"
+              ],
+              [
+                "Platelets 50-100",
+                "1"
+              ],
+              [
+                "Platelets < 50",
+                "2"
+              ],
+              [
+                "D-dimer/FDP no increase",
+                "0"
+              ],
+              [
+                "Moderate increase",
+                "2"
+              ],
+              [
+                "Strong increase",
+                "3"
+              ],
+              [
+                "PT prolonged < 3 s",
+                "0"
+              ],
+              [
+                "PT prolonged 3-6 s",
+                "1"
+              ],
+              [
+                "PT prolonged > 6 s",
+                "2"
+              ],
+              [
+                "Fibrinogen > 100 mg/dL",
+                "0"
+              ],
+              [
+                "Fibrinogen ≤ 100 mg/dL",
+                "1"
+              ]
+            ],
+            "caption": "Score ≥ 5 = overt DIC (repeat daily); < 5 suggests non-overt DIC (repeat in 1-2 days). D-dimer cut-offs depend on local assay.",
+            "refs": [
+              "isth-dic-2001"
+            ]
+          },
+          {
+            "id": "sic",
+            "title": "Sepsis-induced coagulopathy (SIC) score",
+            "columns": [
+              "Parameter",
+              "1 point",
+              "2 points"
+            ],
+            "rows": [
+              [
+                "PT-INR",
+                "> 1.2",
+                "> 1.4"
+              ],
+              [
+                "Platelets (× 10⁹/L)",
+                "100-149",
+                "< 100"
+              ],
+              [
+                "SOFA (respiratory, cardiovascular, hepatic, renal sum)",
+                "1",
+                "≥ 2"
+              ]
+            ],
+            "caption": "SIC ≥ 4 (with platelet + INR total > 2).",
+            "refs": [
+              "sic-2017"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Purpura fulminans (meningococcal sepsis): rapidly progressive skin necrosis with DIC - early antibiotics, products, consider protein C concentrate.",
+            "refs": [
+              "wada-dic-2013"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Treating DIC numbers with products in a non-bleeding patient.",
+            "refs": [
+              "wada-dic-2013"
+            ]
+          },
+          {
+            "text": "Relying on a single normal fibrinogen: it is an acute-phase reactant and may fall only late in sepsis.",
+            "refs": [
+              "wada-dic-2013"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "APML presents with profound hyperfibrinolytic DIC: start ATRA on suspicion and keep fibrinogen > 150 mg/dL and platelets > 30-50.",
+            "refs": [
+              "wada-dic-2013"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Suspected DIC",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Low platelets + abnormal coagulation + trigger"
+          },
+          {
+            "id": "score",
+            "type": "action",
+            "text": "ISTH DIC score (SIC in sepsis); treat underlying cause"
+          },
+          {
+            "id": "bleed",
+            "type": "decision",
+            "text": "Bleeding or procedure needed?"
+          },
+          {
+            "id": "prod",
+            "type": "action",
+            "text": "Platelets < 50; FFP 15-30 mL/kg; cryo if fibrinogen < 150",
+            "severity": "high"
+          },
+          {
+            "id": "thromb",
+            "type": "decision",
+            "text": "Thrombosis predominant?"
+          },
+          {
+            "id": "hep",
+            "type": "end",
+            "text": "Therapeutic heparin"
+          },
+          {
+            "id": "proph",
+            "type": "end",
+            "text": "VTE prophylaxis; platelets only if < 10-20; repeat score daily"
+          },
+          {
+            "id": "reass",
+            "type": "end",
+            "text": "Reassess after products; continue cause-directed therapy"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "score"
+          },
+          {
+            "from": "score",
+            "to": "bleed"
+          },
+          {
+            "from": "bleed",
+            "to": "prod",
+            "label": "Yes"
+          },
+          {
+            "from": "bleed",
+            "to": "thromb",
+            "label": "No"
+          },
+          {
+            "from": "prod",
+            "to": "reass"
+          },
+          {
+            "from": "thromb",
+            "to": "hep",
+            "label": "Yes"
+          },
+          {
+            "from": "thromb",
+            "to": "proph",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "wada-dic-2013"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Tissue factor expression on monocytes and endothelium drives thrombin generation, while anticoagulant pathways (antithrombin, protein C) and fibrinolysis (raised PAI-1 in sepsis) are suppressed, producing microthrombi and organ failure; consumption leads to bleeding.",
+        "evidence": "- ISTH DIC score (2001) and harmonised guidance (2013) [Taylor 2001; Wada 2013].\n- SIC criteria identify patients with sepsis coagulopathy earlier than overt DIC [Iba 2017].",
+        "controversies": "- Anticoagulant therapy (antithrombin, thrombomodulin, heparin) in sepsis-induced coagulopathy: used in Japan, not recommended routinely elsewhere.",
+        "indiaNotes": "- Snakebite (Russell's viper, saw-scaled viper) causes venom-induced consumption coagulopathy that responds to antivenom, not FFP; use the 20-minute whole blood clotting test (20WBCT).\n- Falciparum malaria, dengue and leptospirosis are common Indian causes of DIC-like coagulopathy."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "isth-dic-2001",
+        "wada-dic-2013",
+        "sic-2017"
+      ],
+      "quiz": [
+        {
+          "id": "dic-q1",
+          "stem": "ISTH overt DIC score threshold:",
+          "options": [
+            "≥ 2",
+            "≥ 5",
+            "≥ 10",
+            "≥ 3"
+          ],
+          "answerIndex": 1,
+          "explanation": "Taylor 2001."
+        },
+        {
+          "id": "dic-q2",
+          "stem": "Non-bleeding DIC with platelets 35 and INR 1.8:",
+          "options": [
+            "FFP and platelets",
+            "Treat cause; no products",
+            "TXA",
+            "Rituximab"
+          ],
+          "answerIndex": 1,
+          "explanation": "Products only for bleeding/procedures or platelets < 10-20."
+        },
+        {
+          "id": "dic-q3",
+          "stem": "SIC score positive at:",
+          "options": [
+            "≥ 2",
+            "≥ 4",
+            "≥ 6",
+            "≥ 1"
+          ],
+          "answerIndex": 1,
+          "explanation": "Iba 2017."
+        }
+      ]
+    },
+    {
+      "id": "hit",
+      "title": "Heparin-induced thrombocytopenia",
+      "summary": "Use the 4Ts score, stop all heparin and start a non-heparin anticoagulant when probability is intermediate or high, and confirm with PF4 and functional assays.",
+      "viewKey": "topic:haematology-coagulation-transfusion/hit",
+      "uiHints": {
+        "icon": "alert-octagon",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "HIT is an immune (anti-PF4/heparin IgG) prothrombotic disorder: platelet fall > 50% typically 5-10 days after heparin start (or within 24 h if exposed in the previous 30-100 days), with venous or arterial thrombosis in up to 50%.",
+          "refs": [
+            "ash-hit-2018"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Calculate 4Ts",
+            "detail": "Low probability (≤ 3): HIT unlikely, do not test, continue heparin. Intermediate (4-5) or high (6-8): act.",
+            "refs": [
+              "4ts-2006",
+              "ash-hit-2018"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Stop all heparin",
+            "detail": "Including flushes, heparin-coated catheters and LMWH.",
+            "time": "Now",
+            "refs": [
+              "ash-hit-2018"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Start non-heparin anticoagulant",
+            "detail": "Argatroban (critically ill, renal failure, may need procedures), bivalirudin, fondaparinux or a DOAC (stable patients) - at treatment doses even without thrombosis.",
+            "time": "Now",
+            "refs": [
+              "ash-hit-2018"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Test",
+            "detail": "PF4/heparin immunoassay; if positive, functional assay (serotonin release or HIPA) to confirm.",
+            "refs": [
+              "ash-hit-2018"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Look for thrombosis",
+            "detail": "Bilateral lower-limb compression ultrasound in all; upper limb if CVC.",
+            "refs": [
+              "ash-hit-2018"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Avoid",
+            "detail": "Platelet transfusion (unless bleeding/high-risk procedure); warfarin until platelets recovered to ≥ 150 × 10⁹/L (warfarin necrosis, limb gangrene); give vitamin K if HIT diagnosed on warfarin.",
+            "refs": [
+              "ash-hit-2018"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Duration",
+            "detail": "Without thrombosis (isolated HIT): until platelet recovery and up to 3 months; with thrombosis: 3 months.",
+            "refs": [
+              "ash-hit-2018"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "argatroban",
+            "role": "HIT in critically ill",
+            "route": "IV",
+            "dose": "0.5-1.2 mcg/kg/min in organ failure (2 mcg/kg/min if no organ dysfunction)",
+            "dilution": "250 mg in 250 mL NS = 1 mg/mL",
+            "target": "aPTT 1.5-3 × baseline (check 2 h after each change)",
+            "workedExample": "70 kg at 1 mcg/kg/min = 70 mcg/min = 4.2 mg/h = 4.2 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "verify": "Availability in India.",
+            "refs": [
+              "ash-hit-2018"
+            ]
+          },
+          {
+            "drugId": "fondaparinux",
+            "role": "HIT, stable patient",
+            "route": "SC",
+            "dose": "7.5 mg daily (50-100 kg)",
+            "notes": "Avoid if CrCl < 30 mL/min.",
+            "refs": [
+              "ash-hit-2018"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "4ts",
+            "title": "4Ts score",
+            "columns": [
+              "Category",
+              "2 points",
+              "1 point",
+              "0 points"
+            ],
+            "rows": [
+              [
+                "Thrombocytopenia",
+                "Fall > 50% and nadir ≥ 20 × 10⁹/L",
+                "Fall 30-50% or nadir 10-19",
+                "Fall < 30% or nadir < 10"
+              ],
+              [
+                "Timing of fall",
+                "Day 5-10, or ≤ day 1 with heparin in past 30 days",
+                "Day > 10 or unclear; or ≤ day 1 with heparin 30-100 days ago",
+                "≤ day 4 without recent heparin"
+              ],
+              [
+                "Thrombosis",
+                "New proven thrombosis, skin necrosis, anaphylactoid reaction to IV heparin bolus",
+                "Progressive/recurrent/suspected thrombosis; non-necrotising skin lesions",
+                "None"
+              ],
+              [
+                "Other cause",
+                "None apparent",
+                "Possible",
+                "Definite"
+              ]
+            ],
+            "caption": "0-3 low, 4-5 intermediate, 6-8 high probability.",
+            "refs": [
+              "4ts-2006"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Limb ischaemia, new thrombosis or skin necrosis with falling platelets on heparin.",
+            "refs": [
+              "ash-hit-2018"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Ordering HIT antibodies for every thrombocytopenic ICU patient: a low 4Ts score has high negative predictive value; positive ELISA alone is common after surgery/CPB.",
+            "refs": [
+              "ash-hit-2018"
+            ]
+          },
+          {
+            "text": "Stopping heparin without starting an alternative anticoagulant: thrombosis risk is high.",
+            "refs": [
+              "ash-hit-2018"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Sepsis-related thrombocytopenia in ICU is far more common than HIT, but post-cardiac surgery a second platelet fall after day 5 suggests HIT.",
+            "refs": [
+              "ash-hit-2018"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Suspected HIT",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Platelet fall on heparin"
+          },
+          {
+            "id": "score",
+            "type": "decision",
+            "text": "4Ts score?"
+          },
+          {
+            "id": "low",
+            "type": "end",
+            "text": "≤ 3: HIT unlikely; continue heparin, find other cause"
+          },
+          {
+            "id": "stop",
+            "type": "action",
+            "text": "Stop all heparin; start argatroban/fondaparinux",
+            "severity": "critical"
+          },
+          {
+            "id": "test",
+            "type": "action",
+            "text": "PF4 immunoassay; leg Doppler"
+          },
+          {
+            "id": "pos",
+            "type": "decision",
+            "text": "Immunoassay positive?"
+          },
+          {
+            "id": "conf",
+            "type": "action",
+            "text": "Functional assay (SRA/HIPA)"
+          },
+          {
+            "id": "hit",
+            "type": "end",
+            "text": "HIT confirmed: continue non-heparin anticoagulation 1-3 months",
+            "severity": "high"
+          },
+          {
+            "id": "neg",
+            "type": "end",
+            "text": "HIT excluded: resume heparin if needed"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "score"
+          },
+          {
+            "from": "score",
+            "to": "low",
+            "label": "0-3"
+          },
+          {
+            "from": "score",
+            "to": "stop",
+            "label": "4-8"
+          },
+          {
+            "from": "stop",
+            "to": "test"
+          },
+          {
+            "from": "test",
+            "to": "pos"
+          },
+          {
+            "from": "pos",
+            "to": "conf",
+            "label": "Yes"
+          },
+          {
+            "from": "pos",
+            "to": "neg",
+            "label": "No"
+          },
+          {
+            "from": "conf",
+            "to": "hit",
+            "label": "Positive"
+          },
+          {
+            "from": "conf",
+            "to": "neg",
+            "label": "Negative"
+          }
+        ],
+        "refs": [
+          "ash-hit-2018",
+          "4ts-2006"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "IgG antibodies against PF4-heparin complexes bind platelet FcγRIIa receptors, causing platelet activation, procoagulant microparticles and thrombin generation - hence thrombosis, not bleeding.",
+        "evidence": "- ASH 2018 HIT guideline [Cuker 2018]. 4Ts low score NPV ~99% [Lo 2006].",
+        "controversies": "- DOACs as first-line in stable HIT; management of HIT needing cardiac surgery.",
+        "indiaNotes": "- Functional assays (SRA/HIPA) are rarely available in India; diagnosis relies on 4Ts plus PF4 ELISA (IgG-specific preferred) with a high optical density supporting HIT.\n- Argatroban may not be stocked; fondaparinux and bivalirudin are alternatives."
+      },
+      "drugIds": [
+        "argatroban",
+        "fondaparinux"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-min"
+      ],
+      "references": [
+        "ash-hit-2018",
+        "4ts-2006"
+      ],
+      "quiz": [
+        {
+          "id": "hit-q1",
+          "stem": "4Ts score 3 in a septic patient on prophylactic heparin:",
+          "options": [
+            "Stop heparin and start argatroban",
+            "HIT unlikely; continue heparin; no test",
+            "Give platelets",
+            "Start warfarin"
+          ],
+          "answerIndex": 1,
+          "explanation": "Low probability."
+        },
+        {
+          "id": "hit-q2",
+          "stem": "Warfarin in acute HIT should be:",
+          "options": [
+            "Started immediately",
+            "Delayed until platelets ≥ 150",
+            "Never used",
+            "Given with platelets"
+          ],
+          "answerIndex": 1,
+          "explanation": "Risk of venous limb gangrene."
+        },
+        {
+          "id": "hit-q3",
+          "stem": "Argatroban dose in a critically ill patient with multi-organ failure:",
+          "options": [
+            "2 mcg/kg/min",
+            "0.5-1.2 mcg/kg/min",
+            "10 mcg/kg/min",
+            "5 mg bolus"
+          ],
+          "answerIndex": 1,
+          "explanation": "Reduced clearance."
+        }
+      ]
+    },
+    {
+      "id": "ttp-tma",
+      "title": "TTP and thrombotic microangiopathy",
+      "summary": "Recognise MAHA with thrombocytopenia, use PLASMIC, start urgent plasma exchange and immunosuppression, and distinguish HUS, DIC and pregnancy TMAs.",
+      "viewKey": "topic:haematology-coagulation-transfusion/ttp-tma",
+      "uiHints": {
+        "icon": "zap",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "TMA = microangiopathic haemolytic anaemia (schistocytes, raised LDH, low haptoglobin, negative DAT) + thrombocytopenia ± organ injury. Immune TTP: ADAMTS13 activity < 10% due to autoantibodies; untreated mortality ~90%.",
+          "refs": [
+            "isth-ttp-2020"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Confirm MAHA",
+            "detail": "Peripheral smear (schistocytes > 1%), LDH, haptoglobin, reticulocytes, bilirubin, DAT, coagulation (normal in TTP), creatinine, troponin. Send ADAMTS13 before plasma.",
+            "refs": [
+              "isth-ttp-2020"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "PLASMIC score",
+            "detail": "Platelets < 30, haemolysis, no active cancer, no transplant, MCV < 90, INR < 1.5, creatinine < 2 mg/dL: 6-7 = high probability of severe ADAMTS13 deficiency.",
+            "refs": [
+              "plasmic"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Urgent plasma exchange",
+            "detail": "If TTP suspected (PLASMIC high): start TPE (1-1.5 plasma volumes daily) within hours; if TPE delayed, give FFP 15-30 mL/kg meanwhile.",
+            "time": "< 4-8 h",
+            "refs": [
+              "isth-ttp-2020"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Immunosuppression",
+            "detail": "Methylprednisolone 1 g/day × 3 (or prednisolone 1 mg/kg); rituximab 375 mg/m² weekly; caplacizumab where available.",
+            "refs": [
+              "isth-ttp-2020",
+              "hercules"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Avoid platelets",
+            "detail": "Platelet transfusion only for life-threatening bleeding; aspirin/LMWH prophylaxis once platelets > 50 × 10⁹/L.",
+            "refs": [
+              "isth-ttp-2020"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Consider differentials",
+            "detail": "STEC-HUS (bloody diarrhoea), atypical HUS (complement - eculizumab), DIC, HELLP/pre-eclampsia, malignant hypertension, scleroderma renal crisis, drugs (quinine, gemcitabine, calcineurin inhibitors), infections.",
+            "refs": [
+              "isth-ttp-2020"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Monitor response",
+            "detail": "Daily platelets and LDH; continue TPE until platelets > 150 × 10⁹/L for 2 days.",
+            "refs": [
+              "isth-ttp-2020"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "ffp",
+            "role": "Bridge until TPE available",
+            "route": "IV",
+            "dose": "15-30 mL/kg",
+            "workedExample": "70 kg: 1,050-2,100 mL; watch for volume overload",
+            "refs": [
+              "isth-ttp-2020"
+            ]
+          },
+          {
+            "drugId": "methylprednisolone",
+            "role": "Immune TTP",
+            "route": "IV",
+            "dose": "1 g daily for 3 days",
+            "refs": [
+              "isth-ttp-2020"
+            ]
+          },
+          {
+            "drugId": "rituximab",
+            "role": "Immune TTP",
+            "route": "IV",
+            "dose": "375 mg/m² weekly × 4",
+            "workedExample": "BSA 1.8 m²: 675 mg per dose",
+            "calculatorId": "bsa-mosteller",
+            "verify": "Dosing schedule per haematology.",
+            "refs": [
+              "isth-ttp-2020"
+            ]
+          },
+          {
+            "drugId": "caplacizumab",
+            "role": "Immune TTP",
+            "route": "IV then SC",
+            "dose": "10 mg IV before first TPE, then 10 mg SC daily",
+            "verify": "Availability/cost in India.",
+            "refs": [
+              "hercules"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "tma-dd",
+            "title": "TMA differential",
+            "columns": [
+              "Condition",
+              "Clues"
+            ],
+            "rows": [
+              [
+                "Immune TTP",
+                "Very low platelets (< 30), mild AKI, neuro symptoms, ADAMTS13 < 10%"
+              ],
+              [
+                "STEC-HUS",
+                "Bloody diarrhoea, severe AKI"
+              ],
+              [
+                "Atypical HUS",
+                "Severe AKI, complement mutation, ADAMTS13 > 10%"
+              ],
+              [
+                "DIC",
+                "Prolonged PT/aPTT, low fibrinogen, sepsis/trigger"
+              ],
+              [
+                "HELLP / pre-eclampsia",
+                "Pregnancy > 20 weeks or postpartum, hypertension, raised liver enzymes"
+              ],
+              [
+                "Malignant hypertension",
+                "Very high BP, retinopathy; improves with BP control"
+              ]
+            ],
+            "refs": [
+              "isth-ttp-2020"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Neurological symptoms, chest pain or raised troponin in TTP signal high mortality: urgent TPE and ICU.",
+            "refs": [
+              "isth-ttp-2020"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Transfusing platelets in TTP: may precipitate thrombosis.",
+            "refs": [
+              "isth-ttp-2020"
+            ]
+          },
+          {
+            "text": "Waiting for ADAMTS13 results (days) before starting plasma exchange.",
+            "refs": [
+              "isth-ttp-2020"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Normal coagulation tests with schistocytes and severe thrombocytopenia point to TTP rather than DIC.",
+            "refs": [
+              "isth-ttp-2020"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Suspected TMA",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Thrombocytopenia + haemolysis (schistocytes)"
+          },
+          {
+            "id": "coag",
+            "type": "decision",
+            "text": "PT/aPTT prolonged, low fibrinogen?"
+          },
+          {
+            "id": "dic",
+            "type": "end",
+            "text": "Consider DIC; treat cause"
+          },
+          {
+            "id": "plas",
+            "type": "decision",
+            "text": "PLASMIC 6-7 (high) or clinical TTP?"
+          },
+          {
+            "id": "tpe",
+            "type": "action",
+            "text": "Send ADAMTS13; start TPE + steroids",
+            "severity": "critical"
+          },
+          {
+            "id": "other",
+            "type": "end",
+            "text": "Evaluate HUS/aHUS, HELLP, drugs, malignant HTN"
+          },
+          {
+            "id": "adam",
+            "type": "decision",
+            "text": "ADAMTS13 < 10%?"
+          },
+          {
+            "id": "ttp",
+            "type": "end",
+            "text": "Immune TTP: TPE, steroids, rituximab ± caplacizumab",
+            "severity": "critical"
+          },
+          {
+            "id": "ahus",
+            "type": "end",
+            "text": "Not TTP: stop TPE per haematology; aHUS → eculizumab"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "coag"
+          },
+          {
+            "from": "coag",
+            "to": "dic",
+            "label": "Yes"
+          },
+          {
+            "from": "coag",
+            "to": "plas",
+            "label": "No"
+          },
+          {
+            "from": "plas",
+            "to": "tpe",
+            "label": "Yes"
+          },
+          {
+            "from": "plas",
+            "to": "other",
+            "label": "No"
+          },
+          {
+            "from": "tpe",
+            "to": "adam"
+          },
+          {
+            "from": "adam",
+            "to": "ttp",
+            "label": "Yes"
+          },
+          {
+            "from": "adam",
+            "to": "ahus",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "isth-ttp-2020",
+          "plasmic"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Without ADAMTS13, ultra-large von Willebrand factor multimers accumulate and spontaneously bind platelets in high-shear microvasculature, causing platelet-rich microthrombi (brain, heart, kidney) and red cell fragmentation.",
+        "evidence": "- ISTH 2020 TTP guidelines [Zheng 2020].\n- PLASMIC score derivation/validation [Bendapudi 2017].\n- HERCULES: caplacizumab reduced time to platelet normalisation and the composite of TTP death/recurrence/major thrombosis [Scully 2019].",
+        "controversies": "- Caplacizumab without TPE in selected patients; rituximab timing.",
+        "indiaNotes": "- ADAMTS13 testing is available only in a few Indian reference labs (results take days), so decisions rely on PLASMIC and smear.\n- TPE availability is limited outside tertiary centres; FFP infusion is the bridge while arranging transfer."
+      },
+      "drugIds": [
+        "ffp",
+        "methylprednisolone",
+        "rituximab",
+        "caplacizumab"
+      ],
+      "calculatorIds": [
+        "bsa-mosteller"
+      ],
+      "references": [
+        "isth-ttp-2020",
+        "plasmic",
+        "hercules"
+      ],
+      "quiz": [
+        {
+          "id": "ttp-tma-q1",
+          "stem": "First-line treatment of suspected immune TTP:",
+          "options": [
+            "Platelet transfusion",
+            "Urgent plasma exchange + steroids",
+            "Heparin",
+            "Wait for ADAMTS13"
+          ],
+          "answerIndex": 1,
+          "explanation": "Start TPE without delay."
+        },
+        {
+          "id": "ttp-tma-q2",
+          "stem": "PLASMIC score of 7 means:",
+          "options": [
+            "Low probability",
+            "High probability of severe ADAMTS13 deficiency",
+            "DIC",
+            "HIT"
+          ],
+          "answerIndex": 1,
+          "explanation": "Bendapudi 2017."
+        },
+        {
+          "id": "ttp-tma-q3",
+          "stem": "Which favours DIC over TTP?",
+          "options": [
+            "Schistocytes",
+            "Low platelets",
+            "Prolonged PT and low fibrinogen",
+            "Raised LDH"
+          ],
+          "answerIndex": 2,
+          "explanation": "Coagulation is normal in TTP."
+        }
+      ]
+    },
+    {
+      "id": "thrombocytopenia-viscoelastic",
+      "title": "ICU thrombocytopenia and viscoelastic testing",
+      "summary": "Systematic approach to low platelets in ICU and how to read TEG/ROTEM to target fibrinogen, plasma, platelets and antifibrinolytics.",
+      "viewKey": "topic:haematology-coagulation-transfusion/thrombocytopenia-viscoelastic",
+      "uiHints": {
+        "icon": "bar-chart-3",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Thrombocytopenia (< 150 × 10⁹/L) affects 20-40% of ICU patients and independently predicts mortality. Viscoelastic tests (TEG, ROTEM) measure whole-blood clot formation, strength and lysis in 10-30 min.",
+          "refs": [
+            "esaic-bleeding-2023"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Confirm",
+            "detail": "Exclude pseudothrombocytopenia (EDTA clumping): repeat in citrate tube, check smear.",
+            "refs": [
+              "aabb-platelet-2015"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Find the cause",
+            "detail": "Sepsis/DIC, dilution/massive transfusion, drugs (linezolid, vancomycin, piperacillin, valproate, heparin), HIT, TTP/TMA, liver disease/hypersplenism, ECMO/IABP/CRRT, marrow failure, tropical infections (dengue, malaria, leptospirosis, scrub typhus).",
+            "refs": [
+              "ash-hit-2018",
+              "isth-ttp-2020"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Transfusion thresholds",
+            "detail": "Prophylactic < 10; < 20 for CVC; < 50 for LP/major surgery/active bleeding; < 100 for neurosurgery/ICH.",
+            "refs": [
+              "aabb-platelet-2015"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Viscoelastic-guided bleeding management",
+            "detail": "Use TEG/ROTEM algorithms to target therapy rather than empirical ratios once initial resuscitation underway.",
+            "refs": [
+              "esaic-bleeding-2023"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Read the trace",
+            "detail": "Prolonged clotting time (R/CT): factor deficiency → plasma or PCC. Low clot amplitude with low FIBTEM/functional fibrinogen: fibrinogen (cryo/concentrate). Low amplitude with normal FIBTEM: platelets. Increased lysis (LY30/ML > 15%): tranexamic acid.",
+            "refs": [
+              "esaic-bleeding-2023"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Heparin effect",
+            "detail": "ROTEM INTEM vs HEPTEM (or TEG with heparinase) identifies residual heparin → protamine.",
+            "refs": [
+              "esaic-bleeding-2023"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "platelets",
+            "role": "Bleeding with low count/function",
+            "route": "IV",
+            "dose": "1 apheresis unit or 4-6 random-donor units",
+            "refs": [
+              "aabb-platelet-2015"
+            ]
+          },
+          {
+            "drugId": "cryoprecipitate",
+            "role": "Low fibrinogen on FIBTEM/lab",
+            "route": "IV",
+            "dose": "1 unit/10 kg",
+            "target": "Fibrinogen ≥ 150-200 mg/dL in bleeding",
+            "workedExample": "70 kg: 7-10 units",
+            "verify": "Content varies by blood bank.",
+            "refs": [
+              "esaic-bleeding-2023"
+            ]
+          },
+          {
+            "drugId": "txa",
+            "role": "Hyperfibrinolysis",
+            "route": "IV",
+            "dose": "1 g over 10 min",
+            "refs": [
+              "esaic-bleeding-2023"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "rotem",
+            "title": "ROTEM/TEG-guided therapy (typical triggers)",
+            "columns": [
+              "Finding",
+              "Meaning",
+              "Treatment"
+            ],
+            "rows": [
+              [
+                "EXTEM CT > 80 s / TEG R prolonged",
+                "Coagulation factor deficiency",
+                "FFP 15 mL/kg or PCC"
+              ],
+              [
+                "FIBTEM A5 < 8-10 mm / low TEG functional fibrinogen",
+                "Low fibrinogen",
+                "Cryoprecipitate or fibrinogen concentrate"
+              ],
+              [
+                "EXTEM A5 < 35 mm with normal FIBTEM / TEG MA low",
+                "Platelet deficit",
+                "Platelets"
+              ],
+              [
+                "ML > 15% / LY30 > 3-8%",
+                "Hyperfibrinolysis",
+                "Tranexamic acid"
+              ],
+              [
+                "INTEM CT long, HEPTEM normal",
+                "Heparin effect",
+                "Protamine"
+              ]
+            ],
+            "caption": "Thresholds differ between devices and algorithms; use your unit's validated algorithm.",
+            "refs": [
+              "esaic-bleeding-2023"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Platelets falling > 50% after day 5 on heparin, or with haemolysis: think HIT or TTP.",
+            "refs": [
+              "ash-hit-2018",
+              "isth-ttp-2020"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Treating pseudothrombocytopenia.",
+            "refs": [
+              "aabb-platelet-2015"
+            ]
+          },
+          {
+            "text": "Using one universal ROTEM threshold across different devices.",
+            "refs": [
+              "esaic-bleeding-2023"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Linezolid-associated thrombocytopenia is common after 10-14 days, especially with renal impairment.",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Low platelets in ICU",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Platelets < 150 × 10⁹/L"
+          },
+          {
+            "id": "pseudo",
+            "type": "decision",
+            "text": "Clumping on smear?"
+          },
+          {
+            "id": "ok",
+            "type": "end",
+            "text": "Pseudothrombocytopenia: repeat in citrate"
+          },
+          {
+            "id": "hem",
+            "type": "decision",
+            "text": "Schistocytes / haemolysis?"
+          },
+          {
+            "id": "tma",
+            "type": "end",
+            "text": "TMA pathway (TTP/HUS/DIC)",
+            "severity": "critical"
+          },
+          {
+            "id": "hep",
+            "type": "decision",
+            "text": "On heparin, fall > 50% day 5-10?"
+          },
+          {
+            "id": "hit",
+            "type": "end",
+            "text": "HIT pathway (4Ts)",
+            "severity": "high"
+          },
+          {
+            "id": "gen",
+            "type": "end",
+            "text": "Sepsis/DIC, drugs, liver, dilution, infections, devices; transfuse by threshold"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "pseudo"
+          },
+          {
+            "from": "pseudo",
+            "to": "ok",
+            "label": "Yes"
+          },
+          {
+            "from": "pseudo",
+            "to": "hem",
+            "label": "No"
+          },
+          {
+            "from": "hem",
+            "to": "tma",
+            "label": "Yes"
+          },
+          {
+            "from": "hem",
+            "to": "hep",
+            "label": "No"
+          },
+          {
+            "from": "hep",
+            "to": "hit",
+            "label": "Yes"
+          },
+          {
+            "from": "hep",
+            "to": "gen",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "aabb-platelet-2015",
+          "ash-hit-2018"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "ICU thrombocytopenia arises from consumption (sepsis, DIC, devices), sequestration (hypersplenism), dilution, reduced production (marrow suppression, drugs) and immune destruction (HIT, drug-induced antibodies).",
+        "evidence": "- ESAIC 2022/2023 guideline supports viscoelastic-guided bleeding management to reduce transfusion [Kietaibl 2023].\n- AABB 2015 platelet thresholds [Kaufman 2015].",
+        "controversies": "- Prophylactic platelets before CVC in ultrasound-guided era (PACER trial suggests lower thresholds may be safe in experienced hands).",
+        "indiaNotes": "- Dengue, malaria, leptospirosis and scrub typhus are frequent causes of severe thrombocytopenia in Indian ICUs, especially during monsoon; prophylactic platelet transfusion in dengue without bleeding is not recommended by national guidelines (see tropical fevers module).\n- Viscoelastic testing is limited to tertiary centres."
+      },
+      "drugIds": [
+        "platelets",
+        "cryoprecipitate",
+        "txa"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "esaic-bleeding-2023",
+        "aabb-platelet-2015",
+        "ash-hit-2018",
+        "isth-ttp-2020",
+        "ibcc"
+      ],
+      "quiz": [
+        {
+          "id": "thrombocytopenia-viscoelastic-q1",
+          "stem": "FIBTEM A5 6 mm in a bleeding patient suggests:",
+          "options": [
+            "Platelet deficit",
+            "Low fibrinogen - give cryo/fibrinogen",
+            "Heparin effect",
+            "Hyperfibrinolysis"
+          ],
+          "answerIndex": 1,
+          "explanation": "FIBTEM reflects fibrinogen contribution."
+        },
+        {
+          "id": "thrombocytopenia-viscoelastic-q2",
+          "stem": "First step for unexpected platelets 40 with no bleeding:",
+          "options": [
+            "Transfuse",
+            "Check smear / citrate sample for clumping",
+            "Start argatroban",
+            "Steroids"
+          ],
+          "answerIndex": 1,
+          "explanation": "Exclude pseudothrombocytopenia."
+        },
+        {
+          "id": "thrombocytopenia-viscoelastic-q3",
+          "stem": "ROTEM ML > 15% indicates:",
+          "options": [
+            "Hyperfibrinolysis",
+            "Heparin",
+            "Low platelets",
+            "Normal"
+          ],
+          "answerIndex": 0,
+          "explanation": "Give tranexamic acid."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "prbc",
+      "name": "Packed red blood cells",
+      "class": "Blood product",
+      "indications": "Anaemia below transfusion threshold; haemorrhage",
+      "adultDose": "1 unit at a time in non-bleeding patients, then reassess Hb (each unit raises Hb ~1 g/dL in a 70 kg adult).",
+      "preparationIndia": "Indian PRBC unit ~250-350 mL (from 350 or 450 mL donation).",
+      "refs": [
+        "aabb-2023"
+      ]
+    },
+    {
+      "id": "platelets",
+      "name": "Platelet concentrate",
+      "class": "Blood product",
+      "indications": "Thrombocytopenia with bleeding or below prophylactic threshold",
+      "adultDose": "1 apheresis (single-donor) unit or 4-6 random-donor units (1 unit/10 kg); expected rise 30-50 × 10⁹/L per apheresis unit.",
+      "preparationIndia": "Random-donor ~50-60 mL each; single-donor apheresis ~200-300 mL.",
+      "refs": [
+        "aabb-platelet-2015"
+      ]
+    },
+    {
+      "id": "ffp",
+      "name": "Fresh frozen plasma",
+      "class": "Blood product",
+      "indications": "Bleeding with coagulation factor deficiency; TTP if plasma exchange delayed; warfarin reversal if PCC unavailable",
+      "adultDose": "15-20 mL/kg (about 4-5 units of ~200-250 mL in 70 kg).",
+      "cautions": "TACO, TRALI, allergic reactions; slow to thaw (20-30 min).",
+      "refs": [
+        "esaic-bleeding-2023",
+        "acc-bleeding-2020"
+      ]
+    },
+    {
+      "id": "pcc",
+      "name": "Four-factor prothrombin complex concentrate",
+      "class": "Coagulation factor concentrate",
+      "indications": "Warfarin reversal in major bleeding; factor Xa inhibitor bleeding when andexanet unavailable",
+      "adultDose": "Warfarin: INR 2-4 25 units/kg, 4-6 35 units/kg, > 6 50 units/kg (max 5,000 units), or fixed 1,000-1,500 units. Xa inhibitor: 50 units/kg (or 2,000 units).",
+      "preparationIndia": "500 or 600 unit vials (factor IX units); reconstitute with supplied water.",
+      "cautions": "Thrombosis risk; always give with vitamin K for warfarin.",
+      "verify": "Brand availability and cost in India; some hospitals stock only 3-factor PCC.",
+      "refs": [
+        "acc-bleeding-2020"
+      ]
+    },
+    {
+      "id": "vitamin-k",
+      "name": "Vitamin K1 (phytomenadione)",
+      "class": "Vitamin",
+      "indications": "Warfarin reversal",
+      "adultDose": "Major bleeding: 5-10 mg slow IV (with PCC). INR > 10 without bleeding: 2.5-5 mg oral.",
+      "cautions": "Slow IV over 20-30 min (anaphylactoid reactions).",
+      "refs": [
+        "acc-bleeding-2020"
+      ]
+    },
+    {
+      "id": "idarucizumab",
+      "name": "Idarucizumab",
+      "class": "Monoclonal antibody fragment",
+      "indications": "Dabigatran reversal for life-threatening bleeding or urgent surgery",
+      "adultDose": "5 g IV (two 2.5 g vials consecutively).",
+      "verify": "Availability in India limited and costly.",
+      "refs": [
+        "acc-bleeding-2020"
+      ]
+    },
+    {
+      "id": "protamine",
+      "name": "Protamine sulfate",
+      "class": "Heparin antagonist",
+      "indications": "Heparin/LMWH reversal",
+      "adultDose": "UFH: 1 mg per 100 units given in previous 2-3 h (max 50 mg). Enoxaparin: 1 mg per 1 mg enoxaparin if within 8 h (0.5 mg per mg if 8-12 h); partial reversal only.",
+      "preparationIndia": "10 mg/mL; give slowly ≤ 5 mg/min.",
+      "cautions": "Hypotension, anaphylaxis, pulmonary hypertension (fish allergy, prior protamine insulin, vasectomy).",
+      "refs": [
+        "acc-bleeding-2020"
+      ]
+    },
+    {
+      "id": "desmopressin",
+      "name": "Desmopressin (DDAVP)",
+      "class": "Vasopressin analogue",
+      "indications": "Antiplatelet-associated or uraemic platelet dysfunction with bleeding",
+      "adultDose": "0.3 mcg/kg IV in 50 mL NS over 30 min (single dose).",
+      "cautions": "Hyponatraemia (restrict free water), tachyphylaxis after repeated doses.",
+      "refs": [
+        "acc-bleeding-2020",
+        "esaic-bleeding-2023"
+      ]
+    },
+    {
+      "id": "argatroban",
+      "name": "Argatroban",
+      "class": "Direct thrombin inhibitor",
+      "indications": "Heparin-induced thrombocytopenia",
+      "adultDose": "2 mcg/kg/min IV (0.5-1.2 mcg/kg/min in heart failure, multi-organ failure, hepatic dysfunction or post-cardiac surgery); titrate to aPTT 1.5-3 times baseline.",
+      "preparationIndia": "250 mg/2.5 mL; 250 mg in 250 mL NS = 1 mg/mL.",
+      "cautions": "Hepatic clearance; prolongs INR (complicates warfarin overlap).",
+      "verify": "Availability in India.",
+      "refs": [
+        "ash-hit-2018"
+      ]
+    },
+    {
+      "id": "fondaparinux",
+      "name": "Fondaparinux",
+      "class": "Factor Xa inhibitor (indirect)",
+      "indications": "HIT (stable patients, adequate renal function)",
+      "adultDose": "Weight < 50 kg 5 mg, 50-100 kg 7.5 mg, > 100 kg 10 mg SC once daily.",
+      "renalHepatic": "Avoid if CrCl < 30 mL/min.",
+      "refs": [
+        "ash-hit-2018"
+      ]
+    },
+    {
+      "id": "methylprednisolone",
+      "name": "Methylprednisolone",
+      "class": "Corticosteroid",
+      "indications": "Immune TTP",
+      "adultDose": "1 g IV daily for 3 days (or prednisolone 1 mg/kg/day).",
+      "refs": [
+        "isth-ttp-2020"
+      ]
+    },
+    {
+      "id": "rituximab",
+      "name": "Rituximab",
+      "class": "Anti-CD20 monoclonal antibody",
+      "indications": "Immune TTP",
+      "adultDose": "375 mg/m² IV weekly for 4 doses.",
+      "cautions": "Infusion reactions; HBV reactivation (screen HBsAg/anti-HBc).",
+      "verify": "Dosing schedules vary (some use 375 mg/m² × 4 or lower fixed doses).",
+      "refs": [
+        "isth-ttp-2020"
+      ]
+    },
+    {
+      "id": "caplacizumab",
+      "name": "Caplacizumab",
+      "class": "Anti-vWF nanobody",
+      "indications": "Immune TTP (with TPE and immunosuppression)",
+      "adultDose": "10 mg IV before first TPE, then 10 mg SC daily during TPE and for 30 days after.",
+      "cautions": "Bleeding (mucocutaneous).",
+      "verify": "Not routinely available in India; very costly.",
+      "refs": [
+        "hercules",
+        "isth-ttp-2020"
+      ]
+    },
+    {
+      "id": "cryoprecipitate",
+      "name": "Cryoprecipitate",
+      "class": "Blood product",
+      "indications": "Fibrinogen < 150 mg/dL with bleeding (< 100 in DIC without bleeding is not an indication alone)",
+      "adultDose": "1 unit/10 kg (about 8-10 units) raises fibrinogen ~50-100 mg/dL.",
+      "verify": "Fibrinogen content per unit varies by blood bank.",
+      "refs": [
+        "esaic-bleeding-2023"
+      ]
+    },
+    {
+      "id": "txa",
+      "name": "Tranexamic acid",
+      "class": "Antifibrinolytic",
+      "indications": "Hyperfibrinolysis; trauma and PPH (see those modules)",
+      "adultDose": "1 g IV over 10 min, then 1 g over 8 h (trauma); in hyperfibrinolysis on viscoelastic testing 1 g IV.",
+      "renalHepatic": "Reduce in renal failure (seizure risk).",
+      "refs": [
+        "esaic-bleeding-2023",
+        "crash2"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "eu-trauma-2023",
+      "citation": "Rossaint R, Afshari A, Bouillon B, et al. The European guideline on management of major bleeding and coagulopathy following trauma: sixth edition. Crit Care 2023;27:80.",
+      "url": "https://doi.org/10.1186/s13054-023-04327-7",
+      "year": 2023,
+      "type": "guideline",
+      "doi": "10.1186/s13054-023-04327-7"
+    },
+    {
+      "id": "crash2",
+      "citation": "CRASH-2 trial collaborators. Effects of tranexamic acid on death, vascular occlusive events, and blood transfusion in trauma patients with significant haemorrhage (CRASH-2). Lancet 2010;376:23-32.",
+      "url": "https://doi.org/10.1016/S0140-6736(10)60835-5",
+      "year": 2010,
+      "type": "trial",
+      "doi": "10.1016/S0140-6736(10)60835-5"
+    },
+    {
+      "id": "esicm-transfusion-2021",
+      "citation": "Vlaar APJ, Dionne JC, de Bruin S, et al. Transfusion strategies in bleeding critically ill adults: a clinical practice guideline from the European Society of Intensive Care Medicine. Intensive Care Med 2021;47:1368-92.",
+      "url": "https://doi.org/10.1007/s00134-021-06531-x",
+      "year": 2021,
+      "type": "guideline",
+      "doi": "10.1007/s00134-021-06531-x"
+    },
+    {
+      "id": "aabb-2023",
+      "citation": "Carson JL, Stanworth SJ, Guyatt G, et al. Red blood cell transfusion: 2023 AABB international guidelines. JAMA 2023;330:1892-902.",
+      "url": "https://doi.org/10.1001/jama.2023.12914",
+      "year": 2023,
+      "type": "guideline",
+      "doi": "10.1001/jama.2023.12914"
+    },
+    {
+      "id": "ibcc",
+      "citation": "Farkas J. The Internet Book of Critical Care (IBCC). EMCrit Project; continuously updated.",
+      "url": "https://emcrit.org/ibcc/toc/",
+      "year": 2024,
+      "type": "textbook"
+    },
+    {
+      "id": "triss",
+      "citation": "Holst LB, Haase N, Wetterslev J, et al. Lower versus higher hemoglobin threshold for transfusion in septic shock (TRISS). N Engl J Med 2014;371:1381-91.",
+      "url": "https://doi.org/10.1056/NEJMoa1406617",
+      "year": 2014,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1406617"
+    },
+    {
+      "id": "mint",
+      "citation": "Carson JL, Brooks MM, Hebert PC, et al. Restrictive or liberal transfusion strategy in myocardial infarction and anemia (MINT). N Engl J Med 2023;389:2446-56.",
+      "url": "https://doi.org/10.1056/NEJMoa2307983",
+      "year": 2023,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa2307983"
+    },
+    {
+      "id": "aabb-platelet-2015",
+      "citation": "Kaufman RM, Djulbegovic B, Gernsheimer T, et al. Platelet transfusion: a clinical practice guideline from the AABB. Ann Intern Med 2015;162:205-13.",
+      "url": "https://doi.org/10.7326/M14-1589",
+      "year": 2015,
+      "type": "guideline",
+      "doi": "10.7326/M14-1589"
+    },
+    {
+      "id": "acc-bleeding-2020",
+      "citation": "Tomaselli GF, Mahaffey KW, Cuker A, et al. 2020 ACC Expert Consensus Decision Pathway on Management of Bleeding in Patients on Oral Anticoagulants. J Am Coll Cardiol 2020;76:594-622.",
+      "url": "https://doi.org/10.1016/j.jacc.2020.04.053",
+      "year": 2020,
+      "type": "consensus",
+      "doi": "10.1016/j.jacc.2020.04.053"
+    },
+    {
+      "id": "patch",
+      "citation": "Baharoglu MI, Cordonnier C, Al-Shahi Salman R, et al. Platelet transfusion versus standard care after acute stroke due to spontaneous cerebral haemorrhage associated with antiplatelet therapy (PATCH). Lancet 2016;387:2605-13.",
+      "url": "https://doi.org/10.1016/S0140-6736(16)30392-0",
+      "year": 2016,
+      "type": "trial",
+      "doi": "10.1016/S0140-6736(16)30392-0"
+    },
+    {
+      "id": "isth-dic-2001",
+      "citation": "Taylor FB Jr, Toh CH, Hoots WK, Wada H, Levi M. Towards definition, clinical and laboratory criteria, and a scoring system for disseminated intravascular coagulation. Thromb Haemost 2001;86:1327-30.",
+      "url": "https://doi.org/10.1055/s-0037-1616068",
+      "year": 2001,
+      "type": "consensus",
+      "doi": "10.1055/s-0037-1616068"
+    },
+    {
+      "id": "wada-dic-2013",
+      "citation": "Wada H, Thachil J, Di Nisio M, et al. Guidance for diagnosis and treatment of DIC from harmonization of the recommendations from three guidelines. J Thromb Haemost 2013;11:761-7.",
+      "url": "https://doi.org/10.1111/jth.12155",
+      "year": 2013,
+      "type": "guideline",
+      "doi": "10.1111/jth.12155"
+    },
+    {
+      "id": "sic-2017",
+      "citation": "Iba T, Nisio MD, Levy JH, Kitamura N, Thachil J. New criteria for sepsis-induced coagulopathy (SIC) following the revised sepsis definition: a retrospective analysis of a nationwide survey. BMJ Open 2017;7:e017046.",
+      "url": "https://doi.org/10.1136/bmjopen-2017-017046",
+      "year": 2017,
+      "type": "trial",
+      "doi": "10.1136/bmjopen-2017-017046"
+    },
+    {
+      "id": "ash-hit-2018",
+      "citation": "Cuker A, Arepally GM, Chong BH, et al. American Society of Hematology 2018 guidelines for management of venous thromboembolism: heparin-induced thrombocytopenia. Blood Adv 2018;2:3360-92.",
+      "url": "https://doi.org/10.1182/bloodadvances.2018024489",
+      "year": 2018,
+      "type": "guideline",
+      "doi": "10.1182/bloodadvances.2018024489"
+    },
+    {
+      "id": "4ts-2006",
+      "citation": "Lo GK, Juhl D, Warkentin TE, et al. Evaluation of pretest clinical score (4 T's) for the diagnosis of heparin-induced thrombocytopenia in two clinical settings. J Thromb Haemost 2006;4:759-65.",
+      "url": "https://doi.org/10.1111/j.1538-7836.2006.01787.x",
+      "year": 2006,
+      "type": "trial",
+      "doi": "10.1111/j.1538-7836.2006.01787.x"
+    },
+    {
+      "id": "isth-ttp-2020",
+      "citation": "Zheng XL, Vesely SK, Cataland SR, et al. ISTH guidelines for treatment of thrombotic thrombocytopenic purpura. J Thromb Haemost 2020;18:2496-502.",
+      "url": "https://doi.org/10.1111/jth.15010",
+      "year": 2020,
+      "type": "guideline",
+      "doi": "10.1111/jth.15010"
+    },
+    {
+      "id": "plasmic",
+      "citation": "Bendapudi PK, Hurwitz S, Fry A, et al. Derivation and external validation of the PLASMIC score for rapid assessment of adults with thrombotic microangiopathies. Lancet Haematol 2017;4:e157-64.",
+      "url": "https://doi.org/10.1016/S2352-3026(17)30026-1",
+      "year": 2017,
+      "type": "trial",
+      "doi": "10.1016/S2352-3026(17)30026-1"
+    },
+    {
+      "id": "hercules",
+      "citation": "Scully M, Cataland SR, Peyvandi F, et al. Caplacizumab treatment for acquired thrombotic thrombocytopenic purpura (HERCULES). N Engl J Med 2019;380:335-46.",
+      "url": "https://doi.org/10.1056/NEJMoa1806311",
+      "year": 2019,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1806311"
+    },
+    {
+      "id": "esaic-bleeding-2023",
+      "citation": "Kietaibl S, Ahmed A, Afshari A, et al. Management of severe peri-operative bleeding: Guidelines from the European Society of Anaesthesiology and Intensive Care: second update 2022. Eur J Anaesthesiol 2023;40:226-304.",
+      "url": "https://doi.org/10.1097/EJA.0000000000001803",
+      "year": 2023,
+      "type": "guideline",
+      "doi": "10.1097/EJA.0000000000001803"
+    }
+  ]
+}

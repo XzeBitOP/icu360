@@ -1,0 +1,1500 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ethics-communication-palliative-care",
+  "number": 39,
+  "folder": "39-ethics-communication-palliative-care",
+  "section": {
+    "id": "K",
+    "title": "Skills and professional practice"
+  },
+  "phase": 2,
+  "title": "Ethics, communication and palliative care",
+  "summary": "Ethics, communication and palliative care in the ICU: breaking bad news (SPIKES), family meetings and shared decisions, Indian law on withholding and withdrawing treatment (Common Cause 2018/2023), palliative symptom care and compassionate extubation, the organ donation request, and documentation and medico-legal practice.",
+  "tags": [
+    "ethics",
+    "communication",
+    "SPIKES",
+    "family meeting",
+    "end-of-life care",
+    "DNAR",
+    "Common Cause",
+    "advance directive",
+    "palliative care",
+    "compassionate extubation",
+    "organ donation",
+    "consent",
+    "medico-legal"
+  ],
+  "relatedModules": [
+    "raised-icp-neurotrauma-brain-death",
+    "analgesia-sedation-delirium",
+    "handover-transport-icu-safety",
+    "deteriorating-patient-icu-triage",
+    "cardiac-arrest-post-rosc"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "message-circle-heart",
+    "accent": "standard"
+  },
+  "viewKey": "module:ethics-communication-palliative-care",
+  "topics": [
+    {
+      "id": "breaking-bad-news",
+      "title": "Breaking bad news (SPIKES)",
+      "summary": "A six-step structure for giving serious news to patients and families in the ICU, with language that works in Indian settings.",
+      "viewKey": "topic:ethics-communication-palliative-care/breaking-bad-news",
+      "uiHints": {
+        "icon": "message-circle",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "SPIKES: Setting, Perception, Invitation, Knowledge, Emotions (Empathy), Strategy and Summary. It structures the conversation so that information is given at the family's pace and emotions are acknowledged before plans are discussed.",
+          "refs": [
+            "spikes-2000"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Setting",
+            "detail": "Private room, sit down, phones silenced, nurse present, key family decision-makers invited; interpreter if needed (not a child relative).",
+            "refs": [
+              "spikes-2000",
+              "sccm-family-2017"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Perception",
+            "detail": "Ask what they already understand: 'What have the doctors told you so far?'",
+            "refs": [
+              "spikes-2000"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Invitation",
+            "detail": "Ask how much detail they want and who should receive information.",
+            "refs": [
+              "spikes-2000"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Knowledge",
+            "detail": "Warning shot ('I am afraid I have serious news'), then plain language in short chunks; avoid jargon and euphemisms; pause.",
+            "refs": [
+              "spikes-2000"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Emotions",
+            "detail": "Name and acknowledge emotion ('I can see this is a shock'); allow silence; respond with empathy before giving more facts.",
+            "refs": [
+              "spikes-2000"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Strategy and summary",
+            "detail": "Summarise, check understanding, agree the next step and time of the next update; document the conversation.",
+            "refs": [
+              "spikes-2000",
+              "sccm-family-2017"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "phrases",
+            "title": "Useful phrases",
+            "columns": [
+              "Instead of",
+              "Try"
+            ],
+            "rows": [
+              [
+                "'There is nothing more we can do.'",
+                "'We will always care for him; the question is which treatments will help.'"
+              ],
+              [
+                "'Do you want us to do everything?'",
+                "'What would she say about these treatments if she could speak to us?'"
+              ],
+              [
+                "'Withdrawal of care'",
+                "'Stopping treatments that are not helping, while continuing comfort care'"
+              ],
+              [
+                "'He is critical.'",
+                "'He is very sick and could die in the next few days despite everything we are doing.'"
+              ]
+            ],
+            "refs": [
+              "sccm-family-2017",
+              "cook-rocker-2014"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Serious news delivered by phone or in a corridor by a junior doctor without preparation - arrange a structured meeting as soon as possible.",
+            "refs": [
+              "sccm-family-2017"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Giving statistics and options before checking understanding and emotion.",
+            "refs": [
+              "spikes-2000"
+            ]
+          },
+          {
+            "text": "Using medical jargon ('multi-organ dysfunction', 'poor prognosis') without explanation.",
+            "refs": [
+              "spikes-2000"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Silence after the news is a tool, not a failure - wait for the family to speak.",
+            "refs": [
+              "spikes-2000"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Families of ICU patients have high rates of anxiety, depression and post-traumatic stress; how information is given affects these outcomes and trust.",
+        "evidence": "- SPIKES protocol [Baile 2000].\n- SCCM family-centred care guidelines [Davidson 2017]; dying in ICU review [Cook 2014].",
+        "controversies": "- Disclosure to the patient versus family-mediated disclosure, common in Indian culture.",
+        "indiaNotes": "- Decisions in India are usually family-centred; identify the main decision-makers early, but respect a capable patient's own wishes.\n- Speak in the family's language; hospital interpreters or trained counsellors are better than relatives translating."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "spikes-2000",
+        "sccm-family-2017",
+        "cook-rocker-2014"
+      ],
+      "quiz": [
+        {
+          "id": "breaking-bad-news-q1",
+          "stem": "The 'P' in SPIKES stands for:",
+          "options": [
+            "Prognosis",
+            "Perception",
+            "Plan",
+            "Permission"
+          ],
+          "answerIndex": 1,
+          "explanation": "Ask what they know."
+        },
+        {
+          "id": "breaking-bad-news-q2",
+          "stem": "When the family starts crying after the news, you should:",
+          "options": [
+            "Continue with statistics",
+            "Acknowledge emotion and allow silence",
+            "Leave the room",
+            "Change the subject"
+          ],
+          "answerIndex": 1,
+          "explanation": "Empathy first."
+        },
+        {
+          "id": "breaking-bad-news-q3",
+          "stem": "Best opening for the knowledge step:",
+          "options": [
+            "Detailed lab values",
+            "A warning shot",
+            "Asking for consent",
+            "Discussing cost"
+          ],
+          "answerIndex": 1,
+          "explanation": "Prepare them."
+        }
+      ]
+    },
+    {
+      "id": "family-meetings",
+      "title": "Family meetings and shared decision-making",
+      "summary": "Running a structured family conference (VALUE), handling disagreement and potentially inappropriate treatment requests.",
+      "viewKey": "topic:ethics-communication-palliative-care/family-meetings",
+      "uiHints": {
+        "icon": "users",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "A planned family conference within 24-72 h of ICU admission, and whenever the prognosis changes, improves family outcomes. VALUE: Value what the family says, Acknowledge emotions, Listen, Understand the patient as a person, Elicit questions.",
+          "refs": [
+            "value-2007",
+            "sccm-family-2017"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Prepare",
+            "detail": "Agree the medical view among the team first (consultant-led); review prognosis, options and the patient's known values; invite nurse and social worker or counsellor.",
+            "refs": [
+              "sccm-family-2017"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Open",
+            "detail": "Introductions; purpose of the meeting; ask what they understand.",
+            "refs": [
+              "value-2007"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Inform",
+            "detail": "Clinical update in plain language; honest prognosis including uncertainty (time-limited trial if uncertain).",
+            "refs": [
+              "value-2007",
+              "pit-2015"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Explore values",
+            "detail": "'What kind of person is he? What mattered most to him?' - substituted judgement, not 'what do you want'.",
+            "refs": [
+              "value-2007",
+              "sccm-family-2017"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Recommend",
+            "detail": "Make a clear medical recommendation; share the decision; do not ask families to decide alone on withdrawal.",
+            "refs": [
+              "pit-2015",
+              "isccm-eol-2012"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Close and document",
+            "detail": "Summarise, set a review time, document attendees, information, decisions and the patient's goals.",
+            "refs": [
+              "sccm-family-2017"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Disagreement",
+            "detail": "Time-limited trial, second opinion, ethics committee or palliative care input; for persistent requests for treatment the team considers inappropriate, use a fair process (ATS multisociety policy).",
+            "refs": [
+              "pit-2015"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Family conflict escalating to threats or violence - involve senior administration and security early; never negotiate alone at the bedside.",
+            "refs": [
+              "pit-2015"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Presenting a menu of interventions without a recommendation.",
+            "refs": [
+              "pit-2015"
+            ]
+          },
+          {
+            "text": "Multiple doctors giving inconsistent messages - one consultant voice.",
+            "refs": [
+              "sccm-family-2017"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Time-limited trials ('we will try full treatment for 3-5 days and then review together against agreed goals') reduce conflict when prognosis is uncertain.",
+            "refs": [
+              "pit-2015"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Family conference",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Prognosis serious or changed"
+          },
+          {
+            "id": "team",
+            "type": "action",
+            "text": "Pre-meeting: agree medical view and recommendation"
+          },
+          {
+            "id": "meet",
+            "type": "action",
+            "text": "Meet family: understanding → update → patient's values"
+          },
+          {
+            "id": "clear",
+            "type": "decision",
+            "text": "Is prognosis clear?"
+          },
+          {
+            "id": "tlt",
+            "type": "action",
+            "text": "Time-limited trial with agreed goals and review date"
+          },
+          {
+            "id": "agree",
+            "type": "decision",
+            "text": "Agreement on goals of care?"
+          },
+          {
+            "id": "plan",
+            "type": "end",
+            "text": "Document plan (full treatment, limitation, or comfort care)"
+          },
+          {
+            "id": "esc",
+            "type": "end",
+            "text": "Second opinion, palliative care, ethics committee",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "team"
+          },
+          {
+            "from": "team",
+            "to": "meet"
+          },
+          {
+            "from": "meet",
+            "to": "clear"
+          },
+          {
+            "from": "clear",
+            "to": "tlt",
+            "label": "No"
+          },
+          {
+            "from": "clear",
+            "to": "agree",
+            "label": "Yes"
+          },
+          {
+            "from": "tlt",
+            "to": "agree"
+          },
+          {
+            "from": "agree",
+            "to": "plan",
+            "label": "Yes"
+          },
+          {
+            "from": "agree",
+            "to": "esc",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "value-2007",
+          "pit-2015"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Surrogate decision-makers carry heavy psychological burden; structured, empathetic conferences with more family speaking time reduce PTSD, anxiety and depression in relatives.",
+        "evidence": "- VALUE RCT: proactive conference + brochure reduced PTSD symptoms in relatives at 90 days [Lautrette 2007].\n- SCCM 2017 family-centred care [Davidson 2017]; ATS/ESICM/SCCM policy on potentially inappropriate treatments [Bosslet 2015].\n- ISCCM 2012 ethical position statement [Chawla 2012].",
+        "controversies": "- Who decides when family and team disagree; role of courts versus institutional processes.",
+        "indiaNotes": "- Financial burden is a major factor in Indian ICU decisions; discuss costs openly and sensitively, but separately from prognosis.\n- ISCCM recommends shared decision-making with the family as the norm; extended families may need a single spokesperson."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "value-2007",
+        "sccm-family-2017",
+        "pit-2015",
+        "isccm-eol-2012"
+      ],
+      "quiz": [
+        {
+          "id": "family-meetings-q1",
+          "stem": "VALUE stands for Value, Acknowledge, Listen, Understand and:",
+          "options": [
+            "Explain",
+            "Elicit questions",
+            "Escalate",
+            "End"
+          ],
+          "answerIndex": 1,
+          "explanation": "Lautrette 2007."
+        },
+        {
+          "id": "family-meetings-q2",
+          "stem": "Best question to explore the patient's values:",
+          "options": [
+            "'What do you want us to do?'",
+            "'What would he say if he could speak to us?'",
+            "'Do you want everything done?'",
+            "'Can you afford it?'"
+          ],
+          "answerIndex": 1,
+          "explanation": "Substituted judgement."
+        },
+        {
+          "id": "family-meetings-q3",
+          "stem": "When prognosis is uncertain:",
+          "options": [
+            "Withdraw immediately",
+            "Time-limited trial with agreed review",
+            "Never discuss",
+            "Ask the family to decide alone"
+          ],
+          "answerIndex": 1,
+          "explanation": "Bosslet 2015."
+        }
+      ]
+    },
+    {
+      "id": "limitation-dnar-india",
+      "title": "Withholding and withdrawing treatment in India (law and process)",
+      "summary": "The legal basis after Common Cause 2018 and the 2023 modification, DNAR, the two-medical-board process and ISCCM guidance.",
+      "viewKey": "topic:ethics-communication-palliative-care/limitation-dnar-india",
+      "uiHints": {
+        "icon": "scale",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "The Supreme Court (Common Cause v Union of India, 2018) recognised the right to die with dignity under Article 21, permitting withholding and withdrawal of life-sustaining treatment (passive euthanasia) and advance directives. In January 2023 the Court simplified the procedure. Active euthanasia remains illegal.",
+          "refs": [
+            "common-cause-2018",
+            "common-cause-2023",
+            "isccm-iapc-2024"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Establish futility or the patient's wish",
+            "detail": "Terminal illness or irreversible condition with no reasonable hope of recovery, or a capable patient refusing treatment, or a valid advance directive.",
+            "refs": [
+              "common-cause-2018",
+              "isccm-eol-2012"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Capable patient",
+            "detail": "An adult with capacity may refuse any treatment including life support; document the capacity assessment and informed refusal.",
+            "refs": [
+              "common-cause-2018"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Primary Medical Board",
+            "detail": "Hospital board of the treating physician and at least two subject experts with ≥ 5 years experience; decision within 48 h (2023 modification).",
+            "time": "≤ 48 h",
+            "refs": [
+              "common-cause-2023"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Secondary Medical Board",
+            "detail": "Hospital board including a registered medical practitioner nominated by the district Chief Medical Officer and at least two subject experts (≥ 5 years); decision within 48 h; the JMFC is informed.",
+            "time": "≤ 48 h",
+            "refs": [
+              "common-cause-2023"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Family consent",
+            "detail": "Consent of the next of kin / guardian recorded; if the board refuses, family may approach the High Court.",
+            "refs": [
+              "common-cause-2023"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "DNAR / limitation orders",
+            "detail": "Withholding CPR or escalation (DNAR, 'allow natural death') is a medical decision taken with the family, documented with reasons and reviewed; it does not mean withdrawing other care.",
+            "refs": [
+              "isccm-iapc-2024",
+              "isccm-eol-2012"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Implement compassionately",
+            "detail": "Continue comfort care, symptom control and family support; withdraw treatments in a planned sequence (see palliative-symptom-care).",
+            "refs": [
+              "truog-2008",
+              "isccm-eol-2012"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "legal-summary",
+            "title": "Key legal points (India)",
+            "columns": [
+              "Issue",
+              "Position"
+            ],
+            "rows": [
+              [
+                "Active euthanasia",
+                "Illegal"
+              ],
+              [
+                "Withholding/withdrawing futile life support",
+                "Lawful following the Common Cause procedure"
+              ],
+              [
+                "Capable adult refusing treatment",
+                "Right to refuse recognised"
+              ],
+              [
+                "Advance directive (living will)",
+                "Valid; signed before 2 witnesses and attested by notary or gazetted officer (2023)"
+              ],
+              [
+                "Medical boards",
+                "Primary and secondary boards, each within 48 h; JMFC informed"
+              ]
+            ],
+            "caption": "Summary for clinicians, not legal advice; check hospital policy and legal counsel.",
+            "refs": [
+              "common-cause-2018",
+              "common-cause-2023"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Withdrawing life support without documented board decisions and family consent exposes the team to legal risk - follow the process.",
+            "refs": [
+              "common-cause-2023"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Equating DNAR with 'no treatment' - patients with DNAR orders still receive all appropriate non-CPR care.",
+            "refs": [
+              "isccm-eol-2012"
+            ]
+          },
+          {
+            "text": "'Discharge against medical advice' used as a substitute for an honest end-of-life plan.",
+            "refs": [
+              "isccm-iapc-2024"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Withholding and withdrawing are ethically equivalent (ISCCM) - starting a time-limited trial does not oblige indefinite continuation.",
+            "refs": [
+              "isccm-eol-2012"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Limiting life-sustaining treatment (India)",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Life support no longer likely to benefit, or patient's wish"
+          },
+          {
+            "id": "cap",
+            "type": "decision",
+            "text": "Patient has decision-making capacity?"
+          },
+          {
+            "id": "refuse",
+            "type": "end",
+            "text": "Respect informed refusal; document capacity and discussion"
+          },
+          {
+            "id": "ad",
+            "type": "decision",
+            "text": "Valid advance directive?"
+          },
+          {
+            "id": "family",
+            "type": "action",
+            "text": "Family meeting; shared decision; consent of next of kin"
+          },
+          {
+            "id": "pmb",
+            "type": "action",
+            "text": "Primary Medical Board (≤ 48 h)"
+          },
+          {
+            "id": "pyes",
+            "type": "decision",
+            "text": "Board agrees?"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Continue treatment; review; family may seek High Court"
+          },
+          {
+            "id": "smb",
+            "type": "action",
+            "text": "Secondary Medical Board (≤ 48 h); inform JMFC"
+          },
+          {
+            "id": "syes",
+            "type": "decision",
+            "text": "Board agrees?"
+          },
+          {
+            "id": "wlst",
+            "type": "end",
+            "text": "Withhold/withdraw with comfort care; document"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "cap"
+          },
+          {
+            "from": "cap",
+            "to": "refuse",
+            "label": "Yes"
+          },
+          {
+            "from": "cap",
+            "to": "ad",
+            "label": "No"
+          },
+          {
+            "from": "ad",
+            "to": "pmb",
+            "label": "Yes"
+          },
+          {
+            "from": "ad",
+            "to": "family",
+            "label": "No"
+          },
+          {
+            "from": "family",
+            "to": "pmb"
+          },
+          {
+            "from": "pmb",
+            "to": "pyes"
+          },
+          {
+            "from": "pyes",
+            "to": "smb",
+            "label": "Yes"
+          },
+          {
+            "from": "pyes",
+            "to": "cont",
+            "label": "No"
+          },
+          {
+            "from": "smb",
+            "to": "syes"
+          },
+          {
+            "from": "syes",
+            "to": "wlst",
+            "label": "Yes"
+          },
+          {
+            "from": "syes",
+            "to": "cont",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "common-cause-2018",
+          "common-cause-2023"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Not applicable - ethical and legal framework.",
+        "evidence": "- Common Cause judgment 2018 and 2023 modification [Supreme Court 2018; Supreme Court 2023].\n- ISCCM 2012 ethical position statement [Chawla 2012]; ISCCM/IAPC 2024 [Kapadia 2024].\n- ACCM end-of-life recommendations [Truog 2008].",
+        "controversies": "- Practical feasibility of medical boards in smaller hospitals; withdrawal of artificial nutrition; absence of specific legislation.",
+        "indiaNotes": "- Many Indian ICUs still avoid formal withdrawal and rely on DAMA/LAMA discharge; ISCCM/IAPC advocate open, documented end-of-life decisions.\n- Keep a hospital SOP and template forms for medical board decisions; check state-level notifications for CMO nominee panels."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "common-cause-2018",
+        "common-cause-2023",
+        "isccm-eol-2012",
+        "isccm-iapc-2024",
+        "truog-2008"
+      ],
+      "quiz": [
+        {
+          "id": "limitation-dnar-india-q1",
+          "stem": "In India, active euthanasia is:",
+          "options": [
+            "Legal with two boards",
+            "Illegal",
+            "Legal with family consent",
+            "Legal for cancer only"
+          ],
+          "answerIndex": 1,
+          "explanation": "Common Cause."
+        },
+        {
+          "id": "limitation-dnar-india-q2",
+          "stem": "2023 modification: time limit for each medical board decision:",
+          "options": [
+            "24 h",
+            "48 h",
+            "7 days",
+            "No limit"
+          ],
+          "answerIndex": 1,
+          "explanation": "48 h."
+        },
+        {
+          "id": "limitation-dnar-india-q3",
+          "stem": "A DNAR order means:",
+          "options": [
+            "No antibiotics",
+            "No CPR; other appropriate care continues",
+            "Immediate extubation",
+            "Discharge"
+          ],
+          "answerIndex": 1,
+          "explanation": "ISCCM."
+        },
+        {
+          "id": "limitation-dnar-india-q4",
+          "stem": "Withholding vs withdrawing life support (ISCCM):",
+          "options": [
+            "Withdrawing is illegal",
+            "Ethically equivalent",
+            "Withholding needs court",
+            "Withdrawing is murder"
+          ],
+          "answerIndex": 1,
+          "explanation": "Equivalent."
+        }
+      ]
+    },
+    {
+      "id": "palliative-symptom-care",
+      "title": "Palliative symptom care and compassionate extubation",
+      "summary": "Comfort-focused care at the end of life: pain, breathlessness, agitation and secretions, and how to withdraw ventilation humanely.",
+      "viewKey": "topic:ethics-communication-palliative-care/palliative-symptom-care",
+      "uiHints": {
+        "icon": "flower-2",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "When goals change to comfort, treat symptoms proactively and stop interventions that do not add comfort. Opioids and sedatives are titrated to relieve distress; the principle of double effect permits this even if death may be hastened.",
+          "refs": [
+            "truog-2008",
+            "nice-ng31"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Assess symptoms",
+            "detail": "Pain (CPOT/BPS), breathlessness (respiratory rate, accessory muscle use, grimacing), agitation, secretions; repeat at least hourly during withdrawal.",
+            "refs": [
+              "truog-2008"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Stop non-beneficial interventions",
+            "detail": "Routine bloods, imaging, monitoring alarms, vasopressors, RRT, NG feeding that adds no comfort; keep mouth care, positioning and skin care.",
+            "refs": [
+              "truog-2008",
+              "cook-rocker-2014"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Pain and breathlessness",
+            "detail": "Opioid (morphine or fentanyl) bolus and infusion titrated to comfort; fan and positioning.",
+            "refs": [
+              "truog-2008",
+              "nice-ng31"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Anxiety and agitation",
+            "detail": "Midazolam boluses/infusion; exclude urinary retention and pain.",
+            "refs": [
+              "nice-ng31"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Secretions",
+            "detail": "Reposition; glycopyrronium or hyoscine butylbromide; gentle oral suction; explain to family.",
+            "refs": [
+              "nice-ng31"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Compassionate extubation",
+            "detail": "Prepare family; premedicate (opioid ± midazolam) before extubation; stop neuromuscular blockers well before (must have worn off); reduce FiO₂/support then extubate to air or low-flow oxygen; treat distress immediately.",
+            "refs": [
+              "truog-2008"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "After death",
+            "detail": "Allow family time and rituals; bereavement support; complete death certification.",
+            "refs": [
+              "cook-rocker-2014",
+              "sccm-family-2017"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "morphine",
+            "role": "Breathlessness or pain",
+            "route": "IV/SC",
+            "dose": "1-2 mg IV (2.5-5 mg SC) as needed; infusion 0.5-2 mg/h",
+            "workedExample": "70 kg opioid-naive: morphine 2 mg IV before extubation, then 1 mg/h infusion with 2 mg boluses for respiratory distress.",
+            "verify": "Starting doses per local palliative protocol.",
+            "refs": [
+              "truog-2008"
+            ]
+          },
+          {
+            "drugId": "midazolam",
+            "role": "Anxiety, agitation",
+            "route": "IV/SC",
+            "dose": "1-2 mg IV (2.5-5 mg SC) as needed; infusion 0.5-2 mg/h",
+            "refs": [
+              "nice-ng31"
+            ]
+          },
+          {
+            "drugId": "glycopyrrolate",
+            "role": "Respiratory secretions",
+            "route": "SC/IV",
+            "dose": "200 mcg every 4-6 h as needed",
+            "refs": [
+              "nice-ng31"
+            ]
+          },
+          {
+            "drugId": "hyoscine-butylbromide",
+            "role": "Respiratory secretions (alternative)",
+            "route": "SC/IV",
+            "dose": "20 mg every 4 h as needed (max 120 mg/24 h)",
+            "refs": [
+              "nice-ng31"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Patient still paralysed with neuromuscular blockers when ventilation is withdrawn - unacceptable; stop NMB and confirm recovery first.",
+            "refs": [
+              "truog-2008"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Giving large sedative doses with the stated aim of hastening death - document intent as symptom relief and titrate to symptoms.",
+            "refs": [
+              "truog-2008"
+            ]
+          },
+          {
+            "text": "Leaving monitors alarming at the bedside during dying.",
+            "refs": [
+              "truog-2008"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Ask the family about religious and cultural rituals (prayers, Ganga jal, last rites) and accommodate them in the ICU.",
+            "refs": [
+              "cook-rocker-2014"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Dyspnoea results from mismatch between respiratory drive and achieved ventilation; opioids reduce the perception of breathlessness and respiratory drive. Secretions pool in the oropharynx when swallowing and cough fail.",
+        "evidence": "- ACCM end-of-life care recommendations [Truog 2008].\n- NICE NG31 care of dying adults [NICE 2015]; review of dying in ICU [Cook 2014].",
+        "controversies": "- Terminal extubation versus terminal weaning; palliative sedation depth.",
+        "indiaNotes": "- Morphine access in India is limited by NDPS regulations although simplified since 2014 amendments; ensure the hospital holds a licence and stock (recognised medical institution status).\n- Palliative care teams are available in larger centres; ISCCM/IAPC encourage integration with ICU."
+      },
+      "drugIds": [
+        "morphine",
+        "midazolam",
+        "glycopyrrolate",
+        "hyoscine-butylbromide"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "truog-2008",
+        "nice-ng31",
+        "cook-rocker-2014",
+        "sccm-family-2017"
+      ],
+      "quiz": [
+        {
+          "id": "palliative-symptom-care-q1",
+          "stem": "Before compassionate extubation, neuromuscular blockers should be:",
+          "options": [
+            "Continued",
+            "Stopped and recovery confirmed",
+            "Doubled",
+            "Irrelevant"
+          ],
+          "answerIndex": 1,
+          "explanation": "Truog 2008."
+        },
+        {
+          "id": "palliative-symptom-care-q2",
+          "stem": "Drug class for noisy secretions:",
+          "options": [
+            "Opioid",
+            "Antimuscarinic",
+            "Benzodiazepine",
+            "Diuretic always"
+          ],
+          "answerIndex": 1,
+          "explanation": "Glycopyrronium/hyoscine."
+        },
+        {
+          "id": "palliative-symptom-care-q3",
+          "stem": "The ethical principle allowing opioid titration for comfort that may shorten life:",
+          "options": [
+            "Autonomy",
+            "Double effect",
+            "Futility",
+            "Justice"
+          ],
+          "answerIndex": 1,
+          "explanation": "Intent is symptom relief."
+        }
+      ]
+    },
+    {
+      "id": "organ-donation-conversation",
+      "title": "Organ donation: the request conversation",
+      "summary": "Identifying potential donors, the mandated request in India, decoupling the request from news of death, and working with transplant coordinators.",
+      "viewKey": "topic:ethics-communication-palliative-care/organ-donation-conversation",
+      "uiHints": {
+        "icon": "heart-handshake",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "The THOA amendment (2011) and Rules 2014 require hospitals to ask relatives of a potential brain-stem-dead donor about organ donation and to inform the transplant coordinator. Brain-stem death certification is covered in the raised-icp-neurotrauma-brain-death module.",
+          "refs": [
+            "thota-rules-2014"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Identify early",
+            "detail": "Severe brain injury with GCS 3 and absent brainstem reflexes, or planned withdrawal - notify the transplant coordinator (NOTTO/ROTTO/SOTTO network) early.",
+            "refs": [
+              "thota-rules-2014"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Decouple",
+            "detail": "Explain death (brain-stem death) first; allow the family to understand it; make the donation request in a separate conversation.",
+            "refs": [
+              "sccm-family-2017"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Who asks",
+            "detail": "A trained requester, ideally with the transplant coordinator, in a private setting.",
+            "refs": [
+              "thota-rules-2014"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Content",
+            "detail": "Donation is an option and a gift; it is voluntary; no payment; funeral and body appearance not affected; religious views respected.",
+            "refs": [
+              "thota-rules-2014"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Consent and documentation",
+            "detail": "Written consent from the person lawfully in possession of the body on the prescribed form; medico-legal cases need police/forensic clearance.",
+            "refs": [
+              "thota-rules-2014"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Donor management",
+            "detail": "Continue organ-supportive care (MAP, fluids, temperature, endocrine) after consent - see raised-icp module.",
+            "refs": [
+              "thota-rules-2014"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Raising donation before the family has understood that the patient has died (or will die) - risks distrust and refusal.",
+            "refs": [
+              "sccm-family-2017"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Not informing the coordinator because 'the family will refuse' - the law requires the request.",
+            "refs": [
+              "thota-rules-2014"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Families who decline should still receive full support - the request is an offer, not an obligation.",
+            "refs": [
+              "sccm-family-2017"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Not applicable - communication and legal process. Brain-stem death causes haemodynamic, endocrine and temperature instability needing active donor management.",
+        "evidence": "- Transplantation of Human Organs and Tissues Act and Rules 2014 [MoHFW 2014].\n- Family-centred communication principles [Davidson 2017].",
+        "controversies": "- Donation after circulatory death (DCD) - limited practice in India; 'opt-out' systems.",
+        "indiaNotes": "- Deceased donation rates in India are low (< 1 per million population nationally, higher in Tamil Nadu, Telangana, Kerala, Maharashtra); trained ICU requesters and coordinators raise consent rates.\n- Medico-legal (road traffic) cases form many potential donors; arrange post-mortem coordination early."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "thota-rules-2014",
+        "sccm-family-2017"
+      ],
+      "quiz": [
+        {
+          "id": "organ-donation-conversation-q1",
+          "stem": "Under the THOA amendment, asking families about donation in brain-stem death is:",
+          "options": [
+            "Optional",
+            "Mandatory request",
+            "Illegal",
+            "Only by police"
+          ],
+          "answerIndex": 1,
+          "explanation": "Required."
+        },
+        {
+          "id": "organ-donation-conversation-q2",
+          "stem": "Best timing for the donation request:",
+          "options": [
+            "Before explaining death",
+            "Separately, after the family understands death",
+            "Never",
+            "During CPR"
+          ],
+          "answerIndex": 1,
+          "explanation": "Decouple."
+        },
+        {
+          "id": "organ-donation-conversation-q3",
+          "stem": "Payment for organs in India is:",
+          "options": [
+            "Allowed",
+            "Illegal",
+            "Allowed for relatives",
+            "Allowed via hospital"
+          ],
+          "answerIndex": 1,
+          "explanation": "THOA."
+        }
+      ]
+    },
+    {
+      "id": "documentation-medicolegal",
+      "title": "Consent, capacity, documentation and medico-legal practice",
+      "summary": "Informed consent in ICU, capacity and surrogate decisions, medico-legal cases, records, and LAMA/DAMA discharge.",
+      "viewKey": "topic:ethics-communication-palliative-care/documentation-medicolegal",
+      "uiHints": {
+        "icon": "file-text",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Good ICU documentation records what was found, what was decided, why, and who was informed. Indian regulations require indoor records to be kept for at least 3 years and provided to the patient or authorised representative within 72 h of a request.",
+          "refs": [
+            "imc-ethics-2002"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Consent",
+            "detail": "Informed consent for procedures and high-risk treatment: nature, benefits, risks, alternatives, in the patient's language; emergency treatment can proceed without consent when delay would endanger life (document why).",
+            "refs": [
+              "imc-ethics-2002",
+              "isccm-eol-2012"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Capacity",
+            "detail": "Assess decision-specific capacity (understand, retain, weigh, communicate); if absent, involve the legally appropriate surrogate and act in the patient's best interests.",
+            "refs": [
+              "isccm-eol-2012"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Daily notes",
+            "detail": "Time-stamped entries with problems, plan, discussions with family (who, what was said), and consultant review.",
+            "refs": [
+              "sccm-family-2017",
+              "imc-ethics-2002"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Medico-legal cases",
+            "detail": "Trauma, poisoning, burns, assault, suspicious deaths: register as MLC, inform police, preserve samples (gastric lavage, blood, clothing) with chain of custody.",
+            "refs": [
+              "imc-ethics-2002"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "LAMA/DAMA",
+            "detail": "Explain risks, offer alternatives, document capacity, the information given and signatures of patient/relative and witness; give a discharge summary.",
+            "refs": [
+              "imc-ethics-2002"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Records access",
+            "detail": "Provide copies within 72 h when requested by patient or authorised representative; maintain confidentiality.",
+            "time": "≤ 72 h",
+            "refs": [
+              "imc-ethics-2002"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Altering or adding to notes after an adverse event without dating them as late entries - unethical and legally damaging.",
+            "refs": [
+              "imc-ethics-2002"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Consent forms signed without a documented discussion.",
+            "refs": [
+              "imc-ethics-2002"
+            ]
+          },
+          {
+            "text": "Not documenting family meetings and limitation decisions.",
+            "refs": [
+              "isccm-eol-2012"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Document the reasoning ('because...') behind major decisions; it protects the patient's interests and the team.",
+            "refs": [
+              "isccm-eol-2012"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Not applicable - professional and legal framework.",
+        "evidence": "- Indian Medical Council Regulations 2002 on records and conduct [MCI 2002].\n- ISCCM 2012 statement on decision-making and documentation [Chawla 2012].",
+        "controversies": "- Electronic records and audit trails; role of the Consumer Protection Act in ICU litigation.",
+        "indiaNotes": "- The National Medical Commission now regulates professional conduct; the 2002 MCI regulations remain the widely cited standard - check the current NMC regulations.\n- Use standard MLC registers and inform the police station as per state rules; death certificates (MCCD) must record the underlying cause."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "imc-ethics-2002",
+        "isccm-eol-2012",
+        "sccm-family-2017"
+      ],
+      "quiz": [
+        {
+          "id": "documentation-medicolegal-q1",
+          "stem": "Minimum retention period for indoor records under the 2002 regulations:",
+          "options": [
+            "1 year",
+            "3 years",
+            "10 years",
+            "Lifelong"
+          ],
+          "answerIndex": 1,
+          "explanation": "MCI 2002."
+        },
+        {
+          "id": "documentation-medicolegal-q2",
+          "stem": "Time to provide records on request:",
+          "options": [
+            "24 h",
+            "72 h",
+            "7 days",
+            "30 days"
+          ],
+          "answerIndex": 1,
+          "explanation": "MCI 2002."
+        },
+        {
+          "id": "documentation-medicolegal-q3",
+          "stem": "Emergency life-saving treatment in an unconscious patient with no relatives:",
+          "options": [
+            "Wait for consent",
+            "Proceed and document why",
+            "Ask the police",
+            "Transfer"
+          ],
+          "answerIndex": 1,
+          "explanation": "Emergency exception."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "morphine",
+      "name": "Morphine",
+      "class": "Opioid analgesic",
+      "indications": "Pain and breathlessness at the end of life",
+      "adultDose": "Opioid-naive: 1-2 mg IV or 2.5-5 mg SC as needed (every 1-2 h); infusion 0.5-2 mg/h IV/SC titrated to comfort. Patients already on opioids: continue and increase by 25-50% for uncontrolled symptoms.",
+      "preparationIndia": "10 mg/mL and 15 mg/mL ampoules (NDPS licensing required; availability restricted in some hospitals).",
+      "renalHepatic": "Active metabolites accumulate in AKI/CKD - use smaller doses, longer intervals or fentanyl.",
+      "cautions": "Titrate to symptoms, not to a time of death; document intent (comfort).",
+      "verify": "Starting doses are common palliative practice rather than guideline-fixed; confirm with local palliative formulary.",
+      "refs": [
+        "truog-2008",
+        "nice-ng31"
+      ]
+    },
+    {
+      "id": "midazolam",
+      "name": "Midazolam",
+      "class": "Benzodiazepine",
+      "indications": "Anxiety, distress, agitation and palliative sedation at the end of life; seizures",
+      "adultDose": "1-2 mg IV or 2.5-5 mg SC as needed; infusion 0.5-2 mg/h IV/SC titrated to comfort.",
+      "preparationIndia": "1 mg/mL and 5 mg/mL ampoules.",
+      "renalHepatic": "Accumulates in renal and hepatic failure.",
+      "cautions": "Combine with opioid for distressing breathlessness only when anxiety is prominent.",
+      "verify": "Doses from palliative practice; confirm locally.",
+      "refs": [
+        "truog-2008",
+        "nice-ng31"
+      ]
+    },
+    {
+      "id": "glycopyrrolate",
+      "name": "Glycopyrronium (glycopyrrolate)",
+      "class": "Antimuscarinic (does not cross blood-brain barrier)",
+      "indications": "Noisy respiratory secretions ('death rattle')",
+      "adultDose": "200 mcg SC/IV every 4-6 h as needed (maximum about 1.2 mg/24 h).",
+      "preparationIndia": "0.2 mg/mL ampoules.",
+      "cautions": "Dry mouth, urinary retention; best given early; reassure families that the noise is rarely distressing to the patient.",
+      "verify": "Dose from palliative formularies (NICE NG31 lists drug classes, not doses).",
+      "refs": [
+        "nice-ng31"
+      ]
+    },
+    {
+      "id": "hyoscine-butylbromide",
+      "name": "Hyoscine butylbromide",
+      "class": "Antimuscarinic",
+      "indications": "Noisy respiratory secretions; colic",
+      "adultDose": "20 mg SC/IV every 4 h as needed (maximum 120 mg/24 h).",
+      "preparationIndia": "20 mg/mL ampoules (widely available in India).",
+      "cautions": "Tachycardia, dry mouth, urinary retention.",
+      "verify": "Dose from palliative formularies; confirm locally.",
+      "refs": [
+        "nice-ng31"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "thota-rules-2014",
+      "citation": "Ministry of Health and Family Welfare, Government of India. Transplantation of Human Organs and Tissues Act 1994 (amended 2011) and Transplantation of Human Organs and Tissues Rules, 2014. NOTTO.",
+      "url": "https://notto.mohfw.gov.in/act-end-rules-of-thoa.htm",
+      "year": 2014,
+      "type": "guideline"
+    },
+    {
+      "id": "spikes-2000",
+      "citation": "Baile WF, Buckman R, Lenzi R, Glober G, Beale EA, Kudelka AP. SPIKES - a six-step protocol for delivering bad news: application to the patient with cancer. Oncologist 2000;5:302-11.",
+      "url": "https://doi.org/10.1634/theoncologist.5-4-302",
+      "year": 2000,
+      "type": "review",
+      "doi": "10.1634/theoncologist.5-4-302"
+    },
+    {
+      "id": "value-2007",
+      "citation": "Lautrette A, Darmon M, Megarbane B, et al. A communication strategy and brochure for relatives of patients dying in the ICU. N Engl J Med 2007;356:469-78.",
+      "url": "https://doi.org/10.1056/NEJMoa063446",
+      "year": 2007,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa063446"
+    },
+    {
+      "id": "sccm-family-2017",
+      "citation": "Davidson JE, Aslakson RA, Long AC, et al. Guidelines for family-centered care in the neonatal, pediatric, and adult ICU. Crit Care Med 2017;45:103-28.",
+      "url": "https://doi.org/10.1097/CCM.0000000000002169",
+      "year": 2017,
+      "type": "guideline",
+      "doi": "10.1097/CCM.0000000000002169"
+    },
+    {
+      "id": "pit-2015",
+      "citation": "Bosslet GT, Pope TM, Rubenfeld GD, et al. An official ATS/AACN/ACCP/ESICM/SCCM policy statement: responding to requests for potentially inappropriate treatments in intensive care units. Am J Respir Crit Care Med 2015;191:1318-30.",
+      "url": "https://doi.org/10.1164/rccm.201505-0924ST",
+      "year": 2015,
+      "type": "consensus",
+      "doi": "10.1164/rccm.201505-0924ST"
+    },
+    {
+      "id": "isccm-eol-2012",
+      "citation": "Chawla R, Kapadia F, Rajagopalan S, Amin P, et al. Guidelines for end-of-life and palliative care in Indian intensive care units: ISCCM consensus ethical position statement. Indian J Crit Care Med 2012;16:166-81.",
+      "url": "https://doi.org/10.4103/0972-5229.102112",
+      "year": 2012,
+      "type": "consensus",
+      "doi": "10.4103/0972-5229.102112"
+    },
+    {
+      "id": "isccm-iapc-2024",
+      "citation": "Kapadia F, Rajagopalan S. The ISCCM/IAPC position statement: ending the Sisyphean struggle to practice ethical end-of-life care in India. Indian J Crit Care Med 2024;28(3):189-90.",
+      "url": "https://doi.org/10.5005/jp-journals-10071-24660",
+      "year": 2024,
+      "type": "review",
+      "doi": "10.5005/jp-journals-10071-24660"
+    },
+    {
+      "id": "common-cause-2018",
+      "citation": "Supreme Court of India. Common Cause (A Regd. Society) v. Union of India and Another, Writ Petition (Civil) No. 215 of 2005, judgment of 9 March 2018, (2018) 5 SCC 1.",
+      "url": "https://www.supremecourtcases.com/common-cause-a-regd-society-v-union-of-india-and-another/",
+      "year": 2018,
+      "type": "web"
+    },
+    {
+      "id": "common-cause-2023",
+      "citation": "Supreme Court of India. Common Cause (A Regd. Society) v. Union of India, Miscellaneous Application No. 1699 of 2019 in WP (C) 215 of 2005, order of 24 January 2023, [2023] 1 SCR 1137.",
+      "url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/scgujaratijudgments/eng/SC_Misc._Application_1699_Of_2019_0.pdf",
+      "year": 2023,
+      "type": "web"
+    },
+    {
+      "id": "truog-2008",
+      "citation": "Truog RD, Campbell ML, Curtis JR, et al. Recommendations for end-of-life care in the intensive care unit: a consensus statement by the American College of Critical Care Medicine. Crit Care Med 2008;36:953-63.",
+      "url": "https://doi.org/10.1097/ccm.0b013e3181659096",
+      "year": 2008,
+      "type": "consensus",
+      "doi": "10.1097/ccm.0b013e3181659096"
+    },
+    {
+      "id": "cook-rocker-2014",
+      "citation": "Cook D, Rocker G. Dying with dignity in the intensive care unit. N Engl J Med 2014;370:2506-14.",
+      "url": "https://doi.org/10.1056/NEJMra1208795",
+      "year": 2014,
+      "type": "review",
+      "doi": "10.1056/NEJMra1208795"
+    },
+    {
+      "id": "nice-ng31",
+      "citation": "National Institute for Health and Care Excellence. Care of dying adults in the last days of life (NG31). London: NICE; 2015.",
+      "url": "https://www.nice.org.uk/guidance/ng31",
+      "year": 2015,
+      "type": "guideline"
+    },
+    {
+      "id": "imc-ethics-2002",
+      "citation": "Medical Council of India. Indian Medical Council (Professional Conduct, Etiquette and Ethics) Regulations, 2002 (as amended). Reproduced in Indian Journal of Medical Ethics.",
+      "url": "https://ijme.in/articles/the-indian-medical-council-professional-conduct-etiquette-and-ethics-regulations-2002/",
+      "year": 2002,
+      "type": "web"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Common Cause 2023 board composition",
+      "reason": "Summarised from the 2023 order; confirm exact wording and state CMO-nominee panels with hospital legal counsel."
+    },
+    {
+      "item": "Palliative drug doses",
+      "reason": "From palliative practice; NICE NG31 does not specify doses."
+    },
+    {
+      "item": "ISCCM/IAPC 2024 citation",
+      "reason": "DOI resolves to a 2-page article (Kapadia, Rajagopalan); confirm whether the full joint position statement has a separate citation."
+    },
+    {
+      "item": "NMC conduct regulations",
+      "reason": "Check whether current NMC regulations supersede the 2002 MCI regulations for records."
+    }
+  ]
+}

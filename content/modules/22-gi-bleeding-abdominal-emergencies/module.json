@@ -1,0 +1,2234 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "gi-bleeding-abdominal-emergencies",
+  "number": 22,
+  "folder": "22-gi-bleeding-abdominal-emergencies",
+  "section": {
+    "id": "F",
+    "title": "GI, liver and haematology"
+  },
+  "phase": 2,
+  "title": "GI bleeding and abdominal emergencies",
+  "summary": "GI emergencies in the ICU: variceal and non-variceal upper GI bleeding with Glasgow-Blatchford, severe acute pancreatitis, intra-abdominal hypertension and compartment syndrome, acute mesenteric ischaemia, and ileus/colonic pseudo-obstruction.",
+  "tags": [
+    "UGIB",
+    "variceal bleed",
+    "terlipressin",
+    "Glasgow-Blatchford",
+    "PPI",
+    "pancreatitis",
+    "Atlanta",
+    "abdominal compartment syndrome",
+    "IAP",
+    "mesenteric ischaemia",
+    "ileus",
+    "Ogilvie"
+  ],
+  "relatedModules": [
+    "liver-failure",
+    "haematology-coagulation-transfusion",
+    "shock-vasoactive-support",
+    "nutrition-metabolic-support",
+    "icu-care-bundles-infection-prevention",
+    "procedures"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "droplet",
+    "accent": "critical"
+  },
+  "viewKey": "module:gi-bleeding-abdominal-emergencies",
+  "topics": [
+    {
+      "id": "variceal-bleeding",
+      "title": "Acute variceal bleeding",
+      "summary": "Baveno VII bundle: restrictive transfusion, vasoactive drug, antibiotics, endoscopy within 12 h, pre-emptive TIPS, and rescue options.",
+      "viewKey": "topic:gi-bleeding-abdominal-emergencies/variceal-bleeding",
+      "uiHints": {
+        "icon": "droplet",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Suspect variceal bleeding in any patient with cirrhosis or portal hypertension and UGIB. Mortality 10-20% at 6 weeks; highest in Child-Pugh C and with ACLF.",
+          "refs": [
+            "baveno7"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Resuscitate and protect airway",
+            "detail": "Two large-bore IVs, cautious volume replacement; intubate for massive haematemesis, encephalopathy (GCS ≤ 8) or before endoscopy if airway at risk.",
+            "time": "0 min",
+            "refs": [
+              "baveno7"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Restrictive transfusion",
+            "detail": "Transfuse PRBC at Hb ≤ 7 g/dL, target 7-8 g/dL (higher if active cardiovascular disease or massive bleeding). Do not correct INR with FFP; platelets/fibrinogen per clinical judgement.",
+            "refs": [
+              "baveno7"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Vasoactive drug immediately",
+            "detail": "Terlipressin 2 mg IV q4h (or octreotide 50 mcg bolus + 50 mcg/h) as soon as variceal bleed suspected, before endoscopy; continue 2-5 days.",
+            "time": "ASAP",
+            "refs": [
+              "baveno7"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Antibiotic prophylaxis",
+            "detail": "Ceftriaxone 1 g/day IV for up to 7 days (reduces infection, rebleeding and death).",
+            "time": "ASAP",
+            "refs": [
+              "baveno7"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Endoscopy within 12 h",
+            "detail": "After resuscitation; erythromycin 250 mg IV 30-120 min before improves visibility. Band ligation for oesophageal varices; cyanoacrylate glue for gastric (GOV2/IGV1) varices.",
+            "time": "≤ 12 h",
+            "refs": [
+              "baveno7"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Pre-emptive TIPS",
+            "detail": "Child-Pugh C 10-13 or Child B > 7 with active bleeding at endoscopy: pre-emptive TIPS within 72 h (ideally < 24 h) if available.",
+            "time": "≤ 72 h",
+            "refs": [
+              "baveno7"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Refractory bleeding",
+            "detail": "Balloon tamponade (Sengstaken-Blakemore/Minnesota, max 24 h) or self-expanding oesophageal stent as bridge to rescue TIPS.",
+            "refs": [
+              "baveno7"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Prevent complications",
+            "detail": "Lactulose/rifaximin to prevent encephalopathy, avoid nephrotoxins, start non-selective beta-blocker after vasoactive drugs stop (secondary prophylaxis) with repeat EVL.",
+            "refs": [
+              "baveno7"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "terlipressin",
+            "role": "Vasoactive first line",
+            "route": "IV bolus",
+            "dose": "2 mg q4h for 48 h, then 1 mg q4h; total 2-5 days",
+            "workedExample": "Start 2 mg IV immediately; reduce to 1 mg q4h once bleeding controlled",
+            "refs": [
+              "baveno7"
+            ]
+          },
+          {
+            "drugId": "octreotide",
+            "role": "Vasoactive alternative",
+            "route": "IV",
+            "dose": "50 mcg bolus, then 50 mcg/h",
+            "dilution": "500 mcg in 50 mL NS = 10 mcg/mL",
+            "workedExample": "50 mcg/h = 5 mL/h",
+            "calculatorId": "infusion-rate-fixed",
+            "refs": [
+              "baveno7"
+            ]
+          },
+          {
+            "drugId": "ceftriaxone",
+            "role": "Antibiotic prophylaxis",
+            "route": "IV",
+            "dose": "1 g once daily up to 7 days",
+            "refs": [
+              "baveno7"
+            ]
+          },
+          {
+            "drugId": "erythromycin",
+            "role": "Pre-endoscopy prokinetic",
+            "route": "IV",
+            "dose": "250 mg over 30 min, 30-120 min before endoscopy",
+            "verify": "Availability in India limited.",
+            "refs": [
+              "esge-nvugih-2021"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Haematemesis with encephalopathy or haemodynamic instability: intubate before endoscopy to prevent aspiration.",
+            "refs": [
+              "baveno7"
+            ]
+          },
+          {
+            "text": "Rebleeding within 5 days or failure to control: rescue TIPS or balloon tamponade/stent.",
+            "refs": [
+              "baveno7"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Over-transfusion to Hb > 9-10 g/dL raises portal pressure and rebleeding.",
+            "refs": [
+              "baveno7"
+            ]
+          },
+          {
+            "text": "Giving FFP to correct INR before endoscopy: INR does not reflect bleeding risk in cirrhosis and FFP raises portal pressure.",
+            "refs": [
+              "baveno7"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Start terlipressin and antibiotics in the ED; do not wait for endoscopy.",
+            "refs": [
+              "baveno7"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Suspected variceal bleed",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "UGIB with cirrhosis / portal hypertension"
+          },
+          {
+            "id": "airway",
+            "type": "decision",
+            "text": "Airway at risk (massive bleed, GCS ≤ 8)?"
+          },
+          {
+            "id": "intub",
+            "type": "action",
+            "text": "Intubate",
+            "severity": "critical"
+          },
+          {
+            "id": "res",
+            "type": "action",
+            "text": "IV access; transfuse if Hb ≤ 7 (target 7-8); no FFP for INR"
+          },
+          {
+            "id": "drugs",
+            "type": "action",
+            "text": "Terlipressin/octreotide + ceftriaxone now",
+            "severity": "critical"
+          },
+          {
+            "id": "endo",
+            "type": "action",
+            "text": "Endoscopy ≤ 12 h: EVL (oesophageal) / glue (gastric)"
+          },
+          {
+            "id": "ctl",
+            "type": "decision",
+            "text": "Bleeding controlled?"
+          },
+          {
+            "id": "risk",
+            "type": "decision",
+            "text": "Child C 10-13 or B > 7 with active bleeding?"
+          },
+          {
+            "id": "tips",
+            "type": "end",
+            "text": "Pre-emptive TIPS within 72 h",
+            "severity": "high"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Vasoactive 2-5 days, lactulose, then NSBB + repeat EVL"
+          },
+          {
+            "id": "rescue",
+            "type": "end",
+            "text": "Balloon tamponade/stent → rescue TIPS",
+            "severity": "critical"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "airway"
+          },
+          {
+            "from": "airway",
+            "to": "intub",
+            "label": "Yes"
+          },
+          {
+            "from": "airway",
+            "to": "res",
+            "label": "No"
+          },
+          {
+            "from": "intub",
+            "to": "res"
+          },
+          {
+            "from": "res",
+            "to": "drugs"
+          },
+          {
+            "from": "drugs",
+            "to": "endo"
+          },
+          {
+            "from": "endo",
+            "to": "ctl"
+          },
+          {
+            "from": "ctl",
+            "to": "risk",
+            "label": "Yes"
+          },
+          {
+            "from": "ctl",
+            "to": "rescue",
+            "label": "No"
+          },
+          {
+            "from": "risk",
+            "to": "tips",
+            "label": "Yes"
+          },
+          {
+            "from": "risk",
+            "to": "cont",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "baveno7"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Portal hypertension (HVPG ≥ 10 mmHg) opens portosystemic collaterals; varices bleed when HVPG > 12 mmHg and wall tension exceeds strength. Volume overload and splanchnic vasodilation raise portal pressure, which is why restrictive transfusion and vasoconstrictors help.",
+        "evidence": "- Baveno VII (2022): restrictive transfusion, vasoactive drugs, antibiotic prophylaxis, endoscopy within 12 h, pre-emptive TIPS in high-risk patients [de Franchis 2022].\n- Restrictive transfusion (Hb 7) reduced mortality and rebleeding compared with liberal (Hb 9) [Villanueva 2013].",
+        "controversies": "- Pre-emptive TIPS selection criteria and availability; role of TXA (HALT-IT showed no benefit and more VTE).",
+        "indiaNotes": "- Terlipressin and EVL are widely available in India; TIPS is limited to tertiary centres (ILBS, AIIMS, large private hospitals).\n- Alcohol, hepatitis B and NASH (MASLD) are main causes of cirrhosis; extrahepatic portal vein obstruction and non-cirrhotic portal fibrosis cause variceal bleeds in younger Indians with preserved liver function."
+      },
+      "drugIds": [
+        "terlipressin",
+        "octreotide",
+        "ceftriaxone",
+        "erythromycin"
+      ],
+      "calculatorIds": [
+        "infusion-rate-fixed"
+      ],
+      "references": [
+        "baveno7",
+        "esge-nvugih-2021",
+        "villanueva-2013"
+      ],
+      "quiz": [
+        {
+          "id": "variceal-bleeding-q1",
+          "stem": "Transfusion threshold in variceal bleeding (Baveno VII):",
+          "options": [
+            "Hb 10",
+            "Hb 7 (target 7-8)",
+            "Hb 9",
+            "Only if shock"
+          ],
+          "answerIndex": 1,
+          "explanation": "Restrictive strategy reduces rebleeding."
+        },
+        {
+          "id": "variceal-bleeding-q2",
+          "stem": "Antibiotic prophylaxis of choice in cirrhotic GI bleed (Baveno VII):",
+          "options": [
+            "None",
+            "Ceftriaxone 1 g/day",
+            "Vancomycin",
+            "Metronidazole"
+          ],
+          "answerIndex": 1,
+          "explanation": "Up to 7 days."
+        },
+        {
+          "id": "variceal-bleeding-q3",
+          "stem": "Timing of endoscopy in variceal bleeding:",
+          "options": [
+            "Within 12 h",
+            "After 48 h",
+            "Only if rebleed",
+            "Within 72 h"
+          ],
+          "answerIndex": 0,
+          "explanation": "Baveno VII: within 12 h after resuscitation."
+        },
+        {
+          "id": "variceal-bleeding-q4",
+          "stem": "Which patient qualifies for pre-emptive TIPS?",
+          "options": [
+            "Child A with controlled bleed",
+            "Child C 11 with variceal bleed",
+            "Child C 15",
+            "Non-cirrhotic gastric ulcer"
+          ],
+          "answerIndex": 1,
+          "explanation": "Child C 10-13 or B > 7 with active bleeding."
+        }
+      ]
+    },
+    {
+      "id": "non-variceal-ugib",
+      "title": "Non-variceal UGIB and Glasgow-Blatchford",
+      "summary": "Risk-stratify with Glasgow-Blatchford, resuscitate, give PPI, time endoscopy, and manage rebleeding and anticoagulants.",
+      "viewKey": "topic:gi-bleeding-abdominal-emergencies/non-variceal-ugib",
+      "uiHints": {
+        "icon": "droplet",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Non-variceal UGIB is mostly peptic ulcer (H. pylori, NSAIDs/aspirin), erosive disease, Mallory-Weiss, malignancy, Dieulafoy. Glasgow-Blatchford score (GBS) 0-1 = very low risk (outpatient management possible).",
+          "refs": [
+            "esge-nvugih-2021",
+            "blatchford-2000"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Assess and resuscitate",
+            "detail": "Haemodynamics, shock index, Hb, urea, INR, cross-match. Restrictive transfusion: Hb ≤ 7 g/dL (target 7-9); Hb ≤ 8 (target ≥ 10) with cardiovascular disease.",
+            "time": "0 min",
+            "refs": [
+              "esge-nvugih-2021"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Calculate GBS",
+            "detail": "Blood urea, Hb, SBP, pulse ≥ 100, melaena, syncope, hepatic disease, cardiac failure. GBS ≤ 1: consider outpatient endoscopy. Higher scores: admit.",
+            "refs": [
+              "blatchford-2000",
+              "esge-nvugih-2021"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "PPI",
+            "detail": "High-dose IV PPI (pantoprazole 80 mg bolus) before endoscopy; do not delay endoscopy for it.",
+            "refs": [
+              "esge-nvugih-2021"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Anticoagulants and antiplatelets",
+            "detail": "Hold anticoagulants; reverse if life-threatening (vitamin K + PCC for warfarin; idarucizumab for dabigatran; PCC/andexanet for Xa inhibitors). Continue aspirin for secondary prevention if possible; discuss DAPT with cardiology.",
+            "refs": [
+              "esge-nvugih-2021",
+              "acg-ugib-2021"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Endoscopy within 24 h",
+            "detail": "After resuscitation, within 24 h. Very early endoscopy (< 6-12 h) did not improve outcome in high-risk patients (Lau 2020) unless unstable despite resuscitation.",
+            "time": "≤ 24 h",
+            "refs": [
+              "esge-nvugih-2021",
+              "lau-2020"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Post-endoscopy",
+            "detail": "High-risk stigmata (Forrest Ia, Ib, IIa, IIb) treated endoscopically: high-dose PPI for 72 h (continuous or intermittent 40 mg BD), then oral BD to 2 weeks; test and treat H. pylori.",
+            "refs": [
+              "esge-nvugih-2021",
+              "acg-ugib-2021"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Rebleeding",
+            "detail": "Repeat endoscopy; if fails: transcatheter arterial embolisation (TAE) or surgery.",
+            "refs": [
+              "esge-nvugih-2021"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Do not use TXA",
+            "detail": "HALT-IT: high-dose TXA did not reduce death and increased venous thromboembolism.",
+            "refs": [
+              "halt-it"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "pantoprazole",
+            "role": "Ulcer bleeding",
+            "route": "IV",
+            "dose": "80 mg bolus, then 8 mg/h for 72 h (or 40 mg IV BD) after endotherapy",
+            "dilution": "80 mg in 100 mL NS = 0.8 mg/mL",
+            "workedExample": "8 mg/h = 10 mL/h",
+            "calculatorId": "infusion-rate-fixed",
+            "refs": [
+              "esge-nvugih-2021",
+              "acg-ugib-2021"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "gbs",
+            "title": "Glasgow-Blatchford score",
+            "columns": [
+              "Variable",
+              "Points"
+            ],
+            "rows": [
+              [
+                "Urea 6.5-7.9 mmol/L (urea 39-47 mg/dL; BUN 18-22 mg/dL)",
+                "2"
+              ],
+              [
+                "Urea 8-9.9 mmol/L (urea 48-59 mg/dL; BUN 22-27 mg/dL)",
+                "3"
+              ],
+              [
+                "Urea 10-25 mmol/L (urea 60-150 mg/dL; BUN 28-70 mg/dL)",
+                "4"
+              ],
+              [
+                "Urea > 25 mmol/L (urea > 150 mg/dL; BUN > 70 mg/dL)",
+                "6"
+              ],
+              [
+                "Hb men 12-13 g/dL",
+                "1"
+              ],
+              [
+                "Hb men 10-12",
+                "3"
+              ],
+              [
+                "Hb women 10-12",
+                "1"
+              ],
+              [
+                "Hb < 10 (either sex)",
+                "6"
+              ],
+              [
+                "SBP 100-109 mmHg",
+                "1"
+              ],
+              [
+                "SBP 90-99",
+                "2"
+              ],
+              [
+                "SBP < 90",
+                "3"
+              ],
+              [
+                "Pulse ≥ 100/min",
+                "1"
+              ],
+              [
+                "Melaena",
+                "1"
+              ],
+              [
+                "Syncope",
+                "2"
+              ],
+              [
+                "Hepatic disease",
+                "2"
+              ],
+              [
+                "Cardiac failure",
+                "2"
+              ]
+            ],
+            "caption": "Original score uses blood urea in mmol/L. Indian labs usually report urea in mg/dL (mmol/L × 6); US labs report BUN (mmol/L × 2.8). Use the matching column.",
+            "refs": [
+              "blatchford-2000"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Shock index > 1, haematemesis of fresh blood, or Hb drop ≥ 2 g/dL: high-risk bleed - ICU/HDU, early endoscopy after resuscitation.",
+            "refs": [
+              "esge-nvugih-2021"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Delaying resuscitation for endoscopy, or endoscoping an unresuscitated patient.",
+            "refs": [
+              "lau-2020"
+            ]
+          },
+          {
+            "text": "Stopping aspirin permanently in a patient with coronary stents: thrombosis risk; restart early (often within 3-5 days) after discussion.",
+            "refs": [
+              "acg-ugib-2021"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Forrest classification: Ia spurting, Ib oozing, IIa visible vessel, IIb adherent clot, IIc flat spot, III clean base.",
+            "refs": [
+              "esge-nvugih-2021"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Non-variceal UGIB",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Haematemesis / melaena"
+          },
+          {
+            "id": "unst",
+            "type": "decision",
+            "text": "Haemodynamically unstable?"
+          },
+          {
+            "id": "res",
+            "type": "action",
+            "text": "Resuscitate, restrictive transfusion, PPI 80 mg, ICU",
+            "severity": "critical"
+          },
+          {
+            "id": "gbs",
+            "type": "decision",
+            "text": "GBS ≤ 1?"
+          },
+          {
+            "id": "op",
+            "type": "end",
+            "text": "Outpatient endoscopy, discharge with advice"
+          },
+          {
+            "id": "adm",
+            "type": "action",
+            "text": "Admit; PPI; manage anticoagulants"
+          },
+          {
+            "id": "endo",
+            "type": "action",
+            "text": "Endoscopy within 24 h"
+          },
+          {
+            "id": "stig",
+            "type": "decision",
+            "text": "High-risk stigmata (Ia-IIb)?"
+          },
+          {
+            "id": "tx",
+            "type": "action",
+            "text": "Endotherapy + high-dose PPI 72 h",
+            "severity": "high"
+          },
+          {
+            "id": "reb",
+            "type": "decision",
+            "text": "Rebleeding?"
+          },
+          {
+            "id": "tae",
+            "type": "end",
+            "text": "Repeat endoscopy → TAE / surgery",
+            "severity": "critical"
+          },
+          {
+            "id": "oral",
+            "type": "end",
+            "text": "Oral PPI, H. pylori test and treat, early feeding"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "unst"
+          },
+          {
+            "from": "unst",
+            "to": "res",
+            "label": "Yes"
+          },
+          {
+            "from": "unst",
+            "to": "gbs",
+            "label": "No"
+          },
+          {
+            "from": "res",
+            "to": "endo"
+          },
+          {
+            "from": "gbs",
+            "to": "op",
+            "label": "Yes"
+          },
+          {
+            "from": "gbs",
+            "to": "adm",
+            "label": "No"
+          },
+          {
+            "from": "adm",
+            "to": "endo"
+          },
+          {
+            "from": "endo",
+            "to": "stig"
+          },
+          {
+            "from": "stig",
+            "to": "tx",
+            "label": "Yes"
+          },
+          {
+            "from": "stig",
+            "to": "oral",
+            "label": "No"
+          },
+          {
+            "from": "tx",
+            "to": "reb"
+          },
+          {
+            "from": "reb",
+            "to": "tae",
+            "label": "Yes"
+          },
+          {
+            "from": "reb",
+            "to": "oral",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "esge-nvugih-2021"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Acid impairs platelet aggregation and dissolves clot; maintaining intragastric pH > 6 with PPIs stabilises clot over an ulcer after endoscopic haemostasis.",
+        "evidence": "- ESGE 2021: GBS ≤ 1 for outpatient management; restrictive transfusion; endoscopy within 24 h; high-dose PPI after endotherapy [Gralnek 2021].\n- Lau 2020 (516 high-risk patients): endoscopy within 6 h did not reduce 30-day mortality compared with 6-24 h [Lau 2020].\n- HALT-IT (12,009 patients): TXA no benefit, more VTE [HALT-IT 2020].",
+        "controversies": "- Over-the-scope clips as first-line for high-risk ulcers; haemostatic powders.",
+        "indiaNotes": "- NSAID overuse (over-the-counter) and H. pylori are common causes; check also for portal hypertension even without known cirrhosis.\n- Blood urea in India is reported as urea (mg/dL), not BUN; convert carefully when scoring."
+      },
+      "drugIds": [
+        "pantoprazole"
+      ],
+      "calculatorIds": [
+        "shock-index",
+        "infusion-rate-fixed"
+      ],
+      "references": [
+        "esge-nvugih-2021",
+        "acg-ugib-2021",
+        "blatchford-2000",
+        "lau-2020",
+        "halt-it"
+      ],
+      "quiz": [
+        {
+          "id": "non-variceal-ugib-q1",
+          "stem": "GBS of 0-1 indicates:",
+          "options": [
+            "Need for emergency surgery",
+            "Very low risk; outpatient management possible",
+            "Variceal bleeding",
+            "Need for TIPS"
+          ],
+          "answerIndex": 1,
+          "explanation": "ESGE recommends outpatient management for GBS ≤ 1."
+        },
+        {
+          "id": "non-variceal-ugib-q2",
+          "stem": "Optimal timing of endoscopy in non-variceal UGIB after resuscitation:",
+          "options": [
+            "< 2 h always",
+            "Within 24 h",
+            "After 72 h",
+            "Only if rebleeding"
+          ],
+          "answerIndex": 1,
+          "explanation": "ESGE 2021; Lau 2020."
+        },
+        {
+          "id": "non-variceal-ugib-q3",
+          "stem": "HALT-IT showed TXA in GI bleeding:",
+          "options": [
+            "Reduced mortality",
+            "No mortality benefit and increased VTE",
+            "Reduced rebleeding significantly",
+            "Is mandatory"
+          ],
+          "answerIndex": 1,
+          "explanation": "TXA is not recommended."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Glasgow-Blatchford urea bands in mg/dL",
+          "reason": "Converted from mmol/L (urea mg/dL = mmol/L × 6; BUN mg/dL = mmol/L × 2.8); confirm rounding at band edges."
+        }
+      ]
+    },
+    {
+      "id": "severe-acute-pancreatitis",
+      "title": "Severe acute pancreatitis",
+      "summary": "Diagnose and grade by revised Atlanta, moderate fluids (WATERFALL), early enteral feeding, no prophylactic antibiotics, and the step-up approach to infected necrosis.",
+      "viewKey": "topic:gi-bleeding-abdominal-emergencies/severe-acute-pancreatitis",
+      "uiHints": {
+        "icon": "flame",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Acute pancreatitis = 2 of 3: typical pain, lipase/amylase > 3x upper limit, imaging findings. Severity (revised Atlanta): mild (no organ failure/complications), moderately severe (transient organ failure < 48 h and/or local/systemic complications), severe (persistent organ failure > 48 h by modified Marshall score).",
+          "refs": [
+            "atlanta-2012"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Confirm and find the cause",
+            "detail": "Lipase (or amylase), USG abdomen for gallstones, triglycerides (> 1,000 mg/dL), calcium, alcohol history, drugs, ERCP/trauma. CT only if diagnosis uncertain or deterioration after 72-96 h.",
+            "refs": [
+              "acg-pancreatitis-2024",
+              "atlanta-2012"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Predict severity",
+            "detail": "BISAP (BUN > 25 mg/dL, i.e. urea > 53 mg/dL, impaired mental status, SIRS, age > 60, pleural effusion; ≥ 3 = high risk), SIRS persisting > 48 h, haematocrit, urea trend; monitor organ failure (modified Marshall).",
+            "refs": [
+              "bisap",
+              "atlanta-2012"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Moderate, goal-directed fluids",
+            "detail": "Ringer lactate: 10 mL/kg bolus if hypovolaemic, then 1.5 mL/kg/h; reassess at 3, 12, 24, 48, 72 h. Avoid aggressive fluids (WATERFALL: more overload, no benefit).",
+            "time": "0-72 h",
+            "refs": [
+              "waterfall",
+              "acg-pancreatitis-2024"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Analgesia",
+            "detail": "Paracetamol + opioids (fentanyl/morphine as needed); epidural in selected patients.",
+            "refs": [
+              "acg-pancreatitis-2024"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Feed early",
+            "detail": "Oral diet as tolerated within 24-72 h; if not tolerated, enteral via nasogastric or nasojejunal tube (equivalent). Avoid TPN unless enteral fails.",
+            "time": "≤ 72 h",
+            "refs": [
+              "acg-pancreatitis-2024"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Antibiotics only for infection",
+            "detail": "No prophylactic antibiotics in sterile necrosis. Suspect infected necrosis if deterioration/fever after 7-10 days or gas in necrosis on CT: carbapenem/quinolone + metronidazole, FNA if unclear.",
+            "refs": [
+              "acg-pancreatitis-2024"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Biliary: ERCP if cholangitis",
+            "detail": "Urgent ERCP (< 24 h) for cholangitis; not routinely for gallstone pancreatitis without obstruction. Cholecystectomy in same admission for mild biliary pancreatitis.",
+            "refs": [
+              "acg-pancreatitis-2024"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Step-up for infected necrosis",
+            "detail": "Antibiotics first; delay intervention ≥ 4 weeks (walled-off necrosis) if possible; percutaneous or endoscopic drainage, then minimally invasive necrosectomy if needed. Monitor IAP.",
+            "refs": [
+              "panter",
+              "acg-pancreatitis-2024"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "lactated-ringer",
+            "role": "Moderate fluid resuscitation",
+            "route": "IV",
+            "dose": "10 mL/kg bolus if hypovolaemic, then 1.5 mL/kg/h",
+            "workedExample": "70 kg, hypovolaemic: 700 mL bolus, then 105 mL/h; reassess at 3 h (stop at 48 h if tolerating oral)",
+            "notes": "Reduce if signs of overload.",
+            "refs": [
+              "waterfall"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "atlanta",
+            "title": "Revised Atlanta severity",
+            "columns": [
+              "Grade",
+              "Organ failure",
+              "Complications"
+            ],
+            "rows": [
+              [
+                "Mild",
+                "None",
+                "None"
+              ],
+              [
+                "Moderately severe",
+                "Transient (< 48 h)",
+                "Local (collections, necrosis) or exacerbation of comorbidity"
+              ],
+              [
+                "Severe",
+                "Persistent (> 48 h), single or multiple",
+                "Usually present"
+              ]
+            ],
+            "refs": [
+              "atlanta-2012"
+            ]
+          },
+          {
+            "id": "collections",
+            "title": "Local complications (Atlanta)",
+            "columns": [
+              "< 4 weeks",
+              "> 4 weeks (encapsulated)"
+            ],
+            "rows": [
+              [
+                "Acute peripancreatic fluid collection (interstitial)",
+                "Pseudocyst"
+              ],
+              [
+                "Acute necrotic collection (necrotising)",
+                "Walled-off necrosis (WON)"
+              ]
+            ],
+            "refs": [
+              "atlanta-2012"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Persistent organ failure > 48 h, rising IAP > 20 mmHg, or fever with clinical deterioration after the first week (infected necrosis): ICU and specialist pancreatic team.",
+            "refs": [
+              "atlanta-2012",
+              "acg-pancreatitis-2024"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Early CT on day 1 underestimates necrosis and rarely changes management.",
+            "refs": [
+              "acg-pancreatitis-2024"
+            ]
+          },
+          {
+            "text": "Keeping patients 'nil by mouth to rest the pancreas': early feeding reduces infection and mortality.",
+            "refs": [
+              "acg-pancreatitis-2024"
+            ]
+          },
+          {
+            "text": "Prophylactic carbapenems for sterile necrosis.",
+            "refs": [
+              "acg-pancreatitis-2024"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Hypertriglyceridaemia-induced pancreatitis: insulin infusion (with dextrose) lowers TG; plasmapheresis in selected cases.",
+            "refs": [
+              "acg-pancreatitis-2024"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Acute pancreatitis: first 72 h",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Acute pancreatitis diagnosed"
+          },
+          {
+            "id": "sev",
+            "type": "action",
+            "text": "Assess organ failure (Marshall), BISAP, SIRS; USG for gallstones"
+          },
+          {
+            "id": "hypo",
+            "type": "decision",
+            "text": "Hypovolaemic?"
+          },
+          {
+            "id": "bolus",
+            "type": "action",
+            "text": "RL 10 mL/kg bolus"
+          },
+          {
+            "id": "maint",
+            "type": "action",
+            "text": "RL 1.5 mL/kg/h; reassess 3, 12, 24, 48 h"
+          },
+          {
+            "id": "chol",
+            "type": "decision",
+            "text": "Cholangitis?"
+          },
+          {
+            "id": "ercp",
+            "type": "action",
+            "text": "ERCP < 24 h + antibiotics",
+            "severity": "high"
+          },
+          {
+            "id": "feed",
+            "type": "action",
+            "text": "Analgesia; oral/enteral feeding within 24-72 h"
+          },
+          {
+            "id": "of",
+            "type": "decision",
+            "text": "Organ failure > 48 h or deterioration?"
+          },
+          {
+            "id": "icu",
+            "type": "end",
+            "text": "ICU: CT at 72-96 h, IAP monitoring, step-up if infected necrosis",
+            "severity": "high"
+          },
+          {
+            "id": "ward",
+            "type": "end",
+            "text": "Ward care; cholecystectomy same admission if biliary"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "sev"
+          },
+          {
+            "from": "sev",
+            "to": "hypo"
+          },
+          {
+            "from": "hypo",
+            "to": "bolus",
+            "label": "Yes"
+          },
+          {
+            "from": "hypo",
+            "to": "maint",
+            "label": "No"
+          },
+          {
+            "from": "bolus",
+            "to": "maint"
+          },
+          {
+            "from": "maint",
+            "to": "chol"
+          },
+          {
+            "from": "chol",
+            "to": "ercp",
+            "label": "Yes"
+          },
+          {
+            "from": "chol",
+            "to": "feed",
+            "label": "No"
+          },
+          {
+            "from": "ercp",
+            "to": "feed"
+          },
+          {
+            "from": "feed",
+            "to": "of"
+          },
+          {
+            "from": "of",
+            "to": "icu",
+            "label": "Yes"
+          },
+          {
+            "from": "of",
+            "to": "ward",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "acg-pancreatitis-2024",
+          "waterfall"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Premature activation of trypsin within acinar cells causes autodigestion, local inflammation and a systemic inflammatory response with capillary leak, leading to organ failure. Necrosis may become infected (translocation) usually after the first week.",
+        "evidence": "- WATERFALL (2022): aggressive vs moderate LR resuscitation - more fluid overload (20.5% vs 6.3%) without improving outcomes; stopped early [de-Madaria 2022].\n- PANTER (2010): step-up approach reduced major complications or death vs open necrosectomy [van Santvoort 2010].\n- ACG 2024 guideline: moderate fluids, early oral feeding, no prophylactic antibiotics, delayed intervention for necrosis [Tenner 2024].",
+        "controversies": "- Optimal fluid in severe pancreatitis already in organ failure (WATERFALL excluded these).",
+        "indiaNotes": "- Alcohol is the leading cause in Indian men, gallstones in women; tropical (idiopathic) chronic pancreatitis is a regional entity.\n- Endoscopic necrosectomy expertise exists at major Indian centres (e.g. AIG Hyderabad)."
+      },
+      "drugIds": [
+        "lactated-ringer"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "atlanta-2012",
+        "waterfall",
+        "acg-pancreatitis-2024",
+        "panter",
+        "bisap"
+      ],
+      "quiz": [
+        {
+          "id": "severe-acute-pancreatitis-q1",
+          "stem": "Severe acute pancreatitis (revised Atlanta) is defined by:",
+          "options": [
+            "Lipase > 10x normal",
+            "Persistent organ failure > 48 h",
+            "Any necrosis on CT",
+            "CRP > 150"
+          ],
+          "answerIndex": 1,
+          "explanation": "Severity is defined by organ failure duration."
+        },
+        {
+          "id": "severe-acute-pancreatitis-q2",
+          "stem": "WATERFALL trial found aggressive fluid resuscitation:",
+          "options": [
+            "Reduced mortality",
+            "Increased fluid overload without benefit",
+            "Reduced necrosis",
+            "Reduced pain"
+          ],
+          "answerIndex": 1,
+          "explanation": "Moderate fluids are recommended."
+        },
+        {
+          "id": "severe-acute-pancreatitis-q3",
+          "stem": "Prophylactic antibiotics in sterile necrotising pancreatitis:",
+          "options": [
+            "Recommended (carbapenem)",
+            "Not recommended",
+            "Only metronidazole",
+            "Only antifungals"
+          ],
+          "answerIndex": 1,
+          "explanation": "Treat only proven/suspected infection."
+        },
+        {
+          "id": "severe-acute-pancreatitis-q4",
+          "stem": "Timing of intervention for infected necrosis when stable:",
+          "options": [
+            "Immediately on day 2",
+            "Delay ≥ 4 weeks until walled off if possible",
+            "Never",
+            "Within 24 h"
+          ],
+          "answerIndex": 1,
+          "explanation": "Delayed, step-up approach."
+        }
+      ]
+    },
+    {
+      "id": "abdominal-compartment-syndrome",
+      "title": "Intra-abdominal hypertension and compartment syndrome",
+      "summary": "Measure IAP correctly, grade IAH, and treat ACS with the WSACS stepwise approach up to decompressive laparotomy.",
+      "viewKey": "topic:gi-bleeding-abdominal-emergencies/abdominal-compartment-syndrome",
+      "uiHints": {
+        "icon": "gauge",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "IAH = sustained IAP ≥ 12 mmHg (grade I 12-15, II 16-20, III 21-25, IV > 25). Abdominal compartment syndrome = sustained IAP > 20 mmHg with new organ dysfunction. APP = MAP - IAP (target ≥ 60 mmHg).",
+          "refs": [
+            "wsacs-2013"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Who to measure",
+            "detail": "Two or more risk factors: massive fluid resuscitation/positive balance, massive transfusion, pancreatitis, abdominal surgery/trauma, ileus, ascites, burns, prone position, high PEEP, obesity, sepsis.",
+            "refs": [
+              "wsacs-2013"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Measure via bladder",
+            "detail": "Supine, end-expiration, transducer zeroed at mid-axillary line at iliac crest, instil ≤ 25 mL sterile saline, wait 30-60 s, read in mmHg. Repeat 4-6 hourly in IAH.",
+            "refs": [
+              "wsacs-2013"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Evacuate intraluminal contents",
+            "detail": "Nasogastric and rectal decompression, prokinetics, enemas, endoscopic decompression.",
+            "refs": [
+              "wsacs-2013"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Evacuate intra-abdominal fluid",
+            "detail": "Percutaneous drainage of ascites/collections (ultrasound-guided).",
+            "refs": [
+              "wsacs-2013"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Improve wall compliance",
+            "detail": "Adequate analgesia/sedation, avoid head-up > 30°, remove tight dressings/binders, neuromuscular blockade trial for refractory cases.",
+            "refs": [
+              "wsacs-2013"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Optimise fluids",
+            "detail": "Avoid positive fluid balance after initial resuscitation; diuretics or ultrafiltration (RRT); use hypertonic/colloid if appropriate.",
+            "refs": [
+              "wsacs-2013"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Decompressive laparotomy",
+            "detail": "For refractory ACS with organ dysfunction; temporary abdominal closure (vacuum).",
+            "refs": [
+              "wsacs-2013"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "iah-grades",
+            "title": "IAH grading",
+            "columns": [
+              "Grade",
+              "IAP (mmHg)"
+            ],
+            "rows": [
+              [
+                "I",
+                "12-15"
+              ],
+              [
+                "II",
+                "16-20"
+              ],
+              [
+                "III",
+                "21-25"
+              ],
+              [
+                "IV",
+                "> 25"
+              ],
+              [
+                "ACS",
+                "> 20 + new organ dysfunction"
+              ]
+            ],
+            "refs": [
+              "wsacs-2013"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Rising airway pressures, oliguria and falling cardiac output in a tense distended abdomen: measure IAP now.",
+            "refs": [
+              "wsacs-2013"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Measuring IAP with the patient head-up, with active abdominal muscle contraction, or using > 25 mL saline: falsely high.",
+            "refs": [
+              "wsacs-2013"
+            ]
+          },
+          {
+            "text": "Treating oliguria from ACS with more fluid boluses.",
+            "refs": [
+              "wsacs-2013"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Clinical examination of abdominal tension is unreliable; measure.",
+            "refs": [
+              "wsacs-2013"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "IAH / ACS management",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Risk factors for IAH"
+          },
+          {
+            "id": "meas",
+            "type": "action",
+            "text": "Measure bladder pressure (supine, end-expiration, ≤ 25 mL)"
+          },
+          {
+            "id": "iah",
+            "type": "decision",
+            "text": "IAP ≥ 12 mmHg?"
+          },
+          {
+            "id": "rep",
+            "type": "end",
+            "text": "Repeat if clinical change"
+          },
+          {
+            "id": "med",
+            "type": "action",
+            "text": "Medical steps: NG/rectal decompression, drain fluid, sedation/analgesia, avoid positive balance"
+          },
+          {
+            "id": "acs",
+            "type": "decision",
+            "text": "IAP > 20 with new organ dysfunction despite medical therapy?"
+          },
+          {
+            "id": "lap",
+            "type": "end",
+            "text": "Decompressive laparotomy",
+            "severity": "critical"
+          },
+          {
+            "id": "mon",
+            "type": "end",
+            "text": "Continue measures; IAP 4-6 hourly; target APP ≥ 60"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "meas"
+          },
+          {
+            "from": "meas",
+            "to": "iah"
+          },
+          {
+            "from": "iah",
+            "to": "rep",
+            "label": "No"
+          },
+          {
+            "from": "iah",
+            "to": "med",
+            "label": "Yes"
+          },
+          {
+            "from": "med",
+            "to": "acs"
+          },
+          {
+            "from": "acs",
+            "to": "lap",
+            "label": "Yes"
+          },
+          {
+            "from": "acs",
+            "to": "mon",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "wsacs-2013"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Raised IAP compresses the IVC (reducing venous return), splints the diaphragm (reducing compliance, raising airway pressures), compresses renal veins and parenchyma (oliguria) and reduces splanchnic perfusion, causing gut ischaemia and further oedema.",
+        "evidence": "- WSACS 2013 consensus definitions and stepwise medical/surgical management algorithm [Kirkpatrick 2013].",
+        "controversies": "- Optimal APP target; prophylactic open abdomen in damage-control surgery.",
+        "indiaNotes": "- IAP measurement needs only a urinary catheter, a three-way tap and a transducer (or manometer): cheap and feasible in all Indian ICUs."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "mean-arterial-pressure"
+      ],
+      "references": [
+        "wsacs-2013"
+      ],
+      "quiz": [
+        {
+          "id": "abdominal-compartment-syndrome-q1",
+          "stem": "ACS is defined as:",
+          "options": [
+            "IAP > 12 mmHg",
+            "Sustained IAP > 20 mmHg with new organ dysfunction",
+            "Any abdominal distension",
+            "IAP > 5"
+          ],
+          "answerIndex": 1,
+          "explanation": "WSACS 2013."
+        },
+        {
+          "id": "abdominal-compartment-syndrome-q2",
+          "stem": "Maximum saline instilled for bladder IAP measurement:",
+          "options": [
+            "10 mL",
+            "25 mL",
+            "100 mL",
+            "250 mL"
+          ],
+          "answerIndex": 1,
+          "explanation": "More volume overestimates IAP."
+        },
+        {
+          "id": "abdominal-compartment-syndrome-q3",
+          "stem": "Abdominal perfusion pressure target:",
+          "options": [
+            "≥ 30 mmHg",
+            "≥ 60 mmHg",
+            "≥ 90 mmHg",
+            "No target"
+          ],
+          "answerIndex": 1,
+          "explanation": "APP = MAP - IAP."
+        }
+      ]
+    },
+    {
+      "id": "mesenteric-ischaemia",
+      "title": "Acute mesenteric ischaemia",
+      "summary": "High suspicion, immediate CT angiography, heparin, antibiotics and urgent revascularisation or laparotomy.",
+      "viewKey": "topic:gi-bleeding-abdominal-emergencies/mesenteric-ischaemia",
+      "uiHints": {
+        "icon": "alert-triangle",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Acute mesenteric ischaemia (AMI): arterial embolism (~50%, often AF), arterial thrombosis (atherosclerosis), non-occlusive (NOMI, low-flow shock, vasopressors) or mesenteric venous thrombosis. Mortality 50-80%; time is bowel.",
+          "refs": [
+            "wses-ami-2022"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Suspect",
+            "detail": "Severe abdominal pain out of proportion to examination, AF, recent MI, vasculopathy, shock on vasopressors, hypercoagulable states; later peritonitis, bloody stools, rising lactate.",
+            "refs": [
+              "wses-ami-2022"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "CT angiography immediately",
+            "detail": "Biphasic CTA as soon as suspected; do not delay for creatinine. Lactate and D-dimer are not sensitive enough to exclude.",
+            "time": "< 1 h",
+            "refs": [
+              "wses-ami-2022"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Start treatment",
+            "detail": "Fluid resuscitation, UFH 80 units/kg bolus then infusion (unless contraindicated), broad-spectrum antibiotics, NG decompression, analgesia.",
+            "time": "ASAP",
+            "refs": [
+              "wses-ami-2022"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Revascularise",
+            "detail": "Arterial occlusion: endovascular (thrombectomy, stent) or open embolectomy/bypass; laparotomy if peritonitis to resect non-viable bowel; planned second-look at 24-48 h.",
+            "refs": [
+              "wses-ami-2022"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "NOMI",
+            "detail": "Treat cause of low flow, minimise vasoconstrictors, optimise cardiac output; intra-arterial vasodilator (papaverine) in specialist centres; laparotomy if peritonitis.",
+            "refs": [
+              "wses-ami-2022"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Venous thrombosis",
+            "detail": "Therapeutic anticoagulation; surgery if infarction; investigate thrombophilia/malignancy.",
+            "refs": [
+              "wses-ami-2022"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "ufh",
+            "role": "Anticoagulation in AMI",
+            "route": "IV",
+            "dose": "80 units/kg bolus then 18 units/kg/h",
+            "dilution": "25,000 units in 50 mL = 500 units/mL",
+            "target": "aPTT 1.5-2.5x control",
+            "workedExample": "70 kg: 5,600 units bolus, then 1,260 units/h = 2.5 mL/h",
+            "calculatorId": "infusion-rate-weight-hour",
+            "refs": [
+              "wses-ami-2022"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Unexplained metabolic acidosis/lactate rise in a ventilated patient on vasopressors with feed intolerance or distension: think NOMI.",
+            "refs": [
+              "wses-ami-2022"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "A normal lactate does not exclude early AMI.",
+            "refs": [
+              "wses-ami-2022"
+            ]
+          },
+          {
+            "text": "Delaying CTA because of AKI risk from contrast.",
+            "refs": [
+              "wses-ami-2022"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Bowel viability can be underestimated at first operation; a second-look laparotomy is standard after revascularisation.",
+            "refs": [
+              "wses-ami-2022"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Suspected acute mesenteric ischaemia",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Pain out of proportion ± AF/shock"
+          },
+          {
+            "id": "cta",
+            "type": "action",
+            "text": "Immediate CT angiography; fluids, heparin, antibiotics",
+            "severity": "critical"
+          },
+          {
+            "id": "type",
+            "type": "decision",
+            "text": "CTA finding?"
+          },
+          {
+            "id": "art",
+            "type": "action",
+            "text": "Arterial occlusion: endovascular or open revascularisation"
+          },
+          {
+            "id": "perit",
+            "type": "decision",
+            "text": "Peritonitis / non-viable bowel?"
+          },
+          {
+            "id": "lap",
+            "type": "end",
+            "text": "Laparotomy + resection + second look",
+            "severity": "critical"
+          },
+          {
+            "id": "icu",
+            "type": "end",
+            "text": "ICU care, anticoagulation, monitor lactate/abdomen"
+          },
+          {
+            "id": "ven",
+            "type": "end",
+            "text": "Venous thrombosis: anticoagulate; surgery if infarction"
+          },
+          {
+            "id": "nomi",
+            "type": "action",
+            "text": "NOMI: improve flow, reduce vasopressors, consider vasodilator"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "cta"
+          },
+          {
+            "from": "cta",
+            "to": "type"
+          },
+          {
+            "from": "type",
+            "to": "art",
+            "label": "Arterial"
+          },
+          {
+            "from": "type",
+            "to": "ven",
+            "label": "Venous"
+          },
+          {
+            "from": "type",
+            "to": "nomi",
+            "label": "Non-occlusive"
+          },
+          {
+            "from": "art",
+            "to": "perit"
+          },
+          {
+            "from": "nomi",
+            "to": "perit"
+          },
+          {
+            "from": "perit",
+            "to": "lap",
+            "label": "Yes"
+          },
+          {
+            "from": "perit",
+            "to": "icu",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "wses-ami-2022"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "The mucosa is most sensitive to ischaemia (villus tips); necrosis progresses transmurally over 6-12 h, with bacterial translocation, sepsis and perforation.",
+        "evidence": "- WSES 2022 guidelines: CTA without delay, systemic heparin, revascularisation and damage-control surgery [Bala 2022].",
+        "controversies": "- Endovascular-first vs open-first strategy; role of hybrid suites.",
+        "indiaNotes": "- Rheumatic heart disease with AF is an important embolic source in younger Indians; venous mesenteric thrombosis is associated with hypercoagulable states and cirrhosis."
+      },
+      "drugIds": [
+        "ufh"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-hour"
+      ],
+      "references": [
+        "wses-ami-2022"
+      ],
+      "quiz": [
+        {
+          "id": "mesenteric-ischaemia-q1",
+          "stem": "First-line investigation for suspected AMI:",
+          "options": [
+            "Plain X-ray",
+            "CT angiography",
+            "Lactate only",
+            "Colonoscopy"
+          ],
+          "answerIndex": 1,
+          "explanation": "Immediate CTA."
+        },
+        {
+          "id": "mesenteric-ischaemia-q2",
+          "stem": "Commonest cause of AMI:",
+          "options": [
+            "Venous thrombosis",
+            "Arterial embolism (e.g. AF)",
+            "NOMI",
+            "Volvulus"
+          ],
+          "answerIndex": 1,
+          "explanation": "Embolism accounts for about half."
+        },
+        {
+          "id": "mesenteric-ischaemia-q3",
+          "stem": "Normal lactate in suspected AMI:",
+          "options": [
+            "Excludes AMI",
+            "Does not exclude AMI",
+            "Means NOMI",
+            "Means venous thrombosis"
+          ],
+          "answerIndex": 1,
+          "explanation": "Lactate is insensitive early."
+        }
+      ]
+    },
+    {
+      "id": "ileus-pseudo-obstruction",
+      "title": "Ileus and acute colonic pseudo-obstruction",
+      "summary": "Recognise ICU ileus, exclude mechanical obstruction, correct causes, and treat Ogilvie syndrome with neostigmine or decompression.",
+      "viewKey": "topic:gi-bleeding-abdominal-emergencies/ileus-pseudo-obstruction",
+      "uiHints": {
+        "icon": "waves",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Ileus = functional impairment of gut motility without mechanical obstruction (post-operative, sepsis, opioids, electrolytes). Acute colonic pseudo-obstruction (Ogilvie) = massive colonic dilatation without obstruction; caecal diameter > 10-12 cm raises perforation risk.",
+          "refs": [
+            "ponec-1999"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Exclude mechanical obstruction",
+            "detail": "Examine hernias and scars; abdominal X-ray and CT (transition point, volvulus, closed loop) if any doubt.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Correct contributors",
+            "detail": "Keep K > 4 mmol/L and Mg > 2 mg/dL, correct phosphate and glucose; reduce opioids (multimodal analgesia), stop anticholinergics, treat sepsis, mobilise early.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Decompress",
+            "detail": "Nasogastric tube for vomiting/gastric distension; rectal tube; avoid feeding into a distended dilated stomach (trickle feeds once tolerated).",
+            "refs": [
+              "wsacs-2013",
+              "ibcc"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Prokinetics",
+            "detail": "Metoclopramide 10 mg IV q8h (upper GI), erythromycin 250 mg IV q8h; for opioid-induced constipation consider methylnaltrexone (where available) or laxatives.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Ogilvie: neostigmine",
+            "detail": "If caecum > 10 cm or no improvement after 24-48 h conservative care and no contraindication: neostigmine 2 mg IV over 3-5 min with cardiac monitoring and atropine ready; patient supine on bedpan.",
+            "refs": [
+              "ponec-1999"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Colonoscopic decompression or surgery",
+            "detail": "If neostigmine fails/contraindicated: colonoscopic decompression ± tube; surgery for perforation, ischaemia or failure.",
+            "refs": [
+              "ponec-1999"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Monitor IAP",
+            "detail": "Severe distension can cause IAH/ACS.",
+            "refs": [
+              "wsacs-2013"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "neostigmine",
+            "role": "Acute colonic pseudo-obstruction",
+            "route": "IV",
+            "dose": "2 mg over 3-5 min; repeat once if needed",
+            "workedExample": "2 mg (4 mL of 0.5 mg/mL) slow IV with ECG monitoring; atropine 0.6 mg drawn up",
+            "notes": "Expect evacuation within 30 min in responders.",
+            "refs": [
+              "ponec-1999"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Caecal diameter > 12 cm, tenderness, fever or peritonism in pseudo-obstruction: risk of perforation - urgent surgical review.",
+            "refs": [
+              "ponec-1999"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Giving neostigmine before excluding mechanical obstruction.",
+            "refs": [
+              "ponec-1999"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Most neostigmine responders pass flatus or stool within 30 minutes; recurrence occurs in a minority and a second dose may be given.",
+            "refs": [
+              "ponec-1999"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "ICU ileus / colonic distension",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Distension, vomiting, no stool/flatus"
+          },
+          {
+            "id": "mech",
+            "type": "decision",
+            "text": "Mechanical obstruction on exam/CT?"
+          },
+          {
+            "id": "surg",
+            "type": "end",
+            "text": "Surgical management",
+            "severity": "high"
+          },
+          {
+            "id": "cons",
+            "type": "action",
+            "text": "Correct K/Mg/PO4, reduce opioids, NG/rectal tube, mobilise"
+          },
+          {
+            "id": "colon",
+            "type": "decision",
+            "text": "Colonic dilatation, caecum > 10 cm or no response at 48 h?"
+          },
+          {
+            "id": "neo",
+            "type": "action",
+            "text": "Neostigmine 2 mg IV with monitoring (if no contraindication)"
+          },
+          {
+            "id": "resp",
+            "type": "decision",
+            "text": "Decompressed?"
+          },
+          {
+            "id": "scope",
+            "type": "end",
+            "text": "Colonoscopic decompression / surgery",
+            "severity": "high"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Continue conservative care; reintroduce feeds"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "mech"
+          },
+          {
+            "from": "mech",
+            "to": "surg",
+            "label": "Yes"
+          },
+          {
+            "from": "mech",
+            "to": "cons",
+            "label": "No"
+          },
+          {
+            "from": "cons",
+            "to": "colon"
+          },
+          {
+            "from": "colon",
+            "to": "neo",
+            "label": "Yes"
+          },
+          {
+            "from": "colon",
+            "to": "cont",
+            "label": "No"
+          },
+          {
+            "from": "neo",
+            "to": "resp"
+          },
+          {
+            "from": "resp",
+            "to": "cont",
+            "label": "Yes"
+          },
+          {
+            "from": "resp",
+            "to": "scope",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "ponec-1999"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Sympathetic overactivity, inflammation, opioids and electrolyte disturbances inhibit propulsive motility. In Ogilvie syndrome, autonomic imbalance (reduced parasympathetic tone) dilates the colon; by Laplace's law the caecum, with the largest diameter, has the highest wall tension.",
+        "evidence": "- Ponec 1999 RCT: neostigmine produced prompt decompression in 10/11 patients vs 0/10 with placebo [Ponec 1999].",
+        "controversies": "- Neostigmine infusion vs bolus; prophylactic PEG/osmotic laxatives after decompression.",
+        "indiaNotes": "- Methylnaltrexone and alvimopan are not widely available in India; neostigmine and colonoscopy are the practical options."
+      },
+      "drugIds": [
+        "neostigmine"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "ponec-1999",
+        "wsacs-2013",
+        "ibcc"
+      ],
+      "quiz": [
+        {
+          "id": "ileus-pseudo-obstruction-q1",
+          "stem": "Caecal diameter associated with high perforation risk:",
+          "options": [
+            "> 4 cm",
+            "> 10-12 cm",
+            "> 6 cm",
+            "Any dilatation"
+          ],
+          "answerIndex": 1,
+          "explanation": "Risk increases above 10-12 cm."
+        },
+        {
+          "id": "ileus-pseudo-obstruction-q2",
+          "stem": "Before giving neostigmine you must:",
+          "options": [
+            "Give a laxative",
+            "Exclude mechanical obstruction",
+            "Start TPN",
+            "Give opioids"
+          ],
+          "answerIndex": 1,
+          "explanation": "Mechanical obstruction is a contraindication."
+        },
+        {
+          "id": "ileus-pseudo-obstruction-q3",
+          "stem": "Antidote to have ready when giving neostigmine:",
+          "options": [
+            "Naloxone",
+            "Atropine",
+            "Flumazenil",
+            "Calcium"
+          ],
+          "answerIndex": 1,
+          "explanation": "For bradycardia."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "terlipressin",
+      "name": "Terlipressin",
+      "class": "Vasopressin analogue (splanchnic vasoconstrictor)",
+      "indications": "Acute variceal bleeding",
+      "adultDose": "2 mg IV every 4 h until bleeding controlled (first 48 h), then 1 mg every 4 h; continue 2-5 days.",
+      "preparationIndia": "1 mg vials; give as IV bolus.",
+      "cautions": "Ischaemia (cardiac, mesenteric, digital), hyponatraemia, bradycardia; avoid in significant IHD/PVD.",
+      "refs": [
+        "baveno7"
+      ]
+    },
+    {
+      "id": "octreotide",
+      "name": "Octreotide",
+      "class": "Somatostatin analogue",
+      "indications": "Variceal bleeding (alternative to terlipressin)",
+      "adultDose": "50 mcg IV bolus, then 50 mcg/h infusion for 2-5 days.",
+      "preparationIndia": "100 mcg/mL ampoules; 500 mcg in 50 mL NS = 10 mcg/mL (5 mL/h = 50 mcg/h).",
+      "cautions": "Hyper/hypoglycaemia, bradycardia.",
+      "refs": [
+        "baveno7"
+      ]
+    },
+    {
+      "id": "ceftriaxone",
+      "name": "Ceftriaxone",
+      "class": "Third-generation cephalosporin",
+      "indications": "Antibiotic prophylaxis in cirrhosis with GI bleeding",
+      "adultDose": "1 g IV once daily for up to 7 days.",
+      "preparationIndia": "1 g vials.",
+      "cautions": "Choose per local resistance (e.g. if high ESBL rates).",
+      "refs": [
+        "baveno7"
+      ]
+    },
+    {
+      "id": "erythromycin",
+      "name": "Erythromycin",
+      "class": "Macrolide (motilin agonist)",
+      "indications": "Pre-endoscopy gastric emptying in UGIB",
+      "adultDose": "250 mg IV over 30 min, 30-120 min before endoscopy.",
+      "preparationIndia": "IV erythromycin lactobionate has limited availability in India.",
+      "cautions": "QT prolongation; drug interactions.",
+      "verify": "IV erythromycin may be unavailable in many Indian hospitals.",
+      "refs": [
+        "esge-nvugih-2021"
+      ]
+    },
+    {
+      "id": "pantoprazole",
+      "name": "Pantoprazole (or esomeprazole)",
+      "class": "Proton pump inhibitor",
+      "indications": "Non-variceal (peptic ulcer) bleeding",
+      "adultDose": "Pre-endoscopy: 80 mg IV bolus. After endoscopic therapy of high-risk ulcer: 80 mg bolus then 8 mg/h for 72 h, or 40 mg IV twice daily (intermittent high dose, non-inferior); then oral twice daily to complete 2 weeks.",
+      "preparationIndia": "40 mg vials; infusion 80 mg in 100 mL NS (0.8 mg/mL) at 10 mL/h = 8 mg/h.",
+      "refs": [
+        "esge-nvugih-2021",
+        "acg-ugib-2021"
+      ]
+    },
+    {
+      "id": "lactated-ringer",
+      "name": "Ringer lactate",
+      "class": "Balanced crystalloid",
+      "indications": "Acute pancreatitis fluid resuscitation",
+      "adultDose": "Hypovolaemic: 10 mL/kg bolus, then 1.5 mL/kg/h; reassess at 3, 12, 24, 48 and 72 h (WATERFALL moderate strategy). Not hypovolaemic: 1.5 mL/kg/h without bolus.",
+      "preparationIndia": "500 mL / 1 L bags.",
+      "cautions": "Aggressive fluids (20 mL/kg bolus + 3 mL/kg/h) increased fluid overload without benefit.",
+      "refs": [
+        "waterfall",
+        "acg-pancreatitis-2024"
+      ]
+    },
+    {
+      "id": "ufh",
+      "name": "Unfractionated heparin",
+      "class": "Anticoagulant",
+      "indications": "Acute mesenteric ischaemia (arterial and venous)",
+      "adultDose": "80 units/kg IV bolus, then 18 units/kg/h titrated to aPTT 1.5-2.5x control.",
+      "preparationIndia": "25,000 units in 50 mL = 500 units/mL.",
+      "refs": [
+        "wses-ami-2022"
+      ]
+    },
+    {
+      "id": "neostigmine",
+      "name": "Neostigmine",
+      "class": "Acetylcholinesterase inhibitor",
+      "indications": "Acute colonic pseudo-obstruction (Ogilvie) not responding to conservative care",
+      "adultDose": "2 mg IV over 3-5 min with cardiac monitoring; may repeat once. Atropine 0.6-1 mg at bedside for bradycardia.",
+      "preparationIndia": "0.5 mg/mL ampoules.",
+      "cautions": "Contraindicated in mechanical obstruction, perforation, recent bowel anastomosis, bradycardia, active bronchospasm.",
+      "refs": [
+        "ponec-1999"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "baveno7",
+      "citation": "de Franchis R, Bosch J, Garcia-Tsao G, et al. Baveno VII - Renewing consensus in portal hypertension. J Hepatol 2022;76:959-74.",
+      "url": "https://doi.org/10.1016/j.jhep.2021.12.022",
+      "year": 2022,
+      "type": "consensus",
+      "doi": "10.1016/j.jhep.2021.12.022"
+    },
+    {
+      "id": "ibcc",
+      "citation": "Farkas J. The Internet Book of Critical Care (IBCC). EMCrit Project; continuously updated.",
+      "url": "https://emcrit.org/ibcc/toc/",
+      "year": 2024,
+      "type": "textbook"
+    },
+    {
+      "id": "esge-nvugih-2021",
+      "citation": "Gralnek IM, Stanley AJ, Morris AJ, et al. Endoscopic diagnosis and management of nonvariceal upper gastrointestinal hemorrhage (NVUGIH): ESGE Guideline - Update 2021. Endoscopy 2021;53:300-32.",
+      "url": "https://doi.org/10.1055/a-1369-5274",
+      "year": 2021,
+      "type": "guideline",
+      "doi": "10.1055/a-1369-5274"
+    },
+    {
+      "id": "acg-ugib-2021",
+      "citation": "Laine L, Barkun AN, Saltzman JR, Martel M, Leontiadis GI. ACG Clinical Guideline: Upper Gastrointestinal and Ulcer Bleeding. Am J Gastroenterol 2021;116:899-917.",
+      "url": "https://doi.org/10.14309/ajg.0000000000001245",
+      "year": 2021,
+      "type": "guideline",
+      "doi": "10.14309/ajg.0000000000001245"
+    },
+    {
+      "id": "blatchford-2000",
+      "citation": "Blatchford O, Murray WR, Blatchford M. A risk score to predict need for treatment for upper-gastrointestinal haemorrhage. Lancet 2000;356:1318-21.",
+      "url": "https://doi.org/10.1016/S0140-6736(00)02816-6",
+      "year": 2000,
+      "type": "trial",
+      "doi": "10.1016/S0140-6736(00)02816-6"
+    },
+    {
+      "id": "villanueva-2013",
+      "citation": "Villanueva C, Colomo A, Bosch A, et al. Transfusion strategies for acute upper gastrointestinal bleeding. N Engl J Med 2013;368:11-21.",
+      "url": "https://doi.org/10.1056/NEJMoa1211801",
+      "year": 2013,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1211801"
+    },
+    {
+      "id": "halt-it",
+      "citation": "HALT-IT Trial Collaborators. Effects of a high-dose 24-h infusion of tranexamic acid on death and thromboembolic events in patients with acute gastrointestinal bleeding (HALT-IT). Lancet 2020;395:1927-36.",
+      "url": "https://doi.org/10.1016/S0140-6736(20)30848-5",
+      "year": 2020,
+      "type": "trial",
+      "doi": "10.1016/S0140-6736(20)30848-5"
+    },
+    {
+      "id": "lau-2020",
+      "citation": "Lau JYW, Yu Y, Tang RSY, et al. Timing of endoscopy for acute upper gastrointestinal bleeding. N Engl J Med 2020;382:1299-308.",
+      "url": "https://doi.org/10.1056/NEJMoa1912484",
+      "year": 2020,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1912484"
+    },
+    {
+      "id": "atlanta-2012",
+      "citation": "Banks PA, Bollen TL, Dervenis C, et al. Classification of acute pancreatitis - 2012: revision of the Atlanta classification and definitions by international consensus. Gut 2013;62:102-11.",
+      "url": "https://doi.org/10.1136/gutjnl-2012-302779",
+      "year": 2012,
+      "type": "consensus",
+      "doi": "10.1136/gutjnl-2012-302779"
+    },
+    {
+      "id": "waterfall",
+      "citation": "de-Madaria E, Buxbaum JL, Maisonneuve P, et al. Aggressive or moderate fluid resuscitation in acute pancreatitis (WATERFALL). N Engl J Med 2022;387:989-1000.",
+      "url": "https://doi.org/10.1056/NEJMoa2202884",
+      "year": 2022,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa2202884"
+    },
+    {
+      "id": "acg-pancreatitis-2024",
+      "citation": "Tenner S, Vege SS, Sheth SG, et al. American College of Gastroenterology Guidelines: Management of Acute Pancreatitis. Am J Gastroenterol 2024;119:419-37.",
+      "url": "https://doi.org/10.14309/ajg.0000000000002645",
+      "year": 2024,
+      "type": "guideline",
+      "doi": "10.14309/ajg.0000000000002645"
+    },
+    {
+      "id": "panter",
+      "citation": "van Santvoort HC, Besselink MG, Bakker OJ, et al. A step-up approach or open necrosectomy for necrotizing pancreatitis (PANTER). N Engl J Med 2010;362:1491-502.",
+      "url": "https://doi.org/10.1056/NEJMoa0908821",
+      "year": 2010,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa0908821"
+    },
+    {
+      "id": "bisap",
+      "citation": "Wu BU, Johannes RS, Sun X, et al. The early prediction of mortality in acute pancreatitis: a large population-based study. Gut 2008;57:1698-703.",
+      "url": "https://doi.org/10.1136/gut.2008.152702",
+      "year": 2008,
+      "type": "trial",
+      "doi": "10.1136/gut.2008.152702"
+    },
+    {
+      "id": "wsacs-2013",
+      "citation": "Kirkpatrick AW, Roberts DJ, De Waele J, et al. Intra-abdominal hypertension and the abdominal compartment syndrome: updated consensus definitions and clinical practice guidelines from the World Society of the Abdominal Compartment Syndrome. Intensive Care Med 2013;39:1190-206.",
+      "url": "https://doi.org/10.1007/s00134-013-2906-z",
+      "year": 2013,
+      "type": "guideline",
+      "doi": "10.1007/s00134-013-2906-z"
+    },
+    {
+      "id": "wses-ami-2022",
+      "citation": "Bala M, Catena F, Kashuk J, et al. Acute mesenteric ischemia: updated guidelines of the World Society of Emergency Surgery. World J Emerg Surg 2022;17:54.",
+      "url": "https://doi.org/10.1186/s13017-022-00443-x",
+      "year": 2022,
+      "type": "guideline",
+      "doi": "10.1186/s13017-022-00443-x"
+    },
+    {
+      "id": "ponec-1999",
+      "citation": "Ponec RJ, Saunders MD, Kimmey MB. Neostigmine for the treatment of acute colonic pseudo-obstruction. N Engl J Med 1999;341:137-41.",
+      "url": "https://doi.org/10.1056/NEJM199907153410301",
+      "year": 1999,
+      "type": "trial",
+      "doi": "10.1056/NEJM199907153410301"
+    }
+  ]
+}

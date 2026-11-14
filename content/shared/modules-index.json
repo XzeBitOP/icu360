@@ -1,0 +1,802 @@
+{
+  "schemaVersion": "1.0.0",
+  "description": "Master list of all 40 ICU 360 modules. Module ids, numbers, folders, sections and phases here are FIXED; module.json files must match. plannedTopics is the approved scope from the plan Page; authors may split or merge topics but must cover all of them.",
+  "sections": [
+    {
+      "id": "A",
+      "title": "Resuscitation and emergencies"
+    },
+    {
+      "id": "B",
+      "title": "Airway and respiratory"
+    },
+    {
+      "id": "C",
+      "title": "Cardiovascular and haemodynamics"
+    },
+    {
+      "id": "D",
+      "title": "Renal, fluids and metabolic"
+    },
+    {
+      "id": "E",
+      "title": "Neuro-critical care"
+    },
+    {
+      "id": "F",
+      "title": "GI, liver and haematology"
+    },
+    {
+      "id": "G",
+      "title": "Infections"
+    },
+    {
+      "id": "H",
+      "title": "Toxicology and envenomation"
+    },
+    {
+      "id": "I",
+      "title": "Special populations"
+    },
+    {
+      "id": "J",
+      "title": "ICU care and pharmacology"
+    },
+    {
+      "id": "K",
+      "title": "Skills and professional practice"
+    }
+  ],
+  "modules": [
+    {
+      "number": 1,
+      "id": "deteriorating-patient-icu-triage",
+      "folder": "01-deteriorating-patient-icu-triage",
+      "section": "A",
+      "sectionTitle": "Resuscitation and emergencies",
+      "phase": 2,
+      "title": "Deteriorating patient and ICU triage",
+      "plannedTopics": [
+        "ABCDE approach",
+        "NEWS2 and qSOFA",
+        "rapid response calls",
+        "ICU admission and discharge criteria (ISCCM)",
+        "bed triage when beds are short"
+      ],
+      "icon": "activity",
+      "accent": "high"
+    },
+    {
+      "number": 2,
+      "id": "cardiac-arrest-post-rosc",
+      "folder": "02-cardiac-arrest-post-rosc",
+      "section": "A",
+      "sectionTitle": "Resuscitation and emergencies",
+      "phase": 1,
+      "title": "Cardiac arrest and post-ROSC care",
+      "plannedTopics": [
+        "BLS/ACLS algorithms",
+        "peri-arrest rhythms",
+        "Hs and Ts",
+        "post-ROSC bundle",
+        "temperature control and prognostication"
+      ],
+      "icon": "heart-pulse",
+      "accent": "critical"
+    },
+    {
+      "number": 3,
+      "id": "shock-vasoactive-support",
+      "folder": "03-shock-vasoactive-support",
+      "section": "A",
+      "sectionTitle": "Resuscitation and emergencies",
+      "phase": 1,
+      "title": "Shock and vasoactive support",
+      "plannedTopics": [
+        "Shock classification",
+        "fluid responsiveness",
+        "noradrenaline, vasopressin, adrenaline",
+        "inotropes",
+        "cardiogenic shock basics",
+        "lactate"
+      ],
+      "icon": "droplets",
+      "accent": "critical"
+    },
+    {
+      "number": 4,
+      "id": "sepsis-septic-shock",
+      "folder": "04-sepsis-septic-shock",
+      "section": "A",
+      "sectionTitle": "Resuscitation and emergencies",
+      "phase": 1,
+      "title": "Sepsis and septic shock",
+      "plannedTopics": [
+        "Recognition (Sepsis-3)",
+        "hour-1 bundle",
+        "antibiotic timing",
+        "source control",
+        "steroids in shock",
+        "de-escalation"
+      ],
+      "icon": "shield-alert",
+      "accent": "critical"
+    },
+    {
+      "number": 5,
+      "id": "trauma-burns-environmental",
+      "folder": "05-trauma-burns-environmental",
+      "section": "A",
+      "sectionTitle": "Resuscitation and emergencies",
+      "phase": 2,
+      "title": "Trauma, burns and environmental emergencies",
+      "plannedTopics": [
+        "Primary survey and massive transfusion",
+        "chest and abdominal trauma",
+        "burns (Parkland, inhalation injury)",
+        "heat stroke",
+        "drowning",
+        "hypothermia and electrical injury"
+      ],
+      "icon": "flame",
+      "accent": "critical"
+    },
+    {
+      "number": 6,
+      "id": "airway-management",
+      "folder": "06-airway-management",
+      "section": "B",
+      "sectionTitle": "Airway and respiratory",
+      "phase": 1,
+      "title": "Airway management",
+      "plannedTopics": [
+        "RSI drugs and checklist",
+        "preoxygenation",
+        "difficult airway algorithm (DAS/AIDAA)",
+        "CICO",
+        "post-intubation care",
+        "extubation and failed extubation"
+      ],
+      "icon": "wind",
+      "accent": "critical"
+    },
+    {
+      "number": 7,
+      "id": "oxygen-hfnc-niv",
+      "folder": "07-oxygen-hfnc-niv",
+      "section": "B",
+      "sectionTitle": "Airway and respiratory",
+      "phase": 1,
+      "title": "Oxygen therapy, HFNC and NIV",
+      "plannedTopics": [
+        "Type 1 vs 2 failure",
+        "oxygen devices and targets",
+        "HFNC and ROX index",
+        "NIV in COPD and pulmonary oedema",
+        "severe asthma and AECOPD"
+      ],
+      "icon": "air-vent",
+      "accent": "high"
+    },
+    {
+      "number": 8,
+      "id": "mechanical-ventilation",
+      "folder": "08-mechanical-ventilation",
+      "section": "B",
+      "sectionTitle": "Airway and respiratory",
+      "phase": 1,
+      "title": "Mechanical ventilation",
+      "plannedTopics": [
+        "Initial settings from PBW",
+        "VC vs PC vs PSV",
+        "alarms and DOPES",
+        "ventilator graphics and asynchrony",
+        "SBT and weaning",
+        "tracheostomy timing"
+      ],
+      "icon": "gauge",
+      "accent": "high"
+    },
+    {
+      "number": 9,
+      "id": "ards-refractory-hypoxaemia",
+      "folder": "09-ards-refractory-hypoxaemia",
+      "section": "B",
+      "sectionTitle": "Airway and respiratory",
+      "phase": 1,
+      "title": "ARDS and refractory hypoxaemia",
+      "plannedTopics": [
+        "Definition and severity",
+        "lung-protective ventilation",
+        "PEEP strategy and driving pressure",
+        "prone positioning",
+        "neuromuscular blockade",
+        "rescue and ECMO referral"
+      ],
+      "icon": "waves",
+      "accent": "critical"
+    },
+    {
+      "number": 10,
+      "id": "cardiac-emergencies-arrhythmias",
+      "folder": "10-cardiac-emergencies-arrhythmias",
+      "section": "C",
+      "sectionTitle": "Cardiovascular and haemodynamics",
+      "phase": 1,
+      "title": "Cardiac emergencies and arrhythmias",
+      "plannedTopics": [
+        "ACS in ICU",
+        "acute heart failure and pulmonary oedema",
+        "AF with RVR",
+        "VT and broad-complex tachycardia",
+        "bradycardia and pacing",
+        "hypertensive emergencies"
+      ],
+      "icon": "heart",
+      "accent": "critical"
+    },
+    {
+      "number": 11,
+      "id": "pe-tamponade-aortic-emergencies",
+      "folder": "11-pe-tamponade-aortic-emergencies",
+      "section": "C",
+      "sectionTitle": "Cardiovascular and haemodynamics",
+      "phase": 2,
+      "title": "PE, tamponade and aortic emergencies",
+      "plannedTopics": [
+        "PE risk stratification and thrombolysis",
+        "RV failure",
+        "tamponade and pericardiocentesis",
+        "aortic dissection BP and HR targets",
+        "ruptured AAA"
+      ],
+      "icon": "heart-crack",
+      "accent": "critical"
+    },
+    {
+      "number": 12,
+      "id": "haemodynamic-monitoring",
+      "folder": "12-haemodynamic-monitoring",
+      "section": "C",
+      "sectionTitle": "Cardiovascular and haemodynamics",
+      "phase": 2,
+      "title": "Haemodynamic monitoring",
+      "plannedTopics": [
+        "Arterial waveform and damping",
+        "CVP and ScvO2",
+        "PPV and passive leg raise",
+        "cardiac output monitors",
+        "CO2 gap and lactate"
+      ],
+      "icon": "line-chart",
+      "accent": "standard"
+    },
+    {
+      "number": 13,
+      "id": "pocus-critical-care-echo",
+      "folder": "13-pocus-critical-care-echo",
+      "section": "C",
+      "sectionTitle": "Cardiovascular and haemodynamics",
+      "phase": 1,
+      "title": "POCUS and critical care echo",
+      "plannedTopics": [
+        "RUSH and shock protocol",
+        "focused echo views",
+        "LV, RV and IVC",
+        "lung ultrasound (BLUE, B-lines)",
+        "eFAST",
+        "DVT compression scan"
+      ],
+      "icon": "scan-line",
+      "accent": "standard"
+    },
+    {
+      "number": 14,
+      "id": "ecmo-mechanical-circulatory-support",
+      "folder": "14-ecmo-mechanical-circulatory-support",
+      "section": "C",
+      "sectionTitle": "Cardiovascular and haemodynamics",
+      "phase": 3,
+      "title": "ECMO and mechanical circulatory support",
+      "plannedTopics": [
+        "VV vs VA ECMO indications",
+        "referral criteria",
+        "IABP and Impella basics",
+        "daily ECMO checks",
+        "complications"
+      ],
+      "icon": "refresh-cw",
+      "accent": "high"
+    },
+    {
+      "number": 15,
+      "id": "acid-base-abg",
+      "folder": "15-acid-base-abg",
+      "section": "D",
+      "sectionTitle": "Renal, fluids and metabolic",
+      "phase": 1,
+      "title": "Acid-base and ABG",
+      "plannedTopics": [
+        "Stepwise ABG approach",
+        "anion gap and albumin correction",
+        "delta ratio",
+        "Winter's formula",
+        "mixed disorders",
+        "VBG vs ABG"
+      ],
+      "icon": "flask-conical",
+      "accent": "standard"
+    },
+    {
+      "number": 16,
+      "id": "fluids-electrolytes",
+      "folder": "16-fluids-electrolytes",
+      "section": "D",
+      "sectionTitle": "Renal, fluids and metabolic",
+      "phase": 1,
+      "title": "Fluids and electrolytes",
+      "plannedTopics": [
+        "Crystalloid choice",
+        "hyponatraemia and safe correction",
+        "hypernatraemia",
+        "hyperkalaemia emergency",
+        "calcium, magnesium, phosphate",
+        "refeeding"
+      ],
+      "icon": "beaker",
+      "accent": "high"
+    },
+    {
+      "number": 17,
+      "id": "aki-renal-drug-dosing",
+      "folder": "17-aki-renal-drug-dosing",
+      "section": "D",
+      "sectionTitle": "Renal, fluids and metabolic",
+      "phase": 2,
+      "title": "AKI and renal drug dosing",
+      "plannedTopics": [
+        "KDIGO staging",
+        "AKI workup",
+        "rhabdomyolysis",
+        "contrast nephropathy",
+        "drug dosing in AKI",
+        "hepatorenal and cardiorenal"
+      ],
+      "icon": "filter",
+      "accent": "high"
+    },
+    {
+      "number": 18,
+      "id": "renal-replacement-therapy",
+      "folder": "18-renal-replacement-therapy",
+      "section": "D",
+      "sectionTitle": "Renal, fluids and metabolic",
+      "phase": 2,
+      "title": "Renal replacement therapy",
+      "plannedTopics": [
+        "Indications and timing",
+        "CRRT vs IHD vs SLED",
+        "prescribing dose",
+        "heparin vs citrate anticoagulation",
+        "filter clotting and troubleshooting",
+        "antibiotic dosing on CRRT"
+      ],
+      "icon": "repeat",
+      "accent": "standard"
+    },
+    {
+      "number": 19,
+      "id": "endocrine-metabolic-emergencies",
+      "folder": "19-endocrine-metabolic-emergencies",
+      "section": "D",
+      "sectionTitle": "Renal, fluids and metabolic",
+      "phase": 1,
+      "title": "Endocrine and metabolic emergencies",
+      "plannedTopics": [
+        "DKA and euglycaemic DKA",
+        "HHS",
+        "adrenal crisis",
+        "thyroid storm and myxoedema coma",
+        "ICU glucose control",
+        "hypoglycaemia"
+      ],
+      "icon": "syringe",
+      "accent": "high"
+    },
+    {
+      "number": 20,
+      "id": "neuro-emergencies",
+      "folder": "20-neuro-emergencies",
+      "section": "E",
+      "sectionTitle": "Neuro-critical care",
+      "phase": 1,
+      "title": "Neuro emergencies",
+      "plannedTopics": [
+        "Status epilepticus ladder",
+        "acute stroke and thrombolysis",
+        "ICH and SAH",
+        "coma approach and GCS/FOUR",
+        "meningitis and encephalitis",
+        "GBS and myasthenic crisis"
+      ],
+      "icon": "brain",
+      "accent": "critical"
+    },
+    {
+      "number": 21,
+      "id": "raised-icp-neurotrauma-brain-death",
+      "folder": "21-raised-icp-neurotrauma-brain-death",
+      "section": "E",
+      "sectionTitle": "Neuro-critical care",
+      "phase": 2,
+      "title": "Raised ICP, neurotrauma and brain-stem death",
+      "plannedTopics": [
+        "ICP and CPP targets",
+        "osmotherapy",
+        "TBI care (BTF)",
+        "post-craniotomy care",
+        "brain-stem death testing and apnoea test (THOA rules)"
+      ],
+      "icon": "brain-circuit",
+      "accent": "critical"
+    },
+    {
+      "number": 22,
+      "id": "gi-bleeding-abdominal-emergencies",
+      "folder": "22-gi-bleeding-abdominal-emergencies",
+      "section": "F",
+      "sectionTitle": "GI, liver and haematology",
+      "phase": 2,
+      "title": "GI bleeding and abdominal emergencies",
+      "plannedTopics": [
+        "Variceal and non-variceal UGIB",
+        "Glasgow-Blatchford",
+        "severe acute pancreatitis",
+        "abdominal compartment syndrome",
+        "mesenteric ischaemia",
+        "ileus"
+      ],
+      "icon": "droplet",
+      "accent": "critical"
+    },
+    {
+      "number": 23,
+      "id": "liver-failure",
+      "folder": "23-liver-failure",
+      "section": "F",
+      "sectionTitle": "GI, liver and haematology",
+      "phase": 2,
+      "title": "Liver failure",
+      "plannedTopics": [
+        "Acute liver failure and King's College criteria",
+        "ACLF",
+        "hepatic encephalopathy",
+        "hepatorenal syndrome",
+        "coagulopathy",
+        "transplant referral"
+      ],
+      "icon": "leaf",
+      "accent": "high"
+    },
+    {
+      "number": 24,
+      "id": "haematology-coagulation-transfusion",
+      "folder": "24-haematology-coagulation-transfusion",
+      "section": "F",
+      "sectionTitle": "GI, liver and haematology",
+      "phase": 2,
+      "title": "Haematology, coagulation and transfusion",
+      "plannedTopics": [
+        "Transfusion thresholds",
+        "massive transfusion protocol",
+        "DIC",
+        "HIT and TTP",
+        "anticoagulant reversal",
+        "thrombocytopenia in ICU",
+        "TEG/ROTEM"
+      ],
+      "icon": "test-tube",
+      "accent": "high"
+    },
+    {
+      "number": 25,
+      "id": "tropical-monsoon-fevers",
+      "folder": "25-tropical-monsoon-fevers",
+      "section": "G",
+      "sectionTitle": "Infections",
+      "phase": 1,
+      "title": "Tropical and monsoon fevers",
+      "plannedTopics": [
+        "Approach to acute febrile illness",
+        "severe malaria",
+        "dengue shock",
+        "leptospirosis",
+        "scrub typhus",
+        "enteric fever"
+      ],
+      "icon": "cloud-rain",
+      "accent": "high"
+    },
+    {
+      "number": 26,
+      "id": "icu-infections-stewardship-immunocompromised",
+      "folder": "26-icu-infections-stewardship-immunocompromised",
+      "section": "G",
+      "sectionTitle": "Infections",
+      "phase": 2,
+      "title": "ICU infections, stewardship and the immunocompromised",
+      "plannedTopics": [
+        "Severe CAP, HAP and VAP",
+        "CRE and MDR gram-negatives (ICMR guidance)",
+        "invasive fungal infection",
+        "TB and HIV in ICU",
+        "febrile neutropenia and tumour lysis",
+        "PK/PD dosing and procalcitonin"
+      ],
+      "icon": "bug",
+      "accent": "high"
+    },
+    {
+      "number": 27,
+      "id": "poisoning-approach-drug-overdoses",
+      "folder": "27-poisoning-approach-drug-overdoses",
+      "section": "H",
+      "sectionTitle": "Toxicology and envenomation",
+      "phase": 2,
+      "title": "Poisoning approach and drug overdoses",
+      "plannedTopics": [
+        "Toxidromes",
+        "decontamination and enhanced elimination",
+        "antidote list",
+        "paracetamol",
+        "TCA, beta-blocker and CCB",
+        "methanol and alcohols"
+      ],
+      "icon": "pill",
+      "accent": "critical"
+    },
+    {
+      "number": 28,
+      "id": "agrochemical-household-poisons",
+      "folder": "28-agrochemical-household-poisons",
+      "section": "H",
+      "sectionTitle": "Toxicology and envenomation",
+      "phase": 1,
+      "title": "Agrochemical and household poisons",
+      "plannedTopics": [
+        "OP and carbamates (atropine titration, POP scale)",
+        "aluminium phosphide",
+        "paraquat",
+        "yellow phosphorus rat paste",
+        "oleander and datura",
+        "corrosives and kerosene"
+      ],
+      "icon": "skull",
+      "accent": "critical"
+    },
+    {
+      "number": 29,
+      "id": "snakebite-scorpion-envenomation",
+      "folder": "29-snakebite-scorpion-envenomation",
+      "section": "H",
+      "sectionTitle": "Toxicology and envenomation",
+      "phase": 1,
+      "title": "Snakebite, scorpion and envenomation",
+      "plannedTopics": [
+        "Neurotoxic vs haemotoxic bites",
+        "20WBCT",
+        "ASV dosing and reactions",
+        "ventilation in neuroparalysis",
+        "scorpion sting and prazosin",
+        "bee and wasp stings"
+      ],
+      "icon": "bug-off",
+      "accent": "critical"
+    },
+    {
+      "number": 30,
+      "id": "obstetric-critical-care",
+      "folder": "30-obstetric-critical-care",
+      "section": "I",
+      "sectionTitle": "Special populations",
+      "phase": 2,
+      "title": "Obstetric critical care",
+      "plannedTopics": [
+        "Severe pre-eclampsia and eclampsia",
+        "PPH",
+        "HELLP and AFLP",
+        "sepsis in pregnancy",
+        "peripartum cardiomyopathy",
+        "maternal cardiac arrest"
+      ],
+      "icon": "baby",
+      "accent": "critical"
+    },
+    {
+      "number": 31,
+      "id": "paediatric-emergencies-essentials",
+      "folder": "31-paediatric-emergencies-essentials",
+      "section": "I",
+      "sectionTitle": "Special populations",
+      "phase": 3,
+      "title": "Paediatric emergencies essentials",
+      "plannedTopics": [
+        "PALS and weight-based doses",
+        "paediatric sepsis and fluids",
+        "airway sizes",
+        "bronchiolitis and croup",
+        "paediatric DKA",
+        "safe transfer to PICU"
+      ],
+      "icon": "smile",
+      "accent": "critical"
+    },
+    {
+      "number": 32,
+      "id": "perioperative-cardiac-surgical-icu",
+      "folder": "32-perioperative-cardiac-surgical-icu",
+      "section": "I",
+      "sectionTitle": "Special populations",
+      "phase": 3,
+      "title": "Perioperative and cardiac surgical ICU",
+      "plannedTopics": [
+        "Post-op handover and complications",
+        "malignant hyperthermia and LAST",
+        "post-CABG and valve care",
+        "bleeding and tamponade after surgery",
+        "pacing wires",
+        "frailty and obesity considerations"
+      ],
+      "icon": "scissors",
+      "accent": "standard"
+    },
+    {
+      "number": 33,
+      "id": "icu-pharmacology-drug-infusions",
+      "folder": "33-icu-pharmacology-drug-infusions",
+      "section": "J",
+      "sectionTitle": "ICU care and pharmacology",
+      "phase": 1,
+      "title": "ICU pharmacology and drug infusions",
+      "plannedTopics": [
+        "Vasoactive, sedative and antiarrhythmic infusions",
+        "standard dilutions",
+        "dosing in obesity, AKI and liver failure",
+        "drug interactions",
+        "IV compatibility"
+      ],
+      "icon": "calculator",
+      "accent": "standard"
+    },
+    {
+      "number": 34,
+      "id": "analgesia-sedation-delirium",
+      "folder": "34-analgesia-sedation-delirium",
+      "section": "J",
+      "sectionTitle": "ICU care and pharmacology",
+      "phase": 2,
+      "title": "Analgesia, sedation and delirium",
+      "plannedTopics": [
+        "PADIS / eCASH approach",
+        "RASS and CPOT",
+        "sedative choice",
+        "CAM-ICU and delirium prevention",
+        "neuromuscular blockade",
+        "alcohol withdrawal"
+      ],
+      "icon": "moon",
+      "accent": "standard"
+    },
+    {
+      "number": 35,
+      "id": "nutrition-metabolic-support",
+      "folder": "35-nutrition-metabolic-support",
+      "section": "J",
+      "sectionTitle": "ICU care and pharmacology",
+      "phase": 2,
+      "title": "Nutrition and metabolic support",
+      "plannedTopics": [
+        "NUTRIC and risk screening",
+        "early enteral feeding",
+        "calorie and protein targets",
+        "feed intolerance",
+        "parenteral nutrition",
+        "refeeding syndrome"
+      ],
+      "icon": "utensils",
+      "accent": "standard"
+    },
+    {
+      "number": 36,
+      "id": "icu-care-bundles-infection-prevention",
+      "folder": "36-icu-care-bundles-infection-prevention",
+      "section": "J",
+      "sectionTitle": "ICU care and pharmacology",
+      "phase": 2,
+      "title": "ICU care bundles and infection prevention",
+      "plannedTopics": [
+        "FAST HUGS BID daily checklist",
+        "VAP, CLABSI and CAUTI bundles",
+        "DVT and stress-ulcer prophylaxis",
+        "hand hygiene and isolation",
+        "pressure injury and early mobilisation"
+      ],
+      "icon": "clipboard-check",
+      "accent": "standard"
+    },
+    {
+      "number": 37,
+      "id": "procedures",
+      "folder": "37-procedures",
+      "section": "K",
+      "sectionTitle": "Skills and professional practice",
+      "phase": 2,
+      "title": "Procedures",
+      "plannedTopics": [
+        "Central line (US-guided)",
+        "arterial line",
+        "chest drain and pleural tap",
+        "lumbar puncture",
+        "ascitic tap",
+        "pericardiocentesis basics"
+      ],
+      "icon": "hand",
+      "accent": "standard"
+    },
+    {
+      "number": 38,
+      "id": "bedside-interpretation-ecg-cxr-ct-labs",
+      "folder": "38-bedside-interpretation-ecg-cxr-ct-labs",
+      "section": "K",
+      "sectionTitle": "Skills and professional practice",
+      "phase": 2,
+      "title": "Bedside interpretation: ECG, CXR, CT and labs",
+      "plannedTopics": [
+        "ICU ECG patterns",
+        "CXR lines, tubes and ARDS",
+        "CT head essentials",
+        "LFT, coagulation and cardiac markers",
+        "cultures and sensitivity reports"
+      ],
+      "icon": "file-search",
+      "accent": "standard"
+    },
+    {
+      "number": 39,
+      "id": "ethics-communication-palliative-care",
+      "folder": "39-ethics-communication-palliative-care",
+      "section": "K",
+      "sectionTitle": "Skills and professional practice",
+      "phase": 2,
+      "title": "Ethics, communication and palliative care",
+      "plannedTopics": [
+        "Breaking bad news and family meetings",
+        "limitation of treatment and DNAR (Indian advance-directive rulings)",
+        "palliative symptom care",
+        "organ donation conversation",
+        "documentation and medico-legal cases"
+      ],
+      "icon": "message-circle-heart",
+      "accent": "standard"
+    },
+    {
+      "number": 40,
+      "id": "handover-transport-icu-safety",
+      "folder": "40-handover-transport-icu-safety",
+      "section": "K",
+      "sectionTitle": "Skills and professional practice",
+      "phase": 3,
+      "title": "Handover, transport and ICU safety",
+      "plannedTopics": [
+        "ISBAR handover",
+        "daily rounds structure",
+        "intra- and inter-hospital transfer checklist",
+        "oxygen cylinder planning",
+        "error reporting",
+        "mass casualty triage"
+      ],
+      "icon": "ambulance",
+      "accent": "standard"
+    }
+  ]
+}

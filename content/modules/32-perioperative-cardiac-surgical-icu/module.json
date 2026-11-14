@@ -1,0 +1,3447 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "perioperative-cardiac-surgical-icu",
+  "number": 32,
+  "folder": "32-perioperative-cardiac-surgical-icu",
+  "section": {
+    "id": "I",
+    "title": "Special populations"
+  },
+  "phase": 3,
+  "title": "Perioperative and cardiac surgical ICU",
+  "summary": "Caring for the surgical patient in ICU: safe theatre handover and early complications, malignant hyperthermia and LAST, post-CABG and valve care, bleeding, tamponade and arrest after cardiac surgery (CALS), epicardial pacing, and frailty and obesity — with Indian practice notes.",
+  "tags": [
+    "perioperative",
+    "post-operative",
+    "cardiac surgery",
+    "CABG",
+    "valve surgery",
+    "malignant hyperthermia",
+    "dantrolene",
+    "LAST",
+    "lipid emulsion",
+    "tamponade",
+    "CALS",
+    "resternotomy",
+    "pacing wires",
+    "vasoplegia",
+    "MINS",
+    "frailty",
+    "Clinical Frailty Scale",
+    "obesity",
+    "STOP-BANG",
+    "PONV"
+  ],
+  "relatedModules": [
+    "shock-vasoactive-support",
+    "cardiac-emergencies-arrhythmias",
+    "pe-tamponade-aortic-emergencies",
+    "haemodynamic-monitoring",
+    "pocus-critical-care-echo",
+    "ecmo-mechanical-circulatory-support",
+    "haematology-coagulation-transfusion",
+    "airway-management",
+    "mechanical-ventilation",
+    "analgesia-sedation-delirium",
+    "aki-renal-drug-dosing",
+    "cardiac-arrest-post-rosc",
+    "handover-transport-icu-safety",
+    "ethics-communication-palliative-care"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted, pending consultant review)"
+  ],
+  "uiHints": {
+    "icon": "scissors",
+    "accent": "standard"
+  },
+  "viewKey": "module:perioperative-cardiac-surgical-icu",
+  "topics": [
+    {
+      "id": "postop-handover-complications",
+      "title": "Post-operative handover and early complications",
+      "summary": "Taking a safe theatre-to-ICU handover, the first 30 minutes after arrival, and a systematic approach to the common early post-operative problems: hypoxaemia, hypotension, oliguria, hypothermia, pain, PONV, delirium and myocardial injury after non-cardiac surgery (MINS).",
+      "viewKey": "topic:perioperative-cardiac-surgical-icu/postop-handover-complications",
+      "uiHints": {
+        "icon": "clipboard-list",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "MINS (myocardial injury after non-cardiac surgery) is a post-operative troponin elevation of presumed ischaemic origin, with or without symptoms, within 30 days of surgery. VISION 2017 defined it using hs-troponin T: peak 20 to <65 ng/L with an absolute change ≥5 ng/L, or any value ≥65 ng/L — each associated with increased 30-day mortality.",
+          "refs": [
+            "vision-2017"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "Arrival",
+            "title": "Hands-off, eyes-on handover",
+            "detail": "Connect monitors and ventilator first, then stop everything for a structured handover with anaesthetist and surgeon present: patient and procedure, airway grade/difficulty, intra-operative events, blood loss, fluids/blood products, urine output, drugs given (antibiotic time, last opioid, reversal, vasopressors), lines/drains, and the explicit plan (BP target, analgesia, VTE, feeding, drains, when to call the surgeon).",
+            "refs": [
+              "esc-ncs-2022"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0–15 min",
+            "title": "ABCDE assessment",
+            "detail": "Airway and breathing (SpO₂, RR, ETCO₂ if ventilated, chest expansion, residual neuromuscular block — TOF ratio <0.9 means incomplete reversal); circulation (MAP, HR, CRT, lactate, drains, wound); disability (pain score, sedation, pupils, glucose); exposure (temperature, pressure areas, limb perfusion).",
+            "refs": [
+              "esc-ncs-2022",
+              "nice-cg65"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "0–30 min",
+            "title": "Baseline investigations",
+            "detail": "ABG with lactate, Hb, electrolytes (K⁺, Mg²⁺, Ca²⁺), glucose, coagulation if bleeding risk, ECG; chest X-ray if central line, ETT, chest/abdominal procedure or hypoxaemia.",
+            "refs": [
+              "esc-ncs-2022"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Day 0–2",
+            "title": "Screen for myocardial injury (MINS)",
+            "detail": "In patients at risk (known cardiovascular disease, risk factors, age ≥65): troponin before and at 24 and 48 h after major surgery. Most MINS is silent — a rise needs ECG, review of haemodynamics/anaemia and cardiology input.",
+            "refs": [
+              "esc-ncs-2022",
+              "vision-2017"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Ongoing",
+            "title": "Keep warm",
+            "detail": "Measure core temperature on arrival and hourly; if <36 °C use forced-air warming until ≥36.5 °C; warm IV fluids and blood above 500 mL.",
+            "refs": [
+              "nice-cg65"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Ongoing",
+            "title": "Analgesia and PONV",
+            "detail": "Multimodal analgesia (regular paracetamol, regional/epidural where placed, opioid-sparing adjuncts), pain score with every observation. PONV: assess Apfel risk factors (female, non-smoker, history of PONV/motion sickness, post-operative opioids); give 2 prophylactic agents for 1–2 risk factors and treat breakthrough with a different class.",
+            "refs": [
+              "ponv-2020",
+              "eras-cardiac-2019"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Daily",
+            "title": "Prevent the predictable",
+            "detail": "VTE prophylaxis once haemostasis is secure; early mobilisation and feeding; delirium screening (CAM-ICU); glucose control; stop unnecessary lines and catheters; restart chronic medications appropriately (beta-blockers, statins).",
+            "refs": [
+              "esc-ncs-2022",
+              "eras-cardiac-2019"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "paracetamol",
+            "role": "Multimodal analgesia backbone",
+            "route": "IV/PO",
+            "dose": "1 g every 6 h (max 4 g/day); 15 mg/kg if <50 kg",
+            "workedExample": "70 kg: 1 g IV 6-hourly; 45 kg frail patient: 650 mg 6-hourly (max 3 g/day).",
+            "refs": [
+              "eras-cardiac-2019"
+            ]
+          },
+          {
+            "drugId": "ondansetron",
+            "role": "PONV prophylaxis/treatment",
+            "route": "IV",
+            "dose": "4 mg at end of surgery or for treatment",
+            "workedExample": "70 kg: 4 mg IV (2 mL of 2 mg/mL) slowly.",
+            "refs": [
+              "ponv-2020"
+            ]
+          },
+          {
+            "drugId": "noradrenaline",
+            "role": "Post-operative vasodilatory hypotension after volume optimisation",
+            "route": "IV infusion",
+            "dose": "0.05–0.5 mcg/kg/min",
+            "doseRange": {
+              "unit": "mcg/kg/min",
+              "min": 0.05,
+              "max": 0.5
+            },
+            "dilution": "4 mg in 50 mL = 80 mcg/mL",
+            "workedExample": "70 kg at 0.1 mcg/kg/min = 7 mcg/min = 5.25 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "eras-cardiac-2019"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "postop-problems",
+            "title": "Early post-operative problems — causes and first actions",
+            "columns": [
+              "Problem",
+              "Common causes",
+              "First actions"
+            ],
+            "rows": [
+              [
+                "Hypoxaemia",
+                "Atelectasis, residual block, opioids, aspiration, pulmonary oedema, pneumothorax, PE",
+                "Sit up, O₂/HFNC/CPAP, check TOF and reverse, CXR, ABG, POCUS"
+              ],
+              [
+                "Hypotension",
+                "Hypovolaemia/bleeding, epidural sympathectomy, sepsis, MI, arrhythmia, anaphylaxis, tamponade",
+                "Fluid challenge, check drains/Hb, ECG, echo, vasopressor if vasodilated"
+              ],
+              [
+                "Hypertension",
+                "Pain, hypercapnia, urinary retention, withdrawal of chronic antihypertensives",
+                "Treat cause first; then IV antihypertensive per target"
+              ],
+              [
+                "Oliguria (<0.5 mL/kg/h)",
+                "Hypovolaemia, low MAP, blocked catheter, abdominal compartment, nephrotoxins",
+                "Flush catheter, assess volume and MAP, bladder pressure, stop nephrotoxins"
+              ],
+              [
+                "Hypothermia (<36 °C)",
+                "Exposure, cold fluids, anaesthesia",
+                "Forced-air warming, warm fluids"
+              ],
+              [
+                "PONV",
+                "Opioids, volatile anaesthesia, female, non-smoker",
+                "Antiemetic from a different class from prophylaxis"
+              ],
+              [
+                "Delirium",
+                "Age, frailty, pain, drugs (benzodiazepines, anticholinergics), sepsis, hypoxia",
+                "CAM-ICU, treat cause, non-drug measures, review drug chart"
+              ],
+              [
+                "Troponin rise (MINS)",
+                "Supply–demand mismatch, type 1 MI, PE, sepsis",
+                "ECG, Hb, haemodynamics, cardiology; aspirin/statin per cardiology"
+              ]
+            ],
+            "refs": [
+              "esc-ncs-2022",
+              "nice-cg65",
+              "ponv-2020",
+              "vision-2017"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Hypotension with rising drain output, falling Hb or a tense abdomen = bleeding until proven otherwise: call the surgeon early.",
+            "refs": [
+              "esc-ncs-2022"
+            ]
+          },
+          {
+            "text": "New hypoxaemia after surgery: think atelectasis, residual neuromuscular block, opioid narcosis, aspiration, pneumothorax (after central line or thoracic surgery), pulmonary oedema and PE.",
+            "refs": [
+              "esc-ncs-2022"
+            ]
+          },
+          {
+            "text": "Chest pain, new ECG changes or troponin rise post-operatively are an ACS work-up, not a 'demand' explanation to ignore.",
+            "refs": [
+              "vision-2017"
+            ]
+          },
+          {
+            "text": "Fever, tachycardia, ileus or rising CRP on days 3–7 after bowel surgery: exclude anastomotic leak with CT.",
+            "refs": [
+              "esc-ncs-2022"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Accepting a 'corridor handover' while moving the patient: information is lost; insist on a hands-off moment after monitoring is attached.",
+            "refs": [
+              "esc-ncs-2022"
+            ]
+          },
+          {
+            "text": "Treating post-operative hypertension with antihypertensives before treating pain, urinary retention or hypercapnia.",
+            "refs": [
+              "esc-ncs-2022"
+            ]
+          },
+          {
+            "text": "Giving the same antiemetic that failed as prophylaxis — use a different class.",
+            "refs": [
+              "ponv-2020"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Write the surgeon's 'call me if' criteria (drain output, MAP, Hb thresholds) on the chart at handover.",
+            "refs": [
+              "esc-ncs-2022"
+            ]
+          },
+          {
+            "text": "A rising lactate with a normal BP after major abdominal surgery may be the first sign of bleeding, ischaemic bowel or under-resuscitation.",
+            "refs": [
+              "esc-ncs-2022"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Post-operative hypotension",
+        "description": "Systematic approach in the first 24 h after surgery.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Post-op MAP below target or falling"
+          },
+          {
+            "id": "check",
+            "type": "action",
+            "text": "Check monitoring (transducer level), ABCDE, drains, wound, abdomen, ECG"
+          },
+          {
+            "id": "bleed",
+            "type": "decision",
+            "text": "Signs of bleeding (drains, Hb falling, distension)?"
+          },
+          {
+            "id": "surg",
+            "type": "end",
+            "text": "Call surgeon now; transfuse, correct coagulopathy; theatre/IR",
+            "severity": "critical"
+          },
+          {
+            "id": "rhythm",
+            "type": "decision",
+            "text": "New arrhythmia or ischaemic ECG?"
+          },
+          {
+            "id": "cardio",
+            "type": "end",
+            "text": "Treat arrhythmia/ACS pathway; echo; cardiology",
+            "severity": "high"
+          },
+          {
+            "id": "fluid",
+            "type": "action",
+            "text": "Fluid challenge 250–500 mL crystalloid; reassess"
+          },
+          {
+            "id": "resp",
+            "type": "decision",
+            "text": "MAP improved?"
+          },
+          {
+            "id": "cause",
+            "type": "end",
+            "text": "Find cause of hypovolaemia; continue monitoring"
+          },
+          {
+            "id": "echo",
+            "type": "action",
+            "text": "POCUS/echo: LV/RV function, tamponade, IVC; consider sepsis, epidural, anaphylaxis"
+          },
+          {
+            "id": "vaso",
+            "type": "end",
+            "text": "Vasopressor (noradrenaline) if vasodilated; inotrope if low output; escalate",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "check"
+          },
+          {
+            "from": "check",
+            "to": "bleed"
+          },
+          {
+            "from": "bleed",
+            "to": "surg",
+            "label": "Yes"
+          },
+          {
+            "from": "bleed",
+            "to": "rhythm",
+            "label": "No"
+          },
+          {
+            "from": "rhythm",
+            "to": "cardio",
+            "label": "Yes"
+          },
+          {
+            "from": "rhythm",
+            "to": "fluid",
+            "label": "No"
+          },
+          {
+            "from": "fluid",
+            "to": "resp"
+          },
+          {
+            "from": "resp",
+            "to": "cause",
+            "label": "Yes"
+          },
+          {
+            "from": "resp",
+            "to": "echo",
+            "label": "No"
+          },
+          {
+            "from": "echo",
+            "to": "vaso"
+          }
+        ],
+        "refs": [
+          "esc-ncs-2022"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Surgery triggers a stress response (catecholamines, cortisol, cytokines), hypercoagulability and fluid shifts. Anaesthetic drugs, opioids and residual neuromuscular block depress ventilation and airway reflexes; atelectasis develops in most patients after general anaesthesia. Supply–demand myocardial ischaemia (tachycardia, hypotension, anaemia) explains most MINS.",
+        "evidence": "- **ESC 2022 non-cardiac surgery guideline**: pre-operative risk assessment, peri-operative continuation of beta-blockers/statins in those already taking them, and recommendation to measure hs-troponin before and 24/48 h after intermediate/high-risk surgery in patients with cardiovascular disease, risk factors or age ≥65.\n- **VISION (2017)**: 21,842 patients; hs-troponin T thresholds associated with 30-day mortality; MINS mostly asymptomatic (>90% without ischaemic symptoms).\n- **Fourth Consensus Guidelines on PONV (2020)**: risk-based multimodal prophylaxis; avoid using the same drug class for rescue.\n- **NICE CG65**: measure temperature, keep ≥36 °C, forced-air warming.",
+        "controversies": "- Routine troponin screening: improves detection, but the best treatment of MINS is uncertain (MANAGE trial suggested benefit of dabigatran).\n- Liberal vs restrictive peri-operative fluids (RELIEF: restrictive associated with more AKI).\n- Target BP after surgery — individualised (e.g. within 10–20% of baseline) vs fixed MAP 65.",
+        "indiaNotes": "- Many Indian patients arrive in ICU from theatres in other blocks without the anaesthetist; insist on a phone/face-to-face handover and a written anaesthesia chart.\n- Forced-air warming devices may be limited; warmed fluids, blankets and room temperature control still help.\n- hs-troponin may not be available everywhere; conventional troponin trends plus ECG are acceptable.\n- Post-operative delirium is under-recognised in Indian wards; routine CAM-ICU screening is low cost."
+      },
+      "drugIds": [
+        "paracetamol",
+        "ondansetron",
+        "noradrenaline"
+      ],
+      "calculatorIds": [
+        "mean-arterial-pressure",
+        "infusion-rate-weight-min",
+        "news2"
+      ],
+      "references": [
+        "esc-ncs-2022",
+        "vision-2017",
+        "ponv-2020",
+        "nice-cg65",
+        "eras-cardiac-2019"
+      ],
+      "quiz": [
+        {
+          "id": "q32-1-1",
+          "stem": "Which is the safest way to take a theatre-to-ICU handover?",
+          "options": [
+            "While transferring the patient to the bed",
+            "After monitors and ventilator are connected, a structured hands-off handover with anaesthetist and surgeon",
+            "Read the anaesthesia chart later",
+            "Nurse-to-nurse only",
+            "By phone the next morning"
+          ],
+          "answerIndex": 1,
+          "explanation": "Attach monitoring first, then a structured hands-off handover."
+        },
+        {
+          "id": "q32-1-2",
+          "stem": "VISION (2017) MINS definition with hs-troponin T includes:",
+          "options": [
+            "Any troponin >14 ng/L",
+            "Peak 20 to <65 ng/L with absolute change ≥5 ng/L, or ≥65 ng/L",
+            "Only symptomatic troponin rise",
+            "Troponin >1,000 ng/L",
+            "CK-MB >2× normal"
+          ],
+          "answerIndex": 1,
+          "explanation": "These thresholds were associated with 30-day mortality."
+        },
+        {
+          "id": "q32-1-3",
+          "stem": "Post-op patient: SpO₂ 89%, shallow breathing, weak cough, TOF ratio 0.6. Most likely cause and action:",
+          "options": [
+            "PE — start heparin",
+            "Residual neuromuscular block — reverse (e.g. sugammadex/neostigmine) and support ventilation",
+            "Pneumonia — antibiotics",
+            "Opioid overdose — naloxone only",
+            "Anxiety"
+          ],
+          "answerIndex": 1,
+          "explanation": "TOF ratio <0.9 = incomplete reversal."
+        },
+        {
+          "id": "q32-1-4",
+          "stem": "The patient had ondansetron prophylaxis but is now vomiting. Best rescue:",
+          "options": [
+            "Repeat ondansetron immediately",
+            "An antiemetic from a different class",
+            "Nothing",
+            "Increase opioid",
+            "Stop fluids"
+          ],
+          "answerIndex": 1,
+          "explanation": "Rescue with a different class (Fourth Consensus PONV)."
+        },
+        {
+          "id": "q32-1-5",
+          "stem": "Core temperature 35.4 °C on ICU arrival. NICE CG65 recommends:",
+          "options": [
+            "Ignore if awake",
+            "Forced-air warming until ≥36.5 °C",
+            "Ice packs",
+            "Paracetamol",
+            "Wait 6 h"
+          ],
+          "answerIndex": 1,
+          "explanation": "Active warming with forced air."
+        }
+      ]
+    },
+    {
+      "id": "malignant-hyperthermia-last",
+      "title": "Malignant hyperthermia and local anaesthetic systemic toxicity",
+      "summary": "Two rare but lethal anaesthetic emergencies that can present in theatre, recovery or ICU: malignant hyperthermia (stop triggers, dantrolene 2.5 mg/kg, cool, treat hyperkalaemia) and LAST (airway, seizure control, 20% lipid emulsion, modified ACLS).",
+      "viewKey": "topic:perioperative-cardiac-surgical-icu/malignant-hyperthermia-last",
+      "uiHints": {
+        "icon": "flame",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Malignant hyperthermia is a pharmacogenetic (usually RYR1 or CACNA1S variant) disorder of skeletal muscle calcium handling triggered by volatile anaesthetics and suxamethonium, causing hypermetabolism. LAST is toxicity from high plasma local anaesthetic concentrations affecting the CNS and heart (sodium-channel blockade).",
+          "refs": [
+            "emhg-2010",
+            "asra-last-2020"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "Recognise MH",
+            "title": "Suspect malignant hyperthermia",
+            "detail": "During/after volatile anaesthetic or suxamethonium: unexplained rising ETCO₂ despite increased ventilation, tachycardia, masseter or generalised rigidity, mixed metabolic and respiratory acidosis, hyperkalaemia, arrhythmias; hyperthermia is often LATE. Can appear up to hours after exposure.",
+            "refs": [
+              "emhg-2010",
+              "mhaus-crisis"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "MH 0–2 min",
+            "title": "Stop triggers, call for help, hyperventilate",
+            "detail": "Stop volatile agents and suxamethonium; declare an MH emergency and get the MH kit/dantrolene; 100% O₂ at high fresh-gas flow (≥10 L/min); hyperventilate (2–3 × minute volume); insert activated charcoal filters if available; switch to TIVA if surgery must continue; tell the surgeon to finish quickly.",
+            "refs": [
+              "emhg-2010",
+              "mhaus-crisis"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "MH ASAP",
+            "title": "Dantrolene",
+            "detail": "2.5 mg/kg IV bolus (each 20 mg vial needs 60 mL sterile water — assign several people to reconstitute). Repeat every 5–10 min until ETCO₂, HR and temperature settle; most need ≤10 mg/kg but give more if signs persist.",
+            "refs": [
+              "emhg-2010",
+              "mhaus-crisis"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "MH",
+            "title": "Cool and treat complications",
+            "detail": "If temperature >39 °C: cold IV saline, surface cooling, ice packs to groin/axillae; stop cooling at ~38.5 °C. Hyperkalaemia: insulin–glucose, calcium, hyperventilation. Arrhythmias: amiodarone or beta-blocker; avoid calcium-channel blockers with dantrolene. Aim urine output ≥2 mL/kg/h (fluids, consider furosemide) to protect against myoglobinuric AKI.",
+            "refs": [
+              "emhg-2010",
+              "mhaus-crisis"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "MH after",
+            "title": "ICU for ≥24 h",
+            "detail": "Monitor for recrudescence: continue dantrolene 1 mg/kg every 4–6 h (or infusion) for 24 h; check CK, K⁺, myoglobin, coagulation (DIC), renal function. Refer patient and family for MH susceptibility testing (contracture testing/genetic) and give an alert card.",
+            "refs": [
+              "emhg-2010",
+              "mhaus-crisis"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Recognise LAST",
+            "title": "Suspect local anaesthetic systemic toxicity",
+            "detail": "Within seconds to ~1 h of a block, infiltration or IV lidocaine: perioral numbness, metallic taste, tinnitus, agitation, confusion, seizures, then bradycardia, wide-QRS arrhythmias, hypotension, cardiac arrest (may be the first sign, especially with bupivacaine).",
+            "refs": [
+              "asra-last-2020"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "LAST 0–2 min",
+            "title": "Stop, call, airway",
+            "detail": "Stop injecting; call for help and the LAST kit; 100% O₂, ventilate to prevent hypoxia and acidosis; treat seizures with a benzodiazepine (avoid large doses of propofol in cardiovascular instability).",
+            "refs": [
+              "asra-last-2020"
+            ]
+          },
+          {
+            "n": 8,
+            "time": "LAST",
+            "title": "Lipid emulsion 20%",
+            "detail": "At the first sign of serious toxicity: >70 kg give 100 mL over 2–3 min then 200–250 mL over 15–20 min; ≤70 kg give 1.5 mL/kg bolus then 0.25 mL/kg/min. Repeat bolus once or twice and/or double infusion if still unstable; upper limit ~12 mL/kg.",
+            "refs": [
+              "asra-last-2020"
+            ]
+          },
+          {
+            "n": 9,
+            "time": "LAST arrest",
+            "title": "Modified ACLS",
+            "detail": "Small adrenaline doses (≤1 mcg/kg); avoid vasopressin, calcium-channel blockers, beta-blockers and local anaesthetics (lidocaine/procainamide) for arrhythmias; prolonged CPR — consider cardiopulmonary bypass/ECMO if available. Monitor ≥4–6 h after cardiovascular toxicity (≥2 h after isolated CNS signs).",
+            "refs": [
+              "asra-last-2020"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "dantrolene",
+            "role": "MH crisis",
+            "route": "IV bolus",
+            "dose": "2.5 mg/kg, repeat every 5–10 min until controlled (usually ≤10 mg/kg); then 1 mg/kg every 4–6 h for 24 h",
+            "dilution": "20 mg vial + 60 mL sterile water for injection (no saline/dextrose)",
+            "workedExample": "70 kg: 175 mg = 9 vials of 20 mg (each in 60 mL sterile water); up to 700 mg = 35 vials.",
+            "verify": "Many Indian hospitals do not stock 36 vials — confirm local stock and nearest source.",
+            "refs": [
+              "emhg-2010",
+              "mhaus-crisis"
+            ]
+          },
+          {
+            "drugId": "lipid-emulsion-20",
+            "role": "LAST — first sign of serious toxicity",
+            "route": "IV bolus + infusion",
+            "dose": ">70 kg: 100 mL over 2–3 min then 200–250 mL over 15–20 min; ≤70 kg: 1.5 mL/kg then 0.25 mL/kg/min; max ~12 mL/kg",
+            "workedExample": "60 kg lean weight: bolus 90 mL, then 15 mL/min (≈900 mL/h); 80 kg: 100 mL then 250 mL over 15–20 min.",
+            "refs": [
+              "asra-last-2020"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "mh-vs-mimics",
+            "title": "MH and its mimics",
+            "columns": [
+              "Condition",
+              "Distinguishing features"
+            ],
+            "rows": [
+              [
+                "Malignant hyperthermia",
+                "Volatile/suxamethonium exposure; rising ETCO₂, rigidity, hyperkalaemia, rapid CK rise"
+              ],
+              [
+                "Sepsis",
+                "Fever, source, slower evolution, no rigidity"
+              ],
+              [
+                "Thyroid storm",
+                "Thyroid history, goitre, AF; ETCO₂ rise less marked; no rigidity"
+              ],
+              [
+                "Neuroleptic malignant syndrome",
+                "Antipsychotic exposure, days of evolution, rigidity, altered mental state"
+              ],
+              [
+                "Serotonin syndrome",
+                "Serotonergic drugs, clonus, hyperreflexia, mydriasis"
+              ],
+              [
+                "Hypercapnia from equipment",
+                "Exhausted soda lime, rebreathing, laparoscopic CO₂ absorption"
+              ],
+              [
+                "Phaeochromocytoma crisis",
+                "Paroxysmal hypertension, tachycardia; no rigidity"
+              ]
+            ],
+            "refs": [
+              "emhg-2010",
+              "mhaus-crisis"
+            ]
+          },
+          {
+            "id": "la-max-doses",
+            "title": "Commonly used maximum local anaesthetic doses (guide only)",
+            "columns": [
+              "Drug",
+              "Plain",
+              "With adrenaline"
+            ],
+            "rows": [
+              [
+                "Lidocaine",
+                "3–4.5 mg/kg (max ~300 mg)",
+                "7 mg/kg (max ~500 mg)"
+              ],
+              [
+                "Bupivacaine / levobupivacaine",
+                "2–2.5 mg/kg (max ~150–175 mg)",
+                "2.5–3 mg/kg (max ~225 mg)"
+              ],
+              [
+                "Ropivacaine",
+                "3 mg/kg (max ~200–300 mg)",
+                "Similar"
+              ]
+            ],
+            "caption": "Toxic dose depends on site (intercostal and caudal blocks give highest plasma levels), age, cardiac/hepatic disease and pregnancy. Use ultrasound, incremental injection and aspiration.",
+            "refs": [
+              "asra-last-2020"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Unexplained rising ETCO₂ with tachycardia under volatile anaesthesia = MH until proven otherwise; temperature rise is a late sign.",
+            "refs": [
+              "emhg-2010"
+            ]
+          },
+          {
+            "text": "Masseter spasm after suxamethonium is an early warning of MH susceptibility — stop volatile agents and monitor closely.",
+            "refs": [
+              "mhaus-crisis"
+            ]
+          },
+          {
+            "text": "Bupivacaine cardiotoxicity can present as cardiac arrest without preceding seizures; start lipid immediately.",
+            "refs": [
+              "asra-last-2020"
+            ]
+          },
+          {
+            "text": "Do not use propofol as a lipid source: its lipid content is too low and the drug causes cardiovascular depression.",
+            "refs": [
+              "asra-last-2020"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Dissolving dantrolene in saline or dextrose — it precipitates; use sterile water and warm it if possible.",
+            "refs": [
+              "mhaus-crisis"
+            ]
+          },
+          {
+            "text": "Calcium-channel blockers with dantrolene can cause severe hyperkalaemia and cardiovascular collapse.",
+            "refs": [
+              "emhg-2010"
+            ]
+          },
+          {
+            "text": "Stopping resuscitation early in LAST: recovery can occur after prolonged CPR with lipid; arrange ECMO/bypass early.",
+            "refs": [
+              "asra-last-2020"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Keep a laminated MH and LAST checklist (and the lipid bag) wherever regional blocks or volatile anaesthetics are used — including ICU, labour ward and procedure rooms.",
+            "refs": [
+              "asra-last-2020",
+              "mhaus-crisis"
+            ]
+          },
+          {
+            "text": "Calculate the total local anaesthetic dose (including surgeon infiltration) at the time-out for big blocks.",
+            "refs": [
+              "asra-last-2020"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Suspected malignant hyperthermia",
+        "description": "EMHG/MHAUS-based crisis pathway.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Rising ETCO₂, tachycardia, rigidity ± fever after triggers"
+          },
+          {
+            "id": "stop",
+            "type": "action",
+            "text": "Stop volatiles/suxamethonium; call for help; 100% O₂ ≥10 L/min; hyperventilate",
+            "severity": "critical"
+          },
+          {
+            "id": "dan",
+            "type": "action",
+            "text": "Dantrolene 2.5 mg/kg IV; send ABG, K⁺, CK, myoglobin",
+            "severity": "critical"
+          },
+          {
+            "id": "ctrl",
+            "type": "decision",
+            "text": "ETCO₂, HR and temperature settling?"
+          },
+          {
+            "id": "rep",
+            "type": "action",
+            "text": "Repeat dantrolene every 5–10 min (usually ≤10 mg/kg)"
+          },
+          {
+            "id": "comp",
+            "type": "action",
+            "text": "Treat K⁺ (insulin–glucose, calcium), arrhythmias, cool if >39 °C, urine ≥2 mL/kg/h"
+          },
+          {
+            "id": "icu",
+            "type": "end",
+            "text": "ICU ≥24 h; dantrolene 1 mg/kg 4–6-hourly; CK/renal/DIC monitoring; refer for testing",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "stop"
+          },
+          {
+            "from": "stop",
+            "to": "dan"
+          },
+          {
+            "from": "dan",
+            "to": "ctrl"
+          },
+          {
+            "from": "ctrl",
+            "to": "rep",
+            "label": "No"
+          },
+          {
+            "from": "rep",
+            "to": "comp"
+          },
+          {
+            "from": "comp",
+            "to": "ctrl",
+            "label": "Reassess"
+          },
+          {
+            "from": "ctrl",
+            "to": "icu",
+            "label": "Yes"
+          }
+        ],
+        "refs": [
+          "emhg-2010",
+          "mhaus-crisis"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "In MH, abnormal ryanodine receptors release excess Ca²⁺ from sarcoplasmic reticulum, causing sustained muscle contraction, ATP depletion, CO₂ and heat production, rhabdomyolysis and hyperkalaemia. Dantrolene blocks RYR1 Ca²⁺ release. LAST: sodium-channel blockade in brain (excitation then depression) and heart (conduction block, reduced contractility); lipid emulsion acts as a 'sink' and provides direct cardiotonic/metabolic effects.",
+        "evidence": "- **EMHG 2010 guideline** and **MHAUS** crisis protocol: immediate trigger removal, hyperventilation with high fresh-gas flow, dantrolene 2.5 mg/kg repeated, active cooling, management of hyperkalaemia and arrhythmias, and post-crisis monitoring and referral.\n- Dantrolene introduction reduced MH mortality from historical figures of ~70–80% to under 5–10% in centres with prompt treatment.\n- **ASRA LAST checklist 2020**: lipid emulsion dosing simplified by weight (>70 kg fixed 100 mL bolus), modified ACLS (small adrenaline doses), prolonged monitoring.\n- Lipid emulsion evidence is from animal studies, case series and registries; no RCTs are feasible.",
+        "controversies": "- How much dantrolene to stock in hospitals with infrequent volatile use (cost vs risk).\n- Lipid emulsion for non-local-anaesthetic lipophilic drug overdose (e.g. some calcium-channel blockers) — weak evidence, interferes with lab tests and ECMO circuits.",
+        "indiaNotes": "- Dantrolene is expensive and often not stocked in Indian hospitals; many units rely on borrowing from nearby centres — know your nearest supply in advance. MH-susceptibility testing (contracture tests) is not widely available in India; genetic testing may be accessible through private laboratories.\n- Suxamethonium and halothane/isoflurane remain widely used in India, so MH can present anywhere, including district hospitals.\n- Lipid emulsion 20% is usually stocked as parenteral nutrition in pharmacy — keep a dedicated bag in theatre/LAST kit.\n- Ultrasound-guided blocks by surgeons and in emergency departments increase LAST exposure outside theatres."
+      },
+      "drugIds": [
+        "dantrolene",
+        "lipid-emulsion-20",
+        "amiodarone"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "emhg-2010",
+        "mhaus-crisis",
+        "asra-last-2020"
+      ],
+      "quiz": [
+        {
+          "id": "q32-2-1",
+          "stem": "The earliest and most sensitive sign of MH under general anaesthesia is usually:",
+          "options": [
+            "Temperature 40 °C",
+            "Unexplained rising ETCO₂ with tachycardia",
+            "Bradycardia",
+            "Hypoglycaemia",
+            "Low CK"
+          ],
+          "answerIndex": 1,
+          "explanation": "Hyperthermia is often late; rising ETCO₂ and tachycardia are early."
+        },
+        {
+          "id": "q32-2-2",
+          "stem": "Dantrolene initial dose in MH:",
+          "options": [
+            "0.25 mg/kg",
+            "1 mg/kg",
+            "2.5 mg/kg",
+            "10 mg/kg",
+            "20 mg flat dose"
+          ],
+          "answerIndex": 2,
+          "explanation": "2.5 mg/kg bolus, repeated until controlled."
+        },
+        {
+          "id": "q32-2-3",
+          "stem": "Which drug should be avoided with dantrolene during MH treatment?",
+          "options": [
+            "Insulin",
+            "Calcium chloride",
+            "Verapamil/diltiazem",
+            "Amiodarone",
+            "Furosemide"
+          ],
+          "answerIndex": 2,
+          "explanation": "Calcium-channel blockers with dantrolene → hyperkalaemia and cardiovascular collapse."
+        },
+        {
+          "id": "q32-2-4",
+          "stem": "A 60 kg patient seizures and becomes bradycardic after a bupivacaine block. Lipid 20% bolus should be:",
+          "options": [
+            "10 mL",
+            "90 mL (1.5 mL/kg) over 2–3 min, then infusion",
+            "500 mL rapidly",
+            "Propofol 200 mg",
+            "No lipid until arrest"
+          ],
+          "answerIndex": 1,
+          "explanation": "≤70 kg: 1.5 mL/kg bolus then 0.25 mL/kg/min."
+        },
+        {
+          "id": "q32-2-5",
+          "stem": "In LAST-related cardiac arrest, adrenaline dosing should be:",
+          "options": [
+            "1 mg every 3 min",
+            "Small doses ≤1 mcg/kg",
+            "Avoided entirely",
+            "Replaced by vasopressin",
+            "5 mg"
+          ],
+          "answerIndex": 1,
+          "explanation": "ASRA: reduced adrenaline doses (≤1 mcg/kg); avoid vasopressin."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Local anaesthetic maximum dose table",
+          "reason": "Maximum doses differ between sources and depend on block site; align to the hospital's regional anaesthesia policy."
+        },
+        {
+          "item": "MH recrudescence monitoring (24 h) and urine output target ≥2 mL/kg/h",
+          "reason": "From EMHG/MHAUS protocols; confirm local ICU protocol."
+        }
+      ]
+    },
+    {
+      "id": "post-cabg-valve-care",
+      "title": "Post-CABG and valve surgery care",
+      "summary": "The first 24 hours after cardiac surgery: arrival bundle, haemodynamic and metabolic targets, early extubation, recognising low cardiac output syndrome versus vasoplegia, post-operative AF, transfusion thresholds and valve-specific points.",
+      "viewKey": "topic:perioperative-cardiac-surgical-icu/post-cabg-valve-care",
+      "uiHints": {
+        "icon": "heart-pulse",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Low cardiac output syndrome (LCOS) after cardiac surgery is commonly defined as cardiac index <2.2 L/min/m² with signs of hypoperfusion despite adequate filling, requiring inotropes or mechanical support. Vasoplegia is hypotension with low systemic vascular resistance and preserved or high cardiac output after cardiopulmonary bypass.",
+          "refs": [
+            "eras-cardiac-2019"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "Arrival",
+            "title": "Arrival bundle",
+            "detail": "Attach monitoring (ECG, arterial line, CVP ± PA catheter, SpO₂, ETCO₂), check pacing box connections and settings, label and check drains, take structured handover (procedure, bypass/cross-clamp times, grafts/valve, weaning difficulty, inotropes, protamine given, TOE findings, bleeding). ABG, Hb, K⁺, Mg²⁺, Ca²⁺, glucose, lactate, ACT/coagulation, ECG and chest X-ray.",
+            "refs": [
+              "eras-cardiac-2019"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0–6 h",
+            "title": "Haemodynamic targets",
+            "detail": "Typical targets (individualise with the surgeon): MAP 65–80 mmHg (avoid hypertension — suture-line bleeding), HR 80–100/min (pace if needed), cardiac index >2.2 L/min/m², ScvO₂ >65%, lactate falling, urine >0.5 mL/kg/h.",
+            "refs": [
+              "eras-cardiac-2019"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "0–6 h",
+            "title": "Rewarm, ventilate, extubate early",
+            "detail": "Rewarm to normothermia but avoid >37.5 °C; lung-protective ventilation; aim for extubation within 6 h when warm, awake, not bleeding and haemodynamically stable.",
+            "refs": [
+              "eras-cardiac-2019"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Hourly",
+            "title": "Electrolytes and glucose",
+            "detail": "Keep K⁺ 4.0–5.0 mmol/L and Mg²⁺ ≥1 mmol/L (reduces arrhythmia); glucose <180 mg/dL (10 mmol/L) with an insulin infusion protocol, avoiding hypoglycaemia.",
+            "refs": [
+              "eras-cardiac-2019"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Ongoing",
+            "title": "Bleeding and transfusion",
+            "detail": "Monitor drain output hourly; keep tubes patent without stripping. Restrictive red-cell transfusion (Hb <7.5 g/dL) is non-inferior in moderate–high-risk cardiac surgery (TRICS III), unless active bleeding or ischaemia.",
+            "refs": [
+              "trics-3",
+              "eras-cardiac-2019",
+              "eacts-pbm-2017"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Low output?",
+            "title": "Low cardiac output vs vasoplegia",
+            "detail": "Low BP + low CI + cold peripheries + rising lactate = low cardiac output syndrome: check rhythm/rate, preload, tamponade (echo/TOE), graft ischaemia (ECG), RV failure; then inotrope (dobutamine/milrinone/adrenaline), IABP or MCS. Low BP + normal/high CI + warm = vasoplegia: noradrenaline, then vasopressin, then methylene blue rescue (not in G6PD deficiency).",
+            "refs": [
+              "eras-cardiac-2019",
+              "eacts-cpb-2019"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Day 1–5",
+            "title": "Post-operative AF",
+            "detail": "Occurs in ~20–40% after cardiac surgery, peaking day 2–3. Continue/restart beta-blockers when stable; correct K⁺/Mg²⁺; rate or rhythm control (beta-blocker, amiodarone); DC cardioversion if unstable; consider anticoagulation if AF persists >48 h, balancing surgical bleeding risk.",
+            "refs": [
+              "acc-aha-af-2023"
+            ]
+          },
+          {
+            "n": 8,
+            "time": "Day 1+",
+            "title": "Recovery bundle",
+            "detail": "Multimodal analgesia; delirium screening; early mobilisation; restart statin and antiplatelet therapy per surgical protocol; VTE prophylaxis once bleeding settled; AKI prevention (avoid nephrotoxins, maintain perfusion).",
+            "refs": [
+              "eras-cardiac-2019"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "dobutamine",
+            "role": "Low cardiac output syndrome",
+            "route": "IV infusion",
+            "dose": "2.5–10 mcg/kg/min",
+            "doseRange": {
+              "unit": "mcg/kg/min",
+              "min": 2.5,
+              "max": 10
+            },
+            "dilution": "250 mg in 50 mL = 5,000 mcg/mL",
+            "workedExample": "70 kg at 5 mcg/kg/min = 350 mcg/min = 4.2 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "eras-cardiac-2019"
+            ]
+          },
+          {
+            "drugId": "milrinone",
+            "role": "Low output with high SVR, pulmonary hypertension or RV failure",
+            "route": "IV infusion",
+            "dose": "0.125–0.5 mcg/kg/min (no load)",
+            "doseRange": {
+              "unit": "mcg/kg/min",
+              "min": 0.125,
+              "max": 0.5
+            },
+            "dilution": "10 mg in 50 mL = 200 mcg/mL",
+            "workedExample": "70 kg at 0.375 mcg/kg/min = 26.25 mcg/min = 7.9 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "eras-cardiac-2019"
+            ]
+          },
+          {
+            "drugId": "vasopressin",
+            "role": "Vasoplegia refractory to noradrenaline",
+            "route": "IV infusion",
+            "dose": "0.01–0.04 units/min",
+            "doseRange": {
+              "unit": "units/min",
+              "min": 0.01,
+              "max": 0.04
+            },
+            "dilution": "20 units in 50 mL = 0.4 units/mL",
+            "workedExample": "0.03 units/min = 1.8 units/h = 4.5 mL/h (not weight-based)",
+            "calculatorId": "infusion-rate-fixed",
+            "refs": [
+              "eras-cardiac-2019"
+            ]
+          },
+          {
+            "drugId": "methylene-blue",
+            "role": "Rescue for refractory vasoplegia",
+            "route": "IV",
+            "dose": "1–2 mg/kg over 20–60 min",
+            "workedExample": "70 kg: 70–140 mg (7–14 mL of 1%).",
+            "verify": "Observational evidence; G6PD deficiency and serotonergic drugs are contraindications.",
+            "refs": [
+              "eacts-cpb-2019"
+            ]
+          },
+          {
+            "drugId": "amiodarone",
+            "role": "Post-operative AF (rhythm control)",
+            "route": "IV",
+            "dose": "150–300 mg over 20–60 min, then 900 mg over 24 h",
+            "workedExample": "70 kg: 300 mg in 100 mL 5% dextrose over 30–60 min, then 900 mg in 500 mL over 24 h.",
+            "refs": [
+              "acc-aha-af-2023"
+            ]
+          },
+          {
+            "drugId": "metoprolol",
+            "role": "Post-operative AF rate control / prevention",
+            "route": "IV or PO",
+            "dose": "IV 2.5–5 mg over 2 min (max 15 mg); PO 12.5–50 mg twice daily",
+            "workedExample": "Stable, warm, extubated 70 kg patient: metoprolol 25 mg PO 12-hourly from day 1.",
+            "refs": [
+              "acc-aha-af-2023"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "lcos-vs-vasoplegia",
+            "title": "Low output vs vasoplegia vs tamponade",
+            "columns": [
+              "Feature",
+              "LCOS",
+              "Vasoplegia",
+              "Tamponade"
+            ],
+            "rows": [
+              [
+                "Peripheries",
+                "Cold, mottled",
+                "Warm",
+                "Cold"
+              ],
+              [
+                "Cardiac index",
+                "Low",
+                "Normal/high",
+                "Low"
+              ],
+              [
+                "SVR",
+                "High",
+                "Low",
+                "High"
+              ],
+              [
+                "CVP",
+                "Normal/high (high if RV failure)",
+                "Low/normal",
+                "High, may equalise with PAOP"
+              ],
+              [
+                "Drain output",
+                "Variable",
+                "Variable",
+                "Sudden fall (clotted) or high"
+              ],
+              [
+                "Echo",
+                "Poor LV/RV function, regional wall-motion abnormality",
+                "Hyperdynamic",
+                "Collection, chamber compression (may be localised)"
+              ],
+              [
+                "Treatment",
+                "Optimise preload/rate, inotrope, IABP/MCS",
+                "Noradrenaline → vasopressin → methylene blue",
+                "Re-exploration"
+              ]
+            ],
+            "refs": [
+              "eras-cardiac-2019",
+              "sts-arrest-2017"
+            ]
+          },
+          {
+            "id": "valve-specifics",
+            "title": "Valve-specific post-operative points",
+            "columns": [
+              "Operation",
+              "Key issues"
+            ],
+            "rows": [
+              [
+                "Aortic valve replacement (AS)",
+                "Hypertrophied, stiff LV — needs preload and sinus rhythm; avoid tachycardia; heart block (keep ventricular wires); hypertension stresses aortic suture line"
+              ],
+              [
+                "Mitral valve surgery",
+                "Pulmonary hypertension and RV dysfunction — avoid hypoxia, hypercapnia, acidosis; milrinone useful; AF common"
+              ],
+              [
+                "TAVI (in ICU)",
+                "Heart block (new LBBB/CHB), vascular access bleeding, stroke, annular rupture/tamponade"
+              ],
+              [
+                "Mechanical valve",
+                "Anticoagulation with warfarin (INR target per valve type/position) — timing of heparin bridge agreed with surgeon after drains removed"
+              ]
+            ],
+            "refs": [
+              "eras-cardiac-2019"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Falling BP with rising CVP and a sudden fall in drain output = tamponade until proven otherwise — call the surgeon immediately.",
+            "refs": [
+              "sts-arrest-2017"
+            ]
+          },
+          {
+            "text": "New ST changes, VF or regional wall-motion abnormality after CABG suggests graft failure — urgent surgeon/cardiology review (angiography).",
+            "refs": [
+              "eras-cardiac-2019"
+            ]
+          },
+          {
+            "text": "Lactate rising above 4 mmol/L despite targets = inadequate delivery: reassess cardiac output, Hb, bleeding and abdomen (mesenteric ischaemia).",
+            "refs": [
+              "eras-cardiac-2019"
+            ]
+          },
+          {
+            "text": "Avoid hypertension (SBP >140 mmHg) in the early hours: it increases bleeding from anastomoses.",
+            "refs": [
+              "eras-cardiac-2019"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Treating low BP with escalating noradrenaline without measuring cardiac output: vasoconstriction worsens low-output states — get an echo.",
+            "refs": [
+              "eras-cardiac-2019"
+            ]
+          },
+          {
+            "text": "Allowing K⁺ to fall below 4 mmol/L in the first 24 h after bypass: high diuresis drives hypokalaemia and arrhythmias.",
+            "refs": [
+              "eras-cardiac-2019"
+            ]
+          },
+          {
+            "text": "Stripping or milking chest drains, or breaking the sterile system to clear clots: not recommended; maintain patency by safe techniques.",
+            "refs": [
+              "eras-cardiac-2019"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Pacing at 80–90/min (AAI/DDD) is often the simplest 'inotrope' for a stiff, recently arrested heart.",
+            "refs": [
+              "reade-pacing-1"
+            ]
+          },
+          {
+            "text": "Beta-blocker restart (when off inotropes) is the most effective measure to reduce post-operative AF.",
+            "refs": [
+              "acc-aha-af-2023"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Hypotension in the first 24 h after cardiac surgery",
+        "description": "Bedside approach before calling it LCOS or vasoplegia.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "MAP below target after cardiac surgery"
+          },
+          {
+            "id": "check",
+            "type": "action",
+            "text": "Check transducer, rhythm, pacing, drains, ABG, Hb"
+          },
+          {
+            "id": "rate",
+            "type": "decision",
+            "text": "Rate/rhythm problem?"
+          },
+          {
+            "id": "pace",
+            "type": "action",
+            "text": "Pace at 80–90/min; treat AF/VT; correct K⁺/Mg²⁺"
+          },
+          {
+            "id": "bleed",
+            "type": "decision",
+            "text": "Bleeding or tamponade signs (drains, rising CVP)?"
+          },
+          {
+            "id": "surg",
+            "type": "end",
+            "text": "Call surgeon; echo/TOE; correct coagulopathy; re-exploration",
+            "severity": "critical"
+          },
+          {
+            "id": "fluid",
+            "type": "action",
+            "text": "Fluid challenge if preload-responsive"
+          },
+          {
+            "id": "ci",
+            "type": "decision",
+            "text": "Cardiac index low (<2.2) or cold?"
+          },
+          {
+            "id": "lcos",
+            "type": "end",
+            "text": "LCOS: inotrope (dobutamine/milrinone/adrenaline), IABP/MCS, look for graft ischaemia",
+            "severity": "high"
+          },
+          {
+            "id": "vaso",
+            "type": "end",
+            "text": "Vasoplegia: noradrenaline → vasopressin → methylene blue (check G6PD)",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "check"
+          },
+          {
+            "from": "check",
+            "to": "rate"
+          },
+          {
+            "from": "rate",
+            "to": "pace",
+            "label": "Yes"
+          },
+          {
+            "from": "rate",
+            "to": "bleed",
+            "label": "No"
+          },
+          {
+            "from": "pace",
+            "to": "bleed"
+          },
+          {
+            "from": "bleed",
+            "to": "surg",
+            "label": "Yes"
+          },
+          {
+            "from": "bleed",
+            "to": "fluid",
+            "label": "No"
+          },
+          {
+            "from": "fluid",
+            "to": "ci"
+          },
+          {
+            "from": "ci",
+            "to": "lcos",
+            "label": "Yes"
+          },
+          {
+            "from": "ci",
+            "to": "vaso",
+            "label": "No — warm, high CI"
+          }
+        ],
+        "refs": [
+          "eras-cardiac-2019",
+          "sts-arrest-2017"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Cardiopulmonary bypass causes systemic inflammation, haemodilution, platelet dysfunction and fibrinolysis, myocardial stunning after cross-clamping (typical nadir of function 4–6 h post-op), and vasoplegia via nitric oxide and vasopressin deficiency. Diuresis after bypass shifts K⁺ and Mg²⁺. Post-operative AF arises from atrial inflammation, sympathetic activation and electrolyte shifts.",
+        "evidence": "- **ERAS Cardiac Society 2019**: recommendations include perioperative glycaemic control (insulin infusion to <180 mg/dL), goal-directed fluid therapy, chest-tube patency without stripping, early extubation (<6 h), prevention of hyperthermia on rewarming, multimodal opioid-sparing analgesia, delirium screening, AKI risk mitigation and pharmacological thromboprophylaxis.\n- **TRICS III (2017):** 5,243 moderate-to-high-risk cardiac surgery patients; restrictive threshold (Hb <7.5 g/dL) non-inferior to liberal (<9.5 ICU / <8.5 ward) for death, MI, stroke and new dialysis; fewer transfusions.\n- **2023 ACC/AHA AF guideline:** post-operative AF after cardiac surgery is common, associated with stroke and mortality; beta-blockers for prevention, amiodarone prophylaxis in high-risk patients, and anticoagulation considered for persistent POAF when bleeding risk allows.\n- **EACTS/EACTA/EBCP CPB guideline 2019:** management of bypass-related physiology including vasoplegia.",
+        "controversies": "- Routine PA catheter use (declining; echo increasingly preferred).\n- Levosimendan in LCOS (LEVO-CTS, LICORN, CHEETAH trials were neutral).\n- Early vs delayed anticoagulation for POAF after cardiac surgery.\n- Methylene blue for vasoplegia — signal of benefit in observational data only.",
+        "indiaNotes": "- India performs a very large volume of CABG (many off-pump) with shorter ICU stays; off-pump patients have less vasoplegia and bleeding but similar AF.\n- Rheumatic heart disease remains a major indication for valve surgery in India: mitral stenosis/regurgitation with pulmonary hypertension and AF, often young patients; mechanical valves with warfarin are common, so INR monitoring access and adherence counselling matter.\n- **G6PD deficiency** prevalence is significant in parts of India — methylene blue can cause severe haemolysis; check status where possible.\n- Government schemes (PM-JAY and state schemes) cover many cardiac surgeries; ICU resources may be stretched, making early extubation and fast-track protocols important."
+      },
+      "drugIds": [
+        "dobutamine",
+        "milrinone",
+        "noradrenaline",
+        "vasopressin",
+        "methylene-blue",
+        "amiodarone",
+        "metoprolol",
+        "adrenaline"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-min",
+        "infusion-rate-fixed",
+        "mean-arterial-pressure",
+        "bsa-mosteller"
+      ],
+      "references": [
+        "eras-cardiac-2019",
+        "trics-3",
+        "eacts-pbm-2017",
+        "acc-aha-af-2023",
+        "eacts-cpb-2019",
+        "sts-arrest-2017",
+        "reade-pacing-1"
+      ],
+      "quiz": [
+        {
+          "id": "q32-3-1",
+          "stem": "Four hours after CABG: MAP 58, CI 1.6 L/min/m², cold peripheries, CVP 14, drains 30 mL/h, echo shows poor LV function without effusion. Best management:",
+          "options": [
+            "Increase noradrenaline only",
+            "Inotrope (e.g. dobutamine or milrinone ± noradrenaline), pace if slow, consider IABP",
+            "Large fluid boluses",
+            "Methylene blue",
+            "Extubate"
+          ],
+          "answerIndex": 1,
+          "explanation": "LCOS: inotropes, optimise rate, mechanical support if needed."
+        },
+        {
+          "id": "q32-3-2",
+          "stem": "After CPB: MAP 55, CI 3.8, warm peripheries, SVR low despite noradrenaline 0.4 mcg/kg/min. Next step:",
+          "options": [
+            "Dobutamine",
+            "Add vasopressin 0.01–0.04 units/min",
+            "Re-exploration",
+            "Furosemide",
+            "Beta-blocker"
+          ],
+          "answerIndex": 1,
+          "explanation": "Vasoplegia: add vasopressin; methylene blue as rescue."
+        },
+        {
+          "id": "q32-3-3",
+          "stem": "TRICS III showed that in cardiac surgery a restrictive transfusion threshold of Hb:",
+          "options": [
+            "<5 g/dL was safe",
+            "<7.5 g/dL was non-inferior to a liberal threshold",
+            "<10 g/dL is required",
+            "Increased mortality",
+            "Applies only to children"
+          ],
+          "answerIndex": 1,
+          "explanation": "Non-inferior for the composite outcome with fewer transfusions."
+        },
+        {
+          "id": "q32-3-4",
+          "stem": "Which measure most reduces post-operative AF after cardiac surgery?",
+          "options": [
+            "Digoxin prophylaxis",
+            "Early restart of beta-blockers and correcting K⁺/Mg²⁺",
+            "Routine calcium",
+            "Fluid loading",
+            "Avoiding pacing"
+          ],
+          "answerIndex": 1,
+          "explanation": "Beta-blockers are the mainstay of prevention."
+        },
+        {
+          "id": "q32-3-5",
+          "stem": "Methylene blue for vasoplegia should be avoided in:",
+          "options": [
+            "Diabetes",
+            "G6PD deficiency or patients on SSRIs",
+            "Renal failure only",
+            "Women",
+            "Patients on aspirin"
+          ],
+          "answerIndex": 1,
+          "explanation": "Haemolysis in G6PD deficiency; serotonin syndrome with serotonergic drugs."
+        }
+      ]
+    },
+    {
+      "id": "bleeding-tamponade-after-surgery",
+      "title": "Bleeding, tamponade and cardiac arrest after cardiac surgery",
+      "summary": "Distinguishing surgical from coagulopathic bleeding, a targeted (viscoelastic-guided) correction bundle, when to call for re-exploration, recognising post-operative tamponade, and the cardiac-surgery-specific arrest protocol (CALS/STS: three shocks, pace, resternotomy within 5 minutes).",
+      "viewKey": "topic:perioperative-cardiac-surgical-icu/bleeding-tamponade-after-surgery",
+      "uiHints": {
+        "icon": "droplets",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Excessive bleeding after cardiac surgery results from surgical sources and/or coagulopathy (residual heparin, platelet dysfunction, haemodilution, fibrinolysis, hypothermia). Re-exploration occurs in roughly 2–6% of patients and is associated with higher mortality — mostly when delayed.",
+          "refs": [
+            "eacts-pbm-2017"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "Hourly",
+            "title": "Measure bleeding",
+            "detail": "Record drain output every hour (more often if heavy); check for clots in tubing, Hb, ACT, platelet count, PT/INR, aPTT, fibrinogen, ionised calcium, temperature and, where available, TEG/ROTEM.",
+            "refs": [
+              "eacts-pbm-2017"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "First",
+            "title": "Basics: warm, calcium, pressure",
+            "detail": "Normothermia (≥36 °C), ionised calcium >1.1 mmol/L, pH >7.2, avoid hypertension (agree a lower SBP/MAP target with the surgeon), PEEP may be modestly increased only with surgeon agreement.",
+            "refs": [
+              "eacts-pbm-2017",
+              "eras-cardiac-2019"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Targeted",
+            "title": "Correct coagulopathy",
+            "detail": "Residual heparin (ACT prolonged / heparinase test): protamine 25–50 mg slow IV. Fibrinogen <1.5 g/L: cryoprecipitate or fibrinogen concentrate. Platelets <50–100 × 10⁹/L or antiplatelet drugs: platelets ± desmopressin 0.3 mcg/kg. Prolonged clotting times: FFP or prothrombin complex concentrate. Tranexamic acid if hyperfibrinolysis or per protocol.",
+            "refs": [
+              "eacts-pbm-2017"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Escalate",
+            "title": "Call the surgeon early",
+            "detail": "Re-exploration is usually considered for heavy ongoing bleeding (commonly quoted: >400 mL in the first hour, >200 mL/h for 2–4 h, or sudden increase) despite correction, or any haemodynamic compromise/tamponade. Do not 'chase' surgical bleeding with blood products alone.",
+            "refs": [
+              "eacts-pbm-2017",
+              "sts-arrest-2017"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Tamponade",
+            "title": "Recognise post-operative tamponade",
+            "detail": "Hypotension, tachycardia (or loss of pacing response), rising CVP and filling pressures, falling cardiac output/urine, rising lactate, widening mediastinum, sudden drop in drain output (clotted tubes). Can be LOCALISED (clot over right atrium/ventricle) with atypical echo — TOE if transthoracic views are poor.",
+            "refs": [
+              "sts-arrest-2017",
+              "eacts-arrest-2009"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Arrest VF/pVT",
+            "title": "Three stacked shocks first",
+            "detail": "Witnessed VF/pVT in a monitored post-cardiac-surgery patient: up to 3 rapid successive shocks (within ~1 min) BEFORE external compressions; amiodarone 300 mg after the third failed shock.",
+            "refs": [
+              "sts-arrest-2017",
+              "eacts-arrest-2009"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Arrest brady/asystole",
+            "title": "Pace first",
+            "detail": "Asystole or extreme bradycardia: if pacing wires present, pace DDD at 80–100/min at maximum output before starting CPR; atropine 1 mg if no wires.",
+            "refs": [
+              "sts-arrest-2017"
+            ]
+          },
+          {
+            "n": 8,
+            "time": "Arrest PEA",
+            "title": "Turn off pacing, think tamponade",
+            "detail": "PEA: pause pacing to exclude underlying VF; start CPR; hypovolaemia/tamponade/tension pneumothorax are likely. Avoid full-dose adrenaline (1 mg) — consider small doses only on senior advice.",
+            "refs": [
+              "sts-arrest-2017",
+              "eacts-arrest-2009"
+            ]
+          },
+          {
+            "n": 9,
+            "time": "≤5 min",
+            "title": "Emergency resternotomy",
+            "detail": "If no ROSC after the above, prepare for emergency resternotomy within 5 minutes (within ~10 days of surgery) — the resternotomy kit should be in the ICU; six key roles (compressions, airway, defibrillation, team leader, drugs, ICU coordinator).",
+            "refs": [
+              "sts-arrest-2017",
+              "eacts-arrest-2009"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "protamine",
+            "role": "Residual heparin effect",
+            "route": "IV slow",
+            "dose": "25–50 mg over ≥10 min (1 mg per ~100 units residual heparin)",
+            "workedExample": "ACT 180 s with heparinase-corrected normal: protamine 25 mg (2.5 mL of 10 mg/mL) over 10 min, recheck ACT.",
+            "refs": [
+              "eacts-pbm-2017"
+            ]
+          },
+          {
+            "drugId": "tranexamic-acid",
+            "role": "Post-operative bleeding with fibrinolysis",
+            "route": "IV",
+            "dose": "1 g over 10 min (protocol-dependent)",
+            "workedExample": "70 kg: 1 g = 2 ampoules of 500 mg/5 mL in 100 mL saline over 10 min.",
+            "verify": "Dosing varies between cardiac-anaesthesia protocols; seizure risk with high doses/renal failure.",
+            "refs": [
+              "eacts-pbm-2017"
+            ]
+          },
+          {
+            "drugId": "desmopressin",
+            "role": "Platelet dysfunction (antiplatelet drugs, uraemia)",
+            "route": "IV infusion",
+            "dose": "0.3 mcg/kg in 50 mL saline over 20–30 min",
+            "workedExample": "70 kg: 21 mcg (≈5 ampoules of 4 mcg) over 30 min.",
+            "refs": [
+              "eacts-pbm-2017"
+            ]
+          },
+          {
+            "drugId": "amiodarone",
+            "role": "VF/pVT after three failed shocks",
+            "route": "IV",
+            "dose": "300 mg bolus",
+            "workedExample": "300 mg (2 ampoules of 150 mg/3 mL) IV/central bolus.",
+            "refs": [
+              "eacts-arrest-2009"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "bleeding-targets",
+            "title": "Targeted correction of post-cardiac-surgery bleeding",
+            "columns": [
+              "Test result",
+              "Treatment"
+            ],
+            "rows": [
+              [
+                "ACT prolonged (corrects with heparinase)",
+                "Protamine 25–50 mg"
+              ],
+              [
+                "Fibrinogen <1.5 g/L (or low FIBTEM/functional fibrinogen)",
+                "Cryoprecipitate (≈10 units) or fibrinogen concentrate 2–4 g"
+              ],
+              [
+                "Platelets <50–100 × 10⁹/L, or recent antiplatelet drugs",
+                "Platelet transfusion; desmopressin 0.3 mcg/kg"
+              ],
+              [
+                "PT/INR prolonged, low factor activity (EXTEM CT prolonged)",
+                "FFP 15 mL/kg or prothrombin complex concentrate"
+              ],
+              [
+                "Hyperfibrinolysis on ROTEM/TEG",
+                "Tranexamic acid"
+              ],
+              [
+                "Ionised calcium <1.1 mmol/L",
+                "Calcium chloride/gluconate"
+              ],
+              [
+                "Temperature <36 °C",
+                "Active warming"
+              ]
+            ],
+            "caption": "Values and products per local blood bank; viscoelastic testing reduces unnecessary transfusion (EACTS/EACTA PBM).",
+            "refs": [
+              "eacts-pbm-2017"
+            ]
+          },
+          {
+            "id": "cals-roles",
+            "title": "Cardiac surgery arrest: six key roles",
+            "columns": [
+              "Role",
+              "Task"
+            ],
+            "rows": [
+              [
+                "1. External compressions",
+                "Start after shocks/pacing if no ROSC"
+              ],
+              [
+                "2. Airway and breathing",
+                "100% O₂; check tube, exclude tension pneumothorax; disconnect PEEP"
+              ],
+              [
+                "3. Defibrillation",
+                "Three stacked shocks for VF/pVT"
+              ],
+              [
+                "4. Team leader",
+                "Runs the protocol, calls resternotomy"
+              ],
+              [
+                "5. Drugs and syringe drivers",
+                "Stop non-essential infusions; amiodarone; avoid 1 mg adrenaline"
+              ],
+              [
+                "6. ICU coordinator",
+                "Calls surgeon, prepares resternotomy kit and sterile field"
+              ]
+            ],
+            "refs": [
+              "sts-arrest-2017"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Drain output suddenly stops in a bleeding patient who becomes hypotensive = clotted drains and tamponade, not 'bleeding has stopped'.",
+            "refs": [
+              "sts-arrest-2017"
+            ]
+          },
+          {
+            "text": "Hypotension with high CVP after cardiac surgery: tamponade, RV failure or tension pneumothorax — echo and call the surgeon.",
+            "refs": [
+              "sts-arrest-2017"
+            ]
+          },
+          {
+            "text": "External chest compressions in a fresh sternotomy can cause cardiac/graft injury: shocks or pacing first, but do not delay CPR beyond ~1 minute.",
+            "refs": [
+              "sts-arrest-2017"
+            ]
+          },
+          {
+            "text": "Massive bleeding (>1.5 L in 1 h or haemodynamic instability) — activate massive transfusion protocol and inform theatre.",
+            "refs": [
+              "eacts-pbm-2017"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Giving blind 'shotgun' FFP and platelets without tests: increases transfusion-related harm and delays recognition of surgical bleeding.",
+            "refs": [
+              "eacts-pbm-2017"
+            ]
+          },
+          {
+            "text": "Excess protamine: protamine itself impairs coagulation and can cause hypotension and pulmonary hypertension.",
+            "refs": [
+              "eacts-pbm-2017"
+            ]
+          },
+          {
+            "text": "Waiting for a full transthoracic echo to diagnose tamponade in a peri-arrest patient: clinical suspicion is enough to call for re-opening.",
+            "refs": [
+              "sts-arrest-2017"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Write the 'call the surgeon' bleeding threshold on the observation chart at handover so nurses escalate without debate.",
+            "refs": [
+              "eacts-pbm-2017"
+            ]
+          },
+          {
+            "text": "Check the pacing box and wires as part of every post-op arrest: pacing failure is a reversible cause.",
+            "refs": [
+              "sts-arrest-2017"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Arrest after cardiac surgery (CALS/STS)",
+        "description": "Modified ALS for monitored patients after cardiac surgery.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Cardiac arrest in ICU after cardiac surgery"
+          },
+          {
+            "id": "rhythm",
+            "type": "decision",
+            "text": "Rhythm?"
+          },
+          {
+            "id": "shocks",
+            "type": "action",
+            "text": "Up to 3 stacked shocks within 1 min",
+            "severity": "critical"
+          },
+          {
+            "id": "pace",
+            "type": "action",
+            "text": "Pace DDD 80–100/min at maximum output (atropine if no wires)",
+            "severity": "critical"
+          },
+          {
+            "id": "pea",
+            "type": "action",
+            "text": "Pause pacing to exclude VF; start CPR; check tamponade, tension, bleeding",
+            "severity": "critical"
+          },
+          {
+            "id": "rosc1",
+            "type": "decision",
+            "text": "ROSC?"
+          },
+          {
+            "id": "cpr",
+            "type": "action",
+            "text": "External CPR; amiodarone 300 mg (VF); airway check; avoid 1 mg adrenaline"
+          },
+          {
+            "id": "rester",
+            "type": "action",
+            "text": "Emergency resternotomy within 5 min",
+            "severity": "critical"
+          },
+          {
+            "id": "rosc2",
+            "type": "decision",
+            "text": "ROSC after resternotomy?"
+          },
+          {
+            "id": "internal",
+            "type": "end",
+            "text": "Internal massage/defibrillation (20 J); theatre; ECMO if available",
+            "severity": "critical"
+          },
+          {
+            "id": "post",
+            "type": "end",
+            "text": "Post-arrest care; find cause (graft, bleeding, tamponade)",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "rhythm"
+          },
+          {
+            "from": "rhythm",
+            "to": "shocks",
+            "label": "VF/pVT"
+          },
+          {
+            "from": "rhythm",
+            "to": "pace",
+            "label": "Asystole/severe brady"
+          },
+          {
+            "from": "rhythm",
+            "to": "pea",
+            "label": "PEA"
+          },
+          {
+            "from": "shocks",
+            "to": "rosc1"
+          },
+          {
+            "from": "pace",
+            "to": "rosc1"
+          },
+          {
+            "from": "pea",
+            "to": "cpr"
+          },
+          {
+            "from": "rosc1",
+            "to": "post",
+            "label": "Yes"
+          },
+          {
+            "from": "rosc1",
+            "to": "cpr",
+            "label": "No"
+          },
+          {
+            "from": "cpr",
+            "to": "rester"
+          },
+          {
+            "from": "rester",
+            "to": "rosc2"
+          },
+          {
+            "from": "rosc2",
+            "to": "post",
+            "label": "Yes"
+          },
+          {
+            "from": "rosc2",
+            "to": "internal",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "sts-arrest-2017",
+          "eacts-arrest-2009"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Tamponade after cardiac surgery is often caused by clot rather than free fluid; the open pericardium allows localised compression of a single chamber (commonly the right atrium or right ventricle), so classical signs (equalisation of pressures, pulsus paradoxus) may be absent. Coagulopathy after bypass reflects heparin, haemodilution, platelet activation/consumption on the circuit and fibrinolysis.",
+        "evidence": "- **EACTS/EACTA 2017 Patient Blood Management guideline**: pre-operative anaemia management, antifibrinolytics, viscoelastic-guided transfusion algorithms (IIa), fibrinogen/PCC use, restrictive thresholds, and protamine dosing.\n- **STS 2017 expert consensus** (building on **EACTS 2009** guideline): for arrest after cardiac surgery, three sequential shocks before compressions for VF/VT, immediate pacing for asystole/bradycardia, early emergency resternotomy (within 5 min) and avoidance of routine 1 mg adrenaline; resuscitation teams train with CALS (Cardiac Surgical Advanced Life Support).\n- Survival after arrest following cardiac surgery is much higher than in other in-hospital arrests (often quoted around 50%) because causes are frequently reversible (tamponade, bleeding, graft occlusion, arrhythmia).",
+        "controversies": "- Fixed volume thresholds vs clinical judgment for re-exploration.\n- Fibrinogen concentrate vs cryoprecipitate (FIBRES trial: non-inferior).\n- Prophylactic tranexamic acid dose (OPTIMAL trial: high vs low dose — high dose reduced transfusion, seizure risk similar in that trial).",
+        "indiaNotes": "- Fibrinogen concentrate and PCC are costly and not universally stocked in India — cryoprecipitate is the usual source of fibrinogen; know your blood bank's turnaround time.\n- TEG/ROTEM is available mostly in large cardiac centres; standard lab coagulation tests and clinical judgment are used elsewhere.\n- Every cardiac surgical ICU should have a sterile resternotomy pack and a CALS-trained team at the bedside 24/7."
+      },
+      "drugIds": [
+        "protamine",
+        "tranexamic-acid",
+        "desmopressin",
+        "amiodarone",
+        "adrenaline"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "eacts-pbm-2017",
+        "sts-arrest-2017",
+        "eacts-arrest-2009",
+        "eras-cardiac-2019"
+      ],
+      "quiz": [
+        {
+          "id": "q32-4-1",
+          "stem": "Two hours post-CABG, drains drained 250 mL/h, then suddenly stop. BP falls, CVP rises from 8 to 18. The likely diagnosis is:",
+          "options": [
+            "Bleeding has stopped",
+            "Tamponade from clotted drains",
+            "Vasoplegia",
+            "Hypovolaemia only",
+            "Pulmonary embolism"
+          ],
+          "answerIndex": 1,
+          "explanation": "Classic presentation of post-operative tamponade."
+        },
+        {
+          "id": "q32-4-2",
+          "stem": "VF in a monitored patient 6 h after cardiac surgery. The first action is:",
+          "options": [
+            "Immediate external compressions for 2 min",
+            "Up to three stacked shocks within a minute",
+            "Adrenaline 1 mg",
+            "Intubate",
+            "Amiodarone first"
+          ],
+          "answerIndex": 1,
+          "explanation": "CALS/STS: three stacked shocks before compressions."
+        },
+        {
+          "id": "q32-4-3",
+          "stem": "Post-op bleeding with fibrinogen 1.0 g/L and normal ACT. The best product is:",
+          "options": [
+            "Protamine",
+            "Cryoprecipitate or fibrinogen concentrate",
+            "Platelets only",
+            "Vitamin K",
+            "Albumin"
+          ],
+          "answerIndex": 1,
+          "explanation": "Replace fibrinogen when <1.5 g/L."
+        },
+        {
+          "id": "q32-4-4",
+          "stem": "If no ROSC after the initial cardiac surgery arrest interventions, emergency resternotomy should occur within about:",
+          "options": [
+            "1 min",
+            "5 min",
+            "20 min",
+            "1 h",
+            "It should not be done in ICU"
+          ],
+          "answerIndex": 1,
+          "explanation": "Within 5 min."
+        },
+        {
+          "id": "q32-4-5",
+          "stem": "In post-cardiac-surgery arrest, adrenaline 1 mg bolus is:",
+          "options": [
+            "Mandatory every 3 min",
+            "Not routinely recommended because of rebound hypertension and bleeding",
+            "Given before shocks",
+            "The only drug used",
+            "Replaced by vasopressin 40 units"
+          ],
+          "answerIndex": 1,
+          "explanation": "STS/EACTS advise against routine 1 mg doses."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Re-exploration bleeding thresholds (>400 mL first hour, >200 mL/h for 2–4 h)",
+          "reason": "Commonly quoted practice thresholds, not uniform guideline values; agree with the cardiac surgical team."
+        },
+        {
+          "item": "Small-dose adrenaline in post-cardiac-surgery arrest",
+          "reason": "STS/EACTS discourage 1 mg boluses; exact alternative dosing is not standardised."
+        }
+      ]
+    },
+    {
+      "id": "pacing-wires",
+      "title": "Epicardial pacing wires and temporary pacing",
+      "summary": "How to read and set a temporary pacing box after cardiac surgery: modes (AAI, VVI, DDD, asynchronous), output and sensitivity thresholds, daily checks, troubleshooting failure to capture or sense, and safe wire removal.",
+      "viewKey": "topic:perioperative-cardiac-surgical-icu/pacing-wires",
+      "uiHints": {
+        "icon": "activity",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Temporary epicardial wires are stitched to the atrial and/or ventricular epicardium at the end of cardiac surgery to treat bradyarrhythmias, optimise cardiac output (AV synchrony, rate) and terminate some tachyarrhythmias. Their thresholds rise over days because of inflammation and fibrosis, and many fail by day 4–5.",
+          "refs": [
+            "reade-pacing-1"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "Arrival",
+            "title": "Identify the wires",
+            "detail": "Confirm which wires are atrial and which ventricular (by convention atrial often exit right of the sternum and ventricular left — but always check the operation note/labels). Connect to the pacing box with labelled cables; keep unused wires insulated and dry.",
+            "refs": [
+              "reade-pacing-1"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Arrival",
+            "title": "Record the settings",
+            "detail": "Document mode, rate, atrial and ventricular output (mA), sensitivity (mV), AV delay and underlying rhythm on the chart. Check the box battery and have a spare battery and transcutaneous pacing pads available.",
+            "refs": [
+              "reade-pacing-1"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Choose",
+            "title": "Select the mode",
+            "detail": "Sinus bradycardia with intact AV conduction → AAI. AF/flutter with slow ventricular response → VVI. Heart block with atrial activity → DDD. Asynchronous (AOO/VOO/DOO) only temporarily (e.g. diathermy interference) — risk of R-on-T VF.",
+            "refs": [
+              "reade-pacing-2"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Daily",
+            "title": "Threshold testing",
+            "detail": "Capture threshold: at a rate above intrinsic, reduce output until capture is lost; set output at least 2–3 × threshold. Sensing threshold: set rate below intrinsic, increase the mV number until sensing fails (pacing spikes appear); set sensitivity at about half that value. Do NOT test capture in pacing-dependent patients without senior help.",
+            "refs": [
+              "reade-pacing-1",
+              "reade-pacing-2"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Problem",
+            "title": "Failure to capture",
+            "detail": "Spikes without P/QRS: increase output, check connections and battery, reverse polarity, correct K⁺/acidosis/ischaemia; if wires failing, use a skin needle as an indifferent electrode (unipolar), start transcutaneous pacing or isoprenaline, arrange transvenous pacing.",
+            "refs": [
+              "reade-pacing-2"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Problem",
+            "title": "Failure to sense / oversensing",
+            "detail": "Undersensing (inappropriate spikes on intrinsic beats; risk of R-on-T): make more sensitive (lower mV). Oversensing (pauses because noise/T-waves inhibit pacing; crosstalk in DDD): make less sensitive, check leads, shorten ventricular blanking per expert advice.",
+            "refs": [
+              "reade-pacing-2"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Atrial flutter",
+            "title": "Overdrive pacing (expert)",
+            "detail": "Type 1 atrial flutter post-op may be terminated by rapid atrial pacing via atrial wires (e.g. 10–20% above flutter rate) — only with ventricular wire backup and senior/cardiology supervision; never deliver rapid pacing through ventricular wires.",
+            "refs": [
+              "reade-pacing-2"
+            ]
+          },
+          {
+            "n": 8,
+            "time": "Day 3–5",
+            "title": "Removal",
+            "detail": "Remove when no longer needed (often day 3–5, before discharge). Check INR, platelets and that heparin/LMWH is timed appropriately; pull gently with steady traction (cut flush at skin if resistant, per surgeon). Bed rest and monitor BP/HR for ~1 h; watch for tamponade.",
+            "refs": [
+              "reade-pacing-1"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "atropine",
+            "role": "Bradycardia while pacing is being set up",
+            "route": "IV",
+            "dose": "0.5–1 mg; repeat every 3–5 min to max 3 mg",
+            "workedExample": "0.6 mg ampoule IV, repeat to 3 mg.",
+            "refs": [
+              "reade-pacing-1"
+            ]
+          },
+          {
+            "drugId": "isoprenaline",
+            "role": "Bradycardia with failing wires — bridge to transvenous pacing",
+            "route": "IV infusion",
+            "dose": "0.5–10 mcg/min",
+            "doseRange": {
+              "unit": "mcg/min",
+              "min": 0.5,
+              "max": 10
+            },
+            "dilution": "2 mg in 50 mL = 40 mcg/mL (check ampoule strength)",
+            "workedExample": "2 mcg/min = 120 mcg/h = 3 mL/h of 40 mcg/mL.",
+            "calculatorId": "infusion-rate-fixed",
+            "verify": "Ampoule strength and availability vary in India.",
+            "refs": [
+              "reade-pacing-1"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "pacing-codes",
+            "title": "Pacing code (NBG) — first three letters",
+            "columns": [
+              "Position",
+              "Meaning",
+              "Letters"
+            ],
+            "rows": [
+              [
+                "1st",
+                "Chamber paced",
+                "A = atrium, V = ventricle, D = dual, O = none"
+              ],
+              [
+                "2nd",
+                "Chamber sensed",
+                "A, V, D, O"
+              ],
+              [
+                "3rd",
+                "Response to sensing",
+                "I = inhibited, T = triggered, D = dual (inhibit + trigger), O = none"
+              ]
+            ],
+            "caption": "Examples: AAI = paces and senses atrium, inhibited by native P waves. VVI = paces/senses ventricle. DDD = paces and senses both, tracks atrial activity. DOO = asynchronous dual-chamber.",
+            "refs": [
+              "reade-pacing-1"
+            ]
+          },
+          {
+            "id": "pacing-settings",
+            "title": "Typical starting settings after cardiac surgery (guide)",
+            "columns": [
+              "Setting",
+              "Atrial",
+              "Ventricular"
+            ],
+            "rows": [
+              [
+                "Rate",
+                "80–90/min (AAI/DDD)",
+                "80–90/min (VVI backup often 50–60 if intrinsic rhythm adequate)"
+              ],
+              [
+                "Output",
+                "≥2–3 × capture threshold (often 5–10 mA initially)",
+                "≥2–3 × capture threshold (often 5–10 mA initially)"
+              ],
+              [
+                "Sensitivity",
+                "About half the sensing threshold (often 0.5–1 mV)",
+                "About half the sensing threshold (often 2–3 mV)"
+              ],
+              [
+                "AV delay (DDD)",
+                "Commonly 150–180 ms (optimise to cardiac output)",
+                "—"
+              ]
+            ],
+            "caption": "Settings are institution-specific; record the measured thresholds daily.",
+            "refs": [
+              "reade-pacing-1",
+              "reade-pacing-2"
+            ]
+          },
+          {
+            "id": "pacing-trouble",
+            "title": "Troubleshooting",
+            "columns": [
+              "Problem",
+              "ECG appearance",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Failure to capture",
+                "Spikes without P or QRS",
+                "↑ output, check connections/battery, reverse polarity, correct K⁺, unipolar via skin needle, transcutaneous pacing"
+              ],
+              [
+                "Failure to pace (no output)",
+                "No spikes, bradycardia",
+                "Check battery/box/cables; oversensing? reduce sensitivity; asynchronous mode if needed"
+              ],
+              [
+                "Undersensing",
+                "Spikes on top of intrinsic beats/T waves",
+                "Lower the mV value (more sensitive); consider turning pacing off if intrinsic rhythm adequate"
+              ],
+              [
+                "Oversensing / crosstalk",
+                "Pauses, irregular pacing",
+                "Raise the mV value (less sensitive), check for electrical interference"
+              ],
+              [
+                "Pacemaker-mediated tachycardia (DDD)",
+                "Fast paced rhythm at upper rate",
+                "Change to VVI/DVI or adjust PVARP per expert"
+              ]
+            ],
+            "refs": [
+              "reade-pacing-2"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Pacing-dependent patient (no underlying rhythm): never switch off or disconnect for testing without transcutaneous pacing ready.",
+            "refs": [
+              "reade-pacing-1"
+            ]
+          },
+          {
+            "text": "Spikes falling on T-waves (undersensing) can trigger VF — fix sensitivity or switch off pacing if the intrinsic rhythm is adequate.",
+            "refs": [
+              "reade-pacing-2"
+            ]
+          },
+          {
+            "text": "Hypotension and tachycardia after wire removal = tamponade until proven otherwise: echo and call the surgeon.",
+            "refs": [
+              "reade-pacing-1"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Handling exposed wire tips with ungloved hands or leaving them in contact with metal: microshocks can induce VF.",
+            "refs": [
+              "reade-pacing-1"
+            ]
+          },
+          {
+            "text": "Forgetting that a pacing box set to asynchronous mode during surgery is still in DOO on ICU arrival — check and change to a demand mode.",
+            "refs": [
+              "reade-pacing-1"
+            ]
+          },
+          {
+            "text": "Removing wires while the patient is fully anticoagulated (high INR or just after LMWH dose).",
+            "refs": [
+              "reade-pacing-1"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "AV-sequential pacing (DDD/DVI) can improve cardiac output by 15–20% compared with VVI in stiff post-operative ventricles that depend on the atrial kick.",
+            "refs": [
+              "reade-pacing-2"
+            ]
+          },
+          {
+            "text": "Atrial electrogram (connect atrial wires to a precordial ECG lead) helps diagnose wide- or narrow-complex tachycardia after surgery.",
+            "refs": [
+              "reade-pacing-2"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Bradycardia or pacing failure after cardiac surgery",
+        "description": "Bedside pathway.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Bradycardia, hypotension or abnormal pacing on monitor"
+          },
+          {
+            "id": "wires",
+            "type": "decision",
+            "text": "Epicardial wires present and connected?"
+          },
+          {
+            "id": "nowires",
+            "type": "action",
+            "text": "Atropine 0.5–1 mg; isoprenaline infusion; transcutaneous pacing; call cardiology",
+            "severity": "high"
+          },
+          {
+            "id": "spikes",
+            "type": "decision",
+            "text": "Pacing spikes visible?"
+          },
+          {
+            "id": "capture",
+            "type": "decision",
+            "text": "Each spike followed by P/QRS?"
+          },
+          {
+            "id": "fix_capture",
+            "type": "action",
+            "text": "Increase output, check connections, reverse polarity, correct K⁺"
+          },
+          {
+            "id": "ok",
+            "type": "end",
+            "text": "Pacing effective: record thresholds; optimise rate/mode"
+          },
+          {
+            "id": "fix_output",
+            "type": "action",
+            "text": "Check battery/cables; reduce sensitivity (oversensing?); asynchronous mode if needed"
+          },
+          {
+            "id": "better",
+            "type": "decision",
+            "text": "Effective now?"
+          },
+          {
+            "id": "tvp",
+            "type": "end",
+            "text": "Transcutaneous pacing, isoprenaline, urgent transvenous pacing",
+            "severity": "critical"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "wires"
+          },
+          {
+            "from": "wires",
+            "to": "nowires",
+            "label": "No"
+          },
+          {
+            "from": "wires",
+            "to": "spikes",
+            "label": "Yes"
+          },
+          {
+            "from": "nowires",
+            "to": "tvp"
+          },
+          {
+            "from": "spikes",
+            "to": "capture",
+            "label": "Yes"
+          },
+          {
+            "from": "spikes",
+            "to": "fix_output",
+            "label": "No"
+          },
+          {
+            "from": "capture",
+            "to": "ok",
+            "label": "Yes"
+          },
+          {
+            "from": "capture",
+            "to": "fix_capture",
+            "label": "No"
+          },
+          {
+            "from": "fix_capture",
+            "to": "better"
+          },
+          {
+            "from": "fix_output",
+            "to": "better"
+          },
+          {
+            "from": "better",
+            "to": "ok",
+            "label": "Yes"
+          },
+          {
+            "from": "better",
+            "to": "tvp",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "reade-pacing-1",
+          "reade-pacing-2"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Epicardial electrodes sense and stimulate local myocardium; the capture threshold rises with local oedema, inflammation and fibrosis, plus metabolic factors (acidosis, hyperkalaemia, ischaemia, antiarrhythmic drugs). The post-operative ventricle is stiff and benefits from AV synchrony and a higher rate (80–90/min) to maintain cardiac output.",
+        "evidence": "- **Reade 2007 (two-part practical review, Anaesthesia)**: indications, wire placement, pacing codes, mode selection, threshold testing, troubleshooting, overdrive pacing for atrial flutter and removal complications.\n- Bradyarrhythmias requiring pacing are commonest after valve surgery (especially aortic and tricuspid) because of proximity of the conduction system; persistent complete heart block beyond ~5–7 days usually needs a permanent pacemaker.\n- Complications of wire removal (bleeding, tamponade, arrhythmia, retained wire) are uncommon but potentially fatal.",
+        "controversies": "- Routine placement of wires in all patients vs selective (e.g. omitted in uncomplicated CABG in some centres).\n- Optimal timing of removal relative to anticoagulation for mechanical valves.",
+        "indiaNotes": "- Temporary pacing boxes may be shared between ICU beds in Indian units; label each box with the patient, mode and thresholds and charge/replace batteries per schedule.\n- Transvenous pacing expertise is typically in cardiology on call; agree escalation pathways in advance.\n- Rheumatic and congenital valve surgery in young Indian patients leads to frequent conduction problems post-op."
+      },
+      "drugIds": [
+        "atropine",
+        "isoprenaline"
+      ],
+      "calculatorIds": [
+        "infusion-rate-fixed"
+      ],
+      "references": [
+        "reade-pacing-1",
+        "reade-pacing-2"
+      ],
+      "quiz": [
+        {
+          "id": "q32-5-1",
+          "stem": "Post-op sinus bradycardia at 45/min with normal AV conduction. Best pacing mode:",
+          "options": [
+            "VVI",
+            "AAI",
+            "DOO",
+            "VOO",
+            "None"
+          ],
+          "answerIndex": 1,
+          "explanation": "AAI preserves AV synchrony and normal ventricular activation."
+        },
+        {
+          "id": "q32-5-2",
+          "stem": "Post-op patient in AF with slow ventricular rate 40/min; ventricular wires only. Mode:",
+          "options": [
+            "AAI",
+            "VVI",
+            "DDD",
+            "AOO",
+            "Overdrive pacing"
+          ],
+          "answerIndex": 1,
+          "explanation": "VVI — atrial pacing impossible in AF."
+        },
+        {
+          "id": "q32-5-3",
+          "stem": "The ECG shows pacing spikes without following QRS complexes. This is:",
+          "options": [
+            "Undersensing",
+            "Failure to capture",
+            "Oversensing",
+            "Normal pacing",
+            "Crosstalk"
+          ],
+          "answerIndex": 1,
+          "explanation": "Spikes without capture → increase output, check connections, etc."
+        },
+        {
+          "id": "q32-5-4",
+          "stem": "Capture threshold is 3 mA. The output should be set at about:",
+          "options": [
+            "1 mA",
+            "3 mA",
+            "6–9 mA (2–3 × threshold)",
+            "25 mA always",
+            "0.5 mA"
+          ],
+          "answerIndex": 2,
+          "explanation": "Safety margin of at least 2–3 × threshold."
+        },
+        {
+          "id": "q32-5-5",
+          "stem": "One hour after epicardial wire removal the patient becomes hypotensive and tachycardic. First consideration:",
+          "options": [
+            "Vasovagal reaction only",
+            "Tamponade — echo and call surgeon",
+            "Sepsis",
+            "Hypoglycaemia",
+            "Pulmonary embolism"
+          ],
+          "answerIndex": 1,
+          "explanation": "Bleeding/tamponade is the key complication of removal."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Typical pacing settings (output 5–10 mA, sensitivity 0.5–1 mV atrial / 2–3 mV ventricular, AV delay 150–180 ms)",
+          "reason": "Institution- and device-specific; confirm against the local pacing box manual and cardiac anaesthesia protocol."
+        }
+      ]
+    },
+    {
+      "id": "frailty-obesity",
+      "title": "Frailty and obesity in the surgical ICU patient",
+      "summary": "Assessing frailty with the Clinical Frailty Scale and using it to shape goals and post-operative care, and the practical ICU management of the obese surgical patient: weight scalars for drug dosing, airway and ventilation, OSA, VTE and pressure care.",
+      "viewKey": "topic:perioperative-cardiac-surgical-icu/frailty-obesity",
+      "uiHints": {
+        "icon": "users",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Frailty is a state of reduced physiological reserve and increased vulnerability to stressors; the Clinical Frailty Scale (CFS) is a judgment-based 9-point scale (extended from the original 7-point scale validated in 2005). Obesity is BMI ≥30 kg/m² (WHO), but WHO suggests lower action points (23 and 27.5 kg/m²) for Asian populations.",
+          "refs": [
+            "cfs-2005",
+            "who-asian-bmi-2004"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "Admission",
+            "title": "Score frailty",
+            "detail": "Record the Clinical Frailty Scale (CFS) based on the patient's function 2 weeks BEFORE the acute illness (ask family). CFS ≥5 = frail. Use it to inform discussions and care planning, not as a sole triage tool.",
+            "refs": [
+              "cfs-2005",
+              "esc-ncs-2022"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Day 0–1",
+            "title": "Frailty-focused care",
+            "detail": "Goals-of-care conversation early with patient and family; delirium prevention (orientation, sleep, glasses/hearing aids, avoid benzodiazepines/anticholinergics); careful fluid and drug dosing (low muscle mass — creatinine overestimates GFR); early mobilisation and nutrition; review polypharmacy.",
+            "refs": [
+              "cfs-2005",
+              "esc-ncs-2022"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Obese: weigh",
+            "title": "Measure and calculate weights",
+            "detail": "Measure actual (total) body weight and height; calculate BMI, predicted (ideal) body weight, lean body weight and adjusted body weight. Asian populations have higher metabolic risk at lower BMI.",
+            "refs": [
+              "aagbi-obese-2015",
+              "who-asian-bmi-2004"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Obese: airway",
+            "title": "Airway and extubation",
+            "detail": "Expect difficult mask ventilation and rapid desaturation: ramped/head-up position, preoxygenate with CPAP/HFNC, videolaryngoscope. Extubate fully awake and sitting up; apply HFNC or CPAP early after extubation, especially with known/suspected OSA.",
+            "refs": [
+              "aagbi-obese-2015",
+              "stop-bang-2008"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Obese: ventilate",
+            "title": "Lung-protective ventilation",
+            "detail": "Set tidal volume by predicted body weight (6–8 mL/kg PBW), not actual weight; use higher PEEP (often 8–12 cmH₂O or titrated) and head-up 30–45° to counter atelectasis; consider recruitment if haemodynamically stable.",
+            "refs": [
+              "aagbi-obese-2015"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Obese: drugs",
+            "title": "Choose the right weight scalar",
+            "detail": "Lipophilic induction agents and opioids by lean body weight; propofol infusion by total or adjusted weight; suxamethonium by total weight; rocuronium by ideal/lean weight; titrate to effect and monitor (TOF, BIS if available). Antibiotics and LMWH often need higher doses — check local protocol.",
+            "refs": [
+              "aagbi-obese-2015"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Obese: prevent",
+            "title": "VTE, pressure areas, rhabdomyolysis",
+            "detail": "Weight-adjusted VTE prophylaxis plus mechanical methods; bariatric beds and appropriately sized cuffs; check pressure areas and CK after long surgery (gluteal rhabdomyolysis); screen and treat OSA with CPAP; glucose control.",
+            "refs": [
+              "aagbi-obese-2015"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "paracetamol",
+            "role": "Analgesia in frail, low-weight patients",
+            "route": "IV/PO",
+            "dose": "15 mg/kg every 6 h if <50 kg (max 60 mg/kg/day, ≤3 g/day if hepatic risk)",
+            "workedExample": "42 kg frail patient: 630 mg (≈ 650 mg tablet) every 6 h; max 2.5 g/day.",
+            "refs": [
+              "eras-cardiac-2019"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "cfs-table",
+            "title": "Clinical Frailty Scale (summary)",
+            "columns": [
+              "Score",
+              "Description"
+            ],
+            "rows": [
+              [
+                "1",
+                "Very fit — robust, active, energetic"
+              ],
+              [
+                "2",
+                "Fit — no active disease, exercise occasionally"
+              ],
+              [
+                "3",
+                "Managing well — medical problems well controlled, not regularly active beyond walking"
+              ],
+              [
+                "4",
+                "Living with very mild frailty — not dependent but symptoms limit activities ('slowed up')"
+              ],
+              [
+                "5",
+                "Living with mild frailty — needs help with higher-order activities (finances, transport, heavy housework)"
+              ],
+              [
+                "6",
+                "Living with moderate frailty — needs help with all outside activities and keeping house; help with bathing"
+              ],
+              [
+                "7",
+                "Living with severe frailty — completely dependent for personal care, but stable"
+              ],
+              [
+                "8",
+                "Living with very severe frailty — completely dependent, approaching end of life"
+              ],
+              [
+                "9",
+                "Terminally ill — life expectancy <6 months, otherwise not evidently frail"
+              ]
+            ],
+            "caption": "Score the baseline state ~2 weeks before the acute illness. The CFS is not validated in younger people (<65 years) or stable single-disability (e.g. learning disability).",
+            "refs": [
+              "cfs-2005"
+            ]
+          },
+          {
+            "id": "weight-scalars",
+            "title": "Weight scalars in obesity (simplified)",
+            "columns": [
+              "Drug/parameter",
+              "Weight to use"
+            ],
+            "rows": [
+              [
+                "Tidal volume",
+                "Predicted (ideal) body weight"
+              ],
+              [
+                "Propofol induction, thiopental, fentanyl, morphine boluses",
+                "Lean body weight"
+              ],
+              [
+                "Propofol infusion (maintenance)",
+                "Total or adjusted body weight, titrated to effect"
+              ],
+              [
+                "Suxamethonium",
+                "Total body weight"
+              ],
+              [
+                "Rocuronium, vecuronium",
+                "Ideal / lean body weight"
+              ],
+              [
+                "Sugammadex",
+                "Total body weight (some use ideal + 40%)"
+              ],
+              [
+                "Aminoglycosides",
+                "Adjusted body weight, with levels"
+              ],
+              [
+                "LMWH prophylaxis",
+                "Increased fixed dose by weight band (local protocol)"
+              ]
+            ],
+            "caption": "Use the shared calculators for PBW, adjusted body weight and BMI; verify against local formulary.",
+            "refs": [
+              "aagbi-obese-2015"
+            ]
+          },
+          {
+            "id": "stop-bang",
+            "title": "STOP-BANG screening for obstructive sleep apnoea",
+            "columns": [
+              "Item",
+              "Question"
+            ],
+            "rows": [
+              [
+                "S",
+                "Snoring loudly?"
+              ],
+              [
+                "T",
+                "Tired or sleepy during the day?"
+              ],
+              [
+                "O",
+                "Observed apnoeas?"
+              ],
+              [
+                "P",
+                "High blood Pressure (treated)?"
+              ],
+              [
+                "B",
+                "BMI >35 kg/m²?"
+              ],
+              [
+                "A",
+                "Age >50 years?"
+              ],
+              [
+                "N",
+                "Neck circumference >40 cm?"
+              ],
+              [
+                "G",
+                "Gender male?"
+              ]
+            ],
+            "caption": "Score ≥3 = increased risk of OSA (higher score, higher risk); plan post-operative CPAP/HFNC and opioid-sparing analgesia.",
+            "refs": [
+              "stop-bang-2008"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Frail patients often present atypically: delirium, falls or 'off legs' may be the only sign of sepsis or a surgical complication.",
+            "refs": [
+              "cfs-2005"
+            ]
+          },
+          {
+            "text": "Obese patient desaturating after extubation: sit up, CPAP/HFNC, check residual neuromuscular block and opioid excess — re-intubation is high-risk.",
+            "refs": [
+              "aagbi-obese-2015"
+            ]
+          },
+          {
+            "text": "Severe gluteal or back pain, dark urine and rising CK after prolonged surgery in an obese patient = rhabdomyolysis; check compartments and renal function.",
+            "refs": [
+              "aagbi-obese-2015"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Setting tidal volume on actual weight in an obese patient (e.g. 8 mL/kg × 120 kg = 960 mL) — volutrauma; use PBW.",
+            "refs": [
+              "aagbi-obese-2015"
+            ]
+          },
+          {
+            "text": "Using serum creatinine alone to judge renal function in frail, sarcopenic patients — it overestimates GFR; dose renally cleared drugs cautiously.",
+            "refs": [
+              "esc-ncs-2022"
+            ]
+          },
+          {
+            "text": "Labelling a patient 'frail' from their acute ICU state rather than baseline function.",
+            "refs": [
+              "cfs-2005"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Ask the family: 'Two weeks before this illness, what could they do on their own?' — this one question gives most of the CFS.",
+            "refs": [
+              "cfs-2005"
+            ]
+          },
+          {
+            "text": "A ramp (ear level with sternum) and 25–30° head-up improves both laryngoscopy view and FRC in obese patients.",
+            "refs": [
+              "aagbi-obese-2015"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Extubating the obese post-operative patient",
+        "description": "Reducing post-extubation respiratory failure in obesity/OSA.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Obese patient ready for extubation after surgery"
+          },
+          {
+            "id": "crit",
+            "type": "decision",
+            "text": "Fully awake, TOF ratio ≥0.9, warm, stable, low FiO₂?"
+          },
+          {
+            "id": "wait",
+            "type": "action",
+            "text": "Continue ventilation; reverse block; treat cause; reassess"
+          },
+          {
+            "id": "pos",
+            "type": "action",
+            "text": "Sit up 30–45° (or reverse Trendelenburg); suction; airway kit ready"
+          },
+          {
+            "id": "ext",
+            "type": "action",
+            "text": "Extubate awake; apply HFNC or CPAP immediately if OSA/BMI ≥35"
+          },
+          {
+            "id": "ok",
+            "type": "decision",
+            "text": "Comfortable, SpO₂ target met, no hypercapnia?"
+          },
+          {
+            "id": "ward",
+            "type": "end",
+            "text": "Continue CPAP/HFNC, opioid-sparing analgesia, monitored bed"
+          },
+          {
+            "id": "niv",
+            "type": "action",
+            "text": "NIV/CPAP, check residual block and opioids, ABG",
+            "severity": "high"
+          },
+          {
+            "id": "better",
+            "type": "decision",
+            "text": "Improving within 1–2 h?"
+          },
+          {
+            "id": "reint",
+            "type": "end",
+            "text": "Re-intubate early with senior and videolaryngoscope (ramped, preoxygenated)",
+            "severity": "critical"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "crit"
+          },
+          {
+            "from": "crit",
+            "to": "wait",
+            "label": "No"
+          },
+          {
+            "from": "wait",
+            "to": "crit",
+            "label": "Reassess"
+          },
+          {
+            "from": "crit",
+            "to": "pos",
+            "label": "Yes"
+          },
+          {
+            "from": "pos",
+            "to": "ext"
+          },
+          {
+            "from": "ext",
+            "to": "ok"
+          },
+          {
+            "from": "ok",
+            "to": "ward",
+            "label": "Yes"
+          },
+          {
+            "from": "ok",
+            "to": "niv",
+            "label": "No"
+          },
+          {
+            "from": "niv",
+            "to": "better"
+          },
+          {
+            "from": "better",
+            "to": "ward",
+            "label": "Yes"
+          },
+          {
+            "from": "better",
+            "to": "reint",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "aagbi-obese-2015",
+          "stop-bang-2008"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Frailty reflects cumulative deficits across systems (sarcopenia, reduced cardiorespiratory and immune reserve, cognitive vulnerability). Obesity reduces FRC and chest-wall compliance, increases oxygen consumption, promotes atelectasis and OSA, and alters drug distribution (lipophilic drugs distribute into fat; hydrophilic drugs mostly into lean mass).",
+        "evidence": "- **Rockwood 2005 (CSHA, CMAJ)**: Clinical Frailty Scale correlated with the frailty index and predicted death and institutionalisation; now extended to 9 points (version 2.0, 2020).\n- Frailty in ICU patients is consistently associated with higher mortality, longer stay, delirium and discharge to institutional care; it should inform but not replace individual decisions.\n- **ESC 2022 non-cardiac surgery guideline** highlights frailty assessment in older surgical patients as part of risk evaluation.\n- **AAGBI/SOBA 2015**: obese surgical patient guidance — 'obesity paradox', weight scalars, airway management, OSA, regional anaesthesia, post-operative monitoring and VTE.\n- **STOP-BANG (Chung 2008)**: simple OSA screening; high sensitivity at a score ≥3.",
+        "controversies": "- Use of frailty scores in ICU triage or rationing (risk of discrimination; best used alongside individual assessment).\n- 'Obesity paradox' in critical illness — lower observed mortality in mildly obese ICU patients may reflect confounding.\n- Optimal PEEP strategy in obese patients (PROBESE: higher PEEP + recruitment did not reduce pulmonary complications).",
+        "indiaNotes": "- India's ageing population and rising obesity/diabetes ('thin-fat' phenotype with central adiposity at lower BMI) mean frailty and metabolic disease frequently coexist in surgical ICUs.\n- Indian consensus guidance commonly classifies overweight as BMI 23–24.9 and obesity as ≥25 kg/m² (aligned with WHO Asian action points) — verify current national guidance.\n- OSA is widely under-diagnosed in India; STOP-BANG at pre-op and ICU admission is cheap and useful.\n- Bariatric beds, large BP cuffs and lifting equipment may be scarce — plan before elective bariatric or major surgery."
+      },
+      "drugIds": [
+        "paracetamol"
+      ],
+      "calculatorIds": [
+        "bmi",
+        "predicted-body-weight",
+        "adjusted-body-weight",
+        "tidal-volume-pbw",
+        "creatinine-clearance-cg"
+      ],
+      "references": [
+        "cfs-2005",
+        "esc-ncs-2022",
+        "aagbi-obese-2015",
+        "who-asian-bmi-2004",
+        "stop-bang-2008",
+        "eras-cardiac-2019"
+      ],
+      "quiz": [
+        {
+          "id": "q32-6-1",
+          "stem": "A 78-year-old needed help with shopping and finances but was independent in personal care before admission. CFS score:",
+          "options": [
+            "2",
+            "3",
+            "5",
+            "7",
+            "9"
+          ],
+          "answerIndex": 2,
+          "explanation": "Needs help with higher-order IADLs = mild frailty (CFS 5)."
+        },
+        {
+          "id": "q32-6-2",
+          "stem": "Tidal volume for a 160 cm, 120 kg woman should be based on:",
+          "options": [
+            "Total body weight",
+            "Adjusted body weight",
+            "Predicted (ideal) body weight",
+            "BMI",
+            "Lean body mass + 40%"
+          ],
+          "answerIndex": 2,
+          "explanation": "PBW ≈ 52 kg → 6–8 mL/kg ≈ 310–420 mL."
+        },
+        {
+          "id": "q32-6-3",
+          "stem": "Which drug in obesity is dosed on total body weight?",
+          "options": [
+            "Propofol induction",
+            "Fentanyl",
+            "Suxamethonium",
+            "Rocuronium",
+            "Morphine"
+          ],
+          "answerIndex": 2,
+          "explanation": "Suxamethonium uses TBW (pseudocholinesterase activity increases)."
+        },
+        {
+          "id": "q32-6-4",
+          "stem": "STOP-BANG score suggesting increased OSA risk is:",
+          "options": [
+            "≥1",
+            "≥3",
+            "≥6 only",
+            "8",
+            "Not a scoring tool"
+          ],
+          "answerIndex": 1,
+          "explanation": "≥3 = increased risk."
+        },
+        {
+          "id": "q32-6-5",
+          "stem": "The CFS should be scored according to the patient's condition:",
+          "options": [
+            "At ICU admission while sedated",
+            "About 2 weeks before the acute illness",
+            "At hospital discharge",
+            "Only from medical records",
+            "At age 60"
+          ],
+          "answerIndex": 1,
+          "explanation": "Score baseline pre-illness function."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Weight scalar table for obese patients",
+          "reason": "Simplified from AAGBI/SOBA 2015; individual drug recommendations vary — confirm with pharmacy."
+        },
+        {
+          "item": "Indian BMI cut-offs (overweight 23, obese 25)",
+          "reason": "From Indian consensus statements not cited here; WHO 2004 gives action points 23 and 27.5."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "dantrolene",
+      "name": "Dantrolene sodium",
+      "class": "Ryanodine receptor (RYR1) antagonist; skeletal muscle relaxant",
+      "indications": "Malignant hyperthermia crisis",
+      "adultDose": "2.5 mg/kg IV bolus as fast as possible; repeat 1 mg/kg (or 2.5 mg/kg per MHAUS) every 5–10 min until hypermetabolism resolves; usual total up to 10 mg/kg, more if still needed. Then 1 mg/kg every 4–6 h (or 0.25 mg/kg/h infusion) for 24 h to prevent recrudescence.",
+      "preparationIndia": "Classic vials: 20 mg dantrolene + 3 g mannitol, each reconstituted with 60 mL sterile water (not saline/dextrose) — slow to dissolve; assign several people. Newer 250 mg/5 mL formulation (Ryanodex) dissolves fast but is rarely available in India. MHAUS recommends 36 × 20 mg vials stocked where triggering agents are used.",
+      "cautions": "Thrombophlebitis (large vein); muscle weakness; avoid with calcium-channel blockers (hyperkalaemia, myocardial depression). Mannitol content causes diuresis.",
+      "monitoring": "ETCO₂, temperature, K⁺, CK, myoglobinuria, ABG, urine output.",
+      "verify": "Indian availability and stocking: many hospitals do not hold dantrolene; confirm local stock and the nearest supply point.",
+      "refs": [
+        "emhg-2010",
+        "mhaus-crisis"
+      ]
+    },
+    {
+      "id": "lipid-emulsion-20",
+      "name": "Lipid emulsion 20% (intravenous fat emulsion)",
+      "class": "Lipid sink / metabolic rescue",
+      "indications": "Local anaesthetic systemic toxicity (LAST) with significant cardiovascular or neurological toxicity",
+      "adultDose": ">70 kg: 100 mL bolus over 2–3 min, then 200–250 mL over 15–20 min. ≤70 kg: 1.5 mL/kg (lean body weight) bolus over 2–3 min, then 0.25 mL/kg/min. If still unstable: repeat bolus once or twice and/or double infusion rate. Upper limit about 12 mL/kg.",
+      "preparationIndia": "20% soya-based lipid emulsions (100 mL, 250 mL, 500 mL bags) are available as parenteral nutrition products; keep one in theatre and in the LAST kit. Propofol is NOT a substitute.",
+      "cautions": "Lipaemia interferes with lab tests; pancreatitis, fat overload with excess doses.",
+      "monitoring": "ECG, BP, neurological status; continue monitoring ≥4–6 h after a cardiovascular event (≥2 h after seizure only).",
+      "refs": [
+        "asra-last-2020"
+      ]
+    },
+    {
+      "id": "protamine",
+      "name": "Protamine sulfate",
+      "class": "Heparin reversal agent",
+      "indications": "Reversal of residual heparin after cardiopulmonary bypass ('heparin rebound') or heparin overdose",
+      "adultDose": "1 mg neutralises ~100 units of heparin. After CPB, top-up doses typically 25–50 mg slow IV guided by ACT/heparin assay; give slowly (≤5 mg/min); single dose ≤50 mg.",
+      "preparationIndia": "10 mg/mL ampoules (5 mL = 50 mg) commonly available.",
+      "cautions": "Hypotension, anaphylaxis, catastrophic pulmonary hypertension (risk: fish allergy, protamine-insulin use, vasectomy, prior exposure). Excess protamine is itself anticoagulant.",
+      "monitoring": "ACT, aPTT, BP, pulmonary artery pressure if available.",
+      "refs": [
+        "eacts-pbm-2017",
+        "eacts-cpb-2019"
+      ]
+    },
+    {
+      "id": "tranexamic-acid",
+      "name": "Tranexamic acid",
+      "class": "Antifibrinolytic",
+      "indications": "Prevention/treatment of bleeding in cardiac surgery and post-operative haemorrhage",
+      "adultDose": "Cardiac surgery protocols vary: commonly 10–30 mg/kg IV load with or without infusion; for post-operative bleeding 1 g IV over 10 min (may repeat). Reduce in renal impairment.",
+      "preparationIndia": "500 mg/5 mL ampoules widely available and cheap.",
+      "renalHepatic": "Renally excreted: reduce dose in AKI.",
+      "cautions": "Seizures (dose-related, especially high-dose regimens in open-chamber surgery), thrombosis.",
+      "monitoring": "Drain output, neurological status.",
+      "verify": "Exact cardiac-surgery dosing regimen per local anaesthesia protocol.",
+      "refs": [
+        "eacts-pbm-2017"
+      ]
+    },
+    {
+      "id": "desmopressin",
+      "name": "Desmopressin (DDAVP)",
+      "class": "Vasopressin V2 analogue; releases von Willebrand factor/factor VIII",
+      "indications": "Bleeding with platelet dysfunction (antiplatelet drugs, uraemia, von Willebrand disease) after cardiac surgery",
+      "adultDose": "0.3 mcg/kg IV in 50 mL saline over 20–30 min (single dose; tachyphylaxis with repeats).",
+      "preparationIndia": "4 mcg/mL ampoules; availability variable.",
+      "cautions": "Hypotension if given fast, hyponatraemia, thrombosis.",
+      "monitoring": "BP, sodium.",
+      "refs": [
+        "eacts-pbm-2017"
+      ]
+    },
+    {
+      "id": "noradrenaline",
+      "name": "Noradrenaline (norepinephrine)",
+      "class": "Alpha-1 > beta-1 agonist vasopressor",
+      "indications": "Vasoplegia after cardiopulmonary bypass; post-operative hypotension with adequate filling",
+      "adultDose": "0.05–0.5 mcg/kg/min IV infusion titrated to MAP (often 65–80 mmHg after cardiac surgery per surgeon).",
+      "preparationIndia": "2 mg/2 mL ampoules (check base vs bitartrate labelling); 4 mg in 50 mL = 80 mcg/mL; 8 mg in 50 mL = 160 mcg/mL.",
+      "cautions": "Extravasation; excess afterload on a failing LV; mesenteric/digital ischaemia at high doses.",
+      "monitoring": "Arterial line, lactate, urine output, cardiac output where measured.",
+      "refs": [
+        "eras-cardiac-2019"
+      ]
+    },
+    {
+      "id": "adrenaline",
+      "name": "Adrenaline (epinephrine)",
+      "class": "Alpha and beta agonist; inotrope/vasopressor",
+      "indications": "Low cardiac output syndrome after cardiac surgery; anaphylaxis; cardiac arrest (with modified dosing after cardiac surgery)",
+      "adultDose": "Infusion 0.01–0.2 mcg/kg/min. Arrest after cardiac surgery: CALS/STS advise against routine 1 mg boluses; if used, consider small doses (e.g. 50–100 mcg) only after shocks/pacing/resternotomy are being addressed.",
+      "preparationIndia": "1 mg/mL ampoules; common infusion 4 mg in 50 mL (80 mcg/mL).",
+      "cautions": "Tachyarrhythmias, lactic acidosis (beta-2 effect), hyperglycaemia; rebound hypertension and graft/suture bleeding with bolus doses.",
+      "monitoring": "ECG, arterial line, lactate, glucose.",
+      "verify": "Small-bolus dose in post-cardiac-surgery arrest varies between consensus documents; follow unit CALS protocol.",
+      "refs": [
+        "sts-arrest-2017",
+        "eacts-arrest-2009"
+      ]
+    },
+    {
+      "id": "vasopressin",
+      "name": "Vasopressin",
+      "class": "V1 receptor agonist",
+      "indications": "Vasoplegia after cardiopulmonary bypass refractory to noradrenaline",
+      "adultDose": "0.01–0.04 units/min IV infusion (fixed dose, not weight-based).",
+      "preparationIndia": "20 units/mL ampoules; 20 units in 50 mL = 0.4 units/mL (0.03 units/min = 4.5 mL/h).",
+      "cautions": "Digital, mesenteric and coronary ischaemia at higher doses; hyponatraemia.",
+      "monitoring": "MAP, peripheral perfusion, sodium.",
+      "refs": [
+        "eras-cardiac-2019"
+      ]
+    },
+    {
+      "id": "methylene-blue",
+      "name": "Methylene blue (methylthioninium chloride)",
+      "class": "Guanylate cyclase / nitric oxide synthase inhibitor",
+      "indications": "Rescue for catecholamine-refractory vasoplegia after cardiopulmonary bypass",
+      "adultDose": "1–2 mg/kg IV over 20–60 min; may be followed by an infusion in some protocols.",
+      "preparationIndia": "1% (10 mg/mL) ampoules; availability varies.",
+      "cautions": "Contraindicated in G6PD deficiency (haemolysis) — relevant in India; serotonin syndrome with SSRIs/SNRIs/MAOIs/linezolid; falsely low SpO₂ readings; blue-green urine.",
+      "monitoring": "SpO₂ (unreliable transiently), methaemoglobin, haemolysis screen.",
+      "verify": "Evidence is observational; confirm the cited EACTS/EACTA/EBCP CPB guideline wording on vasoplegia rescue; dose and use per cardiac anaesthesia consultant; check G6PD status if possible.",
+      "refs": [
+        "eacts-cpb-2019"
+      ]
+    },
+    {
+      "id": "dobutamine",
+      "name": "Dobutamine",
+      "class": "Beta-1 agonist inotrope",
+      "indications": "Low cardiac output syndrome after cardiac surgery",
+      "adultDose": "2.5–10 mcg/kg/min IV infusion (up to 20 mcg/kg/min).",
+      "preparationIndia": "250 mg/20 mL ampoule; 250 mg in 50 mL = 5,000 mcg/mL.",
+      "cautions": "Tachyarrhythmias, AF, hypotension from beta-2 vasodilation, myocardial oxygen demand.",
+      "monitoring": "Heart rate and rhythm, cardiac index, lactate, ScvO₂.",
+      "refs": [
+        "eras-cardiac-2019"
+      ]
+    },
+    {
+      "id": "milrinone",
+      "name": "Milrinone",
+      "class": "Phosphodiesterase-3 inhibitor (inodilator)",
+      "indications": "Low cardiac output with high SVR or pulmonary hypertension/RV dysfunction after cardiac surgery",
+      "adultDose": "0.125–0.5 mcg/kg/min IV; loading dose (50 mcg/kg) usually omitted because of hypotension.",
+      "preparationIndia": "10 mg/10 mL ampoule; 10 mg in 50 mL = 200 mcg/mL.",
+      "renalHepatic": "Renally cleared: reduce in AKI (long half-life).",
+      "cautions": "Hypotension (often needs noradrenaline), arrhythmias.",
+      "monitoring": "MAP, arrhythmias, renal function.",
+      "refs": [
+        "eras-cardiac-2019"
+      ]
+    },
+    {
+      "id": "amiodarone",
+      "name": "Amiodarone",
+      "class": "Class III antiarrhythmic",
+      "indications": "Post-operative AF (rhythm control or prophylaxis); VF/pVT after defibrillation",
+      "adultDose": "AF: 150–300 mg (or 5 mg/kg) IV over 20–60 min, then 900 mg over 24 h (≤1.2 g/day). Arrest: 300 mg IV after the third shock (CALS: after three stacked shocks).",
+      "preparationIndia": "150 mg/3 mL ampoules; dilute in 5% dextrose; central line preferred for infusions >2 mg/mL.",
+      "cautions": "Hypotension, bradycardia, QT prolongation, phlebitis; drug interactions (warfarin, digoxin).",
+      "monitoring": "ECG, QTc, BP, LFTs and thyroid function with prolonged use.",
+      "refs": [
+        "acc-aha-af-2023",
+        "eacts-arrest-2009"
+      ]
+    },
+    {
+      "id": "metoprolol",
+      "name": "Metoprolol",
+      "class": "Cardioselective beta-1 blocker",
+      "indications": "Rate control and prevention of post-operative AF after cardiac surgery (if not hypotensive or low output)",
+      "adultDose": "IV 2.5–5 mg over 2 min, repeat every 5 min to 15 mg. Oral 12.5–50 mg twice daily (restart early after cardiac surgery).",
+      "preparationIndia": "Injection 1 mg/mL (5 mL); tablets 25/50 mg (tartrate) and extended-release succinate.",
+      "cautions": "Hypotension, low cardiac output, bradycardia/heart block, bronchospasm.",
+      "monitoring": "HR, BP, cardiac output.",
+      "refs": [
+        "acc-aha-af-2023",
+        "eras-cardiac-2019"
+      ]
+    },
+    {
+      "id": "atropine",
+      "name": "Atropine",
+      "class": "Antimuscarinic",
+      "indications": "Symptomatic bradycardia (if no pacing wires or while setting up pacing)",
+      "adultDose": "0.5–1 mg IV, repeat every 3–5 min to a maximum of 3 mg.",
+      "preparationIndia": "0.6 mg/mL ampoules.",
+      "cautions": "Ineffective in denervated (transplanted) heart; tachycardia, urinary retention, delirium.",
+      "monitoring": "HR, rhythm.",
+      "refs": [
+        "reade-pacing-1"
+      ]
+    },
+    {
+      "id": "isoprenaline",
+      "name": "Isoprenaline (isoproterenol)",
+      "class": "Non-selective beta agonist",
+      "indications": "Bradycardia/heart block when pacing is unavailable or failing; bridge to temporary pacing",
+      "adultDose": "0.5–10 mcg/min IV infusion titrated to heart rate.",
+      "preparationIndia": "Ampoule strengths vary (e.g. 2 mg/mL or 0.2 mg/mL) — check label; e.g. 2 mg in 50 mL = 40 mcg/mL (1 mcg/min = 1.5 mL/h).",
+      "cautions": "Tachyarrhythmias, hypotension (beta-2 vasodilation), myocardial ischaemia.",
+      "monitoring": "ECG, BP.",
+      "verify": "Indian ampoule strength and supply vary; confirm before preparing.",
+      "refs": [
+        "reade-pacing-1"
+      ]
+    },
+    {
+      "id": "ondansetron",
+      "name": "Ondansetron",
+      "class": "5-HT3 antagonist antiemetic",
+      "indications": "Prophylaxis and treatment of PONV",
+      "adultDose": "4 mg IV at end of surgery or for treatment; may repeat once after 6 h (use a different class if prophylaxis failed).",
+      "preparationIndia": "2 mg/mL ampoules; 4/8 mg tablets and orally disintegrating forms.",
+      "cautions": "QT prolongation, constipation, headache.",
+      "monitoring": "QTc if other QT-prolonging drugs.",
+      "refs": [
+        "ponv-2020"
+      ]
+    },
+    {
+      "id": "paracetamol",
+      "name": "Paracetamol (acetaminophen)",
+      "class": "Non-opioid analgesic/antipyretic",
+      "indications": "Multimodal post-operative analgesia",
+      "adultDose": "1 g IV/PO every 6 h (max 4 g/day); 15 mg/kg if <50 kg; max 3 g/day in hepatic risk, malnutrition or chronic alcohol use.",
+      "preparationIndia": "IV 1 g/100 mL bottles; 500/650 mg tablets.",
+      "renalHepatic": "Reduce in hepatic impairment, low body weight.",
+      "cautions": "Hepatotoxicity; IV dosing errors in low-weight patients.",
+      "monitoring": "LFTs if prolonged high dose.",
+      "refs": [
+        "eras-cardiac-2019"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "esc-ncs-2022",
+      "citation": "Halvorsen S, Mehilli J, Cassese S, et al. 2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery. Eur Heart J. 2022;43(39):3826-3924.",
+      "url": "https://doi.org/10.1093/eurheartj/ehac270",
+      "year": 2022,
+      "doi": "10.1093/eurheartj/ehac270",
+      "type": "guideline"
+    },
+    {
+      "id": "vision-2017",
+      "citation": "Writing Committee for the VISION Study Investigators; Devereaux PJ, Biccard BM, Sigamani A, et al. Association of postoperative high-sensitivity troponin levels with myocardial injury and 30-day mortality among patients undergoing noncardiac surgery. JAMA. 2017;317(16):1642-1651.",
+      "url": "https://doi.org/10.1001/jama.2017.4360",
+      "year": 2017,
+      "doi": "10.1001/jama.2017.4360",
+      "type": "trial"
+    },
+    {
+      "id": "ponv-2020",
+      "citation": "Gan TJ, Belani KG, Bergese S, et al. Fourth Consensus Guidelines for the Management of Postoperative Nausea and Vomiting. Anesth Analg. 2020;131(2):411-448.",
+      "url": "https://doi.org/10.1213/ANE.0000000000004833",
+      "year": 2020,
+      "doi": "10.1213/ANE.0000000000004833",
+      "type": "consensus"
+    },
+    {
+      "id": "nice-cg65",
+      "citation": "National Institute for Health and Care Excellence. Hypothermia: prevention and management in adults having surgery (CG65). London: NICE; 2008, updated 2016.",
+      "url": "https://www.nice.org.uk/guidance/cg65",
+      "year": 2016,
+      "type": "guideline"
+    },
+    {
+      "id": "emhg-2010",
+      "citation": "Glahn KPE, Ellis FR, Halsall PJ, et al. Recognizing and managing a malignant hyperthermia crisis: guidelines from the European Malignant Hyperthermia Group. Br J Anaesth. 2010;105(4):417-420.",
+      "url": "https://doi.org/10.1093/bja/aeq243",
+      "year": 2010,
+      "doi": "10.1093/bja/aeq243",
+      "type": "guideline"
+    },
+    {
+      "id": "mhaus-crisis",
+      "citation": "Malignant Hyperthermia Association of the United States (MHAUS). Managing a crisis — emergency therapy for malignant hyperthermia. Accessed November 2026.",
+      "url": "https://www.mhaus.org/healthcare-professionals/managing-a-crisis/",
+      "year": 2026,
+      "type": "web"
+    },
+    {
+      "id": "asra-last-2020",
+      "citation": "Neal JM, Neal EJ, Weinberg GL. American Society of Regional Anesthesia and Pain Medicine Local Anesthetic Systemic Toxicity checklist: 2020 version. Reg Anesth Pain Med. 2021;46(1):81-82.",
+      "url": "https://doi.org/10.1136/rapm-2020-101986",
+      "year": 2020,
+      "doi": "10.1136/rapm-2020-101986",
+      "type": "guideline"
+    },
+    {
+      "id": "eras-cardiac-2019",
+      "citation": "Engelman DT, Ben Ali W, Williams JB, et al. Guidelines for Perioperative Care in Cardiac Surgery: Enhanced Recovery After Surgery Society Recommendations. JAMA Surg. 2019;154(8):755-766.",
+      "url": "https://doi.org/10.1001/jamasurg.2019.1153",
+      "year": 2019,
+      "doi": "10.1001/jamasurg.2019.1153",
+      "type": "guideline"
+    },
+    {
+      "id": "eacts-cpb-2019",
+      "citation": "Puis L, Milojevic M, Boer C, et al. 2019 EACTS/EACTA/EBCP guidelines on cardiopulmonary bypass in adult cardiac surgery. Interact Cardiovasc Thorac Surg. 2020;30(2):161-202.",
+      "url": "https://doi.org/10.1093/icvts/ivz251",
+      "year": 2019,
+      "doi": "10.1093/icvts/ivz251",
+      "type": "guideline"
+    },
+    {
+      "id": "acc-aha-af-2023",
+      "citation": "Joglar JA, Chung MK, Armbruster AL, et al. 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation. Circulation. 2024;149(1):e1-e156.",
+      "url": "https://doi.org/10.1161/CIR.0000000000001193",
+      "year": 2023,
+      "doi": "10.1161/CIR.0000000000001193",
+      "type": "guideline"
+    },
+    {
+      "id": "trics-3",
+      "citation": "Mazer CD, Whitlock RP, Fergusson DA, et al. Restrictive or Liberal Red-Cell Transfusion for Cardiac Surgery (TRICS III). N Engl J Med. 2017;377(22):2133-2144.",
+      "url": "https://doi.org/10.1056/NEJMoa1711818",
+      "year": 2017,
+      "doi": "10.1056/NEJMoa1711818",
+      "type": "trial"
+    },
+    {
+      "id": "eacts-pbm-2017",
+      "citation": "Pagano D, Milojevic M, Meesters MI, et al. 2017 EACTS/EACTA Guidelines on patient blood management for adult cardiac surgery. Eur J Cardiothorac Surg. 2018;53(1):79-111.",
+      "url": "https://doi.org/10.1093/ejcts/ezx325",
+      "year": 2017,
+      "doi": "10.1093/ejcts/ezx325",
+      "type": "guideline"
+    },
+    {
+      "id": "sts-arrest-2017",
+      "citation": "Dunning J, Levine A, Ley J, et al. The Society of Thoracic Surgeons Expert Consensus for the Resuscitation of Patients Who Arrest After Cardiac Surgery. Ann Thorac Surg. 2017;103(3):1005-1020.",
+      "url": "https://doi.org/10.1016/j.athoracsur.2016.10.033",
+      "year": 2017,
+      "doi": "10.1016/j.athoracsur.2016.10.033",
+      "type": "consensus"
+    },
+    {
+      "id": "eacts-arrest-2009",
+      "citation": "Dunning J, Fabbri A, Kolh PH, et al. Guideline for resuscitation in cardiac arrest after cardiac surgery. Eur J Cardiothorac Surg. 2009;36(1):3-28.",
+      "url": "https://doi.org/10.1016/j.ejcts.2009.01.033",
+      "year": 2009,
+      "doi": "10.1016/j.ejcts.2009.01.033",
+      "type": "guideline"
+    },
+    {
+      "id": "reade-pacing-1",
+      "citation": "Reade MC. Temporary epicardial pacing after cardiac surgery: a practical review. Part 1: General considerations in the management of epicardial pacing. Anaesthesia. 2007;62(3):264-271.",
+      "url": "https://doi.org/10.1111/j.1365-2044.2007.04950.x",
+      "year": 2007,
+      "doi": "10.1111/j.1365-2044.2007.04950.x",
+      "type": "review"
+    },
+    {
+      "id": "reade-pacing-2",
+      "citation": "Reade MC. Temporary epicardial pacing after cardiac surgery: a practical review. Part 2: Selection of epicardial pacing modes and troubleshooting. Anaesthesia. 2007;62(4):364-373.",
+      "url": "https://doi.org/10.1111/j.1365-2044.2007.04951.x",
+      "year": 2007,
+      "doi": "10.1111/j.1365-2044.2007.04951.x",
+      "type": "review"
+    },
+    {
+      "id": "cfs-2005",
+      "citation": "Rockwood K, Song X, MacKnight C, et al. A global clinical measure of fitness and frailty in elderly people. CMAJ. 2005;173(5):489-495.",
+      "url": "https://doi.org/10.1503/cmaj.050051",
+      "year": 2005,
+      "doi": "10.1503/cmaj.050051",
+      "type": "trial"
+    },
+    {
+      "id": "aagbi-obese-2015",
+      "citation": "Nightingale CE, Margarson MP, Shearer E, et al; Association of Anaesthetists of Great Britain and Ireland and Society for Obesity and Bariatric Anaesthesia. Peri-operative management of the obese surgical patient 2015. Anaesthesia. 2015;70(7):859-876.",
+      "url": "https://doi.org/10.1111/anae.13101",
+      "year": 2015,
+      "doi": "10.1111/anae.13101",
+      "type": "guideline"
+    },
+    {
+      "id": "who-asian-bmi-2004",
+      "citation": "WHO Expert Consultation. Appropriate body-mass index for Asian populations and its implications for policy and intervention strategies. Lancet. 2004;363(9403):157-163.",
+      "url": "https://doi.org/10.1016/S0140-6736(03)15268-3",
+      "year": 2004,
+      "doi": "10.1016/S0140-6736(03)15268-3",
+      "type": "consensus"
+    },
+    {
+      "id": "stop-bang-2008",
+      "citation": "Chung F, Yegneswaran B, Liao P, et al. STOP questionnaire: a tool to screen patients for obstructive sleep apnea. Anesthesiology. 2008;108(5):812-821.",
+      "url": "https://doi.org/10.1097/ALN.0b013e31816d83e4",
+      "year": 2008,
+      "doi": "10.1097/ALN.0b013e31816d83e4",
+      "type": "trial"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Dantrolene stocking and availability in India",
+      "reason": "Many hospitals do not stock MHAUS-recommended quantities; confirm local and regional supply."
+    },
+    {
+      "item": "Methylene blue for vasoplegia (dose 1–2 mg/kg)",
+      "reason": "Observational evidence only; G6PD prevalence in India makes screening relevant."
+    },
+    {
+      "item": "Tranexamic acid regimen in cardiac surgery",
+      "reason": "Multiple regimens exist (OPTIMAL trial, local protocols)."
+    },
+    {
+      "item": "Isoprenaline ampoule strength in India",
+      "reason": "Strengths and supply vary; check before preparing infusions."
+    },
+    {
+      "item": "Haemodynamic targets after cardiac surgery (MAP 65–80, HR 80–100, CI >2.2)",
+      "reason": "Typical practice targets — agree with the cardiac surgical team."
+    },
+    {
+      "item": "Post-operative AF incidence (~20–40%) and anticoagulation timing",
+      "reason": "Incidence varies by procedure; anticoagulation decisions need surgical input."
+    },
+    {
+      "item": "Aspirin/statin restart timing after CABG",
+      "reason": "Mentioned as per surgical protocol; not referenced to a specific guideline in this module."
+    }
+  ]
+}

@@ -1,0 +1,3734 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "paediatric-emergencies-essentials",
+  "number": 31,
+  "folder": "31-paediatric-emergencies-essentials",
+  "section": {
+    "id": "I",
+    "title": "Special populations"
+  },
+  "phase": 3,
+  "title": "Paediatric emergencies essentials",
+  "summary": "What an adult ICU resident needs when a sick child arrives: paediatric resuscitation and weight-based doses, sepsis and fluids, airway sizes and ventilation, bronchiolitis and croup, DKA, and safe transfer to a PICU — with worked doses for 10–20 kg children and Indian context.",
+  "tags": [
+    "paediatrics",
+    "PALS",
+    "child",
+    "infant",
+    "weight-based dosing",
+    "paediatric sepsis",
+    "Phoenix criteria",
+    "FEAST",
+    "ETT size",
+    "croup",
+    "bronchiolitis",
+    "DKA",
+    "ISPAD",
+    "PICU transfer",
+    "Broselow",
+    "diphtheria"
+  ],
+  "relatedModules": [
+    "cardiac-arrest-post-rosc",
+    "sepsis-septic-shock",
+    "airway-management",
+    "oxygen-hfnc-niv",
+    "mechanical-ventilation",
+    "ards-refractory-hypoxaemia",
+    "endocrine-metabolic-emergencies",
+    "fluids-electrolytes",
+    "tropical-monsoon-fevers",
+    "raised-icp-neurotrauma-brain-death",
+    "handover-transport-icu-safety",
+    "icu-pharmacology-drug-infusions"
+  ],
+  "version": "0.1.1",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted, pending consultant review)"
+  ],
+  "uiHints": {
+    "icon": "smile",
+    "accent": "critical"
+  },
+  "viewKey": "module:paediatric-emergencies-essentials",
+  "topics": [
+    {
+      "id": "pals-weight-based-doses",
+      "title": "PALS and weight-based doses",
+      "summary": "Paediatric cardiac arrest (AHA/AAP 2025), bradycardia and SVT, weight estimation and the core resuscitation doses — with worked examples for a 10 kg and 20 kg child.",
+      "viewKey": "topic:paediatric-emergencies-essentials/pals-weight-based-doses",
+      "uiHints": {
+        "icon": "baby",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "PALS applies from infancy to 18 years (excluding newborns at birth). Most paediatric arrests are secondary to respiratory failure or shock, so oxygenation, ventilation and early adrenaline for non-shockable rhythms matter most.",
+          "refs": [
+            "pals-2025"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 s",
+            "title": "Recognise and start CPR",
+            "detail": "Unresponsive, not breathing normally, no definite pulse within 10 s (or HR <60/min with poor perfusion despite oxygenation and ventilation) → start CPR. Push hard and fast: 100–120/min, depth at least one-third of the AP chest diameter (~4 cm infant, ~5 cm child), full recoil, minimal interruptions. Two rescuers: 15:2.",
+            "refs": [
+              "pals-2025",
+              "pals-2020"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0–1 min",
+            "title": "Attach monitor/defibrillator; check rhythm",
+            "detail": "Shockable (VF/pVT) → shock 2 J/kg (2–4 J/kg acceptable), resume CPR immediately for 2 min. Non-shockable (asystole/PEA) → adrenaline as soon as possible.",
+            "refs": [
+              "pals-2025"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "ASAP",
+            "title": "IV or IO access",
+            "detail": "Rapid IV or IO — choose whichever is fastest; IO in the proximal tibia if IV is not quick. Endotracheal drug route is a last resort.",
+            "refs": [
+              "pals-2025"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Every 3–5 min",
+            "title": "Adrenaline",
+            "detail": "0.01 mg/kg IV/IO (0.1 mL/kg of 0.1 mg/mL), max 1 mg. Non-shockable: give as early as possible. Shockable: after 2 shocks, or earlier only if defibrillation is not possible.",
+            "refs": [
+              "pals-2025"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Shock 2+",
+            "title": "Escalate shocks and antiarrhythmic",
+            "detail": "Second shock 4 J/kg; subsequent ≥4 J/kg up to 10 J/kg or adult maximum. Refractory VF/pVT: amiodarone 5 mg/kg (max 300 mg) or lidocaine 1 mg/kg.",
+            "refs": [
+              "pals-2025"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Throughout",
+            "title": "Airway and ventilation",
+            "detail": "Bag-mask ventilation is acceptable; with an advanced airway give 1 breath every 2–3 s (20–30/min) with continuous compressions; avoid hyperventilation. Use waveform capnography.",
+            "refs": [
+              "pals-2025"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Throughout",
+            "title": "Treat reversible causes",
+            "detail": "Hypoxia (commonest), hypovolaemia, hydrogen ion (acidosis), hypo/hyperkalaemia, hypoglycaemia, hypothermia; tension pneumothorax, tamponade, toxins, thrombosis. Check glucose in every arrest.",
+            "refs": [
+              "pals-2020"
+            ]
+          },
+          {
+            "n": 8,
+            "time": "ROSC",
+            "title": "Post-arrest care",
+            "detail": "Avoid fever (>37.5 °C) in comatose children; keep systolic and mean BP above the 10th percentile for age; normoxia (SpO₂ 94–99%) and normocapnia; EEG monitoring if available; multimodal prognostication, not a single test.",
+            "refs": [
+              "pals-2025"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "adrenaline-paeds",
+            "role": "Cardiac arrest",
+            "route": "IV/IO",
+            "dose": "0.01 mg/kg (0.1 mL/kg of 0.1 mg/mL), max 1 mg, every 3–5 min",
+            "doseRange": {
+              "unit": "mg/kg",
+              "min": 0.01,
+              "max": 0.01
+            },
+            "workedExample": "10 kg: 0.1 mg = 1 mL of 0.1 mg/mL. 20 kg: 0.2 mg = 2 mL.",
+            "refs": [
+              "pals-2025"
+            ]
+          },
+          {
+            "drugId": "amiodarone-paeds",
+            "role": "Shock-refractory VF/pVT",
+            "route": "IV/IO bolus",
+            "dose": "5 mg/kg (max 300 mg); repeat to total 15 mg/kg",
+            "workedExample": "20 kg: 100 mg (2 mL of 150 mg/3 mL).",
+            "refs": [
+              "pals-2025"
+            ]
+          },
+          {
+            "drugId": "lidocaine-paeds",
+            "role": "Shock-refractory VF/pVT (alternative)",
+            "route": "IV/IO bolus",
+            "dose": "1 mg/kg",
+            "workedExample": "20 kg: 20 mg = 1 mL of 2%.",
+            "refs": [
+              "pals-2025"
+            ]
+          },
+          {
+            "drugId": "adenosine-paeds",
+            "role": "SVT with a pulse",
+            "route": "Rapid IV push + flush",
+            "dose": "0.1 mg/kg (max 6 mg), then 0.2 mg/kg (max 12 mg)",
+            "workedExample": "10 kg: 1 mg (0.33 mL of 3 mg/mL), then 2 mg.",
+            "refs": [
+              "pals-2025"
+            ]
+          },
+          {
+            "drugId": "atropine-paeds",
+            "role": "Vagal bradycardia / AV block",
+            "route": "IV/IO",
+            "dose": "0.02 mg/kg (max single dose 0.5 mg)",
+            "workedExample": "10 kg: 0.2 mg = 0.33 mL of 0.6 mg/mL.",
+            "refs": [
+              "pals-2020"
+            ]
+          },
+          {
+            "drugId": "dextrose-10-paeds",
+            "role": "Hypoglycaemia",
+            "route": "IV/IO",
+            "dose": "2–5 mL/kg of 10% dextrose",
+            "workedExample": "10 kg: 20–50 mL D10.",
+            "refs": [
+              "who-etat-2016"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "paeds-weight-estimate",
+            "title": "Estimating weight (when it cannot be measured)",
+            "columns": [
+              "Age",
+              "Formula (APLS-style)",
+              "Example"
+            ],
+            "rows": [
+              [
+                "0–12 months",
+                "(0.5 × age in months) + 4",
+                "6 months ≈ 7 kg"
+              ],
+              [
+                "1–5 years",
+                "(2 × age in years) + 8",
+                "3 years ≈ 14 kg"
+              ],
+              [
+                "6–12 years",
+                "(3 × age in years) + 7",
+                "8 years ≈ 31 kg"
+              ]
+            ],
+            "caption": "Length-based tapes (Broselow, PAWPER) are acceptable; age formulas are inaccurate and may overestimate weight in undernourished Indian children — use actual weight whenever possible and never exceed adult doses.",
+            "refs": [
+              "luscombe-2007",
+              "pals-2025"
+            ]
+          },
+          {
+            "id": "paeds-energy",
+            "title": "Electrical therapy doses",
+            "columns": [
+              "Situation",
+              "Energy"
+            ],
+            "rows": [
+              [
+                "VF/pulseless VT — first shock",
+                "2 J/kg (2–4 J/kg)"
+              ],
+              [
+                "Second shock",
+                "4 J/kg"
+              ],
+              [
+                "Subsequent shocks",
+                "≥4 J/kg, max 10 J/kg or adult dose"
+              ],
+              [
+                "Synchronised cardioversion (SVT/VT with pulse)",
+                "0.5–1 J/kg, then 2 J/kg"
+              ]
+            ],
+            "refs": [
+              "pals-2025",
+              "pals-2020"
+            ]
+          },
+          {
+            "id": "paeds-quick-doses",
+            "title": "Quick reference: 10 kg and 20 kg child",
+            "columns": [
+              "Drug/item",
+              "Dose per kg",
+              "10 kg",
+              "20 kg"
+            ],
+            "rows": [
+              [
+                "Adrenaline (arrest) 0.1 mg/mL",
+                "0.01 mg/kg",
+                "0.1 mg (1 mL)",
+                "0.2 mg (2 mL)"
+              ],
+              [
+                "Amiodarone",
+                "5 mg/kg",
+                "50 mg",
+                "100 mg"
+              ],
+              [
+                "Adenosine (1st)",
+                "0.1 mg/kg",
+                "1 mg",
+                "2 mg"
+              ],
+              [
+                "Atropine",
+                "0.02 mg/kg",
+                "0.2 mg",
+                "0.4 mg"
+              ],
+              [
+                "Dextrose 10%",
+                "2–5 mL/kg",
+                "20–50 mL",
+                "40–100 mL"
+              ],
+              [
+                "Fluid bolus",
+                "10–20 mL/kg",
+                "100–200 mL",
+                "200–400 mL"
+              ],
+              [
+                "Defibrillation",
+                "2 → 4 J/kg",
+                "20 → 40 J",
+                "40 → 80 J"
+              ]
+            ],
+            "caption": "Always confirm weight and concentration; never exceed adult doses.",
+            "refs": [
+              "pals-2025",
+              "pals-2020",
+              "who-etat-2016"
+            ]
+          },
+          {
+            "id": "paeds-vitals",
+            "title": "Approximate normal vital signs and hypotension",
+            "columns": [
+              "Age",
+              "Heart rate (/min)",
+              "Resp rate (/min)",
+              "Hypotension (systolic)"
+            ],
+            "rows": [
+              [
+                "Infant (<1 y)",
+                "110–160",
+                "30–40",
+                "<70 mmHg"
+              ],
+              [
+                "1–2 y",
+                "100–150",
+                "25–35",
+                "<70 + (2 × age) mmHg"
+              ],
+              [
+                "2–5 y",
+                "95–140",
+                "25–30",
+                "<70 + (2 × age) mmHg"
+              ],
+              [
+                "5–12 y",
+                "80–120",
+                "20–25",
+                "<70 + (2 × age) mmHg (to age 10); <90 after"
+              ],
+              [
+                ">12 y",
+                "60–100",
+                "15–20",
+                "<90 mmHg"
+              ]
+            ],
+            "caption": "Heart and respiratory rate ranges are approximate APLS-style values; hypotension thresholds from PALS.",
+            "refs": [
+              "pals-2020"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Bradycardia <60/min with poor perfusion in a child = start CPR; it is usually hypoxic — oxygenate and ventilate first.",
+            "refs": [
+              "pals-2020"
+            ]
+          },
+          {
+            "text": "10-fold dosing errors are the commonest paediatric drug catastrophe: read the weight aloud, confirm mg/kg and mg/mL with a second person.",
+            "refs": [
+              "pals-2025"
+            ]
+          },
+          {
+            "text": "Do not give routine calcium or sodium bicarbonate in arrest — only for specific indications (hyperkalaemia, hypocalcaemia, CCB or TCA toxicity).",
+            "refs": [
+              "pals-2025"
+            ]
+          },
+          {
+            "text": "ETCO₂ alone must not be used to decide when to stop resuscitation in children.",
+            "refs": [
+              "pals-2025"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Delaying adrenaline in non-shockable arrest while securing the airway: give it as soon as access is obtained.",
+            "refs": [
+              "pals-2025"
+            ]
+          },
+          {
+            "text": "Stacked shocks: paediatric guidance favours a single shock followed immediately by 2 min of CPR.",
+            "refs": [
+              "pals-2025"
+            ]
+          },
+          {
+            "text": "Giving adenosine through a distal hand cannula without a rapid flush: it is metabolised before reaching the heart.",
+            "refs": [
+              "pals-2020"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "If an arterial line is in place during CPR, target diastolic BP ≥25 mmHg in infants and ≥30 mmHg in children ≥1 year (AHA/AAP 2025).",
+            "refs": [
+              "pals-2025"
+            ]
+          },
+          {
+            "text": "New in 2025: IV sotalol may be considered for SVT with cardiopulmonary compromise refractory to vagal manoeuvres, adenosine and cardioversion when expert help is unavailable.",
+            "refs": [
+              "pals-2025"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Paediatric cardiac arrest (AHA/AAP 2025)",
+        "description": "Simplified pulseless arrest algorithm for infants and children.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Unresponsive, no normal breathing, no pulse (or HR <60 with poor perfusion)"
+          },
+          {
+            "id": "cpr",
+            "type": "action",
+            "text": "Start CPR 15:2, give oxygen, attach monitor/defibrillator",
+            "severity": "critical"
+          },
+          {
+            "id": "rhythm",
+            "type": "decision",
+            "text": "Rhythm shockable?"
+          },
+          {
+            "id": "shock1",
+            "type": "action",
+            "text": "Shock 2 J/kg → CPR 2 min; obtain IV/IO",
+            "severity": "critical"
+          },
+          {
+            "id": "check2",
+            "type": "decision",
+            "text": "Still shockable at rhythm check?"
+          },
+          {
+            "id": "shock2",
+            "type": "action",
+            "text": "Shock 4 J/kg → CPR 2 min; adrenaline 0.01 mg/kg every 3–5 min",
+            "severity": "critical"
+          },
+          {
+            "id": "check3",
+            "type": "decision",
+            "text": "Still shockable?"
+          },
+          {
+            "id": "shock3",
+            "type": "action",
+            "text": "Shock ≥4 J/kg (max 10 J/kg or adult dose) → CPR 2 min; amiodarone 5 mg/kg or lidocaine 1 mg/kg; treat reversible causes",
+            "severity": "critical"
+          },
+          {
+            "id": "adr_ns",
+            "type": "action",
+            "text": "Non-shockable: adrenaline 0.01 mg/kg IV/IO as soon as possible, then every 3–5 min; CPR 2 min cycles; consider advanced airway",
+            "severity": "critical"
+          },
+          {
+            "id": "causes",
+            "type": "action",
+            "text": "Treat Hs and Ts: hypoxia, hypovolaemia, acidosis, K⁺, glucose, temperature, tension pneumothorax, tamponade, toxins, thrombosis"
+          },
+          {
+            "id": "rosc",
+            "type": "decision",
+            "text": "Signs of ROSC?"
+          },
+          {
+            "id": "post",
+            "type": "end",
+            "text": "Post-cardiac arrest care: avoid fever, BP >10th centile, SpO₂ 94–99%, normocapnia",
+            "severity": "high"
+          },
+          {
+            "id": "cont",
+            "type": "action",
+            "text": "Continue CPR cycles; reassess rhythm every 2 min; consider ECPR in selected cases where available"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "cpr"
+          },
+          {
+            "from": "cpr",
+            "to": "rhythm"
+          },
+          {
+            "from": "rhythm",
+            "to": "shock1",
+            "label": "Yes (VF/pVT)"
+          },
+          {
+            "from": "rhythm",
+            "to": "adr_ns",
+            "label": "No (asystole/PEA)"
+          },
+          {
+            "from": "shock1",
+            "to": "check2"
+          },
+          {
+            "from": "check2",
+            "to": "shock2",
+            "label": "Yes"
+          },
+          {
+            "from": "check2",
+            "to": "adr_ns",
+            "label": "No"
+          },
+          {
+            "from": "shock2",
+            "to": "check3"
+          },
+          {
+            "from": "check3",
+            "to": "shock3",
+            "label": "Yes"
+          },
+          {
+            "from": "check3",
+            "to": "adr_ns",
+            "label": "No"
+          },
+          {
+            "from": "shock3",
+            "to": "causes"
+          },
+          {
+            "from": "adr_ns",
+            "to": "causes"
+          },
+          {
+            "from": "causes",
+            "to": "rosc"
+          },
+          {
+            "from": "rosc",
+            "to": "post",
+            "label": "Yes"
+          },
+          {
+            "from": "rosc",
+            "to": "cont",
+            "label": "No"
+          },
+          {
+            "from": "cont",
+            "to": "rhythm",
+            "label": "Next rhythm check"
+          }
+        ],
+        "refs": [
+          "pals-2025"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Paediatric arrest is usually the end of progressive hypoxia or shock (asphyxial arrest), which is why the commonest initial rhythms are bradycardia, PEA and asystole. Children have a higher metabolic rate, smaller functional residual capacity and desaturate quickly; good-quality ventilation and early adrenaline (coronary perfusion via alpha-1 vasoconstriction) are central.",
+        "evidence": "**AHA/AAP 2025 PALS — key changes and reaffirmations**\n- Early adrenaline for initial non-shockable rhythms is associated with better outcomes (COR 2a).\n- For shockable rhythms, defibrillation is the priority; adrenaline after 2 shocks or sooner only if defibrillation is not possible.\n- With an arterial line, diastolic BP ≥25 mmHg (infants) and ≥30 mmHg (≥1 year) are included as CPR-quality targets.\n- With an advanced airway, ventilate 20–30 breaths/min (1 breath every 2–3 s).\n- Initial defibrillation 2–4 J/kg (2 J/kg for ease of teaching), then 4 J/kg, up to 10 J/kg or adult maximum.\n- Routine sodium bicarbonate and calcium are not recommended.\n- After ROSC: prevent fever (>37.5 °C) in comatose children; keep SBP/MAP above the 10th centile for age.\n- Weight-based dosing should not exceed adult doses; length-based tapes are acceptable when weight is unknown.\n- IV sotalol is a new option for refractory SVT with compromise when expert help is unavailable.",
+        "controversies": "- Optimal adrenaline interval (observational data conflict).\n- Amiodarone vs lidocaine for refractory VF — no clear difference in survival.\n- Age formulas vs length-based tapes in children with malnutrition or obesity.",
+        "indiaNotes": "- Weight-for-age formulas derived in Western children often **overestimate** weight in undernourished Indian children; weigh the child or use a length tape, and use actual weight for dosing.\n- Keep a pre-calculated paediatric resuscitation chart (by weight band) on every emergency trolley — mixing errors with 1 mg/mL adrenaline ampoules are common.\n- IO needles may not be stocked in smaller hospitals: an 18G spinal or bone-marrow needle is a recognised improvisation in the proximal tibia when nothing else is available.\n- Common Indian precipitants: severe dehydration from diarrhoea, pneumonia, dengue shock, scorpion sting myocarditis, OP poisoning, drowning."
+      },
+      "drugIds": [
+        "adrenaline-paeds",
+        "amiodarone-paeds",
+        "lidocaine-paeds",
+        "adenosine-paeds",
+        "atropine-paeds",
+        "dextrose-10-paeds",
+        "calcium-paeds",
+        "sodium-bicarbonate-paeds"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "pals-2025",
+        "pals-2020",
+        "luscombe-2007",
+        "who-etat-2016"
+      ],
+      "quiz": [
+        {
+          "id": "q31-1-1",
+          "stem": "A 4-year-old (16 kg) is in asystole. IO access is obtained. What is the adrenaline dose?",
+          "options": [
+            "0.016 mg",
+            "0.16 mg (1.6 mL of 0.1 mg/mL)",
+            "1.6 mg",
+            "1 mg",
+            "0.5 mg"
+          ],
+          "answerIndex": 1,
+          "explanation": "0.01 mg/kg = 0.16 mg = 1.6 mL of 0.1 mg/mL, given as soon as possible for non-shockable rhythms."
+        },
+        {
+          "id": "q31-1-2",
+          "stem": "The recommended first defibrillation dose for paediatric VF (for ease of teaching) is:",
+          "options": [
+            "0.5 J/kg",
+            "1 J/kg",
+            "2 J/kg",
+            "4 J/kg",
+            "10 J/kg"
+          ],
+          "answerIndex": 2,
+          "explanation": "Initial 2–4 J/kg; 2 J/kg recommended for teaching; then 4 J/kg."
+        },
+        {
+          "id": "q31-1-3",
+          "stem": "With an endotracheal tube in place during paediatric CPR, the 2025 guideline suggests a ventilation rate of:",
+          "options": [
+            "6–8 breaths/min",
+            "10 breaths/min",
+            "20–30 breaths/min",
+            "40 breaths/min",
+            "Same as compressions"
+          ],
+          "answerIndex": 2,
+          "explanation": "1 breath every 2–3 s (20–30/min), avoiding hyperventilation."
+        },
+        {
+          "id": "q31-1-4",
+          "stem": "A 2-year-old with SVT (HR 260) has a pulse and normal perfusion after failed vagal manoeuvres. The next step is:",
+          "options": [
+            "Synchronised cardioversion 2 J/kg",
+            "Adenosine 0.1 mg/kg rapid IV push with flush",
+            "Amiodarone 5 mg/kg over 2 min",
+            "Verapamil",
+            "Atropine"
+          ],
+          "answerIndex": 1,
+          "explanation": "Adenosine 0.1 mg/kg (max 6 mg), then 0.2 mg/kg (max 12 mg); verapamil is avoided in infants."
+        },
+        {
+          "id": "q31-1-5",
+          "stem": "After ROSC in a comatose 6-year-old, which temperature should be avoided?",
+          "options": [
+            "36 °C",
+            "37 °C",
+            ">37.5 °C",
+            "35.5 °C",
+            "None — temperature does not matter"
+          ],
+          "answerIndex": 2,
+          "explanation": "Preventing hyperthermia (>37.5 °C) is emphasised in AHA/AAP 2025."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Approximate heart-rate and respiratory-rate ranges by age",
+          "reason": "Ranges differ slightly between APLS, PALS and Indian paediatric texts; align with the unit's paediatric early-warning chart."
+        }
+      ]
+    },
+    {
+      "id": "paediatric-sepsis-fluids",
+      "title": "Paediatric sepsis and fluids",
+      "summary": "Phoenix sepsis criteria, the first-hour bundle from the Surviving Sepsis Campaign paediatric guideline, how much fluid to give (and when not to), vasoactive choice, maintenance fluids, and Indian special cases.",
+      "viewKey": "topic:paediatric-emergencies-essentials/paediatric-sepsis-fluids",
+      "uiHints": {
+        "icon": "thermometer",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Phoenix criteria (2024, children <18 years): sepsis = suspected infection with a Phoenix Sepsis Score ≥2 (respiratory, cardiovascular, coagulation and neurological dysfunction); septic shock = sepsis with ≥1 cardiovascular point (severe hypotension for age, lactate >5 mmol/L, or any vasoactive medication). SIRS criteria are no longer used.",
+          "refs": [
+            "phoenix-2024"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Recognise",
+            "detail": "Suspected infection plus abnormal perfusion (prolonged capillary refill, cold or mottled peripheries, weak pulses), altered mental state, tachycardia/tachypnoea out of proportion, hypotension, or raised lactate. Phoenix criteria: sepsis = Phoenix Sepsis Score ≥2; septic shock = sepsis with ≥1 cardiovascular point.",
+            "refs": [
+              "phoenix-2024",
+              "ssc-peds-2020"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0–5 min",
+            "title": "ABC, oxygen, access, glucose",
+            "detail": "High-flow oxygen, monitor, IV or IO access (two if possible), bedside glucose (treat <3 mmol/L / 54 mg/dL with 2–5 mL/kg D10), blood gas with lactate, cultures if they do not delay antibiotics.",
+            "refs": [
+              "ssc-peds-2020",
+              "who-etat-2016"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "≤1 h",
+            "title": "Antibiotics",
+            "detail": "Septic shock: broad-spectrum antibiotics within 1 hour. Sepsis-associated organ dysfunction without shock: within 3 hours after appropriate evaluation. Typical empirical: ceftriaxone (add per local antibiogram; include doxycycline/azithromycin if scrub typhus suspected).",
+            "refs": [
+              "ssc-peds-2020"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "First hour",
+            "title": "Fluids — titrate, do not 'pour'",
+            "detail": "Where intensive care is available: 10–20 mL/kg boluses of balanced crystalloid, reassessing after each, up to 40–60 mL/kg in the first hour, stopping at signs of fluid overload (crackles, hepatomegaly, worsening work of breathing, rising JVP). Without intensive care and without hypotension: no bolus — start maintenance. Without intensive care but with hypotension: up to 40 mL/kg in the first hour.",
+            "refs": [
+              "ssc-peds-2020",
+              "feast-2011"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "If no response",
+            "title": "Vasoactive",
+            "detail": "After 40–60 mL/kg or earlier if overloaded: adrenaline or noradrenaline (rather than dopamine); can be started in dilute form through a good peripheral IV/IO while central access is obtained. Cold shock → adrenaline favoured; warm shock → noradrenaline favoured (individualise).",
+            "refs": [
+              "ssc-peds-2020"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Refractory",
+            "title": "Refractory shock",
+            "detail": "Hydrocortisone if fluid- and catecholamine-refractory (especially if steroid-dependent or adrenal insufficiency suspected); echo to look for myocardial dysfunction, tamponade, pneumothorax; correct ionised calcium and glucose; source control; refer to PICU/ECMO centre.",
+            "refs": [
+              "ssc-peds-2020"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "After resuscitation",
+            "title": "Maintenance fluids",
+            "detail": "Use isotonic fluid (e.g. Ringer's lactate or 0.9% saline with dextrose) at Holliday–Segar rates (4/2/1 mL/kg/h), often restricted to ~70% in pneumonia, meningitis or SIADH risk; monitor sodium and avoid fluid overload.",
+            "refs": [
+              "ssc-peds-2020"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "crystalloid-bolus-paeds",
+            "role": "Fluid resuscitation in septic shock",
+            "route": "IV/IO bolus",
+            "dose": "10–20 mL/kg over 5–20 min, reassess after each; up to 40–60 mL/kg in the first hour where ICU is available",
+            "workedExample": "15 kg: 150–300 mL per bolus (push-pull with 50 mL syringe).",
+            "refs": [
+              "ssc-peds-2020"
+            ]
+          },
+          {
+            "drugId": "adrenaline-paeds",
+            "role": "Vasoactive for cold/fluid-refractory shock",
+            "route": "IV/IO infusion",
+            "dose": "0.05–1 mcg/kg/min",
+            "doseRange": {
+              "unit": "mcg/kg/min",
+              "min": 0.05,
+              "max": 1
+            },
+            "dilution": "0.3 mg/kg in 50 mL: 1 mL/h = 0.1 mcg/kg/min",
+            "workedExample": "15 kg at 0.1 mcg/kg/min = 1 mL/h of 4.5 mg in 50 mL",
+            "calculatorId": "infusion-rate-weight-min",
+            "verify": "Peripheral concentration limits per local PICU policy.",
+            "refs": [
+              "ssc-peds-2020"
+            ]
+          },
+          {
+            "drugId": "noradrenaline-paeds",
+            "role": "Vasoactive for warm shock",
+            "route": "IV/IO infusion",
+            "dose": "0.05–1 mcg/kg/min",
+            "doseRange": {
+              "unit": "mcg/kg/min",
+              "min": 0.05,
+              "max": 1
+            },
+            "dilution": "0.3 mg/kg in 50 mL: 1 mL/h = 0.1 mcg/kg/min",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "ssc-peds-2020"
+            ]
+          },
+          {
+            "drugId": "ceftriaxone-paeds",
+            "role": "Empirical antibiotic",
+            "route": "IV",
+            "dose": "50–80 mg/kg once daily (max 2 g); meningitis 100 mg/kg/day (max 4 g)",
+            "workedExample": "15 kg: 750 mg–1.2 g once daily; meningitis 1.5 g/day.",
+            "refs": [
+              "ssc-peds-2020",
+              "who-pocketbook-2013"
+            ]
+          },
+          {
+            "drugId": "hydrocortisone-paeds",
+            "role": "Catecholamine-refractory shock",
+            "route": "IV",
+            "dose": "2 mg/kg (max 100 mg) bolus, then 1 mg/kg 6-hourly (max 50 mg)",
+            "verify": "Dose not specified by SSC; common PICU practice — confirm locally.",
+            "refs": [
+              "ssc-peds-2020"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "holliday-segar",
+            "title": "Maintenance fluid (Holliday–Segar '4-2-1')",
+            "columns": [
+              "Weight",
+              "mL/h",
+              "Example"
+            ],
+            "rows": [
+              [
+                "First 10 kg",
+                "4 mL/kg/h",
+                "8 kg → 32 mL/h"
+              ],
+              [
+                "Next 10 kg (11–20 kg)",
+                "+2 mL/kg/h",
+                "15 kg → 40 + 10 = 50 mL/h"
+              ],
+              [
+                "Each kg above 20",
+                "+1 mL/kg/h",
+                "30 kg → 60 + 10 = 70 mL/h"
+              ]
+            ],
+            "caption": "Use isotonic fluids with dextrose; many sick children need 60–80% of full maintenance (SIADH risk).",
+            "refs": [
+              "ssc-peds-2020"
+            ]
+          },
+          {
+            "id": "phoenix-cv",
+            "title": "Phoenix cardiovascular points (septic shock if ≥1)",
+            "columns": [
+              "Component",
+              "1 point",
+              "2 points"
+            ],
+            "rows": [
+              [
+                "Vasoactive medications",
+                "1 medication",
+                "≥2 medications"
+              ],
+              [
+                "Lactate (mmol/L)",
+                "5–10.9",
+                "≥11"
+              ],
+              [
+                "MAP for age",
+                "Below age-specific threshold (1 point band)",
+                "Below lower age-specific threshold (2 point band)"
+              ]
+            ],
+            "caption": "See the Phoenix paper for the age-specific MAP thresholds and the respiratory, coagulation and neurological components.",
+            "refs": [
+              "phoenix-2024"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Crackles, gallop or a liver edge that moves down after a bolus = fluid overload: stop fluids and start a vasoactive.",
+            "refs": [
+              "ssc-peds-2020"
+            ]
+          },
+          {
+            "text": "Hypotension is a late sign in children; tachycardia, prolonged capillary refill and altered sensorium come first.",
+            "refs": [
+              "ssc-peds-2020"
+            ]
+          },
+          {
+            "text": "Purpuric rash with fever = meningococcaemia until proven otherwise: antibiotics immediately.",
+            "refs": [
+              "who-pocketbook-2013"
+            ]
+          },
+          {
+            "text": "Severe acute malnutrition with shock: give only small, slow volumes (WHO: 15 mL/kg over 1 h) and watch for heart failure.",
+            "refs": [
+              "who-pocketbook-2013"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Giving 60 mL/kg 'by protocol' in a hospital without ventilators or PICU: FEAST showed boluses increased mortality in children without hypotension in resource-limited settings.",
+            "refs": [
+              "feast-2011",
+              "ssc-peds-2020"
+            ]
+          },
+          {
+            "text": "Using hypotonic (0.18% or 0.45%) saline for maintenance: risk of hyponatraemic encephalopathy; use isotonic fluids.",
+            "refs": [
+              "ssc-peds-2020"
+            ]
+          },
+          {
+            "text": "Waiting for central access before starting a vasoactive: dilute adrenaline/noradrenaline can run peripherally or via IO while access is obtained.",
+            "refs": [
+              "ssc-peds-2020"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Reassess after every bolus using the same five things: heart rate, capillary refill, mental state, liver edge and lung crackles.",
+            "refs": [
+              "ssc-peds-2020"
+            ]
+          },
+          {
+            "text": "Balanced crystalloids are suggested over 0.9% saline for resuscitation; albumin is not suggested as first-line.",
+            "refs": [
+              "ssc-peds-2020"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Paediatric septic shock — first hour",
+        "description": "SSC-paediatric-based pathway, adapted to whether intensive care is available.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Child with suspected infection and abnormal perfusion or mental state"
+          },
+          {
+            "id": "abc",
+            "type": "action",
+            "text": "Oxygen, monitor, IV/IO access, glucose, gas + lactate, cultures; antibiotics within 1 h",
+            "severity": "critical"
+          },
+          {
+            "id": "icu",
+            "type": "decision",
+            "text": "Intensive care (ventilation, PICU) available?"
+          },
+          {
+            "id": "hypo",
+            "type": "decision",
+            "text": "Hypotension present?"
+          },
+          {
+            "id": "maint",
+            "type": "action",
+            "text": "No bolus: maintenance fluids, antibiotics, close monitoring, early referral"
+          },
+          {
+            "id": "lim_bolus",
+            "type": "action",
+            "text": "Up to 40 mL/kg in first hour in 10–20 mL/kg boluses with reassessment"
+          },
+          {
+            "id": "bolus",
+            "type": "action",
+            "text": "10–20 mL/kg balanced crystalloid boluses, reassess each; up to 40–60 mL/kg"
+          },
+          {
+            "id": "overload",
+            "type": "decision",
+            "text": "Signs of fluid overload or no improvement after 40–60 mL/kg?"
+          },
+          {
+            "id": "better",
+            "type": "end",
+            "text": "Improving: maintenance fluids, continue antibiotics, source control, monitor"
+          },
+          {
+            "id": "vaso",
+            "type": "action",
+            "text": "Start adrenaline (cold) or noradrenaline (warm) peripherally/IO; arrange central access",
+            "severity": "critical"
+          },
+          {
+            "id": "refractory",
+            "type": "decision",
+            "text": "Still shocked on vasoactive?"
+          },
+          {
+            "id": "rx_ref",
+            "type": "end",
+            "text": "Hydrocortisone, echo, correct Ca²⁺/glucose, intubate if needed (ketamine), PICU ± ECMO referral",
+            "severity": "critical"
+          },
+          {
+            "id": "stab",
+            "type": "end",
+            "text": "Stabilised: PICU care, titrate vasoactive, de-escalate fluids",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "abc"
+          },
+          {
+            "from": "abc",
+            "to": "icu"
+          },
+          {
+            "from": "icu",
+            "to": "bolus",
+            "label": "Yes"
+          },
+          {
+            "from": "icu",
+            "to": "hypo",
+            "label": "No"
+          },
+          {
+            "from": "hypo",
+            "to": "lim_bolus",
+            "label": "Yes"
+          },
+          {
+            "from": "hypo",
+            "to": "maint",
+            "label": "No"
+          },
+          {
+            "from": "maint",
+            "to": "overload"
+          },
+          {
+            "from": "lim_bolus",
+            "to": "overload"
+          },
+          {
+            "from": "bolus",
+            "to": "overload"
+          },
+          {
+            "from": "overload",
+            "to": "vaso",
+            "label": "Yes"
+          },
+          {
+            "from": "overload",
+            "to": "better",
+            "label": "No — improving"
+          },
+          {
+            "from": "vaso",
+            "to": "refractory"
+          },
+          {
+            "from": "refractory",
+            "to": "rx_ref",
+            "label": "Yes"
+          },
+          {
+            "from": "refractory",
+            "to": "stab",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "ssc-peds-2020",
+          "feast-2011"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Children with septic shock more often present with **low cardiac output, high SVR ('cold shock')** than adults, especially infants and in community-acquired sepsis; adults more often have vasodilated 'warm shock'. Myocardial dysfunction, capillary leak and absolute/relative hypovolaemia coexist, so fluid responsiveness is lost early and overload develops easily.",
+        "evidence": "- **SSC Paediatric 2020** (77 recommendations): antibiotics within 1 h for shock, 3 h for sepsis without shock; fluid strategy depends on ICU availability; balanced crystalloids; adrenaline or noradrenaline rather than dopamine; hydrocortisone not routinely; measure lactate.\n- **FEAST (2011):** in 3,141 African children with severe febrile illness and impaired perfusion (but not hypotension), 20–40 mL/kg boluses of saline or albumin increased 48-h mortality (10.5–10.6% vs 7.3% without bolus). Mechanisms likely include cardiovascular collapse after transient improvement; the result shaped the 'no bolus without ICU and without hypotension' recommendation.\n- **Phoenix criteria (2024):** derived and validated in >3 million encounters across high- and low-resource settings; replaced the 2005 IPSCC SIRS-based definitions.",
+        "controversies": "- Volume of initial fluid in middle-income settings with some ICU capacity (most Indian district hospitals sit between the SSC 'with' and 'without' ICU categories).\n- Applicability of FEAST (high malaria and anaemia prevalence) to Indian children.\n- Early vasoactive vs further fluids in dengue shock (different pathophysiology: plasma leak).",
+        "indiaNotes": "- **Dengue shock** in children follows WHO/national dengue protocols (graded crystalloid infusion with haematocrit monitoring) rather than generic sepsis boluses — see the tropical and monsoon fevers module.\n- **Scrub typhus** is a common cause of paediatric sepsis with multi-organ dysfunction in India — add doxycycline or azithromycin when suspected (eschar, hepatosplenomegaly, monsoon season).\n- **Severe acute malnutrition**: WHO advises 15 mL/kg over 1 h (Ringer's lactate with 5% dextrose, or half-normal saline with 5% dextrose), reassessing for overload; blood transfusion if no improvement.\n- Many paediatric wards lack infusion pumps — use burettes/microdrip sets (60 drops = 1 mL) and calculate drops/min carefully."
+      },
+      "drugIds": [
+        "crystalloid-bolus-paeds",
+        "adrenaline-paeds",
+        "noradrenaline-paeds",
+        "ceftriaxone-paeds",
+        "hydrocortisone-paeds",
+        "dextrose-10-paeds"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-min",
+        "mean-arterial-pressure",
+        "shock-index"
+      ],
+      "references": [
+        "ssc-peds-2020",
+        "phoenix-2024",
+        "feast-2011",
+        "who-etat-2016",
+        "who-pocketbook-2013"
+      ],
+      "quiz": [
+        {
+          "id": "q31-2-1",
+          "stem": "In the Phoenix criteria, septic shock in a child is defined as:",
+          "options": [
+            "SIRS plus hypotension",
+            "Sepsis (Phoenix score ≥2) with at least 1 cardiovascular point",
+            "Lactate >2 mmol/L",
+            "Need for 60 mL/kg fluid",
+            "Any positive blood culture with tachycardia"
+          ],
+          "answerIndex": 1,
+          "explanation": "Septic shock = sepsis with ≥1 cardiovascular point (hypotension for age, lactate >5, or vasoactive use)."
+        },
+        {
+          "id": "q31-2-2",
+          "stem": "A 3-year-old with sepsis and prolonged capillary refill, normal BP, presents to a hospital without PICU or ventilators. SSC 2020 suggests:",
+          "options": [
+            "60 mL/kg bolus in 15 min",
+            "No bolus; start maintenance fluids and antibiotics, monitor closely",
+            "Albumin 20 mL/kg",
+            "Start dopamine",
+            "Restrict all fluids"
+          ],
+          "answerIndex": 1,
+          "explanation": "Without intensive care and without hypotension, SSC suggests against boluses (FEAST)."
+        },
+        {
+          "id": "q31-2-3",
+          "stem": "After 40 mL/kg, a child with septic shock develops crackles and a liver edge 4 cm below the costal margin, still tachycardic and cold. Next step:",
+          "options": [
+            "Another 20 mL/kg bolus",
+            "Start adrenaline infusion (peripheral/IO acceptable while central access obtained)",
+            "Furosemide and stop antibiotics",
+            "Dopamine via central line only",
+            "Wait for echo"
+          ],
+          "answerIndex": 1,
+          "explanation": "Fluid overload signs → stop fluids and start a vasoactive; adrenaline suits cold shock."
+        },
+        {
+          "id": "q31-2-4",
+          "stem": "Maintenance fluid rate (Holliday–Segar) for a 25 kg child is:",
+          "options": [
+            "40 mL/h",
+            "55 mL/h",
+            "65 mL/h",
+            "100 mL/h",
+            "25 mL/h"
+          ],
+          "answerIndex": 2,
+          "explanation": "4×10 + 2×10 + 1×5 = 65 mL/h."
+        },
+        {
+          "id": "q31-2-5",
+          "stem": "The recommended maintenance fluid type for most acutely ill children is:",
+          "options": [
+            "0.18% saline with 4% dextrose",
+            "Isotonic fluid (e.g. Ringer's lactate or 0.9% saline) with dextrose",
+            "Water by NG only",
+            "5% dextrose alone",
+            "3% saline"
+          ],
+          "answerIndex": 1,
+          "explanation": "Isotonic maintenance fluids reduce hyponatraemia risk."
+        }
+      ]
+    },
+    {
+      "id": "paediatric-airway-sizes",
+      "title": "Paediatric airway: sizes, RSI and first ventilator settings",
+      "summary": "Endotracheal tube size and depth, laryngoscope blades and supraglottic airways by age/weight, a safe paediatric rapid sequence intubation, and lung-protective initial ventilation per PALICC-2.",
+      "viewKey": "topic:paediatric-emergencies-essentials/paediatric-airway-sizes",
+      "uiHints": {
+        "icon": "wind",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "The infant airway is anatomically different: large occiput, large tongue, high anterior larynx, floppy omega-shaped epiglottis, and the narrowest functional point at the cricoid/subglottis. Cuffed tubes are now preferred for all ages beyond the newborn, with cuff pressure monitoring.",
+          "refs": [
+            "pals-2025",
+            "weiss-cuffed-2009"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "Before",
+            "title": "Decide and call for help",
+            "detail": "Indications: failure to maintain/protect airway, refractory hypoxaemia or hypercapnia on HFNC/NIV, exhaustion, GCS ≤8, shock needing controlled ventilation, safe transfer. Call the most experienced airway operator available; children decompensate fast.",
+            "refs": [
+              "pals-2025"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Before",
+            "title": "Calculate sizes aloud",
+            "detail": "Cuffed ETT ID = (age/4) + 3.5; uncuffed = (age/4) + 4. Keep one size above and below. Oral depth (cm at lips) = 3 × ID or (age/2) + 12. Write the weight, tube size, depth and drug doses on a whiteboard.",
+            "refs": [
+              "pals-2020",
+              "weiss-cuffed-2009"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Before",
+            "title": "Prepare",
+            "detail": "Suction (Yankauer + catheter 2 × ETT ID in Fr), bag-valve-mask of correct size, appropriate blade, stylet, bougie, SGA one size ready, waveform capnography, oral airway, NG tube. Fluid bolus 10–20 mL/kg drawn up and adrenaline (push-dose or infusion) ready if shocked.",
+            "refs": [
+              "pals-2020"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "−3 min",
+            "title": "Preoxygenate",
+            "detail": "Head position (shoulder roll in infants, sniffing in older child); 100% O₂ by mask for 3 min, or HFNC/NIV if already on it; continue apnoeic oxygenation via nasal cannula during laryngoscopy.",
+            "refs": [
+              "pals-2025"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "0",
+            "title": "Induce and paralyse",
+            "detail": "Ketamine 1–2 mg/kg (0.5–1 mg/kg in profound shock) ± fentanyl 1–2 mcg/kg; rocuronium 1–1.2 mg/kg. Atropine 0.02 mg/kg is not routine; consider for bradycardia or in infants receiving suxamethonium.",
+            "refs": [
+              "pals-2020"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "+45–60 s",
+            "title": "Intubate and confirm",
+            "detail": "Video laryngoscope if available. Gentle bag-mask ventilation (low pressure) is acceptable if desaturating. Confirm with sustained waveform ETCO₂, chest rise and auscultation; cuff pressure <20–25 cmH₂O; chest X-ray for tip position (mid-trachea, T2–T3).",
+            "refs": [
+              "pals-2025",
+              "weiss-cuffed-2009"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Failed",
+            "title": "Plan B/C",
+            "detail": "If two attempts fail: oxygenate with bag-mask + adjuncts or an SGA, call for help. Cannot intubate, cannot oxygenate: in children <8 years needle cricothyroidotomy (cannula) with jet/bag oxygenation as a bridge; surgical airway in older children. Keep the drawn-up dose list for re-attempts.",
+            "refs": [
+              "pals-2020"
+            ]
+          },
+          {
+            "n": 8,
+            "time": "After",
+            "title": "Initial ventilation (PALICC-2)",
+            "detail": "Tidal volume 5–8 mL/kg predicted (ideal) weight; 3–6 mL/kg if poor compliance. Plateau ≤28 cmH₂O; driving pressure ≤15 cmH₂O; PEEP 5–8 then titrate to oxygenation and haemodynamics. SpO₂ 92–97% (88–92% acceptable in severe PARDS with PEEP ≥10). Permissive hypercapnia with pH ≥7.20, except in raised ICP or pulmonary hypertension.",
+            "refs": [
+              "palicc2-2023"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "ketamine-paeds",
+            "role": "Induction (haemodynamically safest)",
+            "route": "IV",
+            "dose": "1–2 mg/kg; 0.5–1 mg/kg in profound shock; IM 4–5 mg/kg if no access",
+            "workedExample": "20 kg: 20–40 mg IV (shocked: 10–20 mg).",
+            "refs": [
+              "pals-2020"
+            ]
+          },
+          {
+            "drugId": "rocuronium-paeds",
+            "role": "Neuromuscular blockade for RSI",
+            "route": "IV",
+            "dose": "1–1.2 mg/kg",
+            "workedExample": "20 kg: 20–24 mg (2–2.4 mL of 10 mg/mL).",
+            "refs": [
+              "pals-2020"
+            ]
+          },
+          {
+            "drugId": "fentanyl-paeds",
+            "role": "Analgesic co-induction / post-intubation",
+            "route": "IV",
+            "dose": "1–2 mcg/kg slowly; infusion 1–4 mcg/kg/h",
+            "doseRange": {
+              "unit": "mcg/kg/h",
+              "min": 1,
+              "max": 4
+            },
+            "dilution": "10 mcg/kg in 50 mL: 1 mL/h = 0.2 mcg/kg/h (or 50 mcg/mL undiluted for older children)",
+            "workedExample": "20 kg: bolus 20–40 mcg; infusion 2 mcg/kg/h = 40 mcg/h = 0.8 mL/h of 50 mcg/mL.",
+            "calculatorId": "infusion-rate-weight-hour",
+            "refs": [
+              "pals-2020"
+            ]
+          },
+          {
+            "drugId": "atropine-paeds",
+            "role": "Bradycardia during intubation (not routine premedication)",
+            "route": "IV/IO",
+            "dose": "0.02 mg/kg (max single dose 0.5 mg)",
+            "workedExample": "20 kg: 0.4 mg.",
+            "refs": [
+              "pals-2020"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "paeds-airway-sizes",
+            "title": "Airway equipment by age",
+            "columns": [
+              "Age (approx. weight)",
+              "Cuffed ETT ID (mm)",
+              "Oral depth at lips (cm)",
+              "Laryngoscope blade",
+              "SGA (LMA) size"
+            ],
+            "rows": [
+              [
+                "Term newborn–<8 months (3–8 kg)",
+                "3.0",
+                "9–10",
+                "Miller 0–1",
+                "1 (<5 kg) / 1.5 (5–10 kg)"
+              ],
+              [
+                "8 months–2 years (8–12 kg)",
+                "3.5",
+                "10.5–12",
+                "Miller 1 / Mac 1",
+                "1.5 (5–10 kg) / 2 (10–20 kg)"
+              ],
+              [
+                "2 years (12 kg)",
+                "4.0",
+                "12–13",
+                "Mac 2 / Miller 2",
+                "2"
+              ],
+              [
+                "4 years (16 kg)",
+                "4.5",
+                "14",
+                "Mac 2",
+                "2"
+              ],
+              [
+                "6 years (20 kg)",
+                "5.0",
+                "15",
+                "Mac 2",
+                "2–2.5 (20–30 kg)"
+              ],
+              [
+                "8 years (25–30 kg)",
+                "5.5",
+                "16",
+                "Mac 2–3",
+                "2.5"
+              ],
+              [
+                "10 years (30–35 kg)",
+                "6.0",
+                "17–18",
+                "Mac 3",
+                "3 (30–50 kg)"
+              ],
+              [
+                "12–14 years (40–50 kg)",
+                "6.5–7.0",
+                "18–21",
+                "Mac 3",
+                "3–4 (50–70 kg)"
+              ]
+            ],
+            "caption": "Cuffed ID = age/4 + 3.5 (≥2 years); uncuffed = age/4 + 4. Depth ≈ 3 × ID. Always confirm with ETCO₂ and chest X-ray; have half-size smaller tubes for croup or subglottic narrowing.",
+            "refs": [
+              "pals-2020",
+              "weiss-cuffed-2009"
+            ]
+          },
+          {
+            "id": "parsd-severity",
+            "title": "PARDS severity on invasive ventilation (PALICC-2)",
+            "columns": [
+              "Severity",
+              "Oxygenation index (OI)",
+              "Oxygen saturation index (OSI)"
+            ],
+            "rows": [
+              [
+                "Mild/moderate",
+                "4 to <16",
+                "5 to <12.3"
+              ],
+              [
+                "Severe",
+                "≥16",
+                "≥12.3"
+              ]
+            ],
+            "caption": "OI = (FiO₂ × mean airway pressure × 100) / PaO₂; OSI uses SpO₂ (≤97%) in place of PaO₂.",
+            "refs": [
+              "palicc2-2023"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Bradycardia during laryngoscopy = hypoxia until proven otherwise: stop, oxygenate with bag-mask, then reattempt.",
+            "refs": [
+              "pals-2020"
+            ]
+          },
+          {
+            "text": "Post-intubation arrest risk is high in shock: resuscitate first and have fluids and adrenaline ready before induction.",
+            "refs": [
+              "pals-2020"
+            ]
+          },
+          {
+            "text": "Sudden deterioration in a ventilated child — DOPE: Displacement, Obstruction, Pneumothorax, Equipment failure. Disconnect and hand-bag with 100% O₂.",
+            "refs": [
+              "pals-2020"
+            ]
+          },
+          {
+            "text": "Drooling, tripod posture, toxic look and soft stridor suggest epiglottitis: do not lie the child flat or examine the throat; get the most senior anaesthetist and ENT.",
+            "refs": [
+              "pals-2020"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Over-inflating the cuff: subglottic stenosis risk; measure cuff pressure with a manometer, keep <20–25 cmH₂O.",
+            "refs": [
+              "weiss-cuffed-2009"
+            ]
+          },
+          {
+            "text": "Endobronchial intubation is common because the trachea is short (~4–5 cm in infants); listen in both axillae and check depth after every move.",
+            "refs": [
+              "pals-2020"
+            ]
+          },
+          {
+            "text": "Hyperventilating with the bag after intubation: drops venous return and causes hypocapnia; ventilate gently at an age-appropriate rate.",
+            "refs": [
+              "pals-2025"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Use a written paediatric intubation checklist and say the tube size, depth and drug doses aloud before induction — it reduces 10-fold and size errors.",
+            "refs": [
+              "pals-2020"
+            ]
+          },
+          {
+            "text": "Gastric distension from bag-mask ventilation splints the diaphragm in infants — place an NG/OG tube early after intubation.",
+            "refs": [
+              "pals-2020"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Paediatric intubation pathway",
+        "description": "Preparation, RSI and rescue pathway for a sick child.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Child needs a definitive airway"
+          },
+          {
+            "id": "prep",
+            "type": "action",
+            "text": "Call help; calculate tube, depth, drugs; prepare suction, SGA, ETCO₂",
+            "detail": "Cuffed ID = age/4 + 3.5; depth = 3 × ID."
+          },
+          {
+            "id": "shock",
+            "type": "decision",
+            "text": "Shocked or haemodynamically unstable?"
+          },
+          {
+            "id": "resus",
+            "type": "action",
+            "text": "Bolus 10–20 mL/kg and/or start adrenaline before induction",
+            "severity": "critical"
+          },
+          {
+            "id": "preox",
+            "type": "action",
+            "text": "Preoxygenate 3 min; apnoeic oxygenation via nasal cannula"
+          },
+          {
+            "id": "rsi",
+            "type": "action",
+            "text": "Ketamine 1–2 mg/kg (0.5–1 if shocked) + rocuronium 1–1.2 mg/kg"
+          },
+          {
+            "id": "attempt",
+            "type": "decision",
+            "text": "Tube placed and ETCO₂ waveform confirmed?"
+          },
+          {
+            "id": "vent",
+            "type": "end",
+            "text": "Secure tube, CXR, PALICC-2 lung-protective settings, sedation"
+          },
+          {
+            "id": "oxy",
+            "type": "decision",
+            "text": "Can you oxygenate with bag-mask or SGA?"
+          },
+          {
+            "id": "retry",
+            "type": "action",
+            "text": "Optimise position/equipment; one more attempt by most experienced operator"
+          },
+          {
+            "id": "cico",
+            "type": "end",
+            "text": "CICO: needle cricothyroidotomy (<8 y) or surgical airway; call ENT/anaesthesia",
+            "severity": "critical"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "prep"
+          },
+          {
+            "from": "prep",
+            "to": "shock"
+          },
+          {
+            "from": "shock",
+            "to": "resus",
+            "label": "Yes"
+          },
+          {
+            "from": "shock",
+            "to": "preox",
+            "label": "No"
+          },
+          {
+            "from": "resus",
+            "to": "preox"
+          },
+          {
+            "from": "preox",
+            "to": "rsi"
+          },
+          {
+            "from": "rsi",
+            "to": "attempt"
+          },
+          {
+            "from": "attempt",
+            "to": "vent",
+            "label": "Yes"
+          },
+          {
+            "from": "attempt",
+            "to": "oxy",
+            "label": "No"
+          },
+          {
+            "from": "oxy",
+            "to": "retry",
+            "label": "Yes"
+          },
+          {
+            "from": "oxy",
+            "to": "cico",
+            "label": "No"
+          },
+          {
+            "from": "retry",
+            "to": "attempt",
+            "label": "Re-attempt"
+          }
+        ],
+        "refs": [
+          "pals-2020",
+          "pals-2025",
+          "palicc2-2023"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Infants have a high oxygen consumption (6–8 mL/kg/min vs 3–4 mL/kg/min in adults) and small FRC, so safe apnoea time is very short. Poiseuille's law means 1 mm of oedema in an infant's 4 mm subglottis increases resistance about 16-fold — explaining why croup and post-extubation stridor are dangerous.",
+        "evidence": "- **Cuffed vs uncuffed tubes:** Weiss et al. 2009 (2,246 children <5 years, multicentre RCT) found cuffed tubes reduced tube exchanges (2.1% vs 30.8%) without increasing post-extubation stridor (4.4% vs 4.7%). AHA 2020/2025 supports cuffed tubes for infants and children.\n- **Cricoid pressure** is not recommended routinely during paediatric intubation (AHA 2020/2025).\n- **Atropine premedication** is not recommended routinely; reserve for bradycardia risk.\n- **PALICC-2 (2023):** PARDS defined by OI/OSI on invasive ventilation (or P/F, S/F on non-invasive support); recommendations for tidal volume by compliance, plateau ≤28 cmH₂O, driving pressure ≤15 cmH₂O, SpO₂ targets, conservative fluids after resuscitation, and prone positioning considered in severe PARDS.",
+        "controversies": "- Video vs direct laryngoscopy as first-line in children (first-pass success better for novices with VL).\n- Ketamine vs etomidate in shock (etomidate rarely stocked in Indian paediatric units; adrenal suppression concerns in sepsis).\n- High-frequency oscillatory ventilation in severe PARDS — no recommendation as routine.",
+        "indiaNotes": "- Cuffed paediatric tubes, size-appropriate video laryngoscope blades and paediatric ETCO₂ adapters may not be available in district hospitals — this is a reason to refer early to a PICU centre.\n- Keep a paediatric airway trolley with a laminated size chart; many emergencies in Indian general ICUs involve teenagers (OP poisoning, snakebite, trauma) who can be managed with adult-sized equipment by weight.\n- Suxamethonium remains widely used in India; avoid in hyperkalaemia, neuromuscular disease and burns >48 h, and give atropine in infants."
+      },
+      "drugIds": [
+        "ketamine-paeds",
+        "rocuronium-paeds",
+        "fentanyl-paeds",
+        "atropine-paeds"
+      ],
+      "calculatorIds": [
+        "oxygenation-index",
+        "sf-ratio",
+        "infusion-rate-weight-hour"
+      ],
+      "references": [
+        "pals-2020",
+        "pals-2025",
+        "weiss-cuffed-2009",
+        "palicc2-2023"
+      ],
+      "quiz": [
+        {
+          "id": "q31-3-1",
+          "stem": "Estimated cuffed ETT internal diameter for a 6-year-old:",
+          "options": [
+            "4.0 mm",
+            "4.5 mm",
+            "5.0 mm",
+            "5.5 mm",
+            "6.5 mm"
+          ],
+          "answerIndex": 2,
+          "explanation": "6/4 + 3.5 = 5.0 mm (uncuffed 5.5 mm)."
+        },
+        {
+          "id": "q31-3-2",
+          "stem": "For a 5.0 mm tube, the approximate oral depth at the lips is:",
+          "options": [
+            "10 cm",
+            "12 cm",
+            "15 cm",
+            "18 cm",
+            "21 cm"
+          ],
+          "answerIndex": 2,
+          "explanation": "Depth ≈ 3 × ID = 15 cm (or age/2 + 12)."
+        },
+        {
+          "id": "q31-3-3",
+          "stem": "A ventilated 2-year-old suddenly desaturates with HR falling. The first action is:",
+          "options": [
+            "Increase PEEP",
+            "Disconnect from ventilator and hand-ventilate with 100% O₂, then check DOPE",
+            "Give atropine",
+            "Chest X-ray",
+            "Increase sedation"
+          ],
+          "answerIndex": 1,
+          "explanation": "DOPE: Displacement, Obstruction, Pneumothorax, Equipment — hand-bag first."
+        },
+        {
+          "id": "q31-3-4",
+          "stem": "Weiss 2009 showed cuffed tubes in young children:",
+          "options": [
+            "Increased post-extubation stridor",
+            "Reduced tube exchanges without increasing stridor",
+            "Increased subglottic stenosis",
+            "Had no effect on tube exchanges",
+            "Required larger tubes"
+          ],
+          "answerIndex": 1,
+          "explanation": "Exchanges 2.1% vs 30.8%; stridor similar."
+        },
+        {
+          "id": "q31-3-5",
+          "stem": "Per PALICC-2, severe PARDS on invasive ventilation is an oxygenation index of:",
+          "options": [
+            "≥4",
+            "≥8",
+            "≥12",
+            "≥16",
+            "≥25"
+          ],
+          "answerIndex": 3,
+          "explanation": "Severe PARDS: OI ≥16 (or OSI ≥12.3)."
+        }
+      ]
+    },
+    {
+      "id": "bronchiolitis-croup",
+      "title": "Bronchiolitis and croup",
+      "summary": "Two common respiratory emergencies of infancy: bronchiolitis (supportive care, oxygen thresholds, HFNC/CPAP, what not to give) and croup (steroids for all, nebulised adrenaline for stridor at rest, and the dangerous mimics including diphtheria).",
+      "viewKey": "topic:paediatric-emergencies-essentials/bronchiolitis-croup",
+      "uiHints": {
+        "icon": "wind",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Bronchiolitis is a viral (mostly RSV) lower respiratory tract infection of infants causing small-airway inflammation and obstruction. Croup (laryngotracheobronchitis, mostly parainfluenza) causes subglottic oedema.",
+          "refs": [
+            "nice-ng9",
+            "cochrane-croup-2018"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "Assess",
+            "title": "Which one is it?",
+            "detail": "**Bronchiolitis**: <2 years (peak 3–6 months), coryza then cough, tachypnoea, recession, fine crackles ± wheeze, poor feeding. **Croup**: usually 6 months–3 years, barking cough, hoarse voice, inspiratory stridor, worse at night, often low fever. Toxic look, drooling or no barking cough → think epiglottitis, bacterial tracheitis, diphtheria, foreign body.",
+            "refs": [
+              "nice-ng9",
+              "cochrane-croup-2018"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Bronchiolitis",
+            "title": "Oxygen and feeding",
+            "detail": "Give oxygen if SpO₂ persistently <90% (≥6 weeks old, no underlying condition) or <92% (<6 weeks or with underlying conditions). Suction nose only if secretions cause distress or feeding difficulty. If oral intake <50–75% of usual: NG/OG feeds; IV isotonic fluids only if NG not tolerated or impending respiratory failure.",
+            "refs": [
+              "nice-ng9",
+              "aap-bronchiolitis-2014"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Bronchiolitis",
+            "title": "Escalate respiratory support",
+            "detail": "Rising work of breathing or hypoxaemia despite low-flow O₂: HFNC (commonly 2 L/kg/min) as rescue; CPAP for impending respiratory failure; intubate for apnoea, exhaustion or failure of CPAP. Monitor with continuous SpO₂ and a blood gas (capillary acceptable).",
+            "refs": [
+              "paris-hfnc-2018",
+              "nice-ng9"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Bronchiolitis",
+            "title": "What NOT to give",
+            "detail": "No routine salbutamol, adrenaline, ipratropium, hypertonic saline, montelukast, corticosteroids or antibiotics (unless secondary bacterial infection suspected). No routine chest X-ray or blood tests.",
+            "refs": [
+              "nice-ng9",
+              "aap-bronchiolitis-2014"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Croup",
+            "title": "Steroid for every croup",
+            "detail": "Dexamethasone 0.15–0.6 mg/kg orally once (IM/IV if vomiting); 0.15 mg/kg is effective for mild–moderate croup. Alternative: nebulised budesonide 2 mg (e.g. if vomiting), or oral prednisolone 1 mg/kg. Keep the child calm on the parent's lap; avoid distressing interventions.",
+            "refs": [
+              "cochrane-croup-2018",
+              "bjornson-2004"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Croup",
+            "title": "Stridor at rest",
+            "detail": "Moderate–severe croup (stridor at rest, recession): nebulised adrenaline 0.5 mL/kg of 1 mg/mL (1:1000), max 5 mL, with oxygen; may repeat. Observe at least 2–4 h after adrenaline for rebound.",
+            "refs": [
+              "cochrane-croup-2018"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Croup",
+            "title": "Impending respiratory failure",
+            "detail": "Agitation or lethargy, cyanosis, decreasing air entry, reduced stridor with tiring: call senior anaesthetist/ENT, give oxygen and adrenaline nebs, intubate in theatre/controlled setting with a tube 0.5–1 mm smaller than predicted.",
+            "refs": [
+              "cochrane-croup-2018"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "dexamethasone-croup",
+            "role": "Croup — all severities",
+            "route": "PO (IM/IV if vomiting)",
+            "dose": "0.15–0.6 mg/kg single dose (0.15 mg/kg effective for mild–moderate; 0.6 mg/kg often used in severe)",
+            "workedExample": "12 kg: 1.8 mg (0.15 mg/kg) up to 7.2 mg (0.6 mg/kg). Injection 4 mg/mL can be given orally mixed with juice.",
+            "verify": "Maximum dose varies (10–16 mg) across guidelines.",
+            "refs": [
+              "cochrane-croup-2018",
+              "bjornson-2004"
+            ]
+          },
+          {
+            "drugId": "adrenaline-paeds",
+            "role": "Croup with stridor at rest",
+            "route": "Nebulised",
+            "dose": "0.5 mL/kg of 1 mg/mL (1:1000), max 5 mL, undiluted or made up with saline",
+            "workedExample": "8 kg: 4 mL of 1 mg/mL; ≥10 kg: 5 mL.",
+            "refs": [
+              "cochrane-croup-2018"
+            ]
+          },
+          {
+            "drugId": "budesonide-neb",
+            "role": "Croup — if oral steroid not possible",
+            "route": "Nebulised",
+            "dose": "2 mg single dose",
+            "refs": [
+              "cochrane-croup-2018"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "westley-score",
+            "title": "Westley croup score",
+            "columns": [
+              "Feature",
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "rows": [
+              [
+                "Level of consciousness",
+                "Normal",
+                "—",
+                "—",
+                "—",
+                "—",
+                "Disoriented"
+              ],
+              [
+                "Cyanosis",
+                "None",
+                "—",
+                "—",
+                "—",
+                "With agitation",
+                "At rest"
+              ],
+              [
+                "Stridor",
+                "None",
+                "With agitation",
+                "At rest",
+                "—",
+                "—",
+                "—"
+              ],
+              [
+                "Air entry",
+                "Normal",
+                "Decreased",
+                "Markedly decreased",
+                "—",
+                "—",
+                "—"
+              ],
+              [
+                "Retractions",
+                "None",
+                "Mild",
+                "Moderate",
+                "Severe",
+                "—",
+                "—"
+              ]
+            ],
+            "caption": "Total ≤2 mild; 3–5 moderate; 6–11 severe; ≥12 impending respiratory failure.",
+            "refs": [
+              "cochrane-croup-2018"
+            ]
+          },
+          {
+            "id": "stridor-mimics",
+            "title": "Stridor: croup and its dangerous mimics",
+            "columns": [
+              "Condition",
+              "Clues",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Croup",
+                "Barking cough, hoarse, well-looking, 6 m–3 y",
+                "Dexamethasone ± nebulised adrenaline"
+              ],
+              [
+                "Epiglottitis",
+                "Toxic, drooling, tripod, soft stridor, no bark; unimmunised for Hib",
+                "Do not examine throat; senior airway + ENT; ceftriaxone"
+              ],
+              [
+                "Bacterial tracheitis",
+                "Croup-like but toxic, high fever, poor response to adrenaline, purulent secretions",
+                "Intubation often needed; IV antibiotics (anti-staphylococcal)"
+              ],
+              [
+                "Diphtheria",
+                "Grey adherent pseudomembrane, bull neck, unimmunised; India and outbreaks",
+                "Isolation, diphtheria antitoxin, penicillin/erythromycin, ECG; notify"
+              ],
+              [
+                "Foreign body",
+                "Sudden onset choking, no fever",
+                "Rigid bronchoscopy; do not attempt blind finger sweep"
+              ],
+              [
+                "Retropharyngeal abscess",
+                "Fever, neck stiffness/torticollis, drooling",
+                "Imaging, ENT, antibiotics"
+              ],
+              [
+                "Anaphylaxis",
+                "Rapid onset, urticaria, wheeze, exposure",
+                "IM adrenaline 0.01 mg/kg (max 0.5 mg)"
+              ]
+            ],
+            "refs": [
+              "who-pocketbook-2013",
+              "cochrane-croup-2018"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Apnoea in a young infant with bronchiolitis — especially <6–8 weeks or ex-preterm — needs HDU/PICU-level monitoring.",
+            "refs": [
+              "nice-ng9"
+            ]
+          },
+          {
+            "text": "Bronchiolitis: SpO₂ <92% on oxygen, grunting, marked recession, RR >70, exhaustion or rising PCO₂ = escalate (HFNC/CPAP) and refer.",
+            "refs": [
+              "nice-ng9"
+            ]
+          },
+          {
+            "text": "Croup with quiet stridor, falling SpO₂ and drowsiness is pre-arrest — not improvement.",
+            "refs": [
+              "cochrane-croup-2018"
+            ]
+          },
+          {
+            "text": "Grey adherent membrane, bull neck, unimmunised child = diphtheria: isolate, give antitoxin and antibiotics, monitor ECG for myocarditis.",
+            "refs": [
+              "who-pocketbook-2013"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Treating bronchiolitis with salbutamol 'trial after trial': no benefit and causes tachycardia; NICE and AAP advise against bronchodilators.",
+            "refs": [
+              "nice-ng9",
+              "aap-bronchiolitis-2014"
+            ]
+          },
+          {
+            "text": "Discharging croup straight after nebulised adrenaline: the effect lasts ~2 h; observe for at least 2–4 h.",
+            "refs": [
+              "cochrane-croup-2018"
+            ]
+          },
+          {
+            "text": "Distressing a croupy child (separating from parent, painful procedures, examining the throat) can precipitate complete obstruction.",
+            "refs": [
+              "cochrane-croup-2018"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Bronchiolitis typically worsens to a peak on days 3–5 of illness — warn parents and plan admission thresholds accordingly.",
+            "refs": [
+              "nice-ng9"
+            ]
+          },
+          {
+            "text": "PARIS (2018): HFNC used as initial support in ward infants with bronchiolitis reduced escalation of care compared with standard oxygen, without reducing ICU admission, length of stay or oxygen duration.",
+            "refs": [
+              "paris-hfnc-2018"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Croup severity pathway",
+        "description": "From recognition to steroids, adrenaline, and escalation.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Child with barking cough and stridor"
+          },
+          {
+            "id": "mimic",
+            "type": "decision",
+            "text": "Toxic, drooling, membrane or sudden choking?"
+          },
+          {
+            "id": "mimic_rx",
+            "type": "end",
+            "text": "Treat as epiglottitis/tracheitis/diphtheria/foreign body: senior airway + ENT",
+            "severity": "critical"
+          },
+          {
+            "id": "sev",
+            "type": "decision",
+            "text": "Stridor at rest or recession?"
+          },
+          {
+            "id": "mild",
+            "type": "action",
+            "text": "Dexamethasone 0.15 mg/kg PO; keep calm with parent"
+          },
+          {
+            "id": "home",
+            "type": "end",
+            "text": "Discharge with safety-net advice if settled and no stridor at rest"
+          },
+          {
+            "id": "mod",
+            "type": "action",
+            "text": "Dexamethasone 0.15–0.6 mg/kg + nebulised adrenaline 0.5 mL/kg (max 5 mL) + O₂",
+            "severity": "high"
+          },
+          {
+            "id": "resp",
+            "type": "decision",
+            "text": "Improved and sustained for 2–4 h after adrenaline?"
+          },
+          {
+            "id": "obs",
+            "type": "end",
+            "text": "Admit or observe; discharge when no stridor at rest"
+          },
+          {
+            "id": "fail",
+            "type": "decision",
+            "text": "Signs of impending respiratory failure?"
+          },
+          {
+            "id": "repeat",
+            "type": "action",
+            "text": "Repeat nebulised adrenaline; admit to HDU/PICU"
+          },
+          {
+            "id": "intub",
+            "type": "end",
+            "text": "Controlled intubation by senior with tube 0.5–1 mm smaller",
+            "severity": "critical"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "mimic"
+          },
+          {
+            "from": "mimic",
+            "to": "mimic_rx",
+            "label": "Yes"
+          },
+          {
+            "from": "mimic",
+            "to": "sev",
+            "label": "No"
+          },
+          {
+            "from": "sev",
+            "to": "mild",
+            "label": "No — mild"
+          },
+          {
+            "from": "sev",
+            "to": "mod",
+            "label": "Yes — moderate/severe"
+          },
+          {
+            "from": "mild",
+            "to": "home"
+          },
+          {
+            "from": "mod",
+            "to": "resp"
+          },
+          {
+            "from": "resp",
+            "to": "obs",
+            "label": "Yes"
+          },
+          {
+            "from": "resp",
+            "to": "fail",
+            "label": "No"
+          },
+          {
+            "from": "fail",
+            "to": "intub",
+            "label": "Yes"
+          },
+          {
+            "from": "fail",
+            "to": "repeat",
+            "label": "No"
+          },
+          {
+            "from": "repeat",
+            "to": "resp",
+            "label": "Reassess"
+          }
+        ],
+        "refs": [
+          "cochrane-croup-2018",
+          "who-pocketbook-2013"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Bronchiolitis: epithelial necrosis, mucus plugging and oedema of small airways → air trapping, atelectasis, V/Q mismatch and increased work of breathing; infants tire and develop apnoea (especially young/premature). Croup: subglottic oedema at the narrowest part of the child's airway; resistance rises with the fourth power of the radius reduction, and agitation increases turbulent flow.",
+        "evidence": "- **NICE NG9 (2015, updated 2021)** and **AAP 2014**: supportive care only; oxygen thresholds 90%/92%; no bronchodilators, steroids, hypertonic saline (in the ED), antibiotics or routine investigations; consider CPAP for impending respiratory failure.\n- **PARIS (Franklin, NEJM 2018):** 1,472 infants <12 months on wards in Australia/NZ; treatment failure requiring escalation 12% with HFNC vs 23% with standard oxygen; ICU admission (about 12% vs 14%), length of stay and duration of oxygen did not differ significantly.\n- **Croup steroids (Cochrane 2018, 43 trials):** glucocorticoids reduce symptoms at 2 h, return visits and length of stay. **Bjornson 2004 (NEJM):** single oral dexamethasone 0.6 mg/kg reduced return visits in mild croup (7.3% vs 15.3%). Lower dose 0.15 mg/kg appears comparable in several trials.\n- **Nebulised adrenaline** relieves symptoms within 30 min; effect wanes by 2 h, without true 'rebound' worsening below baseline.",
+        "controversies": "- HFNC as first-line vs rescue in bronchiolitis (cost, crowding, 'treatment creep').\n- Optimal croup dexamethasone dose (0.15 vs 0.6 mg/kg).\n- Nirsevimab and maternal RSV vaccination for prevention — not widely available in India yet.",
+        "indiaNotes": "- **Diphtheria** still occurs in India, particularly in under-immunised communities and outbreaks; always ask about immunisation and look at the throat in a calm setting if diphtheria is suspected (but not if epiglottitis is). Diphtheria antitoxin (DAT) is dosed by severity (roughly 20,000–100,000 units — verify with current national/CDC guidance) and is often scarce; inform public health.\n- Bubble CPAP is a low-cost, effective option for bronchiolitis and pneumonia in Indian district hospitals.\n- Dexamethasone injection (4 mg/mL) is cheap and universally available and can be given orally."
+      },
+      "drugIds": [
+        "dexamethasone-croup",
+        "adrenaline-paeds",
+        "budesonide-neb"
+      ],
+      "calculatorIds": [
+        "sf-ratio"
+      ],
+      "references": [
+        "nice-ng9",
+        "aap-bronchiolitis-2014",
+        "paris-hfnc-2018",
+        "cochrane-croup-2018",
+        "bjornson-2004",
+        "who-pocketbook-2013"
+      ],
+      "quiz": [
+        {
+          "id": "q31-4-1",
+          "stem": "A 4-month-old with bronchiolitis has SpO₂ 91% in air, feeding 60% of normal, mild recession. Per NICE, oxygen is:",
+          "options": [
+            "Required, as SpO₂ <94%",
+            "Not required — threshold is persistently <90% for infants ≥6 weeks without risk factors",
+            "Required with nebulised salbutamol",
+            "Only if PCO₂ is raised",
+            "Given via CPAP only"
+          ],
+          "answerIndex": 1,
+          "explanation": "NICE threshold: <90% (or <92% if <6 weeks or underlying conditions)."
+        },
+        {
+          "id": "q31-4-2",
+          "stem": "Which treatment is recommended in bronchiolitis?",
+          "options": [
+            "Nebulised salbutamol",
+            "Nebulised hypertonic saline in ED",
+            "Oral prednisolone",
+            "Supportive care with oxygen and feeding support",
+            "Routine amoxicillin"
+          ],
+          "answerIndex": 3,
+          "explanation": "Supportive care only; drugs listed are not recommended."
+        },
+        {
+          "id": "q31-4-3",
+          "stem": "A 2-year-old (12 kg) with croup has stridor at rest and moderate recession. Best immediate treatment:",
+          "options": [
+            "Salbutamol neb",
+            "Dexamethasone plus nebulised adrenaline 5 mL of 1 mg/mL",
+            "Antibiotics",
+            "Immediate intubation",
+            "Examine throat with a tongue depressor"
+          ],
+          "answerIndex": 1,
+          "explanation": "Moderate–severe croup: steroid plus nebulised adrenaline 0.5 mL/kg (max 5 mL)."
+        },
+        {
+          "id": "q31-4-4",
+          "stem": "After nebulised adrenaline for croup, minimum observation before discharge is:",
+          "options": [
+            "15 min",
+            "30 min",
+            "2–4 h",
+            "24 h",
+            "No observation needed"
+          ],
+          "answerIndex": 2,
+          "explanation": "The effect wanes by ~2 h; observe 2–4 h."
+        },
+        {
+          "id": "q31-4-5",
+          "stem": "An unimmunised 5-year-old has stridor, bull neck and a grey adherent membrane. The diagnosis to treat urgently is:",
+          "options": [
+            "Viral croup",
+            "Diphtheria",
+            "Bronchiolitis",
+            "Asthma",
+            "Laryngomalacia"
+          ],
+          "answerIndex": 1,
+          "explanation": "Diphtheria: isolate, antitoxin, antibiotics, ECG monitoring for myocarditis."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Bjornson 2004 return-visit figures (7.3% vs 15.3%) and PARIS ICU admission figures",
+          "reason": "Quoted from published abstracts; confirm against the original papers."
+        }
+      ]
+    },
+    {
+      "id": "paediatric-dka",
+      "title": "Paediatric diabetic ketoacidosis",
+      "summary": "ISPAD 2022-based management of DKA in children and adolescents: severity, cautious fluid deficit replacement over 24–48 h, insulin 0.05–0.1 unit/kg/h without bolus, potassium rules, the two-bag dextrose approach and recognising and treating cerebral oedema.",
+      "viewKey": "topic:paediatric-emergencies-essentials/paediatric-dka",
+      "uiHints": {
+        "icon": "droplet",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "DKA results from absolute or relative insulin deficiency with counter-regulatory hormone excess, producing hyperglycaemia, osmotic diuresis, ketoacidosis and total-body depletion of water, sodium, potassium and phosphate. It is the leading cause of death in children with type 1 diabetes, mostly from cerebral oedema.",
+          "refs": [
+            "ispad-dka-2022"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "0",
+            "title": "Confirm and grade",
+            "detail": "DKA = glucose >11 mmol/L (>200 mg/dL) + venous pH <7.3 or HCO₃⁻ <18 mmol/L + ketonaemia (β-hydroxybutyrate ≥3 mmol/L) or moderate/large ketonuria. Mild: pH <7.3 or HCO₃⁻ <18; moderate: pH <7.2 or HCO₃⁻ <10; severe: pH <7.1 or HCO₃⁻ <5. Weigh the child.",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0–30 min",
+            "title": "Resuscitate only if shocked",
+            "detail": "Shock (weak pulses, hypotension, CRT >3 s): 0.9% saline 20 mL/kg rapidly, repeat as needed. No shock but dehydrated: 10–20 mL/kg 0.9% saline over 20–30 min.",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "0–48 h",
+            "title": "Deficit + maintenance",
+            "detail": "Estimate deficit (moderate DKA ~5–7%, severe ~7–10% of body weight) and replace evenly over 24–48 h plus maintenance, using 0.45–0.9% saline or a balanced crystalloid with potassium. Avoid exceeding ~1.5–2 × maintenance in most children.",
+            "refs": [
+              "ispad-dka-2022",
+              "pecarn-fluid-2018"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "+1 h",
+            "title": "Insulin infusion — no bolus",
+            "detail": "Start regular insulin 0.05–0.1 unit/kg/h at least 1 h after starting fluids (0.05 unit/kg/h in young children or mild DKA is reasonable). Do not reduce below 0.05 unit/kg/h until acidosis resolves; add dextrose instead.",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "With insulin",
+            "title": "Potassium",
+            "detail": "Hypokalaemic: add potassium from the start (with initial volume expansion), before insulin. Normal K⁺: add potassium when insulin starts. Hyperkalaemic: wait until urine output is documented. Usually 40 mmol/L (20 mmol/L if rate >10 mL/kg/h); keep ≤0.5 mmol/kg/h.",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Glucose ≤14–17 mmol/L",
+            "title": "Add dextrose",
+            "detail": "When glucose falls to ~14–17 mmol/L (250–300 mg/dL) or drops faster than 5 mmol/L/h: add 5% dextrose (up to 10–12.5%) to keep glucose 8–12 mmol/L (145–220 mg/dL) while insulin clears ketones.",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Hourly",
+            "title": "Monitor",
+            "detail": "Hourly glucose, vitals, neurological observations (headache, behaviour, GCS) and fluid balance; venous gas, electrolytes and ketones every 2–4 h. Corrected sodium should rise as glucose falls — a falling corrected Na⁺ is a warning sign.",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          },
+          {
+            "n": 8,
+            "time": "Resolution",
+            "title": "Switch to subcutaneous insulin",
+            "detail": "Resolved when pH >7.30, HCO₃⁻ >18 mmol/L and β-hydroxybutyrate <1 mmol/L, tolerating oral intake. Give SC rapid-acting insulin 15–30 min (regular 1–2 h) before stopping the infusion; start basal insulin.",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "insulin-regular-paeds",
+            "role": "DKA insulin infusion (no bolus)",
+            "route": "IV infusion",
+            "dose": "0.05–0.1 unit/kg/h, from ≥1 h after starting fluids",
+            "doseRange": {
+              "unit": "units/kg/h",
+              "min": 0.05,
+              "max": 0.1
+            },
+            "dilution": "50 units regular insulin in 50 mL 0.9% saline = 1 unit/mL (prime the line)",
+            "workedExample": "20 kg at 0.1 unit/kg/h = 2 units/h = 2 mL/h; at 0.05 unit/kg/h = 1 mL/h.",
+            "calculatorId": "infusion-rate-weight-hour",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          },
+          {
+            "drugId": "crystalloid-bolus-paeds",
+            "role": "Initial fluid (dehydrated, not shocked)",
+            "route": "IV",
+            "dose": "10–20 mL/kg 0.9% saline over 20–30 min (20 mL/kg rapidly if shocked)",
+            "workedExample": "20 kg: 200–400 mL over 20–30 min.",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          },
+          {
+            "drugId": "potassium-chloride-paeds",
+            "role": "Potassium replacement",
+            "route": "IV in fluids",
+            "dose": "40 mmol/L in replacement fluid (20 mmol/L if fluid >10 mL/kg/h); ≤0.5 mmol/kg/h",
+            "workedExample": "20 kg at 90 mL/h with 40 mmol/L = 3.6 mmol/h (0.18 mmol/kg/h).",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          },
+          {
+            "drugId": "mannitol-paeds",
+            "role": "Cerebral oedema",
+            "route": "IV",
+            "dose": "0.5–1 g/kg over 10–15 min; repeat after 30 min if no response",
+            "workedExample": "20 kg: 10–20 g = 50–100 mL of 20% mannitol.",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          },
+          {
+            "drugId": "hypertonic-saline-paeds",
+            "role": "Cerebral oedema (alternative)",
+            "route": "IV",
+            "dose": "2.5–5 mL/kg of 3% NaCl over 10–15 min",
+            "workedExample": "20 kg: 50–100 mL of 3% saline.",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "dka-fluid-example",
+            "title": "Worked fluid example: 20 kg child, moderate DKA (~7% deficit), not shocked",
+            "columns": [
+              "Component",
+              "Calculation",
+              "Result"
+            ],
+            "rows": [
+              [
+                "Deficit",
+                "20 kg × 7% = 1.4 kg",
+                "1,400 mL"
+              ],
+              [
+                "Maintenance (Holliday–Segar)",
+                "40 + 20 = 60 mL/h × 48 h",
+                "2,880 mL"
+              ],
+              [
+                "Total over 48 h",
+                "1,400 + 2,880",
+                "4,280 mL"
+              ],
+              [
+                "Hourly rate",
+                "4,280 ÷ 48",
+                "≈ 89 mL/h"
+              ]
+            ],
+            "caption": "Many units subtract an initial 10–20 mL/kg bolus from the total and replace over 24–48 h; follow the local protocol. Recalculate if weight or clinical status changes.",
+            "refs": [
+              "ispad-dka-2022",
+              "pecarn-fluid-2018"
+            ]
+          },
+          {
+            "id": "dka-k-rules",
+            "title": "When to start potassium",
+            "columns": [
+              "Initial K⁺",
+              "Action"
+            ],
+            "rows": [
+              [
+                "<3.5 mmol/L (hypokalaemia)",
+                "Add K⁺ to initial expansion fluid; delay insulin if <3 mmol/L until K⁺ given"
+              ],
+              [
+                "3.5–5.5 mmol/L",
+                "Add 40 mmol/L when insulin starts"
+              ],
+              [
+                ">5.5 mmol/L",
+                "Wait until urine output documented and K⁺ falling"
+              ]
+            ],
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Headache, vomiting, irritability, bradycardia with rising BP, falling GCS, incontinence or sudden drop in SpO₂ = cerebral oedema until proven otherwise: treat immediately, do not wait for CT.",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          },
+          {
+            "text": "Severe DKA, age <5 years, new-onset diabetes, high urea, low PCO₂ and bicarbonate use are risk factors for cerebral oedema.",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          },
+          {
+            "text": "K⁺ <3 mmol/L: delay insulin and give potassium first (cardiac monitor).",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          },
+          {
+            "text": "Arrhythmias from hypo/hyperkalaemia: put every moderate/severe DKA child on ECG monitoring.",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Giving an insulin bolus or starting insulin with the first bolus: increases the risk of rapid osmolar shifts and hypokalaemia; wait at least 1 h, no bolus.",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          },
+          {
+            "text": "Turning insulin off when glucose normalises: ketoacidosis persists — add dextrose and keep insulin at ≥0.05 unit/kg/h.",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          },
+          {
+            "text": "Routine sodium bicarbonate: associated with cerebral oedema; reserve for pH <6.9 with poor cardiac contractility or life-threatening hyperkalaemia.",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Two-bag system (one bag with dextrose, one without, same electrolytes) lets nurses change dextrose concentration by adjusting two rates without new bags.",
+            "refs": [
+              "ispad-dka-2022"
+            ]
+          },
+          {
+            "text": "PECARN FLUID (2018): in 1,389 episodes, neither faster vs slower rehydration nor 0.9% vs 0.45% saline changed rates of clinically apparent brain injury (~0.9%) — the focus is careful monitoring rather than fluid restriction.",
+            "refs": [
+              "pecarn-fluid-2018"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Paediatric DKA — first hours",
+        "description": "ISPAD 2022-based pathway.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Child: glucose >11 mmol/L, pH <7.3 or HCO₃⁻ <18, ketones ≥3"
+          },
+          {
+            "id": "shock",
+            "type": "decision",
+            "text": "Shocked?"
+          },
+          {
+            "id": "bolus20",
+            "type": "action",
+            "text": "0.9% saline 20 mL/kg rapidly; repeat if still shocked",
+            "severity": "critical"
+          },
+          {
+            "id": "bolus10",
+            "type": "action",
+            "text": "0.9% saline 10–20 mL/kg over 20–30 min"
+          },
+          {
+            "id": "plan",
+            "type": "action",
+            "text": "Deficit (5–10%) + maintenance over 24–48 h; K⁺ per rules"
+          },
+          {
+            "id": "k",
+            "type": "decision",
+            "text": "K⁺ <3 mmol/L?"
+          },
+          {
+            "id": "kfirst",
+            "type": "action",
+            "text": "Give potassium first, cardiac monitor; delay insulin",
+            "severity": "high"
+          },
+          {
+            "id": "ins",
+            "type": "action",
+            "text": "After ≥1 h fluids: insulin 0.05–0.1 unit/kg/h, no bolus"
+          },
+          {
+            "id": "neuro",
+            "type": "decision",
+            "text": "Signs of cerebral oedema?"
+          },
+          {
+            "id": "ce",
+            "type": "end",
+            "text": "Mannitol 0.5–1 g/kg or 3% saline 2.5–5 mL/kg; head up; reduce fluids by one-third; PICU",
+            "severity": "critical"
+          },
+          {
+            "id": "glu",
+            "type": "action",
+            "text": "Glucose ≤14–17 mmol/L: add 5–10% dextrose; keep insulin running"
+          },
+          {
+            "id": "resolved",
+            "type": "decision",
+            "text": "pH >7.30, HCO₃⁻ >18, ketones <1, eating?"
+          },
+          {
+            "id": "sc",
+            "type": "end",
+            "text": "SC insulin 15–30 min before stopping infusion; diabetes education"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "shock"
+          },
+          {
+            "from": "shock",
+            "to": "bolus20",
+            "label": "Yes"
+          },
+          {
+            "from": "shock",
+            "to": "bolus10",
+            "label": "No"
+          },
+          {
+            "from": "bolus20",
+            "to": "plan"
+          },
+          {
+            "from": "bolus10",
+            "to": "plan"
+          },
+          {
+            "from": "plan",
+            "to": "k"
+          },
+          {
+            "from": "k",
+            "to": "kfirst",
+            "label": "Yes"
+          },
+          {
+            "from": "k",
+            "to": "ins",
+            "label": "No"
+          },
+          {
+            "from": "kfirst",
+            "to": "ins",
+            "label": "K⁺ ≥3"
+          },
+          {
+            "from": "ins",
+            "to": "neuro"
+          },
+          {
+            "from": "neuro",
+            "to": "ce",
+            "label": "Yes"
+          },
+          {
+            "from": "neuro",
+            "to": "glu",
+            "label": "No"
+          },
+          {
+            "from": "glu",
+            "to": "resolved"
+          },
+          {
+            "from": "resolved",
+            "to": "sc",
+            "label": "Yes"
+          },
+          {
+            "from": "resolved",
+            "to": "neuro",
+            "label": "No — continue, reassess hourly"
+          }
+        ],
+        "refs": [
+          "ispad-dka-2022"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Insulin deficiency and glucagon excess drive hepatic gluconeogenesis and lipolysis → ketone production (β-hydroxybutyrate > acetoacetate) and high anion gap acidosis. Osmotic diuresis depletes water, sodium, potassium and phosphate; serum K⁺ may be normal or high despite total-body depletion because of acidosis and insulin lack. Cerebral oedema is now thought to relate more to cerebral hypoperfusion and neuroinflammation during the illness than simply to fluid rate.",
+        "evidence": "- **ISPAD 2022 consensus**: biochemical definition and severity grading; fluid deficit replacement over 24–48 h; insulin 0.05–0.1 unit/kg/h from ≥1 h after fluids; potassium timing by initial K⁺; avoid bicarbonate except in specific situations; mannitol or hypertonic saline for cerebral oedema.\n- **PECARN FLUID (Kuppermann, NEJM 2018):** 2×2 factorial RCT (faster vs slower; 0.9% vs 0.45% saline); no significant difference in GCS decline (<14) or clinically apparent brain injury; short-term memory similar. Supports moderately liberal, isotonic-to-half-normal fluids with monitoring.\n- **Cerebral oedema** occurs in roughly 0.5–1% of paediatric DKA episodes with substantial mortality; subclinical oedema is common on imaging.",
+        "controversies": "- Insulin 0.05 vs 0.1 unit/kg/h (similar efficacy in small trials; 0.05 suits young children).\n- 0.9% saline vs balanced crystalloids (hyperchloraemic acidosis can delay apparent resolution of HCO₃⁻).\n- Subtracting resuscitation boluses from total fluid.",
+        "indiaNotes": "- DKA is frequently the **first presentation** of type 1 diabetes in Indian children, often after misdiagnosis as gastroenteritis, pneumonia or acute abdomen; check glucose in every sick, vomiting, breathless child.\n- Blood ketone meters are not universal; urine ketones and anion gap are acceptable surrogates, but urine ketones lag behind clearance.\n- Many wards lack infusion pumps — paediatric DKA should be managed in an HDU/PICU with syringe drivers; if transfer is needed, start fluids and insulin per protocol before transfer and send the flow chart.\n- Insulin is supplied as 40 units/mL (vials) and 100 units/mL (pens/vials) in India — confirm the strength before drawing up to avoid 2.5-fold errors."
+      },
+      "drugIds": [
+        "insulin-regular-paeds",
+        "crystalloid-bolus-paeds",
+        "potassium-chloride-paeds",
+        "mannitol-paeds",
+        "hypertonic-saline-paeds",
+        "sodium-bicarbonate-paeds"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-hour",
+        "corrected-sodium-glucose",
+        "anion-gap",
+        "serum-osmolality"
+      ],
+      "references": [
+        "ispad-dka-2022",
+        "pecarn-fluid-2018"
+      ],
+      "quiz": [
+        {
+          "id": "q31-5-1",
+          "stem": "A 9-year-old (30 kg) with DKA, not shocked, pH 7.08, K⁺ 4.2. When should insulin start?",
+          "options": [
+            "Immediately with a 0.1 unit/kg bolus",
+            "At least 1 h after starting fluids, 0.05–0.1 unit/kg/h without bolus",
+            "Only after pH >7.2",
+            "After 6 h of fluids",
+            "Subcutaneously only"
+          ],
+          "answerIndex": 1,
+          "explanation": "ISPAD 2022: infusion from ≥1 h after fluids, no bolus."
+        },
+        {
+          "id": "q31-5-2",
+          "stem": "Glucose has fallen to 13 mmol/L but pH is 7.18. Best action:",
+          "options": [
+            "Stop insulin",
+            "Halve insulin to 0.025 unit/kg/h",
+            "Add dextrose to fluids and continue insulin ≥0.05 unit/kg/h",
+            "Give sodium bicarbonate",
+            "Give a further fluid bolus"
+          ],
+          "answerIndex": 2,
+          "explanation": "Keep insulin running to clear ketones; add dextrose."
+        },
+        {
+          "id": "q31-5-3",
+          "stem": "Initial K⁺ is 2.8 mmol/L. The correct sequence is:",
+          "options": [
+            "Insulin first then potassium",
+            "Potassium replacement first with cardiac monitoring, delay insulin until K⁺ ≥3",
+            "No potassium until urine output",
+            "Bicarbonate first",
+            "Oral potassium only"
+          ],
+          "answerIndex": 1,
+          "explanation": "Severe hypokalaemia: replace K⁺ before insulin."
+        },
+        {
+          "id": "q31-5-4",
+          "stem": "Six hours into treatment a child complains of headache and becomes drowsy with HR 58 and rising BP. Immediate treatment:",
+          "options": [
+            "CT head first",
+            "Mannitol 0.5–1 g/kg or 3% saline 2.5–5 mL/kg, head up, reduce fluid rate",
+            "Increase fluid rate",
+            "Give insulin bolus",
+            "Lumbar puncture"
+          ],
+          "answerIndex": 1,
+          "explanation": "Treat suspected cerebral oedema immediately before imaging."
+        },
+        {
+          "id": "q31-5-5",
+          "stem": "PECARN FLUID showed that:",
+          "options": [
+            "Fast fluids cause more cerebral oedema",
+            "0.45% saline is dangerous",
+            "Neither fluid rate nor sodium content significantly changed clinically apparent brain injury",
+            "Albumin is superior",
+            "Insulin bolus is safe"
+          ],
+          "answerIndex": 2,
+          "explanation": "No significant differences across the 2×2 design."
+        }
+      ]
+    },
+    {
+      "id": "safe-transfer-picu",
+      "title": "Safe transfer of a sick child to PICU",
+      "summary": "Stabilise-then-transfer: deciding when and how to move a critically ill child within or between hospitals, communication with the receiving PICU, team, equipment and oxygen planning, in-transit monitoring and handover — adapted to Indian ambulance realities.",
+      "viewKey": "topic:paediatric-emergencies-essentials/safe-transfer-picu",
+      "uiHints": {
+        "icon": "ambulance",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Transfer is a period of high risk: intrahospital (to CT, theatre, PICU) and interhospital transfers both carry adverse-event rates that rise with severity of illness and are reduced by checklists, trained teams and standardised equipment.",
+          "refs": [
+            "isccm-iht-2025",
+            "warren-transport-2004"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "Decide",
+            "title": "Is transfer needed and is the child safe to move?",
+            "detail": "Transfer when the child needs care you cannot provide (ventilation, inotropes, dialysis, neurosurgery, ECMO). Risks of the journey must be lower than the risks of staying. Discuss with the receiving PICU consultant early — they can advise on stabilisation before a bed is free.",
+            "refs": [
+              "isccm-iht-2025",
+              "warren-transport-2004"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Stabilise",
+            "title": "A — airway",
+            "detail": "If the airway may deteriorate en route (GCS ≤8, worsening work of breathing, refractory shock, status epilepticus, severe croup), intubate before leaving. Confirm tube position on X-ray, record size and depth at lips, secure well, ETCO₂ attached.",
+            "refs": [
+              "warren-transport-2004",
+              "pals-2025"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Stabilise",
+            "title": "B and C — breathing and circulation",
+            "detail": "Transfer ventilator or bag with PEEP valve; NG/OG tube on free drainage. Two secure IV/IO lines; vasoactive infusions running and stable on syringe drivers with spare syringes; resuscitation fluid ready.",
+            "refs": [
+              "warren-transport-2004"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Stabilise",
+            "title": "D, E — glucose, seizures, temperature",
+            "detail": "Check glucose before leaving and treat <3 mmol/L (54 mg/dL); control seizures; keep infants warm (cap, wraps, warmed ambulance) — hypothermia worsens acidosis and coagulopathy. Splint fractures; cervical immobilisation if trauma.",
+            "refs": [
+              "who-etat-2016",
+              "warren-transport-2004"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Communicate",
+            "title": "ISBAR call and documents",
+            "detail": "Doctor-to-doctor call (ISBAR): situation, background, assessment with latest vitals/gas, recommendation and ETA. Send notes, drug chart, fluid chart, imaging (on disk/phone), investigations, consent and referral letter. Explain to parents; one parent usually accompanies.",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Equip",
+            "title": "Team, equipment and drugs",
+            "detail": "Escort: a doctor skilled in paediatric airway and resuscitation plus a trained nurse for any ventilated or unstable child. Portable monitor (ECG, SpO₂, NIBP/arterial line, ETCO₂), suction, age-appropriate airway kit, defibrillator with paediatric pads, pre-calculated drug chart for that weight.",
+            "refs": [
+              "warren-transport-2004",
+              "isccm-iht-2025"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Equip",
+            "title": "Oxygen planning",
+            "detail": "Oxygen needed (L) = (minute ventilation or flow in L/min + ventilator driving gas) × journey minutes × 2 (safety). Check cylinder sizes and pressures before departure; carry at least 30 min reserve beyond the doubled estimate.",
+            "refs": [
+              "isccm-iht-2025",
+              "warren-transport-2004"
+            ]
+          },
+          {
+            "n": 8,
+            "time": "In transit",
+            "title": "Monitor and record",
+            "detail": "Continuous ECG, SpO₂, ETCO₂ if ventilated, BP at least every 5–15 min; record observations and interventions. Stop the vehicle for procedures if needed. Pre-defined plan for deterioration (DOPE, arrest dose chart).",
+            "refs": [
+              "warren-transport-2004"
+            ]
+          },
+          {
+            "n": 9,
+            "time": "Arrival",
+            "title": "Structured handover",
+            "detail": "Hands-off, eyes-on handover at the bedside: patient, events, current therapy, outstanding issues; then transfer monitors and infusions one by one.",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "adrenaline-paeds",
+            "role": "Arrest during transfer",
+            "route": "IV/IO",
+            "dose": "0.01 mg/kg (0.1 mL/kg of 0.1 mg/mL), max 1 mg",
+            "workedExample": "Pre-draw for 15 kg: 0.15 mg = 1.5 mL of 0.1 mg/mL, labelled.",
+            "refs": [
+              "pals-2025"
+            ]
+          },
+          {
+            "drugId": "dextrose-10-paeds",
+            "role": "Hypoglycaemia before/during transfer",
+            "route": "IV/IO",
+            "dose": "2–5 mL/kg of 10% dextrose",
+            "workedExample": "15 kg: 30–75 mL D10.",
+            "refs": [
+              "who-etat-2016"
+            ]
+          },
+          {
+            "drugId": "fentanyl-paeds",
+            "role": "Sedation/analgesia for ventilated transfer",
+            "route": "IV infusion",
+            "dose": "1–4 mcg/kg/h (boluses 1 mcg/kg)",
+            "doseRange": {
+              "unit": "mcg/kg/h",
+              "min": 1,
+              "max": 4
+            },
+            "calculatorId": "infusion-rate-weight-hour",
+            "refs": [
+              "pals-2020"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "picu-transfer-checklist",
+            "title": "Pre-departure checklist (say it aloud)",
+            "columns": [
+              "Domain",
+              "Check"
+            ],
+            "rows": [
+              [
+                "Airway",
+                "ETT size and depth recorded, secured, CXR checked, ETCO₂ waveform; spare tube one size smaller, bag-mask, suction"
+              ],
+              [
+                "Breathing",
+                "Transport ventilator settings and alarms checked; SpO₂ stable on transport settings for 10–15 min before leaving"
+              ],
+              [
+                "Circulation",
+                "Two working IV/IO lines; infusions labelled, on fully charged syringe drivers, spare syringes; fluid bolus drawn up"
+              ],
+              [
+                "Disability",
+                "Glucose checked; seizures controlled; pupils recorded; analgesia/sedation adequate"
+              ],
+              [
+                "Exposure",
+                "Temperature recorded; warming for infants; fractures splinted"
+              ],
+              [
+                "Equipment",
+                "Monitor and defibrillator charged; oxygen calculated ×2 plus reserve; suction; paediatric drug chart for weight"
+              ],
+              [
+                "People",
+                "Doctor with paediatric airway skills + trained nurse; parent informed and accompanying if possible"
+              ],
+              [
+                "Paperwork",
+                "Referral letter, notes, imaging, consent, ISBAR call made, receiving team and bed confirmed, ETA given"
+              ]
+            ],
+            "refs": [
+              "isccm-iht-2025",
+              "warren-transport-2004"
+            ]
+          },
+          {
+            "id": "o2-transfer-example",
+            "title": "Oxygen planning example",
+            "columns": [
+              "Item",
+              "Value"
+            ],
+            "rows": [
+              [
+                "Child on HFNC 20 L/min (FiO₂ 0.6) or ventilator",
+                "Assume ~20 L/min total gas use"
+              ],
+              [
+                "Journey time",
+                "60 min (estimate)"
+              ],
+              [
+                "Required",
+                "20 × 60 = 1,200 L; × 2 safety = 2,400 L"
+              ],
+              [
+                "Cylinder content",
+                "Content (L) ≈ water capacity (L) × pressure (bar); e.g. 10 L water capacity at 150 bar ≈ 1,500 L"
+              ],
+              [
+                "Decision",
+                "Carry ≥2 such cylinders plus 30 min reserve, or use a larger cylinder"
+              ]
+            ],
+            "caption": "Indian cylinder sizes and fill pressures vary — read the label and the gauge (see module 40 oxygen planning).",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Never transfer an unstable child to 'buy time' without stabilisation: transport deaths are usually from airway loss, hypoxia, hypoglycaemia, hypothermia or unrecognised shock.",
+            "refs": [
+              "warren-transport-2004"
+            ]
+          },
+          {
+            "text": "A child with a deteriorating airway (severe croup, epiglottitis, burns) should be intubated by an expert before transfer — not in a moving ambulance.",
+            "refs": [
+              "warren-transport-2004"
+            ]
+          },
+          {
+            "text": "Running out of oxygen or syringe-driver battery mid-journey is a preventable death: check and double the estimate.",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Leaving before the child has been stable on the transport ventilator for 10–15 minutes.",
+            "refs": [
+              "warren-transport-2004"
+            ]
+          },
+          {
+            "text": "Infusions in gravity drips in the ambulance: rates become unpredictable; use syringe drivers.",
+            "refs": [
+              "warren-transport-2004"
+            ]
+          },
+          {
+            "text": "No pre-calculated drug chart: dose-calculation errors under stress in a moving vehicle.",
+            "refs": [
+              "pals-2025"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "'Scoop and run' is right only for time-critical surgical conditions (e.g. extradural haematoma) once airway and breathing are secured — otherwise 'stay and stabilise'.",
+            "refs": [
+              "warren-transport-2004"
+            ]
+          },
+          {
+            "text": "A video call or photo of the monitor and X-ray to the receiving PICU consultant often improves pre-transfer stabilisation.",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Transferring a critically ill child",
+        "description": "Stabilise, communicate, equip, monitor, hand over.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Sick child needs PICU/specialist care not available here"
+          },
+          {
+            "id": "call",
+            "type": "action",
+            "text": "Call receiving PICU consultant (ISBAR); agree plan and bed"
+          },
+          {
+            "id": "airway",
+            "type": "decision",
+            "text": "Airway at risk during journey?"
+          },
+          {
+            "id": "intub",
+            "type": "action",
+            "text": "Intubate before transfer; CXR; secure tube; ETCO₂",
+            "severity": "high"
+          },
+          {
+            "id": "stable",
+            "type": "decision",
+            "text": "Stable on transport equipment for 10–15 min (SpO₂, BP, glucose, temperature)?"
+          },
+          {
+            "id": "stab",
+            "type": "action",
+            "text": "Further stabilisation: fluids/vasoactives, ventilation, glucose, warming"
+          },
+          {
+            "id": "pack",
+            "type": "action",
+            "text": "Checklist: team, equipment, O₂ ×2 + reserve, drugs, documents, parent"
+          },
+          {
+            "id": "go",
+            "type": "action",
+            "text": "Depart; continuous monitoring and records"
+          },
+          {
+            "id": "det",
+            "type": "decision",
+            "text": "Deterioration en route?"
+          },
+          {
+            "id": "dope",
+            "type": "action",
+            "text": "Stop vehicle; ABC, DOPE, treat; inform receiving unit",
+            "severity": "critical"
+          },
+          {
+            "id": "arrive",
+            "type": "end",
+            "text": "Bedside ISBAR handover; transfer monitoring and infusions"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "call"
+          },
+          {
+            "from": "call",
+            "to": "airway"
+          },
+          {
+            "from": "airway",
+            "to": "intub",
+            "label": "Yes"
+          },
+          {
+            "from": "airway",
+            "to": "stable",
+            "label": "No"
+          },
+          {
+            "from": "intub",
+            "to": "stable"
+          },
+          {
+            "from": "stable",
+            "to": "pack",
+            "label": "Yes"
+          },
+          {
+            "from": "stable",
+            "to": "stab",
+            "label": "No"
+          },
+          {
+            "from": "stab",
+            "to": "stable",
+            "label": "Reassess"
+          },
+          {
+            "from": "pack",
+            "to": "go"
+          },
+          {
+            "from": "go",
+            "to": "det"
+          },
+          {
+            "from": "det",
+            "to": "dope",
+            "label": "Yes"
+          },
+          {
+            "from": "det",
+            "to": "arrive",
+            "label": "No"
+          },
+          {
+            "from": "dope",
+            "to": "go",
+            "label": "Stabilised — continue"
+          }
+        ],
+        "refs": [
+          "isccm-iht-2025",
+          "warren-transport-2004"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Transport adds vibration, acceleration, noise, cramped access, limited oxygen and battery supplies and cold — all of which can destabilise a child with little physiological reserve. Infants lose heat quickly (large surface area-to-weight ratio), and movement can dislodge short endotracheal tubes.",
+        "evidence": "- **ACCM/SCCM guidelines (Warren 2004)** for inter- and intrahospital transport: pre-transport communication, accompanying personnel (minimum two, one a critical care nurse or physician for unstable patients), minimum equipment and monitoring; mostly consensus-based.\n- **ISCCM position statement on intrahospital transport (Zirpe 2025)**: risk stratification, checklists, trained teams, equipment standards and documentation for Indian ICUs.\n- Adverse events during transport occur in a substantial minority of critically ill transfers; specialist paediatric retrieval teams are associated with fewer critical incidents than non-specialist teams in observational studies.",
+        "controversies": "- Specialist retrieval team vs referring team escort (resource-dependent; specialist teams are rarely available in India outside a few metros).\n- Timing: delaying transfer to stabilise vs urgent transfer for definitive care.",
+        "indiaNotes": "- Most public '108/102' ambulances in India are basic life support; advanced life support ambulances with ventilators and paediatric equipment are limited and often private — confirm capabilities before departure.\n- Long distances and road conditions make journeys longer than expected: plan oxygen, batteries and drugs for at least double the estimated time.\n- Families often arrange transport themselves; insist on a trained escort for unstable children and document the risks discussed.\n- Keep a printed paediatric transfer checklist and weight-based dose chart in every emergency department and ICU."
+      },
+      "drugIds": [
+        "adrenaline-paeds",
+        "dextrose-10-paeds",
+        "fentanyl-paeds"
+      ],
+      "calculatorIds": [
+        "o2-cylinder-duration",
+        "infusion-rate-weight-hour"
+      ],
+      "references": [
+        "isccm-iht-2025",
+        "warren-transport-2004",
+        "pals-2025",
+        "pals-2020",
+        "who-etat-2016"
+      ],
+      "quiz": [
+        {
+          "id": "q31-6-1",
+          "stem": "Before transferring a 3-year-old with severe croup and rising work of breathing for 2 hours by road, the safest plan is:",
+          "options": [
+            "Transfer immediately with nebulised adrenaline only",
+            "Expert-controlled intubation before departure, then transfer with a trained team",
+            "Sedate with midazolam to calm the child",
+            "Send with parents in a private car",
+            "Wait for spontaneous improvement"
+          ],
+          "answerIndex": 1,
+          "explanation": "Secure an at-risk airway before transfer, not in a moving vehicle."
+        },
+        {
+          "id": "q31-6-2",
+          "stem": "A ventilated child uses ~10 L/min of oxygen. Journey 90 min. Minimum oxygen to carry (with ×2 safety factor) is about:",
+          "options": [
+            "900 L",
+            "1,200 L",
+            "1,800 L",
+            "450 L",
+            "3,600 L"
+          ],
+          "answerIndex": 2,
+          "explanation": "10 × 90 = 900 L × 2 = 1,800 L, plus a reserve."
+        },
+        {
+          "id": "q31-6-3",
+          "stem": "Which is NOT part of the pre-departure checklist?",
+          "options": [
+            "Glucose check",
+            "ETT depth recorded",
+            "Infusions on charged syringe drivers",
+            "Removing ETCO₂ to save battery",
+            "Temperature/warming"
+          ],
+          "answerIndex": 3,
+          "explanation": "Continuous ETCO₂ is essential in ventilated transfers."
+        },
+        {
+          "id": "q31-6-4",
+          "stem": "Before leaving, a newly ventilated child should be stable on the transport ventilator for about:",
+          "options": [
+            "1 min",
+            "10–15 min",
+            "2 h",
+            "No need",
+            "24 h"
+          ],
+          "answerIndex": 1,
+          "explanation": "Allows detection of instability before departure."
+        },
+        {
+          "id": "q31-6-5",
+          "stem": "Handover on arrival at PICU should be:",
+          "options": [
+            "Given while moving the child onto the bed",
+            "A structured ISBAR handover with hands-off, eyes-on, then transfer of monitoring",
+            "Written only",
+            "Given to the parents",
+            "Delayed until the next ward round"
+          ],
+          "answerIndex": 1,
+          "explanation": "Structured handover reduces omissions."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Statement that specialist paediatric retrieval teams have fewer critical incidents",
+          "reason": "Supported by observational UK/US literature not cited in this module; add a reference or remove."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "adrenaline-paeds",
+      "name": "Adrenaline (epinephrine) — paediatric",
+      "class": "Catecholamine (alpha + beta agonist)",
+      "indications": "Cardiac arrest; anaphylaxis; fluid-refractory (cold) septic shock; moderate–severe croup (nebulised); symptomatic bradycardia",
+      "adultDose": "Paediatric doses: arrest 0.01 mg/kg IV/IO (= 0.1 mL/kg of 0.1 mg/mL), max 1 mg, every 3–5 min. Anaphylaxis 0.01 mg/kg IM of 1 mg/mL (max 0.5 mg). Infusion 0.05–1 mcg/kg/min. Croup: nebulised 0.5 mL/kg of 1 mg/mL (max 5 mL).",
+      "preparationIndia": "1 mg/mL (1:1000) 1 mL ampoules. Make 0.1 mg/mL by diluting 1 mL in 9 mL NS. Infusion e.g. 0.3 mg/kg in 50 mL: 1 mL/h = 0.1 mcg/kg/min.",
+      "cautions": "Confusing 1 mg/mL with 0.1 mg/mL causes 10-fold errors — label syringes. Extravasation risk if given peripherally undiluted.",
+      "monitoring": "ECG, BP, perfusion, lactate, glucose.",
+      "verify": "Upper infusion limit varies by unit; confirm local PICU protocol.",
+      "refs": [
+        "pals-2025",
+        "pals-2020",
+        "ssc-peds-2020"
+      ]
+    },
+    {
+      "id": "amiodarone-paeds",
+      "name": "Amiodarone — paediatric",
+      "class": "Class III antiarrhythmic",
+      "indications": "Shock-refractory VF/pulseless VT; perfusing wide-complex or refractory SVT (with expert advice)",
+      "adultDose": "Arrest: 5 mg/kg IV/IO bolus (max 300 mg), may repeat up to a total of 15 mg/kg. Perfusing tachycardia: 5 mg/kg over 20–60 min.",
+      "preparationIndia": "150 mg/3 mL ampoule; dilute in D5W.",
+      "cautions": "Hypotension, bradycardia, QT prolongation; avoid combining with other QT-prolonging drugs without expert input.",
+      "monitoring": "ECG, BP.",
+      "refs": [
+        "pals-2025",
+        "pals-2020"
+      ]
+    },
+    {
+      "id": "lidocaine-paeds",
+      "name": "Lidocaine (lignocaine) — paediatric",
+      "class": "Class Ib antiarrhythmic",
+      "indications": "Shock-refractory VF/pVT (alternative to amiodarone)",
+      "adultDose": "1 mg/kg IV/IO bolus; infusion 20–50 mcg/kg/min.",
+      "preparationIndia": "2% (20 mg/mL) preservative-free for IV use.",
+      "cautions": "Seizures and myocardial depression with toxicity.",
+      "monitoring": "ECG, neurological status.",
+      "refs": [
+        "pals-2025",
+        "pals-2020"
+      ]
+    },
+    {
+      "id": "adenosine-paeds",
+      "name": "Adenosine — paediatric",
+      "class": "Purinergic AV-nodal blocker",
+      "indications": "SVT with a pulse after vagal manoeuvres",
+      "adultDose": "0.1 mg/kg rapid IV push (max 6 mg) with immediate saline flush; second dose 0.2 mg/kg (max 12 mg).",
+      "preparationIndia": "3 mg/mL, 2 mL vials.",
+      "cautions": "Give through a large proximal vein with a two-syringe/three-way-tap flush; transient asystole; bronchospasm in asthma.",
+      "monitoring": "Continuous ECG recording during the dose.",
+      "refs": [
+        "pals-2025",
+        "pals-2020"
+      ]
+    },
+    {
+      "id": "atropine-paeds",
+      "name": "Atropine — paediatric",
+      "class": "Antimuscarinic",
+      "indications": "Bradycardia from increased vagal tone or primary AV block; selected intubations at risk of bradycardia",
+      "adultDose": "0.02 mg/kg IV/IO (max single dose 0.5 mg); may repeat once.",
+      "preparationIndia": "0.6 mg/mL ampoules.",
+      "cautions": "Not a substitute for oxygenation/ventilation in hypoxic bradycardia (commonest cause in children).",
+      "refs": [
+        "pals-2020"
+      ]
+    },
+    {
+      "id": "dextrose-10-paeds",
+      "name": "Dextrose 10% — paediatric",
+      "class": "Carbohydrate",
+      "indications": "Hypoglycaemia in children (check glucose in every sick child)",
+      "adultDose": "2–5 mL/kg of 10% dextrose IV/IO (0.2–0.5 g/kg); recheck glucose in 15–30 min; then maintenance dextrose.",
+      "preparationIndia": "10% dextrose bags; to make from 25%: 2 parts 25% + 3 parts water/NS (approx. 10%).",
+      "cautions": "Avoid 25–50% dextrose peripherally in small children (vein injury); avoid hyperglycaemia.",
+      "refs": [
+        "who-etat-2016",
+        "pals-2020"
+      ]
+    },
+    {
+      "id": "calcium-paeds",
+      "name": "Calcium chloride / calcium gluconate — paediatric",
+      "class": "Electrolyte",
+      "indications": "Documented hypocalcaemia, hyperkalaemia, calcium-channel blocker toxicity (not routine in arrest)",
+      "adultDose": "Calcium chloride 10%: 20 mg/kg (0.2 mL/kg) IV/IO slowly (max 1 g). Calcium gluconate 10%: 60 mg/kg (0.6 mL/kg) IV/IO slowly (max 3 g).",
+      "preparationIndia": "Calcium gluconate 10% 10 mL ampoules are the usual Indian presentation; calcium chloride less widely stocked.",
+      "cautions": "Severe tissue injury if extravasated (especially chloride); not routine in cardiac arrest (2025 PALS).",
+      "refs": [
+        "pals-2020",
+        "pals-2025"
+      ]
+    },
+    {
+      "id": "sodium-bicarbonate-paeds",
+      "name": "Sodium bicarbonate — paediatric",
+      "class": "Alkalinising agent",
+      "indications": "Hyperkalaemia, sodium-channel blocker (TCA) toxicity; not routine in arrest",
+      "adultDose": "1 mEq/kg slow IV/IO (8.4% = 1 mEq/mL; dilute 1:1 in infants).",
+      "cautions": "Not recommended routinely in paediatric arrest; flush line before catecholamines (inactivation).",
+      "refs": [
+        "pals-2025"
+      ]
+    },
+    {
+      "id": "crystalloid-bolus-paeds",
+      "name": "Balanced crystalloid / 0.9% saline bolus — paediatric",
+      "class": "IV fluid",
+      "indications": "Septic shock and hypovolaemia",
+      "adultDose": "10–20 mL/kg over 5–20 min, reassess after each bolus; up to 40–60 mL/kg in the first hour where intensive care is available, stopping at signs of fluid overload (crackles, hepatomegaly, rising work of breathing). Balanced crystalloid (Ringer's lactate) suggested over 0.9% saline.",
+      "preparationIndia": "Ringer's lactate and 0.9% saline widely available; use 50 mL syringes 'push-pull' for small children.",
+      "cautions": "Without intensive care and without hypotension, SSC suggests no bolus (maintenance fluids instead). Severe acute malnutrition: use smaller, slower volumes (WHO).",
+      "monitoring": "HR, capillary refill, BP, liver span, crackles, urine output, lactate.",
+      "refs": [
+        "ssc-peds-2020",
+        "feast-2011"
+      ]
+    },
+    {
+      "id": "noradrenaline-paeds",
+      "name": "Noradrenaline (norepinephrine) — paediatric",
+      "class": "Alpha-1 > beta-1 agonist",
+      "indications": "Warm (vasodilated) septic shock after fluids",
+      "adultDose": "0.05–1 mcg/kg/min IV infusion, titrated to perfusion and age-appropriate MAP.",
+      "preparationIndia": "Common paediatric 'rule of 0.3': 0.3 mg/kg in 50 mL; 1 mL/h = 0.1 mcg/kg/min.",
+      "cautions": "May start through a good peripheral line in dilute form while central access is obtained (SSC).",
+      "verify": "Dose ceiling and peripheral concentration limits per local PICU protocol.",
+      "refs": [
+        "ssc-peds-2020"
+      ]
+    },
+    {
+      "id": "ceftriaxone-paeds",
+      "name": "Ceftriaxone — paediatric",
+      "class": "Third-generation cephalosporin",
+      "indications": "Empirical antibiotic for community-acquired sepsis/meningitis beyond the neonatal period",
+      "adultDose": "Sepsis: 50–80 mg/kg IV once daily (max 2 g). Meningitis: 100 mg/kg/day IV in 1–2 doses (max 4 g/day). Give within 1 h of recognising septic shock.",
+      "preparationIndia": "250 mg, 500 mg, 1 g vials.",
+      "cautions": "Avoid in neonates with hyperbilirubinaemia and with calcium-containing IV fluids in neonates.",
+      "verify": "Confirm local antibiogram (e.g. add vancomycin, cover for scrub typhus/dengue mimics where relevant).",
+      "refs": [
+        "ssc-peds-2020",
+        "who-pocketbook-2013"
+      ]
+    },
+    {
+      "id": "hydrocortisone-paeds",
+      "name": "Hydrocortisone — paediatric",
+      "class": "Glucocorticoid",
+      "indications": "Catecholamine-resistant septic shock with suspected adrenal insufficiency; known adrenal insufficiency/chronic steroid use",
+      "adultDose": "Commonly 2 mg/kg IV bolus (max 100 mg), then 1 mg/kg 6-hourly (max 50 mg/dose) or 50–100 mg/m²/day.",
+      "preparationIndia": "100 mg vials.",
+      "cautions": "SSC suggests against routine use when fluids and vasopressors restore stability.",
+      "verify": "SSC paediatric guideline does not specify a dose; dose shown is common PICU practice — confirm locally.",
+      "refs": [
+        "ssc-peds-2020"
+      ]
+    },
+    {
+      "id": "ketamine-paeds",
+      "name": "Ketamine — paediatric",
+      "class": "NMDA antagonist (dissociative anaesthetic)",
+      "indications": "Induction for intubation in shocked or asthmatic children; procedural sedation",
+      "adultDose": "Induction 1–2 mg/kg IV (reduce to 0.5–1 mg/kg in profound shock); IM 4–5 mg/kg if no access.",
+      "preparationIndia": "50 mg/mL vials (10 mL); dilute to 10 mg/mL for children.",
+      "cautions": "Laryngospasm and hypersalivation (rare); may still drop BP in catecholamine-depleted shock.",
+      "refs": [
+        "pals-2025"
+      ]
+    },
+    {
+      "id": "rocuronium-paeds",
+      "name": "Rocuronium — paediatric",
+      "class": "Non-depolarising neuromuscular blocker",
+      "indications": "Rapid sequence intubation",
+      "adultDose": "1–1.2 mg/kg IV.",
+      "preparationIndia": "10 mg/mL (5 mL vials); refrigerate.",
+      "cautions": "Only after airway plan and failed-airway backup are ready; sugammadex availability varies.",
+      "refs": [
+        "pals-2025"
+      ]
+    },
+    {
+      "id": "fentanyl-paeds",
+      "name": "Fentanyl — paediatric",
+      "class": "Opioid analgesic",
+      "indications": "Analgesia/blunting response at intubation; post-intubation analgesia",
+      "adultDose": "1–2 mcg/kg IV slowly; infusion 1–4 mcg/kg/h.",
+      "preparationIndia": "50 mcg/mL ampoules.",
+      "cautions": "Chest wall rigidity with rapid large doses (infants); hypotension; apnoea.",
+      "refs": [
+        "pals-2025"
+      ]
+    },
+    {
+      "id": "dexamethasone-croup",
+      "name": "Dexamethasone (croup)",
+      "class": "Glucocorticoid",
+      "indications": "Croup (all severities)",
+      "adultDose": "0.15–0.6 mg/kg PO (or IM/IV) single dose; 0.15 mg/kg is effective for mild–moderate croup; 0.6 mg/kg (max about 10–16 mg) often used for severe croup.",
+      "preparationIndia": "0.5 mg tablets; 4 mg/mL injection can be given orally mixed in syrup.",
+      "cautions": "Single dose is usually enough.",
+      "refs": [
+        "cochrane-croup-2018",
+        "bjornson-2004"
+      ]
+    },
+    {
+      "id": "budesonide-neb",
+      "name": "Budesonide (nebulised)",
+      "class": "Inhaled glucocorticoid",
+      "indications": "Croup when oral route is not tolerated",
+      "adultDose": "2 mg nebulised single dose.",
+      "preparationIndia": "0.5 mg/2 mL respules (use 4 respules = 2 mg).",
+      "refs": [
+        "cochrane-croup-2018"
+      ]
+    },
+    {
+      "id": "insulin-regular-paeds",
+      "name": "Regular (soluble) insulin — paediatric DKA",
+      "class": "Insulin",
+      "indications": "Paediatric DKA",
+      "adultDose": "0.05–0.1 unit/kg/h IV infusion, started at least 1 h after starting fluid replacement; NO bolus.",
+      "preparationIndia": "100 units/mL vials; 50 units in 50 mL NS = 1 unit/mL (prime the line).",
+      "cautions": "Hypokalaemia and hypoglycaemia; start only once K⁺ ≥3.5 mmol/L (ISPAD) or with K⁺ replacement running.",
+      "monitoring": "Hourly glucose, 2–4-hourly electrolytes/blood gas, hourly neuro observations.",
+      "refs": [
+        "ispad-dka-2022"
+      ]
+    },
+    {
+      "id": "potassium-chloride-paeds",
+      "name": "Potassium chloride (in IV fluids) — paediatric DKA",
+      "class": "Electrolyte",
+      "indications": "Potassium replacement in DKA",
+      "adultDose": "Usually 40 mmol/L in rehydration fluid (20 mmol/L if fluid rate >10 mL/kg/h); start with initial volume expansion if hypokalaemic, with insulin if normokalaemic, and after urine output if hyperkalaemic. Keep within 0.5 mmol/kg/h.",
+      "preparationIndia": "15% KCl = 2 mmol/mL (10 mL ampoule = 20 mmol); premixed bags preferred to avoid errors.",
+      "cautions": "Never give KCl as an IV bolus; mix bags thoroughly.",
+      "refs": [
+        "ispad-dka-2022"
+      ]
+    },
+    {
+      "id": "mannitol-paeds",
+      "name": "Mannitol — paediatric",
+      "class": "Osmotic diuretic",
+      "indications": "Cerebral oedema in DKA (or raised ICP)",
+      "adultDose": "0.5–1 g/kg IV over 10–15 min; may repeat after 30 min if no response.",
+      "preparationIndia": "20% mannitol (200 mg/mL): 0.5–1 g/kg = 2.5–5 mL/kg.",
+      "cautions": "Diuresis and hypovolaemia; crystallises if cold.",
+      "refs": [
+        "ispad-dka-2022"
+      ]
+    },
+    {
+      "id": "hypertonic-saline-paeds",
+      "name": "Hypertonic saline 3% — paediatric",
+      "class": "Osmotic agent",
+      "indications": "Cerebral oedema in DKA (alternative to mannitol)",
+      "adultDose": "2.5–5 mL/kg of 3% NaCl IV over 10–15 min.",
+      "preparationIndia": "3% NaCl bags available in most Indian hospitals; can be prepared from 0.9% saline + 15% or 23.4% NaCl per pharmacy protocol.",
+      "cautions": "Hypernatraemia, hyperchloraemic acidosis.",
+      "refs": [
+        "ispad-dka-2022"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "pals-2025",
+      "citation": "Lasa JJ, Dhillon GS, Duff JP, et al. Part 8: Pediatric Advanced Life Support: 2025 American Heart Association and American Academy of Pediatrics Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 suppl 2):S479-S537.",
+      "url": "https://doi.org/10.1161/CIR.0000000000001368",
+      "year": 2025,
+      "doi": "10.1161/CIR.0000000000001368",
+      "type": "guideline"
+    },
+    {
+      "id": "pals-2020",
+      "citation": "Topjian AA, Raymond TT, Atkins D, et al. Part 4: Pediatric Basic and Advanced Life Support: 2020 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2020;142(16 suppl 2):S469-S523.",
+      "url": "https://doi.org/10.1161/CIR.0000000000000901",
+      "year": 2020,
+      "doi": "10.1161/CIR.0000000000000901",
+      "type": "guideline"
+    },
+    {
+      "id": "ssc-peds-2020",
+      "citation": "Weiss SL, Peters MJ, Alhazzani W, et al. Surviving Sepsis Campaign International Guidelines for the Management of Septic Shock and Sepsis-Associated Organ Dysfunction in Children. Pediatr Crit Care Med. 2020;21(2):e52-e106.",
+      "url": "https://doi.org/10.1097/PCC.0000000000002198",
+      "year": 2020,
+      "doi": "10.1097/PCC.0000000000002198",
+      "type": "guideline"
+    },
+    {
+      "id": "phoenix-2024",
+      "citation": "Schlapbach LJ, Watson RS, Sorce LR, et al. International Consensus Criteria for Pediatric Sepsis and Septic Shock (Phoenix criteria). JAMA. 2024;331(8):665-674.",
+      "url": "https://doi.org/10.1001/jama.2024.0179",
+      "year": 2024,
+      "doi": "10.1001/jama.2024.0179",
+      "type": "consensus"
+    },
+    {
+      "id": "feast-2011",
+      "citation": "Maitland K, Kiguli S, Opoka RO, et al. Mortality after Fluid Bolus in African Children with Severe Infection (FEAST). N Engl J Med. 2011;364(26):2483-2495.",
+      "url": "https://doi.org/10.1056/NEJMoa1101549",
+      "year": 2011,
+      "doi": "10.1056/NEJMoa1101549",
+      "type": "trial"
+    },
+    {
+      "id": "who-etat-2016",
+      "citation": "World Health Organization. Updated guideline: paediatric emergency triage, assessment and treatment (ETAT). Geneva: WHO; 2016.",
+      "url": "https://www.who.int/publications/i/item/9789241510219",
+      "year": 2016,
+      "type": "guideline"
+    },
+    {
+      "id": "who-pocketbook-2013",
+      "citation": "World Health Organization. Pocket book of hospital care for children: guidelines for the management of common childhood illnesses. 2nd ed. Geneva: WHO; 2013.",
+      "url": "https://www.who.int/publications/i/item/9789241548373",
+      "year": 2013,
+      "type": "guideline"
+    },
+    {
+      "id": "ispad-dka-2022",
+      "citation": "Glaser N, Fritsch M, Priyambada L, et al. ISPAD Clinical Practice Consensus Guidelines 2022: Diabetic ketoacidosis and hyperglycemic hyperosmolar state. Pediatr Diabetes. 2022;23(7):835-856.",
+      "url": "https://doi.org/10.1111/pedi.13406",
+      "year": 2022,
+      "doi": "10.1111/pedi.13406",
+      "type": "guideline"
+    },
+    {
+      "id": "pecarn-fluid-2018",
+      "citation": "Kuppermann N, Ghetti S, Schunk JE, et al. Clinical Trial of Fluid Infusion Rates for Pediatric Diabetic Ketoacidosis (PECARN FLUID). N Engl J Med. 2018;378(24):2275-2287.",
+      "url": "https://doi.org/10.1056/NEJMoa1716816",
+      "year": 2018,
+      "doi": "10.1056/NEJMoa1716816",
+      "type": "trial"
+    },
+    {
+      "id": "aap-bronchiolitis-2014",
+      "citation": "Ralston SL, Lieberthal AS, Meissner HC, et al. Clinical Practice Guideline: The Diagnosis, Management, and Prevention of Bronchiolitis. Pediatrics. 2014;134(5):e1474-e1502.",
+      "url": "https://doi.org/10.1542/peds.2014-2742",
+      "year": 2014,
+      "doi": "10.1542/peds.2014-2742",
+      "type": "guideline"
+    },
+    {
+      "id": "nice-ng9",
+      "citation": "National Institute for Health and Care Excellence. Bronchiolitis in children: diagnosis and management (NG9). 2015, updated 2021.",
+      "url": "https://www.nice.org.uk/guidance/ng9",
+      "year": 2021,
+      "type": "guideline"
+    },
+    {
+      "id": "paris-hfnc-2018",
+      "citation": "Franklin D, Babl FE, Schlapbach LJ, et al. A Randomized Trial of High-Flow Oxygen Therapy in Infants with Bronchiolitis (PARIS). N Engl J Med. 2018;378(12):1121-1131.",
+      "url": "https://doi.org/10.1056/NEJMoa1714855",
+      "year": 2018,
+      "doi": "10.1056/NEJMoa1714855",
+      "type": "trial"
+    },
+    {
+      "id": "cochrane-croup-2018",
+      "citation": "Gates A, Gates M, Vandermeer B, et al. Glucocorticoids for croup in children. Cochrane Database Syst Rev. 2018;8:CD001955.",
+      "url": "https://doi.org/10.1002/14651858.CD001955.pub4",
+      "year": 2018,
+      "doi": "10.1002/14651858.CD001955.pub4",
+      "type": "review"
+    },
+    {
+      "id": "bjornson-2004",
+      "citation": "Bjornson CL, Klassen TP, Williamson J, et al. A Randomized Trial of a Single Dose of Oral Dexamethasone for Mild Croup. N Engl J Med. 2004;351(13):1306-1313.",
+      "url": "https://doi.org/10.1056/NEJMoa033534",
+      "year": 2004,
+      "doi": "10.1056/NEJMoa033534",
+      "type": "trial"
+    },
+    {
+      "id": "palicc2-2023",
+      "citation": "Emeriaud G, López-Fernández YM, Iyer NP, et al. Executive Summary of the Second International Guidelines for the Diagnosis and Management of Pediatric Acute Respiratory Distress Syndrome (PALICC-2). Pediatr Crit Care Med. 2023;24(2):143-168.",
+      "url": "https://doi.org/10.1097/PCC.0000000000003147",
+      "year": 2023,
+      "doi": "10.1097/PCC.0000000000003147",
+      "type": "guideline"
+    },
+    {
+      "id": "luscombe-2007",
+      "citation": "Luscombe M, Owens B. Weight estimation in resuscitation: is the current formula still valid? Arch Dis Child. 2007;92(5):412-415.",
+      "url": "https://doi.org/10.1136/adc.2006.107284",
+      "year": 2007,
+      "doi": "10.1136/adc.2006.107284",
+      "type": "trial"
+    },
+    {
+      "id": "weiss-cuffed-2009",
+      "citation": "Weiss M, Dullenkopf A, Fischer JE, et al. Prospective randomized controlled multi-centre trial of cuffed or uncuffed endotracheal tubes in small children. Br J Anaesth. 2009;103(6):867-873.",
+      "url": "https://doi.org/10.1093/bja/aep290",
+      "year": 2009,
+      "doi": "10.1093/bja/aep290",
+      "type": "trial"
+    },
+    {
+      "id": "isccm-iht-2025",
+      "citation": "Zirpe KG, Tiwari AM, Kulkarni AP, et al. Position Statement of ISCCM on Intrahospital Transport of Critically Ill Patients. Indian J Crit Care Med. 2025;29(4):291-300.",
+      "url": "https://doi.org/10.5005/jp-journals-10071-24939",
+      "year": 2025,
+      "doi": "10.5005/jp-journals-10071-24939",
+      "type": "consensus"
+    },
+    {
+      "id": "warren-transport-2004",
+      "citation": "Warren J, Fromm RE Jr, Orr RA, et al. Guidelines for the inter- and intrahospital transport of critically ill patients. Crit Care Med. 2004;32(1):256-262.",
+      "url": "https://doi.org/10.1097/01.CCM.0000104917.39204.0A",
+      "year": 2004,
+      "doi": "10.1097/01.CCM.0000104917.39204.0A",
+      "type": "guideline"
+    }
+  ],
+  "verify": [
+    {
+      "item": "All paediatric doses and maxima (adrenaline, amiodarone, adenosine, ketamine, rocuronium, fentanyl, ceftriaxone, dexamethasone)",
+      "reason": "Paediatric doses should be checked by a paediatric intensivist/pharmacist against the local paediatric formulary (e.g. IAP drug formulary / BNFc)."
+    },
+    {
+      "item": "Hydrocortisone dose for catecholamine-refractory paediatric septic shock (2 mg/kg then 1 mg/kg 6-hourly)",
+      "reason": "SSC 2020 does not specify a dose; this is common PICU practice."
+    },
+    {
+      "item": "Peripheral concentrations for adrenaline/noradrenaline infusions (0.3 mg/kg in 50 mL)",
+      "reason": "Units use different standard concentrations; align to the local PICU infusion chart."
+    },
+    {
+      "item": "Weight-estimation formulas in Indian children",
+      "reason": "APLS formulas overestimate weight in undernourished children; consider an India-validated tape or measured weight."
+    },
+    {
+      "item": "Diphtheria antitoxin dose bands (20,000–100,000 units)",
+      "reason": "Dose depends on site/severity and national guidance; supply is limited."
+    },
+    {
+      "item": "DKA fluid example (bolus subtraction, 48 h replacement)",
+      "reason": "Local DKA protocols differ; ISPAD allows 24–48 h."
+    },
+    {
+      "item": "Endotracheal tube depth and SGA sizes table",
+      "reason": "Derived from standard formulas and manufacturer charts; confirm with local equipment."
+    },
+    {
+      "item": "Surviving Sepsis Campaign paediatric 2026",
+      "reason": "This module cites the SSC paediatric 2020 guideline (Weiss 2020). An updated SSC paediatric guideline was published on 23 Mar 2026 (Weiss SL, Peters MJ, Oczkowski SJ, et al. Pediatr Crit Care Med. 2026;27(4):379-434, doi:10.1097/PCC.0000000000003927; 61 statements, 20 new). The 15 Nov 2026 SSC update covered the adult guideline only; the paediatric sepsis topic needs a separate review against the 2026 paediatric guideline before publishing."
+    }
+  ]
+}

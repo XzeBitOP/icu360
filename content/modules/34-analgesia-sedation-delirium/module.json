@@ -1,0 +1,1742 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "analgesia-sedation-delirium",
+  "number": 34,
+  "folder": "34-analgesia-sedation-delirium",
+  "section": {
+    "id": "J",
+    "title": "ICU care and pharmacology"
+  },
+  "phase": 2,
+  "title": "Analgesia, sedation and delirium",
+  "summary": "Analgesia, sedation and delirium in the ICU (PADIS 2018 and 2025 update, eCASH): pain assessment and analgosedation, RASS-guided light sedation and agent choice, CAM-ICU delirium care, neuromuscular blockade, and alcohol withdrawal.",
+  "tags": [
+    "PADIS",
+    "eCASH",
+    "CPOT",
+    "RASS",
+    "analgosedation",
+    "fentanyl",
+    "propofol",
+    "dexmedetomidine",
+    "CAM-ICU",
+    "delirium",
+    "haloperidol",
+    "neuromuscular blockade",
+    "alcohol withdrawal",
+    "delirium tremens"
+  ],
+  "relatedModules": [
+    "mechanical-ventilation",
+    "ards-refractory-hypoxaemia",
+    "raised-icp-neurotrauma-brain-death",
+    "icu-care-bundles-infection-prevention",
+    "icu-pharmacology-drug-infusions",
+    "ethics-communication-palliative-care"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "moon",
+    "accent": "standard"
+  },
+  "viewKey": "module:analgesia-sedation-delirium",
+  "topics": [
+    {
+      "id": "pain-analgosedation",
+      "title": "Pain assessment and analgesia-first sedation (PADIS, eCASH)",
+      "summary": "Assess pain with NRS, CPOT or BPS, treat pain first with multimodal opioid-sparing analgesia, and aim for calm, comfortable, collaborative patients.",
+      "viewKey": "topic:analgesia-sedation-delirium/pain-analgosedation",
+      "uiHints": {
+        "icon": "hand-heart",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "PADIS/eCASH: early Comfort using Analgesia, minimal Sedatives and maximal Humane care - pain first, light sedation, and the ABCDEF bundle (Assess pain, Both SAT and SBT, Choice of sedation, Delirium, Early mobility, Family).",
+          "refs": [
+            "padis2018",
+            "ecash"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Assess pain routinely",
+            "detail": "Self-report (NRS 0-10) when possible; CPOT (0-8, > 2 = pain) or BPS (3-12, > 5 = pain) when the patient cannot communicate; assess at least every 4 h and before procedures.",
+            "refs": [
+              "padis2018",
+              "cpot-2006"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Analgesia first",
+            "detail": "Treat pain before giving sedatives (analgosedation): fentanyl boluses/infusion titrated to CPOT/BPS.",
+            "refs": [
+              "padis2018",
+              "ecash"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Multimodal, opioid-sparing",
+            "detail": "Regular paracetamol; low-dose ketamine in surgical patients; neuropathic agents (gabapentin/pregabalin); regional blocks (epidural, erector spinae, serratus) for chest/abdominal trauma or surgery.",
+            "refs": [
+              "padis2018"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Procedural analgesia",
+            "detail": "Pre-emptive fentanyl bolus or local anaesthetic before chest drain removal, line insertion, turning and wound care.",
+            "refs": [
+              "padis2018"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Humane care",
+            "detail": "Explain, reorient, sleep promotion, hearing aids/glasses, family presence, music; treat thirst and anxiety.",
+            "refs": [
+              "ecash",
+              "padis-2025"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "fentanyl",
+            "role": "Analgosedation",
+            "route": "IV",
+            "dose": "25-100 mcg bolus; 25-200 mcg/h infusion",
+            "dilution": "500 mcg in 50 mL NS = 10 mcg/mL",
+            "workedExample": "70 kg: start 50 mcg/h = 5 mL/h; bolus 25-50 mcg for CPOT > 2",
+            "calculatorId": "infusion-rate-fixed",
+            "refs": [
+              "padis2018"
+            ]
+          },
+          {
+            "drugId": "paracetamol",
+            "role": "Multimodal analgesia",
+            "route": "IV/oral",
+            "dose": "1 g every 6 h (max 4 g/day)",
+            "notes": "2-3 g/day in liver disease or < 50 kg.",
+            "refs": [
+              "padis2018"
+            ]
+          },
+          {
+            "drugId": "ketamine",
+            "role": "Opioid-sparing adjunct",
+            "route": "IV",
+            "dose": "0.1-0.5 mg/kg bolus, then 0.05-0.4 mg/kg/h",
+            "workedExample": "70 kg: 0.1 mg/kg/h = 7 mg/h (0.7 mL/h of 10 mg/mL)",
+            "refs": [
+              "padis2018"
+            ]
+          },
+          {
+            "drugId": "morphine",
+            "role": "Alternative opioid",
+            "route": "IV",
+            "dose": "2-4 mg bolus; 2-10 mg/h",
+            "notes": "Avoid in AKI.",
+            "refs": [
+              "padis2018"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "cpot",
+            "title": "Critical-Care Pain Observation Tool (CPOT)",
+            "columns": [
+              "Domain",
+              "0",
+              "1",
+              "2"
+            ],
+            "rows": [
+              [
+                "Facial expression",
+                "Relaxed, neutral",
+                "Tense (frowning)",
+                "Grimacing (eyelids tightly closed)"
+              ],
+              [
+                "Body movements",
+                "Absence of movements/normal position",
+                "Protection (slow, cautious movements, touching pain site)",
+                "Restlessness/agitation, pulling tube, striking staff"
+              ],
+              [
+                "Muscle tension (passive flexion/extension)",
+                "Relaxed",
+                "Tense, rigid",
+                "Very tense or rigid"
+              ],
+              [
+                "Compliance with ventilator (intubated) OR vocalisation (extubated)",
+                "Tolerating ventilator / normal tone",
+                "Coughing but tolerating / sighing, moaning",
+                "Fighting ventilator / crying out, sobbing"
+              ]
+            ],
+            "caption": "Score 0-8; > 2 indicates significant pain.",
+            "refs": [
+              "cpot-2006"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Agitation in a ventilated patient: first exclude pain, hypoxia, hypercapnia, tube displacement, full bladder, and withdrawal before deepening sedation.",
+            "refs": [
+              "padis2018"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Using vital signs alone to judge pain: they are unreliable.",
+            "refs": [
+              "padis2018"
+            ]
+          },
+          {
+            "text": "Sedating instead of treating pain.",
+            "refs": [
+              "ecash"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "A comfortable, awake, interactive patient on a ventilator is the goal, not an immobile one.",
+            "refs": [
+              "ecash"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Pain in ICU arises from surgery, trauma, tubes, suction, turning and immobility, and drives stress responses, sleep loss, delirium and chronic pain after ICU.",
+        "evidence": "- PADIS 2018 guidelines [Devlin 2018]; 2025 focused update [Lewis 2025]; eCASH concept [Vincent 2016].\n- CPOT validation [Gelinas 2006].",
+        "controversies": "- Opioid-heavy analgosedation and opioid tolerance/hyperalgesia; long-term opioid use after ICU.",
+        "indiaNotes": "- Fentanyl, morphine, ketamine and IV paracetamol are widely available in India; regional analgesia for rib fractures is underused.\n- Nursing ratios (often 1:2 or worse) make protocolised, nurse-driven pain and sedation assessment especially valuable."
+      },
+      "drugIds": [
+        "fentanyl",
+        "paracetamol",
+        "ketamine",
+        "morphine"
+      ],
+      "calculatorIds": [
+        "infusion-rate-fixed"
+      ],
+      "references": [
+        "padis2018",
+        "padis-2025",
+        "ecash",
+        "cpot-2006"
+      ],
+      "quiz": [
+        {
+          "id": "pain-analgosedation-q1",
+          "stem": "CPOT score indicating significant pain:",
+          "options": [
+            "> 0",
+            "> 2",
+            "> 5",
+            "> 8"
+          ],
+          "answerIndex": 1,
+          "explanation": "CPOT 0-8."
+        },
+        {
+          "id": "pain-analgosedation-q2",
+          "stem": "eCASH stands for early Comfort using Analgesia, minimal Sedatives and maximal:",
+          "options": [
+            "Hydration",
+            "Humane care",
+            "Haemodynamics",
+            "Hypnosis"
+          ],
+          "answerIndex": 1,
+          "explanation": "Vincent 2016."
+        },
+        {
+          "id": "pain-analgosedation-q3",
+          "stem": "Preferred opioid in AKI:",
+          "options": [
+            "Morphine",
+            "Fentanyl",
+            "Codeine",
+            "Pethidine"
+          ],
+          "answerIndex": 1,
+          "explanation": "Morphine metabolites accumulate."
+        }
+      ]
+    },
+    {
+      "id": "sedation-rass",
+      "title": "Sedation targets, RASS and sedative choice",
+      "summary": "Target light sedation (RASS -1 to 0) with daily awakening, prefer propofol or dexmedetomidine over benzodiazepines, and reserve deep sedation for specific indications.",
+      "viewKey": "topic:analgesia-sedation-delirium/sedation-rass",
+      "uiHints": {
+        "icon": "moon",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "RASS ranges from +4 (combative) to -5 (unrousable). Light sedation (RASS -2 to 0) is the default; deep sedation (RASS -4 to -5) only for specific indications (severe ARDS with NMB, raised ICP, status epilepticus, TTM shivering).",
+          "refs": [
+            "rass-2002",
+            "padis2018"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Set a target",
+            "detail": "Document a RASS target every shift (usually -1 to 0); assess RASS every 2-4 h.",
+            "refs": [
+              "padis2018",
+              "rass-2002"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Choose agent",
+            "detail": "Propofol or dexmedetomidine rather than benzodiazepines; PADIS 2025 suggests dexmedetomidine over propofol for light sedation (less delirium, more time at target, more bradycardia).",
+            "refs": [
+              "padis2018",
+              "padis-2025"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Daily SAT paired with SBT",
+            "detail": "Stop or reduce sedation daily (if no contraindication) and pair with a spontaneous breathing trial (ABC trial).",
+            "refs": [
+              "abc-trial"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Benzodiazepines only when needed",
+            "detail": "Alcohol/benzodiazepine withdrawal, seizures, deep sedation when propofol limited, palliative sedation.",
+            "refs": [
+              "padis2018"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Deep sedation indications",
+            "detail": "Use with NMB, refractory ICP, status epilepticus; monitor with BIS/EEG where available; reassess daily.",
+            "refs": [
+              "sccm-nmb-2016"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Weaning",
+            "detail": "Taper long infusions (> 5-7 days) to avoid iatrogenic withdrawal; consider enteral clonidine or dexmedetomidine to transition.",
+            "refs": [
+              "padis2018"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "propofol",
+            "role": "Sedation",
+            "route": "IV",
+            "dose": "0.3-3 mg/kg/h (max 4 mg/kg/h)",
+            "dilution": "1% neat = 10 mg/mL",
+            "workedExample": "70 kg at 1.5 mg/kg/h = 105 mg/h = 10.5 mL/h (count 1.1 kcal/mL as fat calories)",
+            "calculatorId": "infusion-rate-weight-hour",
+            "refs": [
+              "padis2018"
+            ]
+          },
+          {
+            "drugId": "dexmedetomidine",
+            "role": "Light sedation / delirium",
+            "route": "IV",
+            "dose": "0.2-1.4 mcg/kg/h, no loading",
+            "dilution": "200 mcg in 50 mL NS = 4 mcg/mL",
+            "workedExample": "70 kg at 0.5 mcg/kg/h = 35 mcg/h = 8.75 mL/h",
+            "calculatorId": "infusion-rate-weight-hour",
+            "refs": [
+              "padis-2025"
+            ]
+          },
+          {
+            "drugId": "midazolam",
+            "role": "Deep sedation when needed",
+            "route": "IV",
+            "dose": "0.02-0.1 mg/kg/h",
+            "dilution": "50 mg in 50 mL = 1 mg/mL",
+            "workedExample": "70 kg at 0.05 mg/kg/h = 3.5 mg/h = 3.5 mL/h",
+            "refs": [
+              "padis2018"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "rass",
+            "title": "Richmond Agitation-Sedation Scale",
+            "columns": [
+              "Score",
+              "Description"
+            ],
+            "rows": [
+              [
+                "+4",
+                "Combative, violent, danger to staff"
+              ],
+              [
+                "+3",
+                "Very agitated, pulls tubes, aggressive"
+              ],
+              [
+                "+2",
+                "Agitated, frequent non-purposeful movement, fights ventilator"
+              ],
+              [
+                "+1",
+                "Restless, anxious, movements not aggressive"
+              ],
+              [
+                "0",
+                "Alert and calm"
+              ],
+              [
+                "-1",
+                "Drowsy, sustained awakening to voice (eye contact > 10 s)"
+              ],
+              [
+                "-2",
+                "Light sedation, briefly awakens to voice (< 10 s)"
+              ],
+              [
+                "-3",
+                "Moderate sedation, movement or eye opening to voice, no eye contact"
+              ],
+              [
+                "-4",
+                "Deep sedation, no response to voice, movement to physical stimulation"
+              ],
+              [
+                "-5",
+                "Unrousable, no response to voice or physical stimulation"
+              ]
+            ],
+            "refs": [
+              "rass-2002"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Propofol > 4 mg/kg/h or long infusions with unexplained metabolic acidosis, rising CK, lipaemia or arrhythmia: propofol infusion syndrome - stop propofol.",
+            "refs": [
+              "padis2018"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Benzodiazepine infusions as routine sedation: more delirium and longer ventilation.",
+            "refs": [
+              "padis2018"
+            ]
+          },
+          {
+            "text": "Early dexmedetomidine as sole sedative in older patients (SPICE III signal of increased mortality in > 65 years).",
+            "refs": [
+              "spice3"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Agitation on waking during SAT often signals pain or delirium - treat the cause, then restart at half the previous dose if needed.",
+            "refs": [
+              "abc-trial"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Sedation titration",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Ventilated patient: target RASS -1 to 0"
+          },
+          {
+            "id": "pain",
+            "type": "decision",
+            "text": "CPOT > 2 / BPS > 5?"
+          },
+          {
+            "id": "an",
+            "type": "action",
+            "text": "Fentanyl bolus/titrate; multimodal analgesia"
+          },
+          {
+            "id": "rass",
+            "type": "decision",
+            "text": "RASS above target (agitated)?"
+          },
+          {
+            "id": "cause",
+            "type": "action",
+            "text": "Exclude hypoxia, tube issues, bladder, withdrawal; screen delirium"
+          },
+          {
+            "id": "sed",
+            "type": "action",
+            "text": "Add/titrate dexmedetomidine or propofol"
+          },
+          {
+            "id": "deep",
+            "type": "decision",
+            "text": "RASS below target without indication?"
+          },
+          {
+            "id": "red",
+            "type": "end",
+            "text": "Reduce sedation; daily SAT + SBT"
+          },
+          {
+            "id": "keep",
+            "type": "end",
+            "text": "Continue; reassess every 2-4 h"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "pain"
+          },
+          {
+            "from": "pain",
+            "to": "an",
+            "label": "Yes"
+          },
+          {
+            "from": "pain",
+            "to": "rass",
+            "label": "No"
+          },
+          {
+            "from": "an",
+            "to": "rass"
+          },
+          {
+            "from": "rass",
+            "to": "cause",
+            "label": "Yes"
+          },
+          {
+            "from": "rass",
+            "to": "deep",
+            "label": "No"
+          },
+          {
+            "from": "cause",
+            "to": "sed"
+          },
+          {
+            "from": "sed",
+            "to": "keep"
+          },
+          {
+            "from": "deep",
+            "to": "red",
+            "label": "Yes"
+          },
+          {
+            "from": "deep",
+            "to": "keep",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "padis2018",
+          "padis-2025"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Deep sedation in the first 48 h is independently associated with longer ventilation, delirium and death. Benzodiazepines act on GABA-A receptors and are strongly deliriogenic; dexmedetomidine acts on central alpha-2 receptors producing rousable sedation with preserved respiratory drive.",
+        "evidence": "- ABC trial: paired SAT + SBT reduced mortality at 1 year [Girard 2008].\n- SPICE III (4,000 patients): early dexmedetomidine did not reduce mortality; more bradycardia/hypotension; possible harm in older patients [Shehabi 2019].\n- MENDS2: dexmedetomidine vs propofol in sepsis - no difference in delirium-free days [Hughes 2021].\n- PADIS 2025: conditional recommendation for dexmedetomidine over propofol for light sedation [Lewis 2025].",
+        "controversies": "- Dexmedetomidine vs propofol (MENDS2 neutral vs PADIS 2025 conditional preference); inhaled sedation (volatile agents).",
+        "indiaNotes": "- Generic dexmedetomidine and propofol are relatively affordable in India; midazolam infusions remain common due to cost and habit - an important quality-improvement target.\n- Infusion pump availability may limit titration in smaller ICUs; intermittent boluses guided by RASS are a fallback."
+      },
+      "drugIds": [
+        "propofol",
+        "dexmedetomidine",
+        "midazolam"
+      ],
+      "calculatorIds": [
+        "rass",
+        "infusion-rate-weight-hour"
+      ],
+      "references": [
+        "padis2018",
+        "padis-2025",
+        "rass-2002",
+        "abc-trial",
+        "spice3",
+        "mends2",
+        "sccm-nmb-2016"
+      ],
+      "quiz": [
+        {
+          "id": "sedation-rass-q1",
+          "stem": "Default sedation target for most ventilated patients:",
+          "options": [
+            "RASS -4",
+            "RASS -1 to 0",
+            "RASS +2",
+            "RASS -5"
+          ],
+          "answerIndex": 1,
+          "explanation": "Light sedation."
+        },
+        {
+          "id": "sedation-rass-q2",
+          "stem": "ABC trial paired SAT with:",
+          "options": [
+            "Early tracheostomy",
+            "Spontaneous breathing trial",
+            "Prone positioning",
+            "NMB"
+          ],
+          "answerIndex": 1,
+          "explanation": "Reduced mortality."
+        },
+        {
+          "id": "sedation-rass-q3",
+          "stem": "Propofol infusion syndrome features:",
+          "options": [
+            "Metabolic acidosis, rhabdomyolysis, arrhythmia",
+            "Hypoglycaemia only",
+            "Bradycardia only",
+            "Rash"
+          ],
+          "answerIndex": 0,
+          "explanation": "Stop propofol."
+        },
+        {
+          "id": "sedation-rass-q4",
+          "stem": "PADIS 2025 suggests for light sedation:",
+          "options": [
+            "Midazolam over propofol",
+            "Dexmedetomidine over propofol",
+            "Ketamine over propofol",
+            "No sedation ever"
+          ],
+          "answerIndex": 1,
+          "explanation": "Conditional recommendation."
+        }
+      ]
+    },
+    {
+      "id": "delirium-cam-icu",
+      "title": "Delirium: CAM-ICU screening, prevention and management",
+      "summary": "Screen every shift with CAM-ICU, prevent with the ABCDEF bundle, treat causes, and use antipsychotics only for distressing agitation.",
+      "viewKey": "topic:analgesia-sedation-delirium/delirium-cam-icu",
+      "uiHints": {
+        "icon": "brain",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Delirium: acute fluctuating disturbance of attention and awareness. CAM-ICU positive = feature 1 (acute change or fluctuation) + feature 2 (inattention) + either feature 3 (altered level of consciousness, RASS ≠ 0) or feature 4 (disorganised thinking). Subtypes: hypoactive (commonest, often missed), hyperactive, mixed.",
+          "refs": [
+            "cam-icu-2001"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Screen every shift",
+            "detail": "CAM-ICU (or ICDSC) when RASS ≥ -3; document result.",
+            "refs": [
+              "cam-icu-2001",
+              "padis2018"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Look for causes (THINK)",
+            "detail": "Toxic (drugs: benzodiazepines, anticholinergics, steroids; withdrawal), Hypoxaemia, Infection/sepsis, Non-pharmacological factors (immobility, sleep deprivation, no glasses/hearing aids), K+/electrolytes/glucose/urea; also urinary retention, constipation, pain, alcohol withdrawal.",
+            "refs": [
+              "padis2018"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Prevent - ABCDEF bundle",
+            "detail": "Minimise benzodiazepines, light sedation, SAT/SBT, early and enhanced mobilisation, sleep hygiene (lights, noise, melatonin), reorientation, family involvement.",
+            "refs": [
+              "padis2018",
+              "padis-2025"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Hyperactive delirium endangering safety",
+            "detail": "Ensure analgesia; dexmedetomidine for agitation preventing extubation; short course of haloperidol 2.5-5 mg IV or quetiapine for distressing agitation; avoid physical restraints where possible.",
+            "refs": [
+              "padis2018",
+              "aid-icu"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Do not routinely use antipsychotics",
+            "detail": "Neither haloperidol nor ziprasidone shortened delirium (MIND-USA); PADIS 2025 makes no recommendation for routine antipsychotic treatment.",
+            "refs": [
+              "mind-usa",
+              "padis-2025"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Follow-up",
+            "detail": "Delirium predicts long-term cognitive impairment: inform family, ICU follow-up clinic where available.",
+            "refs": [
+              "padis2018"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "haloperidol",
+            "role": "Distressing agitation in delirium",
+            "route": "IV",
+            "dose": "2.5-5 mg every 6-8 h as needed (max ~20 mg/day)",
+            "notes": "Check QTc; lower doses in elderly.",
+            "verify": "Not for routine delirium treatment.",
+            "refs": [
+              "aid-icu"
+            ]
+          },
+          {
+            "drugId": "quetiapine",
+            "role": "Persistent agitated delirium",
+            "route": "Oral/NG",
+            "dose": "25-50 mg every 12 h, titrate",
+            "refs": [
+              "padis2018"
+            ]
+          },
+          {
+            "drugId": "dexmedetomidine",
+            "role": "Agitated delirium in ventilated patients",
+            "route": "IV",
+            "dose": "0.2-1.4 mcg/kg/h",
+            "refs": [
+              "padis2018",
+              "padis-2025"
+            ]
+          },
+          {
+            "drugId": "melatonin",
+            "role": "Sleep promotion",
+            "route": "Oral/NG",
+            "dose": "3-10 mg at night",
+            "verify": "Dose not standardised.",
+            "refs": [
+              "padis-2025"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "cam-icu",
+            "title": "CAM-ICU",
+            "columns": [
+              "Feature",
+              "Assessment"
+            ],
+            "rows": [
+              [
+                "1. Acute change or fluctuating course",
+                "Different from baseline, or fluctuating RASS/GCS in last 24 h"
+              ],
+              [
+                "2. Inattention",
+                "Squeeze hand on letter 'A' in SAVEAHAART: > 2 errors = positive"
+              ],
+              [
+                "3. Altered level of consciousness",
+                "Current RASS anything other than 0"
+              ],
+              [
+                "4. Disorganised thinking",
+                "Yes/no questions (e.g. 'Will a stone float on water?') + command; > 1 error = positive"
+              ]
+            ],
+            "caption": "Delirium = 1 + 2 + (3 or 4). Not assessable if RASS -4/-5.",
+            "refs": [
+              "cam-icu-2001"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "New delirium may be the first sign of sepsis, hypoxia, hypoglycaemia, stroke or alcohol withdrawal.",
+            "refs": [
+              "padis2018"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Missing hypoactive delirium in a 'quiet, good' patient.",
+            "refs": [
+              "cam-icu-2001"
+            ]
+          },
+          {
+            "text": "Using benzodiazepines for delirium (except alcohol/benzodiazepine withdrawal).",
+            "refs": [
+              "padis2018"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Family presence and familiar voices are among the most effective non-drug measures.",
+            "refs": [
+              "ecash"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Delirium management",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "RASS ≥ -3"
+          },
+          {
+            "id": "cam",
+            "type": "decision",
+            "text": "CAM-ICU positive?"
+          },
+          {
+            "id": "prev",
+            "type": "end",
+            "text": "Prevention bundle; rescreen each shift"
+          },
+          {
+            "id": "think",
+            "type": "action",
+            "text": "THINK: drugs, hypoxia, infection, environment, electrolytes; treat pain"
+          },
+          {
+            "id": "danger",
+            "type": "decision",
+            "text": "Agitation endangering patient/staff?"
+          },
+          {
+            "id": "drug",
+            "type": "action",
+            "text": "Dexmedetomidine or short-course haloperidol/quetiapine",
+            "severity": "high"
+          },
+          {
+            "id": "nonph",
+            "type": "end",
+            "text": "Non-drug measures; mobilise; sleep; family"
+          },
+          {
+            "id": "review",
+            "type": "end",
+            "text": "Review daily; stop antipsychotic when resolved"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "cam"
+          },
+          {
+            "from": "cam",
+            "to": "prev",
+            "label": "No"
+          },
+          {
+            "from": "cam",
+            "to": "think",
+            "label": "Yes"
+          },
+          {
+            "from": "think",
+            "to": "danger"
+          },
+          {
+            "from": "danger",
+            "to": "drug",
+            "label": "Yes"
+          },
+          {
+            "from": "danger",
+            "to": "nonph",
+            "label": "No"
+          },
+          {
+            "from": "drug",
+            "to": "review"
+          }
+        ],
+        "refs": [
+          "padis2018",
+          "cam-icu-2001"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Delirium results from neuroinflammation, neurotransmitter imbalance (cholinergic deficiency, dopaminergic excess), impaired cerebral perfusion and oxygenation, sleep disruption and drug effects, superimposed on vulnerability (age, dementia, alcohol).",
+        "evidence": "- CAM-ICU validation [Ely 2001].\n- MIND-USA: haloperidol/ziprasidone did not shorten delirium [Girard 2018]. AID-ICU: haloperidol did not significantly increase days alive and out of hospital [Andersen-Ranberg 2022].\n- PADIS 2025: enhanced mobilisation and melatonin suggested; no recommendation on antipsychotics [Lewis 2025].",
+        "controversies": "- Antipsychotics for hyperactive delirium; prophylactic dexmedetomidine at night.",
+        "indiaNotes": "- Validated Hindi and other Indian language versions of CAM-ICU are used in some centres; translate the inattention test letters appropriately.\n- Families are often present for long hours in Indian ICUs - use them for reorientation and comfort."
+      },
+      "drugIds": [
+        "haloperidol",
+        "quetiapine",
+        "dexmedetomidine",
+        "melatonin"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "cam-icu-2001",
+        "padis2018",
+        "padis-2025",
+        "mind-usa",
+        "aid-icu",
+        "ecash"
+      ],
+      "quiz": [
+        {
+          "id": "delirium-cam-icu-q1",
+          "stem": "CAM-ICU positive requires features 1 and 2 plus:",
+          "options": [
+            "Feature 3 or 4",
+            "Both 3 and 4",
+            "Fever",
+            "RASS -5"
+          ],
+          "answerIndex": 0,
+          "explanation": "Ely 2001."
+        },
+        {
+          "id": "delirium-cam-icu-q2",
+          "stem": "Commonest delirium subtype in ICU:",
+          "options": [
+            "Hyperactive",
+            "Hypoactive",
+            "Mixed",
+            "Psychotic"
+          ],
+          "answerIndex": 1,
+          "explanation": "Often missed."
+        },
+        {
+          "id": "delirium-cam-icu-q3",
+          "stem": "MIND-USA showed antipsychotics:",
+          "options": [
+            "Shortened delirium",
+            "Did not shorten delirium",
+            "Increased mortality markedly",
+            "Prevented delirium"
+          ],
+          "answerIndex": 1,
+          "explanation": "No benefit."
+        }
+      ]
+    },
+    {
+      "id": "neuromuscular-blockade",
+      "title": "Neuromuscular blockade in the ICU",
+      "summary": "Indications, deep sedation first, agent choice, train-of-four monitoring, and complications of sustained NMB.",
+      "viewKey": "topic:analgesia-sedation-delirium/neuromuscular-blockade",
+      "uiHints": {
+        "icon": "zap-off",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Sustained NMB abolishes patient effort and shivering. ICU indications: severe ARDS with dyssynchrony or high plateau pressure, refractory intracranial hypertension, shivering during targeted temperature management, status asthmaticus with dyssynchrony, abdominal compartment syndrome.",
+          "refs": [
+            "sccm-nmb-2016"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Confirm indication",
+            "detail": "Use NMB selectively (ROSE: routine early NMB in moderate-severe ARDS did not reduce mortality); consider in PaO2/FiO2 < 150 with dyssynchrony or high pressures despite optimal settings.",
+            "refs": [
+              "rose",
+              "sccm-nmb-2016"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Deep sedation and analgesia first",
+            "detail": "Achieve RASS -5 and adequate analgesia before starting; awareness under paralysis is a serious harm; use BIS where available.",
+            "time": "Before NMB",
+            "refs": [
+              "sccm-nmb-2016"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Choose agent",
+            "detail": "Cisatracurium/atracurium (organ-independent Hofmann elimination) preferred in hepatic/renal failure; rocuronium/vecuronium alternatives.",
+            "refs": [
+              "sccm-nmb-2016"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Monitor",
+            "detail": "Train-of-four target 1-2/4 twitches combined with clinical assessment (ventilator synchrony); daily interruption when possible.",
+            "refs": [
+              "sccm-nmb-2016"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Prevent complications",
+            "detail": "Eye care (lubricant, taping), pressure area care, DVT prophylaxis, glucose control, minimise steroids; stop as soon as indication resolves (typically ≤ 48 h).",
+            "refs": [
+              "sccm-nmb-2016"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "cisatracurium",
+            "role": "Severe ARDS / shivering",
+            "route": "IV",
+            "dose": "0.15-0.2 mg/kg bolus, then 1-3 mcg/kg/min",
+            "dilution": "100 mg in 50 mL = 2 mg/mL",
+            "target": "TOF 1-2/4",
+            "workedExample": "70 kg at 2 mcg/kg/min = 140 mcg/min = 8.4 mg/h = 4.2 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "sccm-nmb-2016"
+            ]
+          },
+          {
+            "drugId": "rocuronium",
+            "role": "NMB infusion alternative",
+            "route": "IV",
+            "dose": "0.6 mg/kg bolus, then 0.3-0.6 mg/kg/h",
+            "workedExample": "70 kg: 42 mg bolus, then 21-42 mg/h",
+            "refs": [
+              "sccm-nmb-2016"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Paralysed patient with tachycardia, hypertension, lacrimation: possible awareness - deepen sedation and analgesia immediately.",
+            "refs": [
+              "sccm-nmb-2016"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Starting NMB before adequate sedation.",
+            "refs": [
+              "sccm-nmb-2016"
+            ]
+          },
+          {
+            "text": "Forgetting eye care: corneal abrasions and exposure keratopathy.",
+            "refs": [
+              "sccm-nmb-2016"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Peripheral nerve stimulation can be misleading with oedema or hypothermia; combine with clinical end-points.",
+            "refs": [
+              "sccm-nmb-2016"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "NMB reduces oxygen consumption and patient-ventilator dyssynchrony, may lessen ventilator-induced lung injury (reducing transpulmonary pressure swings and pendelluft), and abolishes shivering; costs include ICU-acquired weakness and loss of neurological examination.",
+        "evidence": "- SCCM 2016 NMB guidelines [Murray 2016].\n- ROSE: early routine cisatracurium in moderate-severe ARDS - no mortality benefit (lighter sedation in control arm) [PETAL 2019].",
+        "controversies": "- Role of NMB in severe ARDS after ROSE; best monitoring method.",
+        "indiaNotes": "- Atracurium and vecuronium are cheaper and widely available in India; cisatracurium availability and cost vary.\n- Train-of-four monitors are not available in all ICUs; clinical end-points plus scheduled interruptions are used."
+      },
+      "drugIds": [
+        "cisatracurium",
+        "rocuronium"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-min"
+      ],
+      "references": [
+        "sccm-nmb-2016",
+        "rose"
+      ],
+      "quiz": [
+        {
+          "id": "neuromuscular-blockade-q1",
+          "stem": "Before starting NMB you must ensure:",
+          "options": [
+            "Deep sedation and analgesia",
+            "Extubation readiness",
+            "Normal creatinine",
+            "Steroids"
+          ],
+          "answerIndex": 0,
+          "explanation": "Prevent awareness."
+        },
+        {
+          "id": "neuromuscular-blockade-q2",
+          "stem": "NMB with organ-independent elimination:",
+          "options": [
+            "Rocuronium",
+            "Vecuronium",
+            "Cisatracurium",
+            "Pancuronium"
+          ],
+          "answerIndex": 2,
+          "explanation": "Hofmann elimination."
+        },
+        {
+          "id": "neuromuscular-blockade-q3",
+          "stem": "ROSE trial result:",
+          "options": [
+            "Mortality reduced with early NMB",
+            "No mortality benefit of routine early NMB",
+            "Harm only",
+            "Stopped for benefit"
+          ],
+          "answerIndex": 1,
+          "explanation": "PETAL 2019."
+        }
+      ]
+    },
+    {
+      "id": "alcohol-withdrawal",
+      "title": "Alcohol withdrawal and delirium tremens",
+      "summary": "Recognise withdrawal timelines, use CIWA-Ar and symptom-triggered or front-loaded benzodiazepines, add phenobarbital for resistance, give thiamine first and treat complications.",
+      "viewKey": "topic:analgesia-sedation-delirium/alcohol-withdrawal",
+      "uiHints": {
+        "icon": "wine",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Alcohol withdrawal: tremor, anxiety, sweating, tachycardia 6-24 h after the last drink; seizures 6-48 h; hallucinosis 12-48 h; delirium tremens (DTs) 48-96 h with confusion, autonomic instability and hyperthermia (mortality up to 5% treated).",
+          "refs": [
+            "asam-aws-2020"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Assess",
+            "detail": "CIWA-Ar (if able to communicate; > 15 severe) or RASS/MINDS in ICU; history of DTs or withdrawal seizures predicts severe course; check glucose, electrolytes (Mg, PO4, K), LFT, CT head after fall/first seizure.",
+            "refs": [
+              "asam-aws-2020"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Thiamine before glucose",
+            "detail": "Thiamine 200-500 mg IV three times daily for suspected Wernicke (confusion, ataxia, ophthalmoplegia - any one in at-risk patient), otherwise 100-200 mg daily.",
+            "refs": [
+              "asam-aws-2020"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Benzodiazepines",
+            "detail": "Symptom-triggered or front-loaded diazepam (10-20 mg every 1-2 h orally, or 5-10 mg IV every 5-10 min for severe), lorazepam in liver failure/elderly; target light sedation (RASS 0 to -1).",
+            "refs": [
+              "asam-aws-2020"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Resistant withdrawal",
+            "detail": "High benzodiazepine requirements (e.g. diazepam > 50-100 mg/h): phenobarbital 10 mg/kg IV or incremental doses; propofol or dexmedetomidine as adjuncts in ventilated patients (dexmedetomidine does not prevent seizures).",
+            "refs": [
+              "asam-aws-2020"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Supportive",
+            "detail": "Fluids, correct Mg/K/PO4 (refeeding risk), cooling for hyperthermia, nutrition; avoid antipsychotics as monotherapy (lower seizure threshold).",
+            "refs": [
+              "asam-aws-2020"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "After recovery",
+            "detail": "Brief intervention, de-addiction referral, consider naltrexone/acamprosate (if liver allows) or baclofen in cirrhosis.",
+            "refs": [
+              "asam-aws-2020"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "diazepam",
+            "role": "Severe withdrawal/DTs",
+            "route": "IV",
+            "dose": "5-10 mg every 5-10 min until calm (light sedation)",
+            "workedExample": "Typical DTs: 10 mg IV, repeat every 10 min; total may exceed 100 mg in first hours",
+            "refs": [
+              "asam-aws-2020"
+            ]
+          },
+          {
+            "drugId": "lorazepam",
+            "role": "Liver failure / elderly",
+            "route": "IV",
+            "dose": "1-4 mg every 5-15 min as needed",
+            "refs": [
+              "asam-aws-2020"
+            ]
+          },
+          {
+            "drugId": "phenobarbital",
+            "role": "Benzodiazepine-resistant",
+            "route": "IV",
+            "dose": "10 mg/kg (ideal body weight) over 30 min",
+            "workedExample": "IBW 65 kg: 650 mg in 100 mL NS over 30 min; monitor airway",
+            "verify": "Local protocol.",
+            "refs": [
+              "asam-aws-2020"
+            ]
+          },
+          {
+            "drugId": "thiamine",
+            "role": "Wernicke treatment",
+            "route": "IV",
+            "dose": "200-500 mg three times daily for 3-5 days",
+            "verify": "Dose varies between guidelines.",
+            "refs": [
+              "asam-aws-2020"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Fever, tachycardia > 120, agitation and confusion 2-4 days after admission in a drinker: delirium tremens - ICU care.",
+            "refs": [
+              "asam-aws-2020"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Giving dextrose before thiamine in malnourished drinkers (may precipitate Wernicke).",
+            "refs": [
+              "asam-aws-2020"
+            ]
+          },
+          {
+            "text": "Treating DTs with haloperidol alone.",
+            "refs": [
+              "asam-aws-2020"
+            ]
+          },
+          {
+            "text": "Missing concurrent sepsis, pancreatitis, head injury or hepatic encephalopathy.",
+            "refs": [
+              "asam-aws-2020"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Admission to ICU for an unrelated problem (trauma, surgery, pneumonia) is a common setting for unrecognised withdrawal - take an alcohol history from family.",
+            "refs": [
+              "asam-aws-2020"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Alcohol withdrawal",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Heavy drinker; last drink < 5 days"
+          },
+          {
+            "id": "thi",
+            "type": "action",
+            "text": "Thiamine IV before glucose; electrolytes, Mg"
+          },
+          {
+            "id": "sev",
+            "type": "decision",
+            "text": "Severe (CIWA-Ar > 15, seizures, DTs)?"
+          },
+          {
+            "id": "mild",
+            "type": "end",
+            "text": "Symptom-triggered oral diazepam; monitor CIWA-Ar"
+          },
+          {
+            "id": "bz",
+            "type": "action",
+            "text": "IV diazepam/lorazepam boluses to light sedation",
+            "severity": "high"
+          },
+          {
+            "id": "res",
+            "type": "decision",
+            "text": "Benzodiazepine-resistant?"
+          },
+          {
+            "id": "pb",
+            "type": "end",
+            "text": "Phenobarbital ± propofol; intubate if needed",
+            "severity": "critical"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Taper; treat complications; de-addiction referral"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "thi"
+          },
+          {
+            "from": "thi",
+            "to": "sev"
+          },
+          {
+            "from": "sev",
+            "to": "mild",
+            "label": "No"
+          },
+          {
+            "from": "sev",
+            "to": "bz",
+            "label": "Yes"
+          },
+          {
+            "from": "bz",
+            "to": "res"
+          },
+          {
+            "from": "res",
+            "to": "pb",
+            "label": "Yes"
+          },
+          {
+            "from": "res",
+            "to": "cont",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "asam-aws-2020"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Chronic alcohol enhances GABA-A and inhibits NMDA receptors; abrupt cessation produces GABA hypofunction and glutamate excess with sympathetic overactivity, seizures and delirium. Kindling makes each episode more severe.",
+        "evidence": "- ASAM 2020 clinical practice guideline [ASAM 2020].",
+        "controversies": "- Phenobarbital monotherapy vs benzodiazepines in ICU; high-dose thiamine dosing.",
+        "indiaNotes": "- Alcohol use disorder is common in Indian men; country liquor and illicit liquor (methanol risk) may complicate presentations.\n- Diazepam, lorazepam (oral more than IV), phenobarbital and thiamine are widely available; Pabrinex-type high-potency B-vitamin injections are not uniformly available."
+      },
+      "drugIds": [
+        "diazepam",
+        "lorazepam",
+        "phenobarbital",
+        "thiamine"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "asam-aws-2020"
+      ],
+      "quiz": [
+        {
+          "id": "alcohol-withdrawal-q1",
+          "stem": "Delirium tremens typically starts:",
+          "options": [
+            "2-6 h",
+            "48-96 h after last drink",
+            "2 weeks",
+            "Immediately"
+          ],
+          "answerIndex": 1,
+          "explanation": "ASAM."
+        },
+        {
+          "id": "alcohol-withdrawal-q2",
+          "stem": "Give before dextrose in malnourished drinkers:",
+          "options": [
+            "Insulin",
+            "Thiamine",
+            "Folate",
+            "Potassium"
+          ],
+          "answerIndex": 1,
+          "explanation": "Prevent Wernicke."
+        },
+        {
+          "id": "alcohol-withdrawal-q3",
+          "stem": "Benzodiazepine-resistant withdrawal next step:",
+          "options": [
+            "Haloperidol alone",
+            "Phenobarbital",
+            "Stop all sedation",
+            "Flumazenil"
+          ],
+          "answerIndex": 1,
+          "explanation": "ASAM 2020."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "fentanyl",
+      "name": "Fentanyl",
+      "class": "Opioid analgesic",
+      "indications": "First-line ICU analgesia (analgosedation)",
+      "adultDose": "Bolus 25-100 mcg IV; infusion 25-200 mcg/h (about 0.5-3 mcg/kg/h), titrated to CPOT/BPS.",
+      "preparationIndia": "50 mcg/mL; e.g. 500 mcg in 50 mL = 10 mcg/mL.",
+      "cautions": "Accumulates with prolonged infusion (context-sensitive half-life), chest wall rigidity with large boluses, constipation.",
+      "refs": [
+        "padis2018"
+      ]
+    },
+    {
+      "id": "paracetamol",
+      "name": "Paracetamol",
+      "class": "Non-opioid analgesic",
+      "indications": "Multimodal analgesia (opioid-sparing)",
+      "adultDose": "1 g IV/oral every 6 h (max 4 g/day; 2-3 g/day if weight < 50 kg, malnutrition, chronic alcohol use or liver disease).",
+      "refs": [
+        "padis2018"
+      ]
+    },
+    {
+      "id": "ketamine",
+      "name": "Ketamine",
+      "class": "NMDA antagonist",
+      "indications": "Adjunct analgesia (opioid-sparing), sedation in bronchospasm/haemodynamic instability",
+      "adultDose": "Analgesia: 0.1-0.5 mg/kg IV bolus, then 0.05-0.4 mg/kg/h. Sedation: 0.5-2 mg/kg/h.",
+      "preparationIndia": "50 mg/mL; 500 mg in 50 mL = 10 mg/mL.",
+      "cautions": "Hypersalivation, emergence phenomena, raised BP/HR.",
+      "refs": [
+        "padis2018"
+      ]
+    },
+    {
+      "id": "morphine",
+      "name": "Morphine",
+      "class": "Opioid analgesic",
+      "indications": "Analgesia (alternative to fentanyl)",
+      "adultDose": "Bolus 2-4 mg IV; infusion 2-10 mg/h.",
+      "renalHepatic": "Active metabolite (M6G) accumulates in AKI - prefer fentanyl.",
+      "cautions": "Histamine release, hypotension.",
+      "refs": [
+        "padis2018"
+      ]
+    },
+    {
+      "id": "propofol",
+      "name": "Propofol",
+      "class": "GABA-A agonist sedative",
+      "indications": "Light-to-deep sedation in ventilated patients",
+      "adultDose": "0.3-3 mg/kg/h (5-50 mcg/kg/min) infusion; avoid > 4 mg/kg/h for > 48 h.",
+      "preparationIndia": "1% = 10 mg/mL.",
+      "cautions": "Hypotension, hypertriglyceridaemia (lipid 1.1 kcal/mL), propofol infusion syndrome (acidosis, rhabdomyolysis, arrhythmia).",
+      "monitoring": "Triglycerides every 48-72 h; CK/lactate if high dose.",
+      "refs": [
+        "padis2018",
+        "padis-2025"
+      ]
+    },
+    {
+      "id": "dexmedetomidine",
+      "name": "Dexmedetomidine",
+      "class": "Alpha-2 agonist",
+      "indications": "Light sedation; delirium/agitation; facilitating extubation",
+      "adultDose": "0.2-1.4 mcg/kg/h infusion (loading dose usually omitted in ICU because of bradycardia/hypotension).",
+      "preparationIndia": "100 mcg/mL; 200 mcg in 50 mL NS = 4 mcg/mL.",
+      "cautions": "Bradycardia, hypotension; does not provide deep sedation alone; SPICE III signal of harm in older patients (> 65) when used as early sole sedative.",
+      "refs": [
+        "padis-2025",
+        "spice3",
+        "mends2"
+      ]
+    },
+    {
+      "id": "midazolam",
+      "name": "Midazolam",
+      "class": "Benzodiazepine",
+      "indications": "Deep sedation when propofol unsuitable; status epilepticus; alcohol withdrawal adjunct",
+      "adultDose": "Bolus 1-2 mg (0.01-0.05 mg/kg) IV; infusion 0.02-0.1 mg/kg/h.",
+      "renalHepatic": "Active metabolite accumulates in AKI.",
+      "cautions": "Associated with delirium and prolonged ventilation; avoid as routine sedative.",
+      "refs": [
+        "padis2018"
+      ]
+    },
+    {
+      "id": "haloperidol",
+      "name": "Haloperidol",
+      "class": "Typical antipsychotic",
+      "indications": "Distressing hyperactive delirium/agitation endangering safety (not routine)",
+      "adultDose": "2.5-5 mg IV every 6-8 h as needed (max ~20 mg/day; lower in elderly).",
+      "cautions": "QTc prolongation (check ECG, avoid if QTc > 500 ms), extrapyramidal effects, NMS.",
+      "refs": [
+        "aid-icu",
+        "mind-usa"
+      ]
+    },
+    {
+      "id": "quetiapine",
+      "name": "Quetiapine",
+      "class": "Atypical antipsychotic",
+      "indications": "Persistent agitated delirium (adjunct)",
+      "adultDose": "25-50 mg orally/NG every 12 h, titrate to 200 mg twice daily.",
+      "cautions": "Sedation, hypotension, QTc.",
+      "refs": [
+        "padis2018"
+      ]
+    },
+    {
+      "id": "melatonin",
+      "name": "Melatonin",
+      "class": "Chronobiotic",
+      "indications": "Sleep promotion in ICU",
+      "adultDose": "3-10 mg orally/NG at night (doses in trials vary).",
+      "verify": "Optimal dose not established.",
+      "refs": [
+        "padis-2025"
+      ]
+    },
+    {
+      "id": "cisatracurium",
+      "name": "Cisatracurium (or atracurium)",
+      "class": "Non-depolarising NMB (Hofmann elimination)",
+      "indications": "Severe ARDS, refractory raised ICP, shivering during TTM, ventilator dyssynchrony",
+      "adultDose": "0.15-0.2 mg/kg bolus, then 1-3 mcg/kg/min (ACURASYS fixed 37.5 mg/h); atracurium 0.5 mg/kg then 0.3-0.6 mg/kg/h.",
+      "preparationIndia": "2 mg/mL; 100 mg in 50 mL = 2 mg/mL.",
+      "cautions": "Must ensure deep sedation and analgesia first; ICU-acquired weakness; eye care.",
+      "monitoring": "Train-of-four 1-2/4 plus clinical assessment.",
+      "refs": [
+        "sccm-nmb-2016"
+      ]
+    },
+    {
+      "id": "rocuronium",
+      "name": "Rocuronium",
+      "class": "Non-depolarising NMB (aminosteroid)",
+      "indications": "NMB infusion where benzylisoquinoliniums unavailable",
+      "adultDose": "0.6-1.2 mg/kg bolus; infusion 0.3-0.6 mg/kg/h.",
+      "renalHepatic": "Prolonged in hepatic/renal failure.",
+      "cautions": "Reversible with sugammadex.",
+      "refs": [
+        "sccm-nmb-2016"
+      ]
+    },
+    {
+      "id": "diazepam",
+      "name": "Diazepam",
+      "class": "Long-acting benzodiazepine",
+      "indications": "Alcohol withdrawal",
+      "adultDose": "10-20 mg IV/oral every 1-2 h (symptom-triggered or front-loading) until CIWA-Ar < 10 or light sedation; IV boluses 5-10 mg every 5-10 min for severe withdrawal/DTs.",
+      "preparationIndia": "5 mg/mL ampoules.",
+      "cautions": "Accumulation in liver disease and elderly (use lorazepam); respiratory depression.",
+      "refs": [
+        "asam-aws-2020"
+      ]
+    },
+    {
+      "id": "lorazepam",
+      "name": "Lorazepam",
+      "class": "Intermediate-acting benzodiazepine",
+      "indications": "Alcohol withdrawal in liver failure or elderly",
+      "adultDose": "1-4 mg IV every 5-15 min for severe withdrawal, or 2-4 mg oral every 1-2 h symptom-triggered.",
+      "verify": "IV lorazepam availability varies in India.",
+      "refs": [
+        "asam-aws-2020"
+      ]
+    },
+    {
+      "id": "phenobarbital",
+      "name": "Phenobarbital",
+      "class": "Barbiturate",
+      "indications": "Benzodiazepine-resistant alcohol withdrawal (or monotherapy protocols in ICU)",
+      "adultDose": "10 mg/kg IV over 30 min (single loading dose, ideal body weight), or 130-260 mg IV every 15-30 min titrated.",
+      "cautions": "Respiratory depression with benzodiazepines; long half-life.",
+      "verify": "Local protocol for phenobarbital loading.",
+      "refs": [
+        "asam-aws-2020"
+      ]
+    },
+    {
+      "id": "thiamine",
+      "name": "Thiamine",
+      "class": "Vitamin B1",
+      "indications": "Prevention/treatment of Wernicke encephalopathy in alcohol use or malnutrition",
+      "adultDose": "Prevention 100-200 mg IV daily; suspected Wernicke 200-500 mg IV three times daily for 3-5 days; give before glucose.",
+      "verify": "Dose for Wernicke varies between guidelines (200-500 mg TDS).",
+      "refs": [
+        "asam-aws-2020"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "padis2018",
+      "citation": "Devlin JW, Skrobik Y, Gelinas C, et al. Clinical Practice Guidelines for the Prevention and Management of Pain, Agitation/Sedation, Delirium, Immobility, and Sleep Disruption in Adult Patients in the ICU (PADIS). Crit Care Med 2018;46:e825-73.",
+      "url": "https://doi.org/10.1097/CCM.0000000000003299",
+      "year": 2018,
+      "type": "guideline",
+      "doi": "10.1097/CCM.0000000000003299"
+    },
+    {
+      "id": "padis-2025",
+      "citation": "Lewis K, Balas MC, Stollings JL, et al. A focused update to the clinical practice guidelines for the prevention and management of pain, anxiety, agitation/sedation, delirium, immobility, and sleep disruption in adult patients in the ICU. Crit Care Med 2025;53:e711-27.",
+      "url": "https://doi.org/10.1097/CCM.0000000000006574",
+      "year": 2025,
+      "type": "guideline",
+      "doi": "10.1097/CCM.0000000000006574"
+    },
+    {
+      "id": "ecash",
+      "citation": "Vincent JL, Shehabi Y, Walsh TS, et al. Comfort and patient-centred care without excessive sedation: the eCASH concept. Intensive Care Med 2016;42:962-71.",
+      "url": "https://doi.org/10.1007/s00134-016-4297-4",
+      "year": 2016,
+      "type": "consensus",
+      "doi": "10.1007/s00134-016-4297-4"
+    },
+    {
+      "id": "cpot-2006",
+      "citation": "Gelinas C, Fillion L, Puntillo KA, Viens C, Fortier M. Validation of the Critical-Care Pain Observation Tool in adult patients. Am J Crit Care 2006;15:420-7.",
+      "url": "https://doi.org/10.4037/ajcc2006.15.4.420",
+      "year": 2006,
+      "type": "trial",
+      "doi": "10.4037/ajcc2006.15.4.420"
+    },
+    {
+      "id": "rass-2002",
+      "citation": "Sessler CN, Gosnell MS, Grap MJ, et al. The Richmond Agitation-Sedation Scale: validity and reliability in adult intensive care unit patients. Am J Respir Crit Care Med 2002;166:1338-44.",
+      "url": "https://doi.org/10.1164/rccm.2107138",
+      "year": 2002,
+      "type": "trial",
+      "doi": "10.1164/rccm.2107138"
+    },
+    {
+      "id": "abc-trial",
+      "citation": "Girard TD, Kress JP, Fuchs BD, et al. Efficacy and safety of a paired sedation and ventilator weaning protocol for mechanically ventilated patients in intensive care (ABC trial). Lancet 2008;371:126-34.",
+      "url": "https://doi.org/10.1016/S0140-6736(08)60105-1",
+      "year": 2008,
+      "type": "trial",
+      "doi": "10.1016/S0140-6736(08)60105-1"
+    },
+    {
+      "id": "spice3",
+      "citation": "Shehabi Y, Howe BD, Bellomo R, et al. Early sedation with dexmedetomidine in critically ill patients (SPICE III). N Engl J Med 2019;380:2506-17.",
+      "url": "https://doi.org/10.1056/NEJMoa1904710",
+      "year": 2019,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1904710"
+    },
+    {
+      "id": "mends2",
+      "citation": "Hughes CG, Mailloux PT, Devlin JW, et al. Dexmedetomidine or propofol for sedation in mechanically ventilated adults with sepsis (MENDS2). N Engl J Med 2021;384:1424-36.",
+      "url": "https://doi.org/10.1056/NEJMoa2024922",
+      "year": 2021,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa2024922"
+    },
+    {
+      "id": "cam-icu-2001",
+      "citation": "Ely EW, Inouye SK, Bernard GR, et al. Delirium in mechanically ventilated patients: validity and reliability of the Confusion Assessment Method for the ICU (CAM-ICU). JAMA 2001;286:2703-10.",
+      "url": "https://doi.org/10.1001/jama.286.21.2703",
+      "year": 2001,
+      "type": "trial",
+      "doi": "10.1001/jama.286.21.2703"
+    },
+    {
+      "id": "mind-usa",
+      "citation": "Girard TD, Exline MC, Carson SS, et al. Haloperidol and ziprasidone for treatment of delirium in critical illness (MIND-USA). N Engl J Med 2018;379:2506-16.",
+      "url": "https://doi.org/10.1056/NEJMoa1808217",
+      "year": 2018,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1808217"
+    },
+    {
+      "id": "aid-icu",
+      "citation": "Andersen-Ranberg NC, Poulsen LM, Perner A, et al. Haloperidol for the treatment of delirium in ICU patients (AID-ICU). N Engl J Med 2022;387:2425-35.",
+      "url": "https://doi.org/10.1056/NEJMoa2211868",
+      "year": 2022,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa2211868"
+    },
+    {
+      "id": "sccm-nmb-2016",
+      "citation": "Murray MJ, DeBlock H, Erstad B, et al. Clinical practice guidelines for sustained neuromuscular blockade in the adult critically ill patient. Crit Care Med 2016;44:2079-103.",
+      "url": "https://doi.org/10.1097/CCM.0000000000002027",
+      "year": 2016,
+      "type": "guideline",
+      "doi": "10.1097/CCM.0000000000002027"
+    },
+    {
+      "id": "rose",
+      "citation": "National Heart, Lung, and Blood Institute PETAL Clinical Trials Network. Early neuromuscular blockade in the acute respiratory distress syndrome (ROSE). N Engl J Med 2019;380:1997-2008.",
+      "url": "https://doi.org/10.1056/NEJMoa1901686",
+      "year": 2019,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1901686"
+    },
+    {
+      "id": "asam-aws-2020",
+      "citation": "The ASAM clinical practice guideline on alcohol withdrawal management. J Addict Med 2020;14(3S Suppl 1):1-72.",
+      "url": "https://doi.org/10.1097/ADM.0000000000000668",
+      "year": 2020,
+      "type": "guideline",
+      "doi": "10.1097/ADM.0000000000000668"
+    }
+  ]
+}

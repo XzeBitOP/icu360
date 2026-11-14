@@ -1,0 +1,2445 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "trauma-burns-environmental",
+  "number": 5,
+  "folder": "05-trauma-burns-environmental",
+  "section": {
+    "id": "A",
+    "title": "Resuscitation and emergencies"
+  },
+  "phase": 2,
+  "title": "Trauma, burns and environmental emergencies",
+  "summary": "Trauma resuscitation (primary survey, damage-control resuscitation, massive transfusion, TXA), chest and abdominal injuries, burns with inhalation injury, heat stroke, drowning, hypothermia and electrical injury, with Indian context (road traffic injuries, heat waves, monsoon drowning).",
+  "tags": [
+    "trauma",
+    "ATLS",
+    "massive transfusion",
+    "TXA",
+    "burns",
+    "Parkland",
+    "inhalation injury",
+    "heat stroke",
+    "drowning",
+    "hypothermia",
+    "electrical injury"
+  ],
+  "relatedModules": [
+    "haematology-coagulation-transfusion",
+    "raised-icp-neurotrauma-brain-death",
+    "pocus-critical-care-echo",
+    "airway-management",
+    "cardiac-arrest-post-rosc",
+    "aki-renal-drug-dosing",
+    "procedures"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "flame",
+    "accent": "critical"
+  },
+  "viewKey": "module:trauma-burns-environmental",
+  "topics": [
+    {
+      "id": "primary-survey-massive-transfusion",
+      "title": "Primary survey and massive transfusion",
+      "summary": "ATLS primary survey (<C>ABCDE), damage-control resuscitation, tranexamic acid and activating the massive transfusion protocol.",
+      "viewKey": "topic:trauma-burns-environmental/primary-survey-massive-transfusion",
+      "uiHints": {
+        "icon": "droplet",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Massive transfusion is commonly defined as ≥ 10 units PRBC in 24 h, or ≥ 3-4 units in 1 hour with ongoing bleeding. Damage-control resuscitation = early haemorrhage control, permissive hypotension, early blood products in ratio, TXA, and avoiding the lethal triad (hypothermia, acidosis, coagulopathy).",
+          "refs": [
+            "eu-trauma-2023",
+            "atls10"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "<C> Catastrophic haemorrhage",
+            "detail": "Direct pressure, tourniquet for limb bleeding (note time), pelvic binder at the level of the greater trochanters for suspected pelvic fracture, haemostatic packing.",
+            "time": "0 min",
+            "refs": [
+              "atls10",
+              "eu-trauma-2023"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "A with C-spine protection",
+            "detail": "Manual in-line stabilisation; jaw thrust; definitive airway if GCS ≤ 8, airway burns, or failing oxygenation. RSI with reduced induction doses in shock (e.g. ketamine 0.5-1 mg/kg).",
+            "time": "0-2 min",
+            "refs": [
+              "atls10"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "B",
+            "detail": "Look for tension pneumothorax, open chest wound, massive haemothorax, flail chest: needle/finger thoracostomy, three-sided dressing, chest drain.",
+            "time": "2-4 min",
+            "refs": [
+              "atls10"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "C - identify bleeding",
+            "detail": "Two large-bore IVs (or IO), bloods incl. cross-match, ABG/lactate, fibrinogen. Sources: chest, abdomen, pelvis, long bones, external ('blood on the floor and four more'). eFAST.",
+            "time": "4-8 min",
+            "refs": [
+              "atls10"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Activate massive transfusion protocol",
+            "detail": "If shock index > 1, ABC score ≥ 2, or ongoing bleeding with haemodynamic instability: activate MTP. Give PRBC:FFP:platelets 1:1:1; avoid > 1 L crystalloid. Give TXA 1 g within 3 h of injury.",
+            "time": "ASAP",
+            "refs": [
+              "proppr",
+              "abc-score",
+              "crash2"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Permissive hypotension until haemorrhage control",
+            "detail": "Target SBP 80-90 mmHg (MAP 50-60) in penetrating/blunt trauma without brain injury; MAP ≥ 80 mmHg if severe TBI. Vasopressors only if life-threatening hypotension despite fluids/blood.",
+            "refs": [
+              "eu-trauma-2023"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Correct the lethal triad",
+            "detail": "Warm all fluids and the patient (core temp > 35 °C), keep ionised Ca > 1.1 mmol/L, fibrinogen > 1.5 g/L, platelets > 50 x10^9/L (> 100 if TBI or ongoing bleeding), avoid acidosis; use ROTEM/TEG if available.",
+            "refs": [
+              "eu-trauma-2023"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Definitive control",
+            "detail": "Damage-control surgery or angioembolisation within 60 min of arrival for unstable patients. Stop MTP when bleeding controlled; switch to lab-guided transfusion.",
+            "refs": [
+              "eu-trauma-2023"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "tranexamic-acid",
+            "role": "Antifibrinolytic, within 3 h",
+            "route": "IV",
+            "dose": "1 g over 10 min, then 1 g over 8 h",
+            "dilution": "1 g in 100 mL NS over 10 min; 1 g in 500 mL NS at 62.5 mL/h",
+            "notes": "Do not start beyond 3 h from injury.",
+            "refs": [
+              "crash2",
+              "eu-trauma-2023"
+            ]
+          },
+          {
+            "drugId": "prbc",
+            "role": "MTP pack component",
+            "route": "IV (warmed)",
+            "dose": "1:1:1 with FFP and platelets",
+            "target": "Hb 7-9 g/dL once bleeding controlled",
+            "workedExample": "MTP pack 1 = 4-6 PRBC + 4-6 FFP + 1 apheresis platelet (or 4-6 random-donor units)",
+            "refs": [
+              "proppr"
+            ]
+          },
+          {
+            "drugId": "cryoprecipitate",
+            "role": "Fibrinogen replacement",
+            "route": "IV",
+            "dose": "Cryo 1 unit/10 kg or fibrinogen concentrate 3-4 g if fibrinogen < 1.5 g/L",
+            "verify": "Local cryoprecipitate fibrinogen content varies.",
+            "refs": [
+              "eu-trauma-2023"
+            ]
+          },
+          {
+            "drugId": "calcium-chloride",
+            "role": "Prevent citrate-induced hypocalcaemia",
+            "route": "IV",
+            "dose": "Calcium gluconate 10% 30 mL (or CaCl 10% 10 mL) per 4 units of blood or as per ionised Ca",
+            "target": "Ionised Ca > 1.1 mmol/L",
+            "verify": "Empirical dosing per unit transfused varies between protocols.",
+            "refs": [
+              "eu-trauma-2023"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "abc-score-table",
+            "title": "ABC score for predicting massive transfusion (1 point each, ≥ 2 = activate)",
+            "columns": [
+              "Criterion",
+              "Point"
+            ],
+            "rows": [
+              [
+                "Penetrating mechanism",
+                "1"
+              ],
+              [
+                "SBP ≤ 90 mmHg in ED",
+                "1"
+              ],
+              [
+                "HR ≥ 120 in ED",
+                "1"
+              ],
+              [
+                "Positive FAST",
+                "1"
+              ]
+            ],
+            "refs": [
+              "abc-score"
+            ]
+          },
+          {
+            "id": "hemorrhage-class",
+            "title": "ATLS classes of haemorrhage (70 kg adult)",
+            "columns": [
+              "Class",
+              "Blood loss",
+              "HR",
+              "BP",
+              "Action"
+            ],
+            "rows": [
+              [
+                "I",
+                "< 15% (< 750 mL)",
+                "Normal",
+                "Normal",
+                "Observe, minimal fluid"
+              ],
+              [
+                "II",
+                "15-30%",
+                "Mild tachycardia",
+                "Normal, narrow pulse pressure",
+                "Crystalloid, possibly blood"
+              ],
+              [
+                "III",
+                "31-40%",
+                "Tachycardia > 120",
+                "Decreased",
+                "Blood products, MTP likely"
+              ],
+              [
+                "IV",
+                "> 40%",
+                "Marked tachycardia or brady",
+                "Severely low",
+                "MTP, immediate surgery"
+              ]
+            ],
+            "refs": [
+              "atls10"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Shock index (HR/SBP) > 1, base deficit > 6 mmol/L or lactate > 4 mmol/L in trauma indicates major haemorrhage.",
+            "refs": [
+              "eu-trauma-2023"
+            ]
+          },
+          {
+            "text": "Narrow pulse pressure and tachycardia with 'normal' SBP = class II-III haemorrhage in young adults.",
+            "refs": [
+              "atls10"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Large-volume crystalloid before blood: worsens dilutional coagulopathy, acidosis and hypothermia.",
+            "refs": [
+              "eu-trauma-2023"
+            ]
+          },
+          {
+            "text": "Forgetting calcium: citrate in blood products causes hypocalcaemia that impairs clotting and contractility.",
+            "refs": [
+              "eu-trauma-2023"
+            ]
+          },
+          {
+            "text": "Giving TXA after 3 hours: CRASH-2 showed increased deaths from bleeding when started late.",
+            "refs": [
+              "crash2"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Order FFP the moment you suspect major bleeding: thawing takes 20-30 minutes.",
+            "refs": [
+              "eu-trauma-2023"
+            ]
+          },
+          {
+            "text": "A pelvic binder belongs over the greater trochanters, not the iliac crests.",
+            "refs": [
+              "atls10"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Major trauma haemorrhage",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Major trauma arrives"
+          },
+          {
+            "id": "cat",
+            "type": "decision",
+            "text": "Catastrophic external bleeding?"
+          },
+          {
+            "id": "tq",
+            "type": "action",
+            "text": "Pressure, tourniquet, pelvic binder, packing",
+            "severity": "critical"
+          },
+          {
+            "id": "abc",
+            "type": "action",
+            "text": "A (C-spine), B (decompress, seal), C (2 large-bore IV, bloods, eFAST)"
+          },
+          {
+            "id": "shock",
+            "type": "decision",
+            "text": "Shock index > 1 or ABC score ≥ 2 or ongoing bleeding?"
+          },
+          {
+            "id": "mtp",
+            "type": "action",
+            "text": "Activate MTP 1:1:1, TXA 1 g if < 3 h, warm, calcium",
+            "severity": "critical"
+          },
+          {
+            "id": "tbi",
+            "type": "decision",
+            "text": "Severe TBI?"
+          },
+          {
+            "id": "map80",
+            "type": "action",
+            "text": "Target MAP ≥ 80 mmHg"
+          },
+          {
+            "id": "permh",
+            "type": "action",
+            "text": "Permissive hypotension SBP 80-90 until control"
+          },
+          {
+            "id": "resp",
+            "type": "decision",
+            "text": "Responds and source identified?"
+          },
+          {
+            "id": "or",
+            "type": "end",
+            "text": "Damage-control surgery / angioembolisation < 60 min",
+            "severity": "critical"
+          },
+          {
+            "id": "ct",
+            "type": "end",
+            "text": "CT trauma scan, definitive care, lab/ROTEM-guided transfusion"
+          },
+          {
+            "id": "std",
+            "type": "end",
+            "text": "Secondary survey, CT, standard resuscitation"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "cat"
+          },
+          {
+            "from": "cat",
+            "to": "tq",
+            "label": "Yes"
+          },
+          {
+            "from": "cat",
+            "to": "abc",
+            "label": "No"
+          },
+          {
+            "from": "tq",
+            "to": "abc"
+          },
+          {
+            "from": "abc",
+            "to": "shock"
+          },
+          {
+            "from": "shock",
+            "to": "mtp",
+            "label": "Yes"
+          },
+          {
+            "from": "shock",
+            "to": "std",
+            "label": "No"
+          },
+          {
+            "from": "mtp",
+            "to": "tbi"
+          },
+          {
+            "from": "tbi",
+            "to": "map80",
+            "label": "Yes"
+          },
+          {
+            "from": "tbi",
+            "to": "permh",
+            "label": "No"
+          },
+          {
+            "from": "map80",
+            "to": "resp"
+          },
+          {
+            "from": "permh",
+            "to": "resp"
+          },
+          {
+            "from": "resp",
+            "to": "ct",
+            "label": "Yes"
+          },
+          {
+            "from": "resp",
+            "to": "or",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "eu-trauma-2023",
+          "atls10"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Trauma-induced coagulopathy starts within minutes of injury from tissue damage and shock (activated protein C, hyperfibrinolysis, fibrinogen depletion), and is worsened by dilution, hypothermia, acidosis and hypocalcaemia. Fibrinogen is the first factor to reach critically low levels.",
+        "evidence": "- CRASH-2 (20,211 patients): TXA reduced all-cause mortality (14.5% vs 16.0%) and bleeding deaths, greatest if given within 1 h; harm if after 3 h [CRASH-2 2010].\n- PROPPR: 1:1:1 vs 1:1:2 did not change 24-h or 30-day mortality, but more patients achieved haemostasis and fewer died of exsanguination at 24 h with 1:1:1 [Holcomb 2015].\n- European guideline 6th edition (2023): permissive hypotension, early fibrinogen, viscoelastic-guided therapy, calcium monitoring [Rossaint 2023].",
+        "controversies": "- Whole blood versus component therapy; prehospital plasma; fixed ratios versus early goal-directed viscoelastic therapy.\n- REBOA use is limited and not recommended routinely.",
+        "indiaNotes": "- Road traffic injuries are a leading cause of death in young Indians; most district hospitals lack platelets on demand. Plan transfers early and use fresh whole blood where component therapy is unavailable (per blood bank policy).\n- TXA is cheap and widely available: give it in the ED or ambulance within 3 h.\n- MTP should be written with the hospital blood bank (pack composition, who activates, runner, O-negative stock)."
+      },
+      "drugIds": [
+        "tranexamic-acid",
+        "prbc",
+        "cryoprecipitate",
+        "calcium-chloride"
+      ],
+      "calculatorIds": [
+        "shock-index",
+        "mean-arterial-pressure"
+      ],
+      "references": [
+        "eu-trauma-2023",
+        "crash2",
+        "proppr",
+        "abc-score",
+        "atls10"
+      ],
+      "quiz": [
+        {
+          "id": "primary-survey-massive-transfusion-q1",
+          "stem": "A trauma patient arrives 4 hours after injury, bleeding. Should TXA be started?",
+          "options": [
+            "Yes, 1 g bolus then 1 g over 8 h",
+            "No, benefit is only within 3 h and late use increased bleeding deaths",
+            "Yes, 2 g bolus",
+            "Only if fibrinogen < 1 g/L"
+          ],
+          "answerIndex": 1,
+          "explanation": "CRASH-2 subgroup analysis: TXA started after 3 h increased risk of death from bleeding."
+        },
+        {
+          "id": "primary-survey-massive-transfusion-q2",
+          "stem": "ABC score components include all EXCEPT:",
+          "options": [
+            "Penetrating mechanism",
+            "Positive FAST",
+            "HR ≥ 120",
+            "Haemoglobin < 10 g/dL"
+          ],
+          "answerIndex": 3,
+          "explanation": "ABC uses penetrating mechanism, SBP ≤ 90, HR ≥ 120 and positive FAST; no lab values."
+        },
+        {
+          "id": "primary-survey-massive-transfusion-q3",
+          "stem": "Target blood pressure in a bleeding trauma patient WITH severe TBI:",
+          "options": [
+            "SBP 80-90 mmHg",
+            "MAP ≥ 80 mmHg",
+            "MAP 55 mmHg",
+            "No target"
+          ],
+          "answerIndex": 1,
+          "explanation": "Permissive hypotension is contraindicated in TBI because cerebral perfusion depends on MAP."
+        },
+        {
+          "id": "primary-survey-massive-transfusion-q4",
+          "stem": "Which is NOT part of the lethal triad?",
+          "options": [
+            "Hypothermia",
+            "Acidosis",
+            "Coagulopathy",
+            "Hypernatraemia"
+          ],
+          "answerIndex": 3,
+          "explanation": "The triad is hypothermia, acidosis, coagulopathy; hypocalcaemia is sometimes added (the 'lethal diamond')."
+        }
+      ]
+    },
+    {
+      "id": "chest-abdominal-trauma",
+      "title": "Chest and abdominal trauma",
+      "summary": "Recognising and treating the immediately life-threatening chest injuries, and decision-making for blunt and penetrating abdominal trauma.",
+      "viewKey": "topic:trauma-burns-environmental/chest-abdominal-trauma",
+      "uiHints": {
+        "icon": "shield",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Immediately life-threatening chest injuries (ATLS): airway obstruction, tension pneumothorax, open pneumothorax, massive haemothorax, flail chest with pulmonary contusion, cardiac tamponade.",
+          "refs": [
+            "atls10"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Tension pneumothorax: treat clinically",
+            "detail": "Respiratory distress, hypotension, absent breath sounds, distended neck veins (may be absent in hypovolaemia), tracheal deviation late. Decompress immediately: needle at 4th/5th intercostal space anterior to mid-axillary line (adults), or 2nd ICS mid-clavicular; then finger thoracostomy and chest drain.",
+            "time": "Immediate",
+            "refs": [
+              "atls10"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Open pneumothorax",
+            "detail": "Three-sided occlusive dressing, then chest drain away from the wound.",
+            "refs": [
+              "atls10"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Massive haemothorax",
+            "detail": "> 1500 mL immediately on drain insertion, or > 200 mL/h for 2-4 h, or ongoing transfusion need: blood products and urgent thoracotomy. Use 28-32 Fr drain in trauma (or smaller per local practice).",
+            "refs": [
+              "atls10"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Flail chest and rib fractures",
+            "detail": "Analgesia is the treatment: paracetamol, opioids, regional blocks (serratus anterior, erector spinae, epidural). Oxygen, incentive spirometry, early NIV/HFNC; intubate if failing. Consider surgical rib fixation for flail.",
+            "refs": [
+              "atls10"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Cardiac tamponade",
+            "detail": "Beck triad (hypotension, raised JVP, muffled heart sounds), eFAST pericardial fluid. Penetrating: thoracotomy/sternotomy by surgeon; pericardiocentesis only as a bridge if no surgeon.",
+            "refs": [
+              "atls10"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Abdominal trauma: unstable",
+            "detail": "Haemodynamically unstable + positive FAST (blunt) or penetrating with peritonitis/evisceration: straight to laparotomy (damage control).",
+            "refs": [
+              "atls10",
+              "eu-trauma-2023"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Abdominal trauma: stable",
+            "detail": "Contrast CT abdomen/pelvis. Solid organ injury (liver, spleen) in stable patients: non-operative management with ICU/HDU monitoring, serial Hb and examination, angioembolisation for blush.",
+            "refs": [
+              "eu-trauma-2023"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Watch for missed injuries",
+            "detail": "Hollow viscus and pancreatic injuries can be missed on early CT; tertiary survey at 24 h. Monitor intra-abdominal pressure after massive transfusion.",
+            "refs": [
+              "atls10"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "chest-killers",
+            "title": "Thoracic killers: signs and action",
+            "columns": [
+              "Injury",
+              "Key signs",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Tension pneumothorax",
+                "Hypotension, absent breath sounds, hyperresonance",
+                "Needle/finger decompression, drain"
+              ],
+              [
+                "Open pneumothorax",
+                "Sucking wound",
+                "3-sided dressing, drain"
+              ],
+              [
+                "Massive haemothorax",
+                "Dull percussion, shock, > 1500 mL drained",
+                "Blood, drain, thoracotomy"
+              ],
+              [
+                "Flail chest",
+                "Paradoxical segment, hypoxia",
+                "Analgesia, O2, NIV, ventilation"
+              ],
+              [
+                "Tamponade",
+                "Beck triad, eFAST effusion",
+                "Surgery; pericardiocentesis as bridge"
+              ]
+            ],
+            "refs": [
+              "atls10"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Hypotension after intubation and positive-pressure ventilation in chest trauma = tension pneumothorax until proven otherwise.",
+            "refs": [
+              "atls10"
+            ]
+          },
+          {
+            "text": "Drain output > 200 mL/h for 2-4 h or > 1500 mL initially: call cardiothoracic surgeon.",
+            "refs": [
+              "atls10"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Waiting for a chest X-ray to diagnose tension pneumothorax.",
+            "refs": [
+              "atls10"
+            ]
+          },
+          {
+            "text": "Sending an unstable patient to CT. 'CT is the doughnut of death' for the haemodynamically unstable.",
+            "refs": [
+              "eu-trauma-2023"
+            ]
+          },
+          {
+            "text": "Under-treating rib fracture pain in the elderly: each additional rib fracture increases pneumonia and mortality risk.",
+            "refs": [
+              "atls10"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Ultrasound (eFAST) detects pneumothorax (absent lung sliding, lung point) more sensitively than supine CXR.",
+            "refs": [
+              "atls10"
+            ]
+          },
+          {
+            "text": "Seat-belt sign on the abdomen: suspect bowel and lumbar spine (Chance) injuries.",
+            "refs": [
+              "atls10"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Blunt abdominal trauma",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Blunt abdominal trauma"
+          },
+          {
+            "id": "stable",
+            "type": "decision",
+            "text": "Haemodynamically stable (or responds to resuscitation)?"
+          },
+          {
+            "id": "fast",
+            "type": "decision",
+            "text": "eFAST positive?"
+          },
+          {
+            "id": "lap",
+            "type": "end",
+            "text": "Damage-control laparotomy",
+            "severity": "critical"
+          },
+          {
+            "id": "other",
+            "type": "action",
+            "text": "Search other sources (chest, pelvis, long bones, external); pelvic binder; angio"
+          },
+          {
+            "id": "ct",
+            "type": "action",
+            "text": "Contrast CT abdomen/pelvis"
+          },
+          {
+            "id": "injury",
+            "type": "decision",
+            "text": "Solid organ injury with active blush?"
+          },
+          {
+            "id": "angio",
+            "type": "end",
+            "text": "Angioembolisation + ICU monitoring",
+            "severity": "high"
+          },
+          {
+            "id": "nom",
+            "type": "end",
+            "text": "Non-operative management: serial Hb, exam 4-6 hourly, HDU/ICU"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "stable"
+          },
+          {
+            "from": "stable",
+            "to": "ct",
+            "label": "Yes"
+          },
+          {
+            "from": "stable",
+            "to": "fast",
+            "label": "No"
+          },
+          {
+            "from": "fast",
+            "to": "lap",
+            "label": "Yes"
+          },
+          {
+            "from": "fast",
+            "to": "other",
+            "label": "No"
+          },
+          {
+            "from": "ct",
+            "to": "injury"
+          },
+          {
+            "from": "injury",
+            "to": "angio",
+            "label": "Yes"
+          },
+          {
+            "from": "injury",
+            "to": "nom",
+            "label": "No"
+          },
+          {
+            "from": "other",
+            "to": "ct"
+          }
+        ],
+        "refs": [
+          "atls10",
+          "eu-trauma-2023"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Positive-pressure ventilation converts a simple pneumothorax into tension by forcing air into the pleural space, compressing venous return. Pulmonary contusion evolves over 24-72 h, so oxygenation often worsens after admission.",
+        "evidence": "- ATLS 10th edition moved the adult needle decompression site to the 4th/5th ICS anterior to the mid-axillary line because chest wall thickness at the 2nd ICS often exceeds standard needle length [ATLS 2018].\n- Non-operative management of solid organ injury succeeds in most haemodynamically stable patients when CT, angioembolisation and ICU monitoring are available [EU trauma 2023].",
+        "controversies": "- Small-bore (14 Fr) versus large-bore drains for traumatic haemothorax: emerging evidence supports smaller drains in stable patients.\n- Prophylactic antibiotics for chest drains in trauma.",
+        "indiaNotes": "- Most Indian chest trauma is blunt from road traffic accidents; delayed presentation is common. Re-examine after transfer: contusion and haemothorax progress.\n- Where CT is not available, serial eFAST and clinical examination guide decisions; transfer stable solid-organ injuries to centres with surgery and interventional radiology."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "shock-index"
+      ],
+      "references": [
+        "atls10",
+        "eu-trauma-2023"
+      ],
+      "quiz": [
+        {
+          "id": "chest-abdominal-trauma-q1",
+          "stem": "Intubated chest-trauma patient becomes hypotensive with rising airway pressures and absent breath sounds on the left. Next step:",
+          "options": [
+            "Chest X-ray",
+            "Immediate left needle/finger decompression",
+            "Fluid bolus and observe",
+            "CT chest"
+          ],
+          "answerIndex": 1,
+          "explanation": "Tension pneumothorax is a clinical diagnosis; decompress immediately."
+        },
+        {
+          "id": "chest-abdominal-trauma-q2",
+          "stem": "Criterion for urgent thoracotomy in haemothorax:",
+          "options": [
+            "200 mL initial drainage",
+            "> 1500 mL immediately or > 200 mL/h for 2-4 h",
+            "Any blood on drain",
+            "Pain on breathing"
+          ],
+          "answerIndex": 1,
+          "explanation": "ATLS thresholds for massive haemothorax."
+        },
+        {
+          "id": "chest-abdominal-trauma-q3",
+          "stem": "Haemodynamically stable blunt trauma with a splenic laceration on CT and no blush. Management:",
+          "options": [
+            "Splenectomy",
+            "Non-operative management with monitoring",
+            "Discharge",
+            "Angioembolisation always"
+          ],
+          "answerIndex": 1,
+          "explanation": "NOM with serial Hb and exam in HDU/ICU is standard for stable patients without blush."
+        }
+      ]
+    },
+    {
+      "id": "burns-resuscitation-inhalation",
+      "title": "Burns: resuscitation and inhalation injury",
+      "summary": "TBSA estimation, Parkland/ABA fluid resuscitation, airway and inhalation injury, CO and cyanide, escharotomy and early ICU care.",
+      "viewKey": "topic:trauma-burns-environmental/burns-resuscitation-inhalation",
+      "uiHints": {
+        "icon": "flame",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Major burn (adult): partial or full thickness ≥ 20% TBSA (≥ 15% in many protocols), or any burn with inhalation injury, high-voltage electrical injury, or burns of face, hands, perineum or circumferential limbs. Formal fluid resuscitation is needed above ~20% TBSA in adults.",
+          "refs": [
+            "isbi-2016",
+            "atls10"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Stop the burning, cool, cover",
+            "detail": "Remove clothing and jewellery; cool burn with running tap water for 20 min (within 3 h); cover with cling film; keep the patient warm (avoid hypothermia).",
+            "time": "0 min",
+            "refs": [
+              "isbi-2016"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Airway: look for inhalation injury",
+            "detail": "Enclosed-space fire, facial/neck burns, singed nasal hair, carbonaceous sputum, hoarseness, stridor, soot in mouth. Intubate early if stridor, deep facial burns, GCS ≤ 8, or large burns needing transfer; use uncut ETT ≥ 7.5-8.0.",
+            "time": "0-10 min",
+            "refs": [
+              "isbi-2016",
+              "atls10"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "CO and cyanide",
+            "detail": "100% oxygen via non-rebreather or ventilator for CO (SpO2 is falsely normal: check COHb on co-oximetry). Suspect cyanide if coma, shock and lactate > 8 mmol/L: hydroxocobalamin 5 g IV.",
+            "refs": [
+              "isbi-2016"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Estimate TBSA and depth",
+            "detail": "Rule of nines (adults) or Lund-Browder chart; patient's palm with fingers ~1%. Exclude simple erythema (superficial burns).",
+            "refs": [
+              "isbi-2016"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Calculate fluids from time of burn",
+            "detail": "Ringer lactate 2-4 mL/kg/%TBSA over 24 h (Parkland 4 mL; ATLS/ABA start 2 mL/kg/%TBSA in adults); half in first 8 h from injury, rest over next 16 h. Electrical injury: 4 mL/kg/%TBSA.",
+            "refs": [
+              "isbi-2016",
+              "atls10"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Titrate hourly to urine output",
+            "detail": "Urinary catheter. Target 0.5 mL/kg/h (30-50 mL/h) in adults; 1-1.5 mL/kg/h if myoglobinuria. Increase rate by 20-30% if below target; decrease if above. Avoid fluid creep (> 6 mL/kg/%TBSA).",
+            "time": "Hourly",
+            "refs": [
+              "isbi-2016"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Escharotomy and compartments",
+            "detail": "Circumferential full-thickness burns of limbs or chest restricting ventilation: escharotomy. Monitor intra-abdominal pressure in large burns with high fluid volumes.",
+            "refs": [
+              "isbi-2016"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Early ICU care",
+            "detail": "Early enteral feeding (< 24 h), high protein (1.5-2 g/kg/day), DVT prophylaxis, tetanus, no prophylactic systemic antibiotics, glucose control, early excision and grafting, pain management.",
+            "refs": [
+              "isbi-2016"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "ringer-lactate",
+            "role": "Burns resuscitation",
+            "route": "IV",
+            "dose": "2-4 mL/kg/%TBSA over 24 h; half in first 8 h from time of burn",
+            "target": "Urine 0.5 mL/kg/h",
+            "workedExample": "70 kg, 40% TBSA, Parkland 4 mL: 11,200 mL/24 h; 5,600 mL in first 8 h = 700 mL/h (if started at injury). With 2 mL/kg/%TBSA: 5,600 mL/24 h, 350 mL/h for 8 h.",
+            "calculatorId": "burns-fluid-24h",
+            "notes": "Subtract fluid already given; time starts from burn, not from arrival.",
+            "refs": [
+              "isbi-2016",
+              "atls10"
+            ]
+          },
+          {
+            "drugId": "oxygen",
+            "role": "CO poisoning",
+            "route": "Non-rebreather / ETT FiO2 1.0",
+            "dose": "100% oxygen until COHb < 3% and symptoms resolve",
+            "refs": [
+              "isbi-2016"
+            ]
+          },
+          {
+            "drugId": "hydroxocobalamin",
+            "role": "Cyanide toxicity",
+            "route": "IV",
+            "dose": "5 g over 15 min; repeat once if needed",
+            "verify": "Availability in Indian hospitals is limited.",
+            "refs": [
+              "isbi-2016"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "rule-of-nines",
+            "title": "Rule of nines (adult)",
+            "columns": [
+              "Region",
+              "% TBSA"
+            ],
+            "rows": [
+              [
+                "Head and neck",
+                "9"
+              ],
+              [
+                "Each upper limb",
+                "9"
+              ],
+              [
+                "Anterior trunk",
+                "18"
+              ],
+              [
+                "Posterior trunk",
+                "18"
+              ],
+              [
+                "Each lower limb",
+                "18"
+              ],
+              [
+                "Perineum",
+                "1"
+              ]
+            ],
+            "refs": [
+              "atls10"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Hoarseness, stridor or soot in the mouth: airway oedema progresses for 24-48 h; intubate early before swelling makes it impossible.",
+            "refs": [
+              "isbi-2016"
+            ]
+          },
+          {
+            "text": "Urine output persistently < 0.5 mL/kg/h despite increased fluids, or dark urine (myoglobin): senior review, check compartments.",
+            "refs": [
+              "isbi-2016"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Counting erythema (superficial burns) in TBSA leads to over-resuscitation.",
+            "refs": [
+              "isbi-2016"
+            ]
+          },
+          {
+            "text": "Starting the 8-hour clock at hospital arrival instead of time of burn.",
+            "refs": [
+              "isbi-2016"
+            ]
+          },
+          {
+            "text": "Trusting SpO2 in CO poisoning; pulse oximeters read carboxyhaemoglobin as oxyhaemoglobin.",
+            "refs": [
+              "isbi-2016"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Formulas are only a starting point; urine output and perfusion guide the rate. Consider albumin rescue if fluid needs exceed 1.5x predicted.",
+            "refs": [
+              "isbi-2016"
+            ]
+          },
+          {
+            "text": "Do not cut the ETT in facial burns: swelling can pull a cut tube out.",
+            "refs": [
+              "isbi-2016"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Major burn: first hours",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Burn patient arrives"
+          },
+          {
+            "id": "cool",
+            "type": "action",
+            "text": "Stop burning, cool 20 min, cover, keep warm, 100% O2"
+          },
+          {
+            "id": "airway",
+            "type": "decision",
+            "text": "Signs of inhalation injury or airway threat?"
+          },
+          {
+            "id": "intub",
+            "type": "action",
+            "text": "Early intubation, uncut ETT ≥ 7.5",
+            "severity": "critical"
+          },
+          {
+            "id": "tbsa",
+            "type": "action",
+            "text": "Estimate TBSA (rule of nines / Lund-Browder)"
+          },
+          {
+            "id": "big",
+            "type": "decision",
+            "text": "TBSA ≥ 20% (adult)?"
+          },
+          {
+            "id": "fluids",
+            "type": "action",
+            "text": "RL 2-4 mL/kg/%TBSA/24 h, half in 8 h from burn; catheter",
+            "severity": "high"
+          },
+          {
+            "id": "oral",
+            "type": "action",
+            "text": "Oral/maintenance fluids, analgesia, dressing"
+          },
+          {
+            "id": "uo",
+            "type": "decision",
+            "text": "Urine 0.5 mL/kg/h?"
+          },
+          {
+            "id": "adj",
+            "type": "action",
+            "text": "Adjust rate 20-30% hourly; check compartments/escharotomy"
+          },
+          {
+            "id": "transfer",
+            "type": "end",
+            "text": "Refer to burns centre; ICU care (nutrition, DVT, no prophylactic antibiotics)"
+          },
+          {
+            "id": "ward",
+            "type": "end",
+            "text": "Burns unit/ward care"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "cool"
+          },
+          {
+            "from": "cool",
+            "to": "airway"
+          },
+          {
+            "from": "airway",
+            "to": "intub",
+            "label": "Yes"
+          },
+          {
+            "from": "airway",
+            "to": "tbsa",
+            "label": "No"
+          },
+          {
+            "from": "intub",
+            "to": "tbsa"
+          },
+          {
+            "from": "tbsa",
+            "to": "big"
+          },
+          {
+            "from": "big",
+            "to": "fluids",
+            "label": "Yes"
+          },
+          {
+            "from": "big",
+            "to": "oral",
+            "label": "No"
+          },
+          {
+            "from": "fluids",
+            "to": "uo"
+          },
+          {
+            "from": "uo",
+            "to": "transfer",
+            "label": "Yes"
+          },
+          {
+            "from": "uo",
+            "to": "adj",
+            "label": "No"
+          },
+          {
+            "from": "adj",
+            "to": "transfer"
+          },
+          {
+            "from": "oral",
+            "to": "ward"
+          }
+        ],
+        "refs": [
+          "isbi-2016",
+          "atls10"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Burns > 20% TBSA trigger systemic capillary leak peaking at 8-12 h, causing burn shock. Inhalation injury adds airway oedema, chemical pneumonitis and systemic toxins (CO binds haemoglobin 200-250 times more avidly than O2; cyanide blocks cytochrome oxidase).",
+        "evidence": "- ISBI 2016 guidelines: individualised fluid resuscitation guided by urine output; early excision; early enteral nutrition [ISBI 2016].\n- 'Fluid creep' (resuscitation volumes far exceeding Parkland) is associated with abdominal compartment syndrome and death; hence ABA/ATLS start at 2 mL/kg/%TBSA in adults.",
+        "controversies": "- Colloid (albumin) rescue timing; hyperbaric oxygen for CO poisoning is rarely available and evidence is mixed.\n- High-dose vitamin C in burn resuscitation is not routinely recommended.",
+        "indiaNotes": "- India has a high burden of burns, many from kerosene stoves, LPG cylinders and in young women (including suspected dowry-related burns). Burns in women require medico-legal documentation and police intimation (MLC) and a dying declaration if appropriate.\n- Electrical burns from high-tension lines are common in agricultural workers.\n- Silver sulfadiazine dressings are widely used; follow local burns-unit protocol."
+      },
+      "drugIds": [
+        "ringer-lactate",
+        "oxygen",
+        "hydroxocobalamin"
+      ],
+      "calculatorIds": [
+        "burns-fluid-24h"
+      ],
+      "references": [
+        "isbi-2016",
+        "atls10"
+      ],
+      "quiz": [
+        {
+          "id": "burns-resuscitation-inhalation-q1",
+          "stem": "A 60 kg adult has 30% TBSA burns 2 hours ago. Using 4 mL/kg/%TBSA, how much fluid in the first 8 h from injury (none given yet)?",
+          "options": [
+            "3,600 mL",
+            "7,200 mL",
+            "1,800 mL",
+            "14,400 mL"
+          ],
+          "answerIndex": 0,
+          "explanation": "4 x 60 x 30 = 7,200 mL/24 h; half (3,600 mL) in first 8 h from injury, so it must be given over the remaining 6 h (600 mL/h)."
+        },
+        {
+          "id": "burns-resuscitation-inhalation-q2",
+          "stem": "Target urine output in adult burn resuscitation (no myoglobinuria):",
+          "options": [
+            "0.1 mL/kg/h",
+            "0.5 mL/kg/h",
+            "2 mL/kg/h",
+            "3 mL/kg/h"
+          ],
+          "answerIndex": 1,
+          "explanation": "0.5 mL/kg/h (30-50 mL/h); higher (1-1.5 mL/kg/h) if myoglobinuria."
+        },
+        {
+          "id": "burns-resuscitation-inhalation-q3",
+          "stem": "Which test is required to diagnose CO poisoning?",
+          "options": [
+            "Pulse oximetry",
+            "Co-oximetry (COHb) on blood gas",
+            "Chest X-ray",
+            "ECG"
+          ],
+          "answerIndex": 1,
+          "explanation": "Standard pulse oximetry overestimates SaO2 in CO poisoning; measure COHb."
+        }
+      ]
+    },
+    {
+      "id": "heat-stroke",
+      "title": "Heat stroke",
+      "summary": "Rapid recognition and cooling of classic and exertional heat stroke, and ICU management of its multi-organ complications.",
+      "viewKey": "topic:trauma-burns-environmental/heat-stroke",
+      "uiHints": {
+        "icon": "thermometer-sun",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Heat stroke = core temperature > 40 °C with CNS dysfunction (confusion, delirium, seizures, coma) after heat exposure. Classic (elderly, chronic illness, heat waves) or exertional (young labourers, athletes, soldiers). Cool first, transport second.",
+          "refs": [
+            "epstein-heatstroke",
+            "ncdc-cooling-2024"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Measure core temperature",
+            "detail": "Rectal (or oesophageal/bladder) temperature. Oral, axillary and tympanic readings underestimate.",
+            "time": "0 min",
+            "refs": [
+              "ncdc-cooling-2024",
+              "wms-heat-2019"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Start cooling within 30 minutes",
+            "detail": "Best: cold/ice-water immersion (whole body to neck) for exertional heat stroke, cooling ≥ 0.15 °C/min. If immersion not feasible: strip, spray with water and fan continuously (evaporative), ice packs to neck, axillae and groin, cold wet sheets ('tarp-assisted cooling'). Air conditioning alone is inadequate.",
+            "time": "< 30 min",
+            "refs": [
+              "ncdc-cooling-2024",
+              "epstein-heatstroke"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Cool to target and stop",
+            "detail": "Aim to reach 39 °C quickly (within 30 min) and stop active cooling at 38.5-39 °C to avoid overshoot hypothermia; monitor temperature continuously.",
+            "refs": [
+              "ncdc-cooling-2024",
+              "wms-heat-2019"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "ABC and supportive care",
+            "detail": "Airway protection if GCS ≤ 8 or seizures; oxygen; IV access; cautious isotonic fluids (e.g. 1-2 L, guided by perfusion/POCUS; classic heat stroke in elderly is often not very volume depleted). Benzodiazepines for shivering or seizures.",
+            "refs": [
+              "epstein-heatstroke"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Labs and monitoring",
+            "detail": "Glucose (hypoglycaemia common), electrolytes (Na, K, Ca, PO4), CK, LFT, coagulation (DIC), renal function, ABG/lactate, urine myoglobin, ECG, troponin.",
+            "refs": [
+              "epstein-heatstroke"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Treat complications",
+            "detail": "Rhabdomyolysis: fluids to urine 1-2 mL/kg/h; AKI: RRT as needed; acute liver injury (transaminases peak at 24-72 h); DIC: blood products if bleeding; ARDS; seizures.",
+            "refs": [
+              "epstein-heatstroke"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Avoid ineffective or harmful treatments",
+            "detail": "Antipyretics (paracetamol, NSAIDs) do not work in heat stroke and may harm liver/kidneys. Dantrolene is not recommended.",
+            "refs": [
+              "epstein-heatstroke",
+              "wms-heat-2019"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "diazepam",
+            "role": "Shivering or seizures during cooling",
+            "route": "IV",
+            "dose": "Midazolam 1-2 mg IV repeated, or diazepam 5-10 mg IV",
+            "refs": [
+              "epstein-heatstroke"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "cooling-methods",
+            "title": "Cooling methods (approximate rates)",
+            "columns": [
+              "Method",
+              "Cooling rate",
+              "Use"
+            ],
+            "rows": [
+              [
+                "Cold-water / ice-water immersion",
+                "~0.15-0.35 °C/min",
+                "Gold standard for exertional heat stroke"
+              ],
+              [
+                "Evaporative (spray + fan)",
+                "~0.05-0.1 °C/min",
+                "When immersion not feasible; classic heat stroke"
+              ],
+              [
+                "Ice packs to neck, axillae, groin",
+                "Low alone",
+                "Adjunct"
+              ],
+              [
+                "Air-conditioned room only",
+                "0.03-0.06 °C/min",
+                "Unacceptable as sole method"
+              ]
+            ],
+            "refs": [
+              "ncdc-cooling-2024"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Any heat-exposed patient with confusion and temperature > 40 °C: start cooling immediately, before investigations.",
+            "refs": [
+              "ncdc-cooling-2024"
+            ]
+          },
+          {
+            "text": "Persistent coma after cooling, DIC, ALT > 1000 U/L or anuric AKI predict poor outcome: ICU care.",
+            "refs": [
+              "epstein-heatstroke"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Treating as 'fever' with paracetamol and waiting for lab results.",
+            "refs": [
+              "epstein-heatstroke"
+            ]
+          },
+          {
+            "text": "Missing alternatives: sepsis, meningitis, cerebral malaria, thyroid storm, serotonin/anticholinergic toxicity (datura), NMS. Treat for sepsis too if doubt.",
+            "refs": [
+              "ncdc-cooling-2024"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "In exertional heat stroke the patient may still be sweating; dry skin is not required for the diagnosis.",
+            "refs": [
+              "epstein-heatstroke"
+            ]
+          },
+          {
+            "text": "A body bag or plastic tarp filled with ice water works as an immersion tub in the ED.",
+            "refs": [
+              "ncdc-cooling-2024"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Heat stroke",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Heat exposure + altered sensorium"
+          },
+          {
+            "id": "temp",
+            "type": "action",
+            "text": "Rectal temperature; ABC; glucose"
+          },
+          {
+            "id": "hot",
+            "type": "decision",
+            "text": "Core temp > 40 °C?"
+          },
+          {
+            "id": "alt",
+            "type": "action",
+            "text": "Consider sepsis, meningitis, malaria, toxins; cool if > 39 °C"
+          },
+          {
+            "id": "cool",
+            "type": "action",
+            "text": "Immediate cooling: immersion or spray + fan + ice packs",
+            "severity": "critical"
+          },
+          {
+            "id": "target",
+            "type": "decision",
+            "text": "Core temp ≤ 39 °C?"
+          },
+          {
+            "id": "cont",
+            "type": "action",
+            "text": "Continue cooling, benzodiazepine for shivering"
+          },
+          {
+            "id": "stop",
+            "type": "action",
+            "text": "Stop active cooling at 38.5-39 °C"
+          },
+          {
+            "id": "icu",
+            "type": "end",
+            "text": "ICU: fluids, CK, LFT, coagulation, RRT/DIC care as needed",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "temp"
+          },
+          {
+            "from": "temp",
+            "to": "hot"
+          },
+          {
+            "from": "hot",
+            "to": "cool",
+            "label": "Yes"
+          },
+          {
+            "from": "hot",
+            "to": "alt",
+            "label": "No"
+          },
+          {
+            "from": "cool",
+            "to": "target"
+          },
+          {
+            "from": "target",
+            "to": "stop",
+            "label": "Yes"
+          },
+          {
+            "from": "target",
+            "to": "cont",
+            "label": "No"
+          },
+          {
+            "from": "cont",
+            "to": "target"
+          },
+          {
+            "from": "stop",
+            "to": "icu"
+          },
+          {
+            "from": "alt",
+            "to": "icu"
+          }
+        ],
+        "refs": [
+          "ncdc-cooling-2024",
+          "epstein-heatstroke"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Hyperthermia overwhelms thermoregulation, causing direct cellular injury, gut barrier leak with endotoxaemia, a systemic inflammatory response similar to sepsis, endothelial injury and DIC. Mortality relates to the duration of hyperthermia (degree-minutes), hence 'cool first'.",
+        "evidence": "- Cold-water immersion achieves the fastest cooling and near-zero mortality in exertional heat stroke when started immediately [Epstein 2019; WMS 2019].\n- The NCDC 2024 guideline sets a target to start cooling within 30 minutes and defines acceptable cooling rates [NCDC 2024].",
+        "controversies": "- Immersion in elderly classic heat stroke patients (monitoring, access) versus evaporative methods; any rapid method is better than slow.\n- Invasive cooling (cold IV fluids, intravascular devices) as adjuncts.",
+        "indiaNotes": "- India's summer heat waves (April-June) cause many heat stroke deaths in outdoor workers, elderly and the homeless. Heat Stroke Management Units are being set up under NPCCHH since 2024.\n- Report heat-related illness and deaths on the IHIP surveillance platform as per NCDC guidance."
+      },
+      "drugIds": [
+        "diazepam"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "epstein-heatstroke",
+        "ncdc-cooling-2024",
+        "wms-heat-2019"
+      ],
+      "quiz": [
+        {
+          "id": "heat-stroke-q1",
+          "stem": "Best cooling method for exertional heat stroke:",
+          "options": [
+            "Paracetamol",
+            "Cold-water immersion",
+            "Air-conditioned room",
+            "Cold IV saline only"
+          ],
+          "answerIndex": 1,
+          "explanation": "Immersion gives the fastest cooling rates."
+        },
+        {
+          "id": "heat-stroke-q2",
+          "stem": "When should active cooling be stopped?",
+          "options": [
+            "At 37 °C",
+            "At 38.5-39 °C",
+            "At 40 °C",
+            "After 6 h regardless"
+          ],
+          "answerIndex": 1,
+          "explanation": "Stopping at 38.5-39 °C prevents overshoot hypothermia."
+        },
+        {
+          "id": "heat-stroke-q3",
+          "stem": "Which drug is NOT useful in heat stroke?",
+          "options": [
+            "Midazolam for shivering",
+            "Paracetamol",
+            "Dextrose for hypoglycaemia",
+            "Crystalloid fluids"
+          ],
+          "answerIndex": 1,
+          "explanation": "Antipyretics act on the hypothalamic set point, which is normal in heat stroke."
+        }
+      ]
+    },
+    {
+      "id": "drowning",
+      "title": "Drowning",
+      "summary": "Resuscitation with early ventilation, ICU management of drowning lung injury and prognosis.",
+      "viewKey": "topic:trauma-burns-environmental/drowning",
+      "uiHints": {
+        "icon": "waves",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Drowning = respiratory impairment from submersion/immersion in liquid. Outcomes: death, morbidity, no morbidity. Hypoxia is the primary insult; terms like 'near-drowning' and 'dry drowning' are no longer used.",
+          "refs": [
+            "szpilman-drowning"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Cardiac arrest: ventilation first",
+            "detail": "Open airway and give 5 initial rescue breaths with oxygen if available, then CPR 30:2. Early intubation by a skilled operator. Do not attempt to drain water from the lungs (no Heimlich).",
+            "time": "0 min",
+            "refs": [
+              "erc2025-special",
+              "szpilman-drowning"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "C-spine only if indicated",
+            "detail": "Immobilise only if diving, water-slide, trauma or alcohol with signs of injury; routine immobilisation delays ventilation.",
+            "refs": [
+              "szpilman-drowning"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Spontaneously breathing",
+            "detail": "High-flow oxygen; SpO2 target 94-98%; CPAP/NIV or HFNC if hypoxaemic and alert; intubate if failing, GCS ≤ 8 or exhausted.",
+            "refs": [
+              "szpilman-drowning"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Ventilated patient",
+            "detail": "Lung-protective ventilation (6 mL/kg PBW, PEEP 5-10+), treat as ARDS; may need high PEEP; bronchospasm and surfactant washout. Consider ECMO referral for refractory hypoxaemia.",
+            "refs": [
+              "szpilman-drowning"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Circulation and temperature",
+            "detail": "Hypotension from hypoxia and cold diuresis: crystalloid boluses. Treat hypothermia (see hypothermia topic). Post-arrest: avoid fever.",
+            "refs": [
+              "szpilman-drowning",
+              "erc2025-special"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Avoid routine extras",
+            "detail": "No routine antibiotics (give if fever, new infiltrates beyond 48 h, or grossly contaminated water such as sewage/flood water); no routine steroids. Fresh vs salt water distinction does not change management.",
+            "refs": [
+              "szpilman-drowning"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Disposition",
+            "detail": "Asymptomatic with normal SpO2 and chest exam: observe for at least 6-8 h before discharge. Any symptoms, hypoxaemia, or abnormal CXR: admit.",
+            "refs": [
+              "szpilman-drowning"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "oxygen",
+            "role": "Hypoxaemia",
+            "route": "Non-rebreather, CPAP/NIV, ventilator",
+            "dose": "15 L/min initially; titrate to SpO2 94-98%",
+            "refs": [
+              "szpilman-drowning"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Initially well patients can deteriorate within 4-6 h from progressive lung injury; do not discharge early.",
+            "refs": [
+              "szpilman-drowning"
+            ]
+          },
+          {
+            "text": "Submersion > 25 min or CPR > 30 min in warm water carries very poor prognosis; cold-water submersion may be associated with better outcomes.",
+            "refs": [
+              "szpilman-drowning"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Starting with chest compressions without ventilation in drowning arrest: the cause is hypoxic.",
+            "refs": [
+              "erc2025-special"
+            ]
+          },
+          {
+            "text": "Routine C-collar for every drowning victim.",
+            "refs": [
+              "szpilman-drowning"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Vomiting during resuscitation is very common; turn the patient and suction, keep ventilating.",
+            "refs": [
+              "szpilman-drowning"
+            ]
+          },
+          {
+            "text": "Flood/monsoon drowning in India: consider leptospirosis and aspiration of contaminated water if fever develops later.",
+            "refs": [
+              "szpilman-drowning"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Drowning",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Drowning victim rescued"
+          },
+          {
+            "id": "breath",
+            "type": "decision",
+            "text": "Breathing with a pulse?"
+          },
+          {
+            "id": "cpr",
+            "type": "action",
+            "text": "5 rescue breaths with O2, CPR 30:2, early intubation",
+            "severity": "critical"
+          },
+          {
+            "id": "rosc",
+            "type": "end",
+            "text": "Post-ROSC care, lung-protective ventilation, treat hypothermia",
+            "severity": "critical"
+          },
+          {
+            "id": "hyp",
+            "type": "decision",
+            "text": "Hypoxaemic, symptomatic or abnormal chest exam?"
+          },
+          {
+            "id": "obs",
+            "type": "end",
+            "text": "Observe ≥ 6-8 h; discharge if well"
+          },
+          {
+            "id": "o2",
+            "type": "action",
+            "text": "O2, CPAP/NIV/HFNC; CXR, ABG"
+          },
+          {
+            "id": "fail",
+            "type": "decision",
+            "text": "Failing (rising FiO2, fatigue, GCS ≤ 8)?"
+          },
+          {
+            "id": "vent",
+            "type": "end",
+            "text": "Intubate; ARDS ventilation; ECMO referral if refractory",
+            "severity": "high"
+          },
+          {
+            "id": "ward",
+            "type": "end",
+            "text": "HDU/ward monitoring; antibiotics only if infection"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "breath"
+          },
+          {
+            "from": "breath",
+            "to": "cpr",
+            "label": "No"
+          },
+          {
+            "from": "cpr",
+            "to": "rosc"
+          },
+          {
+            "from": "breath",
+            "to": "hyp",
+            "label": "Yes"
+          },
+          {
+            "from": "hyp",
+            "to": "obs",
+            "label": "No"
+          },
+          {
+            "from": "hyp",
+            "to": "o2",
+            "label": "Yes"
+          },
+          {
+            "from": "o2",
+            "to": "fail"
+          },
+          {
+            "from": "fail",
+            "to": "vent",
+            "label": "Yes"
+          },
+          {
+            "from": "fail",
+            "to": "ward",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "szpilman-drowning",
+          "erc2025-special"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Aspiration of even small volumes (1-3 mL/kg) washes out and inactivates surfactant, causing atelectasis, intrapulmonary shunt and non-cardiogenic pulmonary oedema. Laryngospasm, hypoxic brain injury and arrhythmias follow prolonged hypoxia.",
+        "evidence": "- Szpilman's classification (grades 1-6) correlates with mortality and guides management [Szpilman 2012].\n- ERC 2025 special circumstances emphasise early ventilation with initial rescue breaths in drowning arrest [ERC 2025].",
+        "controversies": "- Optimal duration of resuscitation and role of ECPR in cold-water drowning.\n- Prophylactic antibiotics for heavily contaminated water.",
+        "indiaNotes": "- Drowning kills tens of thousands in India annually, especially children in ponds, wells and during monsoon floods. Many victims present late via long transfers.\n- Flood-water exposure raises risk of leptospirosis and melioidosis; consider doxycycline prophylaxis per local public health guidance."
+      },
+      "drugIds": [
+        "oxygen"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "szpilman-drowning",
+        "erc2025-special"
+      ],
+      "quiz": [
+        {
+          "id": "drowning-q1",
+          "stem": "First step in drowning-related cardiac arrest:",
+          "options": [
+            "Abdominal thrusts to remove water",
+            "5 rescue breaths, then CPR",
+            "Defibrillate immediately",
+            "Wait for C-spine collar"
+          ],
+          "answerIndex": 1,
+          "explanation": "Hypoxia is the cause; ventilation is the priority."
+        },
+        {
+          "id": "drowning-q2",
+          "stem": "An asymptomatic drowning victim with normal SpO2 should be:",
+          "options": [
+            "Discharged immediately",
+            "Observed for 6-8 h",
+            "Given antibiotics",
+            "Given steroids"
+          ],
+          "answerIndex": 1,
+          "explanation": "Deterioration can be delayed; observe."
+        },
+        {
+          "id": "drowning-q3",
+          "stem": "Ventilation strategy for drowning-related ARDS:",
+          "options": [
+            "High tidal volume 10 mL/kg",
+            "Lung-protective 6 mL/kg PBW with adequate PEEP",
+            "No PEEP",
+            "Only NIV"
+          ],
+          "answerIndex": 1,
+          "explanation": "Treat as ARDS."
+        }
+      ]
+    },
+    {
+      "id": "hypothermia-electrical-injury",
+      "title": "Hypothermia and electrical injury",
+      "summary": "Staging and rewarming accidental hypothermia, hypothermic cardiac arrest, and ICU care after electrical and lightning injuries.",
+      "viewKey": "topic:trauma-burns-environmental/hypothermia-electrical-injury",
+      "uiHints": {
+        "icon": "snowflake",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Accidental hypothermia = core temperature < 35 °C. Electrical injury: low voltage (< 1000 V, domestic 230 V in India) or high voltage (≥ 1000 V, overhead lines); lightning is a separate pattern.",
+          "refs": [
+            "brown-hypothermia",
+            "erc2025-special"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Measure core temperature and stage",
+            "detail": "Low-reading thermometer, oesophageal probe if intubated. Stage by consciousness and temperature: mild 32-35 °C (shivering, conscious), moderate 28-32 °C (drowsy, shivering stops), severe < 28 °C (unconscious), and risk of arrest highest < 28 °C (VF/asystole).",
+            "time": "0 min",
+            "refs": [
+              "paal-hypothermia-2022",
+              "brown-hypothermia"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Handle gently and rewarm",
+            "detail": "Horizontal position, gentle handling (VF risk). Mild: passive (dry, blankets, warm room) plus active external (forced-air warming). Moderate-severe: active external + warmed IV fluids (38-42 °C) and warm humidified gases; consider active internal methods.",
+            "refs": [
+              "paal-hypothermia-2022",
+              "wms-hypothermia-2019"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Unstable or arrested: ECLS centre",
+            "detail": "Cardiac arrest or instability (SBP < 90, ventricular arrhythmia, core < 30 °C with instability): refer for ECLS/ECMO rewarming if available; continue CPR during transfer (mechanical CPR helps).",
+            "refs": [
+              "erc2025-special",
+              "paal-hypothermia-2022"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Hypothermic cardiac arrest modifications",
+            "detail": "Check pulse for up to 1 min. If VF and < 30 °C: up to 3 shocks; withhold further shocks and adrenaline until > 30 °C. 30-35 °C: double drug intervals. Prolonged CPR is justified ('not dead until warm and dead'). Serum K > 12 mmol/L suggests futility (HOPE score helps decide ECLS).",
+            "refs": [
+              "erc2025-special"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Electrical injury: assess and monitor",
+            "detail": "Low-voltage, asymptomatic, normal ECG, no loss of consciousness: discharge. Otherwise (high voltage, LOC, abnormal ECG, chest pain, pregnancy): ECG monitoring 24 h, troponin, CK, urine myoglobin.",
+            "refs": [
+              "erc2025-special"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Electrical injury: hidden damage",
+            "detail": "Small skin wounds hide deep muscle necrosis. Fluids to urine output 1-1.5 mL/kg/h if myoglobinuria; watch for compartment syndrome (fasciotomy); look for falls/trauma, spinal injury, cataracts later.",
+            "refs": [
+              "isbi-2016"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Lightning",
+            "detail": "Cardiac arrest is usually asystole with prolonged apnoea: in mass casualties resuscitate the apparently dead first (reverse triage). Keraunoparalysis (transient limb paralysis) and ruptured tympanic membranes are common.",
+            "refs": [
+              "erc2025-special"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "warm-saline",
+            "role": "Volume during rewarming",
+            "route": "IV (warmed 38-42 °C)",
+            "dose": "250-500 mL boluses as needed",
+            "refs": [
+              "paal-hypothermia-2022"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "hypothermia-stages",
+            "title": "Hypothermia staging and rewarming",
+            "columns": [
+              "Stage",
+              "Core temp",
+              "Clinical",
+              "Rewarming"
+            ],
+            "rows": [
+              [
+                "Mild",
+                "32-35 °C",
+                "Conscious, shivering",
+                "Passive + active external, warm drinks"
+              ],
+              [
+                "Moderate",
+                "28-32 °C",
+                "Drowsy, shivering stops, bradycardia, J (Osborn) waves",
+                "Active external + warm IV fluids, gentle handling"
+              ],
+              [
+                "Severe",
+                "< 28 °C",
+                "Unconscious, high VF risk",
+                "Active internal; ECLS if unstable"
+              ],
+              [
+                "Arrest",
+                "Usually < 28 °C",
+                "No signs of life",
+                "CPR + ECLS rewarming"
+              ]
+            ],
+            "refs": [
+              "paal-hypothermia-2022",
+              "brown-hypothermia"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Rough handling or moving a severely hypothermic patient upright can precipitate VF ('rescue collapse').",
+            "refs": [
+              "paal-hypothermia-2022"
+            ]
+          },
+          {
+            "text": "High-voltage electrical injury with dark urine: massive rhabdomyolysis and compartment syndrome risk.",
+            "refs": [
+              "isbi-2016"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Declaring death in a cold patient before rewarming to > 32 °C (unless lethal injuries, frozen chest or K > 12 mmol/L).",
+            "refs": [
+              "erc2025-special"
+            ]
+          },
+          {
+            "text": "Judging electrical injury severity by skin burn size.",
+            "refs": [
+              "isbi-2016"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Osborn (J) waves on ECG are characteristic of hypothermia and resolve with rewarming.",
+            "refs": [
+              "brown-hypothermia"
+            ]
+          },
+          {
+            "text": "In India hypothermia occurs in the elderly and homeless in north Indian winters, in Himalayan regions, and after cold-water drowning; consider sepsis and hypothyroidism.",
+            "refs": [
+              "brown-hypothermia"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Accidental hypothermia",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Core temp < 35 °C"
+          },
+          {
+            "id": "arrest",
+            "type": "decision",
+            "text": "Cardiac arrest?"
+          },
+          {
+            "id": "cpr",
+            "type": "action",
+            "text": "CPR; VF < 30 °C: max 3 shocks; no adrenaline < 30 °C",
+            "severity": "critical"
+          },
+          {
+            "id": "k",
+            "type": "decision",
+            "text": "K > 12 mmol/L or obvious lethal injury?"
+          },
+          {
+            "id": "stopcpr",
+            "type": "end",
+            "text": "Consider stopping resuscitation (senior decision)"
+          },
+          {
+            "id": "ecls",
+            "type": "end",
+            "text": "ECLS rewarming with ongoing CPR",
+            "severity": "critical"
+          },
+          {
+            "id": "stable",
+            "type": "decision",
+            "text": "Haemodynamically stable (SBP ≥ 90, no ventricular arrhythmia)?"
+          },
+          {
+            "id": "unstable",
+            "type": "end",
+            "text": "Active internal rewarming; ECLS referral",
+            "severity": "high"
+          },
+          {
+            "id": "mild",
+            "type": "decision",
+            "text": "Core ≥ 32 °C?"
+          },
+          {
+            "id": "passive",
+            "type": "end",
+            "text": "Passive + active external rewarming"
+          },
+          {
+            "id": "active",
+            "type": "end",
+            "text": "Active external + warmed fluids/gases, gentle handling, ICU monitoring"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "arrest"
+          },
+          {
+            "from": "arrest",
+            "to": "cpr",
+            "label": "Yes"
+          },
+          {
+            "from": "cpr",
+            "to": "k"
+          },
+          {
+            "from": "k",
+            "to": "stopcpr",
+            "label": "Yes"
+          },
+          {
+            "from": "k",
+            "to": "ecls",
+            "label": "No"
+          },
+          {
+            "from": "arrest",
+            "to": "stable",
+            "label": "No"
+          },
+          {
+            "from": "stable",
+            "to": "unstable",
+            "label": "No"
+          },
+          {
+            "from": "stable",
+            "to": "mild",
+            "label": "Yes"
+          },
+          {
+            "from": "mild",
+            "to": "passive",
+            "label": "Yes"
+          },
+          {
+            "from": "mild",
+            "to": "active",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "erc2025-special",
+          "paal-hypothermia-2022"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Cold slows metabolism and conduction; the myocardium becomes irritable below 28 °C. Hypothermia protects the brain (oxygen consumption falls ~6% per 1 °C), which is why prolonged CPR with ECLS rewarming can yield good neurological outcomes. Electrical current follows the path of least resistance through nerves, vessels and muscle, causing deep injury and arrhythmias.",
+        "evidence": "- ERC 2025 special circumstances: hypothermic arrest management, ECLS rewarming and use of HOPE score for prognostication [ERC 2025].\n- Survival with good neurology after hours of CPR and ECLS rewarming has been repeatedly reported [Paal 2022].",
+        "controversies": "- Exact shock and adrenaline strategy below 30 °C varies between ERC and AHA.\n- Prophylactic 24-h monitoring after low-voltage injuries in asymptomatic patients is not needed.",
+        "indiaNotes": "- ECMO rewarming is limited to few Indian tertiary centres; plan transfer early while rewarming with forced air and warm fluids.\n- Electrocution from domestic wiring, agricultural pumps and overhead lines is common; many arrests occur in monsoon. Electrical injury is a medico-legal case."
+      },
+      "drugIds": [
+        "warm-saline"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "paal-hypothermia-2022",
+        "brown-hypothermia",
+        "erc2025-special",
+        "wms-hypothermia-2019",
+        "isbi-2016"
+      ],
+      "quiz": [
+        {
+          "id": "hypothermia-electrical-injury-q1",
+          "stem": "VF in a patient at 27 °C core temperature after 3 failed shocks. Next:",
+          "options": [
+            "Keep shocking every 2 min",
+            "Continue CPR and rewarm; delay further shocks/adrenaline until > 30 °C",
+            "Stop resuscitation",
+            "Give amiodarone 300 mg"
+          ],
+          "answerIndex": 1,
+          "explanation": "ERC approach in severe hypothermia."
+        },
+        {
+          "id": "hypothermia-electrical-injury-q2",
+          "stem": "Which finding suggests futility in hypothermic cardiac arrest?",
+          "options": [
+            "Core temp 24 °C",
+            "Serum K+ > 12 mmol/L",
+            "Fixed dilated pupils",
+            "Asystole"
+          ],
+          "answerIndex": 1,
+          "explanation": "Very high potassium suggests asphyxia/cell death before cooling; pupils and asystole are unreliable in hypothermia."
+        },
+        {
+          "id": "hypothermia-electrical-injury-q3",
+          "stem": "A worker had a 230 V shock at home, no LOC, normal ECG and is asymptomatic. Management:",
+          "options": [
+            "24 h ICU monitoring",
+            "Discharge with advice",
+            "Fasciotomy",
+            "Thrombolysis"
+          ],
+          "answerIndex": 1,
+          "explanation": "Low-voltage asymptomatic patients with normal ECG and no LOC can be discharged."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "tranexamic-acid",
+      "name": "Tranexamic acid",
+      "class": "Antifibrinolytic",
+      "indications": "Trauma haemorrhage within 3 h of injury; PPH; (not for GI bleeding)",
+      "adultDose": "1 g IV over 10 min, then 1 g IV over 8 h. Give within 3 h of injury; do not start after 3 h.",
+      "preparationIndia": "500 mg/5 mL ampoules (Indian brands widely available). Loading: 1 g in 100 mL NS over 10 min; maintenance: 1 g in 500 mL NS at ~62 mL/h over 8 h.",
+      "renalHepatic": "Reduce maintenance in severe renal impairment.",
+      "cautions": "Starting > 3 h after injury increased bleeding deaths in CRASH-2. Seizures at high doses.",
+      "refs": [
+        "crash2",
+        "eu-trauma-2023"
+      ]
+    },
+    {
+      "id": "prbc",
+      "name": "Packed red blood cells (PRBC)",
+      "class": "Blood component",
+      "indications": "Haemorrhagic shock; symptomatic anaemia",
+      "adultDose": "Massive haemorrhage: 1 unit PRBC : 1 unit FFP : 1 unit platelets (or 1 apheresis platelet per 6 units). Target Hb 7-9 g/dL once bleeding is controlled.",
+      "preparationIndia": "~250-350 mL per unit; 1 unit raises Hb by ~1 g/dL in a 70 kg adult. Use O-negative (women of child-bearing age) or O-positive uncrossmatched in emergencies.",
+      "cautions": "Warm all products; monitor ionised calcium, potassium and temperature.",
+      "refs": [
+        "eu-trauma-2023",
+        "proppr"
+      ]
+    },
+    {
+      "id": "cryoprecipitate",
+      "name": "Cryoprecipitate / fibrinogen concentrate",
+      "class": "Blood component / factor concentrate",
+      "indications": "Fibrinogen < 1.5 g/L (or functional fibrinogen deficit on ROTEM/TEG) in bleeding",
+      "adultDose": "Cryoprecipitate 1 unit per 10 kg (typically 6-10 units in adults) OR fibrinogen concentrate 3-4 g IV; repeat guided by fibrinogen level.",
+      "preparationIndia": "Single-donor cryo units (~15-20 mL, ~150-250 mg fibrinogen each) from blood banks; fibrinogen concentrate has limited availability in India.",
+      "verify": "Unit fibrinogen content of Indian blood-bank cryoprecipitate varies; confirm local dosing protocol.",
+      "refs": [
+        "eu-trauma-2023"
+      ]
+    },
+    {
+      "id": "calcium-chloride",
+      "name": "Calcium chloride 10% / calcium gluconate 10%",
+      "class": "Electrolyte",
+      "indications": "Hypocalcaemia during massive transfusion; hyperkalaemia; CCB toxicity",
+      "adultDose": "Massive transfusion: 10 mL calcium chloride 10% (or 30 mL calcium gluconate 10%) IV, repeat to keep ionised Ca > 1.1 mmol/L.",
+      "preparationIndia": "Calcium gluconate 10% 10 mL ampoules are most common in India (2.2 mmol Ca each); calcium chloride 10% contains 6.8 mmol per 10 mL (central line preferred).",
+      "cautions": "Calcium chloride is a vesicant; do not mix with bicarbonate.",
+      "refs": [
+        "eu-trauma-2023"
+      ]
+    },
+    {
+      "id": "ringer-lactate",
+      "name": "Ringer lactate",
+      "class": "Isotonic crystalloid",
+      "indications": "Burns resuscitation; volume replacement",
+      "adultDose": "Burns: 2-4 mL/kg/%TBSA over 24 h from time of burn (half in first 8 h), then titrate hourly to urine output. Trauma: limit crystalloid; switch early to blood.",
+      "preparationIndia": "500 mL / 1 L bags.",
+      "cautions": "Fluid creep (> 6 mL/kg/%TBSA) causes compartment syndromes and ARDS.",
+      "refs": [
+        "isbi-2016",
+        "atls10"
+      ]
+    },
+    {
+      "id": "oxygen",
+      "name": "Oxygen",
+      "class": "Medical gas",
+      "indications": "Hypoxaemia; carbon monoxide poisoning; drowning",
+      "adultDose": "CO poisoning: 100% (FiO2 1.0) via non-rebreather or ventilator. Otherwise titrate to SpO2 94-98%.",
+      "preparationIndia": "Pipeline or cylinder; non-rebreather mask delivers FiO2 ~0.6-0.8 at 15 L/min.",
+      "cautions": "SpO2 unreliable in CO poisoning.",
+      "refs": [
+        "isbi-2016",
+        "szpilman-drowning"
+      ]
+    },
+    {
+      "id": "hydroxocobalamin",
+      "name": "Hydroxocobalamin",
+      "class": "Cyanide antidote",
+      "indications": "Suspected cyanide poisoning in smoke inhalation (coma, shock, lactate > 8 mmol/L)",
+      "adultDose": "5 g IV over 15 min; may repeat 5 g once.",
+      "preparationIndia": "Cyanokit 5 g vial; limited availability in India (import/tertiary centres). Sodium thiosulphate 12.5 g IV is an alternative.",
+      "cautions": "Turns skin and urine red; interferes with colorimetric lab tests and dialysis machine blood-leak alarms.",
+      "verify": "Check local availability; sodium nitrite is avoided in smoke inhalation because methaemoglobinaemia worsens oxygen delivery with CO poisoning.",
+      "refs": [
+        "isbi-2016"
+      ]
+    },
+    {
+      "id": "diazepam",
+      "name": "Benzodiazepine (diazepam / midazolam)",
+      "class": "Benzodiazepine",
+      "indications": "Shivering or agitation during active cooling of heat stroke; seizures",
+      "adultDose": "Midazolam 1-2 mg IV, repeat; or diazepam 5-10 mg IV for shivering/seizure.",
+      "preparationIndia": "Midazolam 1 mg/mL and 5 mg/mL ampoules; diazepam 10 mg/2 mL.",
+      "cautions": "Respiratory depression; airway support ready.",
+      "refs": [
+        "epstein-heatstroke"
+      ]
+    },
+    {
+      "id": "warm-saline",
+      "name": "Warmed IV fluids (0.9% saline or RL at 38-42 °C)",
+      "class": "Crystalloid",
+      "indications": "Volume replacement during rewarming of hypothermia",
+      "adultDose": "Boluses of 250-500 mL warmed to 38-42 °C as needed for hypotension during rewarming.",
+      "preparationIndia": "Use a fluid warmer or warming cabinet.",
+      "cautions": "Rewarming causes vasodilation and hypotension (rewarming shock); give boluses with haemodynamic monitoring.",
+      "refs": [
+        "paal-hypothermia-2022"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "eu-trauma-2023",
+      "citation": "Rossaint R, Afshari A, Bouillon B, et al. The European guideline on management of major bleeding and coagulopathy following trauma: sixth edition. Crit Care 2023;27:80.",
+      "url": "https://doi.org/10.1186/s13054-023-04327-7",
+      "year": 2023,
+      "type": "guideline",
+      "doi": "10.1186/s13054-023-04327-7"
+    },
+    {
+      "id": "crash2",
+      "citation": "CRASH-2 trial collaborators. Effects of tranexamic acid on death, vascular occlusive events, and blood transfusion in trauma patients with significant haemorrhage (CRASH-2). Lancet 2010;376:23-32.",
+      "url": "https://doi.org/10.1016/S0140-6736(10)60835-5",
+      "year": 2010,
+      "type": "trial",
+      "doi": "10.1016/S0140-6736(10)60835-5"
+    },
+    {
+      "id": "atls10",
+      "citation": "American College of Surgeons Committee on Trauma. Advanced Trauma Life Support (ATLS) Student Course Manual, 10th ed. Chicago: ACS; 2018.",
+      "url": "https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support/",
+      "year": 2018,
+      "type": "textbook"
+    },
+    {
+      "id": "proppr",
+      "citation": "Holcomb JB, Tilley BC, Baraniuk S, et al. Transfusion of plasma, platelets, and red blood cells in a 1:1:1 vs a 1:1:2 ratio and mortality in patients with severe trauma: the PROPPR randomized clinical trial. JAMA 2015;313:471-82.",
+      "url": "https://doi.org/10.1001/jama.2015.12",
+      "year": 2015,
+      "type": "trial",
+      "doi": "10.1001/jama.2015.12"
+    },
+    {
+      "id": "abc-score",
+      "citation": "Nunez TC, Voskresensky IV, Dossett LA, et al. Early prediction of massive transfusion in trauma: simple as ABC (assessment of blood consumption)? J Trauma 2009;66:346-52.",
+      "url": "https://doi.org/10.1097/TA.0b013e3181961c35",
+      "year": 2009,
+      "type": "trial",
+      "doi": "10.1097/TA.0b013e3181961c35"
+    },
+    {
+      "id": "isbi-2016",
+      "citation": "ISBI Practice Guidelines Committee. ISBI Practice Guidelines for Burn Care. Burns 2016;42:953-1021.",
+      "url": "https://doi.org/10.1016/j.burns.2016.05.013",
+      "year": 2016,
+      "type": "guideline",
+      "doi": "10.1016/j.burns.2016.05.013"
+    },
+    {
+      "id": "epstein-heatstroke",
+      "citation": "Epstein Y, Yanovich R. Heatstroke. N Engl J Med 2019;380:2449-59.",
+      "url": "https://doi.org/10.1056/NEJMra1810762",
+      "year": 2019,
+      "type": "review",
+      "doi": "10.1056/NEJMra1810762"
+    },
+    {
+      "id": "wms-heat-2019",
+      "citation": "Lipman GS, Gaudio FG, Eifling KP, et al. Wilderness Medical Society Clinical Practice Guidelines for the Prevention and Treatment of Heat Illness: 2019 Update. Wilderness Environ Med 2019;30:S33-46.",
+      "url": "https://doi.org/10.1016/j.wem.2018.10.004",
+      "year": 2019,
+      "type": "guideline",
+      "doi": "10.1016/j.wem.2018.10.004"
+    },
+    {
+      "id": "ncdc-cooling-2024",
+      "citation": "National Centre for Disease Control (NPCCHH), MoHFW, Government of India. Emergency Cooling for Severe Heat Related Illnesses. New Delhi: NCDC; 2024.",
+      "url": "https://ncdc.mohfw.gov.in/uploads/pdf/heat11.pdf",
+      "year": 2024,
+      "type": "guideline"
+    },
+    {
+      "id": "szpilman-drowning",
+      "citation": "Szpilman D, Bierens JJLM, Handley AJ, Orlowski JP. Drowning. N Engl J Med 2012;366:2102-10.",
+      "url": "https://doi.org/10.1056/NEJMra1013317",
+      "year": 2012,
+      "type": "review",
+      "doi": "10.1056/NEJMra1013317"
+    },
+    {
+      "id": "erc2025-special",
+      "citation": "Lott C, et al. European Resuscitation Council Guidelines 2025: Special Circumstances in Resuscitation. Resuscitation 2025;215:110753.",
+      "url": "https://doi.org/10.1016/j.resuscitation.2025.110753",
+      "year": 2025,
+      "type": "guideline",
+      "doi": "10.1016/j.resuscitation.2025.110753"
+    },
+    {
+      "id": "brown-hypothermia",
+      "citation": "Brown DJA, Brugger H, Boyd J, Paal P. Accidental hypothermia. N Engl J Med 2012;367:1930-8.",
+      "url": "https://doi.org/10.1056/NEJMra1114208",
+      "year": 2012,
+      "type": "review",
+      "doi": "10.1056/NEJMra1114208"
+    },
+    {
+      "id": "paal-hypothermia-2022",
+      "citation": "Paal P, Pasquier M, Darocha T, et al. Accidental Hypothermia: 2021 Update. Int J Environ Res Public Health 2022;19:501.",
+      "url": "https://doi.org/10.3390/ijerph19010501",
+      "year": 2022,
+      "type": "review",
+      "doi": "10.3390/ijerph19010501"
+    },
+    {
+      "id": "wms-hypothermia-2019",
+      "citation": "Dow J, Giesbrecht GG, Danzl DF, et al. Wilderness Medical Society Clinical Practice Guidelines for the Out-of-Hospital Evaluation and Treatment of Accidental Hypothermia: 2019 Update. Wilderness Environ Med 2019;30:S47-69.",
+      "url": "https://doi.org/10.1016/j.wem.2019.10.002",
+      "year": 2019,
+      "type": "guideline",
+      "doi": "10.1016/j.wem.2019.10.002"
+    }
+  ]
+}

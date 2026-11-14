@@ -1,0 +1,2025 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "airway-management",
+  "number": 6,
+  "folder": "06-airway-management",
+  "section": {
+    "id": "B",
+    "title": "Airway and respiratory"
+  },
+  "phase": 1,
+  "title": "Airway management",
+  "summary": "Plan every ICU intubation as a high-risk event: predict anatomical and physiological difficulty, preoxygenate properly (NIV or HFNC when hypoxaemic), choose haemodynamically safe induction drugs, use a video laryngoscope and bougie, follow a clear failed-airway plan to front-of-neck access, confirm with waveform capnography, and extubate safely.",
+  "tags": [
+    "airway",
+    "intubation",
+    "RSI",
+    "rapid sequence induction",
+    "preoxygenation",
+    "apnoeic oxygenation",
+    "HFNC",
+    "NIV",
+    "video laryngoscope",
+    "bougie",
+    "ketamine",
+    "etomidate",
+    "propofol",
+    "rocuronium",
+    "succinylcholine",
+    "sugammadex",
+    "difficult airway",
+    "CICO",
+    "cricothyroidotomy",
+    "front of neck access",
+    "AIDAA",
+    "DAS",
+    "MACOCHA",
+    "capnography",
+    "extubation",
+    "cuff leak",
+    "stridor"
+  ],
+  "relatedModules": [
+    "oxygen-hfnc-niv",
+    "mechanical-ventilation",
+    "shock-vasoactive-support",
+    "analgesia-sedation-delirium",
+    "procedures",
+    "cardiac-arrest-post-rosc"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "wind",
+    "accent": "critical"
+  },
+  "viewKey": "module:airway-management",
+  "topics": [
+    {
+      "id": "assessment-preparation",
+      "title": "Airway assessment and preparation (anatomical and physiological)",
+      "summary": "Before every ICU intubation, score anatomical difficulty (MACOCHA), identify physiological risks (hypoxaemia, hypotension, acidosis, RV failure), and run a checklist with a team brief and a stated Plan A-B-C-D.",
+      "viewKey": "topic:airway-management/assessment-preparation",
+      "uiHints": {
+        "icon": "wind",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Decide",
+            "title": "Is intubation needed now?",
+            "detail": "Failure to protect airway, oxygenate or ventilate; anticipated course; procedural need. Call a senior early for predicted difficulty.",
+            "refs": [
+              "das-icu2018"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Score",
+            "title": "Anatomical risk: MACOCHA",
+            "detail": "Mallampati III-IV (5), OSA (2), reduced cervical mobility (1), mouth opening < 3 cm (1), coma (1), severe hypoxaemia SpO2 < 80% (1), non-anaesthetist operator (1). Score ≥ 3 predicts difficult intubation.",
+            "refs": [
+              "macocha"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Score",
+            "title": "Physiological risk",
+            "detail": "Hypoxaemia, hypotension (SBP < 90, shock index > 0.9), severe metabolic acidosis, RV failure/pulmonary hypertension, raised ICP, full stomach.",
+            "refs": [
+              "esicm-pda2024"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Optimise",
+            "title": "Resuscitate before induction",
+            "detail": "Preoxygenate (next topic); start noradrenaline if hypotensive or shock index high; consider bicarbonate/ventilation plan in severe acidosis (match minute ventilation after intubation).",
+            "refs": [
+              "esicm-pda2024",
+              "das-icu2018"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Prepare",
+            "title": "Equipment (STOP MAID / checklist)",
+            "detail": "Suction ×2, oxygen sources, BVM with PEEP valve, video and direct laryngoscopes, bougie, 2 tube sizes (7.0-8.0), second-generation SGA, scalpel-bougie-tube FONA kit, waveform capnography connected, drugs drawn and labelled.",
+            "refs": [
+              "das-icu2018",
+              "aidaa-icu2016"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Team",
+            "title": "Brief",
+            "detail": "Roles (intubator, drugs, airway assistant with cricoid/BURP, monitor watcher, runner), verbalise Plan A (VL + bougie), Plan B (SGA), Plan C (face mask), Plan D (FONA) and the 'call out' SpO2.",
+            "refs": [
+              "das-icu2018",
+              "aidaa2025"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Position",
+            "title": "Ramp and head up",
+            "detail": "Ear-to-sternal notch alignment; 20-30° head-up (reverse Trendelenburg if spine precautions) improves preoxygenation and reduces aspiration."
+          }
+        ],
+        "tables": [
+          {
+            "id": "macocha-table",
+            "title": "MACOCHA score",
+            "columns": [
+              "Factor",
+              "Points"
+            ],
+            "rows": [
+              [
+                "Mallampati III or IV",
+                "5"
+              ],
+              [
+                "Obstructive sleep apnoea syndrome",
+                "2"
+              ],
+              [
+                "Reduced mobility of cervical spine",
+                "1"
+              ],
+              [
+                "Limited mouth opening < 3 cm",
+                "1"
+              ],
+              [
+                "Coma",
+                "1"
+              ],
+              [
+                "Severe hypoxaemia (SpO2 < 80%)",
+                "1"
+              ],
+              [
+                "Non-anaesthesiologist operator",
+                "1"
+              ],
+              [
+                "Total 0-12; ≥ 3 = predicted difficult",
+                ""
+              ]
+            ],
+            "refs": [
+              "macocha"
+            ]
+          },
+          {
+            "id": "physiologic-difficult",
+            "title": "Physiologically difficult airway: risk and response",
+            "columns": [
+              "Risk",
+              "Before induction",
+              "During and after"
+            ],
+            "rows": [
+              [
+                "Hypoxaemia",
+                "NIV or HFNC preoxygenation, PEEP, head up",
+                "Apnoeic oxygenation, bag-mask ventilation between induction and laryngoscopy"
+              ],
+              [
+                "Hypotension / shock",
+                "Noradrenaline running, fluid if responsive, reduced-dose induction",
+                "Push-dose vasopressor ready; avoid big PEEP and high rates immediately"
+              ],
+              [
+                "Severe metabolic acidosis",
+                "Avoid apnoea; consider bicarbonate or delay if possible",
+                "Set high minute ventilation matching pre-intubation breathing; ABG early"
+              ],
+              [
+                "RV failure / pulmonary hypertension",
+                "Noradrenaline or vasopressin first, avoid hypoxia and hypercapnia",
+                "Low PEEP and Vt; inhaled vasodilator if available"
+              ]
+            ],
+            "refs": [
+              "esicm-pda2024"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "MACOCHA ≥ 3 or known difficult airway: most experienced operator, awake or double set-up plan."
+          },
+          {
+            "text": "SBP < 90 mmHg before induction: vasopressor running first."
+          },
+          {
+            "text": "Severe metabolic acidosis with compensatory hyperventilation: apnoea can trigger arrest."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Intubating 'quickly' without a checklist at night."
+          },
+          {
+            "text": "No capnography in the room."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "INTUBE (29 countries, Indian centres included): 45% of ICU intubations had a major adverse event, mostly cardiovascular instability; cardiac arrest in 3%."
+          },
+          {
+            "text": "AIDAA recommends announcing 'Code D' (difficult airway emergency code) to summon help."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Pre-intubation decision",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Decision to intubate"
+          },
+          {
+            "id": "anat",
+            "type": "decision",
+            "text": "Predicted anatomically difficult (MACOCHA ≥ 3, known difficult)?"
+          },
+          {
+            "id": "senior",
+            "type": "action",
+            "text": "Most experienced operator; consider awake technique or double set-up",
+            "severity": "high"
+          },
+          {
+            "id": "phys",
+            "type": "decision",
+            "text": "Physiological risk (hypoxaemia, hypotension, acidosis, RV failure)?"
+          },
+          {
+            "id": "opt",
+            "type": "action",
+            "text": "Optimise first: NIV/HFNC preox, noradrenaline, ventilation plan"
+          },
+          {
+            "id": "check",
+            "type": "action",
+            "text": "Checklist, team brief, Plans A-D verbalised"
+          },
+          {
+            "id": "go",
+            "type": "end",
+            "text": "Proceed to RSI"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "anat"
+          },
+          {
+            "from": "anat",
+            "to": "senior",
+            "label": "Yes"
+          },
+          {
+            "from": "anat",
+            "to": "phys",
+            "label": "No"
+          },
+          {
+            "from": "senior",
+            "to": "phys"
+          },
+          {
+            "from": "phys",
+            "to": "opt",
+            "label": "Yes"
+          },
+          {
+            "from": "phys",
+            "to": "check",
+            "label": "No"
+          },
+          {
+            "from": "opt",
+            "to": "check"
+          },
+          {
+            "from": "check",
+            "to": "go"
+          }
+        ],
+        "refs": [
+          "das-icu2018",
+          "esicm-pda2024"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **INTUBE (2021):** 2964 intubations; ≥ 1 major adverse peri-intubation event in 45.2% (cardiovascular instability 42.6%, severe hypoxaemia 9.3%, cardiac arrest 3.1%).\n- **DAS critically ill 2018:** checklist, team brief, video laryngoscope availability, capnography, and a stepwise failed-airway plan.\n- **ESICM 2024 Delphi:** consensus statements for the physiologically difficult airway.",
+        "controversies": "- Awake intubation in the ICU is rarely possible in agitated, hypoxaemic patients.",
+        "indiaNotes": "- The AIDAA 2016 ICU guideline was written for Indian practice and recommends checklists, video laryngoscopes where available and second-generation SGAs.\n- Many Indian ICUs depend on residents for night intubations; MACOCHA awards a point to the non-anaesthetist operator: escalate early."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "macocha",
+        "intube",
+        "das-icu2018",
+        "aidaa-icu2016",
+        "esicm-pda2024"
+      ],
+      "quiz": [
+        {
+          "id": "assessment-preparation-q1",
+          "stem": "In MACOCHA, which factor scores 5 points?",
+          "options": [
+            "OSA",
+            "Coma",
+            "Mallampati III-IV",
+            "Non-anaesthetist operator"
+          ],
+          "answerIndex": 2,
+          "explanation": "Mallampati III or IV is the heaviest weighted factor."
+        },
+        {
+          "id": "assessment-preparation-q2",
+          "stem": "A septic patient with SBP 82 mmHg needs intubation. Best preparation?",
+          "options": [
+            "Full-dose propofol",
+            "Start noradrenaline before induction",
+            "Delay all drugs",
+            "Give fentanyl 3 mcg/kg"
+          ],
+          "answerIndex": 1,
+          "explanation": "Treat hypotension before induction; use a reduced-dose, haemodynamically stable induction."
+        },
+        {
+          "id": "assessment-preparation-q3",
+          "stem": "In INTUBE, the commonest major peri-intubation adverse event was:",
+          "options": [
+            "Oesophageal intubation",
+            "Cardiovascular instability",
+            "Aspiration",
+            "Dental injury"
+          ],
+          "answerIndex": 1,
+          "explanation": "Cardiovascular instability occurred in 42.6%."
+        }
+      ]
+    },
+    {
+      "id": "preoxygenation",
+      "title": "Preoxygenation and apnoeic oxygenation",
+      "summary": "Preoxygenate for 3-5 min to an ETO2 ≥ 85-90%; use NIV in hypoxaemic patients (PREOXI), keep nasal oxygen during apnoea, and give gentle bag-mask ventilation between induction and laryngoscopy (PreVent).",
+      "viewKey": "topic:airway-management/preoxygenation",
+      "uiHints": {
+        "icon": "wind",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "3-5 min",
+            "title": "Preoxygenate",
+            "detail": "Head up 20-30°. Tight-fitting face mask with 15 L/min (or BVM with PEEP valve), or NIV (PEEP 5-8, pressure support 5-10, FiO2 1.0) in hypoxaemic patients; HFNC 60 L/min is an alternative. Target ETO2 ≥ 85-90% if measurable.",
+            "refs": [
+              "preoxi",
+              "das-icu2018"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "During apnoea",
+            "title": "Apnoeic oxygenation",
+            "detail": "Nasal cannula 10-15 L/min (or HFNC) left on throughout laryngoscopy.",
+            "refs": [
+              "aidaa2025",
+              "das-icu2018"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Induction to laryngoscopy",
+            "title": "Bag-mask ventilation",
+            "detail": "Gentle BMV (low pressure, 10/min) with PEEP after induction reduces severe hypoxaemia.",
+            "refs": [
+              "prevent"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Attempt",
+            "title": "Stop at threshold",
+            "detail": "Abort the attempt if SpO2 falls to ~93% (or earlier in shunt); re-oxygenate with BMV or SGA before the next attempt.",
+            "refs": [
+              "aidaa2025"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "SpO2 < 93% despite NIV preoxygenation: shunt physiology, expect rapid desaturation."
+          },
+          {
+            "text": "Cannot preoxygenate (agitation): consider delayed sequence intubation with ketamine 1 mg/kg."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Loose-fitting non-rebreather mask (FiO2 often < 0.7)."
+          },
+          {
+            "text": "Removing NIV or HFNC to 'get ready' minutes before induction."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Delayed sequence intubation: ketamine (0.5-1 mg/kg) dissociation allows effective NIV preoxygenation in an agitated patient."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Choosing a preoxygenation method",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Planned intubation"
+          },
+          {
+            "id": "hyp",
+            "type": "decision",
+            "text": "Hypoxaemic (SpO2 < 93% on O2 or high FiO2 needs)?"
+          },
+          {
+            "id": "niv",
+            "type": "action",
+            "text": "NIV preoxygenation (PEEP 5-8, PS 5-10, FiO2 1.0) + nasal O2 for apnoea",
+            "severity": "high"
+          },
+          {
+            "id": "mask",
+            "type": "action",
+            "text": "Tight face mask 15 L/min or BVM with PEEP valve, 3-5 min + nasal O2"
+          },
+          {
+            "id": "agit",
+            "type": "decision",
+            "text": "Patient tolerating?"
+          },
+          {
+            "id": "dsi",
+            "type": "action",
+            "text": "Delayed sequence: ketamine 0.5-1 mg/kg, then NIV"
+          },
+          {
+            "id": "bmv",
+            "type": "end",
+            "text": "Induce; gentle BMV until laryngoscopy"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "hyp"
+          },
+          {
+            "from": "hyp",
+            "to": "niv",
+            "label": "Yes"
+          },
+          {
+            "from": "hyp",
+            "to": "mask",
+            "label": "No"
+          },
+          {
+            "from": "niv",
+            "to": "agit"
+          },
+          {
+            "from": "mask",
+            "to": "agit"
+          },
+          {
+            "from": "agit",
+            "to": "bmv",
+            "label": "Yes"
+          },
+          {
+            "from": "agit",
+            "to": "dsi",
+            "label": "No"
+          },
+          {
+            "from": "dsi",
+            "to": "bmv"
+          }
+        ],
+        "refs": [
+          "preoxi",
+          "prevent"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **PREOXI (2024):** NIV preoxygenation reduced hypoxaemia (SpO2 < 85%) during intubation from 18.5% to 9.1% vs oxygen mask, with no increase in aspiration.\n- **PreVent (2019):** bag-mask ventilation between induction and laryngoscopy halved severe hypoxaemia (10.9% vs 22.8%) without more aspiration.\n- **AIDAA 2025:** nasal oxygen 10-15 L/min or HFNO during apnoea increases safe apnoea time.",
+        "controversies": "- HFNC vs NIV preoxygenation in severe hypoxaemia: NIV generally achieves better oxygen reserves; HFNC can stay on during laryngoscopy.",
+        "indiaNotes": "- Ordinary nasal prongs at 15 L/min are cheap and nearly universal; use them for apnoeic oxygenation even where HFNC is not available."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "preoxi",
+        "prevent",
+        "das-icu2018",
+        "aidaa2025",
+        "sccm-rsi2023"
+      ],
+      "quiz": [
+        {
+          "id": "preoxygenation-q1",
+          "stem": "PREOXI compared NIV preoxygenation with:",
+          "options": [
+            "HFNC",
+            "Oxygen mask",
+            "No preoxygenation",
+            "Bag-mask without PEEP"
+          ],
+          "answerIndex": 1,
+          "explanation": "NIV reduced hypoxaemia compared with an oxygen mask."
+        },
+        {
+          "id": "preoxygenation-q2",
+          "stem": "PreVent showed that bag-mask ventilation after induction:",
+          "options": [
+            "Increased aspiration",
+            "Reduced severe hypoxaemia",
+            "Had no effect",
+            "Increased cardiac arrest"
+          ],
+          "answerIndex": 1,
+          "explanation": "Severe hypoxaemia fell from 22.8% to 10.9%."
+        },
+        {
+          "id": "preoxygenation-q3",
+          "stem": "Apnoeic oxygenation flow via standard nasal cannula per AIDAA:",
+          "options": [
+            "2 L/min",
+            "5 L/min",
+            "10-15 L/min",
+            "40 L/min"
+          ],
+          "answerIndex": 2,
+          "explanation": "10-15 L/min nasal oxygen during apnoea."
+        }
+      ]
+    },
+    {
+      "id": "rsi-drugs-technique",
+      "title": "Rapid sequence induction: drugs and technique",
+      "summary": "Use reduced-dose, haemodynamically safer induction (ketamine or etomidate in shock), full-dose rocuronium or succinylcholine, a video laryngoscope with bougie or stylet, and confirm with waveform capnography.",
+      "viewKey": "topic:airway-management/rsi-drugs-technique",
+      "uiHints": {
+        "icon": "wind",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "-3 min",
+            "title": "Final check",
+            "detail": "Monitoring (SpO2, ECG, BP every 1-2 min or arterial line), capnography attached, suction on, drugs labelled, vasopressor ready."
+          },
+          {
+            "n": 2,
+            "time": "0 s",
+            "title": "Induction agent",
+            "detail": "Shock: ketamine 0.5-1 mg/kg or etomidate 0.15-0.2 mg/kg. Stable: propofol 1-1.5 mg/kg or ketamine 1-2 mg/kg.",
+            "refs": [
+              "sccm-rsi2023",
+              "rsi-trial"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "0 s",
+            "title": "Paralytic immediately after",
+            "detail": "Rocuronium 1.2 mg/kg or succinylcholine 1.5 mg/kg (actual body weight).",
+            "refs": [
+              "sccm-rsi2023"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "45-60 s",
+            "title": "Laryngoscopy",
+            "detail": "Video laryngoscope first-line (DEVICE); bougie or stylet for every attempt. Cricoid pressure optional; release if it worsens the view.",
+            "refs": [
+              "device",
+              "bougie",
+              "das-icu2018"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Confirm",
+            "title": "Waveform capnography",
+            "detail": "Sustained ETCO2 waveform over ≥ 5 breaths. 'No trace = wrong place' (except in arrest with very poor CPR).",
+            "refs": [
+              "das-icu2018",
+              "aidaa2025"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "0-30 min",
+            "title": "Post-induction hypotension",
+            "detail": "Expect it: noradrenaline titration, small fluid bolus if responsive (routine fluid bolus did not prevent collapse: PREPARE II). Start sedation and analgesia promptly.",
+            "refs": [
+              "prepare2"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "ketamine",
+            "role": "Induction (shock, asthma, sepsis)",
+            "route": "IV",
+            "dose": "1-2 mg/kg (0.5-1 mg/kg in shock)",
+            "doseRange": {
+              "min": 0.5,
+              "max": 2,
+              "unit": "mg/kg"
+            },
+            "dilution": "200 mg in 20 mL = 10 mg/mL",
+            "workedExample": "70 kg in shock: 0.75 mg/kg ≈ 50 mg = 5 mL of 10 mg/mL",
+            "refs": [
+              "sccm-rsi2023",
+              "rsi-trial"
+            ]
+          },
+          {
+            "drugId": "etomidate",
+            "role": "Induction (haemodynamic stability)",
+            "route": "IV",
+            "dose": "0.2-0.3 mg/kg (0.15-0.2 mg/kg in shock)",
+            "doseRange": {
+              "min": 0.15,
+              "max": 0.3,
+              "unit": "mg/kg"
+            },
+            "dilution": "Undiluted 2 mg/mL",
+            "workedExample": "70 kg × 0.2 = 14 mg = 7 mL",
+            "refs": [
+              "sccm-rsi2023"
+            ]
+          },
+          {
+            "drugId": "propofol",
+            "role": "Induction in stable patients",
+            "route": "IV",
+            "dose": "1-2 mg/kg; 0.5-1 mg/kg if elderly or borderline BP",
+            "doseRange": {
+              "min": 0.5,
+              "max": 2,
+              "unit": "mg/kg"
+            },
+            "dilution": "Undiluted 10 mg/mL",
+            "workedExample": "70 kg × 1.5 = 105 mg ≈ 10.5 mL",
+            "refs": [
+              "das-icu2018"
+            ]
+          },
+          {
+            "drugId": "rocuronium",
+            "role": "RSI paralysis",
+            "route": "IV",
+            "dose": "1.2 mg/kg actual body weight",
+            "dilution": "Undiluted 10 mg/mL",
+            "workedExample": "70 kg × 1.2 = 84 mg ≈ 8.4 mL (round to 90-100 mg)",
+            "refs": [
+              "sccm-rsi2023"
+            ]
+          },
+          {
+            "drugId": "succinylcholine",
+            "role": "RSI paralysis (no contraindication)",
+            "route": "IV",
+            "dose": "1.5 mg/kg actual body weight",
+            "dilution": "Undiluted 50 mg/mL",
+            "workedExample": "70 kg × 1.5 = 105 mg ≈ 2.1 mL",
+            "refs": [
+              "sccm-rsi2023"
+            ]
+          },
+          {
+            "drugId": "fentanyl",
+            "role": "Blunt pressor response (ICP, dissection, ACS)",
+            "route": "IV",
+            "dose": "1-3 mcg/kg 3 min before induction; omit in shock",
+            "dilution": "Undiluted 50 mcg/mL",
+            "workedExample": "70 kg × 2 = 140 mcg ≈ 2.8 mL",
+            "refs": [
+              "das-icu2018"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "induction-agents",
+            "title": "Induction agents compared",
+            "columns": [
+              "Agent",
+              "Dose",
+              "Haemodynamics",
+              "Best for",
+              "Watch out"
+            ],
+            "rows": [
+              [
+                "Ketamine",
+                "1-2 mg/kg (0.5-1 in shock)",
+                "Usually maintains BP; can fall in catecholamine depletion",
+                "Shock, asthma, sepsis",
+                "Tachycardia, hypertension, secretions"
+              ],
+              [
+                "Etomidate",
+                "0.2-0.3 mg/kg",
+                "Most stable",
+                "Shock, cardiac disease",
+                "Adrenal suppression (single dose), myoclonus"
+              ],
+              [
+                "Propofol",
+                "1-2 mg/kg",
+                "Hypotension common",
+                "Stable patients, status epilepticus",
+                "Shock, elderly"
+              ],
+              [
+                "Midazolam",
+                "0.05-0.1 mg/kg (slow onset)",
+                "Hypotension",
+                "When others unavailable",
+                "Slow onset, poor intubating conditions"
+              ]
+            ],
+            "refs": [
+              "sccm-rsi2023",
+              "rsi-trial"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "No capnography trace: assume oesophageal intubation; remove the tube unless you can see it through the cords on VL."
+          },
+          {
+            "text": "Succinylcholine with hyperkalaemia, crush, burns > 24 h, denervation or prolonged immobility: risk of fatal hyperkalaemia."
+          },
+          {
+            "text": "SBP < 65 mmHg after induction: noradrenaline bolus/infusion now, check for tension pneumothorax or auto-PEEP."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Under-dosing the paralytic (worse intubating conditions)."
+          },
+          {
+            "text": "Hyperventilating with the bag after intubation (auto-PEEP, hypotension)."
+          },
+          {
+            "text": "Forgetting post-intubation sedation after short-acting induction with long-acting rocuronium (awareness)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "With rocuronium 1.2 mg/kg, sugammadex 16 mg/kg can reverse within ~3 min, but in the ICU waking up is rarely a real rescue plan."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "RSI sequence",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Prepared, preoxygenated patient"
+          },
+          {
+            "id": "bp",
+            "type": "decision",
+            "text": "Haemodynamically unstable?"
+          },
+          {
+            "id": "shockrsi",
+            "type": "action",
+            "text": "Ketamine 0.5-1 mg/kg or etomidate 0.15-0.2 mg/kg + rocuronium 1.2 mg/kg; noradrenaline running",
+            "severity": "high"
+          },
+          {
+            "id": "stablersi",
+            "type": "action",
+            "text": "Propofol 1-1.5 mg/kg or ketamine 1-2 mg/kg + rocuronium 1.2 or succinylcholine 1.5 mg/kg"
+          },
+          {
+            "id": "vl",
+            "type": "action",
+            "text": "Video laryngoscope + bougie/stylet"
+          },
+          {
+            "id": "co2",
+            "type": "decision",
+            "text": "Sustained ETCO2 waveform?"
+          },
+          {
+            "id": "post",
+            "type": "end",
+            "text": "Secure tube, post-intubation bundle"
+          },
+          {
+            "id": "fail",
+            "type": "end",
+            "text": "Remove tube; re-oxygenate; failed attempt → difficult airway pathway",
+            "severity": "critical"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "bp"
+          },
+          {
+            "from": "bp",
+            "to": "shockrsi",
+            "label": "Yes"
+          },
+          {
+            "from": "bp",
+            "to": "stablersi",
+            "label": "No"
+          },
+          {
+            "from": "shockrsi",
+            "to": "vl"
+          },
+          {
+            "from": "stablersi",
+            "to": "vl"
+          },
+          {
+            "from": "vl",
+            "to": "co2"
+          },
+          {
+            "from": "co2",
+            "to": "post",
+            "label": "Yes"
+          },
+          {
+            "from": "co2",
+            "to": "fail",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "sccm-rsi2023",
+          "das-icu2018"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **RSI trial (2025):** ketamine vs etomidate in 2365 critically ill adults: no difference in 28-day in-hospital mortality (28.1% vs 29.1%); cardiovascular collapse during intubation was more frequent with ketamine (22.1% vs 17.0%).\n- **DEVICE (2023):** video laryngoscopy improved first-attempt success (85.1% vs 70.8%) vs direct laryngoscopy.\n- **BOUGIE (2021):** bougie did not improve first-attempt success over tube + stylet overall.\n- **PREPARE II (2022):** a 500 mL fluid bolus did not reduce cardiovascular collapse.\n- **SCCM RSI guideline 2023:** evidence-based recommendations on induction agents, NMB choice and adjuncts in critically ill adults.",
+        "controversies": "- Etomidate adrenal suppression: the RSI trial and meta-analyses show no clear mortality signal from a single dose.\n- Cricoid pressure: unproven benefit, may worsen view.",
+        "indiaNotes": "- Etomidate is available but not stocked everywhere; ketamine is cheap and universal.\n- Video laryngoscopes (including Indian-made devices) are increasingly common but often limited to one per ICU; ensure it is charged and in the airway trolley."
+      },
+      "drugIds": [
+        "ketamine",
+        "etomidate",
+        "propofol",
+        "fentanyl",
+        "rocuronium",
+        "succinylcholine",
+        "sugammadex",
+        "noradrenaline"
+      ],
+      "calculatorIds": [
+        "predicted-body-weight",
+        "shock-index"
+      ],
+      "references": [
+        "sccm-rsi2023",
+        "rsi-trial",
+        "device",
+        "bougie",
+        "prepare2",
+        "das-icu2018"
+      ],
+      "quiz": [
+        {
+          "id": "rsi-drugs-technique-q1",
+          "stem": "In the RSI trial, compared with etomidate, ketamine:",
+          "options": [
+            "Reduced mortality",
+            "Did not reduce mortality and caused more cardiovascular collapse",
+            "Caused more adrenal crisis",
+            "Improved first-pass success"
+          ],
+          "answerIndex": 1,
+          "explanation": "28-day mortality 28.1% vs 29.1%; collapse 22.1% vs 17.0%."
+        },
+        {
+          "id": "rsi-drugs-technique-q2",
+          "stem": "Rocuronium RSI dose is:",
+          "options": [
+            "0.6 mg/kg",
+            "1.2 mg/kg",
+            "2 mg/kg",
+            "0.1 mg/kg"
+          ],
+          "answerIndex": 1,
+          "explanation": "1.2 mg/kg actual body weight gives intubating conditions in ~60 s."
+        },
+        {
+          "id": "rsi-drugs-technique-q3",
+          "stem": "Succinylcholine is contraindicated in:",
+          "options": [
+            "Asthma",
+            "Burns at 5 days",
+            "Sepsis on day 1",
+            "Head injury on arrival"
+          ],
+          "answerIndex": 1,
+          "explanation": "After 24-48 h, burns cause receptor upregulation and risk of hyperkalaemia."
+        },
+        {
+          "id": "rsi-drugs-technique-q4",
+          "stem": "First-attempt success in DEVICE was higher with:",
+          "options": [
+            "Direct laryngoscope",
+            "Video laryngoscope",
+            "Bougie",
+            "Awake fibreoptic"
+          ],
+          "answerIndex": 1,
+          "explanation": "Video laryngoscopy 85.1% vs 70.8%."
+        }
+      ]
+    },
+    {
+      "id": "failed-airway-cico",
+      "title": "Failed intubation and CICO (can't intubate, can't oxygenate)",
+      "summary": "Limit attempts, switch promptly between tube, SGA and face mask to oxygenate, call 'Code D', and perform scalpel-bougie-tube cricothyroidotomy without delay when all three fail.",
+      "viewKey": "topic:airway-management/failed-airway-cico",
+      "uiHints": {
+        "icon": "wind",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Attempt 1 fails",
+            "title": "Call for help",
+            "detail": "Announce 'failed intubation', call 'Code D' / senior. Re-oxygenate with BMV (2-person, OPA/NPA) between attempts.",
+            "refs": [
+              "aidaa2025"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Optimise",
+            "title": "Change one thing",
+            "detail": "Position, full paralysis, external laryngeal manipulation, different blade or device, more experienced operator. Maximum 3 attempts at intubation (+1 by expert) while SpO2 is maintained.",
+            "refs": [
+              "aidaa2025",
+              "das-icu2018"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Plan B",
+            "title": "Second-generation SGA",
+            "detail": "Up to 3 attempts. If it works: stop and think (wake? intubate via SGA with fibreoptic? FONA?).",
+            "refs": [
+              "das-icu2018",
+              "das2015"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Plan C",
+            "title": "Face mask",
+            "detail": "2-person technique with adjuncts; ensure paralysis. AIDAA 2025: no fixed hierarchy between tube, SGA and mask; switch rapidly to whichever ventilates.",
+            "refs": [
+              "aidaa2025"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "CICO",
+            "title": "Declare it",
+            "detail": "Ventilation fails by tube, SGA and mask: declare CICO. AIDAA 2025: complete ventilation failure (even if SpO2 still holds) is the trigger.",
+            "refs": [
+              "aidaa2025"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Plan D",
+            "title": "Front-of-neck access",
+            "detail": "Scalpel-bougie-tube: extend neck, identify cricothyroid membrane (laryngeal handshake), transverse stab incision with No. 10 blade, rotate 90°, bougie, rail a 6.0 cuffed tube. Vertical skin incision first if membrane is impalpable.",
+            "refs": [
+              "das2015",
+              "das-icu2018"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "SpO2 falling below 80% with failing mask ventilation: prepare FONA immediately."
+          },
+          {
+            "text": "Repeated laryngoscopy attempts cause airway oedema and turn 'can't intubate' into 'can't oxygenate'."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Fixation on intubation while SpO2 falls."
+          },
+          {
+            "text": "Needle cricothyroidotomy without a high-pressure source (inadequate ventilation)."
+          },
+          {
+            "text": "Missing paralysis: giving sugammadex reflexively in the ICU when waking is not realistic."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Mark the cricothyroid membrane with a pen (or ultrasound) before induction in predicted difficult airways."
+          },
+          {
+            "text": "Keep a FONA kit (No. 10 scalpel, bougie, 6.0 cuffed tube) on every airway trolley."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Failed airway (AIDAA 2025 / DAS ICU 2018 combined)",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Intubation attempt fails"
+          },
+          {
+            "id": "help",
+            "type": "action",
+            "text": "Call for help / 'Code D'; oxygenate by BMV",
+            "severity": "critical"
+          },
+          {
+            "id": "sat",
+            "type": "decision",
+            "text": "Oxygenation adequate (SpO2 maintained)?"
+          },
+          {
+            "id": "retry",
+            "type": "action",
+            "text": "Optimise and re-attempt (max 3 + 1 expert) with VL, bougie"
+          },
+          {
+            "id": "success",
+            "type": "end",
+            "text": "Intubated: confirm capnography"
+          },
+          {
+            "id": "sga",
+            "type": "action",
+            "text": "Second-generation SGA (max 3 attempts)"
+          },
+          {
+            "id": "sgaok",
+            "type": "decision",
+            "text": "SGA or mask ventilates?"
+          },
+          {
+            "id": "stop",
+            "type": "end",
+            "text": "Stop and think: wake, fibreoptic via SGA, or elective FONA"
+          },
+          {
+            "id": "cico",
+            "type": "action",
+            "text": "Declare CICO; ensure paralysis",
+            "severity": "critical"
+          },
+          {
+            "id": "fona",
+            "type": "end",
+            "text": "Scalpel-bougie-tube cricothyroidotomy",
+            "severity": "critical"
+          },
+          {
+            "id": "ok2",
+            "type": "decision",
+            "text": "Re-attempt successful?"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "help"
+          },
+          {
+            "from": "help",
+            "to": "sat"
+          },
+          {
+            "from": "sat",
+            "to": "retry",
+            "label": "Yes"
+          },
+          {
+            "from": "sat",
+            "to": "sga",
+            "label": "No"
+          },
+          {
+            "from": "retry",
+            "to": "ok2"
+          },
+          {
+            "from": "ok2",
+            "to": "success",
+            "label": "Yes"
+          },
+          {
+            "from": "ok2",
+            "to": "sga",
+            "label": "No"
+          },
+          {
+            "from": "sga",
+            "to": "sgaok"
+          },
+          {
+            "from": "sgaok",
+            "to": "stop",
+            "label": "Yes"
+          },
+          {
+            "from": "sgaok",
+            "to": "cico",
+            "label": "No"
+          },
+          {
+            "from": "cico",
+            "to": "fona"
+          }
+        ],
+        "refs": [
+          "aidaa2025",
+          "das-icu2018"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **AIDAA 2025:** guidance for failure of any primary airway plan (SGA, tube or mask); \"Code D\"; switch between tube, SGA and face mask without hierarchy; up to three attempts with these devices provided SpO2 remains ≥ 95%; complete ventilation failure triggers emergency cricothyroidotomy, preferably surgical.\n- **DAS 2015 and DAS ICU 2018:** Plans A-D, scalpel-bougie-tube FONA as the recommended technique.",
+        "controversies": "- Surgical vs cannula techniques: cannula techniques have high failure rates in emergencies.",
+        "indiaNotes": "- AIDAA guidelines are designed for Indian hospitals and emphasise simple, cheap tools (bougie, scalpel, tube) available everywhere."
+      },
+      "drugIds": [
+        "rocuronium",
+        "sugammadex"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "aidaa2025",
+        "das-icu2018",
+        "das2015"
+      ],
+      "quiz": [
+        {
+          "id": "failed-airway-cico-q1",
+          "stem": "According to AIDAA 2025, emergency cricothyroidotomy is triggered by:",
+          "options": [
+            "Two failed intubation attempts",
+            "Complete ventilation failure via tube, SGA and face mask",
+            "SpO2 < 95%",
+            "Any bleeding in the airway"
+          ],
+          "answerIndex": 1,
+          "explanation": "Complete ventilation failure, even if oxygenation is momentarily maintained."
+        },
+        {
+          "id": "failed-airway-cico-q2",
+          "stem": "The recommended FONA technique is:",
+          "options": [
+            "Needle cricothyroidotomy with oxygen tubing",
+            "Scalpel-bougie-tube",
+            "Percutaneous tracheostomy",
+            "Retrograde intubation"
+          ],
+          "answerIndex": 1,
+          "explanation": "Scalpel-bougie-tube with a 6.0 cuffed tube."
+        },
+        {
+          "id": "failed-airway-cico-q3",
+          "stem": "After a successful SGA rescue in a failed intubation, the next step is:",
+          "options": [
+            "Immediately repeat laryngoscopy",
+            "Stop and think about the safest definitive plan",
+            "Remove the SGA",
+            "Give sugammadex always"
+          ],
+          "answerIndex": 1,
+          "explanation": "Pause and choose: wake, fibreoptic through the SGA, or controlled FONA."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Attempt limits",
+          "reason": "AIDAA 2025 abstract states up to three attempts while SpO2 ≥ 95%; DAS 2018 ICU states maximum 3 + 1 laryngoscopy attempts. Confirm the exact local protocol."
+        }
+      ]
+    },
+    {
+      "id": "post-intubation-care",
+      "title": "Immediately after intubation",
+      "summary": "Confirm and secure the tube, set lung-protective ventilation matched to the patient's prior minute ventilation, treat hypotension, start analgosedation, check the chest X-ray and cuff pressure, and document the airway.",
+      "viewKey": "topic:airway-management/post-intubation-care",
+      "uiHints": {
+        "icon": "wind",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0-2 min",
+            "title": "Confirm",
+            "detail": "Waveform capnography, bilateral chest rise and breath sounds, SpO2 recovery.",
+            "refs": [
+              "das-icu2018"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0-5 min",
+            "title": "Secure and depth",
+            "detail": "Tube at ~21 cm (women) / 23 cm (men) at the teeth; tie or tape; cuff pressure 20-30 cmH2O with a manometer."
+          },
+          {
+            "n": 3,
+            "time": "0-10 min",
+            "title": "Ventilator",
+            "detail": "Vt 6-8 mL/kg PBW, PEEP 5-8 (higher if hypoxaemic), FiO2 1.0 then titrate to SpO2 92-96%. In severe metabolic acidosis, match the pre-intubation minute ventilation (often rate 25-30). See module 8."
+          },
+          {
+            "n": 4,
+            "time": "0-10 min",
+            "title": "Haemodynamics",
+            "detail": "Expect hypotension from induction, positive pressure and loss of sympathetic drive; titrate noradrenaline; exclude tension pneumothorax and auto-PEEP if BP crashes."
+          },
+          {
+            "n": 5,
+            "time": "0-15 min",
+            "title": "Sedation and analgesia",
+            "detail": "Start analgesia-first sedation (fentanyl infusion + propofol); target RASS according to need (deeper if paralysed).",
+            "refs": [
+              "sccm-rsi2023"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "30 min",
+            "title": "Chest X-ray and gas",
+            "detail": "Tube tip 3-5 cm above carina; check for pneumothorax and NG position; ABG at 30 min. Insert NG/OG tube."
+          },
+          {
+            "n": 7,
+            "time": "Document",
+            "title": "Airway record",
+            "detail": "Grade of view, device, attempts, adjuncts, difficulty, and a 'difficult airway' alert on the bed and in the notes if relevant.",
+            "refs": [
+              "aidaa-icu2016"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Sudden hypotension and rising airway pressure: tension pneumothorax or auto-PEEP; disconnect briefly and examine."
+          },
+          {
+            "text": "Desaturation after intubation: DOPES (Displacement, Obstruction, Pneumothorax, Equipment, Stacking)."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Leaving the patient paralysed without sedation."
+          },
+          {
+            "text": "Right main bronchus intubation (check depth and breath sounds)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Write the tube size and depth on the whiteboard; check it at every handover."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Desaturation or hypotension after intubation (DOPES)",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "SpO2 or BP falls after intubation"
+          },
+          {
+            "id": "disc",
+            "type": "action",
+            "text": "Hand-bag with FiO2 1.0; briefly disconnect if pressures high",
+            "severity": "critical"
+          },
+          {
+            "id": "co2",
+            "type": "decision",
+            "text": "ETCO2 waveform present and tube depth correct?"
+          },
+          {
+            "id": "tube",
+            "type": "end",
+            "text": "Displaced tube: reposition or reintubate",
+            "severity": "critical"
+          },
+          {
+            "id": "pass",
+            "type": "decision",
+            "text": "Suction catheter passes freely?"
+          },
+          {
+            "id": "obs",
+            "type": "end",
+            "text": "Obstruction: suction, change tube if blocked"
+          },
+          {
+            "id": "chest",
+            "type": "decision",
+            "text": "Unilateral absent breath sounds / no lung sliding?"
+          },
+          {
+            "id": "ptx",
+            "type": "end",
+            "text": "Pneumothorax: decompress then drain",
+            "severity": "critical"
+          },
+          {
+            "id": "other",
+            "type": "end",
+            "text": "Check equipment, auto-PEEP (stacking), shock, bronchospasm, PE"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "disc"
+          },
+          {
+            "from": "disc",
+            "to": "co2"
+          },
+          {
+            "from": "co2",
+            "to": "tube",
+            "label": "No"
+          },
+          {
+            "from": "co2",
+            "to": "pass",
+            "label": "Yes"
+          },
+          {
+            "from": "pass",
+            "to": "obs",
+            "label": "No"
+          },
+          {
+            "from": "pass",
+            "to": "chest",
+            "label": "Yes"
+          },
+          {
+            "from": "chest",
+            "to": "ptx",
+            "label": "Yes"
+          },
+          {
+            "from": "chest",
+            "to": "other",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "das-icu2018"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- DAS ICU 2018 includes post-intubation steps: confirm with capnography, plan ventilation, sedation, and handover of airway details.",
+        "indiaNotes": "- Cuff manometers are often missing; a cheap aneroid cuff manometer prevents tracheal injury and micro-aspiration."
+      },
+      "drugIds": [
+        "fentanyl",
+        "propofol",
+        "noradrenaline"
+      ],
+      "calculatorIds": [
+        "predicted-body-weight",
+        "tidal-volume-pbw"
+      ],
+      "references": [
+        "das-icu2018",
+        "aidaa-icu2016",
+        "sccm-rsi2023"
+      ],
+      "quiz": [
+        {
+          "id": "post-intubation-care-q1",
+          "stem": "Shortly after intubation, BP falls and airway pressures rise. First action?",
+          "options": [
+            "Increase sedation",
+            "Briefly disconnect the ventilator and assess for tension/auto-PEEP",
+            "Give furosemide",
+            "Order a CT"
+          ],
+          "answerIndex": 1,
+          "explanation": "Disconnection relieves breath stacking and helps diagnose tension."
+        },
+        {
+          "id": "post-intubation-care-q2",
+          "stem": "Target cuff pressure:",
+          "options": [
+            "5-10 cmH2O",
+            "20-30 cmH2O",
+            "40-50 cmH2O",
+            "As high as possible"
+          ],
+          "answerIndex": 1,
+          "explanation": "20-30 cmH2O balances seal and mucosal perfusion."
+        },
+        {
+          "id": "post-intubation-care-q3",
+          "stem": "Correct tube tip on chest X-ray:",
+          "options": [
+            "At the carina",
+            "3-5 cm above the carina",
+            "In the right main bronchus",
+            "At the vocal cords"
+          ],
+          "answerIndex": 1,
+          "explanation": "3-5 cm above the carina with the head neutral."
+        }
+      ]
+    },
+    {
+      "id": "extubation",
+      "title": "Planning and performing extubation",
+      "summary": "Extubate after a successful SBT when the patient can protect the airway; stratify risk, use a cuff leak test in high-risk patients, give steroids for a failed leak, use HFNC or NIV after extubation in high-risk patients, and be ready to reintubate.",
+      "viewKey": "topic:airway-management/extubation",
+      "uiHints": {
+        "icon": "wind",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Plan",
+            "title": "Readiness",
+            "detail": "Passed SBT (module 8), awake and following commands, adequate cough, secretions manageable (suction ≤ every 2 h), haemodynamically stable.",
+            "refs": [
+              "ats-chest2017"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Plan",
+            "title": "Risk stratify",
+            "detail": "Low risk vs at-risk (known difficult airway, airway oedema, prolonged intubation, trauma to airway, obesity, failed previous extubation).",
+            "refs": [
+              "das-extubation2012"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Test",
+            "title": "Cuff leak test (at-risk only)",
+            "detail": "Volume-controlled ventilation: measure Vt with cuff inflated and deflated; leak < 110 mL (or < 10-12%) suggests risk of stridor.",
+            "refs": [
+              "ats-chest2017"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "If leak fails",
+            "title": "Steroids",
+            "detail": "Methylprednisolone 20 mg every 4 h for 4 doses (start ≥ 4 h before extubation).",
+            "refs": [
+              "ats-chest2017"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Do",
+            "title": "Extubate",
+            "detail": "Head up, preoxygenate on FiO2 1.0, suction mouth and tube, deflate cuff, remove at peak inspiration with positive pressure, apply O2 or HFNC/NIV.",
+            "refs": [
+              "das-extubation2012"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "After",
+            "title": "Support high-risk patients",
+            "detail": "HFNC or prophylactic NIV after extubation in high-risk patients (age > 65, cardiac disease, COPD, hypercapnia). See module 7.",
+            "refs": [
+              "ats-chest2017"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Stridor",
+            "title": "Treat promptly",
+            "detail": "Nebulised adrenaline, heliox if available, IV steroids, head up; NIV is not a cure; reintubate early (smaller tube) if worsening."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "methylprednisolone",
+            "role": "Prevent post-extubation stridor after failed cuff leak",
+            "route": "IV",
+            "dose": "20 mg every 4 h × 4 doses before extubation",
+            "refs": [
+              "ats-chest2017"
+            ]
+          },
+          {
+            "drugId": "adrenaline",
+            "role": "Post-extubation stridor",
+            "route": "Nebulised",
+            "dose": "1 mg in 4 mL NS (up to 5 mg undiluted)",
+            "verify": "Dose varies by protocol.",
+            "refs": [
+              "das-extubation2012"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Stridor with rising work of breathing after extubation: senior, airway trolley, reintubation plan."
+          },
+          {
+            "text": "Delayed reintubation after failed extubation increases mortality."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Extubating a patient who cannot cough or has copious secretions despite passing the SBT."
+          },
+          {
+            "text": "Using rescue NIV to avoid reintubation in established post-extubation respiratory failure (associated with delayed reintubation and harm)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "For a known difficult airway, consider extubation over an airway exchange catheter (DAS advanced algorithm)."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Extubation decision",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Passed SBT"
+          },
+          {
+            "id": "prot",
+            "type": "decision",
+            "text": "Awake, adequate cough, manageable secretions?"
+          },
+          {
+            "id": "wait",
+            "type": "end",
+            "text": "Not ready: address cough or secretions; reassess daily"
+          },
+          {
+            "id": "risk",
+            "type": "decision",
+            "text": "At-risk airway (oedema, difficult airway, prolonged intubation)?"
+          },
+          {
+            "id": "leak",
+            "type": "decision",
+            "text": "Cuff leak present?"
+          },
+          {
+            "id": "ster",
+            "type": "action",
+            "text": "Methylprednisolone 20 mg q4h × 4, then extubate with airway plan"
+          },
+          {
+            "id": "ext",
+            "type": "action",
+            "text": "Extubate; HFNC or NIV if high risk for respiratory failure"
+          },
+          {
+            "id": "obs",
+            "type": "end",
+            "text": "Observe closely; reintubate early if failing"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "prot"
+          },
+          {
+            "from": "prot",
+            "to": "wait",
+            "label": "No"
+          },
+          {
+            "from": "prot",
+            "to": "risk",
+            "label": "Yes"
+          },
+          {
+            "from": "risk",
+            "to": "leak",
+            "label": "Yes"
+          },
+          {
+            "from": "risk",
+            "to": "ext",
+            "label": "No"
+          },
+          {
+            "from": "leak",
+            "to": "ext",
+            "label": "Yes"
+          },
+          {
+            "from": "leak",
+            "to": "ster",
+            "label": "No"
+          },
+          {
+            "from": "ster",
+            "to": "ext"
+          },
+          {
+            "from": "ext",
+            "to": "obs"
+          }
+        ],
+        "refs": [
+          "ats-chest2017",
+          "das-extubation2012"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **ATS/CHEST 2017:** suggests cuff leak testing in patients at high risk for post-extubation stridor and systemic steroids at least 4 h before extubation if the leak fails; suggests preventive NIV after extubation in high-risk patients.\n- **DAS 2012:** low-risk and at-risk extubation algorithms.",
+        "indiaNotes": "- Heliox is rarely available in India; rely on adrenaline nebulisation, steroids and early reintubation."
+      },
+      "drugIds": [
+        "methylprednisolone",
+        "adrenaline"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "das-extubation2012",
+        "ats-chest2017"
+      ],
+      "quiz": [
+        {
+          "id": "extubation-q1",
+          "stem": "A cuff leak volume suggesting risk of stridor is:",
+          "options": [
+            "< 110 mL",
+            "> 300 mL",
+            "Any leak",
+            "> 25%"
+          ],
+          "answerIndex": 0,
+          "explanation": "< 110 mL (or < 10-12% of delivered Vt) is commonly used."
+        },
+        {
+          "id": "extubation-q2",
+          "stem": "If the cuff leak test fails in a high-risk patient, ATS/CHEST suggests:",
+          "options": [
+            "Tracheostomy",
+            "Steroids ≥ 4 h before extubation",
+            "Extubate immediately",
+            "Never extubate"
+          ],
+          "answerIndex": 1,
+          "explanation": "Systemic steroids reduce post-extubation stridor and reintubation."
+        },
+        {
+          "id": "extubation-q3",
+          "stem": "After extubation of a 72-year-old with COPD and hypercapnia, best support is:",
+          "options": [
+            "Room air",
+            "Prophylactic NIV",
+            "Venturi 24% only",
+            "Nothing"
+          ],
+          "answerIndex": 1,
+          "explanation": "Preventive NIV reduces reintubation in high-risk (especially hypercapnic) patients."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "ketamine",
+      "name": "Ketamine",
+      "class": "NMDA antagonist dissociative anaesthetic",
+      "indications": "Induction in haemodynamically unstable patients, asthma, sepsis; analgosedation.",
+      "adultDose": "Induction 1-2 mg/kg IV (0.5-1 mg/kg in shock). Analgosedation 0.1-0.5 mg/kg/h.",
+      "preparationIndia": "50 mg/mL in 10 mL vials (also 10 mg/mL). For induction draw 200 mg to 20 mL = 10 mg/mL.",
+      "cautions": "Can still cause hypotension in catecholamine-depleted patients; tachycardia, hypertension, emergence reactions, raised secretions. Raised ICP concerns are no longer considered a contraindication.",
+      "refs": [
+        "sccm-rsi2023",
+        "rsi-trial"
+      ]
+    },
+    {
+      "id": "etomidate",
+      "name": "Etomidate",
+      "class": "Imidazole hypnotic",
+      "indications": "Induction when cardiovascular stability is needed.",
+      "adultDose": "0.2-0.3 mg/kg IV (0.15-0.2 mg/kg in shock).",
+      "preparationIndia": "2 mg/mL, 10 mL ampoules (lipid emulsion).",
+      "cautions": "Single dose transiently suppresses adrenal 11-beta-hydroxylase; myoclonus; no analgesia.",
+      "refs": [
+        "sccm-rsi2023",
+        "rsi-trial"
+      ]
+    },
+    {
+      "id": "propofol",
+      "name": "Propofol",
+      "class": "GABA-A agonist hypnotic",
+      "indications": "Induction in haemodynamically stable patients; sedation after intubation.",
+      "adultDose": "Induction 1-2 mg/kg (0.5-1 mg/kg or less in elderly or unstable). Sedation 0.5-4 mg/kg/h.",
+      "preparationIndia": "1% (10 mg/mL) in 20 mL and 50 mL vials.",
+      "cautions": "Dose-related hypotension and myocardial depression; avoid full doses in shock.",
+      "refs": [
+        "das-icu2018"
+      ]
+    },
+    {
+      "id": "fentanyl",
+      "name": "Fentanyl",
+      "class": "Synthetic opioid",
+      "indications": "Blunting the pressor response (head injury, aortic dissection, ACS); analgesia after intubation.",
+      "adultDose": "Pre-induction 1-3 mcg/kg (omit or reduce in shock). Infusion 0.5-2 mcg/kg/h.",
+      "preparationIndia": "50 mcg/mL ampoules (2 mL and 10 mL).",
+      "cautions": "Hypotension by removing sympathetic drive; chest wall rigidity with rapid large doses.",
+      "refs": [
+        "das-icu2018"
+      ]
+    },
+    {
+      "id": "rocuronium",
+      "name": "Rocuronium",
+      "class": "Aminosteroid non-depolarising neuromuscular blocker",
+      "indications": "RSI paralysis (preferred where succinylcholine is contraindicated).",
+      "adultDose": "RSI 1.2 mg/kg IV (actual body weight); onset 45-60 s; duration 45-70 min.",
+      "preparationIndia": "10 mg/mL, 5 mL vials (50 mg). Store refrigerated (or check room-temperature shelf life).",
+      "cautions": "Long duration if you cannot intubate: have sugammadex available. Anaphylaxis is rare.",
+      "refs": [
+        "sccm-rsi2023",
+        "das-icu2018"
+      ]
+    },
+    {
+      "id": "succinylcholine",
+      "name": "Succinylcholine (suxamethonium)",
+      "class": "Depolarising neuromuscular blocker",
+      "indications": "RSI when rapid offset is valuable and no contraindication.",
+      "adultDose": "1.5 mg/kg IV (actual body weight); onset 45 s; duration 8-10 min.",
+      "preparationIndia": "50 mg/mL ampoules (2 mL = 100 mg); refrigerate.",
+      "cautions": "Contraindicated with hyperkalaemia, prolonged immobility (> 48-72 h), burns or crush > 24-48 h, denervation (stroke, spinal injury, GBS, neuromuscular disease), malignant hyperthermia history. Bradycardia with repeat doses.",
+      "refs": [
+        "sccm-rsi2023"
+      ]
+    },
+    {
+      "id": "sugammadex",
+      "name": "Sugammadex",
+      "class": "Selective relaxant-binding agent",
+      "indications": "Reversal of rocuronium (or vecuronium); immediate reversal in a can't-intubate situation when waking is a realistic plan.",
+      "adultDose": "16 mg/kg IV for immediate reversal after 1.2 mg/kg rocuronium; 2-4 mg/kg for routine reversal.",
+      "preparationIndia": "100 mg/mL, 2 mL vials. Expensive; keep in the airway trolley.",
+      "cautions": "Reversal does not fix an obstructed airway; anaphylaxis; bradycardia.",
+      "refs": [
+        "das2015"
+      ]
+    },
+    {
+      "id": "noradrenaline",
+      "name": "Noradrenaline (norepinephrine)",
+      "class": "Vasopressor",
+      "indications": "Prevent or treat peri-intubation hypotension (start before induction if SBP < 90 or shock index > 0.9).",
+      "adultDose": "Infusion 0.05-0.3 mcg/kg/min; push-dose 4-8 mcg aliquots from a 4-16 mcg/mL syringe (specialist use).",
+      "preparationIndia": "4 mg in 50 mL (80 mcg/mL) for infusion; push-dose syringe 1 mL of 80 mcg/mL diluted to 10 mL = 8 mcg/mL.",
+      "cautions": "Label push-dose syringes clearly; dilution errors are a known hazard.",
+      "verify": "Push-dose vasopressors are not addressed by the guidelines cited; use local protocol.",
+      "refs": [
+        "das-icu2018"
+      ]
+    },
+    {
+      "id": "methylprednisolone",
+      "name": "Methylprednisolone",
+      "class": "Corticosteroid",
+      "indications": "Prevention of post-extubation stridor in patients with a failed cuff leak test.",
+      "adultDose": "20 mg IV every 4 h for 4 doses before extubation (start ≥ 4 h, ideally 12 h, before extubation).",
+      "preparationIndia": "40 mg, 125 mg, 500 mg and 1 g vials.",
+      "cautions": "Hyperglycaemia.",
+      "refs": [
+        "ats-chest2017"
+      ]
+    },
+    {
+      "id": "adrenaline",
+      "name": "Adrenaline (nebulised)",
+      "class": "Catecholamine",
+      "indications": "Post-extubation stridor (temporising).",
+      "adultDose": "1 mg (1 mL of 1 mg/mL) in 4 mL NS nebulised, or up to 5 mL of undiluted 1 mg/mL; may repeat.",
+      "preparationIndia": "1 mg/mL ampoules.",
+      "cautions": "Tachycardia; rebound swelling; prepare for reintubation.",
+      "verify": "Nebulised adrenaline doses for adults vary between protocols.",
+      "refs": [
+        "das-extubation2012"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "aidaa2025",
+      "citation": "Myatra SN, Shah AP, Ramkumar V, et al. All India Difficult Airway Association 2025 guidelines for the management of unanticipated difficult airway in adults under general anaesthesia. Indian J Anaesth. 2025;69(11):1117-1141",
+      "url": "https://doi.org/10.4103/ija.ija_1210_25",
+      "year": 2025,
+      "doi": "10.4103/ija.ija_1210_25",
+      "type": "guideline"
+    },
+    {
+      "id": "aidaa-icu2016",
+      "citation": "Myatra SN, Ahmed SM, Kundra P, et al. The All India Difficult Airway Association 2016 guidelines for tracheal intubation in the Intensive Care Unit. Indian J Anaesth. 2016;60(12):922-930",
+      "url": "https://doi.org/10.4103/0019-5049.195485",
+      "year": 2016,
+      "doi": "10.4103/0019-5049.195485",
+      "type": "guideline"
+    },
+    {
+      "id": "das-icu2018",
+      "citation": "Higgs A, McGrath BA, Goddard C, et al. Guidelines for the management of tracheal intubation in critically ill adults. Br J Anaesth. 2018;120(2):323-352",
+      "url": "https://doi.org/10.1016/j.bja.2017.10.021",
+      "year": 2018,
+      "doi": "10.1016/j.bja.2017.10.021",
+      "type": "guideline"
+    },
+    {
+      "id": "das2015",
+      "citation": "Frerk C, Mitchell VS, McNarry AF, et al. Difficult Airway Society 2015 guidelines for management of unanticipated difficult intubation in adults. Br J Anaesth. 2015;115(6):827-848",
+      "url": "https://doi.org/10.1093/bja/aev371",
+      "year": 2015,
+      "doi": "10.1093/bja/aev371",
+      "type": "guideline"
+    },
+    {
+      "id": "das-extubation2012",
+      "citation": "Popat M, Mitchell V, Dravid R, et al. Difficult Airway Society guidelines for the management of tracheal extubation. Anaesthesia. 2012;67(3):318-340",
+      "url": "https://doi.org/10.1111/j.1365-2044.2012.07075.x",
+      "year": 2012,
+      "doi": "10.1111/j.1365-2044.2012.07075.x",
+      "type": "guideline"
+    },
+    {
+      "id": "esicm-pda2024",
+      "citation": "Tracheal intubation in critically ill adults with a physiologically difficult airway. An international Delphi study. Intensive Care Med. 2024",
+      "url": "https://doi.org/10.1007/s00134-024-07578-2",
+      "year": 2024,
+      "doi": "10.1007/s00134-024-07578-2",
+      "type": "consensus"
+    },
+    {
+      "id": "sccm-rsi2023",
+      "citation": "Acquisto NM, Mosier JM, Bittner EA, et al. Society of Critical Care Medicine clinical practice guidelines for rapid sequence intubation in the critically ill adult patient. Crit Care Med. 2023;51(10):1411-1430",
+      "url": "https://doi.org/10.1097/CCM.0000000000006000",
+      "year": 2023,
+      "doi": "10.1097/CCM.0000000000006000",
+      "type": "guideline"
+    },
+    {
+      "id": "macocha",
+      "citation": "De Jong A, Molinari N, Terzi N, et al. Early identification of patients at risk for difficult intubation in the intensive care unit: development and validation of the MACOCHA score. Am J Respir Crit Care Med. 2013;187(8):832-839",
+      "url": "https://doi.org/10.1164/rccm.201210-1851OC",
+      "year": 2013,
+      "doi": "10.1164/rccm.201210-1851OC",
+      "type": "trial"
+    },
+    {
+      "id": "intube",
+      "citation": "Russotto V, Myatra SN, Laffey JG, et al. Intubation practices and adverse peri-intubation events in critically ill patients from 29 countries (INTUBE). JAMA. 2021;325(12):1164-1172",
+      "url": "https://doi.org/10.1001/jama.2021.1727",
+      "year": 2021,
+      "doi": "10.1001/jama.2021.1727",
+      "type": "trial"
+    },
+    {
+      "id": "preoxi",
+      "citation": "Gibbs KW, Semler MW, Driver BE, et al. Noninvasive ventilation for preoxygenation during emergency intubation (PREOXI). N Engl J Med. 2024;390(23):2165-2177",
+      "url": "https://doi.org/10.1056/NEJMoa2313680",
+      "year": 2024,
+      "doi": "10.1056/NEJMoa2313680",
+      "type": "trial"
+    },
+    {
+      "id": "prevent",
+      "citation": "Casey JD, Janz DR, Russell DW, et al. Bag-mask ventilation during tracheal intubation of critically ill adults (PreVent). N Engl J Med. 2019;380(9):811-821",
+      "url": "https://doi.org/10.1056/NEJMoa1812405",
+      "year": 2019,
+      "doi": "10.1056/NEJMoa1812405",
+      "type": "trial"
+    },
+    {
+      "id": "device",
+      "citation": "Prekker ME, Driver BE, Trent SA, et al. Video versus direct laryngoscopy for tracheal intubation of critically ill adults (DEVICE). N Engl J Med. 2023;389(5):418-429",
+      "url": "https://doi.org/10.1056/NEJMoa2301601",
+      "year": 2023,
+      "doi": "10.1056/NEJMoa2301601",
+      "type": "trial"
+    },
+    {
+      "id": "bougie",
+      "citation": "Driver BE, Semler MW, Self WH, et al. Effect of use of a bougie vs endotracheal tube with stylet on successful intubation on the first attempt among critically ill patients (BOUGIE). JAMA. 2021;326(24):2488-2497",
+      "url": "https://doi.org/10.1001/jama.2021.22002",
+      "year": 2021,
+      "doi": "10.1001/jama.2021.22002",
+      "type": "trial"
+    },
+    {
+      "id": "rsi-trial",
+      "citation": "Casey JD, Seitz KP, Driver BE, et al. Ketamine or etomidate for tracheal intubation of critically ill adults (RSI trial). N Engl J Med. 2026;394(16):1608-1620 (online Dec 2025)",
+      "url": "https://doi.org/10.1056/NEJMoa2511420",
+      "year": 2025,
+      "doi": "10.1056/NEJMoa2511420",
+      "type": "trial"
+    },
+    {
+      "id": "prepare2",
+      "citation": "Russell DW, Casey JD, Gibbs KW, et al. Effect of fluid bolus administration on cardiovascular collapse among critically ill patients undergoing tracheal intubation (PREPARE II). JAMA. 2022;328(3):270-279",
+      "url": "https://doi.org/10.1001/jama.2022.9792",
+      "year": 2022,
+      "doi": "10.1001/jama.2022.9792",
+      "type": "trial"
+    },
+    {
+      "id": "ats-chest2017",
+      "citation": "Girard TD, Alhazzani W, Kress JP, et al. An official American Thoracic Society/American College of Chest Physicians clinical practice guideline: liberation from mechanical ventilation in critically ill adults. Am J Respir Crit Care Med. 2017;195(1):120-133",
+      "url": "https://doi.org/10.1164/rccm.201610-2076ST",
+      "year": 2017,
+      "doi": "10.1164/rccm.201610-2076ST",
+      "type": "guideline"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Indian drug presentations",
+      "reason": "Succinylcholine is supplied in India as 50 mg/mL; rocuronium 10 mg/mL; etomidate 2 mg/mL; ketamine 50 mg/mL (10 mL vial) and 10 mg/mL. Check local stock before using volume-based doses."
+    },
+    {
+      "item": "DAS 2025 guideline",
+      "reason": "The Difficult Airway Society published updated 2025 guidance for unanticipated difficult intubation (Br J Anaesth 2026). It was not read in full for this module; the failed-airway section follows AIDAA 2025 and DAS critically ill 2018."
+    }
+  ]
+}

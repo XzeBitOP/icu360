@@ -1,0 +1,1792 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "raised-icp-neurotrauma-brain-death",
+  "number": 21,
+  "folder": "21-raised-icp-neurotrauma-brain-death",
+  "section": {
+    "id": "E",
+    "title": "Neuro-critical care"
+  },
+  "phase": 2,
+  "title": "Raised ICP, neurotrauma and brain-stem death",
+  "summary": "Neurocritical care after brain injury: ICP and CPP targets with the SIBICC tiered approach, mannitol and hypertonic saline, severe TBI care by BTF 4th edition, post-craniotomy care, and brain-stem death certification and apnoea testing under Indian THOTA rules with Form 10.",
+  "tags": [
+    "ICP",
+    "CPP",
+    "TBI",
+    "mannitol",
+    "hypertonic saline",
+    "craniotomy",
+    "brain death",
+    "brain-stem death",
+    "apnoea test",
+    "THOA",
+    "Form 10",
+    "organ donation"
+  ],
+  "relatedModules": [
+    "neuro-emergencies",
+    "trauma-burns-environmental",
+    "ethics-communication-palliative-care",
+    "airway-management",
+    "fluids-electrolytes",
+    "analgesia-sedation-delirium"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "brain-circuit",
+    "accent": "critical"
+  },
+  "viewKey": "module:raised-icp-neurotrauma-brain-death",
+  "topics": [
+    {
+      "id": "icp-cpp-targets",
+      "title": "ICP and CPP targets: tiered management",
+      "summary": "Recognise raised ICP, set ICP and CPP targets, and escalate through the SIBICC tiers from basic neuroprotection to decompressive craniectomy.",
+      "viewKey": "topic:raised-icp-neurotrauma-brain-death/icp-cpp-targets",
+      "uiHints": {
+        "icon": "brain-circuit",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Normal ICP 5-15 mmHg. Treat sustained ICP > 22 mmHg (BTF 4th edition). CPP = MAP - ICP; target 60-70 mmHg in TBI. Signs of herniation: unilateral dilated pupil, extensor posturing, Cushing response (hypertension, bradycardia, irregular breathing).",
+          "refs": [
+            "btf4",
+            "sibicc-2019"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Tier 0 (all patients)",
+            "detail": "Head up 30°, neck neutral (loosen ETT ties/collar), adequate analgesia and sedation, normothermia (avoid fever), SpO2 ≥ 94% (PaO2 > 80 mmHg), PaCO2 35-45 mmHg, Na ≥ 135-140 mmol/L, glucose 140-180 mg/dL, Hb ≥ 7 g/dL, seizure prophylaxis/treatment, MAP ≥ 80 mmHg or CPP ≥ 60 mmHg.",
+            "time": "Always",
+            "refs": [
+              "sibicc-2019",
+              "btf4"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Herniation: emergency bridge",
+            "detail": "Hyperventilate briefly to PaCO2 30-35, give mannitol 1 g/kg or hypertonic saline bolus, urgent CT and neurosurgery.",
+            "time": "Immediate",
+            "refs": [
+              "sibicc-2019"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Tier 1",
+            "detail": "CPP 60-70 mmHg; deepen sedation/analgesia; intermittent mannitol or hypertonic saline boluses; CSF drainage if EVD present; consider continuous EEG; PaCO2 low-normal 35-38 mmHg.",
+            "refs": [
+              "sibicc-2019"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Tier 2",
+            "detail": "Mild hypocapnia PaCO2 32-35 mmHg; neuromuscular blockade trial; MAP challenge to assess autoregulation (raise MAP with vasopressor, observe ICP); raise CPP if it lowers ICP.",
+            "refs": [
+              "sibicc-2019"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Tier 3",
+            "detail": "Barbiturate (thiopentone) coma if haemodynamically tolerated; secondary decompressive craniectomy; mild hypothermia (35-36 °C) as last resort.",
+            "refs": [
+              "sibicc-2019",
+              "rescueicp"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Avoid harmful measures",
+            "detail": "No steroids in TBI (CRASH: increased mortality); no prophylactic hypothermia; no prolonged hyperventilation PaCO2 < 30 mmHg; avoid hypotension (single SBP < 90 doubles mortality).",
+            "refs": [
+              "crash-steroids",
+              "eurotherm",
+              "btf4"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "mannitol",
+            "role": "Osmotherapy",
+            "route": "IV",
+            "dose": "0.25-1 g/kg over 15-20 min",
+            "workedExample": "70 kg: 1 g/kg = 70 g = 350 mL of 20% mannitol over 20 min",
+            "notes": "Replace urine losses; check osmolar gap before repeating.",
+            "refs": [
+              "btf4"
+            ]
+          },
+          {
+            "drugId": "hypertonic-saline",
+            "role": "Osmotherapy (preferred if hypotensive/hypovolaemic)",
+            "route": "IV",
+            "dose": "3% NaCl 2-5 mL/kg over 10-20 min",
+            "target": "Na 145-155 mmol/L",
+            "workedExample": "70 kg: 250 mL of 3% over 15 min",
+            "refs": [
+              "sibicc-2019"
+            ]
+          },
+          {
+            "drugId": "noradrenaline",
+            "role": "Maintain CPP",
+            "route": "IV",
+            "dose": "0.05-0.5 mcg/kg/min",
+            "dilution": "4 mg in 50 mL = 80 mcg/mL",
+            "target": "CPP 60-70 mmHg",
+            "workedExample": "70 kg at 0.1 mcg/kg/min = 5.25 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "btf4"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "sibicc-tiers",
+            "title": "SIBICC tiered ICP management (summary)",
+            "columns": [
+              "Tier",
+              "Interventions"
+            ],
+            "rows": [
+              [
+                "0",
+                "Head up 30°, analgesia/sedation, normothermia, SpO2/PaCO2/Na/glucose targets, CPP ≥ 60 or MAP ≥ 80"
+              ],
+              [
+                "1",
+                "CPP 60-70, deeper sedation, osmotherapy boluses, CSF drainage, PaCO2 35-38, consider EEG"
+              ],
+              [
+                "2",
+                "PaCO2 32-35, neuromuscular blockade, MAP challenge"
+              ],
+              [
+                "3",
+                "Barbiturate coma, secondary decompressive craniectomy, hypothermia 35-36 °C"
+              ]
+            ],
+            "refs": [
+              "sibicc-2019"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "New unilateral fixed dilated pupil or sudden GCS drop ≥ 2: herniation emergency - osmotherapy, brief hyperventilation, urgent CT and neurosurgery.",
+            "refs": [
+              "sibicc-2019"
+            ]
+          },
+          {
+            "text": "Cushing triad (hypertension, bradycardia, irregular breathing) is a late pre-terminal sign.",
+            "refs": [
+              "btf4"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Lowering the BP of a hypertensive TBI patient with Cushing response: this may be maintaining CPP.",
+            "refs": [
+              "btf4"
+            ]
+          },
+          {
+            "text": "Tight ETT ties and cervical collars obstruct jugular venous drainage and raise ICP.",
+            "refs": [
+              "sibicc-2019"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Without an ICP monitor, use serial clinical exam, pupils (pupillometry), CT and optic nerve sheath diameter (> 5.7-6 mm suggests raised ICP) to guide therapy.",
+            "refs": [
+              "sibicc-2019"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Raised ICP escalation",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Suspected/confirmed raised ICP"
+          },
+          {
+            "id": "hern",
+            "type": "decision",
+            "text": "Signs of herniation?"
+          },
+          {
+            "id": "bridge",
+            "type": "action",
+            "text": "Osmotherapy + brief hyperventilation (PaCO2 30-35); urgent CT/neurosurgery",
+            "severity": "critical"
+          },
+          {
+            "id": "t0",
+            "type": "action",
+            "text": "Tier 0: head up, sedation, normothermia, targets for O2, CO2, Na, glucose, CPP"
+          },
+          {
+            "id": "icp1",
+            "type": "decision",
+            "text": "ICP > 22 mmHg (or clinical deterioration)?"
+          },
+          {
+            "id": "mon",
+            "type": "end",
+            "text": "Continue tier 0; reassess hourly"
+          },
+          {
+            "id": "surg",
+            "type": "decision",
+            "text": "Surgical lesion (haematoma, hydrocephalus)?"
+          },
+          {
+            "id": "evac",
+            "type": "end",
+            "text": "Evacuation / EVD",
+            "severity": "critical"
+          },
+          {
+            "id": "t1",
+            "type": "action",
+            "text": "Tier 1: CPP 60-70, osmotherapy, CSF drain, deeper sedation"
+          },
+          {
+            "id": "icp2",
+            "type": "decision",
+            "text": "ICP still > 22?"
+          },
+          {
+            "id": "t2",
+            "type": "action",
+            "text": "Tier 2: PaCO2 32-35, NMB, MAP challenge",
+            "severity": "high"
+          },
+          {
+            "id": "icp3",
+            "type": "decision",
+            "text": "ICP still > 22?"
+          },
+          {
+            "id": "t3",
+            "type": "end",
+            "text": "Tier 3: barbiturates, decompressive craniectomy, hypothermia",
+            "severity": "critical"
+          },
+          {
+            "id": "ok",
+            "type": "end",
+            "text": "Maintain; wean in reverse order"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "hern"
+          },
+          {
+            "from": "hern",
+            "to": "bridge",
+            "label": "Yes"
+          },
+          {
+            "from": "hern",
+            "to": "t0",
+            "label": "No"
+          },
+          {
+            "from": "bridge",
+            "to": "surg"
+          },
+          {
+            "from": "t0",
+            "to": "icp1"
+          },
+          {
+            "from": "icp1",
+            "to": "mon",
+            "label": "No"
+          },
+          {
+            "from": "icp1",
+            "to": "surg",
+            "label": "Yes"
+          },
+          {
+            "from": "surg",
+            "to": "evac",
+            "label": "Yes"
+          },
+          {
+            "from": "surg",
+            "to": "t1",
+            "label": "No"
+          },
+          {
+            "from": "t1",
+            "to": "icp2"
+          },
+          {
+            "from": "icp2",
+            "to": "t2",
+            "label": "Yes"
+          },
+          {
+            "from": "icp2",
+            "to": "ok",
+            "label": "No"
+          },
+          {
+            "from": "t2",
+            "to": "icp3"
+          },
+          {
+            "from": "icp3",
+            "to": "t3",
+            "label": "Yes"
+          },
+          {
+            "from": "icp3",
+            "to": "ok",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "sibicc-2019"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Monro-Kellie doctrine: the skull contains brain, blood and CSF at fixed total volume. Once compensatory displacement of CSF and venous blood is exhausted, small increases in volume cause steep rises in ICP, reducing CPP and causing ischaemia and herniation.",
+        "evidence": "- BTF 4th edition (2016): treat ICP > 22 mmHg; CPP 60-70; ICP monitoring in salvageable severe TBI with abnormal CT [Carney 2017].\n- RESCUEicp: decompressive craniectomy for refractory ICP reduced mortality but increased vegetative state and severe disability [Hutchinson 2016].\n- Eurotherm: hypothermia to lower ICP worsened outcomes [Andrews 2015].\n- SIBICC 2019 consensus tiered algorithm [Hawryluk 2019].",
+        "controversies": "- Individualised CPP using autoregulation indices (PRx/CPPopt); ICP monitoring benefit (BEST-TRIP in Latin America showed equivalence of imaging/clinical exam protocol).",
+        "indiaNotes": "- ICP monitors are limited to neurosurgical centres in India; BEST-TRIP style imaging and clinical examination protocols are often used.\n- Road traffic accidents (especially two-wheelers without helmets) cause most severe TBI in India."
+      },
+      "drugIds": [
+        "mannitol",
+        "hypertonic-saline",
+        "noradrenaline"
+      ],
+      "calculatorIds": [
+        "mean-arterial-pressure",
+        "gcs",
+        "infusion-rate-weight-min"
+      ],
+      "references": [
+        "btf4",
+        "sibicc-2019",
+        "rescueicp",
+        "eurotherm",
+        "crash-steroids"
+      ],
+      "quiz": [
+        {
+          "id": "icp-cpp-targets-q1",
+          "stem": "BTF threshold to treat ICP:",
+          "options": [
+            "> 15 mmHg",
+            "> 22 mmHg",
+            "> 30 mmHg",
+            "> 40 mmHg"
+          ],
+          "answerIndex": 1,
+          "explanation": "BTF 4th edition."
+        },
+        {
+          "id": "icp-cpp-targets-q2",
+          "stem": "Target CPP in severe TBI:",
+          "options": [
+            "40-50 mmHg",
+            "60-70 mmHg",
+            "90-100 mmHg",
+            "> 110 mmHg"
+          ],
+          "answerIndex": 1,
+          "explanation": "CPP 60-70; higher risks ARDS."
+        },
+        {
+          "id": "icp-cpp-targets-q3",
+          "stem": "Which is NOT recommended in TBI?",
+          "options": [
+            "Head up 30°",
+            "High-dose steroids",
+            "Normothermia",
+            "Osmotherapy for raised ICP"
+          ],
+          "answerIndex": 1,
+          "explanation": "CRASH showed increased mortality with steroids."
+        },
+        {
+          "id": "icp-cpp-targets-q4",
+          "stem": "A tier 3 therapy is:",
+          "options": [
+            "Head elevation",
+            "Barbiturate coma",
+            "Analgesia",
+            "Normocapnia"
+          ],
+          "answerIndex": 1,
+          "explanation": "Tier 3 includes barbiturates, decompressive craniectomy, hypothermia."
+        }
+      ]
+    },
+    {
+      "id": "osmotherapy",
+      "title": "Osmotherapy: mannitol vs hypertonic saline",
+      "summary": "Choose, dose and monitor mannitol and hypertonic saline safely.",
+      "viewKey": "topic:raised-icp-neurotrauma-brain-death/osmotherapy",
+      "uiHints": {
+        "icon": "beaker",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Osmotherapy creates an osmotic gradient drawing water from brain interstitium into blood, lowering ICP within 15-30 min. Mannitol and hypertonic saline (HTS) are both effective; choice depends on volume status, sodium and kidney function.",
+          "refs": [
+            "sibicc-2019"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Choose agent",
+            "detail": "Hypovolaemic/hypotensive or AKI: hypertonic saline. Hypervolaemic/heart failure or hypernatraemic: mannitol (with caution) or diuresis. Either for herniation.",
+            "refs": [
+              "sibicc-2019"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Mannitol dosing",
+            "detail": "0.25-1 g/kg of 20% over 15-20 min; repeat every 4-6 h as needed.",
+            "refs": [
+              "btf4"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Hypertonic saline dosing",
+            "detail": "3% NaCl 150-250 mL (2-5 mL/kg) bolus over 10-20 min, or 23.4% 30 mL via central line for herniation.",
+            "refs": [
+              "sibicc-2019"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Monitor before each repeat dose",
+            "detail": "Mannitol: serum osmolality < 320 mOsm/kg and osmolar gap < 20 (measured - calculated osmolality). HTS: Na < 155-160 mmol/L.",
+            "refs": [
+              "sibicc-2019"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Replace urine losses after mannitol",
+            "detail": "Matched isotonic fluid to prevent hypovolaemia and hypotension.",
+            "refs": [
+              "btf4"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Wean slowly",
+            "detail": "Avoid rapid Na fall after prolonged HTS (rebound oedema): reduce Na by ≤ 8-10 mmol/L/day.",
+            "refs": [
+              "sibicc-2019"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "mannitol",
+            "role": "Osmotherapy",
+            "route": "IV",
+            "dose": "0.25-1 g/kg over 15-20 min",
+            "doseRange": {
+              "min": 0.25,
+              "max": 1,
+              "unit": "g/kg"
+            },
+            "workedExample": "70 kg at 0.5 g/kg = 35 g = 175 mL of 20%",
+            "refs": [
+              "btf4"
+            ]
+          },
+          {
+            "drugId": "hypertonic-saline",
+            "role": "Osmotherapy",
+            "route": "IV",
+            "dose": "3% 2-5 mL/kg bolus; 23.4% 30 mL (central) for herniation",
+            "doseRange": {
+              "min": 2,
+              "max": 5,
+              "unit": "mL/kg"
+            },
+            "workedExample": "70 kg: 3% 200 mL over 15 min, recheck Na in 4 h",
+            "refs": [
+              "sibicc-2019"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "mannitol-vs-hts",
+            "title": "Mannitol vs hypertonic saline",
+            "columns": [
+              "Feature",
+              "Mannitol 20%",
+              "Hypertonic saline 3%"
+            ],
+            "rows": [
+              [
+                "Volume effect",
+                "Diuresis → hypovolaemia",
+                "Volume expansion"
+              ],
+              [
+                "Best for",
+                "Euvolaemic/hypervolaemic patients",
+                "Hypotension, hypovolaemia, hyponatraemia"
+              ],
+              [
+                "Limits",
+                "Osmolality > 320 / gap > 20, AKI",
+                "Na > 155-160, heart failure"
+              ],
+              [
+                "Side effects",
+                "AKI, hypotension, rebound",
+                "Hypernatraemia, hyperchloraemic acidosis, overload"
+              ],
+              [
+                "Indian availability",
+                "Universal, cheap",
+                "3% widely available"
+              ]
+            ],
+            "refs": [
+              "sibicc-2019",
+              "btf4"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Osmolar gap > 20 after mannitol means accumulation: risk of AKI and reverse osmotic shift; stop mannitol.",
+            "refs": [
+              "sibicc-2019"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Using serum osmolality alone to guide mannitol; the osmolar gap reflects unmeasured mannitol better.",
+            "refs": [
+              "sibicc-2019"
+            ]
+          },
+          {
+            "text": "Routine scheduled mannitol without ICP or clinical indication.",
+            "refs": [
+              "btf4"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Calculated osmolality = 2 x Na + glucose/18 + urea/6 (Indian units, mg/dL); use the shared calculator.",
+            "refs": [
+              "sibicc-2019"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "An intact blood-brain barrier is required for osmotic agents to work; where it is disrupted, agents can leak into the injured brain, which is one reason for rebound. Mannitol also reduces blood viscosity, improving microcirculatory flow.",
+        "evidence": "- Meta-analyses suggest hypertonic saline may lower ICP slightly more than equiosmolar mannitol, without clear outcome difference [SIBICC 2019].",
+        "controversies": "- Continuous HTS infusion to target Na 145-155 (COBI trial, 2021: no improvement in functional outcome).",
+        "indiaNotes": "- Mannitol 20% is cheap and stocked everywhere; 3% saline bottles are increasingly available. 23.4% saline is rarely available outside large centres."
+      },
+      "drugIds": [
+        "mannitol",
+        "hypertonic-saline"
+      ],
+      "calculatorIds": [
+        "serum-osmolality",
+        "osmolal-gap"
+      ],
+      "references": [
+        "sibicc-2019",
+        "btf4"
+      ],
+      "quiz": [
+        {
+          "id": "osmotherapy-q1",
+          "stem": "Stop repeat mannitol if:",
+          "options": [
+            "Na 140",
+            "Osmolar gap > 20 mOsm/kg",
+            "Urine output > 100 mL/h",
+            "ICP 18"
+          ],
+          "answerIndex": 1,
+          "explanation": "High osmolar gap signals accumulation."
+        },
+        {
+          "id": "osmotherapy-q2",
+          "stem": "Preferred osmotic agent in a hypotensive TBI patient:",
+          "options": [
+            "Mannitol",
+            "Hypertonic saline",
+            "Furosemide",
+            "Dextrose 5%"
+          ],
+          "answerIndex": 1,
+          "explanation": "HTS expands volume; mannitol causes diuresis."
+        },
+        {
+          "id": "osmotherapy-q3",
+          "stem": "Mannitol 1 g/kg for 70 kg using 20%:",
+          "options": [
+            "70 mL",
+            "350 mL",
+            "700 mL",
+            "35 mL"
+          ],
+          "answerIndex": 1,
+          "explanation": "70 g ÷ 0.2 g/mL = 350 mL."
+        }
+      ]
+    },
+    {
+      "id": "tbi-care-btf",
+      "title": "Severe TBI care (BTF 4th edition)",
+      "summary": "Prevent secondary brain injury after severe TBI: airway, BP and oxygen targets, CT, seizure and VTE prophylaxis, nutrition, and neurosurgical indications.",
+      "viewKey": "topic:raised-icp-neurotrauma-brain-death/tbi-care-btf",
+      "uiHints": {
+        "icon": "brain",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Severe TBI = GCS 3-8 after resuscitation. Secondary injury from hypotension, hypoxaemia, hypo/hypercapnia, fever, hypo/hyperglycaemia, seizures and raised ICP drives outcome.",
+          "refs": [
+            "btf4"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Airway and breathing",
+            "detail": "Intubate GCS ≤ 8 with manual in-line stabilisation; avoid hypoxaemia (SpO2 ≥ 94%) and hypotension during induction; PaCO2 35-40 mmHg.",
+            "time": "0-15 min",
+            "refs": [
+              "btf4"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Blood pressure",
+            "detail": "SBP ≥ 100 mmHg (age 50-69) or ≥ 110 mmHg (age 15-49 or > 70); avoid hypotonic fluids; vasopressor if needed.",
+            "refs": [
+              "btf4"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "TXA if within 3 h",
+            "detail": "Mild-moderate TBI (GCS 9-15) within 3 h: TXA 1 g over 10 min then 1 g over 8 h reduced head-injury death (CRASH-3).",
+            "time": "≤ 3 h",
+            "refs": [
+              "crash3"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "CT head and neurosurgery",
+            "detail": "Urgent CT; surgical evacuation for EDH > 30 mL, SDH thickness > 10 mm or midline shift > 5 mm, or deteriorating GCS with mass lesion.",
+            "refs": [
+              "btf4"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "ICP monitoring",
+            "detail": "Recommended in salvageable severe TBI with abnormal CT (BTF). Treat ICP > 22 mmHg; CPP 60-70.",
+            "refs": [
+              "btf4"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Prophylaxis",
+            "detail": "Seizures: phenytoin (or levetiracetam) for 7 days for early seizures. VTE: mechanical immediately; LMWH/UFH once haematoma stable (usually 24-72 h, after repeat CT). Stress ulcer prophylaxis if ventilated. Feed by day 5 (ideally earlier) to full calories by day 7.",
+            "refs": [
+              "btf4"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Avoid",
+            "detail": "Steroids, prophylactic hypothermia, prolonged hyperventilation, hyperthermia, hyponatraemia, hyperglycaemia > 180 mg/dL.",
+            "refs": [
+              "btf4",
+              "crash-steroids"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "phenytoin",
+            "role": "Early seizure prophylaxis",
+            "route": "IV",
+            "dose": "15-20 mg/kg load at ≤ 50 mg/min, then 100 mg q8h × 7 days",
+            "workedExample": "70 kg: 1,400 mg (20 mg/kg) in 100 mL NS over ≥ 30 min with ECG monitoring",
+            "refs": [
+              "btf4"
+            ]
+          },
+          {
+            "drugId": "levetiracetam",
+            "role": "Alternative prophylaxis",
+            "route": "IV/oral",
+            "dose": "500-1,000 mg q12h × 7 days",
+            "dilution": "500-1,000 mg in 100 mL NS over 15 min",
+            "notes": "BTF found insufficient evidence for superiority over phenytoin; widely used.",
+            "refs": [
+              "btf4"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "tbi-targets",
+            "title": "Physiological targets in severe TBI",
+            "columns": [
+              "Parameter",
+              "Target"
+            ],
+            "rows": [
+              [
+                "SBP",
+                "≥ 100 (50-69 y) / ≥ 110 (15-49 or > 70 y) mmHg"
+              ],
+              [
+                "CPP",
+                "60-70 mmHg"
+              ],
+              [
+                "ICP",
+                "< 22 mmHg"
+              ],
+              [
+                "SpO2 / PaO2",
+                "≥ 94% / > 80 mmHg"
+              ],
+              [
+                "PaCO2",
+                "35-40 mmHg (lower only for ICP crisis)"
+              ],
+              [
+                "Temperature",
+                "36-37.5 °C"
+              ],
+              [
+                "Glucose",
+                "140-180 mg/dL"
+              ],
+              [
+                "Sodium",
+                "140-145 mmol/L (higher with osmotherapy)"
+              ],
+              [
+                "Hb",
+                "≥ 7 g/dL (some target 9)"
+              ]
+            ],
+            "refs": [
+              "btf4",
+              "sibicc-2019"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "A single episode of hypotension (SBP < 90) or hypoxaemia (SpO2 < 90%) significantly worsens TBI outcome: prevent during transfer and intubation.",
+            "refs": [
+              "btf4"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Missing cervical spine injury: assume it in every severe TBI until cleared.",
+            "refs": [
+              "btf4"
+            ]
+          },
+          {
+            "text": "Starting pharmacological VTE prophylaxis without a stable repeat CT.",
+            "refs": [
+              "btf4"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Pupillary reactivity and GCS motor score are the strongest bedside prognostic markers; document them before sedation.",
+            "refs": [
+              "btf4"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Severe TBI initial management",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Head injury, GCS ≤ 8"
+          },
+          {
+            "id": "abc",
+            "type": "action",
+            "text": "Intubate with in-line stabilisation; SpO2 ≥ 94%, PaCO2 35-40, SBP ≥ 100-110",
+            "severity": "critical"
+          },
+          {
+            "id": "txa",
+            "type": "decision",
+            "text": "Within 3 h of injury?"
+          },
+          {
+            "id": "givetxa",
+            "type": "action",
+            "text": "TXA 1 g over 10 min, then 1 g over 8 h"
+          },
+          {
+            "id": "ct",
+            "type": "action",
+            "text": "Urgent CT head + C-spine"
+          },
+          {
+            "id": "lesion",
+            "type": "decision",
+            "text": "Surgical mass lesion?"
+          },
+          {
+            "id": "or",
+            "type": "end",
+            "text": "Emergency neurosurgery",
+            "severity": "critical"
+          },
+          {
+            "id": "icp",
+            "type": "action",
+            "text": "ICU: ICP monitoring if abnormal CT; tiered ICP therapy; prophylaxis bundle"
+          },
+          {
+            "id": "end",
+            "type": "end",
+            "text": "Repeat CT if deterioration; daily neuro-assessment"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "abc"
+          },
+          {
+            "from": "abc",
+            "to": "txa"
+          },
+          {
+            "from": "txa",
+            "to": "givetxa",
+            "label": "Yes"
+          },
+          {
+            "from": "txa",
+            "to": "ct",
+            "label": "No"
+          },
+          {
+            "from": "givetxa",
+            "to": "ct"
+          },
+          {
+            "from": "ct",
+            "to": "lesion"
+          },
+          {
+            "from": "lesion",
+            "to": "or",
+            "label": "Yes"
+          },
+          {
+            "from": "lesion",
+            "to": "icp",
+            "label": "No"
+          },
+          {
+            "from": "icp",
+            "to": "end"
+          }
+        ],
+        "refs": [
+          "btf4",
+          "crash3"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Primary injury (contusion, axonal shearing, haematoma) is irreversible; secondary injury (ischaemia, oedema, excitotoxicity, inflammation) evolves over hours to days and is the target of ICU care.",
+        "evidence": "- BTF 4th edition: recommendations on BP thresholds, ICP/CPP targets, seizure prophylaxis, nutrition and avoidance of steroids [Carney 2017].\n- CRASH-3: TXA within 3 h reduced head-injury-related death in mild-moderate TBI; no benefit in severe TBI with unreactive pupils [CRASH-3 2019].\n- CRASH (2004): methylprednisolone increased mortality [CRASH 2004].",
+        "controversies": "- Levetiracetam vs phenytoin; transfusion thresholds (HEMOTION 2024 found no significant difference between liberal and restrictive strategies in functional outcome).",
+        "indiaNotes": "- Delayed transfers and lack of neurosurgical cover in district hospitals are common; early discussion with a neurosurgical centre and safe transfer (intubated, BP and CO2 controlled) save lives.\n- Helmet non-use and drunk driving are major preventable causes."
+      },
+      "drugIds": [
+        "phenytoin",
+        "levetiracetam",
+        "noradrenaline"
+      ],
+      "calculatorIds": [
+        "gcs",
+        "mean-arterial-pressure"
+      ],
+      "references": [
+        "btf4",
+        "crash3",
+        "crash-steroids",
+        "sibicc-2019"
+      ],
+      "quiz": [
+        {
+          "id": "tbi-care-btf-q1",
+          "stem": "SBP threshold for a 35-year-old with severe TBI (BTF):",
+          "options": [
+            "≥ 90",
+            "≥ 100",
+            "≥ 110",
+            "≥ 140"
+          ],
+          "answerIndex": 2,
+          "explanation": "Age 15-49 and > 70: ≥ 110 mmHg."
+        },
+        {
+          "id": "tbi-care-btf-q2",
+          "stem": "Duration of post-traumatic seizure prophylaxis:",
+          "options": [
+            "24 h",
+            "7 days",
+            "6 months",
+            "Lifelong"
+          ],
+          "answerIndex": 1,
+          "explanation": "Prophylaxis reduces early (< 7 day) seizures only."
+        },
+        {
+          "id": "tbi-care-btf-q3",
+          "stem": "CRASH-3 showed TXA benefit in:",
+          "options": [
+            "All TBI regardless of time",
+            "Mild-moderate TBI within 3 h",
+            "Severe TBI with fixed pupils",
+            "Chronic subdural"
+          ],
+          "answerIndex": 1,
+          "explanation": "Benefit when given within 3 h, mainly GCS 9-15."
+        }
+      ]
+    },
+    {
+      "id": "post-craniotomy-care",
+      "title": "Post-craniotomy care",
+      "summary": "First 24-48 h after elective or emergency craniotomy: neuro-observations, BP, seizure, sodium and complication surveillance.",
+      "viewKey": "topic:raised-icp-neurotrauma-brain-death/post-craniotomy-care",
+      "uiHints": {
+        "icon": "stethoscope",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "After craniotomy, the main early complications are post-operative haematoma (most within 6-24 h), cerebral oedema, seizures, sodium disorders (SIADH, cerebral salt wasting, diabetes insipidus), CSF leak, infection and VTE.",
+          "refs": [
+            "btf4"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Handover",
+            "detail": "Lesion, procedure, intra-op events (blood loss, brain swelling), drains, extubation status, BP and sodium targets, antiepileptic, steroid plan (tumour), anticoagulation restart plan.",
+            "time": "Arrival",
+            "refs": [
+              "btf4"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Neuro-observations",
+            "detail": "GCS, pupils and limb power hourly for 24 h (15-min initially). Any fall in GCS ≥ 2 or new focal deficit: urgent CT and neurosurgical review.",
+            "time": "Hourly",
+            "refs": [
+              "btf4"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Blood pressure",
+            "detail": "Avoid hypertension (haematoma risk): typical SBP < 140-160 mmHg as per surgeon; avoid hypotension (CPP).",
+            "refs": [
+              "btf4"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Analgesia and nausea",
+            "detail": "Paracetamol, low-dose opioid (fentanyl/morphine), scalp block; antiemetics (ondansetron). Avoid oversedation that masks deterioration.",
+            "refs": [
+              "btf4"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Sodium and fluids",
+            "detail": "Isotonic fluids; Na 6-12 hourly. Polyuria with rising Na = DI (desmopressin); low Na with euvolaemia = SIADH (fluid restriction); low Na with hypovolaemia/natriuresis = cerebral salt wasting (saline, fludrocortisone).",
+            "refs": [
+              "btf4"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Seizure, glucose, temperature",
+            "detail": "Continue antiepileptic as prescribed; glucose 140-180 mg/dL; treat fever. Dexamethasone for tumour oedema (not TBI).",
+            "refs": [
+              "btf4"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Drains and VTE",
+            "detail": "EVD level and drainage as ordered; subgaleal drain output. Mechanical VTE prophylaxis; pharmacological after 24-48 h if surgeon agrees.",
+            "refs": [
+              "btf4"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Delayed awakening, new hemiparesis, unequal pupils or seizures after craniotomy: urgent CT for haematoma, oedema, pneumocephalus or infarct.",
+            "refs": [
+              "btf4"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Treating post-op hyponatraemia with fluid restriction when it is cerebral salt wasting (hypovolaemic): worsens ischaemia, especially after SAH.",
+            "refs": [
+              "btf4"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Tension pneumocephalus ('Mount Fuji sign' on CT) can cause deterioration after craniotomy; high-flow oxygen and surgical review.",
+            "refs": [
+              "btf4"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Deterioration after craniotomy",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Post-craniotomy patient"
+          },
+          {
+            "id": "drop",
+            "type": "decision",
+            "text": "GCS fall ≥ 2, new deficit, pupil change or seizure?"
+          },
+          {
+            "id": "routine",
+            "type": "end",
+            "text": "Routine care: hourly neuro-obs, BP, Na, analgesia"
+          },
+          {
+            "id": "abc",
+            "type": "action",
+            "text": "ABC, glucose, Na, ABG; treat seizure",
+            "severity": "critical"
+          },
+          {
+            "id": "ct",
+            "type": "action",
+            "text": "Urgent CT + inform neurosurgeon"
+          },
+          {
+            "id": "haem",
+            "type": "decision",
+            "text": "Haematoma / hydrocephalus / tension pneumocephalus?"
+          },
+          {
+            "id": "or",
+            "type": "end",
+            "text": "Return to theatre / EVD",
+            "severity": "critical"
+          },
+          {
+            "id": "med",
+            "type": "end",
+            "text": "Medical management: oedema, osmotherapy, metabolic correction, EEG"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "drop"
+          },
+          {
+            "from": "drop",
+            "to": "routine",
+            "label": "No"
+          },
+          {
+            "from": "drop",
+            "to": "abc",
+            "label": "Yes"
+          },
+          {
+            "from": "abc",
+            "to": "ct"
+          },
+          {
+            "from": "ct",
+            "to": "haem"
+          },
+          {
+            "from": "haem",
+            "to": "or",
+            "label": "Yes"
+          },
+          {
+            "from": "haem",
+            "to": "med",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "btf4"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Post-operative haematoma results from inadequate haemostasis, hypertension or coagulopathy; venous congestion and retraction injury cause oedema. Hypothalamic-pituitary manipulation (sellar surgery) causes DI and triphasic sodium responses.",
+        "evidence": "- Evidence for post-craniotomy care is largely observational and consensus-based; principles mirror TBI secondary-injury prevention [BTF 2016].",
+        "controversies": "- Routine ICU admission after uncomplicated elective craniotomy vs neurosurgical HDU.",
+        "indiaNotes": "- Many Indian centres manage post-craniotomy patients in neuro-HDUs staffed by residents; clear escalation criteria for CT and surgeon review are vital."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "gcs"
+      ],
+      "references": [
+        "btf4"
+      ],
+      "quiz": [
+        {
+          "id": "post-craniotomy-care-q1",
+          "stem": "Most post-craniotomy haematomas present:",
+          "options": [
+            "After 2 weeks",
+            "Within 6-24 h",
+            "At 1 month",
+            "Only during surgery"
+          ],
+          "answerIndex": 1,
+          "explanation": "Highest risk in first 24 h."
+        },
+        {
+          "id": "post-craniotomy-care-q2",
+          "stem": "Polyuria and rising Na after pituitary surgery suggest:",
+          "options": [
+            "SIADH",
+            "Diabetes insipidus",
+            "Cerebral salt wasting",
+            "Normal"
+          ],
+          "answerIndex": 1,
+          "explanation": "Treat with desmopressin and water replacement."
+        },
+        {
+          "id": "post-craniotomy-care-q3",
+          "stem": "Hyponatraemia with hypovolaemia and high urine Na after SAH:",
+          "options": [
+            "SIADH - fluid restrict",
+            "Cerebral salt wasting - saline",
+            "DI - desmopressin",
+            "Ignore"
+          ],
+          "answerIndex": 1,
+          "explanation": "CSW needs sodium and volume replacement."
+        }
+      ]
+    },
+    {
+      "id": "brain-stem-death-testing",
+      "title": "Brain-stem death testing and apnoea test (THOA rules)",
+      "summary": "Preconditions, brainstem reflex testing, apnoea test, two sets 6 hours apart by the Board of Medical Experts, Form 10, and donor management in India.",
+      "viewKey": "topic:raised-icp-neurotrauma-brain-death/brain-stem-death-testing",
+      "uiHints": {
+        "icon": "file-check",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "In India, brain-stem death is legally death under the Transplantation of Human Organs and Tissues Act 1994 (amended 2011) and Rules 2014. Certification requires a Board of Medical Experts, two sets of tests at least 6 hours apart in adults, and Form 10.",
+          "refs": [
+            "thota-rules-2014",
+            "notto-form10"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Confirm preconditions",
+            "detail": "Known, irreversible cause of brain injury consistent with brain-stem death on imaging; coma with no response; on ventilator. Exclude: sedatives/opioids/NMB (time, levels, train-of-four), alcohol, primary hypothermia (core temperature ≥ 36 °C per WBD 2020), hypovolaemic shock, metabolic/endocrine causes (Na, glucose, Ca, PO4, urea, thyroid, cortisol).",
+            "refs": [
+              "notto-form10",
+              "wbd-2020"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Form the Board",
+            "detail": "Four members: (1) RMP in charge of the hospital; (2) RMP/specialist nominated from the Appropriate Authority panel; (3) neurologist or neurosurgeon (if unavailable, a surgeon, physician, anaesthetist or intensivist nominated by the hospital, not part of the transplant team); (4) RMP treating the patient.",
+            "refs": [
+              "thota-rules-2014",
+              "notto-form10"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Test brainstem reflexes",
+            "detail": "Pupils fixed and unreactive; corneal reflexes absent; no oculocephalic (doll's eye) response; no oculovestibular response (50 mL ice-cold water each ear, 1 min observation, tympanic membrane visible); no motor response in cranial nerve distribution to central pain; no gag; no cough to tracheal suction.",
+            "refs": [
+              "notto-form10",
+              "wbd-2020"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Apnoea test (prepare)",
+            "detail": "Core temp ≥ 36 °C, SBP ≥ 100 mmHg, euvolaemia, PaCO2 35-45 mmHg baseline, pre-oxygenate FiO2 1.0 for 10 min (PaO2 > 200 mmHg). Baseline ABG.",
+            "refs": [
+              "wbd-2020"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Apnoea test (perform)",
+            "detail": "Disconnect from ventilator with O2 6 L/min via catheter at the carina (or CPAP via T-piece/ventilator mode with no backup). Observe chest/abdomen for respiratory movement for 8-10 min. Repeat ABG: positive if PaCO2 ≥ 60 mmHg AND rise ≥ 20 mmHg above baseline with pH < 7.30, and no breathing. Abort (reconnect) if SBP < 90 mmHg, SpO2 < 85% or arrhythmia.",
+            "time": "8-10 min",
+            "refs": [
+              "wbd-2020"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Second set after ≥ 6 h",
+            "detail": "Repeat all tests (Board members) after at least 6 hours in adults (longer for children per experts). Time of death = time of completion of the second test set.",
+            "time": "≥ 6 h",
+            "refs": [
+              "notto-form10"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Document and communicate",
+            "detail": "Complete Form 10, inform family compassionately, and make the mandated request for organ donation (THOA 2011 amendment requires ICUs to ask). Inform NOTTO/ROTTO/SOTTO coordinator; medico-legal cases need police/magistrate procedures.",
+            "refs": [
+              "thota-rules-2014"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Donor management (if donation)",
+            "detail": "MAP ≥ 65 (noradrenaline/vasopressin), treat DI (vasopressin, desmopressin, replace urine), Na 135-150 mmol/L, glucose 140-180 mg/dL, lung-protective ventilation, temperature > 36 °C, consider hormone therapy per protocol.",
+            "refs": [
+              "wbd-2020"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "vasopressin",
+            "role": "DI and vasoplegia in donor",
+            "route": "IV infusion",
+            "dose": "0.5-2.4 units/h",
+            "dilution": "20 units in 50 mL = 0.4 units/mL",
+            "workedExample": "1 unit/h = 2.5 mL/h",
+            "calculatorId": "infusion-rate-fixed",
+            "refs": [
+              "wbd-2020"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "bsd-checklist",
+            "title": "Brain-stem death checklist (Form 10 domains)",
+            "columns": [
+              "Domain",
+              "Requirement"
+            ],
+            "rows": [
+              [
+                "Cause",
+                "Known irreversible structural brain injury"
+              ],
+              [
+                "Exclusions",
+                "Drugs, alcohol, NMB, primary hypothermia, hypovolaemic shock, metabolic/endocrine disorders"
+              ],
+              [
+                "Coma",
+                "No response to pain"
+              ],
+              [
+                "Brainstem reflexes",
+                "Pupils, light reflex, doll's eye, corneal, cranial motor, gag, cough, caloric - all absent"
+              ],
+              [
+                "Apnoea",
+                "No respiratory effort with PaCO2 ≥ 60 mmHg (and ≥ 20 above baseline)"
+              ],
+              [
+                "Timing",
+                "Two sets ≥ 6 h apart (adults) by the Board"
+              ],
+              [
+                "Documentation",
+                "Form 10 signed by all four Board members"
+              ]
+            ],
+            "refs": [
+              "notto-form10",
+              "wbd-2020"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Any doubt about confounders (recent sedatives in AKI/liver failure, hypothermia, NMB) means do NOT proceed; wait, measure levels, or use ancillary tests.",
+            "refs": [
+              "wbd-2020"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Interpreting spinal reflexes (triple flexion, Lazarus sign) as brainstem activity; they are compatible with brain-stem death.",
+            "refs": [
+              "wbd-2020"
+            ]
+          },
+          {
+            "text": "Starting the apnoea test with a high baseline PaCO2 in a chronic CO2 retainer without adjusting thresholds; seek expert advice.",
+            "refs": [
+              "wbd-2020"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Ancillary tests (4-vessel angiography, CT angiography, radionuclide scan, EEG) are used when the clinical exam cannot be completed (e.g. facial trauma, high cervical injury); they are not mandatory under Indian rules for routine cases.",
+            "refs": [
+              "wbd-2020"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Brain-stem death certification (India)",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Deep coma, apnoeic, known irreversible cause"
+          },
+          {
+            "id": "pre",
+            "type": "decision",
+            "text": "Preconditions met and confounders excluded?"
+          },
+          {
+            "id": "wait",
+            "type": "end",
+            "text": "Correct confounders; wait; reassess (ancillary tests if needed)"
+          },
+          {
+            "id": "board",
+            "type": "action",
+            "text": "Convene 4-member Board of Medical Experts"
+          },
+          {
+            "id": "refl",
+            "type": "decision",
+            "text": "All brainstem reflexes absent?"
+          },
+          {
+            "id": "notbsd",
+            "type": "end",
+            "text": "Not brain-stem dead: continue care, review goals"
+          },
+          {
+            "id": "apnoea",
+            "type": "action",
+            "text": "Apnoea test (pre-oxygenate, O2 6 L/min, 8-10 min, ABG)"
+          },
+          {
+            "id": "apos",
+            "type": "decision",
+            "text": "PaCO2 ≥ 60 (and ≥ 20 rise) with no breathing?"
+          },
+          {
+            "id": "abort",
+            "type": "action",
+            "text": "Aborted/unstable: reconnect; ancillary test or repeat later",
+            "severity": "high"
+          },
+          {
+            "id": "second",
+            "type": "action",
+            "text": "Repeat full set after ≥ 6 h"
+          },
+          {
+            "id": "cert",
+            "type": "end",
+            "text": "Form 10; death certified at second set; family meeting and organ donation request",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "pre"
+          },
+          {
+            "from": "pre",
+            "to": "wait",
+            "label": "No"
+          },
+          {
+            "from": "pre",
+            "to": "board",
+            "label": "Yes"
+          },
+          {
+            "from": "board",
+            "to": "refl"
+          },
+          {
+            "from": "refl",
+            "to": "notbsd",
+            "label": "No"
+          },
+          {
+            "from": "refl",
+            "to": "apnoea",
+            "label": "Yes"
+          },
+          {
+            "from": "apnoea",
+            "to": "apos"
+          },
+          {
+            "from": "apos",
+            "to": "second",
+            "label": "Yes"
+          },
+          {
+            "from": "apos",
+            "to": "notbsd",
+            "label": "Breathing seen"
+          },
+          {
+            "from": "apos",
+            "to": "abort",
+            "label": "Inconclusive"
+          },
+          {
+            "from": "abort",
+            "to": "second"
+          },
+          {
+            "from": "second",
+            "to": "cert"
+          }
+        ],
+        "refs": [
+          "notto-form10",
+          "wbd-2020"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Brain-stem death is irreversible loss of capacity for consciousness and of the capacity to breathe. Herniation compresses the brainstem, abolishing reflexes and respiratory drive; hypothalamic-pituitary failure follows (DI, hypothermia, haemodynamic instability), and cardiac arrest usually ensues within days without support.",
+        "evidence": "- India: THOA 1994 legally recognised brain-stem death; THOTA amendment 2011 and Rules 2014 define the Board, Form 10 and the 6-hour interval [THOTA Rules 2014].\n- World Brain Death Project 2020 provides international consensus on prerequisites, examination, apnoea testing and ancillary testing [Greer 2020].",
+        "controversies": "- Hypothalamic function and 'whole brain' versus 'brainstem' concepts; apnoea testing in ECMO patients.",
+        "indiaNotes": "- India's deceased donation rate remains low (< 1 per million population); many brain-stem deaths are never certified. Certification is required whether or not donation follows, and allows honest communication and withdrawal of futile support.\n- ICUs registered under THOTA must have trained transplant coordinators; Board panels are notified by State Appropriate Authorities.\n- The Supreme Court-directed withdrawal of life-sustaining treatment guidelines (2023) are separate from brain-stem death; see the Ethics module."
+      },
+      "drugIds": [
+        "vasopressin",
+        "noradrenaline"
+      ],
+      "calculatorIds": [
+        "infusion-rate-fixed"
+      ],
+      "references": [
+        "thota-rules-2014",
+        "notto-form10",
+        "wbd-2020"
+      ],
+      "quiz": [
+        {
+          "id": "brain-stem-death-testing-q1",
+          "stem": "Minimum interval between two sets of brain-stem death tests in adults in India:",
+          "options": [
+            "1 h",
+            "6 h",
+            "12 h",
+            "24 h"
+          ],
+          "answerIndex": 1,
+          "explanation": "Form 10 note: minimum six hours in adults."
+        },
+        {
+          "id": "brain-stem-death-testing-q2",
+          "stem": "Positive apnoea test:",
+          "options": [
+            "PaCO2 45 with no breathing",
+            "PaCO2 ≥ 60 mmHg and ≥ 20 above baseline with no respiratory effort",
+            "SpO2 falls to 85%",
+            "Any breathing movement"
+          ],
+          "answerIndex": 1,
+          "explanation": "Standard threshold."
+        },
+        {
+          "id": "brain-stem-death-testing-q3",
+          "stem": "Which member is NOT part of the Board under THOT rules?",
+          "options": [
+            "RMP in charge of hospital",
+            "Neurologist/neurosurgeon (or nominated substitute)",
+            "Treating RMP",
+            "Transplant surgeon who will retrieve organs"
+          ],
+          "answerIndex": 3,
+          "explanation": "Transplant team members must not certify."
+        },
+        {
+          "id": "brain-stem-death-testing-q4",
+          "stem": "Which finding is compatible with brain-stem death?",
+          "options": [
+            "Cough to suction",
+            "Triple flexion response in the legs",
+            "Pupillary light reflex",
+            "Corneal reflex"
+          ],
+          "answerIndex": 1,
+          "explanation": "Spinal reflexes may persist."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Hypothermia threshold for brain-stem death testing",
+          "reason": "Form 10 lists 'primary hypothermia' without a number; WBD 2020 uses core ≥ 36 °C. Confirm local SOP."
+        },
+        {
+          "item": "Apnoea test protocol details",
+          "reason": "Indian state SOPs (e.g. SOTTO) may specify technique; align with local SOP."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "mannitol",
+      "name": "Mannitol 20%",
+      "class": "Osmotic diuretic",
+      "indications": "Raised ICP / impending herniation",
+      "adultDose": "0.25-1 g/kg IV over 15-20 min (1.25-5 mL/kg of 20%); repeat 4-6 hourly as needed.",
+      "preparationIndia": "20% 100 mL and 350 mL bottles (20 g/100 mL); use in-line filter, warm if crystallised.",
+      "renalHepatic": "Avoid if serum osmolality > 320 mOsm/kg or osmolar gap > 20, hypovolaemia, or AKI.",
+      "cautions": "Osmotic diuresis → hypovolaemia and hypotension (replace urine losses); rebound ICP.",
+      "monitoring": "Serum Na, osmolality and osmolar gap before repeat doses; urine output; creatinine.",
+      "refs": [
+        "btf4",
+        "sibicc-2019"
+      ]
+    },
+    {
+      "id": "hypertonic-saline",
+      "name": "Hypertonic saline (3% or higher)",
+      "class": "Osmotic agent",
+      "indications": "Raised ICP; herniation; hyponatraemia with neurological symptoms",
+      "adultDose": "3% NaCl: 2-5 mL/kg (150-250 mL) IV over 10-20 min bolus, or infusion to target Na 145-155 mmol/L. 23.4% NaCl 30 mL over 10-20 min via central line only (herniation).",
+      "preparationIndia": "3% NaCl 100 mL/500 mL bottles (available in India); 23.4% is rarely stocked. If 3% must be prepared on the unit, use only a pharmacy-approved recipe.",
+      "cautions": "Avoid Na rise > 10-12 mmol/L/24 h in chronic hyponatraemia; volume overload; hyperchloraemic acidosis. Peripheral 3% acceptable short-term through a good vein.",
+      "monitoring": "Na 4-6 hourly; stop if Na > 155-160 mmol/L.",
+      "verify": "Local preparation methods for 3% saline differ; use pharmacy-validated recipes.",
+      "refs": [
+        "sibicc-2019"
+      ]
+    },
+    {
+      "id": "noradrenaline",
+      "name": "Noradrenaline",
+      "class": "Vasopressor",
+      "indications": "Maintain CPP / MAP in TBI and brain-stem death donor management",
+      "adultDose": "0.05-0.5 mcg/kg/min titrated to CPP 60-70 mmHg or MAP target.",
+      "preparationIndia": "4 mg in 50 mL = 80 mcg/mL.",
+      "refs": [
+        "btf4"
+      ]
+    },
+    {
+      "id": "phenytoin",
+      "name": "Phenytoin",
+      "class": "Antiepileptic",
+      "indications": "Prophylaxis of early post-traumatic seizures (BTF level IIA)",
+      "adultDose": "Load 15-20 mg/kg IV at ≤ 50 mg/min, then 100 mg every 8 h for 7 days.",
+      "preparationIndia": "50 mg/mL; dilute only in NS (precipitates in dextrose); in-line filter.",
+      "cautions": "Hypotension, arrhythmia during loading (ECG monitoring), purple glove syndrome, drug interactions.",
+      "monitoring": "Levels (corrected for albumin).",
+      "refs": [
+        "btf4"
+      ]
+    },
+    {
+      "id": "levetiracetam",
+      "name": "Levetiracetam",
+      "class": "Antiepileptic",
+      "indications": "Prophylaxis of early post-traumatic seizures (7 days); seizure treatment",
+      "adultDose": "Prophylaxis: 500-1,000 mg IV/oral every 12 h for 7 days. Status epilepticus: 60 mg/kg IV (max 4,500 mg).",
+      "preparationIndia": "500 mg/5 mL vials; dilute in 100 mL NS over 15 min.",
+      "renalHepatic": "Reduce maintenance if CrCl < 50 mL/min.",
+      "cautions": "Behavioural changes, somnolence.",
+      "refs": [
+        "btf4"
+      ]
+    },
+    {
+      "id": "vasopressin",
+      "name": "Vasopressin",
+      "class": "Vasopressor / antidiuretic",
+      "indications": "Diabetes insipidus and vasoplegia in brain-stem dead organ donors",
+      "adultDose": "0.5-2.4 units/h (≈ 0.01-0.04 units/min) infusion.",
+      "preparationIndia": "20 units/mL ampoules; 20 units in 50 mL = 0.4 units/mL.",
+      "verify": "Desmopressin dosing alternative for DI: 1-4 mcg IV; confirm local donor-management protocol.",
+      "refs": [
+        "wbd-2020"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "btf4",
+      "citation": "Carney N, Totten AM, O'Reilly C, et al. Guidelines for the Management of Severe Traumatic Brain Injury, Fourth Edition. Neurosurgery 2017;80:6-15.",
+      "url": "https://doi.org/10.1227/NEU.0000000000001432",
+      "year": 2016,
+      "type": "guideline",
+      "doi": "10.1227/NEU.0000000000001432"
+    },
+    {
+      "id": "sibicc-2019",
+      "citation": "Hawryluk GWJ, Aguilera S, Buki A, et al. A management algorithm for patients with intracranial pressure monitoring: the Seattle International Severe Traumatic Brain Injury Consensus Conference (SIBICC). Intensive Care Med 2019;45:1783-94.",
+      "url": "https://doi.org/10.1007/s00134-019-05805-9",
+      "year": 2019,
+      "type": "consensus",
+      "doi": "10.1007/s00134-019-05805-9"
+    },
+    {
+      "id": "rescueicp",
+      "citation": "Hutchinson PJ, Kolias AG, Timofeev IS, et al. Trial of decompressive craniectomy for traumatic intracranial hypertension (RESCUEicp). N Engl J Med 2016;375:1119-30.",
+      "url": "https://doi.org/10.1056/NEJMoa1605215",
+      "year": 2016,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1605215"
+    },
+    {
+      "id": "eurotherm",
+      "citation": "Andrews PJD, Sinclair HL, Rodriguez A, et al. Hypothermia for intracranial hypertension after traumatic brain injury (Eurotherm3235). N Engl J Med 2015;373:2403-12.",
+      "url": "https://doi.org/10.1056/NEJMoa1507581",
+      "year": 2015,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1507581"
+    },
+    {
+      "id": "crash-steroids",
+      "citation": "CRASH trial collaborators. Effect of intravenous corticosteroids on death within 14 days in 10008 adults with clinically significant head injury (MRC CRASH trial). Lancet 2004;364:1321-8.",
+      "url": "https://doi.org/10.1016/S0140-6736(04)17188-2",
+      "year": 2004,
+      "type": "trial",
+      "doi": "10.1016/S0140-6736(04)17188-2"
+    },
+    {
+      "id": "crash3",
+      "citation": "CRASH-3 trial collaborators. Effects of tranexamic acid on death, disability, vascular occlusive events and other morbidities in patients with acute traumatic brain injury (CRASH-3). Lancet 2019;394:1713-23.",
+      "url": "https://doi.org/10.1016/S0140-6736(19)32233-0",
+      "year": 2019,
+      "type": "trial",
+      "doi": "10.1016/S0140-6736(19)32233-0"
+    },
+    {
+      "id": "wbd-2020",
+      "citation": "Greer DM, Shemie SD, Lewis A, et al. Determination of brain death/death by neurologic criteria: the World Brain Death Project. JAMA 2020;324:1078-97.",
+      "url": "https://doi.org/10.1001/jama.2020.11586",
+      "year": 2020,
+      "type": "consensus",
+      "doi": "10.1001/jama.2020.11586"
+    },
+    {
+      "id": "thota-rules-2014",
+      "citation": "Ministry of Health and Family Welfare, Government of India. Transplantation of Human Organs and Tissues Act 1994 (amended 2011) and Transplantation of Human Organs and Tissues Rules, 2014. NOTTO.",
+      "url": "https://notto.mohfw.gov.in/act-end-rules-of-thoa.htm",
+      "year": 2014,
+      "type": "guideline"
+    },
+    {
+      "id": "notto-form10",
+      "citation": "National Organ and Tissue Transplant Organisation (NOTTO). Form 10: Certification of brain-stem death (THOT Rules 2014). Download forms page.",
+      "url": "https://notto.mohfw.gov.in/download-forms.htm",
+      "year": 2014,
+      "type": "web"
+    }
+  ]
+}

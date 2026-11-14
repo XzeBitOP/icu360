@@ -1,0 +1,1473 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "acid-base-abg",
+  "number": 15,
+  "folder": "15-acid-base-abg",
+  "section": {
+    "id": "D",
+    "title": "Renal, fluids and metabolic"
+  },
+  "phase": 1,
+  "title": "Acid-base and ABG",
+  "summary": "Interpret any blood gas in five steps (pH, primary process, compensation, anion gap with albumin correction, delta ratio), work up high and normal anion gap acidosis, metabolic alkalosis and respiratory disorders, recognise mixed disorders, and know when a venous gas is enough.",
+  "tags": [
+    "acid-base",
+    "ABG",
+    "VBG",
+    "pH",
+    "PaCO2",
+    "bicarbonate",
+    "anion gap",
+    "albumin-corrected anion gap",
+    "delta ratio",
+    "Winters formula",
+    "HAGMA",
+    "NAGMA",
+    "lactic acidosis",
+    "ketoacidosis",
+    "toxic alcohols",
+    "osmolal gap",
+    "RTA",
+    "metabolic alkalosis",
+    "chloride",
+    "respiratory acidosis",
+    "respiratory alkalosis",
+    "mixed disorders",
+    "sodium bicarbonate"
+  ],
+  "relatedModules": [
+    "fluids-electrolytes",
+    "aki-renal-drug-dosing",
+    "endocrine-metabolic-emergencies",
+    "shock-vasoactive-support",
+    "poisoning-approach-drug-overdoses",
+    "oxygen-hfnc-niv"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "flask-conical",
+    "accent": "standard"
+  },
+  "viewKey": "module:acid-base-abg",
+  "topics": [
+    {
+      "id": "stepwise-interpretation",
+      "title": "Five-step blood gas interpretation",
+      "summary": "1) Acidaemia or alkalaemia? 2) Primary process (look at PaCO2 and HCO3-). 3) Is compensation appropriate? 4) Anion gap (correct for albumin). 5) If HAGMA, the delta ratio reveals hidden disorders. Then the clinical story.",
+      "viewKey": "topic:acid-base-abg/stepwise-interpretation",
+      "uiHints": {
+        "icon": "flask-conical",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Step 1",
+            "title": "pH",
+            "detail": "< 7.35 acidaemia, > 7.45 alkalaemia. A normal pH does not exclude a mixed disorder.",
+            "refs": [
+              "berend2014"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Step 2",
+            "title": "Primary process",
+            "detail": "pH low + HCO3- low = metabolic acidosis; pH low + PaCO2 high = respiratory acidosis; pH high + HCO3- high = metabolic alkalosis; pH high + PaCO2 low = respiratory alkalosis.",
+            "refs": [
+              "berend2014"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Step 3",
+            "title": "Compensation",
+            "detail": "Metabolic acidosis: expected PaCO2 = 1.5 × HCO3- + 8 (± 2) (Winters). Metabolic alkalosis: PaCO2 rises ~0.7 per 1 mmol/L HCO3- rise. Respiratory: see the compensation table. Outside range = second disorder.",
+            "refs": [
+              "berend2014"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Step 4",
+            "title": "Anion gap",
+            "detail": "AG = Na+ − (Cl- + HCO3-); normal ≈ 8-12 (analyser-dependent). Corrected AG = AG + 2.5 × (40 − albumin g/L)/10, i.e. + 2.5 per 10 g/L fall in albumin.",
+            "refs": [
+              "figge1998"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Step 5",
+            "title": "Delta ratio",
+            "detail": "(AG − 12) ÷ (24 − HCO3-). < 0.4 = NAGMA; 0.4-0.8 = mixed HAGMA + NAGMA; 0.8-2 = pure HAGMA; > 2 = HAGMA + metabolic alkalosis (or pre-existing high HCO3-).",
+            "refs": [
+              "berend2014"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Then",
+            "title": "Oxygenation",
+            "detail": "A-a gradient = PAO2 − PaO2, where PAO2 = FiO2 × (760 − 47) − PaCO2/0.8. Normal ≈ age/4 + 4 on room air."
+          }
+        ],
+        "tables": [
+          {
+            "id": "compensation",
+            "title": "Expected compensation",
+            "columns": [
+              "Disorder",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "Metabolic acidosis",
+                "PaCO2 = 1.5 × HCO3- + 8 (± 2)"
+              ],
+              [
+                "Metabolic alkalosis",
+                "PaCO2 rises 0.7 mmHg per 1 mmol/L HCO3- rise"
+              ],
+              [
+                "Acute respiratory acidosis",
+                "HCO3- rises 1 per 10 mmHg PaCO2 rise"
+              ],
+              [
+                "Chronic respiratory acidosis",
+                "HCO3- rises 3.5-4 per 10 mmHg PaCO2 rise"
+              ],
+              [
+                "Acute respiratory alkalosis",
+                "HCO3- falls 2 per 10 mmHg PaCO2 fall"
+              ],
+              [
+                "Chronic respiratory alkalosis",
+                "HCO3- falls 4-5 per 10 mmHg PaCO2 fall"
+              ]
+            ],
+            "refs": [
+              "berend2014"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "pH < 7.1 or > 7.6: life-threatening."
+          },
+          {
+            "text": "Metabolic acidosis with PaCO2 higher than predicted: respiratory failure is imminent (tiring)."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Forgetting albumin correction: hypoalbuminaemia hides a raised anion gap."
+          },
+          {
+            "text": "Mixing mmHg and kPa (1 kPa = 7.5 mmHg)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Quick check: in pure metabolic acidosis, PaCO2 (mmHg) ≈ the last two digits of pH (e.g. pH 7.25 → PaCO2 ~25)."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Five-step gas",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Blood gas result"
+          },
+          {
+            "id": "ph",
+            "type": "decision",
+            "text": "pH?"
+          },
+          {
+            "id": "acid",
+            "type": "decision",
+            "text": "Acidaemia: HCO3- low (metabolic) or PaCO2 high (respiratory)?"
+          },
+          {
+            "id": "alk",
+            "type": "decision",
+            "text": "Alkalaemia: HCO3- high (metabolic) or PaCO2 low (respiratory)?"
+          },
+          {
+            "id": "norm",
+            "type": "action",
+            "text": "Normal pH: check PaCO2 and HCO3- for a hidden mixed disorder"
+          },
+          {
+            "id": "metac",
+            "type": "action",
+            "text": "Metabolic acidosis: Winters check, anion gap (albumin-corrected), delta ratio"
+          },
+          {
+            "id": "resp",
+            "type": "action",
+            "text": "Respiratory disorder: acute vs chronic compensation"
+          },
+          {
+            "id": "metalk",
+            "type": "action",
+            "text": "Metabolic alkalosis: urine chloride"
+          },
+          {
+            "id": "story",
+            "type": "end",
+            "text": "Integrate with the clinical story; treat causes"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "ph"
+          },
+          {
+            "from": "ph",
+            "to": "acid",
+            "label": "< 7.35"
+          },
+          {
+            "from": "ph",
+            "to": "alk",
+            "label": "> 7.45"
+          },
+          {
+            "from": "ph",
+            "to": "norm",
+            "label": "7.35-7.45"
+          },
+          {
+            "from": "acid",
+            "to": "metac",
+            "label": "Metabolic"
+          },
+          {
+            "from": "acid",
+            "to": "resp",
+            "label": "Respiratory"
+          },
+          {
+            "from": "alk",
+            "to": "metalk",
+            "label": "Metabolic"
+          },
+          {
+            "from": "alk",
+            "to": "resp",
+            "label": "Respiratory"
+          },
+          {
+            "from": "norm",
+            "to": "story"
+          },
+          {
+            "from": "metac",
+            "to": "story"
+          },
+          {
+            "from": "resp",
+            "to": "story"
+          },
+          {
+            "from": "metalk",
+            "to": "story"
+          }
+        ],
+        "refs": [
+          "berend2014"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "The bicarbonate-CO2 buffer system follows Henderson-Hasselbalch: pH = 6.1 + log(HCO3- / 0.03 × PaCO2). The Stewart approach (strong ion difference, weak acids, PaCO2) explains chloride and albumin effects and is complementary.",
+        "evidence": "- **Berend 2014:** physiological (bicarbonate-based) approach with compensation rules, anion gap and delta ratio.\n- **Figge 1998:** each 10 g/L fall in albumin lowers the anion gap by ~2.5 mmol/L.",
+        "controversies": "- Physiological vs Stewart vs base-excess approaches give similar bedside conclusions when applied correctly.",
+        "indiaNotes": "- Hypoalbuminaemia (malnutrition, chronic liver disease, sepsis) is very common in Indian ICUs; always correct the anion gap."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "anion-gap",
+        "anion-gap-albumin-corrected",
+        "delta-ratio",
+        "winters-formula",
+        "aa-gradient"
+      ],
+      "references": [
+        "berend2014",
+        "figge1998"
+      ],
+      "quiz": [
+        {
+          "id": "stepwise-interpretation-q1",
+          "stem": "pH 7.20, HCO3- 10, PaCO2 30. Compensation?",
+          "options": [
+            "Appropriate (expected 23 ± 2)",
+            "Additional respiratory acidosis (expected 23 ± 2)",
+            "Additional respiratory alkalosis",
+            "Cannot tell"
+          ],
+          "answerIndex": 1,
+          "explanation": "Expected PaCO2 = 1.5 × 10 + 8 = 23 ± 2; 30 is too high."
+        },
+        {
+          "id": "stepwise-interpretation-q2",
+          "stem": "AG 12 with albumin 20 g/L. Corrected AG:",
+          "options": [
+            "12",
+            "15",
+            "17",
+            "22"
+          ],
+          "answerIndex": 2,
+          "explanation": "12 + 2.5 × 2 = 17."
+        },
+        {
+          "id": "stepwise-interpretation-q3",
+          "stem": "Delta ratio 0.5 in metabolic acidosis suggests:",
+          "options": [
+            "Pure HAGMA",
+            "Mixed HAGMA + NAGMA",
+            "HAGMA + metabolic alkalosis",
+            "Respiratory acidosis"
+          ],
+          "answerIndex": 1,
+          "explanation": "0.4-0.8 = mixed."
+        }
+      ]
+    },
+    {
+      "id": "hagma",
+      "title": "High anion gap metabolic acidosis",
+      "summary": "Lactate, ketones, uraemia and toxins cause most HAGMA. Measure lactate, ketones, creatinine, glucose and serum osmolality; an osmolal gap > 10-20 points to toxic alcohols. Treat the cause; bicarbonate only for selected severe cases.",
+      "viewKey": "topic:acid-base-abg/hagma",
+      "uiHints": {
+        "icon": "flask-conical",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Test",
+            "title": "First line",
+            "detail": "Lactate, blood ketones (beta-hydroxybutyrate), glucose, urea/creatinine, CK, paracetamol and salicylate levels, serum osmolality.",
+            "refs": [
+              "kraut2010"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Causes",
+            "title": "GOLDMARK",
+            "detail": "Glycols, Oxoproline (paracetamol), L-lactate, D-lactate, Methanol, Aspirin, Renal failure, Ketoacidosis (diabetic, alcoholic, starvation).",
+            "refs": [
+              "kraut2010"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Osmolal gap",
+            "title": "Toxic alcohols",
+            "detail": "Measured − calculated osmolality (2Na + glucose/18 + urea/2.8 in mg/dL units, or 2Na + glucose + urea in mmol/L). Gap > 10-20 with HAGMA: methanol or ethylene glycol until proven otherwise.",
+            "refs": [
+              "kraut2008"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Treat",
+            "title": "Cause first",
+            "detail": "Lactate: perfusion, sepsis, thiamine; DKA: insulin/fluids; uraemia: dialysis; methanol/EG: fomepizole or ethanol + haemodialysis.",
+            "refs": [
+              "kraut2014",
+              "kraut2008"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Bicarbonate",
+            "title": "Selected",
+            "detail": "pH ≤ 7.20 with moderate-severe AKI (AKIN 2-3): bicarbonate to pH ≥ 7.30 reduced dialysis need and mortality in that subgroup (BICAR-ICU). Not routine for lactic acidosis.",
+            "refs": [
+              "bicaricu"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "sodium-bicarbonate",
+            "role": "Severe acidaemia with AKI",
+            "route": "IV",
+            "dose": "4.2% 125-250 mL over 30 min, repeat to pH ≥ 7.30 (max 1 L/24 h) – BICAR-ICU",
+            "workedExample": "Deficit 70 kg, HCO3- 8 → target 16: 0.5 × 70 × 8 = 280 mmol; give ~140 mmol then re-check",
+            "verify": "8.4% diluted 1:1 with water gives 4.2%.",
+            "refs": [
+              "bicaricu"
+            ]
+          },
+          {
+            "drugId": "thiamine",
+            "role": "Suspected deficiency",
+            "route": "IV",
+            "dose": "200-500 mg",
+            "refs": [
+              "kraut2014"
+            ]
+          },
+          {
+            "drugId": "fomepizole",
+            "role": "Methanol / ethylene glycol",
+            "route": "IV",
+            "dose": "15 mg/kg load, then 10 mg/kg every 12 h",
+            "refs": [
+              "kraut2008"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "HAGMA + visual blurring after illicit liquor: methanol (Indian hooch tragedies) → ethanol/fomepizole + urgent dialysis."
+          },
+          {
+            "text": "HAGMA with normal lactate and ketones in a patient on paracetamol (malnourished, sepsis): 5-oxoproline."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Treating lactic acidosis with bicarbonate alone (no outcome benefit; worsens intracellular acidosis)."
+          },
+          {
+            "text": "Euglycaemic DKA on SGLT2 inhibitors (glucose < 250 mg/dL)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Alcoholic ketoacidosis: often normal glucose, mixed alkalosis from vomiting; treat with dextrose, thiamine and fluids, not insulin."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "HAGMA work-up",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Raised albumin-corrected anion gap"
+          },
+          {
+            "id": "lac",
+            "type": "decision",
+            "text": "Lactate > 4 mmol/L?"
+          },
+          {
+            "id": "lactic",
+            "type": "end",
+            "text": "Lactic acidosis: perfusion, sepsis, ischaemia, drugs, thiamine"
+          },
+          {
+            "id": "ket",
+            "type": "decision",
+            "text": "Ketones high?"
+          },
+          {
+            "id": "ketos",
+            "type": "end",
+            "text": "DKA, alcoholic or starvation ketoacidosis"
+          },
+          {
+            "id": "ren",
+            "type": "decision",
+            "text": "Severe renal failure?"
+          },
+          {
+            "id": "urae",
+            "type": "end",
+            "text": "Uraemic acidosis: dialysis if severe"
+          },
+          {
+            "id": "osm",
+            "type": "decision",
+            "text": "Osmolal gap > 10-20?"
+          },
+          {
+            "id": "tox",
+            "type": "end",
+            "text": "Toxic alcohol: fomepizole/ethanol + haemodialysis",
+            "severity": "critical"
+          },
+          {
+            "id": "rest",
+            "type": "end",
+            "text": "Salicylate, paracetamol (5-oxoproline), D-lactate, rhabdomyolysis"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "lac"
+          },
+          {
+            "from": "lac",
+            "to": "lactic",
+            "label": "Yes"
+          },
+          {
+            "from": "lac",
+            "to": "ket",
+            "label": "No"
+          },
+          {
+            "from": "ket",
+            "to": "ketos",
+            "label": "Yes"
+          },
+          {
+            "from": "ket",
+            "to": "ren",
+            "label": "No"
+          },
+          {
+            "from": "ren",
+            "to": "urae",
+            "label": "Yes"
+          },
+          {
+            "from": "ren",
+            "to": "osm",
+            "label": "No"
+          },
+          {
+            "from": "osm",
+            "to": "tox",
+            "label": "Yes"
+          },
+          {
+            "from": "osm",
+            "to": "rest",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "kraut2010",
+          "kraut2008"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Kraut & Madias 2010, 2014:** causes and management of metabolic and lactic acidosis.\n- **BICAR-ICU (2018):** bicarbonate in severe metabolic acidaemia: no overall mortality difference, but lower mortality and dialysis in patients with AKIN 2-3.",
+        "controversies": "- Bicarbonate in DKA (generally not unless pH < 6.9-7.0).",
+        "indiaNotes": "- Methanol mass poisonings from illicit liquor recur in India; ethanol is the practical antidote and early haemodialysis is critical.\n- Fomepizole is generally unavailable."
+      },
+      "drugIds": [
+        "sodium-bicarbonate",
+        "thiamine",
+        "fomepizole"
+      ],
+      "calculatorIds": [
+        "osmolal-gap",
+        "serum-osmolality",
+        "anion-gap-albumin-corrected"
+      ],
+      "references": [
+        "kraut2010",
+        "kraut2014",
+        "kraut2008",
+        "bicaricu"
+      ],
+      "quiz": [
+        {
+          "id": "hagma-q1",
+          "stem": "Measured osmolality 330, calculated 290 with HAGMA. Most likely?",
+          "options": [
+            "DKA",
+            "Methanol or ethylene glycol",
+            "Lactic acidosis",
+            "Renal tubular acidosis"
+          ],
+          "answerIndex": 1,
+          "explanation": "Osmolal gap 40 with HAGMA."
+        },
+        {
+          "id": "hagma-q2",
+          "stem": "BICAR-ICU showed benefit of bicarbonate in:",
+          "options": [
+            "All lactic acidosis",
+            "Severe acidaemia with moderate-severe AKI",
+            "DKA",
+            "Respiratory acidosis"
+          ],
+          "answerIndex": 1,
+          "explanation": "AKIN 2-3 subgroup."
+        },
+        {
+          "id": "hagma-q3",
+          "stem": "5-oxoproline acidosis is associated with:",
+          "options": [
+            "Aspirin",
+            "Chronic paracetamol in malnourished patients",
+            "Metformin",
+            "Methanol"
+          ],
+          "answerIndex": 1,
+          "explanation": "Glutathione depletion."
+        }
+      ]
+    },
+    {
+      "id": "nagma",
+      "title": "Normal anion gap (hyperchloraemic) metabolic acidosis",
+      "summary": "NAGMA comes from bicarbonate loss (diarrhoea, fistula, ureteric diversion), renal tubular acidosis, or chloride loading (large volumes of 0.9% saline). The urine anion gap separates GI from renal causes.",
+      "viewKey": "topic:acid-base-abg/nagma",
+      "uiHints": {
+        "icon": "flask-conical",
+        "accent": "standard"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "History",
+            "title": "Obvious cause?",
+            "detail": "Diarrhoea, pancreatic/biliary fistula, ileal conduit, large saline infusions, acetazolamide, recovery phase of DKA.",
+            "refs": [
+              "kraut2010"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Test",
+            "title": "Urine anion gap",
+            "detail": "UAG = urine Na+ + K+ − Cl-. Negative (−20 to −50) = appropriate NH4+ excretion (GI loss). Positive = impaired renal acid excretion (distal RTA, CKD).",
+            "refs": [
+              "kraut2010"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Classify",
+            "title": "RTA",
+            "detail": "Type 1 (distal): urine pH > 5.5, hypokalaemia, stones. Type 2 (proximal): bicarbonaturia, Fanconi. Type 4: hyperkalaemia (hypoaldosteronism, diabetes, drugs).",
+            "refs": [
+              "kraut2010"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Treat",
+            "title": "Cause + bicarbonate",
+            "detail": "Replace losses with balanced solutions; oral or IV bicarbonate for ongoing losses or RTA; correct K+ before bicarbonate in hypokalaemia."
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Severe hypokalaemia with NAGMA (distal RTA, diarrhoea): correct K+ before alkali to avoid worsening hypokalaemia."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Repeated 0.9% saline boluses causing hyperchloraemic acidosis that is then misread as ongoing shock."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Ringer's lactate or Plasma-Lyte limit hyperchloraemia during resuscitation."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "NAGMA",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Metabolic acidosis with normal corrected AG"
+          },
+          {
+            "id": "hx",
+            "type": "decision",
+            "text": "Obvious cause (diarrhoea, saline, fistula)?"
+          },
+          {
+            "id": "tx",
+            "type": "end",
+            "text": "Treat cause; balanced fluids; bicarbonate if severe"
+          },
+          {
+            "id": "uag",
+            "type": "decision",
+            "text": "Urine anion gap?"
+          },
+          {
+            "id": "gi",
+            "type": "end",
+            "text": "Negative: GI or occult loss"
+          },
+          {
+            "id": "k",
+            "type": "decision",
+            "text": "Serum K+?"
+          },
+          {
+            "id": "rta4",
+            "type": "end",
+            "text": "High K+: type 4 RTA (hypoaldosteronism, drugs)"
+          },
+          {
+            "id": "rta1",
+            "type": "end",
+            "text": "Low/normal K+: distal or proximal RTA; nephrology"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "hx"
+          },
+          {
+            "from": "hx",
+            "to": "tx",
+            "label": "Yes"
+          },
+          {
+            "from": "hx",
+            "to": "uag",
+            "label": "No"
+          },
+          {
+            "from": "uag",
+            "to": "gi",
+            "label": "Negative"
+          },
+          {
+            "from": "uag",
+            "to": "k",
+            "label": "Positive"
+          },
+          {
+            "from": "k",
+            "to": "rta4",
+            "label": "High"
+          },
+          {
+            "from": "k",
+            "to": "rta1",
+            "label": "Low or normal"
+          }
+        ],
+        "refs": [
+          "kraut2010"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Kraut & Madias 2010:** urine anion gap and RTA classification.",
+        "indiaNotes": "- Acute diarrhoeal disease (including cholera) is a common cause of severe NAGMA with hypokalaemia in Indian ICUs, especially in monsoon months."
+      },
+      "drugIds": [
+        "sodium-bicarbonate"
+      ],
+      "calculatorIds": [
+        "anion-gap"
+      ],
+      "references": [
+        "kraut2010",
+        "berend2014"
+      ],
+      "quiz": [
+        {
+          "id": "nagma-q1",
+          "stem": "Negative urine anion gap in NAGMA suggests:",
+          "options": [
+            "Distal RTA",
+            "GI bicarbonate loss",
+            "Type 4 RTA",
+            "CKD"
+          ],
+          "answerIndex": 1,
+          "explanation": "Kidneys are excreting ammonium appropriately."
+        },
+        {
+          "id": "nagma-q2",
+          "stem": "Type 4 RTA features:",
+          "options": [
+            "Hypokalaemia, stones",
+            "Hyperkalaemia",
+            "Fanconi syndrome",
+            "Alkaline urine always"
+          ],
+          "answerIndex": 1,
+          "explanation": "Hypoaldosteronism → hyperkalaemia."
+        },
+        {
+          "id": "nagma-q3",
+          "stem": "Large volumes of 0.9% saline cause:",
+          "options": [
+            "HAGMA",
+            "Hyperchloraemic NAGMA",
+            "Metabolic alkalosis",
+            "Respiratory acidosis"
+          ],
+          "answerIndex": 1,
+          "explanation": "Chloride load lowers the strong ion difference."
+        }
+      ]
+    },
+    {
+      "id": "metabolic-alkalosis",
+      "title": "Metabolic alkalosis",
+      "summary": "Usually from vomiting/NG losses, diuretics or post-hypercapnia. Urine chloride separates chloride-responsive (< 20 mmol/L) from chloride-resistant causes. Treat with chloride, potassium and volume; acetazolamide if overloaded.",
+      "viewKey": "topic:acid-base-abg/metabolic-alkalosis",
+      "uiHints": {
+        "icon": "flask-conical",
+        "accent": "standard"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Cause",
+            "title": "Common ICU causes",
+            "detail": "NG drainage, vomiting, loop/thiazide diuretics, post-hypercapnic (after ventilating chronic CO2 retainers), citrate (massive transfusion, CRRT), hypokalaemia, steroids/mineralocorticoid excess.",
+            "refs": [
+              "luke2012"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Test",
+            "title": "Urine chloride",
+            "detail": "< 20 mmol/L = chloride-responsive (vomiting, past diuretics). > 40 mmol/L = current diuretics, mineralocorticoid excess, severe hypokalaemia, Bartter/Gitelman.",
+            "refs": [
+              "luke2012"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Treat",
+            "title": "Chloride-responsive",
+            "detail": "0.9% saline if volume-depleted, KCl to K+ ≥ 4; PPI for ongoing NG loss.",
+            "refs": [
+              "luke2012"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Treat",
+            "title": "Overloaded",
+            "detail": "Acetazolamide 250-500 mg IV once or twice daily (watch K+); reduce loop diuretic; KCl."
+          },
+          {
+            "n": 5,
+            "time": "Severe",
+            "title": "pH > 7.55-7.6",
+            "detail": "Consider dilute HCl (central line) or dialysis with low-bicarbonate bath (rare)."
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "pH > 7.55 with hypokalaemia: arrhythmia risk; hypoventilation may impede weaning."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Normalising PaCO2 quickly in a chronic CO2 retainer (post-hypercapnic alkalosis)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "'It is chloride depletion alkalosis, not contraction alkalosis' (Luke & Galla)."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Metabolic alkalosis",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Raised HCO3- with alkalaemia"
+          },
+          {
+            "id": "ucl",
+            "type": "decision",
+            "text": "Urine chloride < 20 mmol/L?"
+          },
+          {
+            "id": "resp",
+            "type": "end",
+            "text": "Chloride-responsive: saline + KCl; stop losses"
+          },
+          {
+            "id": "vol",
+            "type": "decision",
+            "text": "Volume overloaded or on diuretics?"
+          },
+          {
+            "id": "acz",
+            "type": "end",
+            "text": "Acetazolamide + KCl"
+          },
+          {
+            "id": "endo",
+            "type": "end",
+            "text": "Check BP, renin/aldosterone, steroids; nephrology"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "ucl"
+          },
+          {
+            "from": "ucl",
+            "to": "resp",
+            "label": "Yes"
+          },
+          {
+            "from": "ucl",
+            "to": "vol",
+            "label": "No"
+          },
+          {
+            "from": "vol",
+            "to": "acz",
+            "label": "Yes"
+          },
+          {
+            "from": "vol",
+            "to": "endo",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "luke2012"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Luke & Galla 2012:** chloride depletion maintains alkalosis; chloride repletion corrects it.",
+        "indiaNotes": "- Hypokalaemic metabolic alkalosis with high urine chloride and normal BP in young adults: consider Gitelman syndrome or surreptitious diuretic use."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "luke2012",
+        "berend2014"
+      ],
+      "quiz": [
+        {
+          "id": "metabolic-alkalosis-q1",
+          "stem": "Urine chloride 8 mmol/L in metabolic alkalosis suggests:",
+          "options": [
+            "Mineralocorticoid excess",
+            "Vomiting/NG loss",
+            "Current diuretics",
+            "Bartter"
+          ],
+          "answerIndex": 1,
+          "explanation": "Chloride-responsive."
+        },
+        {
+          "id": "metabolic-alkalosis-q2",
+          "stem": "In an oedematous patient with diuretic-induced alkalosis, a useful drug is:",
+          "options": [
+            "Sodium bicarbonate",
+            "Acetazolamide",
+            "Spironolactone only",
+            "Furosemide more"
+          ],
+          "answerIndex": 1,
+          "explanation": "Carbonic anhydrase inhibition increases bicarbonate excretion."
+        },
+        {
+          "id": "metabolic-alkalosis-q3",
+          "stem": "Post-hypercapnic alkalosis occurs when:",
+          "options": [
+            "CO2 is corrected rapidly in a chronic retainer",
+            "Patient vomits",
+            "Saline is given",
+            "After DKA"
+          ],
+          "answerIndex": 0,
+          "explanation": "Renal HCO3- retention persists after PaCO2 falls."
+        }
+      ]
+    },
+    {
+      "id": "respiratory-disorders",
+      "title": "Respiratory acidosis and alkalosis",
+      "summary": "Respiratory acidosis means alveolar hypoventilation: think drive (drugs, brain), pump (neuromuscular, chest wall, fatigue) or lungs (COPD, asthma). Respiratory alkalosis is hyperventilation from hypoxaemia, sepsis, pain, PE, liver failure, salicylates or pregnancy.",
+      "viewKey": "topic:acid-base-abg/respiratory-disorders",
+      "uiHints": {
+        "icon": "flask-conical",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Acidosis",
+            "title": "Acute or chronic?",
+            "detail": "Use the compensation rules: acute HCO3- +1 per 10 mmHg, chronic +3.5-4 per 10.",
+            "refs": [
+              "berend2014"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Acidosis",
+            "title": "Find the cause",
+            "detail": "Sedatives/opioids (naloxone), neuromuscular weakness (GBS, MG, snake envenomation, organophosphates), obesity hypoventilation, COPD/asthma, ventilator settings."
+          },
+          {
+            "n": 3,
+            "time": "Acidosis",
+            "title": "Treat",
+            "detail": "Reverse drugs, NIV for COPD/obesity, intubate for coma or exhaustion; in ventilated patients increase minute ventilation (except permissive hypercapnia strategies)."
+          },
+          {
+            "n": 4,
+            "time": "Alkalosis",
+            "title": "Find the cause",
+            "detail": "Hypoxaemia, sepsis (early), PE, pain/anxiety, CNS lesions, liver failure, salicylate toxicity (mixed with HAGMA), pregnancy, over-ventilation on the ventilator.",
+            "refs": [
+              "berend2014"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Alkalosis",
+            "title": "Treat the cause",
+            "detail": "Do not rebreathe into a bag; hypoxaemia must be excluded first."
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Rising PaCO2 in neuromuscular weakness: late sign; check vital capacity (< 15-20 mL/kg → intubate)."
+          },
+          {
+            "text": "Respiratory alkalosis + HAGMA in an adult: salicylate poisoning."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Assuming hyperventilation is anxiety without excluding PE, sepsis, DKA or hypoxaemia."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Normal PaCO2 in acute severe asthma is a danger sign (fatigue)."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Respiratory acidosis",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "PaCO2 > 45 mmHg with low pH"
+          },
+          {
+            "id": "drive",
+            "type": "decision",
+            "text": "Reduced drive (GCS low, opioids, sedatives)?"
+          },
+          {
+            "id": "rev",
+            "type": "end",
+            "text": "Reverse drugs; protect airway"
+          },
+          {
+            "id": "nm",
+            "type": "decision",
+            "text": "Weakness (GBS, MG, envenomation, OP)?"
+          },
+          {
+            "id": "vc",
+            "type": "end",
+            "text": "Vital capacity and NIF; early intubation if failing",
+            "severity": "high"
+          },
+          {
+            "id": "lung",
+            "type": "end",
+            "text": "Lung/airway disease: bronchodilators, NIV, ventilator strategy"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "drive"
+          },
+          {
+            "from": "drive",
+            "to": "rev",
+            "label": "Yes"
+          },
+          {
+            "from": "drive",
+            "to": "nm",
+            "label": "No"
+          },
+          {
+            "from": "nm",
+            "to": "vc",
+            "label": "Yes"
+          },
+          {
+            "from": "nm",
+            "to": "lung",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "berend2014"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- Compensation rules as in Berend 2014.",
+        "indiaNotes": "- Neurotoxic snakebite (krait, cobra) and organophosphate poisoning are major causes of acute respiratory acidosis in rural India (modules 28-29)."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "berend2014"
+      ],
+      "quiz": [
+        {
+          "id": "respiratory-disorders-q1",
+          "stem": "PaCO2 70 with HCO3- 34 suggests:",
+          "options": [
+            "Acute respiratory acidosis",
+            "Chronic respiratory acidosis",
+            "Metabolic alkalosis",
+            "Normal"
+          ],
+          "answerIndex": 1,
+          "explanation": "Expected chronic rise ~3.5 × 3 = 10.5 → 34."
+        },
+        {
+          "id": "respiratory-disorders-q2",
+          "stem": "Respiratory alkalosis with HAGMA in an adult suggests:",
+          "options": [
+            "Methanol",
+            "Salicylate poisoning",
+            "DKA",
+            "Diarrhoea"
+          ],
+          "answerIndex": 1,
+          "explanation": "Classic salicylate mixed disorder."
+        },
+        {
+          "id": "respiratory-disorders-q3",
+          "stem": "Neuromuscular weakness: intubate when vital capacity falls below about:",
+          "options": [
+            "50 mL/kg",
+            "15-20 mL/kg",
+            "5 mL/kg",
+            "100 mL/kg"
+          ],
+          "answerIndex": 1,
+          "explanation": "The 20/30/40 rule."
+        }
+      ]
+    },
+    {
+      "id": "mixed-disorders-vbg",
+      "title": "Mixed disorders and when a VBG is enough",
+      "summary": "Suspect a mixed disorder when compensation is outside the expected range, the delta ratio is abnormal, or the pH is normal with abnormal PaCO2 and HCO3-. A venous gas is adequate for pH, HCO3-, lactate and electrolytes, but not for PaO2 or (often) PaCO2.",
+      "viewKey": "topic:acid-base-abg/mixed-disorders-vbg",
+      "uiHints": {
+        "icon": "flask-conical",
+        "accent": "standard"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Spot",
+            "title": "Mixed clues",
+            "detail": "Normal pH with abnormal values; compensation off by > 2-3 mmHg; delta ratio < 0.8 or > 2.",
+            "refs": [
+              "berend2014"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Examples",
+            "title": "Common combos",
+            "detail": "Sepsis with vomiting (HAGMA + metabolic alkalosis); DKA + diarrhoea (HAGMA + NAGMA); COPD + diuretics (respiratory acidosis + metabolic alkalosis); salicylate (respiratory alkalosis + HAGMA); cardiac arrest (respiratory + metabolic acidosis)."
+          },
+          {
+            "n": 3,
+            "time": "VBG",
+            "title": "Agreement",
+            "detail": "Venous pH ≈ arterial − 0.03; HCO3- ≈ arterial + 1; venous PCO2 ~4-6 mmHg higher but wide limits; venous PO2 is not useful. Normal venous PCO2 (< 45) reliably excludes arterial hypercapnia.",
+            "refs": [
+              "kelly2010"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Use ABG",
+            "title": "When",
+            "detail": "Need PaO2 (oxygenation targets, P/F), shock with poor perfusion (VBG diverges), suspected hypercapnia needing precise values, and ventilator adjustments.",
+            "refs": [
+              "kelly2010"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Normal pH with very high PaCO2 and high HCO3- in an acutely ill patient can mask a new acute process."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Using venous PO2 to judge oxygenation."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "A VBG plus pulse oximetry answers most questions in a stable patient and spares an arterial puncture."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "ABG or VBG?",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Need a blood gas"
+          },
+          {
+            "id": "ox",
+            "type": "decision",
+            "text": "Need precise oxygenation (P/F, PaO2 targets) or in shock?"
+          },
+          {
+            "id": "abg",
+            "type": "end",
+            "text": "Arterial gas"
+          },
+          {
+            "id": "co2",
+            "type": "decision",
+            "text": "Venous PCO2 > 45 mmHg?"
+          },
+          {
+            "id": "abg2",
+            "type": "end",
+            "text": "Confirm hypercapnia with ABG if decisions depend on it"
+          },
+          {
+            "id": "vbg",
+            "type": "end",
+            "text": "VBG adequate (pH, HCO3-, lactate, electrolytes)"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "ox"
+          },
+          {
+            "from": "ox",
+            "to": "abg",
+            "label": "Yes"
+          },
+          {
+            "from": "ox",
+            "to": "co2",
+            "label": "No"
+          },
+          {
+            "from": "co2",
+            "to": "abg2",
+            "label": "Yes"
+          },
+          {
+            "from": "co2",
+            "to": "vbg",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "kelly2010"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Kelly 2010:** venous pH and bicarbonate agree closely with arterial values; PCO2 agreement is too wide for substitution but normal venous PCO2 screens out hypercapnia.",
+        "indiaNotes": "- Arterial gas syringes and analyser cartridges are costly; VBG strategies reduce cost and patient discomfort."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "berend2014",
+        "kelly2010"
+      ],
+      "quiz": [
+        {
+          "id": "mixed-disorders-vbg-q1",
+          "stem": "Venous pH compared with arterial is about:",
+          "options": [
+            "0.03 lower",
+            "0.3 lower",
+            "Equal",
+            "0.1 higher"
+          ],
+          "answerIndex": 0,
+          "explanation": "Small, predictable difference."
+        },
+        {
+          "id": "mixed-disorders-vbg-q2",
+          "stem": "A normal pH can coexist with:",
+          "options": [
+            "Only no disorder",
+            "A mixed disorder",
+            "Only respiratory disorders",
+            "Never with abnormal HCO3-"
+          ],
+          "answerIndex": 1,
+          "explanation": "Opposing disorders can cancel out."
+        },
+        {
+          "id": "mixed-disorders-vbg-q3",
+          "stem": "VBG cannot replace ABG for:",
+          "options": [
+            "pH",
+            "Lactate",
+            "PaO2",
+            "Potassium"
+          ],
+          "answerIndex": 2,
+          "explanation": "Venous PO2 does not reflect arterial oxygenation."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "sodium-bicarbonate",
+      "name": "Sodium bicarbonate",
+      "class": "Alkalinising agent",
+      "indications": "Severe metabolic acidaemia (pH ≤ 7.20) with moderate-severe AKI (BICAR-ICU); hyperkalaemia with acidosis; sodium-channel blocker toxicity; NAGMA with ongoing bicarbonate loss; urinary alkalinisation (salicylate, rhabdomyolysis).",
+      "adultDose": "Bolus 50-100 mmol IV, or infusion titrated to pH > 7.30 (BICAR-ICU: 4.2% 125-250 mL over 30 min, max 1 L/24 h). Bicarbonate deficit (mmol) ≈ 0.5 × weight (kg) × (target − measured HCO3-); give half over hours and re-check.",
+      "preparationIndia": "7.5% (0.9 mmol/mL) and 8.4% (1 mmol/mL) 10 mL and 25 mL ampoules; isotonic 1.4% can be made as 150 mL of 8.4% in 850 mL D5W/water (≈ 150 mmol/L).",
+      "cautions": "Hypernatraemia, volume overload, hypokalaemia, ionised hypocalcaemia, raised CO2 (needs ventilation to clear), tissue necrosis on extravasation.",
+      "verify": "Confirm local concentration (7.5% vs 8.4%).",
+      "refs": [
+        "bicaricu",
+        "kraut2010"
+      ]
+    },
+    {
+      "id": "thiamine",
+      "name": "Thiamine",
+      "class": "Vitamin B1",
+      "indications": "Suspected thiamine deficiency (alcohol use, malnutrition, unexplained lactic acidosis, Wernicke's).",
+      "adultDose": "200-500 mg IV three times daily for 3-5 days in suspected Wernicke's; 100-200 mg IV daily for prophylaxis.",
+      "preparationIndia": "100 mg/mL ampoules (often 1 mL or 10 mL vials).",
+      "cautions": "Rare anaphylaxis; give before glucose in at-risk patients.",
+      "verify": "Doses vary between guidelines.",
+      "refs": [
+        "kraut2014"
+      ]
+    },
+    {
+      "id": "fomepizole",
+      "name": "Fomepizole / ethanol",
+      "class": "Alcohol dehydrogenase blocker",
+      "indications": "Methanol or ethylene glycol poisoning.",
+      "adultDose": "Fomepizole 15 mg/kg IV load, then 10 mg/kg every 12 h (increase during dialysis). If unavailable: oral or IV ethanol to blood level 100-150 mg/dL (loading ~0.8 g/kg).",
+      "preparationIndia": "Fomepizole is rarely available in India; ethanol (oral 40% spirits via NG tube or IV 10% in D5) is used.",
+      "cautions": "Ethanol: hypoglycaemia, sedation; needs frequent levels. Haemodialysis is definitive for severe poisoning.",
+      "verify": "Ethanol dosing in India is protocol-dependent; see module 27.",
+      "refs": [
+        "kraut2008"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "berend2014",
+      "citation": "Berend K, de Vries APJ, Gans ROB. Physiological approach to assessment of acid-base disturbances. N Engl J Med. 2014;371(15):1434-1445",
+      "url": "https://doi.org/10.1056/NEJMra1003327",
+      "year": 2014,
+      "doi": "10.1056/NEJMra1003327",
+      "type": "review"
+    },
+    {
+      "id": "kraut2010",
+      "citation": "Kraut JA, Madias NE. Metabolic acidosis: pathophysiology, diagnosis and management. Nat Rev Nephrol. 2010;6(5):274-285",
+      "url": "https://doi.org/10.1038/nrneph.2010.33",
+      "year": 2010,
+      "doi": "10.1038/nrneph.2010.33",
+      "type": "review"
+    },
+    {
+      "id": "kraut2014",
+      "citation": "Kraut JA, Madias NE. Lactic acidosis. N Engl J Med. 2014;371(24):2309-2319",
+      "url": "https://doi.org/10.1056/NEJMra1309483",
+      "year": 2014,
+      "doi": "10.1056/NEJMra1309483",
+      "type": "review"
+    },
+    {
+      "id": "bicaricu",
+      "citation": "Jaber S, Paugam C, Futier E, et al. Sodium bicarbonate therapy for patients with severe metabolic acidaemia in the intensive care unit (BICAR-ICU). Lancet. 2018;392(10141):31-40",
+      "url": "https://doi.org/10.1016/S0140-6736(18)31080-8",
+      "year": 2018,
+      "doi": "10.1016/S0140-6736(18)31080-8",
+      "type": "trial"
+    },
+    {
+      "id": "figge1998",
+      "citation": "Figge J, Jabor A, Kazda A, Fencl V. Anion gap and hypoalbuminemia. Crit Care Med. 1998;26(11):1807-1810",
+      "url": "https://doi.org/10.1097/00003246-199811000-00019",
+      "year": 1998,
+      "doi": "10.1097/00003246-199811000-00019",
+      "type": "trial"
+    },
+    {
+      "id": "luke2012",
+      "citation": "Luke RG, Galla JH. It is chloride depletion alkalosis, not contraction alkalosis. J Am Soc Nephrol. 2012;23(2):204-207",
+      "url": "https://doi.org/10.1681/ASN.2011040414",
+      "year": 2012,
+      "doi": "10.1681/ASN.2011040414",
+      "type": "review"
+    },
+    {
+      "id": "kraut2008",
+      "citation": "Kraut JA, Kurtz I. Toxic alcohol ingestions: clinical features, diagnosis, and management. Clin J Am Soc Nephrol. 2008;3(1):208-225",
+      "url": "https://doi.org/10.2215/CJN.03220807",
+      "year": 2008,
+      "doi": "10.2215/CJN.03220807",
+      "type": "review"
+    },
+    {
+      "id": "kelly2010",
+      "citation": "Kelly AM. Review article: Can venous blood gas analysis replace arterial in emergency medical care. Emerg Med Australas. 2010;22(6):493-498",
+      "url": "https://doi.org/10.1111/j.1742-6723.2010.01351.x",
+      "year": 2010,
+      "doi": "10.1111/j.1742-6723.2010.01351.x",
+      "type": "review"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Analyser reference ranges",
+      "reason": "Normal anion gap depends on the analyser (with or without K+; modern ion-selective analysers often 4-12 mmol/L). Use local ranges."
+    }
+  ]
+}

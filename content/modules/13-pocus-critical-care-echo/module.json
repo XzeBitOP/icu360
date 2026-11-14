@@ -1,0 +1,1460 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "pocus-critical-care-echo",
+  "number": 13,
+  "folder": "13-pocus-critical-care-echo",
+  "section": {
+    "id": "C",
+    "title": "Cardiovascular and haemodynamics"
+  },
+  "phase": 1,
+  "title": "POCUS and critical care echo",
+  "summary": "Use focused ultrasound at the bedside as an extension of the examination: obtain the core cardiac views, assess LV and RV function, interpret the IVC and venous congestion carefully, read lung ultrasound patterns (BLUE protocol), run RUSH/eFAST in shock and trauma, and perform two-region compression for DVT.",
+  "tags": [
+    "POCUS",
+    "ultrasound",
+    "focused cardiac ultrasound",
+    "FoCUS",
+    "parasternal",
+    "apical four chamber",
+    "subcostal",
+    "LV function",
+    "RV dilatation",
+    "McConnell",
+    "TAPSE",
+    "IVC",
+    "VExUS",
+    "lung ultrasound",
+    "B-lines",
+    "lung sliding",
+    "A-lines",
+    "BLUE protocol",
+    "RUSH",
+    "eFAST",
+    "DVT",
+    "compression ultrasound",
+    "tamponade"
+  ],
+  "relatedModules": [
+    "shock-vasoactive-support",
+    "haemodynamic-monitoring",
+    "pe-tamponade-aortic-emergencies",
+    "cardiac-arrest-post-rosc",
+    "procedures",
+    "trauma-burns-environmental"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "scan-line",
+    "accent": "standard"
+  },
+  "viewKey": "module:pocus-critical-care-echo",
+  "topics": [
+    {
+      "id": "cardiac-views",
+      "title": "Core cardiac views and LV assessment",
+      "summary": "Obtain parasternal long and short axis, apical four-chamber and subcostal views. Grade LV function visually (normal, mildly, severely reduced, hyperdynamic) and look for pericardial effusion, gross valve failure and LV size.",
+      "viewKey": "topic:pocus-critical-care-echo/cardiac-views",
+      "uiHints": {
+        "icon": "scan-line",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Set up",
+            "title": "Phased-array probe",
+            "detail": "Cardiac preset; marker convention (screen marker on the right in cardiac mode). Patient supine or left lateral."
+          },
+          {
+            "n": 2,
+            "time": "View 1",
+            "title": "Parasternal long axis",
+            "detail": "3rd-4th left intercostal space, marker to right shoulder. LV size and function, mitral and aortic valves, pericardial vs pleural effusion (descending aorta).",
+            "refs": [
+              "focus2014"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "View 2",
+            "title": "Parasternal short axis",
+            "detail": "Rotate 90° clockwise. 'Donut' LV at papillary level: regional wall motion, septal shape (D-sign in RV overload)."
+          },
+          {
+            "n": 4,
+            "time": "View 3",
+            "title": "Apical four-chamber",
+            "detail": "Apex beat, marker to left. RV:LV size ratio, global function, MAPSE/TAPSE, effusion."
+          },
+          {
+            "n": 5,
+            "time": "View 4",
+            "title": "Subcostal",
+            "detail": "Below xiphoid, marker to left, probe flat. Best view in ventilated patients; effusion and RA/RV collapse; then rotate for IVC."
+          },
+          {
+            "n": 6,
+            "time": "Interpret",
+            "title": "LV function",
+            "detail": "Visual EF: hyperdynamic (cavity obliteration), normal, reduced, severely reduced. E-point septal separation > 7 mm suggests reduced EF.",
+            "refs": [
+              "focus2014",
+              "ase-acep2010"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Interpret",
+            "title": "Tamponade",
+            "detail": "Effusion with RA systolic collapse, RV diastolic collapse, plethoric IVC; clinical diagnosis with haemodynamic compromise."
+          }
+        ],
+        "tables": [
+          {
+            "id": "views",
+            "title": "Five-view focused cardiac scan",
+            "columns": [
+              "View",
+              "Probe position",
+              "Key questions"
+            ],
+            "rows": [
+              [
+                "PLAX",
+                "Left parasternal, 3rd-4th ICS, marker to right shoulder",
+                "LV function, effusion, aortic root, MV/AV"
+              ],
+              [
+                "PSAX",
+                "Same site, rotate 90° clockwise",
+                "Regional wall motion, D-sign"
+              ],
+              [
+                "A4C",
+                "Apex, marker to patient's left",
+                "RV:LV ratio, TAPSE, global function"
+              ],
+              [
+                "Subcostal 4C",
+                "Subxiphoid, flat probe",
+                "Effusion, tamponade, global function"
+              ],
+              [
+                "Subcostal IVC",
+                "Rotate to long axis, marker cephalad",
+                "IVC size and variation"
+              ]
+            ],
+            "refs": [
+              "focus2014"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Effusion with RV diastolic collapse and hypotension: tamponade → drain."
+          },
+          {
+            "text": "Severely reduced LV with shock: cardiogenic shock pathway."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Calling epicardial fat or a pleural effusion a pericardial effusion (check relation to descending aorta)."
+          },
+          {
+            "text": "Foreshortened apical views underestimating LV size."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Hyperdynamic LV with kissing papillary muscles suggests hypovolaemia or vasodilation."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Focused cardiac scan sequence",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Shocked or breathless patient"
+          },
+          {
+            "id": "eff",
+            "type": "decision",
+            "text": "Pericardial effusion with chamber collapse?"
+          },
+          {
+            "id": "tamp",
+            "type": "end",
+            "text": "Tamponade: pericardiocentesis (module 11)",
+            "severity": "critical"
+          },
+          {
+            "id": "lv",
+            "type": "decision",
+            "text": "LV function?"
+          },
+          {
+            "id": "poor",
+            "type": "end",
+            "text": "Poor LV: cardiogenic cause"
+          },
+          {
+            "id": "rv",
+            "type": "decision",
+            "text": "RV larger than LV / D-sign?"
+          },
+          {
+            "id": "pe",
+            "type": "end",
+            "text": "Acute RV overload: think PE (module 11)"
+          },
+          {
+            "id": "hyper",
+            "type": "end",
+            "text": "Normal/hyperdynamic: hypovolaemic or distributive; assess IVC and lungs"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "eff"
+          },
+          {
+            "from": "eff",
+            "to": "tamp",
+            "label": "Yes"
+          },
+          {
+            "from": "eff",
+            "to": "lv",
+            "label": "No"
+          },
+          {
+            "from": "lv",
+            "to": "poor",
+            "label": "Severely reduced"
+          },
+          {
+            "from": "lv",
+            "to": "rv",
+            "label": "Normal or hyperdynamic"
+          },
+          {
+            "from": "rv",
+            "to": "pe",
+            "label": "Yes"
+          },
+          {
+            "from": "rv",
+            "to": "hyper",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "focus2014",
+          "rush2010"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **International FoCUS recommendations 2014:** focused cardiac ultrasound is accurate in trained hands for LV dysfunction, RV enlargement, pericardial effusion/tamponade and volume status assessment; it complements but does not replace comprehensive echo.",
+        "indiaNotes": "- Portable ultrasound machines are widely available in Indian ICUs; ISCCM and other bodies run POCUS courses. Save images for review and quality assurance."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "focus2014",
+        "ase-acep2010"
+      ],
+      "quiz": [
+        {
+          "id": "cardiac-views-q1",
+          "stem": "Best cardiac view in a ventilated patient with hyperinflated lungs:",
+          "options": [
+            "Parasternal long axis",
+            "Subcostal",
+            "Suprasternal",
+            "Apical two-chamber"
+          ],
+          "answerIndex": 1,
+          "explanation": "The subcostal window avoids the lungs."
+        },
+        {
+          "id": "cardiac-views-q2",
+          "stem": "A D-shaped LV in short axis suggests:",
+          "options": [
+            "LV failure",
+            "RV pressure/volume overload",
+            "Hypovolaemia",
+            "Normal"
+          ],
+          "answerIndex": 1,
+          "explanation": "Septal flattening from RV overload."
+        },
+        {
+          "id": "cardiac-views-q3",
+          "stem": "Tamponade echo sign:",
+          "options": [
+            "RV diastolic collapse",
+            "Small IVC",
+            "Hyperdynamic LV only",
+            "B-lines"
+          ],
+          "answerIndex": 0,
+          "explanation": "Plus RA systolic collapse and plethoric IVC."
+        }
+      ]
+    },
+    {
+      "id": "rv-assessment",
+      "title": "Right ventricle assessment",
+      "summary": "Compare RV and LV size in the apical four-chamber view, look for septal flattening, measure TAPSE, and interpret signs of acute (thin-walled, McConnell sign) vs chronic (hypertrophied) RV overload.",
+      "viewKey": "topic:pocus-critical-care-echo/rv-assessment",
+      "uiHints": {
+        "icon": "scan-line",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Size",
+            "title": "RV:LV ratio",
+            "detail": "Apical four-chamber: RV basal diameter > 41 mm or RV:LV > 1.0 indicates dilatation.",
+            "refs": [
+              "rudski2010"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Shape",
+            "title": "Septum",
+            "detail": "PSAX D-sign: diastolic flattening = volume overload; systolic flattening = pressure overload."
+          },
+          {
+            "n": 3,
+            "time": "Function",
+            "title": "TAPSE",
+            "detail": "M-mode through lateral tricuspid annulus: < 17 mm = RV dysfunction.",
+            "refs": [
+              "rudski2010"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Acute vs chronic",
+            "title": "Wall thickness",
+            "detail": "RV free wall > 5 mm suggests chronic pressure overload (pulmonary hypertension); thin dilated RV with McConnell sign (apical sparing) suggests acute PE."
+          },
+          {
+            "n": 5,
+            "time": "Context",
+            "title": "Ventilation",
+            "detail": "High PEEP, hypercapnia and hypoxaemia worsen RV afterload in ARDS (acute cor pulmonale)."
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Dilated RV + shock + DVT: treat as massive PE."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Foreshortened A4C making the RV look large."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "TR peak velocity > 2.8 m/s suggests raised PA pressure; acute PE rarely exceeds ~3.5-4 m/s (RV cannot generate high pressure acutely)."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Is the RV in trouble?",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Apical four-chamber + PSAX views"
+          },
+          {
+            "id": "dil",
+            "type": "decision",
+            "text": "RV:LV > 1 or RV basal > 41 mm?"
+          },
+          {
+            "id": "norm",
+            "type": "end",
+            "text": "RV not dilated; look elsewhere"
+          },
+          {
+            "id": "wall",
+            "type": "decision",
+            "text": "RV free wall > 5 mm?"
+          },
+          {
+            "id": "chronic",
+            "type": "end",
+            "text": "Chronic overload (pulmonary hypertension, chronic lung disease); acute-on-chronic possible"
+          },
+          {
+            "id": "acute",
+            "type": "end",
+            "text": "Acute overload: PE, ARDS/high PEEP, RV infarct → module 11",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "dil"
+          },
+          {
+            "from": "dil",
+            "to": "norm",
+            "label": "No"
+          },
+          {
+            "from": "dil",
+            "to": "wall",
+            "label": "Yes"
+          },
+          {
+            "from": "wall",
+            "to": "chronic",
+            "label": "Yes"
+          },
+          {
+            "from": "wall",
+            "to": "acute",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "rudski2010"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **ASE right-heart guideline 2010:** reference values (RV basal diameter > 42 mm abnormal in that document's tables, TAPSE < 16 mm abnormal; later ASE/EACVI chamber quantification updated to > 41 mm and < 17 mm).",
+        "indiaNotes": "- Chronic thromboembolic disease and post-TB lung disease are common causes of chronic RV hypertrophy in India."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "rudski2010",
+        "focus2014"
+      ],
+      "quiz": [
+        {
+          "id": "rv-assessment-q1",
+          "stem": "TAPSE suggesting RV dysfunction:",
+          "options": [
+            "< 17 mm",
+            "< 30 mm",
+            "> 25 mm",
+            "< 5 mm"
+          ],
+          "answerIndex": 0,
+          "explanation": "< 17 mm (2015 ASE/EACVI)."
+        },
+        {
+          "id": "rv-assessment-q2",
+          "stem": "McConnell sign suggests:",
+          "options": [
+            "Chronic pulmonary hypertension",
+            "Acute PE",
+            "Tamponade",
+            "LV aneurysm"
+          ],
+          "answerIndex": 1,
+          "explanation": "RV free wall akinesia with apical sparing."
+        },
+        {
+          "id": "rv-assessment-q3",
+          "stem": "RV free wall thickness > 5 mm suggests:",
+          "options": [
+            "Acute PE",
+            "Chronic pressure overload",
+            "Hypovolaemia",
+            "Normal"
+          ],
+          "answerIndex": 1,
+          "explanation": "Hypertrophy takes time."
+        }
+      ],
+      "verify": [
+        {
+          "item": "RV cut-offs",
+          "reason": "2010 ASE thresholds (RV > 42 mm, TAPSE < 16 mm) vs 2015 ASE/EACVI (RV > 41 mm, TAPSE < 17 mm). The app uses the 2015 values."
+        }
+      ]
+    },
+    {
+      "id": "ivc-venous-congestion",
+      "title": "IVC and venous congestion (VExUS)",
+      "summary": "The IVC estimates right atrial pressure in spontaneously breathing patients but predicts fluid responsiveness poorly, especially on the ventilator. A plethoric IVC with abnormal hepatic, portal and intrarenal Doppler (VExUS grade 2-3) signals venous congestion: stop fluids and consider decongestion.",
+      "viewKey": "topic:pocus-critical-care-echo/ivc-venous-congestion",
+      "uiHints": {
+        "icon": "scan-line",
+        "accent": "standard"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Measure",
+            "title": "IVC",
+            "detail": "Subcostal long axis, 1-2 cm from RA junction. Spontaneous breathing: < 2.1 cm collapsing > 50% suggests low RAP (~3 mmHg); > 2.1 cm collapsing < 50% suggests high RAP (~15 mmHg).",
+            "refs": [
+              "focus2014"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Caution",
+            "title": "Ventilated",
+            "detail": "IVC distensibility > 18% may suggest fluid responsiveness in fully ventilated, passive patients with Vt ≥ 8 mL/kg; otherwise unreliable."
+          },
+          {
+            "n": 3,
+            "time": "If plethoric",
+            "title": "VExUS",
+            "detail": "IVC ≥ 2 cm, then hepatic vein (S < D or reversed S), portal vein pulsatility (≥ 30% mild, ≥ 50% severe), intrarenal venous Doppler (biphasic or monophasic).",
+            "refs": [
+              "vexus2020"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Grade",
+            "title": "VExUS",
+            "detail": "0: IVC < 2 cm. 1: plethoric, normal/mild patterns. 2: one severe pattern. 3: ≥ 2 severe patterns. Grade 3 associated with AKI after cardiac surgery.",
+            "refs": [
+              "vexus2020"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Act",
+            "title": "Congestion",
+            "detail": "Stop fluids; diuretics or ultrafiltration if perfusion allows; treat RV failure."
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Plethoric IVC with hypotension: tamponade, tension pneumothorax, RV failure or PE."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Using a small IVC alone to give large volumes to a ventilated patient."
+          },
+          {
+            "text": "Raised intra-abdominal pressure compresses the IVC (false 'small IVC')."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Portal vein pulsatility is easy to obtain and changes quickly with decongestion."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "IVC and congestion",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Subcostal IVC view"
+          },
+          {
+            "id": "size",
+            "type": "decision",
+            "text": "IVC ≥ 2 cm?"
+          },
+          {
+            "id": "small",
+            "type": "end",
+            "text": "Low RAP likely; still test fluid responsiveness before fluid"
+          },
+          {
+            "id": "dop",
+            "type": "action",
+            "text": "Hepatic, portal and intrarenal Doppler (VExUS)"
+          },
+          {
+            "id": "grade",
+            "type": "decision",
+            "text": "≥ 1 severe pattern (VExUS 2-3)?"
+          },
+          {
+            "id": "cong",
+            "type": "end",
+            "text": "Significant venous congestion: stop fluid, decongest",
+            "severity": "high"
+          },
+          {
+            "id": "mild",
+            "type": "end",
+            "text": "Plethoric without severe congestion: reassess clinically"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "size"
+          },
+          {
+            "from": "size",
+            "to": "small",
+            "label": "No"
+          },
+          {
+            "from": "size",
+            "to": "dop",
+            "label": "Yes"
+          },
+          {
+            "from": "dop",
+            "to": "grade"
+          },
+          {
+            "from": "grade",
+            "to": "cong",
+            "label": "Yes"
+          },
+          {
+            "from": "grade",
+            "to": "mild",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "vexus2020"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **FoCUS 2014:** IVC size and collapsibility estimate RAP in spontaneously breathing patients.\n- **VExUS 2020:** combined Doppler grading predicted AKI after cardiac surgery better than CVP.",
+        "controversies": "- VExUS has limited validation outside cardiac surgery and in arrhythmias such as AF.",
+        "indiaNotes": "- Doppler-capable ultrasound is needed for VExUS; many Indian ICU machines have it but training is variable."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "focus2014",
+        "vexus2020"
+      ],
+      "quiz": [
+        {
+          "id": "ivc-venous-congestion-q1",
+          "stem": "IVC 2.4 cm with < 50% collapse in a spontaneously breathing patient suggests RAP of about:",
+          "options": [
+            "3 mmHg",
+            "8 mmHg",
+            "15 mmHg",
+            "30 mmHg"
+          ],
+          "answerIndex": 2,
+          "explanation": "Plethoric, non-collapsing IVC ≈ high RAP."
+        },
+        {
+          "id": "ivc-venous-congestion-q2",
+          "stem": "VExUS grade 3 means:",
+          "options": [
+            "Small IVC",
+            "Plethoric IVC with ≥ 2 severe Doppler patterns",
+            "Normal",
+            "Pericardial effusion"
+          ],
+          "answerIndex": 1,
+          "explanation": "Severe venous congestion."
+        },
+        {
+          "id": "ivc-venous-congestion-q3",
+          "stem": "IVC is least reliable for fluid decisions in:",
+          "options": [
+            "Spontaneously breathing healthy volunteer",
+            "Ventilated patient with raised abdominal pressure",
+            "Hypovolaemic trauma",
+            "None"
+          ],
+          "answerIndex": 1,
+          "explanation": "Abdominal pressure and ventilation confound IVC."
+        }
+      ]
+    },
+    {
+      "id": "lung-ultrasound",
+      "title": "Lung ultrasound and the BLUE protocol",
+      "summary": "Lung sliding, A-lines, B-lines, consolidation and effusion answer most bedside questions: pneumothorax, pulmonary oedema vs COPD/asthma, pneumonia, PE and pleural effusion.",
+      "viewKey": "topic:pocus-critical-care-echo/lung-ultrasound",
+      "uiHints": {
+        "icon": "scan-line",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Set up",
+            "title": "Probe and points",
+            "detail": "Linear (pleura) or curvilinear/phased (deeper). BLUE points: upper and lower anterior, and PLAPS point (posterolateral) on each side.",
+            "refs": [
+              "blue2008"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Pneumothorax",
+            "title": "Signs",
+            "detail": "Absent lung sliding + no B-lines + no lung pulse; lung point is specific (diagnostic). Presence of sliding or B-lines rules out pneumothorax at that point.",
+            "refs": [
+              "volpicelli2012"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Interstitial syndrome",
+            "title": "B-lines",
+            "detail": "≥ 3 B-lines per intercostal space; bilateral diffuse = pulmonary oedema or ARDS/interstitial disease; focal = pneumonia, contusion.",
+            "refs": [
+              "volpicelli2012"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Consolidation",
+            "title": "Tissue pattern",
+            "detail": "Hepatisation, shred sign; dynamic air bronchograms suggest pneumonia rather than resorptive atelectasis.",
+            "refs": [
+              "volpicelli2012"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Effusion",
+            "title": "Anechoic space above diaphragm",
+            "detail": "Spine sign, plankton sign; septations or echogenic fluid suggest exudate/empyema. Estimate volume and mark the site for drainage."
+          },
+          {
+            "n": 6,
+            "time": "BLUE",
+            "title": "Profiles",
+            "detail": "A-profile + DVT = PE; A-profile + no DVT + PLAPS = pneumonia; A-profile without = COPD/asthma; B-profile = pulmonary oedema; A' profile + lung point = pneumothorax; B' / A/B / C profiles = pneumonia.",
+            "refs": [
+              "blue2008"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "blue-profiles",
+            "title": "BLUE protocol profiles",
+            "columns": [
+              "Profile",
+              "Findings",
+              "Likely diagnosis"
+            ],
+            "rows": [
+              [
+                "A-profile",
+                "Sliding + A-lines anteriorly",
+                "With DVT: PE; with PLAPS: pneumonia; neither: COPD/asthma"
+              ],
+              [
+                "B-profile",
+                "Sliding + bilateral anterior B-lines",
+                "Haemodynamic pulmonary oedema"
+              ],
+              [
+                "B'-profile",
+                "Abolished sliding + B-lines",
+                "Pneumonia"
+              ],
+              [
+                "A/B-profile",
+                "B-lines one side, A-lines other",
+                "Pneumonia"
+              ],
+              [
+                "C-profile",
+                "Anterior consolidation",
+                "Pneumonia"
+              ],
+              [
+                "A'-profile",
+                "Abolished sliding + A-lines",
+                "Pneumothorax if lung point present"
+              ]
+            ],
+            "refs": [
+              "blue2008"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Absent sliding + lung point in a hypotensive ventilated patient: decompress."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Absent sliding also occurs with mainstem intubation, apnoea, pleurodesis and large bullae."
+          },
+          {
+            "text": "B-lines are not specific to pulmonary oedema (also ARDS, fibrosis, pneumonia)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Lung ultrasound beats supine chest X-ray for pneumothorax, effusion and consolidation."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "BLUE protocol (simplified)",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Acute respiratory failure"
+          },
+          {
+            "id": "slide",
+            "type": "decision",
+            "text": "Anterior lung sliding present?"
+          },
+          {
+            "id": "lp",
+            "type": "decision",
+            "text": "Lung point present?"
+          },
+          {
+            "id": "ptx",
+            "type": "end",
+            "text": "Pneumothorax",
+            "severity": "critical"
+          },
+          {
+            "id": "other",
+            "type": "end",
+            "text": "Consider pneumonia, mainstem intubation, apnoea"
+          },
+          {
+            "id": "blines",
+            "type": "decision",
+            "text": "Bilateral anterior B-lines?"
+          },
+          {
+            "id": "oed",
+            "type": "end",
+            "text": "Pulmonary oedema (B-profile)"
+          },
+          {
+            "id": "dvt",
+            "type": "decision",
+            "text": "DVT on compression ultrasound?"
+          },
+          {
+            "id": "pe",
+            "type": "end",
+            "text": "Pulmonary embolism likely"
+          },
+          {
+            "id": "plaps",
+            "type": "decision",
+            "text": "PLAPS (posterolateral consolidation/effusion)?"
+          },
+          {
+            "id": "pneu",
+            "type": "end",
+            "text": "Pneumonia"
+          },
+          {
+            "id": "copd",
+            "type": "end",
+            "text": "COPD or asthma"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "slide"
+          },
+          {
+            "from": "slide",
+            "to": "lp",
+            "label": "No"
+          },
+          {
+            "from": "lp",
+            "to": "ptx",
+            "label": "Yes"
+          },
+          {
+            "from": "lp",
+            "to": "other",
+            "label": "No"
+          },
+          {
+            "from": "slide",
+            "to": "blines",
+            "label": "Yes"
+          },
+          {
+            "from": "blines",
+            "to": "oed",
+            "label": "Yes"
+          },
+          {
+            "from": "blines",
+            "to": "dvt",
+            "label": "No"
+          },
+          {
+            "from": "dvt",
+            "to": "pe",
+            "label": "Yes"
+          },
+          {
+            "from": "dvt",
+            "to": "plaps",
+            "label": "No"
+          },
+          {
+            "from": "plaps",
+            "to": "pneu",
+            "label": "Yes"
+          },
+          {
+            "from": "plaps",
+            "to": "copd",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "blue2008"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **BLUE protocol (2008):** 90.5% diagnostic accuracy for the cause of acute respiratory failure.\n- **International LUS recommendations 2012:** lung ultrasound is accurate for pneumothorax, interstitial syndrome, consolidation and effusion.",
+        "indiaNotes": "- Lung ultrasound is ideal where CT and repeated X-rays are hard to obtain; it was widely used in Indian ICUs during COVID-19."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "volpicelli2012",
+        "blue2008"
+      ],
+      "quiz": [
+        {
+          "id": "lung-ultrasound-q1",
+          "stem": "Most specific sign of pneumothorax:",
+          "options": [
+            "Absent sliding",
+            "A-lines",
+            "Lung point",
+            "B-lines"
+          ],
+          "answerIndex": 2,
+          "explanation": "Lung point is pathognomonic."
+        },
+        {
+          "id": "lung-ultrasound-q2",
+          "stem": "Bilateral anterior B-lines with sliding (B-profile) suggest:",
+          "options": [
+            "COPD",
+            "Pulmonary oedema",
+            "Pneumothorax",
+            "PE"
+          ],
+          "answerIndex": 1,
+          "explanation": "Haemodynamic pulmonary oedema."
+        },
+        {
+          "id": "lung-ultrasound-q3",
+          "stem": "A-profile with DVT suggests:",
+          "options": [
+            "Pneumonia",
+            "PE",
+            "Asthma",
+            "Pneumothorax"
+          ],
+          "answerIndex": 1,
+          "explanation": "Per BLUE protocol."
+        }
+      ]
+    },
+    {
+      "id": "rush-efast",
+      "title": "RUSH in shock and eFAST in trauma",
+      "summary": "RUSH checks the pump (LV, RV, pericardium), the tank (IVC, lungs, peritoneum, pleura) and the pipes (aorta, leg veins) to classify shock in minutes. eFAST looks for free fluid and pneumothorax in trauma.",
+      "viewKey": "topic:pocus-critical-care-echo/rush-efast",
+      "uiHints": {
+        "icon": "scan-line",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Pump",
+            "title": "Heart",
+            "detail": "Effusion/tamponade, LV function, RV size.",
+            "refs": [
+              "rush2010"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Tank",
+            "title": "Volume",
+            "detail": "IVC, lung B-lines, pleural fluid, peritoneal free fluid (Morison's pouch, splenorenal, pelvis).",
+            "refs": [
+              "rush2010"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Pipes",
+            "title": "Vessels",
+            "detail": "Abdominal aorta (> 3 cm = aneurysm; flap = dissection), femoral and popliteal veins for DVT.",
+            "refs": [
+              "rush2010"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Trauma",
+            "title": "eFAST",
+            "detail": "RUQ, LUQ, pelvis, subxiphoid pericardium, both anterior chests for pneumothorax. Repeat if the patient changes.",
+            "refs": [
+              "efast2004"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Act",
+            "title": "By pattern",
+            "detail": "Hypovolaemic, distributive, cardiogenic or obstructive shock (see module 3)."
+          }
+        ],
+        "tables": [
+          {
+            "id": "rush-table",
+            "title": "RUSH patterns",
+            "columns": [
+              "",
+              "Hypovolaemic",
+              "Cardiogenic",
+              "Obstructive",
+              "Distributive"
+            ],
+            "rows": [
+              [
+                "Pump",
+                "Hyperdynamic, small",
+                "Poor contractility, dilated",
+                "Effusion/tamponade, dilated RV",
+                "Hyperdynamic (early)"
+              ],
+              [
+                "Tank",
+                "Flat IVC, free fluid",
+                "Plethoric IVC, B-lines, effusions",
+                "Plethoric IVC, absent sliding (tension)",
+                "Normal or small IVC, possible fluid (peritonitis/empyema)"
+              ],
+              [
+                "Pipes",
+                "AAA, dissection",
+                "Normal",
+                "DVT",
+                "Normal"
+              ]
+            ],
+            "refs": [
+              "rush2010"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Positive FAST in a haemodynamically unstable trauma patient: theatre or interventional radiology."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "A negative FAST does not exclude retroperitoneal or hollow-viscus injury."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Small volumes (< 200 mL) of peritoneal fluid may be missed; repeat scans increase sensitivity."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "RUSH sequence",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Undifferentiated shock"
+          },
+          {
+            "id": "pump",
+            "type": "action",
+            "text": "Pump: effusion, LV, RV"
+          },
+          {
+            "id": "tank",
+            "type": "action",
+            "text": "Tank: IVC, lungs, pleura, peritoneum"
+          },
+          {
+            "id": "pipes",
+            "type": "action",
+            "text": "Pipes: aorta, leg veins"
+          },
+          {
+            "id": "cls",
+            "type": "end",
+            "text": "Classify shock and treat (module 3)"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "pump"
+          },
+          {
+            "from": "pump",
+            "to": "tank"
+          },
+          {
+            "from": "tank",
+            "to": "pipes"
+          },
+          {
+            "from": "pipes",
+            "to": "cls"
+          }
+        ],
+        "refs": [
+          "rush2010"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **RUSH (2010):** structured approach to shock; subsequent studies show good agreement with final diagnosis.\n- **eFAST (2004):** ultrasound was more sensitive than supine chest X-ray for traumatic pneumothorax.",
+        "indiaNotes": "- Road traffic injuries are a leading cause of trauma in India; eFAST is a core skill in emergency departments and ICUs (see module 5)."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "rush2010",
+        "efast2004"
+      ],
+      "quiz": [
+        {
+          "id": "rush-efast-q1",
+          "stem": "'Pipes' in RUSH refers to:",
+          "options": [
+            "Endotracheal tube",
+            "Aorta and leg veins",
+            "Central lines",
+            "Urinary catheter"
+          ],
+          "answerIndex": 1,
+          "explanation": "Aortic aneurysm/dissection and DVT."
+        },
+        {
+          "id": "rush-efast-q2",
+          "stem": "eFAST adds which assessment to FAST?",
+          "options": [
+            "Kidneys",
+            "Pneumothorax",
+            "Bladder",
+            "Brain"
+          ],
+          "answerIndex": 1,
+          "explanation": "Anterior chest views for pneumothorax."
+        },
+        {
+          "id": "rush-efast-q3",
+          "stem": "Plethoric IVC + RV dilatation + DVT in shock suggests:",
+          "options": [
+            "Septic shock",
+            "PE (obstructive)",
+            "Hypovolaemia",
+            "Anaphylaxis"
+          ],
+          "answerIndex": 1,
+          "explanation": "Obstructive shock from PE."
+        }
+      ]
+    },
+    {
+      "id": "dvt-compression",
+      "title": "Two-region compression ultrasound for DVT",
+      "summary": "Compress the common femoral vein (and saphenofemoral junction) and the popliteal vein with a linear probe. A non-compressible vein means DVT. A negative 2-point scan in a high-probability patient needs repeat at 1 week or a whole-leg scan.",
+      "viewKey": "topic:pocus-critical-care-echo/dvt-compression",
+      "uiHints": {
+        "icon": "scan-line",
+        "accent": "standard"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Position",
+            "title": "Leg",
+            "detail": "Frog-leg, slight reverse Trendelenburg; linear probe, transverse."
+          },
+          {
+            "n": 2,
+            "time": "Region 1",
+            "title": "Femoral",
+            "detail": "Common femoral vein from inguinal ligament through saphenofemoral junction to femoral bifurcation; compress every 1-2 cm."
+          },
+          {
+            "n": 3,
+            "time": "Region 2",
+            "title": "Popliteal",
+            "detail": "Popliteal fossa down to the trifurcation."
+          },
+          {
+            "n": 4,
+            "time": "Interpret",
+            "title": "Compressibility",
+            "detail": "Full compression = no DVT at that site; incomplete compression = DVT (echogenic thrombus may not be visible).",
+            "refs": [
+              "bernardi2008"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Negative scan",
+            "title": "High probability",
+            "detail": "Repeat in 5-7 days or whole-leg Doppler; combine with D-dimer.",
+            "refs": [
+              "bernardi2008"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Free-floating thrombus: avoid vigorous compression."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Mistaking the artery for the vein (artery is round and pulsatile, does not compress)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Proximal DVT in a patient with shock and RV dilatation strongly supports PE."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Two-point compression",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Suspected DVT"
+          },
+          {
+            "id": "fem",
+            "type": "decision",
+            "text": "Femoral region fully compressible?"
+          },
+          {
+            "id": "dvt",
+            "type": "end",
+            "text": "DVT: anticoagulate unless contraindicated",
+            "severity": "high"
+          },
+          {
+            "id": "pop",
+            "type": "decision",
+            "text": "Popliteal region fully compressible?"
+          },
+          {
+            "id": "neg",
+            "type": "end",
+            "text": "No proximal DVT; repeat scan or whole-leg Doppler if high probability"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "fem"
+          },
+          {
+            "from": "fem",
+            "to": "dvt",
+            "label": "No"
+          },
+          {
+            "from": "fem",
+            "to": "pop",
+            "label": "Yes"
+          },
+          {
+            "from": "pop",
+            "to": "dvt",
+            "label": "No"
+          },
+          {
+            "from": "pop",
+            "to": "neg",
+            "label": "Yes"
+          }
+        ],
+        "refs": [
+          "bernardi2008"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Bernardi 2008:** serial 2-point compression plus D-dimer was equivalent to whole-leg Doppler for symptomatic DVT.",
+        "indiaNotes": "- Intensivist-performed DVT scans are quick and reduce transport for formal Doppler studies."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "bernardi2008"
+      ],
+      "quiz": [
+        {
+          "id": "dvt-compression-q1",
+          "stem": "The diagnostic criterion for DVT on compression ultrasound is:",
+          "options": [
+            "Visible thrombus only",
+            "Non-compressible vein",
+            "Increased flow",
+            "Arterial pulsation"
+          ],
+          "answerIndex": 1,
+          "explanation": "Incomplete compression = thrombus."
+        },
+        {
+          "id": "dvt-compression-q2",
+          "stem": "The two regions in 2-point compression are:",
+          "options": [
+            "Femoral and popliteal",
+            "Femoral and calf",
+            "Popliteal and calf",
+            "Iliac and femoral"
+          ],
+          "answerIndex": 0,
+          "explanation": "Common femoral/SFJ and popliteal."
+        },
+        {
+          "id": "dvt-compression-q3",
+          "stem": "Negative 2-point scan but high clinical probability:",
+          "options": [
+            "Stop investigating",
+            "Repeat in 5-7 days or whole-leg Doppler",
+            "Start thrombolysis",
+            "CT head"
+          ],
+          "answerIndex": 1,
+          "explanation": "2-point scans miss isolated calf DVT."
+        }
+      ]
+    }
+  ],
+  "drugs": [],
+  "references": [
+    {
+      "id": "focus2014",
+      "citation": "Via G, Hussain A, Wells M, et al. International evidence-based recommendations for focused cardiac ultrasound. J Am Soc Echocardiogr. 2014;27(7):683.e1-683.e33",
+      "url": "https://doi.org/10.1016/j.echo.2014.05.001",
+      "year": 2014,
+      "doi": "10.1016/j.echo.2014.05.001",
+      "type": "guideline"
+    },
+    {
+      "id": "ase-acep2010",
+      "citation": "Labovitz AJ, Noble VE, Bierig M, et al. Focused cardiac ultrasound in the emergent setting: a consensus statement of the ASE and ACEP. J Am Soc Echocardiogr. 2010;23(12):1225-1230",
+      "url": "https://doi.org/10.1016/j.echo.2010.10.005",
+      "year": 2010,
+      "doi": "10.1016/j.echo.2010.10.005",
+      "type": "consensus"
+    },
+    {
+      "id": "rudski2010",
+      "citation": "Rudski LG, Lai WW, Afilalo J, et al. Guidelines for the echocardiographic assessment of the right heart in adults. J Am Soc Echocardiogr. 2010;23(7):685-713",
+      "url": "https://doi.org/10.1016/j.echo.2010.05.010",
+      "year": 2010,
+      "doi": "10.1016/j.echo.2010.05.010",
+      "type": "guideline"
+    },
+    {
+      "id": "volpicelli2012",
+      "citation": "Volpicelli G, Elbarbary M, Blaivas M, et al. International evidence-based recommendations for point-of-care lung ultrasound. Intensive Care Med. 2012;38(4):577-591",
+      "url": "https://doi.org/10.1007/s00134-012-2513-4",
+      "year": 2012,
+      "doi": "10.1007/s00134-012-2513-4",
+      "type": "guideline"
+    },
+    {
+      "id": "blue2008",
+      "citation": "Lichtenstein DA, Mezière GA. Relevance of lung ultrasound in the diagnosis of acute respiratory failure: the BLUE protocol. Chest. 2008;134(1):117-125",
+      "url": "https://doi.org/10.1378/chest.07-2800",
+      "year": 2008,
+      "doi": "10.1378/chest.07-2800",
+      "type": "trial"
+    },
+    {
+      "id": "rush2010",
+      "citation": "Perera P, Mailhot T, Riley D, Mandavia D. The RUSH exam: Rapid Ultrasound in SHock in the evaluation of the critically ill. Emerg Med Clin North Am. 2010;28(1):29-56",
+      "url": "https://doi.org/10.1016/j.emc.2009.09.010",
+      "year": 2010,
+      "doi": "10.1016/j.emc.2009.09.010",
+      "type": "review"
+    },
+    {
+      "id": "vexus2020",
+      "citation": "Beaubien-Souligny W, Rola P, Haycock K, et al. Quantifying systemic congestion with point-of-care ultrasound: development of the venous excess ultrasound grading system. Ultrasound J. 2020;12(1):16",
+      "url": "https://doi.org/10.1186/s13089-020-00163-w",
+      "year": 2020,
+      "doi": "10.1186/s13089-020-00163-w",
+      "type": "trial"
+    },
+    {
+      "id": "efast2004",
+      "citation": "Kirkpatrick AW, Sirois M, Laupland KB, et al. Hand-held thoracic sonography for detecting post-traumatic pneumothoraces: the extended focused assessment with sonography for trauma (EFAST). J Trauma. 2004;57(2):288-295",
+      "url": "https://doi.org/10.1097/01.TA.0000133565.88871.E4",
+      "year": 2004,
+      "doi": "10.1097/01.TA.0000133565.88871.E4",
+      "type": "trial"
+    },
+    {
+      "id": "bernardi2008",
+      "citation": "Bernardi E, Camporese G, Büller HR, et al. Serial 2-point ultrasonography plus D-dimer vs whole-leg color-coded Doppler ultrasonography for diagnosing suspected symptomatic deep vein thrombosis. JAMA. 2008;300(14):1653-1659",
+      "url": "https://doi.org/10.1001/jama.300.14.1653",
+      "year": 2008,
+      "doi": "10.1001/jama.300.14.1653",
+      "type": "trial"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Competence",
+      "reason": "POCUS findings depend on operator training. The app should advise documented training/credentialing (e.g. ISCCM, ESICM or local POCUS courses) before acting on scans alone."
+    }
+  ]
+}

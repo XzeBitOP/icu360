@@ -1,0 +1,1945 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "icu-care-bundles-infection-prevention",
+  "number": 36,
+  "folder": "36-icu-care-bundles-infection-prevention",
+  "section": {
+    "id": "J",
+    "title": "ICU care and pharmacology"
+  },
+  "phase": 2,
+  "title": "ICU care bundles and infection prevention",
+  "summary": "ICU care bundles and infection prevention: the daily FAST HUGS BID checklist, VAP, CLABSI and CAUTI prevention bundles, VTE and stress ulcer prophylaxis, hand hygiene and isolation precautions, and pressure injury prevention with early mobilisation.",
+  "tags": [
+    "care bundles",
+    "FAST HUGS",
+    "VAP",
+    "CLABSI",
+    "CAUTI",
+    "thromboprophylaxis",
+    "stress ulcer prophylaxis",
+    "hand hygiene",
+    "isolation",
+    "infection control",
+    "pressure injury",
+    "mobilisation"
+  ],
+  "relatedModules": [
+    "icu-infections-stewardship-immunocompromised",
+    "analgesia-sedation-delirium",
+    "nutrition-metabolic-support",
+    "mechanical-ventilation",
+    "procedures",
+    "haematology-coagulation-transfusion"
+  ],
+  "version": "0.2.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "clipboard-check",
+    "accent": "standard"
+  },
+  "viewKey": "module:icu-care-bundles-infection-prevention",
+  "topics": [
+    {
+      "id": "fast-hugs-daily-checklist",
+      "title": "Daily ICU checklist (FAST HUGS BID)",
+      "summary": "A structured daily review that catches the routine preventive items most often missed.",
+      "viewKey": "topic:icu-care-bundles-infection-prevention/fast-hugs-daily-checklist",
+      "uiHints": {
+        "icon": "list-checks",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "FAST HUGS (Vincent 2005) is a mnemonic for daily ICU review: Feeding, Analgesia, Sedation, Thromboprophylaxis, Head-of-bed elevation, Ulcer (stress ulcer) prophylaxis, Glycaemic control. 'BID' is a widely used extension: Bowel care, Indwelling catheter removal, De-escalation of antimicrobials.",
+          "refs": [
+            "fast-hug-2005",
+            "ibcc"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Feeding",
+            "detail": "Is the patient fed? Enteral nutrition within 48 h unless contraindicated; review target and tolerance.",
+            "refs": [
+              "fast-hug-2005"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Analgesia and sedation",
+            "detail": "Analgesia first; target light sedation (RASS 0 to -1) unless a specific indication for deep sedation; daily sedation interruption paired with SBT.",
+            "refs": [
+              "padis2018",
+              "shea-vap-2022"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Thromboprophylaxis",
+            "detail": "Pharmacological prophylaxis unless contraindicated; mechanical (IPC) if bleeding risk; reassess daily.",
+            "refs": [
+              "ash-vte-2018"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Head of bed",
+            "detail": "Elevate 30-45° in ventilated patients unless contraindicated (spinal injury, haemodynamic instability).",
+            "refs": [
+              "shea-vap-2022"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Ulcer prophylaxis",
+            "detail": "PPI/H2RA only in high-risk patients (ventilated, coagulopathy, shock, chronic liver disease); stop when the risk resolves.",
+            "refs": [
+              "revise",
+              "sup-guideline-2021"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Glucose",
+            "detail": "Insulin when glucose ≥ 180 mg/dL; target 144-180 mg/dL; avoid hypoglycaemia.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Bowel care",
+            "detail": "Bowels opened? Laxative protocol for patients on opioids; check for diarrhoea (C. difficile testing when indicated).",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Indwelling devices",
+            "detail": "Is each central line, arterial line, urinary catheter and drain still needed? Remove if not.",
+            "refs": [
+              "shea-clabsi-2022",
+              "shea-cauti-2023"
+            ]
+          },
+          {
+            "n": 9,
+            "title": "De-escalation",
+            "detail": "Review cultures and antimicrobial need daily; narrow, stop or set a duration.",
+            "refs": [
+              "ssc2026"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "fast-hugs-bid",
+            "title": "FAST HUGS BID checklist",
+            "columns": [
+              "Letter",
+              "Item",
+              "Daily question"
+            ],
+            "rows": [
+              [
+                "F",
+                "Feeding",
+                "Fed? Route, target, tolerance?"
+              ],
+              [
+                "A",
+                "Analgesia",
+                "Pain score acceptable (CPOT/BPS/NRS)?"
+              ],
+              [
+                "S",
+                "Sedation",
+                "At RASS target? Can sedation stop?"
+              ],
+              [
+                "T",
+                "Thromboprophylaxis",
+                "Prescribed and given? Dose correct for renal function and weight?"
+              ],
+              [
+                "H",
+                "Head-of-bed",
+                "30-45° if ventilated?"
+              ],
+              [
+                "U",
+                "Ulcer prophylaxis",
+                "Still indicated?"
+              ],
+              [
+                "G",
+                "Glucose",
+                "Within 144-180 mg/dL? Any hypoglycaemia?"
+              ],
+              [
+                "B",
+                "Bowel care",
+                "Last bowel movement? Laxatives?"
+              ],
+              [
+                "I",
+                "Indwelling catheters",
+                "Each line and catheter still needed?"
+              ],
+              [
+                "D",
+                "De-escalation",
+                "Antimicrobials narrowed or stopped?"
+              ]
+            ],
+            "caption": "Use at the morning round and document each item.",
+            "refs": [
+              "fast-hug-2005",
+              "ibcc"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "A missed thromboprophylaxis dose for > 24 h in an immobile ventilated patient - restart or document why it is held.",
+            "refs": [
+              "ash-vte-2018"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Ticking the checklist without acting on it - assign each item to a named person.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "text": "Continuing stress ulcer prophylaxis indefinitely after extubation or transfer.",
+            "refs": [
+              "sup-guideline-2021"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Pair the spontaneous awakening trial with the spontaneous breathing trial each morning - both reduce ventilator days.",
+            "refs": [
+              "shea-vap-2022"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Daily preventive review",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Morning round: each ventilated or high-risk patient"
+          },
+          {
+            "id": "fed",
+            "type": "decision",
+            "text": "Fed within 48 h?"
+          },
+          {
+            "id": "feed",
+            "type": "action",
+            "text": "Start enteral nutrition or document contraindication"
+          },
+          {
+            "id": "sed",
+            "type": "action",
+            "text": "Analgesia first; RASS target; SAT + SBT"
+          },
+          {
+            "id": "bleed",
+            "type": "decision",
+            "text": "High bleeding risk for anticoagulant prophylaxis?"
+          },
+          {
+            "id": "ipc",
+            "type": "action",
+            "text": "Intermittent pneumatic compression; review daily"
+          },
+          {
+            "id": "lmwh",
+            "type": "action",
+            "text": "LMWH (or UFH if CrCl < 30)"
+          },
+          {
+            "id": "sup",
+            "type": "decision",
+            "text": "Ventilated, coagulopathy, shock or chronic liver disease?"
+          },
+          {
+            "id": "ppi",
+            "type": "action",
+            "text": "Pantoprazole 40 mg daily"
+          },
+          {
+            "id": "lines",
+            "type": "action",
+            "text": "Remove unneeded lines and catheters; de-escalate antibiotics"
+          },
+          {
+            "id": "end",
+            "type": "end",
+            "text": "Document checklist and plan"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "fed"
+          },
+          {
+            "from": "fed",
+            "to": "sed",
+            "label": "Yes"
+          },
+          {
+            "from": "fed",
+            "to": "feed",
+            "label": "No"
+          },
+          {
+            "from": "feed",
+            "to": "sed"
+          },
+          {
+            "from": "sed",
+            "to": "bleed"
+          },
+          {
+            "from": "bleed",
+            "to": "ipc",
+            "label": "Yes"
+          },
+          {
+            "from": "bleed",
+            "to": "lmwh",
+            "label": "No"
+          },
+          {
+            "from": "ipc",
+            "to": "sup"
+          },
+          {
+            "from": "lmwh",
+            "to": "sup"
+          },
+          {
+            "from": "sup",
+            "to": "ppi",
+            "label": "Yes"
+          },
+          {
+            "from": "sup",
+            "to": "lines",
+            "label": "No"
+          },
+          {
+            "from": "ppi",
+            "to": "lines"
+          },
+          {
+            "from": "lines",
+            "to": "end"
+          }
+        ],
+        "refs": [
+          "fast-hug-2005",
+          "ash-vte-2018",
+          "revise"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Most ICU complications (VTE, VAP, CLABSI, GI bleeding, pressure injury, oversedation) are preventable with simple measures that are easily forgotten during acute management. Checklists convert these into reliable daily habits.",
+        "evidence": "- FAST HUG concept [Vincent 2005].\n- PADIS guidance on light sedation [Devlin 2018]; SHEA 2022 VAP prevention essentials [Klompas 2022].\n- REVISE 2024 for SUP in ventilated patients [Cook 2024].",
+        "controversies": "- Which items deserve a mandatory daily check versus clinician judgement; glucose targets in specific groups.",
+        "indiaNotes": "- Use the checklist as a printed or electronic form at the bedside; in high-load Indian ICUs a nurse-led checklist read aloud at rounds improves compliance.\n- The NCDC 2020 IPC guidelines recommend bundle compliance audits for HAI prevention."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "rass"
+      ],
+      "references": [
+        "fast-hug-2005",
+        "ibcc",
+        "padis2018",
+        "shea-vap-2022",
+        "ash-vte-2018",
+        "revise",
+        "sup-guideline-2021",
+        "ssc2026",
+        "shea-clabsi-2022",
+        "shea-cauti-2023",
+        "ncdc-ipc-2020"
+      ],
+      "quiz": [
+        {
+          "id": "fast-hugs-daily-checklist-q1",
+          "stem": "In FAST HUGS, 'U' stands for:",
+          "options": [
+            "Urine output",
+            "Ulcer (stress ulcer) prophylaxis",
+            "Ultrasound",
+            "Urea"
+          ],
+          "answerIndex": 1,
+          "explanation": "Vincent 2005."
+        },
+        {
+          "id": "fast-hugs-daily-checklist-q2",
+          "stem": "Glucose target in ICU per SSC:",
+          "options": [
+            "80-110 mg/dL",
+            "144-180 mg/dL",
+            "200-250 mg/dL",
+            "No target"
+          ],
+          "answerIndex": 1,
+          "explanation": "Start insulin at ≥ 180 mg/dL."
+        },
+        {
+          "id": "fast-hugs-daily-checklist-q3",
+          "stem": "The 'I' in the BID extension prompts:",
+          "options": [
+            "Daily review and removal of unneeded catheters",
+            "Insulin infusion",
+            "Intubation",
+            "Imaging"
+          ],
+          "answerIndex": 0,
+          "explanation": "Device days drive infection."
+        }
+      ]
+    },
+    {
+      "id": "vap-prevention",
+      "title": "Ventilator-associated pneumonia prevention bundle",
+      "summary": "Essential VAP/VAE prevention practices from SHEA 2022: avoid intubation, minimise sedation, SAT/SBT, mobility, head-up, subglottic drainage and oral care.",
+      "viewKey": "topic:icu-care-bundles-infection-prevention/vap-prevention",
+      "uiHints": {
+        "icon": "wind",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "VAP: pneumonia developing > 48 h after intubation. SHEA 2022 classifies prevention practices as essential (good evidence, low risk) and additional; the focus has shifted to reducing ventilator days and ventilator-associated events (VAE).",
+          "refs": [
+            "shea-vap-2022"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Avoid intubation",
+            "detail": "Use HFNC or NIV where appropriate to prevent intubation.",
+            "refs": [
+              "shea-vap-2022"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Minimise sedation",
+            "detail": "Avoid benzodiazepines; target light sedation; daily spontaneous awakening trials.",
+            "refs": [
+              "shea-vap-2022",
+              "padis2018"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Daily SBT",
+            "detail": "Paired with SAT, to extubate at the earliest opportunity.",
+            "time": "Daily",
+            "refs": [
+              "shea-vap-2022"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Early mobility",
+            "detail": "Progressive rehabilitation as tolerated.",
+            "refs": [
+              "shea-vap-2022"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Subglottic drainage",
+            "detail": "Use endotracheal tubes with subglottic secretion drainage for patients expected to need ventilation > 48-72 h.",
+            "refs": [
+              "shea-vap-2022"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Head of bed",
+            "detail": "Elevate 30-45°.",
+            "refs": [
+              "shea-vap-2022"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Oral care",
+            "detail": "Toothbrushing (without chlorhexidine) at least twice daily.",
+            "time": "BD",
+            "refs": [
+              "shea-vap-2022"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Circuit care",
+            "detail": "Change ventilator circuits only if visibly soiled or malfunctioning; keep cuff pressure 20-30 cmH₂O.",
+            "refs": [
+              "shea-vap-2022",
+              "ibcc"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "vap-bundle",
+            "title": "SHEA 2022 VAP prevention (adults)",
+            "columns": [
+              "Category",
+              "Practice"
+            ],
+            "rows": [
+              [
+                "Essential",
+                "Avoid intubation (HFNC/NIV); minimise sedation; SAT + SBT daily; early mobility; subglottic drainage tubes if > 48-72 h; head-of-bed 30-45°; change circuits only when soiled"
+              ],
+              [
+                "Additional",
+                "Selective oral or digestive decontamination (in settings with low antimicrobial resistance); daily toothbrushing"
+              ],
+              [
+                "Generally not recommended",
+                "Chlorhexidine oral care; probiotics; silver-coated tubes; routine stress ulcer prophylaxis for VAP prevention; early tracheostomy for VAP prevention"
+              ]
+            ],
+            "caption": "Summary of SHEA/IDSA/APIC 2022 recommendations; see source for full grading.",
+            "refs": [
+              "shea-vap-2022"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "New fever, purulent secretions, rising FiO₂/PEEP after ≥ 2 days of stable ventilation: suspect VAP or other VAE - culture and assess (see icu-infections module).",
+            "refs": [
+              "shea-vap-2022"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Chlorhexidine 0.12% oral rinse as routine VAP prevention - not recommended, possible harm.",
+            "refs": [
+              "shea-vap-2022"
+            ]
+          },
+          {
+            "text": "Leaving the bed flat during transfers, imaging and procedures.",
+            "refs": [
+              "shea-vap-2022"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "The strongest VAP prevention is a shorter ventilation episode: every bundle element that shortens ventilation counts.",
+            "refs": [
+              "shea-vap-2022"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Microaspiration of colonised oropharyngeal and gastric secretions past the endotracheal cuff, biofilm on the tube and impaired cough/mucociliary clearance cause VAP. Sedation and supine positioning increase aspiration.",
+        "evidence": "- SHEA/IDSA/APIC 2022 compendium update [Klompas 2022].\n- PADIS guidance on sedation minimisation [Devlin 2018].",
+        "controversies": "- Selective digestive decontamination in high-resistance settings such as India; VAP definitions and surveillance using VAE.",
+        "indiaNotes": "- Device-associated infection rates in Indian ICUs are higher than in high-income countries, with a large share caused by carbapenem-resistant Gram-negatives - bundle compliance audits are central (NCDC 2020).\n- Subglottic drainage tubes cost more and may not be stocked; prioritise them for patients expected to be ventilated beyond 72 h.\n- Selective digestive decontamination is not recommended in high-resistance settings."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "shea-vap-2022",
+        "padis2018",
+        "ibcc",
+        "ncdc-ipc-2020"
+      ],
+      "quiz": [
+        {
+          "id": "vap-prevention-q1",
+          "stem": "Which oral care practice is NOT recommended by SHEA 2022?",
+          "options": [
+            "Toothbrushing",
+            "Routine chlorhexidine oral rinse",
+            "Suctioning",
+            "Moisturising lips"
+          ],
+          "answerIndex": 1,
+          "explanation": "Possible harm."
+        },
+        {
+          "id": "vap-prevention-q2",
+          "stem": "Subglottic secretion drainage tubes are recommended for patients expected to be ventilated:",
+          "options": [
+            "< 12 h",
+            "> 48-72 h",
+            "Only after tracheostomy",
+            "Never"
+          ],
+          "answerIndex": 1,
+          "explanation": "SHEA 2022."
+        },
+        {
+          "id": "vap-prevention-q3",
+          "stem": "Ventilator circuits should be changed:",
+          "options": [
+            "Daily",
+            "Every 48 h",
+            "Only when visibly soiled or malfunctioning",
+            "Weekly"
+          ],
+          "answerIndex": 2,
+          "explanation": "Routine changes do not reduce VAP."
+        },
+        {
+          "id": "vap-prevention-q4",
+          "stem": "The single most effective VAP prevention theme is:",
+          "options": [
+            "Antibiotic prophylaxis",
+            "Reducing duration of ventilation",
+            "Probiotics",
+            "Silver tubes"
+          ],
+          "answerIndex": 1,
+          "explanation": "SAT/SBT, light sedation."
+        }
+      ]
+    },
+    {
+      "id": "clabsi-cauti-prevention",
+      "title": "CLABSI and CAUTI prevention",
+      "summary": "Insertion and maintenance bundles for central lines and urinary catheters, and nurse-driven removal.",
+      "viewKey": "topic:icu-care-bundles-infection-prevention/clabsi-cauti-prevention",
+      "uiHints": {
+        "icon": "syringe",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "CLABSI: laboratory-confirmed bloodstream infection in a patient with a central line in place > 2 days without another source. CAUTI: UTI in a patient with an indwelling urinary catheter > 2 days. Both are largely preventable with insertion and maintenance bundles.",
+          "refs": [
+            "shea-clabsi-2022",
+            "shea-cauti-2023"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Line insertion checklist",
+            "detail": "Hand hygiene, maximal sterile barrier precautions (cap, mask, sterile gown, gloves, full-body drape), observer with authority to stop the procedure.",
+            "refs": [
+              "shea-clabsi-2022"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Skin antisepsis",
+            "detail": "Alcoholic chlorhexidine (> 0.5% CHG in alcohol); allow to dry.",
+            "refs": [
+              "shea-clabsi-2022"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Site and guidance",
+            "detail": "Ultrasound guidance; avoid the femoral site in obese adults when another site is suitable; subclavian has the lowest infection risk.",
+            "refs": [
+              "shea-clabsi-2022"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Maintenance",
+            "detail": "Scrub the hub before every access; CHG-impregnated dressings; change transparent dressings every 7 days (gauze every 2 days) or when soiled/loose; daily CHG bathing in ICU patients.",
+            "refs": [
+              "shea-clabsi-2022"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Remove",
+            "detail": "Daily review of line necessity; remove unnecessary lines promptly; replace lines inserted in emergencies without full asepsis within 48 h.",
+            "refs": [
+              "shea-clabsi-2022"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Urinary catheter indication",
+            "detail": "Insert only for appropriate indications (acute retention, accurate output monitoring in critically ill, perioperative, sacral wounds in incontinent patients, end-of-life comfort).",
+            "refs": [
+              "shea-cauti-2023"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Urinary catheter care",
+            "detail": "Aseptic insertion; closed drainage system; bag below bladder level and off the floor; unobstructed flow.",
+            "refs": [
+              "shea-cauti-2023"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Urinary catheter removal",
+            "detail": "Daily review; nurse-driven removal protocols; consider external catheters or intermittent catheterisation; do not screen or treat asymptomatic bacteriuria.",
+            "refs": [
+              "shea-cauti-2023"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "line-bundle",
+            "title": "Central line bundle checklist",
+            "columns": [
+              "Phase",
+              "Element"
+            ],
+            "rows": [
+              [
+                "Insertion",
+                "Hand hygiene; maximal sterile barrier; alcoholic CHG; ultrasound guidance; best site; checklist with observer"
+              ],
+              [
+                "Maintenance",
+                "Hub disinfection; CHG dressing; dressing change schedule; daily CHG bath; dedicated PN lumen"
+              ],
+              [
+                "Daily",
+                "Is the line needed? Remove if not"
+              ]
+            ],
+            "refs": [
+              "shea-clabsi-2022"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Fever with pus or erythema at the insertion site, or septic shock with a line in place: take paired blood cultures (line and peripheral) and remove the line.",
+            "refs": [
+              "shea-clabsi-2022"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Sending urine cultures from catheterised patients without symptoms, then treating asymptomatic bacteriuria.",
+            "refs": [
+              "shea-cauti-2023"
+            ]
+          },
+          {
+            "text": "Keeping a central line only for blood sampling convenience.",
+            "refs": [
+              "shea-clabsi-2022"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Routine scheduled replacement of central lines or guidewire exchange does not reduce CLABSI.",
+            "refs": [
+              "shea-clabsi-2022"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Central line: insert, maintain, remove",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Central venous access considered"
+          },
+          {
+            "id": "need",
+            "type": "decision",
+            "text": "Can peripheral access or a midline meet the need?"
+          },
+          {
+            "id": "periph",
+            "type": "end",
+            "text": "Avoid a central line"
+          },
+          {
+            "id": "ins",
+            "type": "action",
+            "text": "Checklist: hand hygiene, full barrier, CHG-alcohol, ultrasound"
+          },
+          {
+            "id": "maint",
+            "type": "action",
+            "text": "Hub scrub, CHG dressing, daily CHG bath"
+          },
+          {
+            "id": "daily",
+            "type": "decision",
+            "text": "Still needed today?"
+          },
+          {
+            "id": "remove",
+            "type": "end",
+            "text": "Remove the line"
+          },
+          {
+            "id": "infect",
+            "type": "decision",
+            "text": "Signs of line infection?"
+          },
+          {
+            "id": "cult",
+            "type": "end",
+            "text": "Paired blood cultures; remove line; treat",
+            "severity": "high"
+          },
+          {
+            "id": "keep",
+            "type": "action",
+            "text": "Continue maintenance; review tomorrow"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "need"
+          },
+          {
+            "from": "need",
+            "to": "periph",
+            "label": "Yes"
+          },
+          {
+            "from": "need",
+            "to": "ins",
+            "label": "No"
+          },
+          {
+            "from": "ins",
+            "to": "maint"
+          },
+          {
+            "from": "maint",
+            "to": "daily"
+          },
+          {
+            "from": "daily",
+            "to": "remove",
+            "label": "No"
+          },
+          {
+            "from": "daily",
+            "to": "infect",
+            "label": "Yes"
+          },
+          {
+            "from": "infect",
+            "to": "cult",
+            "label": "Yes"
+          },
+          {
+            "from": "infect",
+            "to": "keep",
+            "label": "No"
+          },
+          {
+            "from": "keep",
+            "to": "daily"
+          }
+        ],
+        "refs": [
+          "shea-clabsi-2022"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Early CLABSI (< 7 days) is mainly extraluminal from skin flora tracking along the catheter; later infection is mainly intraluminal from hub contamination. CAUTI arises from extraluminal biofilm ascent or intraluminal reflux; risk rises about 3-7% per catheter day.",
+        "evidence": "- SHEA 2022 CLABSI compendium [Buetti 2022].\n- SHEA 2022 CAUTI compendium [Patel 2023].",
+        "controversies": "- Antimicrobial-impregnated catheters and lock solutions as routine; CHG bathing in low-incidence units.",
+        "indiaNotes": "- CHG-alcohol skin prep and CHG dressings are available but cost is a barrier; prioritise insertion asepsis, hub scrubbing and early removal, which cost little.\n- NCDC 2020 guidelines describe device bundles and HAI surveillance for Indian facilities."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "shea-clabsi-2022",
+        "shea-cauti-2023",
+        "ncdc-ipc-2020"
+      ],
+      "quiz": [
+        {
+          "id": "clabsi-cauti-prevention-q1",
+          "stem": "Recommended skin antiseptic for CVC insertion:",
+          "options": [
+            "Povidone-iodine alone",
+            "Alcoholic chlorhexidine > 0.5%",
+            "Soap and water",
+            "70% alcohol alone"
+          ],
+          "answerIndex": 1,
+          "explanation": "SHEA 2022."
+        },
+        {
+          "id": "clabsi-cauti-prevention-q2",
+          "stem": "Routine scheduled CVC replacement:",
+          "options": [
+            "Every 7 days",
+            "Every 14 days",
+            "Not recommended",
+            "Every 3 days"
+          ],
+          "answerIndex": 2,
+          "explanation": "Does not reduce CLABSI."
+        },
+        {
+          "id": "clabsi-cauti-prevention-q3",
+          "stem": "A catheterised ICU patient has bacteriuria without symptoms. Action:",
+          "options": [
+            "Treat for 7 days",
+            "Do not treat; remove catheter if not needed",
+            "Bladder washout",
+            "Change antibiotic"
+          ],
+          "answerIndex": 1,
+          "explanation": "Avoid treating asymptomatic bacteriuria."
+        }
+      ]
+    },
+    {
+      "id": "vte-stress-ulcer-prophylaxis",
+      "title": "VTE and stress ulcer prophylaxis",
+      "summary": "Choosing pharmacological or mechanical thromboprophylaxis, renal and obesity dosing, and who needs stress ulcer prophylaxis after REVISE.",
+      "viewKey": "topic:icu-care-bundles-infection-prevention/vte-stress-ulcer-prophylaxis",
+      "uiHints": {
+        "icon": "shield",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Critically ill patients are at high VTE risk. ASH 2018 recommends pharmacological prophylaxis (LMWH preferred over UFH) over none, and mechanical prophylaxis when anticoagulants are contraindicated. Stress-related mucosal bleeding risk is highest in ventilated patients and those with coagulopathy, shock or chronic liver disease.",
+          "refs": [
+            "ash-vte-2018",
+            "sup-guideline-2021"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Assess bleeding risk",
+            "detail": "Active bleeding, platelets < 50 × 10⁹/L, recent neurosurgery/intracranial haemorrhage, severe coagulopathy, planned neuraxial procedure.",
+            "refs": [
+              "ash-vte-2018"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "No contraindication",
+            "detail": "LMWH: enoxaparin 40 mg SC daily (dalteparin 5,000 units daily is an alternative). CrCl < 30 mL/min: enoxaparin 30 mg daily or UFH 5,000 units SC every 8-12 h.",
+            "refs": [
+              "ash-vte-2018"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Contraindication",
+            "detail": "Intermittent pneumatic compression; start pharmacological prophylaxis as soon as bleeding risk allows. Adding IPC to pharmacological prophylaxis gives no extra benefit (PREVENT).",
+            "refs": [
+              "ash-vte-2018",
+              "prevent-ipc"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Special cases",
+            "detail": "Obesity: higher doses (see drug); trauma, burns, spinal cord injury: earlier and more intensive prophylaxis per trauma guidelines; HIT: non-heparin anticoagulant.",
+            "refs": [
+              "ash-vte-2018",
+              "eu-trauma-2023"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "SUP: who",
+            "detail": "Invasive mechanical ventilation, coagulopathy, shock, chronic liver disease (high risk). Not routinely for low-risk patients.",
+            "refs": [
+              "sup-guideline-2021",
+              "revise"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "SUP: what",
+            "detail": "Pantoprazole 40 mg IV/enteral daily (or H2RA); REVISE showed fewer clinically important UGI bleeds in ventilated patients with no mortality difference.",
+            "refs": [
+              "revise",
+              "sup-icu"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Stop",
+            "detail": "Stop SUP when the risk factor resolves (extubation, shock resolved); do not continue at discharge.",
+            "refs": [
+              "sup-guideline-2021"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "enoxaparin",
+            "role": "VTE prophylaxis",
+            "route": "SC",
+            "dose": "40 mg once daily",
+            "workedExample": "70 kg, CrCl 80 mL/min: enoxaparin 40 mg SC at 18:00 daily. If CrCl falls to 25 mL/min: 30 mg daily or switch to UFH 5,000 units SC every 12 h.",
+            "calculatorId": "creatinine-clearance-cg",
+            "notes": "Range: 30 mg daily (CrCl < 30) to 40 mg every 12 h (BMI ≥ 40).",
+            "verify": "Renal and obesity dose adjustments per local protocol.",
+            "refs": [
+              "ash-vte-2018"
+            ]
+          },
+          {
+            "drugId": "heparin-sc",
+            "role": "VTE prophylaxis in severe renal impairment",
+            "route": "SC",
+            "dose": "5,000 units every 8-12 h",
+            "refs": [
+              "ash-vte-2018"
+            ]
+          },
+          {
+            "drugId": "pantoprazole",
+            "role": "Stress ulcer prophylaxis (high risk)",
+            "route": "IV or enteral",
+            "dose": "40 mg once daily",
+            "workedExample": "Ventilated 70 kg patient: pantoprazole 40 mg IV daily; stop after extubation if no other indication.",
+            "refs": [
+              "revise"
+            ]
+          },
+          {
+            "drugId": "famotidine",
+            "role": "Stress ulcer prophylaxis (alternative)",
+            "route": "IV or enteral",
+            "dose": "20 mg every 12 h",
+            "notes": "Once daily if CrCl < 50 mL/min.",
+            "refs": [
+              "sup-guideline-2021"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "sup-risk",
+            "title": "Stress ulcer prophylaxis decision",
+            "columns": [
+              "Risk group",
+              "Examples",
+              "SUP"
+            ],
+            "rows": [
+              [
+                "High",
+                "Invasive ventilation; coagulopathy (platelets < 50 × 10⁹/L, INR > 1.5); shock; chronic liver disease",
+                "Suggest PPI or H2RA"
+              ],
+              [
+                "Low",
+                "Non-ventilated, haemodynamically stable, no coagulopathy",
+                "Not routinely"
+              ],
+              [
+                "Already on therapeutic indication",
+                "Recent peptic ulcer, Barrett's, dual antiplatelets with GI risk",
+                "Continue home PPI"
+              ]
+            ],
+            "caption": "Based on the 2021 clinical practice guideline and REVISE 2024.",
+            "refs": [
+              "sup-guideline-2021",
+              "revise"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Unilateral leg swelling, unexplained tachycardia or hypoxaemia despite prophylaxis: evaluate for DVT/PE.",
+            "refs": [
+              "ash-vte-2018"
+            ]
+          },
+          {
+            "text": "Platelet fall > 50% from day 5-10 of heparin: assess for HIT (4T score) and stop all heparin if likely.",
+            "refs": [
+              "ash-vte-2018"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Holding LMWH for days 'in case of procedures' without a plan to restart.",
+            "refs": [
+              "ash-vte-2018"
+            ]
+          },
+          {
+            "text": "Graduated compression stockings alone in ICU - IPC is preferred when mechanical prophylaxis is needed.",
+            "refs": [
+              "ash-vte-2018"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Give the evening dose of LMWH at a fixed time so that morning procedures can be timed 12 h after the dose.",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Immobility, venous injury from lines, inflammation and hypercoagulability (Virchow's triad) drive ICU VTE. Stress ulceration results from splanchnic hypoperfusion, mucosal ischaemia and impaired bicarbonate secretion; acid suppression reduces bleeding but may increase pneumonia and C. difficile.",
+        "evidence": "- ASH 2018 guideline: LMWH preferred; pharmacological over mechanical [Schünemann 2018].\n- PREVENT (2,003 patients): adjunctive IPC did not reduce proximal DVT [Arabi 2019].\n- SUP-ICU (3,298): pantoprazole did not change 90-day mortality [Krag 2018].\n- REVISE (4,821 ventilated patients): pantoprazole reduced clinically important UGI bleeding (1.0% vs 3.5%) without mortality difference [Cook 2024].\n- 2021 SUP guideline: suggest SUP in high-risk patients only [Ye 2021].",
+        "controversies": "- SUP in the sickest patients (SUP-ICU subgroup signal of harm in high severity, not confirmed by REVISE); anti-Xa guided dosing in obesity and renal failure.",
+        "indiaNotes": "- Enoxaparin biosimilars are widely available and affordable; IPC devices are limited in many ICUs - prioritise them for patients with contraindications.\n- Stress ulcer prophylaxis is often over-prescribed on general wards in India and continued at discharge; use the ICU daily checklist to stop it."
+      },
+      "drugIds": [
+        "enoxaparin",
+        "heparin-sc",
+        "pantoprazole",
+        "famotidine"
+      ],
+      "calculatorIds": [
+        "creatinine-clearance-cg",
+        "bmi"
+      ],
+      "references": [
+        "ash-vte-2018",
+        "prevent-ipc",
+        "eu-trauma-2023",
+        "revise",
+        "sup-icu",
+        "sup-guideline-2021",
+        "ibcc"
+      ],
+      "quiz": [
+        {
+          "id": "vte-stress-ulcer-prophylaxis-q1",
+          "stem": "Preferred pharmacological thromboprophylaxis in critically ill adults (ASH 2018):",
+          "options": [
+            "Aspirin",
+            "LMWH",
+            "Warfarin",
+            "None"
+          ],
+          "answerIndex": 1,
+          "explanation": "LMWH over UFH."
+        },
+        {
+          "id": "vte-stress-ulcer-prophylaxis-q2",
+          "stem": "Effect of adding IPC to pharmacological prophylaxis (PREVENT):",
+          "options": [
+            "Fewer DVTs",
+            "No reduction in proximal DVT",
+            "More bleeding",
+            "Lower mortality"
+          ],
+          "answerIndex": 1,
+          "explanation": "Arabi 2019."
+        },
+        {
+          "id": "vte-stress-ulcer-prophylaxis-q3",
+          "stem": "REVISE trial main finding:",
+          "options": [
+            "Pantoprazole reduced mortality",
+            "Pantoprazole reduced clinically important UGI bleeding without mortality difference",
+            "Pantoprazole increased VAP significantly",
+            "No effect on bleeding"
+          ],
+          "answerIndex": 1,
+          "explanation": "Cook 2024."
+        },
+        {
+          "id": "vte-stress-ulcer-prophylaxis-q4",
+          "stem": "Enoxaparin prophylaxis when CrCl is 20 mL/min:",
+          "options": [
+            "40 mg BD",
+            "30 mg daily or UFH",
+            "Stop all prophylaxis",
+            "80 mg daily"
+          ],
+          "answerIndex": 1,
+          "explanation": "Renal adjustment."
+        }
+      ]
+    },
+    {
+      "id": "hand-hygiene-isolation",
+      "title": "Hand hygiene, standard and transmission-based precautions",
+      "summary": "WHO 5 moments, choosing contact, droplet or airborne precautions, and MDRO cohorting.",
+      "viewKey": "topic:icu-care-bundles-infection-prevention/hand-hygiene-isolation",
+      "uiHints": {
+        "icon": "hand",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Hand hygiene is the single most important measure to prevent healthcare-associated infection. Standard precautions apply to every patient; transmission-based precautions (contact, droplet, airborne) are added for specific organisms.",
+          "refs": [
+            "who-hand-hygiene-2009",
+            "cdc-isolation-2007",
+            "ncdc-ipc-2020"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "WHO 5 moments",
+            "detail": "Before touching a patient; before a clean/aseptic procedure; after body fluid exposure risk; after touching a patient; after touching patient surroundings.",
+            "refs": [
+              "who-hand-hygiene-2009"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Method",
+            "detail": "Alcohol-based hand rub 20-30 s for most situations; soap and water 40-60 s when hands are visibly soiled and for C. difficile or norovirus.",
+            "refs": [
+              "who-hand-hygiene-2009"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Standard precautions",
+            "detail": "Hand hygiene, PPE for anticipated exposure, respiratory hygiene, safe sharps, cleaning of equipment and environment, safe waste and linen handling.",
+            "refs": [
+              "cdc-isolation-2007",
+              "ncdc-ipc-2020"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Contact",
+            "detail": "Gloves and gown on entry; dedicated equipment; single room or cohort: MDR Gram-negatives (CRE, CRAB), MRSA, VRE, C. difficile, scabies.",
+            "refs": [
+              "cdc-isolation-2007",
+              "ncdc-ipc-2020"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Droplet",
+            "detail": "Surgical mask within 1-2 m; single room or cohort: influenza, meningococcal disease (first 24 h of effective therapy), pertussis, diphtheria.",
+            "refs": [
+              "cdc-isolation-2007"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Airborne",
+            "detail": "N95 respirator (fit-tested), airborne infection isolation room (negative pressure, ≥ 12 air changes/h where available): pulmonary/laryngeal TB, measles, varicella and disseminated zoster.",
+            "refs": [
+              "cdc-isolation-2007",
+              "ncdc-ipc-2020"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Aerosol-generating procedures",
+            "detail": "Intubation, NIV, bronchoscopy, open suctioning in patients with respiratory pathogens: N95, eye protection, gown and gloves.",
+            "refs": [
+              "ncdc-ipc-2020"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Audit and feedback",
+            "detail": "Direct observation audits (WHO tool), surveillance of HAIs and MDROs, feedback to staff.",
+            "refs": [
+              "who-hand-hygiene-2009",
+              "ncdc-ipc-2020"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "precautions",
+            "title": "Transmission-based precautions",
+            "columns": [
+              "Type",
+              "Examples",
+              "PPE and placement"
+            ],
+            "rows": [
+              [
+                "Contact",
+                "CRE, CRAB, MRSA, VRE, C. difficile, scabies",
+                "Gown + gloves; single room or cohort; dedicated equipment"
+              ],
+              [
+                "Droplet",
+                "Influenza, meningococcus, pertussis, diphtheria",
+                "Surgical mask; single room or cohort; ≥ 1 m spacing"
+              ],
+              [
+                "Airborne",
+                "Pulmonary TB, measles, varicella, disseminated zoster",
+                "N95; negative-pressure room; door closed"
+              ],
+              [
+                "Contact + airborne",
+                "Varicella, disseminated zoster",
+                "Gown, gloves and N95"
+              ]
+            ],
+            "refs": [
+              "cdc-isolation-2007",
+              "ncdc-ipc-2020"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Cluster of the same MDR organism in 2 or more patients: notify the infection control team for outbreak investigation.",
+            "refs": [
+              "ncdc-ipc-2020"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Gloves used as a substitute for hand hygiene, or the same gloves worn between patients.",
+            "refs": [
+              "who-hand-hygiene-2009"
+            ]
+          },
+          {
+            "text": "Alcohol rub for C. difficile - it does not kill spores; wash with soap and water.",
+            "refs": [
+              "cdc-isolation-2007"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Most hand hygiene failures occur at moments 4 and 5 (after patient or surroundings contact) - put alcohol rub at every bed space.",
+            "refs": [
+              "who-hand-hygiene-2009"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Choosing isolation precautions",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Patient with suspected or known transmissible infection"
+          },
+          {
+            "id": "air",
+            "type": "decision",
+            "text": "Pulmonary TB, measles, varicella or disseminated zoster?"
+          },
+          {
+            "id": "airb",
+            "type": "end",
+            "text": "Airborne: N95 + negative-pressure single room",
+            "severity": "high"
+          },
+          {
+            "id": "drop",
+            "type": "decision",
+            "text": "Influenza, meningococcus, pertussis, diphtheria?"
+          },
+          {
+            "id": "dropp",
+            "type": "end",
+            "text": "Droplet: surgical mask; single room or cohort"
+          },
+          {
+            "id": "mdro",
+            "type": "decision",
+            "text": "MDRO, C. difficile, scabies or draining wound?"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Contact: gown + gloves; single room or cohort"
+          },
+          {
+            "id": "std",
+            "type": "end",
+            "text": "Standard precautions only"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "air"
+          },
+          {
+            "from": "air",
+            "to": "airb",
+            "label": "Yes"
+          },
+          {
+            "from": "air",
+            "to": "drop",
+            "label": "No"
+          },
+          {
+            "from": "drop",
+            "to": "dropp",
+            "label": "Yes"
+          },
+          {
+            "from": "drop",
+            "to": "mdro",
+            "label": "No"
+          },
+          {
+            "from": "mdro",
+            "to": "cont",
+            "label": "Yes"
+          },
+          {
+            "from": "mdro",
+            "to": "std",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "cdc-isolation-2007"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Healthcare workers' hands are the main vehicle of cross-transmission; the patient environment (bed rails, monitors, ventilator surfaces) is a reservoir for MDR Gram-negatives and C. difficile spores.",
+        "evidence": "- WHO 2009 hand hygiene guideline and 5 moments [WHO 2009].\n- CDC/HICPAC isolation precautions [Siegel 2007].\n- NCDC national IPC guidelines for Indian healthcare facilities [NCDC 2020].",
+        "controversies": "- Contact precautions for endemic MRSA/VRE versus universal gloving; cohorting where single rooms are scarce.",
+        "indiaNotes": "- Single rooms and negative-pressure rooms are scarce in Indian ICUs; NCDC 2020 supports cohorting of patients with the same organism, dedicated staff where possible and ≥ 1 m spacing between beds.\n- High CRE/CRAB prevalence makes environmental cleaning and hand hygiene compliance the main control levers.\n- Airborne precautions for TB are frequently needed given the high national TB burden."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "who-hand-hygiene-2009",
+        "cdc-isolation-2007",
+        "ncdc-ipc-2020"
+      ],
+      "quiz": [
+        {
+          "id": "hand-hygiene-isolation-q1",
+          "stem": "Hand hygiene method for C. difficile:",
+          "options": [
+            "Alcohol rub",
+            "Soap and water",
+            "Gloves only",
+            "Chlorhexidine wipe"
+          ],
+          "answerIndex": 1,
+          "explanation": "Spores resist alcohol."
+        },
+        {
+          "id": "hand-hygiene-isolation-q2",
+          "stem": "Precautions for pulmonary TB:",
+          "options": [
+            "Contact",
+            "Droplet",
+            "Airborne (N95, negative pressure)",
+            "Standard only"
+          ],
+          "answerIndex": 2,
+          "explanation": "Siegel 2007."
+        },
+        {
+          "id": "hand-hygiene-isolation-q3",
+          "stem": "Patient colonised with carbapenem-resistant Klebsiella:",
+          "options": [
+            "Airborne",
+            "Contact precautions",
+            "No precautions",
+            "Droplet"
+          ],
+          "answerIndex": 1,
+          "explanation": "Contact; cohort."
+        },
+        {
+          "id": "hand-hygiene-isolation-q4",
+          "stem": "Number of WHO 'moments' for hand hygiene:",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "answerIndex": 2,
+          "explanation": "WHO 2009."
+        }
+      ]
+    },
+    {
+      "id": "pressure-injury-mobilisation",
+      "title": "Pressure injury prevention and early mobilisation",
+      "summary": "Risk assessment, repositioning, support surfaces, device-related injuries, staging, and how hard to mobilise after TEAM.",
+      "viewKey": "topic:icu-care-bundles-infection-prevention/pressure-injury-mobilisation",
+      "uiHints": {
+        "icon": "bed",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Pressure injury: localised damage to skin and underlying tissue, usually over a bony prominence or under a medical device, from pressure or pressure with shear. ICU patients are at high risk because of immobility, sedation, vasopressors, oedema and devices.",
+          "refs": [
+            "epuap-npiap-2019"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Assess risk",
+            "detail": "On admission and daily with a structured tool (Braden ≤ 18 indicates risk) plus clinical judgement; inspect skin including under devices.",
+            "time": "Admission + daily",
+            "refs": [
+              "epuap-npiap-2019"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Reposition",
+            "detail": "Individualised repositioning schedule (commonly 2-4 hourly), 30° lateral tilt; avoid positioning on existing injury or erythema.",
+            "refs": [
+              "epuap-npiap-2019"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Support surface",
+            "detail": "High-specification reactive foam or active (alternating pressure) mattress for at-risk patients.",
+            "refs": [
+              "epuap-npiap-2019"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Heels and sacrum",
+            "detail": "Offload heels (heel elevation devices or pillows under calves); consider prophylactic multilayer silicone foam dressings on sacrum and heels.",
+            "refs": [
+              "epuap-npiap-2019"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Devices",
+            "detail": "Check and pad under NG/ET tubes, NIV masks, oxygen tubing, collars and catheters; reposition devices regularly.",
+            "refs": [
+              "epuap-npiap-2019"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Prone patients",
+            "detail": "Protect face, chest, knees and other pressure points; reposition head every 2 h.",
+            "refs": [
+              "epuap-npiap-2019"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Skin and nutrition",
+            "detail": "Manage moisture and incontinence; optimise nutrition and protein.",
+            "refs": [
+              "epuap-npiap-2019"
+            ]
+          },
+          {
+            "n": 8,
+            "title": "Mobilise",
+            "detail": "Daily assessment for rehabilitation: in-bed exercises progressing to sitting, standing and walking when stable. Avoid aggressive maximal early mobilisation in the first days of ventilation (TEAM).",
+            "refs": [
+              "padis2018",
+              "team-trial"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "pi-stages",
+            "title": "Pressure injury staging (NPIAP/EPUAP)",
+            "columns": [
+              "Stage",
+              "Description"
+            ],
+            "rows": [
+              [
+                "1",
+                "Intact skin with non-blanchable erythema"
+              ],
+              [
+                "2",
+                "Partial-thickness skin loss with exposed dermis"
+              ],
+              [
+                "3",
+                "Full-thickness skin loss; fat visible; no bone, tendon or muscle"
+              ],
+              [
+                "4",
+                "Full-thickness skin and tissue loss with exposed bone, tendon, muscle or cartilage"
+              ],
+              [
+                "Unstageable",
+                "Obscured by slough or eschar"
+              ],
+              [
+                "Deep tissue injury",
+                "Persistent non-blanchable deep red, maroon or purple discoloration"
+              ]
+            ],
+            "refs": [
+              "epuap-npiap-2019"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Deep tissue injury (purple, boggy skin) over the sacrum or heels in a patient on vasopressors - it may evolve to stage 3-4 within days; offload immediately.",
+            "refs": [
+              "epuap-npiap-2019"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Massaging reddened skin over bony prominences - not recommended.",
+            "refs": [
+              "epuap-npiap-2019"
+            ]
+          },
+          {
+            "text": "Forgetting device-related injuries from ET tube ties and NIV masks.",
+            "refs": [
+              "epuap-npiap-2019"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "TEAM showed that maximising early active mobilisation did not increase days alive out of hospital and caused more adverse events - mobilise steadily as part of usual care rather than maximally.",
+            "refs": [
+              "team-trial"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Sustained pressure above capillary closing pressure and shear cause tissue ischaemia; deep muscle is more vulnerable than skin, so injury may start deep and appear later. Vasopressors, hypotension and oedema reduce tissue tolerance. Immobility drives ICU-acquired weakness.",
+        "evidence": "- International EPUAP/NPIAP/PPPIA guideline 2019 [EPUAP 2019].\n- PADIS 2018: rehabilitation/mobilisation suggested [Devlin 2018].\n- TEAM (750 ventilated patients): increased early active mobilisation did not improve days alive out of hospital and had more adverse events [TEAM 2022].",
+        "controversies": "- Optimal repositioning intervals on modern mattresses; the right dose and timing of rehabilitation.",
+        "indiaNotes": "- Alternating pressure mattresses may be limited; regular manual repositioning and heel offloading are low-cost essentials.\n- Family members often help with repositioning and physiotherapy in Indian ICUs - train them with clear safety rules.\n- Pressure injury incidence is a nursing quality indicator under NABH accreditation."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "epuap-npiap-2019",
+        "padis2018",
+        "team-trial"
+      ],
+      "quiz": [
+        {
+          "id": "pressure-injury-mobilisation-q1",
+          "stem": "A Braden score suggesting pressure injury risk:",
+          "options": [
+            "≤ 18",
+            "≥ 25",
+            "Exactly 23",
+            "Not used in ICU"
+          ],
+          "answerIndex": 0,
+          "explanation": "Lower score = higher risk."
+        },
+        {
+          "id": "pressure-injury-mobilisation-q2",
+          "stem": "Full-thickness tissue loss with exposed bone is stage:",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "answerIndex": 3,
+          "explanation": "Stage 4."
+        },
+        {
+          "id": "pressure-injury-mobilisation-q3",
+          "stem": "TEAM trial of early active mobilisation found:",
+          "options": [
+            "Lower mortality",
+            "No improvement in days alive out of hospital and more adverse events",
+            "Fewer pressure injuries",
+            "Shorter ventilation"
+          ],
+          "answerIndex": 1,
+          "explanation": "TEAM 2022."
+        },
+        {
+          "id": "pressure-injury-mobilisation-q4",
+          "stem": "Reddened skin over the sacrum should be:",
+          "options": [
+            "Massaged",
+            "Offloaded and inspected",
+            "Covered with tape",
+            "Ignored"
+          ],
+          "answerIndex": 1,
+          "explanation": "Do not massage."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "enoxaparin",
+      "name": "Enoxaparin",
+      "class": "Low-molecular-weight heparin",
+      "indications": "VTE prophylaxis in critically ill adults",
+      "adultDose": "Prophylaxis: 40 mg SC once daily. CrCl < 30 mL/min: 30 mg SC once daily (or use UFH). BMI ≥ 40: 40 mg SC every 12 h is commonly used.",
+      "preparationIndia": "Prefilled syringes 20, 40, 60 mg (multiple Indian brands).",
+      "renalHepatic": "Accumulates in renal failure - reduce dose or switch to UFH; consider anti-Xa level (prophylactic target 0.2-0.5 units/mL).",
+      "cautions": "Hold 12 h before neuraxial procedures/LP and before most surgery; avoid in active bleeding, platelets < 30-50 × 10⁹/L, HIT.",
+      "monitoring": "Platelets (HIT), haemoglobin, renal function.",
+      "verify": "Obesity dose (40 mg every 12 h vs weight-based 0.5 mg/kg daily) per local protocol.",
+      "refs": [
+        "ash-vte-2018"
+      ]
+    },
+    {
+      "id": "heparin-sc",
+      "name": "Unfractionated heparin (subcutaneous)",
+      "class": "Anticoagulant",
+      "indications": "VTE prophylaxis, especially in severe renal impairment or when rapid reversal may be needed",
+      "adultDose": "5,000 units SC every 8-12 h (every 8 h in higher-risk or obese patients).",
+      "preparationIndia": "5,000 units/mL and 25,000 units/5 mL vials.",
+      "cautions": "HIT (higher risk than LMWH); bleeding.",
+      "monitoring": "Platelet count every 2-3 days from day 4 to day 14 of exposure.",
+      "refs": [
+        "ash-vte-2018"
+      ]
+    },
+    {
+      "id": "pantoprazole",
+      "name": "Pantoprazole",
+      "class": "Proton pump inhibitor",
+      "indications": "Stress ulcer prophylaxis in high-risk ICU patients",
+      "adultDose": "40 mg IV (or enteral) once daily; stop when risk factors resolve.",
+      "preparationIndia": "40 mg vial for IV; 40 mg tablets (cannot be crushed - use IV or a suitable liquid alternative via tube).",
+      "cautions": "Possible association with C. difficile infection and pneumonia; avoid continuing at ICU or hospital discharge without an indication.",
+      "refs": [
+        "revise",
+        "sup-guideline-2021"
+      ]
+    },
+    {
+      "id": "famotidine",
+      "name": "Famotidine",
+      "class": "H2-receptor antagonist",
+      "indications": "Stress ulcer prophylaxis (alternative to PPI)",
+      "adultDose": "20 mg IV/enteral every 12 h.",
+      "renalHepatic": "CrCl < 50 mL/min: 20 mg once daily.",
+      "cautions": "Delirium/confusion in elderly and renal impairment; thrombocytopenia (rare).",
+      "verify": "IV famotidine availability in India (oral tablets widely available).",
+      "refs": [
+        "sup-guideline-2021"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "ssc2026",
+      "citation": "Prescott HC, Antonelli M, Alhazzani W, et al. Surviving Sepsis Campaign: international guidelines for management of sepsis and septic shock 2026. Intensive Care Med. 2026;52(5):863-936. Co-published in Crit Care Med. 2026 (doi:10.1097/CCM.0000000000007075)",
+      "url": "https://doi.org/10.1007/s00134-026-08361-1",
+      "year": 2026,
+      "doi": "10.1007/s00134-026-08361-1",
+      "type": "guideline"
+    },
+    {
+      "id": "eu-trauma-2023",
+      "citation": "Rossaint R, Afshari A, Bouillon B, et al. The European guideline on management of major bleeding and coagulopathy following trauma: sixth edition. Crit Care 2023;27:80.",
+      "url": "https://doi.org/10.1186/s13054-023-04327-7",
+      "year": 2023,
+      "type": "guideline",
+      "doi": "10.1186/s13054-023-04327-7"
+    },
+    {
+      "id": "padis2018",
+      "citation": "Devlin JW, Skrobik Y, Gelinas C, et al. Clinical Practice Guidelines for the Prevention and Management of Pain, Agitation/Sedation, Delirium, Immobility, and Sleep Disruption in Adult Patients in the ICU (PADIS). Crit Care Med 2018;46:e825-73.",
+      "url": "https://doi.org/10.1097/CCM.0000000000003299",
+      "year": 2018,
+      "type": "guideline",
+      "doi": "10.1097/CCM.0000000000003299"
+    },
+    {
+      "id": "ibcc",
+      "citation": "Farkas J. The Internet Book of Critical Care (IBCC). EMCrit Project; continuously updated.",
+      "url": "https://emcrit.org/ibcc/toc/",
+      "year": 2024,
+      "type": "textbook"
+    },
+    {
+      "id": "fast-hug-2005",
+      "citation": "Vincent JL. Give your patient a fast hug (at least) once a day. Crit Care Med 2005;33:1225-9.",
+      "url": "https://doi.org/10.1097/01.ccm.0000165962.16682.46",
+      "year": 2005,
+      "type": "review",
+      "doi": "10.1097/01.ccm.0000165962.16682.46"
+    },
+    {
+      "id": "shea-vap-2022",
+      "citation": "Klompas M, Branson R, Cawcutt K, et al. Strategies to prevent ventilator-associated pneumonia, ventilator-associated events, and nonventilator hospital-acquired pneumonia in acute-care hospitals: 2022 update. Infect Control Hosp Epidemiol 2022;43:687-713.",
+      "url": "https://doi.org/10.1017/ice.2022.88",
+      "year": 2022,
+      "type": "consensus",
+      "doi": "10.1017/ice.2022.88"
+    },
+    {
+      "id": "shea-clabsi-2022",
+      "citation": "Buetti N, Marschall J, Drees M, et al. Strategies to prevent central line-associated bloodstream infections in acute-care hospitals: 2022 update. Infect Control Hosp Epidemiol 2022;43:553-69.",
+      "url": "https://doi.org/10.1017/ice.2022.87",
+      "year": 2022,
+      "type": "consensus",
+      "doi": "10.1017/ice.2022.87"
+    },
+    {
+      "id": "shea-cauti-2023",
+      "citation": "Patel PK, Advani SD, Kofman AD, et al. Strategies to prevent catheter-associated urinary tract infections in acute-care hospitals: 2022 update. Infect Control Hosp Epidemiol 2023;44:1209-31.",
+      "url": "https://doi.org/10.1017/ice.2023.137",
+      "year": 2023,
+      "type": "consensus",
+      "doi": "10.1017/ice.2023.137"
+    },
+    {
+      "id": "ash-vte-2018",
+      "citation": "Schünemann HJ, Cushman M, Burnett AE, et al. American Society of Hematology 2018 guidelines for management of venous thromboembolism: prophylaxis for hospitalized and nonhospitalized medical patients. Blood Adv 2018;2:3198-225.",
+      "url": "https://doi.org/10.1182/bloodadvances.2018022954",
+      "year": 2018,
+      "type": "guideline",
+      "doi": "10.1182/bloodadvances.2018022954"
+    },
+    {
+      "id": "prevent-ipc",
+      "citation": "Arabi YM, Al-Hameed F, Burns KEA, et al. Adjunctive intermittent pneumatic compression for venous thromboprophylaxis (PREVENT). N Engl J Med 2019;380:1305-15.",
+      "url": "https://doi.org/10.1056/NEJMoa1816150",
+      "year": 2019,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1816150"
+    },
+    {
+      "id": "revise",
+      "citation": "Cook D, Deane A, Lauzier F, et al. Stress ulcer prophylaxis during invasive mechanical ventilation (REVISE). N Engl J Med 2024;391:9-20.",
+      "url": "https://doi.org/10.1056/NEJMoa2404245",
+      "year": 2024,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa2404245"
+    },
+    {
+      "id": "sup-icu",
+      "citation": "Krag M, Marker S, Perner A, et al. Pantoprazole in patients at risk for gastrointestinal bleeding in the ICU (SUP-ICU). N Engl J Med 2018;379:2199-208.",
+      "url": "https://doi.org/10.1056/NEJMoa1714919",
+      "year": 2018,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1714919"
+    },
+    {
+      "id": "sup-guideline-2021",
+      "citation": "Ye Z, Reintam Blaser A, Lytvyn L, et al. (Scandinavian/European) Clinical practice guideline on gastrointestinal bleeding prophylaxis for critically ill patients. Acta Anaesthesiol Scand 2021;65:681-94.",
+      "url": "https://doi.org/10.1111/aas.13773",
+      "year": 2021,
+      "type": "guideline",
+      "doi": "10.1111/aas.13773"
+    },
+    {
+      "id": "who-hand-hygiene-2009",
+      "citation": "World Health Organization. WHO guidelines on hand hygiene in health care. Geneva: WHO; 2009.",
+      "url": "https://www.who.int/publications/i/item/9789241597906",
+      "year": 2009,
+      "type": "guideline"
+    },
+    {
+      "id": "cdc-isolation-2007",
+      "citation": "Siegel JD, Rhinehart E, Jackson M, Chiarello L; HICPAC. 2007 guideline for isolation precautions: preventing transmission of infectious agents in health care settings. Am J Infect Control 2007;35(10 Suppl 2):S65-164.",
+      "url": "https://doi.org/10.1016/j.ajic.2007.10.007",
+      "year": 2007,
+      "type": "guideline",
+      "doi": "10.1016/j.ajic.2007.10.007"
+    },
+    {
+      "id": "ncdc-ipc-2020",
+      "citation": "National Centre for Disease Control, DGHS, MoHFW. National guidelines for infection prevention and control in healthcare facilities. New Delhi: Government of India; January 2020.",
+      "url": "https://nhm.tn.gov.in/wp-content/uploads/2026/Guidelines/Infection%20Control/83538105781625557301.pdf",
+      "year": 2020,
+      "type": "web"
+    },
+    {
+      "id": "epuap-npiap-2019",
+      "citation": "European Pressure Ulcer Advisory Panel, National Pressure Injury Advisory Panel, Pan Pacific Pressure Injury Alliance. Prevention and treatment of pressure ulcers/injuries: clinical practice guideline. The international guideline, 3rd ed. 2019.",
+      "url": "https://internationalguideline.com/",
+      "year": 2019,
+      "type": "guideline"
+    },
+    {
+      "id": "team-trial",
+      "citation": "TEAM Study Investigators and the ANZICS Clinical Trials Group. Early active mobilization during mechanical ventilation in the ICU. N Engl J Med 2022;387:1747-58.",
+      "url": "https://doi.org/10.1056/NEJMoa2209083",
+      "year": 2022,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa2209083"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Enoxaparin obesity and renal doses",
+      "reason": "Practice varies; confirm with local thromboprophylaxis protocol and anti-Xa availability."
+    },
+    {
+      "item": "Famotidine IV availability",
+      "reason": "IV H2RA availability varies in India."
+    },
+    {
+      "item": "NCDC IPC 2020 URL",
+      "reason": "Hosted on NHM Tamil Nadu site; official NCDC link may change."
+    }
+  ]
+}

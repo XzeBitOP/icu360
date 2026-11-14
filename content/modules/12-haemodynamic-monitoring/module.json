@@ -1,0 +1,1592 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "haemodynamic-monitoring",
+  "number": 12,
+  "folder": "12-haemodynamic-monitoring",
+  "section": {
+    "id": "C",
+    "title": "Cardiovascular and haemodynamics"
+  },
+  "phase": 2,
+  "title": "Haemodynamic monitoring",
+  "summary": "Practical haemodynamic monitoring: arterial line set-up and damping, what CVP and ScvO2 really mean, fluid responsiveness with PPV and passive leg raise, choosing cardiac output monitors, and using lactate, capillary refill and the CO2 gap to guide resuscitation.",
+  "tags": [
+    "arterial line",
+    "damping",
+    "CVP",
+    "ScvO2",
+    "PPV",
+    "passive leg raise",
+    "fluid responsiveness",
+    "cardiac output",
+    "PiCCO",
+    "lactate",
+    "CO2 gap",
+    "capillary refill"
+  ],
+  "relatedModules": [
+    "shock-vasoactive-support",
+    "pocus-critical-care-echo",
+    "sepsis-septic-shock",
+    "fluids-electrolytes",
+    "procedures",
+    "ecmo-mechanical-circulatory-support"
+  ],
+  "version": "0.2.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "line-chart",
+    "accent": "standard"
+  },
+  "viewKey": "module:haemodynamic-monitoring",
+  "topics": [
+    {
+      "id": "arterial-waveform-damping",
+      "title": "Arterial line waveform and damping",
+      "summary": "Set up, zero and level an arterial line, read the waveform, and use the fast-flush (square-wave) test to detect over- and under-damping.",
+      "viewKey": "topic:haemodynamic-monitoring/arterial-waveform-damping",
+      "uiHints": {
+        "icon": "activity",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "An arterial line transmits the pressure wave through fluid-filled tubing to a transducer. Accuracy depends on correct zeroing, levelling at the phlebostatic axis and an adequately damped system. MAP is the most robust value even when damping is imperfect.",
+          "refs": [
+            "gardner-1981"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Indications",
+            "detail": "Shock on vasopressors, frequent ABGs, labile BP (e.g. hypertensive emergency, dissection), raised ICP, major surgery. Usually radial (check ulnar collateral by ultrasound/clinically), then femoral or brachial.",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Level and zero",
+            "detail": "Transducer at the phlebostatic axis (4th intercostal space, mid-axillary line) with patient supine; for neuro patients who need cerebral perfusion pressure, some units level at the tragus (be consistent). Open to air and zero at set-up, after moving, and at least once per shift.",
+            "refs": [
+              "gardner-1981"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Check the system",
+            "detail": "Pressure bag inflated to 300 mmHg (flush ~3 mL/h), no air bubbles or clots, short non-compliant tubing, no kinks or three-way taps with stagnant blood.",
+            "refs": [
+              "gardner-1981"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Do the fast-flush (square-wave) test",
+            "detail": "Pull the flush tab for 1 s and release. Optimal: 1-2 oscillations before returning to baseline. Over-damped: < 1 oscillation, slurred upstroke → falsely low SBP, high DBP. Under-damped: > 2 oscillations, spiky trace → falsely high SBP, low DBP.",
+            "refs": [
+              "gardner-1981"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Read the waveform",
+            "detail": "Sharp upstroke (contractility), dicrotic notch (aortic valve closure), area under curve (stroke volume). Narrow pulse pressure suggests low SV or tamponade; wide pulse pressure suggests vasodilation or AR; respiratory variation suggests preload responsiveness.",
+            "refs": [
+              "teboul-ppv-2019"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Troubleshoot",
+            "detail": "Flat/dampened trace: check patient first (pulse, BP cuff), then flush, aspirate, reposition wrist, check bubbles, re-zero. Compare with NIBP if in doubt.",
+            "refs": [
+              "gardner-1981"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Safety",
+            "detail": "Label the line clearly as arterial (never inject drugs), keep it visible, check distal perfusion hourly, remove when no longer needed.",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "damping",
+            "title": "Square-wave test interpretation",
+            "columns": [
+              "Pattern",
+              "Oscillations",
+              "Effect on readings",
+              "Causes"
+            ],
+            "rows": [
+              [
+                "Optimal",
+                "1-2",
+                "Accurate",
+                "-"
+              ],
+              [
+                "Over-damped",
+                "< 1, slow return",
+                "SBP falsely low, DBP falsely high, MAP OK",
+                "Air bubbles, clot, kink, low bag pressure, compliant tubing"
+              ],
+              [
+                "Under-damped",
+                "> 2, ringing",
+                "SBP falsely high, DBP falsely low, MAP OK",
+                "Long tubing, too many connectors, tachycardia, stiff arteries"
+              ]
+            ],
+            "refs": [
+              "gardner-1981"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Pale, cold or mottled hand distal to a radial line: remove the cannula immediately and assess for arterial thrombosis.",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          },
+          {
+            "text": "Never inject drugs into an arterial line: risk of limb ischaemia and gangrene.",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Transducer too low reads falsely high (~7.5 mmHg per 10 cm), too high reads falsely low.",
+            "refs": [
+              "gardner-1981"
+            ]
+          },
+          {
+            "text": "Titrating vasopressors to a systolic pressure on a poorly damped trace. Use MAP.",
+            "refs": [
+              "gardner-1981"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "A sudden drop in arterial pressure with a normal NIBP and a flat trace is usually a technical problem; a sudden drop with loss of pulse is cardiac arrest.",
+            "refs": [
+              "gardner-1981"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Is the arterial trace accurate?",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Arterial trace looks abnormal"
+          },
+          {
+            "id": "pt",
+            "type": "decision",
+            "text": "Patient has a pulse and NIBP similar?"
+          },
+          {
+            "id": "arrest",
+            "type": "end",
+            "text": "Treat patient: peri-arrest/shock (ABCDE)",
+            "severity": "critical"
+          },
+          {
+            "id": "zero",
+            "type": "action",
+            "text": "Check level (phlebostatic axis) and re-zero"
+          },
+          {
+            "id": "flush",
+            "type": "action",
+            "text": "Fast-flush (square-wave) test"
+          },
+          {
+            "id": "osc",
+            "type": "decision",
+            "text": "Oscillations after flush?"
+          },
+          {
+            "id": "over",
+            "type": "action",
+            "text": "Over-damped: remove bubbles/clot, check kinks, bag to 300 mmHg"
+          },
+          {
+            "id": "under",
+            "type": "action",
+            "text": "Under-damped: shorten tubing, remove extra connectors, use MAP"
+          },
+          {
+            "id": "ok",
+            "type": "end",
+            "text": "System optimal: trust readings, titrate to MAP"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "pt"
+          },
+          {
+            "from": "pt",
+            "to": "arrest",
+            "label": "No"
+          },
+          {
+            "from": "pt",
+            "to": "zero",
+            "label": "Yes"
+          },
+          {
+            "from": "zero",
+            "to": "flush"
+          },
+          {
+            "from": "flush",
+            "to": "osc"
+          },
+          {
+            "from": "osc",
+            "to": "over",
+            "label": "< 1"
+          },
+          {
+            "from": "osc",
+            "to": "under",
+            "label": "> 2"
+          },
+          {
+            "from": "osc",
+            "to": "ok",
+            "label": "1-2"
+          },
+          {
+            "from": "over",
+            "to": "flush"
+          },
+          {
+            "from": "under",
+            "to": "ok"
+          }
+        ],
+        "refs": [
+          "gardner-1981"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "The catheter-tubing-transducer system has a natural frequency and damping coefficient. If the natural frequency is too low relative to the harmonics in the arterial pulse, components are amplified (under-damping, overshoot). If damping is excessive (bubbles, clots, compliant tubing), the high-frequency components are lost and the trace becomes rounded.",
+        "evidence": "- Gardner (1981) described the dynamic response requirements and the fast-flush test still used today.\n- ESICM 2014 recommends an arterial catheter in patients with shock not responding to initial therapy and/or requiring vasopressors [Cecconi 2014].",
+        "controversies": "- Leveling for CPP calculation (tragus vs heart) differs between units; consistency and documentation matter more.",
+        "indiaNotes": "- Disposable transducer kits are costly in India; reuse is unsafe. Where arterial lines are not affordable, frequent automated NIBP (every 2-5 min) is an acceptable alternative for stable patients.\n- 20G radial arterial cannulae (with or without guidewire) are standard; ultrasound guidance improves first-pass success."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "mean-arterial-pressure"
+      ],
+      "references": [
+        "gardner-1981",
+        "esicm-shock-2014",
+        "teboul-ppv-2019"
+      ],
+      "quiz": [
+        {
+          "id": "arterial-waveform-damping-q1",
+          "stem": "Fast-flush test shows 4 oscillations before baseline. The SBP shown is likely:",
+          "options": [
+            "Accurate",
+            "Falsely high",
+            "Falsely low",
+            "Unchanged but DBP high"
+          ],
+          "answerIndex": 1,
+          "explanation": "Under-damped systems overestimate SBP and underestimate DBP; MAP remains reliable."
+        },
+        {
+          "id": "arterial-waveform-damping-q2",
+          "stem": "The transducer falls 20 cm below the phlebostatic axis. Displayed pressures will be:",
+          "options": [
+            "~15 mmHg falsely high",
+            "~15 mmHg falsely low",
+            "Unchanged",
+            "Zero"
+          ],
+          "answerIndex": 0,
+          "explanation": "Each 10 cm height difference ≈ 7.5 mmHg (hydrostatic column)."
+        },
+        {
+          "id": "arterial-waveform-damping-q3",
+          "stem": "Which value is least affected by damping errors?",
+          "options": [
+            "Systolic",
+            "Diastolic",
+            "Mean arterial pressure",
+            "Pulse pressure"
+          ],
+          "answerIndex": 2,
+          "explanation": "MAP is preserved in both over- and under-damping."
+        }
+      ]
+    },
+    {
+      "id": "cvp-scvo2",
+      "title": "CVP and ScvO2",
+      "summary": "What CVP and central venous oxygen saturation can and cannot tell you, and how to use them sensibly.",
+      "viewKey": "topic:haemodynamic-monitoring/cvp-scvo2",
+      "uiHints": {
+        "icon": "gauge",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "CVP = pressure in the superior vena cava/right atrium (normal 2-8 mmHg spontaneously breathing). ScvO2 = oxygen saturation of blood from a CVC tip in the SVC (normal ~70-75%); reflects balance between oxygen delivery and consumption.",
+          "refs": [
+            "esicm-shock-2014"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Measure CVP correctly",
+            "detail": "Transducer at phlebostatic axis, zeroed; read at end-expiration at the base of the 'c' wave (or mean of 'a' wave). On a ventilator do not disconnect PEEP; interpret trend.",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Do not use CVP alone to give fluids",
+            "detail": "A single CVP value does not predict fluid responsiveness. ESICM 2014: do not target any absolute CVP.",
+            "refs": [
+              "marik-cvp-2008",
+              "esicm-shock-2014"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Use CVP as a safety limit and diagnostic clue",
+            "detail": "High or rising CVP (> 12-15 mmHg) with poor output suggests RV failure, tamponade, tension, fluid overload: stop fluids and look why. Low CVP (< 5) with hypotension makes hypovolaemia more likely.",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Sample ScvO2 correctly",
+            "detail": "Slow draw from distal lumen of an SVC catheter (tip at cavo-atrial junction) after discarding dead space; analyse immediately.",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Interpret low ScvO2 (< 70%)",
+            "detail": "Oxygen delivery inadequate for demand: low cardiac output, anaemia, hypoxaemia, or high consumption (fever, shivering, agitation). Consider fluids if responsive, inotrope, transfusion if Hb < 7 g/dL, oxygen, sedation/antipyretics.",
+            "refs": [
+              "esicm-shock-2014",
+              "rivers-2001"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Interpret high ScvO2 (> 80%) with shock",
+            "detail": "Does not mean adequate perfusion: suggests impaired extraction (late sepsis, microcirculatory shunting, cyanide, CO). Look at lactate, CO2 gap and peripheral perfusion.",
+            "refs": [
+              "mallat-co2gap-2016"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "scvo2-causes",
+            "title": "Causes of abnormal ScvO2",
+            "columns": [
+              "Low ScvO2 (< 70%)",
+              "High ScvO2 (> 80%)"
+            ],
+            "rows": [
+              [
+                "Low cardiac output (hypovolaemia, cardiogenic)",
+                "Microcirculatory shunting (late sepsis)"
+              ],
+              [
+                "Anaemia",
+                "Cytotoxic hypoxia (cyanide, CO)"
+              ],
+              [
+                "Hypoxaemia",
+                "High cardiac output states (liver failure)"
+              ],
+              [
+                "High VO2: fever, shivering, seizures, agitation",
+                "Catheter tip in RA near coronary sinus / sampling error"
+              ]
+            ],
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Rising CVP with falling BP and urine output after fluids: stop fluids and scan the heart (RV failure, tamponade).",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Giving fluid 'because CVP is 6'. Fluid decisions need dynamic tests (PLR, PPV) or a fluid challenge with stroke volume measurement.",
+            "refs": [
+              "marik-cvp-2008"
+            ]
+          },
+          {
+            "text": "Reading a normal ScvO2 as reassurance in septic shock with rising lactate.",
+            "refs": [
+              "mallat-co2gap-2016"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "The 2001 EGDT trial targeted CVP 8-12 and ScvO2 ≥ 70%, but ProCESS, ARISE and ProMISe (PRISM meta-analysis 2017) found no benefit of protocolised EGDT over usual care.",
+            "refs": [
+              "prism-2017"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Interpreting ScvO2 in shock",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Shock with CVC: measure ScvO2 + lactate"
+          },
+          {
+            "id": "low",
+            "type": "decision",
+            "text": "ScvO2 < 70%?"
+          },
+          {
+            "id": "do2",
+            "type": "action",
+            "text": "Check SaO2, Hb, cardiac output (echo/CO monitor), VO2 (fever, shivering)"
+          },
+          {
+            "id": "fr",
+            "type": "decision",
+            "text": "Fluid responsive?"
+          },
+          {
+            "id": "fluid",
+            "type": "action",
+            "text": "Fluid challenge, reassess"
+          },
+          {
+            "id": "ino",
+            "type": "action",
+            "text": "Inotrope (dobutamine); transfuse if Hb < 7; oxygen; reduce VO2",
+            "severity": "high"
+          },
+          {
+            "id": "high",
+            "type": "decision",
+            "text": "Lactate high or CO2 gap > 6 mmHg?"
+          },
+          {
+            "id": "micro",
+            "type": "end",
+            "text": "Impaired extraction/low flow: reassess source, CO, perfusion",
+            "severity": "high"
+          },
+          {
+            "id": "ok",
+            "type": "end",
+            "text": "Oxygen delivery probably adequate; continue treating cause"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "low"
+          },
+          {
+            "from": "low",
+            "to": "do2",
+            "label": "Yes"
+          },
+          {
+            "from": "do2",
+            "to": "fr"
+          },
+          {
+            "from": "fr",
+            "to": "fluid",
+            "label": "Yes"
+          },
+          {
+            "from": "fr",
+            "to": "ino",
+            "label": "No"
+          },
+          {
+            "from": "fluid",
+            "to": "low"
+          },
+          {
+            "from": "ino",
+            "to": "low"
+          },
+          {
+            "from": "low",
+            "to": "high",
+            "label": "No"
+          },
+          {
+            "from": "high",
+            "to": "micro",
+            "label": "Yes"
+          },
+          {
+            "from": "high",
+            "to": "ok",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "esicm-shock-2014",
+          "mallat-co2gap-2016"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "CVP reflects the interaction between venous return and cardiac function (Guyton). It is influenced by intrathoracic pressure, RV compliance, tricuspid valve disease and venous tone, so the same CVP can occur on the flat or steep part of the Frank-Starling curve. ScvO2 reflects upper-body venous blood and is usually 2-5% higher than mixed venous SvO2 in health, but may be lower in shock.",
+        "evidence": "- Marik 2008 systematic review: CVP correlation with blood volume and fluid responsiveness is very poor (AUC ~0.56) [Marik 2008].\n- EGDT (Rivers 2001) reduced mortality in a single centre; three multicentre RCTs and the PRISM meta-analysis found no benefit [PRISM 2017].",
+        "controversies": "- CVP as a 'back pressure' for organ perfusion (renal congestion): high CVP is associated with AKI; some advocate keeping CVP as low as possible.",
+        "indiaNotes": "- Point-of-care co-oximetry for ScvO2 is available on most blood gas analysers in Indian ICUs; a simultaneous arterial and central venous gas also gives the CO2 gap at no extra cost."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "esicm-shock-2014",
+        "marik-cvp-2008",
+        "rivers-2001",
+        "prism-2017",
+        "mallat-co2gap-2016"
+      ],
+      "quiz": [
+        {
+          "id": "cvp-scvo2-q1",
+          "stem": "CVP 6 mmHg in a hypotensive ventilated patient. Which is TRUE?",
+          "options": [
+            "He will definitely respond to fluids",
+            "CVP alone cannot predict fluid responsiveness",
+            "He needs diuretics",
+            "CVP must be raised to 12"
+          ],
+          "answerIndex": 1,
+          "explanation": "Static CVP has poor predictive value."
+        },
+        {
+          "id": "cvp-scvo2-q2",
+          "stem": "ScvO2 52% in cardiogenic shock with Hb 11 g/dL and SpO2 96%. Most likely cause:",
+          "options": [
+            "Cyanide toxicity",
+            "Low cardiac output",
+            "Sepsis with shunting",
+            "Sampling error from arterial blood"
+          ],
+          "answerIndex": 1,
+          "explanation": "Low DO2 from low CO with normal Hb and SaO2."
+        },
+        {
+          "id": "cvp-scvo2-q3",
+          "stem": "ScvO2 85% with lactate 6 mmol/L in septic shock suggests:",
+          "options": [
+            "Adequate resuscitation",
+            "Impaired tissue oxygen extraction",
+            "Need for transfusion",
+            "Hyperventilation"
+          ],
+          "answerIndex": 1,
+          "explanation": "High ScvO2 does not exclude tissue hypoxia."
+        }
+      ]
+    },
+    {
+      "id": "fluid-responsiveness-ppv-plr",
+      "title": "Fluid responsiveness: PPV and passive leg raise",
+      "summary": "Decide whether a patient will increase stroke volume with fluid, using dynamic tests (PPV/SVV, passive leg raise, end-expiratory occlusion, mini-fluid challenge).",
+      "viewKey": "topic:haemodynamic-monitoring/fluid-responsiveness-ppv-plr",
+      "uiHints": {
+        "icon": "droplets",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Fluid responsiveness = increase in stroke volume or cardiac output by ≥ 10-15% after a fluid bolus. Only ~50% of haemodynamically unstable ICU patients are fluid responsive. Responsiveness does not mean the patient needs fluid.",
+          "refs": [
+            "monnet-fr-2016"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Ask first: does the patient need more flow?",
+            "detail": "Signs of hypoperfusion (lactate, CRT, mottling, oliguria) and no fluid intolerance (B-lines, rising CVP, worsening oxygenation).",
+            "refs": [
+              "monnet-fr-2016",
+              "esicm-shock-2014"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "PPV/SVV if criteria met",
+            "detail": "Pulse pressure variation > 12-13% predicts responsiveness ONLY if: controlled ventilation with no spontaneous effort, sinus rhythm, Vt ≥ 8 mL/kg PBW, closed chest, no RV failure, heart rate/RR ratio > 3.6, normal intra-abdominal pressure. Grey zone 9-13%.",
+            "refs": [
+              "michard-2000",
+              "teboul-ppv-2019"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Passive leg raise (PLR) - works in most patients",
+            "detail": "Start semi-recumbent 45° → lower trunk flat and raise legs 45° (bed tilt, not lifting legs manually). Measure real-time cardiac output/stroke volume (echo VTI, pulse contour, EtCO2 rise) within 60-90 s. Positive = CO/VTI rise ≥ 10% (or EtCO2 rise ≥ 5%). BP alone is not reliable.",
+            "time": "1-2 min",
+            "refs": [
+              "monnet-plr-2006",
+              "monnet-fr-2016"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "End-expiratory occlusion test",
+            "detail": "In ventilated patients: 15 s end-expiratory hold; cardiac index rise ≥ 5% predicts responsiveness.",
+            "refs": [
+              "monnet-fr-2016"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Mini-fluid challenge",
+            "detail": "100 mL crystalloid over 1 min with VTI measurement: rise ≥ 10% predicts response (needs precise VTI).",
+            "refs": [
+              "monnet-fr-2016"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Act on the result",
+            "detail": "Responsive + needs flow → give 250-500 mL and reassess. Not responsive → stop fluids; vasopressor/inotrope according to cause. Repeat tests after each intervention.",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "fr-tests",
+            "title": "Dynamic tests: thresholds and limits",
+            "columns": [
+              "Test",
+              "Positive threshold",
+              "Not valid when"
+            ],
+            "rows": [
+              [
+                "PPV / SVV",
+                "> 12-13% (grey zone 9-13%)",
+                "Spontaneous breathing, arrhythmia, Vt < 8 mL/kg, open chest, RV failure, low compliance"
+              ],
+              [
+                "Passive leg raise",
+                "CO/VTI ↑ ≥ 10% or EtCO2 ↑ ≥ 5%",
+                "Intra-abdominal hypertension, leg amputation, raised ICP (caution)"
+              ],
+              [
+                "End-expiratory occlusion (15 s)",
+                "CI ↑ ≥ 5%",
+                "Patient triggers during hold"
+              ],
+              [
+                "Mini-fluid challenge (100 mL)",
+                "VTI ↑ ≥ 10%",
+                "Poor echo windows; measurement error"
+              ],
+              [
+                "IVC variability",
+                "Distensibility > 12-18% (ventilated)",
+                "Spontaneous breathing (less reliable), raised IAP"
+              ]
+            ],
+            "refs": [
+              "monnet-fr-2016",
+              "teboul-ppv-2019"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Signs of fluid intolerance (new B-lines, rising CVP, worsening P/F, extravascular lung water): stop fluids regardless of responsiveness.",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Using PPV in a spontaneously breathing patient on pressure support or in AF.",
+            "refs": [
+              "teboul-ppv-2019"
+            ]
+          },
+          {
+            "text": "Doing PLR by lifting legs from the supine position (smaller autotransfusion) and judging by BP alone.",
+            "refs": [
+              "monnet-plr-2006"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Echo VTI (LVOT) with PLR is the most practical bedside combination in Indian ICUs without pulse-contour monitors.",
+            "refs": [
+              "monnet-fr-2016"
+            ]
+          },
+          {
+            "text": "Fluid responsiveness is normal physiology: healthy people are fluid responsive. Treat hypoperfusion, not numbers.",
+            "refs": [
+              "monnet-fr-2016"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Should I give more fluid?",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Hypotension / hypoperfusion"
+          },
+          {
+            "id": "need",
+            "type": "decision",
+            "text": "Hypoperfusion present and no fluid intolerance?"
+          },
+          {
+            "id": "nofluid",
+            "type": "end",
+            "text": "Do not give fluid; vasopressor/inotrope per cause"
+          },
+          {
+            "id": "ppvok",
+            "type": "decision",
+            "text": "PPV valid? (controlled vent, sinus, Vt ≥ 8 mL/kg)"
+          },
+          {
+            "id": "ppv",
+            "type": "decision",
+            "text": "PPV > 13%?"
+          },
+          {
+            "id": "plr",
+            "type": "action",
+            "text": "Passive leg raise with real-time CO/VTI or EtCO2"
+          },
+          {
+            "id": "plrpos",
+            "type": "decision",
+            "text": "CO/VTI rise ≥ 10%?"
+          },
+          {
+            "id": "give",
+            "type": "action",
+            "text": "Give 250-500 mL bolus",
+            "severity": "high"
+          },
+          {
+            "id": "re",
+            "type": "end",
+            "text": "Reassess perfusion and repeat test before next bolus"
+          },
+          {
+            "id": "stop",
+            "type": "end",
+            "text": "Not fluid responsive: stop fluids, vasopressor/inotrope"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "need"
+          },
+          {
+            "from": "need",
+            "to": "nofluid",
+            "label": "No"
+          },
+          {
+            "from": "need",
+            "to": "ppvok",
+            "label": "Yes"
+          },
+          {
+            "from": "ppvok",
+            "to": "ppv",
+            "label": "Yes"
+          },
+          {
+            "from": "ppvok",
+            "to": "plr",
+            "label": "No"
+          },
+          {
+            "from": "ppv",
+            "to": "give",
+            "label": "> 13%"
+          },
+          {
+            "from": "ppv",
+            "to": "plr",
+            "label": "9-13% (grey)"
+          },
+          {
+            "from": "ppv",
+            "to": "stop",
+            "label": "< 9%"
+          },
+          {
+            "from": "plr",
+            "to": "plrpos"
+          },
+          {
+            "from": "plrpos",
+            "to": "give",
+            "label": "Yes"
+          },
+          {
+            "from": "plrpos",
+            "to": "stop",
+            "label": "No"
+          },
+          {
+            "from": "give",
+            "to": "re"
+          }
+        ],
+        "refs": [
+          "monnet-fr-2016",
+          "teboul-ppv-2019"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Positive-pressure inspiration reduces RV preload and increases RV afterload; if both ventricles are on the steep part of the Frank-Starling curve, LV stroke volume falls a few beats later, producing cyclic variation in pulse pressure. PLR transfers ~300 mL of venous blood from the legs and splanchnic bed to the heart: a reversible, self-administered fluid challenge.",
+        "evidence": "- Michard 2000: PPV > 13% predicted fluid responsiveness in ventilated septic patients [Michard 2000].\n- Monnet 2006: PLR-induced increase in aortic blood flow ≥ 10% predicted responsiveness, including in patients with spontaneous breathing or arrhythmia [Monnet 2006].\n- SSC 2026 suggests dynamic measures (PLR or fluid bolus with SV, SVV, PP or PPV) over examination or static measures alone (conditional, low certainty); insufficient evidence for or against minimally invasive or non-invasive cardiac output monitoring; invasive or cuff BP both acceptable, with an arterial line for high, rising or multiple vasopressors [SSC 2026].",
+        "controversies": "- Whether fluid-responsiveness-guided resuscitation improves patient outcomes: small trials suggest less fluid and less RRT, but mortality data are limited.",
+        "indiaNotes": "- Most Indian ICUs lack calibrated cardiac output monitors; LVOT VTI on echo (≥ 10% rise with PLR) is cheap and reproducible once trained.\n- Capnography (EtCO2) is now common on ventilators; an EtCO2 rise of ≥ 5% with PLR in a ventilated patient with constant ventilation suggests increased CO."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "monnet-fr-2016",
+        "michard-2000",
+        "teboul-ppv-2019",
+        "monnet-plr-2006",
+        "esicm-shock-2014",
+        "ssc2026"
+      ],
+      "quiz": [
+        {
+          "id": "fluid-responsiveness-ppv-plr-q1",
+          "stem": "PPV is valid as a predictor of fluid responsiveness in:",
+          "options": [
+            "Patient on pressure support breathing spontaneously",
+            "AF with RVR",
+            "Fully ventilated, sinus rhythm, Vt 8 mL/kg, closed chest",
+            "Open chest after cardiac surgery"
+          ],
+          "answerIndex": 2,
+          "explanation": "PPV requires controlled ventilation, sinus rhythm, adequate tidal volume and a closed chest."
+        },
+        {
+          "id": "fluid-responsiveness-ppv-plr-q2",
+          "stem": "Positive PLR test is defined by:",
+          "options": [
+            "BP rise 5 mmHg",
+            "CO or VTI rise ≥ 10%",
+            "HR rise 10/min",
+            "CVP rise 2 mmHg"
+          ],
+          "answerIndex": 1,
+          "explanation": "Measure flow, not pressure."
+        },
+        {
+          "id": "fluid-responsiveness-ppv-plr-q3",
+          "stem": "A patient is fluid responsive by PLR but has new bilateral B-lines and P/F falling. Best action:",
+          "options": [
+            "Give 1 L bolus",
+            "Avoid fluids; consider vasopressor/inotrope",
+            "Start diuretic and raise PEEP to 20 always",
+            "Ignore lungs"
+          ],
+          "answerIndex": 1,
+          "explanation": "Responsiveness does not mean fluid is needed or safe."
+        },
+        {
+          "id": "fluid-responsiveness-ppv-plr-q4",
+          "stem": "End-expiratory occlusion test positive threshold:",
+          "options": [
+            "CI rise ≥ 5% during 15 s hold",
+            "SpO2 fall 5%",
+            "PPV > 20%",
+            "CVP rise 5 mmHg"
+          ],
+          "answerIndex": 0,
+          "explanation": "EEO ≥ 5% rise in cardiac index predicts responsiveness."
+        }
+      ]
+    },
+    {
+      "id": "cardiac-output-monitors",
+      "title": "Cardiac output monitoring",
+      "summary": "Choosing between echo, pulse contour, transpulmonary thermodilution and pulmonary artery catheter, and what each number means.",
+      "viewKey": "topic:haemodynamic-monitoring/cardiac-output-monitors",
+      "uiHints": {
+        "icon": "monitor",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Cardiac output (CO) = HR x stroke volume; cardiac index = CO/BSA (normal 2.5-4.0 L/min/m²). Advanced monitoring is indicated in shock not responding to initial therapy, complex mixed shock, or RV failure/ARDS where fluid balance is critical.",
+          "refs": [
+            "esicm-shock-2014"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Start with echo",
+            "detail": "ESICM 2014 recommends echocardiography as the first-line tool to assess type of shock. LVOT VTI x LVOT area x HR estimates CO; normal VTI 18-22 cm.",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Choose advanced monitoring if not responding",
+            "detail": "Transpulmonary thermodilution (e.g. PiCCO, EV1000/VolumeView) or pulmonary artery catheter in severe shock, especially with ARDS or RV dysfunction.",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Pulse contour analysis",
+            "detail": "Uncalibrated (FloTrac, LiDCO rapid, ProAQT) or calibrated (PiCCO). Good for trends and SVV; inaccurate with arrhythmia, aortic regurgitation, IABP, rapid vasopressor changes and damped traces.",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Transpulmonary thermodilution",
+            "detail": "Cold saline (15-20 mL) via CVC, femoral arterial thermistor: CO, GEDVI (preload, normal 680-800 mL/m²), EVLWI (lung water, > 10 mL/kg = pulmonary oedema), PVPI (> 3 = permeability oedema).",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Pulmonary artery catheter",
+            "detail": "CO (thermodilution), PAOP (wedge, LV filling), PAP, SvO2, PVR. Use in complex RV failure, pulmonary hypertension, cardiogenic shock and cardiac surgery; no routine benefit in general ICU patients.",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Integrate, don't chase numbers",
+            "detail": "Use CO with MAP, perfusion markers (lactate, CRT, ScvO2, CO2 gap) and organ function to choose fluid vs vasopressor vs inotrope.",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "co-devices",
+            "title": "Cardiac output tools compared",
+            "columns": [
+              "Tool",
+              "Invasiveness",
+              "Key outputs",
+              "Limitations"
+            ],
+            "rows": [
+              [
+                "Echocardiography",
+                "None",
+                "LV/RV function, VTI, CO, pericardium, valves",
+                "Operator dependent, intermittent"
+              ],
+              [
+                "Uncalibrated pulse contour",
+                "Arterial line",
+                "CO trend, SVV",
+                "Arrhythmia, AR, vasoplegia, damping"
+              ],
+              [
+                "Transpulmonary thermodilution",
+                "CVC + femoral arterial line",
+                "CO, GEDVI, EVLWI, PVPI, SVV",
+                "Recalibrate every 8 h / after changes; cost"
+              ],
+              [
+                "Pulmonary artery catheter",
+                "PA catheter",
+                "CO, PAOP, PAP, SvO2, PVR",
+                "Complications (arrhythmia, PA rupture), interpretation errors"
+              ],
+              [
+                "Bioreactance / oesophageal Doppler",
+                "Non-/minimally invasive",
+                "CO trend",
+                "Validation varies"
+              ]
+            ],
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Cardiac index < 2.2 L/min/m² with hypoperfusion = low-output shock: inotrope/mechanical support evaluation.",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Trusting uncalibrated pulse-contour CO in severe vasoplegia, AF or after large vasopressor changes.",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          },
+          {
+            "text": "Measuring PAOP at peak inspiration instead of end-expiration.",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "EVLWI from thermodilution helps stop fluids in ARDS: values > 15 mL/kg mean severe pulmonary oedema.",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "All monitors estimate flow indirectly. Thermodilution uses the Stewart-Hamilton principle (area under the temperature curve inversely proportional to flow). Pulse contour assumes a relationship between pressure waveform area and stroke volume that depends on vascular compliance, which changes in shock and with vasopressors, hence the need for calibration.",
+        "evidence": "- ESICM 2014 consensus: echocardiography first; advanced haemodynamic monitoring in patients not responding to initial therapy; PAC in refractory shock with RV dysfunction or ARDS [Cecconi 2014].\n- RCTs of routine PAC use (e.g. PAC-Man, FACTT) showed no mortality benefit in general ICU populations.",
+        "controversies": "- Whether CO-guided protocols improve outcome; the evidence is mostly physiological and perioperative.",
+        "indiaNotes": "- Thermodilution and pulse-contour kits are costly (several thousand rupees per patient) and are used selectively in Indian ICUs; trained echo is the realistic universal tool.\n- Consider cost-benefit and insurance coverage before inserting advanced monitoring."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "bsa-mosteller",
+        "mean-arterial-pressure"
+      ],
+      "references": [
+        "esicm-shock-2014"
+      ],
+      "quiz": [
+        {
+          "id": "cardiac-output-monitors-q1",
+          "stem": "First-line tool to identify the type of shock (ESICM 2014):",
+          "options": [
+            "PA catheter",
+            "Echocardiography",
+            "PiCCO",
+            "CVP"
+          ],
+          "answerIndex": 1,
+          "explanation": "Echo is recommended first."
+        },
+        {
+          "id": "cardiac-output-monitors-q2",
+          "stem": "EVLWI of 18 mL/kg on transpulmonary thermodilution means:",
+          "options": [
+            "Hypovolaemia",
+            "Significant pulmonary oedema",
+            "Normal",
+            "Pneumothorax"
+          ],
+          "answerIndex": 1,
+          "explanation": "Normal EVLWI < 10 mL/kg."
+        },
+        {
+          "id": "cardiac-output-monitors-q3",
+          "stem": "Uncalibrated pulse-contour CO is least reliable in:",
+          "options": [
+            "Sinus rhythm stable patient",
+            "AF with changing vasopressor doses",
+            "Post-op stable patient",
+            "Normal arterial waveform"
+          ],
+          "answerIndex": 1,
+          "explanation": "Arrhythmia and changing vascular tone reduce accuracy."
+        }
+      ]
+    },
+    {
+      "id": "co2-gap-lactate",
+      "title": "CO2 gap, lactate and perfusion targets",
+      "summary": "Use lactate, capillary refill time and the venous-arterial CO2 gap together to judge tissue perfusion and guide resuscitation.",
+      "viewKey": "topic:haemodynamic-monitoring/co2-gap-lactate",
+      "uiHints": {
+        "icon": "flask-conical",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Lactate > 2 mmol/L = hyperlactataemia (septic shock definition includes lactate > 2 despite adequate fluids). CO2 gap (Pcv-aCO2) = central venous PCO2 minus arterial PCO2; > 6 mmHg suggests inadequate cardiac output for metabolic demand. CRT > 3 s suggests poor peripheral perfusion.",
+          "refs": [
+            "sepsis3",
+            "mallat-co2gap-2016"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Measure lactate early and repeat",
+            "detail": "Measure within 1 h of suspected sepsis/shock; repeat every 2-4 h if raised. SSC 2026 suggests serial lactate to guide resuscitation, but individualise fluid after the first bolus rather than chase a normal value.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Check capillary refill time",
+            "detail": "Press the index finger pulp with a glass slide for 10 s, release, time to return of colour: normal ≤ 3 s. Repeat every 30 min during resuscitation.",
+            "refs": [
+              "andromeda-2019",
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Calculate CO2 gap",
+            "detail": "Paired central venous (SVC) and arterial gas drawn together: Pcv-aCO2 > 6 mmHg = low flow relative to CO2 production → look for low CO (fluids if responsive, inotrope).",
+            "refs": [
+              "mallat-co2gap-2016"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Combine with ScvO2",
+            "detail": "Low ScvO2 + high CO2 gap: low DO2/flow. Normal/high ScvO2 + high CO2 gap: flow still inadequate (microcirculatory). Normal CO2 gap + high lactate: consider non-hypoxic causes.",
+            "refs": [
+              "mallat-co2gap-2016"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Consider non-perfusion causes of high lactate",
+            "detail": "Adrenaline (beta-2), salbutamol, metformin, liver failure, seizures, thiamine deficiency, malignancy, mesenteric ischaemia, cyanide, methanol, propofol infusion syndrome, linezolid.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Avoid over-resuscitation",
+            "detail": "Lactate clears slowly (hours); do not give repeated fluid boluses solely to 'normalise lactate' if the patient is not fluid responsive. CRT normalises faster.",
+            "refs": [
+              "andromeda-2019"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "lactate-causes",
+            "title": "Causes of hyperlactataemia",
+            "columns": [
+              "Type A (hypoperfusion/hypoxia)",
+              "Type B (other)"
+            ],
+            "rows": [
+              [
+                "Shock of any type",
+                "Adrenaline/salbutamol (beta-2 agonists)"
+              ],
+              [
+                "Severe hypoxaemia",
+                "Liver failure (reduced clearance)"
+              ],
+              [
+                "Severe anaemia",
+                "Metformin, linezolid, propofol infusion syndrome, NRTIs"
+              ],
+              [
+                "Regional ischaemia (mesenteric, limb)",
+                "Thiamine deficiency (beri-beri, alcohol)"
+              ],
+              [
+                "CO / cyanide poisoning",
+                "Seizures, malignancy, toxic alcohols, DKA (D-lactate rarely)"
+              ]
+            ],
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Lactate > 4 mmol/L, or rising despite resuscitation, carries high mortality: senior review, look for uncontrolled source or ischaemic bowel.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "text": "Disproportionate lactate with mild abdominal tenderness: suspect mesenteric ischaemia.",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Treating a lactate of 4 from an adrenaline infusion or salbutamol nebs as worsening shock.",
+            "refs": [
+              "ibcc"
+            ]
+          },
+          {
+            "text": "Venous lactate is usually close to arterial; a normal venous lactate excludes hyperlactataemia, but tourniquet time can raise it.",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "ANDROMEDA-SHOCK (2019): CRT-targeted resuscitation was at least as good as lactate-targeted, with less organ dysfunction at 72 h; ANDROMEDA-SHOCK-2 (2025) tested a personalised CRT-targeted protocol.",
+            "refs": [
+              "andromeda-2019",
+              "andromeda2-2025"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Persistent hypoperfusion after initial resuscitation",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "MAP ≥ 65 but lactate high / CRT > 3 s"
+          },
+          {
+            "id": "non",
+            "type": "decision",
+            "text": "Non-hypoxic cause likely (adrenaline, liver failure, metformin)?"
+          },
+          {
+            "id": "treatnon",
+            "type": "end",
+            "text": "Treat/stop the cause; trend lactate"
+          },
+          {
+            "id": "gap",
+            "type": "action",
+            "text": "Paired arterial + central venous gas: ScvO2, CO2 gap"
+          },
+          {
+            "id": "hi",
+            "type": "decision",
+            "text": "CO2 gap > 6 mmHg or ScvO2 < 70%?"
+          },
+          {
+            "id": "fr",
+            "type": "decision",
+            "text": "Fluid responsive?"
+          },
+          {
+            "id": "fluid",
+            "type": "action",
+            "text": "Fluid bolus 250-500 mL"
+          },
+          {
+            "id": "ino",
+            "type": "action",
+            "text": "Echo; consider dobutamine; transfuse if Hb < 7",
+            "severity": "high"
+          },
+          {
+            "id": "micro",
+            "type": "end",
+            "text": "Flow adequate: search source control, mesenteric ischaemia; trend CRT",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "non"
+          },
+          {
+            "from": "non",
+            "to": "treatnon",
+            "label": "Yes"
+          },
+          {
+            "from": "non",
+            "to": "gap",
+            "label": "No"
+          },
+          {
+            "from": "gap",
+            "to": "hi"
+          },
+          {
+            "from": "hi",
+            "to": "fr",
+            "label": "Yes"
+          },
+          {
+            "from": "hi",
+            "to": "micro",
+            "label": "No"
+          },
+          {
+            "from": "fr",
+            "to": "fluid",
+            "label": "Yes"
+          },
+          {
+            "from": "fr",
+            "to": "ino",
+            "label": "No"
+          },
+          {
+            "from": "fluid",
+            "to": "gap"
+          },
+          {
+            "from": "ino",
+            "to": "gap"
+          }
+        ],
+        "refs": [
+          "mallat-co2gap-2016",
+          "andromeda-2019"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Lactate is produced by glycolysis and is a marker of stress metabolism (beta-2 adrenergic stimulation of Na-K ATPase) as much as of anaerobic metabolism; clearance is mainly hepatic. CO2 gap rises when flow is too low to wash out tissue CO2 (stagnation), so it is a marker of flow adequacy rather than of hypoxia.",
+        "evidence": "- ANDROMEDA-SHOCK (424 patients): CRT-targeted resuscitation vs lactate-targeted: 28-day mortality 34.9% vs 43.4% (not significant), less organ dysfunction at 72 h [Hernandez 2019].\n- SSC 2026 suggests serial lactate to guide resuscitation and capillary refill time as an adjunct (both conditional, low certainty) [SSC 2026].\n- CO2 gap > 6 mmHg is associated with higher mortality and identifies patients with inadequate CO despite normal ScvO2 [Mallat 2016].",
+        "controversies": "- Optimal target and frequency of lactate measurement; whether pushing CO to normalise CO2 gap improves outcome.",
+        "indiaNotes": "- Lactate is available on most Indian blood gas analysers; CRT is free and can be measured by nurses every 30 min.\n- In tropical infections (malaria, dengue, leptospirosis) high lactate often reflects severity; thiamine deficiency is relevant in alcohol use and malnutrition."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "mallat-co2gap-2016",
+        "andromeda-2019",
+        "andromeda2-2025",
+        "ssc2026",
+        "sepsis3",
+        "ibcc"
+      ],
+      "quiz": [
+        {
+          "id": "co2-gap-lactate-q1",
+          "stem": "Normal capillary refill time used in ANDROMEDA-SHOCK:",
+          "options": [
+            "≤ 1 s",
+            "≤ 3 s",
+            "≤ 5 s",
+            "≤ 10 s"
+          ],
+          "answerIndex": 1,
+          "explanation": "CRT ≤ 3 s was the target."
+        },
+        {
+          "id": "co2-gap-lactate-q2",
+          "stem": "Pcv-aCO2 of 9 mmHg with ScvO2 74% suggests:",
+          "options": [
+            "Adequate flow",
+            "Inadequate cardiac output relative to metabolic demand",
+            "Hyperventilation",
+            "Sampling from arterial line"
+          ],
+          "answerIndex": 1,
+          "explanation": "High CO2 gap signals low flow even with normal ScvO2."
+        },
+        {
+          "id": "co2-gap-lactate-q3",
+          "stem": "Lactate rises from 2 to 5 mmol/L after starting adrenaline in an otherwise improving patient. Likely cause:",
+          "options": [
+            "Worsening shock",
+            "Beta-2 adrenergic effect of adrenaline",
+            "Liver failure",
+            "Lab error"
+          ],
+          "answerIndex": 1,
+          "explanation": "Adrenaline increases aerobic glycolysis and lactate."
+        }
+      ]
+    }
+  ],
+  "drugs": [],
+  "references": [
+    {
+      "id": "sepsis3",
+      "citation": "Singer M, Deutschman CS, Seymour CW, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3). JAMA 2016;315:801-10.",
+      "url": "https://doi.org/10.1001/jama.2016.0287",
+      "year": 2016,
+      "type": "consensus",
+      "doi": "10.1001/jama.2016.0287"
+    },
+    {
+      "id": "ssc2026",
+      "citation": "Prescott HC, Antonelli M, Alhazzani W, et al. Surviving Sepsis Campaign: international guidelines for management of sepsis and septic shock 2026. Intensive Care Med. 2026;52(5):863-936. Co-published in Crit Care Med. 2026 (doi:10.1097/CCM.0000000000007075)",
+      "url": "https://doi.org/10.1007/s00134-026-08361-1",
+      "year": 2026,
+      "doi": "10.1007/s00134-026-08361-1",
+      "type": "guideline"
+    },
+    {
+      "id": "esicm-shock-2014",
+      "citation": "Cecconi M, De Backer D, Antonelli M, et al. Consensus on circulatory shock and hemodynamic monitoring. Task force of the European Society of Intensive Care Medicine. Intensive Care Med 2014;40:1795-815.",
+      "url": "https://doi.org/10.1007/s00134-014-3525-z",
+      "year": 2014,
+      "type": "consensus",
+      "doi": "10.1007/s00134-014-3525-z"
+    },
+    {
+      "id": "ibcc",
+      "citation": "Farkas J. The Internet Book of Critical Care (IBCC). EMCrit Project; continuously updated.",
+      "url": "https://emcrit.org/ibcc/toc/",
+      "year": 2024,
+      "type": "textbook"
+    },
+    {
+      "id": "gardner-1981",
+      "citation": "Gardner RM. Direct blood pressure measurement - dynamic response requirements. Anesthesiology 1981;54:227-36.",
+      "url": "https://doi.org/10.1097/00000542-198103000-00010",
+      "year": 1981,
+      "type": "review",
+      "doi": "10.1097/00000542-198103000-00010"
+    },
+    {
+      "id": "marik-cvp-2008",
+      "citation": "Marik PE, Baram M, Vahid B. Does central venous pressure predict fluid responsiveness? A systematic review of the literature and the tale of seven mares. Chest 2008;134:172-8.",
+      "url": "https://doi.org/10.1378/chest.07-2331",
+      "year": 2008,
+      "type": "review",
+      "doi": "10.1378/chest.07-2331"
+    },
+    {
+      "id": "rivers-2001",
+      "citation": "Rivers E, Nguyen B, Havstad S, et al. Early goal-directed therapy in the treatment of severe sepsis and septic shock. N Engl J Med 2001;345:1368-77.",
+      "url": "https://doi.org/10.1056/NEJMoa010307",
+      "year": 2001,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa010307"
+    },
+    {
+      "id": "prism-2017",
+      "citation": "PRISM Investigators. Early, goal-directed therapy for septic shock - a patient-level meta-analysis. N Engl J Med 2017;376:2223-34.",
+      "url": "https://doi.org/10.1056/NEJMoa1701380",
+      "year": 2017,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1701380"
+    },
+    {
+      "id": "michard-2000",
+      "citation": "Michard F, Boussat S, Chemla D, et al. Relation between respiratory changes in arterial pulse pressure and fluid responsiveness in septic patients with acute circulatory failure. Am J Respir Crit Care Med 2000;162:134-8.",
+      "url": "https://doi.org/10.1164/ajrccm.162.1.9903035",
+      "year": 2000,
+      "type": "trial",
+      "doi": "10.1164/ajrccm.162.1.9903035"
+    },
+    {
+      "id": "teboul-ppv-2019",
+      "citation": "Teboul JL, Monnet X, Chemla D, Michard F. Arterial pulse pressure variation with mechanical ventilation. Am J Respir Crit Care Med 2019;199:22-31.",
+      "url": "https://doi.org/10.1164/rccm.201801-0088CI",
+      "year": 2019,
+      "type": "review",
+      "doi": "10.1164/rccm.201801-0088CI"
+    },
+    {
+      "id": "monnet-plr-2006",
+      "citation": "Monnet X, Rienzo M, Osman D, et al. Passive leg raising predicts fluid responsiveness in the critically ill. Crit Care Med 2006;34:1402-7.",
+      "url": "https://doi.org/10.1097/01.CCM.0000215453.11735.06",
+      "year": 2006,
+      "type": "trial",
+      "doi": "10.1097/01.CCM.0000215453.11735.06"
+    },
+    {
+      "id": "monnet-fr-2016",
+      "citation": "Monnet X, Marik PE, Teboul JL. Prediction of fluid responsiveness: an update. Ann Intensive Care 2016;6:111.",
+      "url": "https://doi.org/10.1186/s13613-016-0216-7",
+      "year": 2016,
+      "type": "review",
+      "doi": "10.1186/s13613-016-0216-7"
+    },
+    {
+      "id": "mallat-co2gap-2016",
+      "citation": "Mallat J, Lemyze M, Tronchon L, Vallet B, Thevenin D. Use of venous-to-arterial carbon dioxide tension difference to guide resuscitation therapy in septic shock. World J Crit Care Med 2016;5:47-56.",
+      "url": "https://doi.org/10.5492/wjccm.v5.i1.47",
+      "year": 2016,
+      "type": "review",
+      "doi": "10.5492/wjccm.v5.i1.47"
+    },
+    {
+      "id": "andromeda-2019",
+      "citation": "Hernandez G, Ospina-Tascon GA, Damiani LP, et al. Effect of a resuscitation strategy targeting peripheral perfusion status vs serum lactate levels on 28-day mortality among patients with septic shock: the ANDROMEDA-SHOCK randomized clinical trial. JAMA 2019;321:654-64.",
+      "url": "https://doi.org/10.1001/jama.2019.0071",
+      "year": 2019,
+      "type": "trial",
+      "doi": "10.1001/jama.2019.0071"
+    },
+    {
+      "id": "andromeda2-2025",
+      "citation": "ANDROMEDA-SHOCK-2 Investigators. Personalized hemodynamic resuscitation targeting capillary refill time in early septic shock: the ANDROMEDA-SHOCK-2 randomized clinical trial. JAMA 2025.",
+      "url": "https://doi.org/10.1001/jama.2025.20962",
+      "year": 2025,
+      "type": "trial",
+      "doi": "10.1001/jama.2025.20962"
+    }
+  ]
+}

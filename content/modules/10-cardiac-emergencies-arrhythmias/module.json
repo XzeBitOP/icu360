@@ -1,0 +1,2232 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "cardiac-emergencies-arrhythmias",
+  "number": 10,
+  "folder": "10-cardiac-emergencies-arrhythmias",
+  "section": {
+    "id": "C",
+    "title": "Cardiovascular and haemodynamics"
+  },
+  "phase": 1,
+  "title": "Cardiac emergencies and arrhythmias",
+  "summary": "Manage the cardiac emergencies an ICU sees every day: STEMI and NSTE-ACS reperfusion and antithrombotics, acute heart failure and pulmonary oedema, AF with rapid ventricular response, ventricular and wide-complex tachycardia, bradycardia and temporary pacing, and hypertensive emergencies with target-driven BP lowering.",
+  "tags": [
+    "ACS",
+    "STEMI",
+    "NSTEMI",
+    "thrombolysis",
+    "tenecteplase",
+    "streptokinase",
+    "PCI",
+    "heparin",
+    "aspirin",
+    "ticagrelor",
+    "clopidogrel",
+    "acute heart failure",
+    "pulmonary oedema",
+    "nitroglycerin",
+    "furosemide",
+    "atrial fibrillation",
+    "rapid ventricular response",
+    "amiodarone",
+    "diltiazem",
+    "digoxin",
+    "VT",
+    "wide complex tachycardia",
+    "bradycardia",
+    "heart block",
+    "pacing",
+    "hypertensive emergency",
+    "labetalol",
+    "nicardipine",
+    "esmolol"
+  ],
+  "relatedModules": [
+    "cardiac-arrest-post-rosc",
+    "shock-vasoactive-support",
+    "pe-tamponade-aortic-emergencies",
+    "pocus-critical-care-echo",
+    "bedside-interpretation-ecg-cxr-ct-labs",
+    "icu-pharmacology-drug-infusions",
+    "fluids-electrolytes"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "heart",
+    "accent": "critical"
+  },
+  "viewKey": "module:cardiac-emergencies-arrhythmias",
+  "topics": [
+    {
+      "id": "acs-stemi-nste",
+      "title": "Acute coronary syndromes: STEMI and NSTE-ACS",
+      "summary": "ECG within 10 min. STEMI: primary PCI if achievable within 120 min of diagnosis, otherwise fibrinolysis within 10 min and transfer. Load antiplatelets, anticoagulate, and risk-stratify NSTE-ACS for timing of angiography.",
+      "viewKey": "topic:cardiac-emergencies-arrhythmias/acs-stemi-nste",
+      "uiHints": {
+        "icon": "heart",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0-10 min",
+            "title": "12-lead ECG",
+            "detail": "STEMI: new ST elevation ≥ 1 mm in 2 contiguous leads (V2-V3 ≥ 2.5 mm men < 40 y, ≥ 2 mm men ≥ 40 y, ≥ 1.5 mm women), LBBB/paced rhythm with ischaemic symptoms, posterior MI (ST depression V1-V3). Repeat every 15-30 min if non-diagnostic.",
+            "refs": [
+              "esc-acs2023"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0-10 min",
+            "title": "Initial care",
+            "detail": "Monitor, IV access, O2 only if SpO2 < 90%, aspirin 150-300 mg, cautious IV opioid, GTN if no hypotension or RV infarct. High-sensitivity troponin 0/1 h or 0/2 h.",
+            "refs": [
+              "esc-acs2023"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "STEMI",
+            "title": "Reperfusion decision",
+            "detail": "Symptoms < 12 h: primary PCI if diagnosis-to-wire ≤ 120 min; otherwise fibrinolysis within 10 min of diagnosis.",
+            "refs": [
+              "esc-acs2023"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Fibrinolysis",
+            "title": "Give",
+            "detail": "Tenecteplase by weight (half dose if ≥ 75 y) + clopidogrel 300 mg (75 mg if > 75 y) + enoxaparin or UFH.",
+            "refs": [
+              "esc-acs2023"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "60-90 min",
+            "title": "After lysis",
+            "detail": "< 50% ST resolution, ongoing pain or instability: rescue PCI. Otherwise angiography 2-24 h after lysis.",
+            "refs": [
+              "esc-acs2023"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "NSTE-ACS",
+            "title": "Risk-stratify",
+            "detail": "Very high risk (shock, refractory pain, life-threatening arrhythmia, mechanical complication, acute HF, recurrent dynamic ST changes): angiography < 2 h. High risk (confirmed NSTEMI, dynamic ST/T changes, GRACE > 140): < 24 h.",
+            "refs": [
+              "esc-acs2023"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "All",
+            "title": "Antithrombotics",
+            "detail": "Aspirin + P2Y12 inhibitor (ticagrelor or prasugrel at PCI; clopidogrel with lysis or oral anticoagulant) + parenteral anticoagulant.",
+            "refs": [
+              "esc-acs2023",
+              "acc-acs2025"
+            ]
+          },
+          {
+            "n": 8,
+            "time": "Before discharge",
+            "title": "Secondary prevention",
+            "detail": "High-intensity statin, ACE-i/ARB, beta-blocker if LVEF ≤ 40%, MRA/SGLT2i if HFrEF, cardiac rehabilitation."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "aspirin",
+            "role": "Loading",
+            "route": "Oral, chewed",
+            "dose": "150-300 mg, then 75-100 mg daily",
+            "refs": [
+              "esc-acs2023"
+            ]
+          },
+          {
+            "drugId": "ticagrelor",
+            "role": "P2Y12 (PCI pathway)",
+            "route": "Oral",
+            "dose": "180 mg, then 90 mg twice daily",
+            "refs": [
+              "esc-acs2023"
+            ]
+          },
+          {
+            "drugId": "clopidogrel",
+            "role": "P2Y12 with fibrinolysis",
+            "route": "Oral",
+            "dose": "300 mg (75 mg if > 75 y), then 75 mg daily",
+            "refs": [
+              "esc-acs2023"
+            ]
+          },
+          {
+            "drugId": "tenecteplase",
+            "role": "STEMI fibrinolysis",
+            "route": "IV bolus over 5-10 s",
+            "dose": "30-50 mg by weight; half dose if ≥ 75 y",
+            "workedExample": "72 kg, 60 y: 40 mg = 8 mL of 5 mg/mL",
+            "refs": [
+              "esc-acs2023"
+            ]
+          },
+          {
+            "drugId": "heparin",
+            "role": "Anticoagulant with fibrinolysis",
+            "route": "IV",
+            "dose": "60 U/kg bolus (max 4000 U), then 12 U/kg/h (max 1000 U/h)",
+            "dilution": "25 000 U in 50 mL = 500 U/mL",
+            "target": "aPTT 50-70 s",
+            "workedExample": "70 kg: 4000 U bolus, then 840 U/h = 1.7 mL/h",
+            "refs": [
+              "esc-acs2023"
+            ]
+          },
+          {
+            "drugId": "enoxaparin",
+            "role": "Anticoagulant with fibrinolysis (< 75 y)",
+            "route": "IV then SC",
+            "dose": "30 mg IV, then 1 mg/kg SC every 12 h (first 2 doses max 100 mg)",
+            "refs": [
+              "esc-acs2023"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "tnk-table",
+            "title": "Tenecteplase weight-based dose",
+            "columns": [
+              "Weight (kg)",
+              "Dose (mg)",
+              "Volume of 5 mg/mL (mL)"
+            ],
+            "rows": [
+              [
+                "< 60",
+                "30",
+                "6"
+              ],
+              [
+                "60-69",
+                "35",
+                "7"
+              ],
+              [
+                "70-79",
+                "40",
+                "8"
+              ],
+              [
+                "80-89",
+                "45",
+                "9"
+              ],
+              [
+                "≥ 90",
+                "50",
+                "10"
+              ]
+            ],
+            "caption": "Half dose if age ≥ 75 years (ESC 2023).",
+            "refs": [
+              "esc-acs2023"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Hypotension, new murmur or pulmonary oedema in MI: cardiogenic shock or mechanical complication (module 3)."
+          },
+          {
+            "text": "Inferior STEMI: record V4R; avoid nitrates if RV infarct."
+          },
+          {
+            "text": "Tearing chest/back pain, pulse deficit or wide mediastinum: exclude aortic dissection before lysis or anticoagulation."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Routine oxygen when SpO2 ≥ 90%."
+          },
+          {
+            "text": "Waiting for troponin before reperfusing a clear STEMI."
+          },
+          {
+            "text": "Prasugrel after previous stroke or TIA."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Posterior MI: ST depression with tall R waves in V1-V3; record V7-V9."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "STEMI reperfusion",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Chest pain + STEMI on ECG"
+          },
+          {
+            "id": "time",
+            "type": "decision",
+            "text": "Symptoms < 12 h or ongoing ischaemia/instability?"
+          },
+          {
+            "id": "late",
+            "type": "end",
+            "text": "> 12 h and stable: inpatient angiography; medical therapy"
+          },
+          {
+            "id": "pci",
+            "type": "decision",
+            "text": "Primary PCI within 120 min of diagnosis?"
+          },
+          {
+            "id": "ppci",
+            "type": "end",
+            "text": "Primary PCI: aspirin + ticagrelor/prasugrel + UFH",
+            "severity": "critical"
+          },
+          {
+            "id": "lysis",
+            "type": "action",
+            "text": "Fibrinolysis within 10 min + clopidogrel + enoxaparin/UFH",
+            "severity": "critical"
+          },
+          {
+            "id": "st",
+            "type": "decision",
+            "text": "≥ 50% ST resolution at 60-90 min and pain settled?"
+          },
+          {
+            "id": "rescue",
+            "type": "end",
+            "text": "Rescue PCI now"
+          },
+          {
+            "id": "routine",
+            "type": "end",
+            "text": "Angiography 2-24 h after lysis"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "time"
+          },
+          {
+            "from": "time",
+            "to": "late",
+            "label": "No"
+          },
+          {
+            "from": "time",
+            "to": "pci",
+            "label": "Yes"
+          },
+          {
+            "from": "pci",
+            "to": "ppci",
+            "label": "Yes"
+          },
+          {
+            "from": "pci",
+            "to": "lysis",
+            "label": "No"
+          },
+          {
+            "from": "lysis",
+            "to": "st"
+          },
+          {
+            "from": "st",
+            "to": "routine",
+            "label": "Yes"
+          },
+          {
+            "from": "st",
+            "to": "rescue",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "esc-acs2023"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **ESC ACS 2023:** primary PCI if feasible within 120 min; otherwise fibrinolysis within 10 min; half-dose tenecteplase ≥ 75 y; pharmaco-invasive angiography 2-24 h; NSTE-ACS timing by risk.\n- **ACC/AHA 2025:** similar framework for reperfusion, P2Y12 choice and early invasive strategy in high-risk NSTE-ACS.",
+        "controversies": "- Routine beta-blockers after MI with preserved EF (REDUCE-AMI: no benefit).",
+        "indiaNotes": "- Many Indian STEMI patients are young, diabetic and present late; the pharmaco-invasive (lysis then transfer) model is realistic in most districts.\n- Streptokinase remains in use for cost reasons; it is less effective and causes hypotension."
+      },
+      "drugIds": [
+        "aspirin",
+        "ticagrelor",
+        "clopidogrel",
+        "heparin",
+        "enoxaparin",
+        "tenecteplase",
+        "streptokinase",
+        "gtn",
+        "metoprolol"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "esc-acs2023",
+        "acc-acs2025"
+      ],
+      "quiz": [
+        {
+          "id": "acs-stemi-nste-q1",
+          "stem": "Maximum delay from diagnosis to PCI before choosing fibrinolysis:",
+          "options": [
+            "30 min",
+            "60 min",
+            "120 min",
+            "6 h"
+          ],
+          "answerIndex": 2,
+          "explanation": "If PCI cannot happen within 120 min, lyse."
+        },
+        {
+          "id": "acs-stemi-nste-q2",
+          "stem": "Tenecteplase dose for a 66 kg, 58-year-old:",
+          "options": [
+            "30 mg",
+            "35 mg",
+            "40 mg",
+            "50 mg"
+          ],
+          "answerIndex": 1,
+          "explanation": "60-69 kg → 35 mg."
+        },
+        {
+          "id": "acs-stemi-nste-q3",
+          "stem": "P2Y12 inhibitor with fibrinolysis:",
+          "options": [
+            "Ticagrelor",
+            "Prasugrel",
+            "Clopidogrel",
+            "None"
+          ],
+          "answerIndex": 2,
+          "explanation": "Clopidogrel 300 mg (75 mg if > 75 y)."
+        }
+      ]
+    },
+    {
+      "id": "acute-heart-failure",
+      "title": "Acute heart failure and pulmonary oedema",
+      "summary": "Profile the patient as warm/cold and wet/dry. Warm-wet: IV loop diuretic plus vasodilator if SBP > 110 and CPAP/NIV for pulmonary oedema. Cold: cardiogenic shock pathway. Always find the trigger.",
+      "viewKey": "topic:cardiac-emergencies-arrhythmias/acute-heart-failure",
+      "uiHints": {
+        "icon": "heart",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0-10 min",
+            "title": "Stabilise",
+            "detail": "Sit up, O2 to SpO2 > 90%, CPAP/NIV if RR > 25 or SpO2 < 90%. ECG, troponin, NT-proBNP, echo.",
+            "refs": [
+              "esc-hf2021"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0-30 min",
+            "title": "Profile",
+            "detail": "Warm-wet (commonest), cold-wet, cold-dry, warm-dry.",
+            "refs": [
+              "esc-hf2021"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "0-60 min",
+            "title": "Find the trigger",
+            "detail": "ACS, hypertensive emergency, arrhythmia, mechanical cause (valve rupture, VSR), PE, infection, tamponade, non-adherence, NSAIDs, renal failure, anaemia, thyroid.",
+            "refs": [
+              "esc-hf2021"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Congested",
+            "title": "Loop diuretic",
+            "detail": "Furosemide 20-40 mg IV if naïve, or 1-2 × the oral daily dose. Spot urine Na < 50-70 mmol/L at 2 h or urine < 100-150 mL/h at 6 h: double the dose; then add a thiazide or acetazolamide.",
+            "refs": [
+              "esc-hf2021"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "SBP > 110",
+            "title": "Vasodilator",
+            "detail": "GTN 10-20 mcg/min IV, titrate to 200 mcg/min.",
+            "refs": [
+              "esc-hf2021"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "SBP < 90 / cold",
+            "title": "Shock",
+            "detail": "Cardiogenic shock pathway (module 3); no vasodilators."
+          },
+          {
+            "n": 7,
+            "time": "Before discharge",
+            "title": "Guideline therapy",
+            "detail": "ACE-i/ARNI, beta-blocker, MRA, SGLT2i with rapid up-titration.",
+            "refs": [
+              "esc-hf2023"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "furosemide",
+            "role": "Decongestion",
+            "route": "IV bolus",
+            "dose": "20-40 mg (naïve) or 1-2 × daily oral dose",
+            "refs": [
+              "esc-hf2021"
+            ]
+          },
+          {
+            "drugId": "gtn",
+            "role": "Hypertensive pulmonary oedema",
+            "route": "IV infusion",
+            "dose": "10-20 mcg/min, up to 200 mcg/min",
+            "dilution": "50 mg in 50 mL = 1000 mcg/mL",
+            "workedExample": "20 mcg/min × 60 = 1200 mcg/h ÷ 1000 = 1.2 mL/h",
+            "calculatorId": "infusion-rate-fixed",
+            "refs": [
+              "esc-hf2021"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "hf-profiles",
+            "title": "Haemodynamic profiles",
+            "columns": [
+              "Profile",
+              "Signs",
+              "Treatment"
+            ],
+            "rows": [
+              [
+                "Warm-wet",
+                "Congested, perfused",
+                "Diuretic ± vasodilator"
+              ],
+              [
+                "Cold-wet",
+                "Congested, cold, oliguric, confused",
+                "Vasopressor/inotrope first, then diuretic"
+              ],
+              [
+                "Cold-dry",
+                "Hypoperfused, not congested",
+                "Cautious fluid; consider inotrope"
+              ],
+              [
+                "Warm-dry",
+                "Compensated",
+                "Optimise oral therapy"
+              ]
+            ],
+            "refs": [
+              "esc-hf2021"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "SBP < 90 with cold peripheries: cardiogenic shock."
+          },
+          {
+            "text": "New murmur after MI: papillary muscle rupture or VSR."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Routine morphine (not recommended)."
+          },
+          {
+            "text": "Nitrates in severe aortic stenosis or RV infarct."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Hypertensive 'flash' pulmonary oedema responds dramatically to high-dose nitrates with NIV."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Acute heart failure",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Suspected acute heart failure"
+          },
+          {
+            "id": "resp",
+            "type": "action",
+            "text": "Sit up, O2, CPAP/NIV if distressed; ECG, echo, BNP"
+          },
+          {
+            "id": "bp",
+            "type": "decision",
+            "text": "Systolic BP?"
+          },
+          {
+            "id": "shock",
+            "type": "end",
+            "text": "< 90 with hypoperfusion: cardiogenic shock pathway",
+            "severity": "critical"
+          },
+          {
+            "id": "high",
+            "type": "action",
+            "text": "> 110: GTN infusion + furosemide"
+          },
+          {
+            "id": "mid",
+            "type": "action",
+            "text": "90-110: furosemide; vasodilator with caution"
+          },
+          {
+            "id": "resp2",
+            "type": "decision",
+            "text": "Adequate diuresis at 2-6 h?"
+          },
+          {
+            "id": "dbl",
+            "type": "action",
+            "text": "Double loop dose; add thiazide or acetazolamide"
+          },
+          {
+            "id": "trig",
+            "type": "end",
+            "text": "Treat trigger; start guideline therapy"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "resp"
+          },
+          {
+            "from": "resp",
+            "to": "bp"
+          },
+          {
+            "from": "bp",
+            "to": "shock",
+            "label": "< 90"
+          },
+          {
+            "from": "bp",
+            "to": "high",
+            "label": "> 110"
+          },
+          {
+            "from": "bp",
+            "to": "mid",
+            "label": "90-110"
+          },
+          {
+            "from": "high",
+            "to": "resp2"
+          },
+          {
+            "from": "mid",
+            "to": "resp2"
+          },
+          {
+            "from": "resp2",
+            "to": "trig",
+            "label": "Yes"
+          },
+          {
+            "from": "resp2",
+            "to": "dbl",
+            "label": "No"
+          },
+          {
+            "from": "dbl",
+            "to": "trig"
+          }
+        ],
+        "refs": [
+          "esc-hf2021"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **ESC HF 2021:** NIV for respiratory distress; loop diuretics with early natriuresis check; vasodilators if SBP > 110; routine opioids not recommended.\n- **ESC HF 2023 update:** rapid initiation and up-titration of guideline therapy before and soon after discharge.",
+        "indiaNotes": "- Rheumatic mitral stenosis with AF is still a common cause of pulmonary oedema in India: control rate and diurese; consider balloon valvotomy.\n- Peripartum cardiomyopathy: see module 30."
+      },
+      "drugIds": [
+        "furosemide",
+        "gtn",
+        "nitroprusside"
+      ],
+      "calculatorIds": [
+        "infusion-rate-fixed"
+      ],
+      "references": [
+        "esc-hf2021",
+        "esc-hf2023"
+      ],
+      "quiz": [
+        {
+          "id": "acute-heart-failure-q1",
+          "stem": "GTN infusion is appropriate when SBP is above:",
+          "options": [
+            "80 mmHg",
+            "90 mmHg",
+            "110 mmHg",
+            "160 mmHg"
+          ],
+          "answerIndex": 2,
+          "explanation": "ESC: vasodilators if SBP > 110 mmHg."
+        },
+        {
+          "id": "acute-heart-failure-q2",
+          "stem": "Poor diuretic response at 2 h is suggested by spot urine sodium:",
+          "options": [
+            "< 50-70 mmol/L",
+            "> 100 mmol/L",
+            "> 150 mmol/L",
+            "Not measurable"
+          ],
+          "answerIndex": 0,
+          "explanation": "Double the loop dose."
+        },
+        {
+          "id": "acute-heart-failure-q3",
+          "stem": "Cold and wet patients first need:",
+          "options": [
+            "High-dose GTN",
+            "Perfusion support with vasopressor/inotrope",
+            "2 L fluid",
+            "Beta-blocker"
+          ],
+          "answerIndex": 1,
+          "explanation": "Treat hypoperfusion first."
+        }
+      ]
+    },
+    {
+      "id": "af-rapid-ventricular-response",
+      "title": "AF with rapid ventricular response in the ICU",
+      "summary": "Unstable: synchronised cardioversion (≥ 200 J biphasic). Stable: treat triggers (sepsis, hypovolaemia, K+, Mg2+, catecholamines), then rate control with a beta-blocker or diltiazem if LVEF > 40%, or amiodarone/digoxin if LVEF ≤ 40% or hypotensive. Assess anticoagulation.",
+      "viewKey": "topic:cardiac-emergencies-arrhythmias/af-rapid-ventricular-response",
+      "uiHints": {
+        "icon": "heart",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Unstable?",
+            "detail": "Shock, ischaemia, acute HF or syncope caused by the arrhythmia: synchronised DC cardioversion, initial ≥ 200 J biphasic, under sedation.",
+            "refs": [
+              "aha2025-als",
+              "esc-af2024"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0-30 min",
+            "title": "Triggers",
+            "detail": "Sepsis, hypovolaemia, hypoxia, pain, K+ < 4 or Mg2+ low, high-dose catecholamines, thyrotoxicosis, PE, alcohol withdrawal, pericarditis. Correct K+ to 4-4.5 and give Mg 2 g IV."
+          },
+          {
+            "n": 3,
+            "time": "Rate control",
+            "title": "LVEF > 40%",
+            "detail": "Metoprolol 2.5-5 mg IV (repeat to 15 mg) or esmolol infusion, or diltiazem 0.25 mg/kg IV.",
+            "refs": [
+              "esc-af2024"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Rate control",
+            "title": "LVEF ≤ 40% or hypotension",
+            "detail": "Amiodarone 300 mg IV over 1 h then 900 mg/24 h, or digoxin 0.5 mg IV then 0.25 mg 6-hourly (max 1-1.5 mg).",
+            "refs": [
+              "esc-af2024"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Target",
+            "title": "Lenient",
+            "detail": "Initial heart rate target < 110/min; tighter only if symptoms persist.",
+            "refs": [
+              "esc-af2024"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Rhythm",
+            "title": "Elective cardioversion",
+            "detail": "If AF > 24 h and not anticoagulated: TOE to exclude LA thrombus or ≥ 3 weeks anticoagulation first.",
+            "refs": [
+              "esc-af2024"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Anticoagulation",
+            "title": "Stroke risk",
+            "detail": "CHA2DS2-VA ≥ 2: anticoagulate unless bleeding risk prohibitive; reassess new-onset sepsis-related AF after recovery.",
+            "refs": [
+              "esc-af2024"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "amiodarone",
+            "role": "Rate/rhythm control (reduced EF or hypotension)",
+            "route": "IV via central line ideally",
+            "dose": "300 mg over 1 h, then 900 mg over 24 h",
+            "dilution": "300 mg in 50 mL D5 (6 mg/mL); 900 mg in 500 mL D5",
+            "refs": [
+              "esc-af2024"
+            ]
+          },
+          {
+            "drugId": "metoprolol",
+            "role": "Rate control (LVEF > 40%)",
+            "route": "IV over 2 min",
+            "dose": "2.5-5 mg, repeat every 5 min, max 15 mg",
+            "refs": [
+              "esc-af2024"
+            ]
+          },
+          {
+            "drugId": "esmolol",
+            "role": "Titratable rate control",
+            "route": "IV",
+            "dose": "500 mcg/kg over 1 min, then 50-300 mcg/kg/min",
+            "dilution": "Undiluted 10 mg/mL",
+            "workedExample": "70 kg × 100 mcg/kg/min = 7 mg/min = 420 mg/h ÷ 10 = 42 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "esc-hypem2019"
+            ]
+          },
+          {
+            "drugId": "diltiazem",
+            "role": "Rate control (LVEF > 40%)",
+            "route": "IV over 2 min",
+            "dose": "0.25 mg/kg, then 5-15 mg/h",
+            "workedExample": "70 kg: 17.5 mg ≈ 3.5 mL of 5 mg/mL",
+            "refs": [
+              "esc-af2024"
+            ]
+          },
+          {
+            "drugId": "digoxin",
+            "role": "Add-on rate control",
+            "route": "IV",
+            "dose": "0.5 mg, then 0.25 mg every 6 h to total 1-1.5 mg",
+            "refs": [
+              "esc-af2024"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Irregular wide-complex tachycardia at > 250/min (pre-excited AF): no AV-nodal blockers; cardiovert."
+          },
+          {
+            "text": "AF with hypotension in sepsis: is it the cause or the consequence? Treat sepsis first unless rate > 150 and clearly causal."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Diltiazem or beta-blocker boluses in decompensated HFrEF."
+          },
+          {
+            "text": "Cardioverting long-standing AF without anticoagulation or TOE."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "New-onset AF in septic shock often reverts as shock resolves; reducing catecholamines and correcting Mg/K helps."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "AF with rapid rate",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "AF with fast ventricular rate"
+          },
+          {
+            "id": "unst",
+            "type": "decision",
+            "text": "Haemodynamically unstable due to AF?"
+          },
+          {
+            "id": "dccv",
+            "type": "end",
+            "text": "Synchronised cardioversion ≥ 200 J; amiodarone if recurs",
+            "severity": "critical"
+          },
+          {
+            "id": "trig",
+            "type": "action",
+            "text": "Correct triggers: fluids, K+, Mg2+, sepsis, pain, catecholamines"
+          },
+          {
+            "id": "ef",
+            "type": "decision",
+            "text": "LVEF > 40% and normotensive?"
+          },
+          {
+            "id": "bb",
+            "type": "action",
+            "text": "Beta-blocker or diltiazem"
+          },
+          {
+            "id": "amio",
+            "type": "action",
+            "text": "Amiodarone and/or digoxin"
+          },
+          {
+            "id": "ac",
+            "type": "end",
+            "text": "Target HR < 110; assess anticoagulation (CHA2DS2-VA)"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "unst"
+          },
+          {
+            "from": "unst",
+            "to": "dccv",
+            "label": "Yes"
+          },
+          {
+            "from": "unst",
+            "to": "trig",
+            "label": "No"
+          },
+          {
+            "from": "trig",
+            "to": "ef"
+          },
+          {
+            "from": "ef",
+            "to": "bb",
+            "label": "Yes"
+          },
+          {
+            "from": "ef",
+            "to": "amio",
+            "label": "No"
+          },
+          {
+            "from": "bb",
+            "to": "ac"
+          },
+          {
+            "from": "amio",
+            "to": "ac"
+          }
+        ],
+        "refs": [
+          "esc-af2024"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **ESC AF 2024 (AF-CARE):** beta-blockers, diltiazem/verapamil (LVEF > 40%) or digoxin for rate control; amiodarone for acute rate control in haemodynamic instability or severely reduced EF; lenient initial target < 110/min; CHA2DS2-VA for stroke risk; TOE or 3 weeks anticoagulation before cardioversion if AF > 24 h.\n- **AHA 2025:** ≥ 200 J initial energy for AF cardioversion.",
+        "controversies": "- Anticoagulation for AF that occurs only during critical illness.",
+        "indiaNotes": "- Rheumatic mitral stenosis is a common cause of AF in India; it is a 'valvular' AF where warfarin (not DOACs) is indicated."
+      },
+      "drugIds": [
+        "amiodarone",
+        "diltiazem",
+        "metoprolol",
+        "esmolol",
+        "digoxin",
+        "magnesium-sulfate"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-min"
+      ],
+      "references": [
+        "esc-af2024",
+        "aha2025-als"
+      ],
+      "quiz": [
+        {
+          "id": "af-rapid-ventricular-response-q1",
+          "stem": "Rate control for AF in a patient with LVEF 25% and BP 95/60:",
+          "options": [
+            "Diltiazem",
+            "Metoprolol bolus",
+            "Amiodarone or digoxin",
+            "Verapamil"
+          ],
+          "answerIndex": 2,
+          "explanation": "Avoid negative inotropes in HFrEF/hypotension."
+        },
+        {
+          "id": "af-rapid-ventricular-response-q2",
+          "stem": "Initial heart-rate target in ESC 2024:",
+          "options": [
+            "< 60",
+            "< 80",
+            "< 110",
+            "< 140"
+          ],
+          "answerIndex": 2,
+          "explanation": "Lenient rate control initially."
+        },
+        {
+          "id": "af-rapid-ventricular-response-q3",
+          "stem": "Pre-excited AF should be treated with:",
+          "options": [
+            "Adenosine",
+            "Digoxin",
+            "Cardioversion",
+            "Diltiazem"
+          ],
+          "answerIndex": 2,
+          "explanation": "AV-nodal blockers can precipitate VF."
+        }
+      ],
+      "verify": [
+        {
+          "item": "24-hour cardioversion threshold",
+          "reason": "ESC 2024 uses a 24 h threshold for early cardioversion without prior anticoagulation; older guidance used 48 h. Confirm local policy."
+        }
+      ]
+    },
+    {
+      "id": "vt-wide-complex",
+      "title": "Ventricular tachycardia, wide-complex tachycardia and electrical storm",
+      "summary": "Treat a regular wide-complex tachycardia as VT until proven otherwise. Unstable: synchronised cardioversion. Stable: cardioversion under sedation or IV amiodarone. Torsades: magnesium and remove QT drugs. Electrical storm: sedate, beta-block, amiodarone, correct electrolytes, treat ischaemia.",
+      "viewKey": "topic:cardiac-emergencies-arrhythmias/vt-wide-complex",
+      "uiHints": {
+        "icon": "heart",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Pulse?",
+            "detail": "Pulseless: ALS shockable pathway (module 2). Pulse present: assess stability.",
+            "refs": [
+              "aha2025-als"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Unstable",
+            "title": "Synchronised cardioversion",
+            "detail": "120-200 J biphasic, escalate; sedate if conscious. Polymorphic VT: unsynchronised shock.",
+            "refs": [
+              "aha2025-als"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Stable monomorphic",
+            "title": "Cardioversion or drug",
+            "detail": "ESC 2022 favours synchronised cardioversion if anaesthesia risk is low; otherwise amiodarone 300 mg IV over 10-60 min (procainamide where available). Adenosine only for regular monomorphic WCT when SVT with aberrancy is likely.",
+            "refs": [
+              "esc-va2022",
+              "aha2025-als"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Torsades",
+            "title": "QT-related",
+            "detail": "Magnesium 2 g IV; stop QT-prolonging drugs; K+ to 4.5-5; if bradycardia-dependent, isoprenaline or overdrive pacing.",
+            "refs": [
+              "esc-va2022"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Electrical storm",
+            "title": "≥ 3 sustained VT/VF in 24 h",
+            "detail": "Deep sedation (± intubation), beta-blockade (propranolol or esmolol), amiodarone, correct K+/Mg2+, urgent angiography if ischaemia; ICD reprogramming; ablation or MCS in refractory cases.",
+            "refs": [
+              "esc-va2022"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "After",
+            "title": "Find the cause",
+            "detail": "Ischaemia, scar, cardiomyopathy, myocarditis, electrolytes, drugs (QT), channelopathy. Cardiology referral for ICD/ablation."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "amiodarone",
+            "role": "Stable VT / storm",
+            "route": "IV",
+            "dose": "300 mg over 10-60 min, then 900 mg/24 h",
+            "refs": [
+              "esc-va2022"
+            ]
+          },
+          {
+            "drugId": "magnesium-sulfate",
+            "role": "Torsades de pointes",
+            "route": "IV",
+            "dose": "2 g over 10-15 min; repeat or infuse 3-10 mg/min if recurs",
+            "refs": [
+              "esc-va2022"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "wct-clues",
+            "title": "Clues that a wide-complex tachycardia is VT",
+            "columns": [
+              "Feature",
+              "Suggests VT"
+            ],
+            "rows": [
+              [
+                "History",
+                "Previous MI, cardiomyopathy, structural heart disease"
+              ],
+              [
+                "AV dissociation",
+                "P waves marching through, capture or fusion beats"
+              ],
+              [
+                "QRS width",
+                "> 160 ms (LBBB-like) or > 140 ms (RBBB-like)"
+              ],
+              [
+                "Concordance",
+                "All precordial complexes positive or all negative"
+              ],
+              [
+                "Axis",
+                "Extreme (northwest) axis"
+              ]
+            ],
+            "refs": [
+              "esc-va2022"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Do not give verapamil or diltiazem for wide-complex tachycardia."
+          },
+          {
+            "text": "QTc > 500 ms with ectopy: high torsades risk."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Assuming haemodynamic stability means SVT; VT can be well tolerated."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Incessant VT with fever and new heart failure in a young Indian patient: consider myocarditis, including scrub typhus, dengue or diphtheria."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Regular wide-complex tachycardia with pulse",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Wide-complex tachycardia with a pulse"
+          },
+          {
+            "id": "unst",
+            "type": "decision",
+            "text": "Unstable?"
+          },
+          {
+            "id": "dccv",
+            "type": "end",
+            "text": "Synchronised cardioversion (unsynchronised if polymorphic)",
+            "severity": "critical"
+          },
+          {
+            "id": "poly",
+            "type": "decision",
+            "text": "Polymorphic with long QT (torsades)?"
+          },
+          {
+            "id": "mg",
+            "type": "end",
+            "text": "Magnesium 2 g, stop QT drugs, K+ 4.5-5, pacing/isoprenaline"
+          },
+          {
+            "id": "mono",
+            "type": "action",
+            "text": "Assume VT: sedated cardioversion or amiodarone 300 mg"
+          },
+          {
+            "id": "after",
+            "type": "end",
+            "text": "Correct electrolytes, look for ischaemia, cardiology review"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "unst"
+          },
+          {
+            "from": "unst",
+            "to": "dccv",
+            "label": "Yes"
+          },
+          {
+            "from": "unst",
+            "to": "poly",
+            "label": "No"
+          },
+          {
+            "from": "poly",
+            "to": "mg",
+            "label": "Yes"
+          },
+          {
+            "from": "poly",
+            "to": "mono",
+            "label": "No"
+          },
+          {
+            "from": "mono",
+            "to": "after"
+          }
+        ],
+        "refs": [
+          "esc-va2022",
+          "aha2025-als"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **ESC VA 2022:** synchronised cardioversion first line for tolerated sustained monomorphic VT when anaesthetic risk is low; procainamide or amiodarone otherwise; management of electrical storm and torsades.\n- **AHA 2025:** unsynchronised shocks for polymorphic VT; avoid calcium-channel blockers in WCT.",
+        "indiaNotes": "- Procainamide is not available in India; amiodarone and lidocaine are the IV options.\n- Organophosphate and aluminium phosphide poisoning cause QT prolongation and ventricular arrhythmias (module 28)."
+      },
+      "drugIds": [
+        "amiodarone",
+        "magnesium-sulfate",
+        "adenosine",
+        "esmolol",
+        "isoprenaline"
+      ],
+      "calculatorIds": [
+        "qtc-bazett"
+      ],
+      "references": [
+        "esc-va2022",
+        "aha2025-als"
+      ],
+      "quiz": [
+        {
+          "id": "vt-wide-complex-q1",
+          "stem": "Drug contraindicated in undifferentiated wide-complex tachycardia:",
+          "options": [
+            "Amiodarone",
+            "Verapamil",
+            "Magnesium",
+            "Lidocaine"
+          ],
+          "answerIndex": 1,
+          "explanation": "Verapamil/diltiazem can cause collapse in VT."
+        },
+        {
+          "id": "vt-wide-complex-q2",
+          "stem": "Electrical storm is defined as:",
+          "options": [
+            "≥ 3 sustained VT/VF episodes in 24 h",
+            "Any VT",
+            "VF once",
+            "PVCs > 10/min"
+          ],
+          "answerIndex": 0,
+          "explanation": "≥ 3 sustained episodes within 24 h."
+        },
+        {
+          "id": "vt-wide-complex-q3",
+          "stem": "First-line drug for torsades:",
+          "options": [
+            "Amiodarone",
+            "Magnesium sulfate",
+            "Sotalol",
+            "Adenosine"
+          ],
+          "answerIndex": 1,
+          "explanation": "Magnesium 2 g IV."
+        }
+      ]
+    },
+    {
+      "id": "bradycardia-pacing",
+      "title": "Bradycardia, heart block and temporary pacing",
+      "summary": "Look for adverse features and reversible causes (drugs, K+, ischaemia, hypothermia, hypothyroidism, raised ICP). Atropine first; if it fails or the block is infranodal, adrenaline or isoprenaline infusion and transcutaneous then transvenous pacing.",
+      "viewKey": "topic:cardiac-emergencies-arrhythmias/bradycardia-pacing",
+      "uiHints": {
+        "icon": "heart",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Assess",
+            "detail": "Shock, syncope, ischaemia, heart failure, pauses > 3 s, Mobitz II, complete heart block with wide QRS, ventricular standstill.",
+            "refs": [
+              "esc-pacing2021"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0-5 min",
+            "title": "Atropine",
+            "detail": "0.5-1 mg IV every 3-5 min to 3 mg (ineffective after heart transplant and in infranodal block).",
+            "refs": [
+              "aha2025-als"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "5-15 min",
+            "title": "Chronotropes",
+            "detail": "Adrenaline 2-10 mcg/min or isoprenaline 1-10 mcg/min (dopamine 5-20 mcg/kg/min alternative).",
+            "refs": [
+              "esc-pacing2021",
+              "aha2025-als"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Pacing",
+            "title": "Transcutaneous",
+            "detail": "Rate 60-70, increase output until capture; confirm with femoral pulse; analgesia/sedation. Bridge to transvenous."
+          },
+          {
+            "n": 5,
+            "time": "Pacing",
+            "title": "Transvenous",
+            "detail": "Right internal jugular or left subclavian with ultrasound; ventricular capture threshold < 1 mA, output 3 × threshold.",
+            "refs": [
+              "esc-pacing2021"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Reversible causes",
+            "title": "Treat",
+            "detail": "Beta-blocker (glucagon), calcium-channel blocker (calcium, high-dose insulin), digoxin (Fab fragments), hyperkalaemia (calcium), inferior MI (often resolves after reperfusion), hypothermia, hypothyroidism, raised ICP, Lyme or infiltrative disease.",
+            "refs": [
+              "esc-pacing2021"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "atropine",
+            "role": "First-line",
+            "route": "IV push",
+            "dose": "0.5-1 mg every 3-5 min (max 3 mg)",
+            "dilution": "0.6 mg/mL: 1 mg ≈ 1.7 mL",
+            "refs": [
+              "aha2025-als"
+            ]
+          },
+          {
+            "drugId": "isoprenaline",
+            "role": "Bridge to pacing",
+            "route": "IV infusion",
+            "dose": "1-10 mcg/min",
+            "verify": "Check ampoule concentration.",
+            "refs": [
+              "esc-pacing2021"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Complete heart block with broad escape or pauses: pace early."
+          },
+          {
+            "text": "Bradycardia with hypertension and irregular breathing: Cushing response (raised ICP)."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Repeated atropine for infranodal block."
+          },
+          {
+            "text": "Assuming electrical capture means mechanical capture."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Yellow oleander (Thevetia) poisoning in South India causes digoxin-like bradyarrhythmias; anti-digoxin Fab is effective but rarely available (module 28)."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Bradycardia",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Heart rate < 50 with symptoms"
+          },
+          {
+            "id": "adv",
+            "type": "decision",
+            "text": "Adverse features or high-risk block?"
+          },
+          {
+            "id": "obs",
+            "type": "end",
+            "text": "Observe, monitor, treat cause"
+          },
+          {
+            "id": "atr",
+            "type": "action",
+            "text": "Atropine 0.5-1 mg, repeat to 3 mg"
+          },
+          {
+            "id": "resp",
+            "type": "decision",
+            "text": "Adequate response?"
+          },
+          {
+            "id": "cause",
+            "type": "end",
+            "text": "Treat cause; observe for recurrence"
+          },
+          {
+            "id": "inf",
+            "type": "action",
+            "text": "Adrenaline or isoprenaline infusion; transcutaneous pacing",
+            "severity": "high"
+          },
+          {
+            "id": "tvp",
+            "type": "end",
+            "text": "Transvenous pacing; treat reversible cause"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "adv"
+          },
+          {
+            "from": "adv",
+            "to": "obs",
+            "label": "No"
+          },
+          {
+            "from": "adv",
+            "to": "atr",
+            "label": "Yes"
+          },
+          {
+            "from": "atr",
+            "to": "resp"
+          },
+          {
+            "from": "resp",
+            "to": "cause",
+            "label": "Yes"
+          },
+          {
+            "from": "resp",
+            "to": "inf",
+            "label": "No"
+          },
+          {
+            "from": "inf",
+            "to": "tvp"
+          }
+        ],
+        "refs": [
+          "esc-pacing2021",
+          "aha2025-als"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **ESC pacing 2021:** acute management of bradycardia with atropine, isoprenaline/adrenaline, and temporary pacing only when needed (transvenous pacing has complications).\n- **AHA 2025:** atropine 1 mg; adrenaline infusion or pacing if refractory.",
+        "indiaNotes": "- Temporary pacing leads and pacing boxes may be held only by cardiology; know where they are at night."
+      },
+      "drugIds": [
+        "atropine",
+        "isoprenaline"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "esc-pacing2021",
+        "aha2025-als"
+      ],
+      "quiz": [
+        {
+          "id": "bradycardia-pacing-q1",
+          "stem": "Atropine is unlikely to work in:",
+          "options": [
+            "Sinus bradycardia",
+            "Mobitz II / CHB with wide escape",
+            "Vagal bradycardia",
+            "Inferior MI with first-degree block"
+          ],
+          "answerIndex": 1,
+          "explanation": "Infranodal block does not respond."
+        },
+        {
+          "id": "bradycardia-pacing-q2",
+          "stem": "During transcutaneous pacing, mechanical capture is confirmed by:",
+          "options": [
+            "Pacing spikes",
+            "Palpable femoral pulse",
+            "Patient twitching",
+            "Wide QRS"
+          ],
+          "answerIndex": 1,
+          "explanation": "Check a femoral pulse or arterial trace."
+        },
+        {
+          "id": "bradycardia-pacing-q3",
+          "stem": "Calcium-channel blocker overdose bradycardia: key antidotes include:",
+          "options": [
+            "Naloxone",
+            "Calcium and high-dose insulin",
+            "Flumazenil",
+            "Atropine alone"
+          ],
+          "answerIndex": 1,
+          "explanation": "Calcium, high-dose insulin euglycaemia, vasopressors."
+        }
+      ]
+    },
+    {
+      "id": "hypertensive-emergency",
+      "title": "Hypertensive emergencies",
+      "summary": "Hypertensive emergency means severe BP elevation with acute organ damage. Lower BP with titratable IV drugs to a target and timeline set by the organ involved; avoid precipitous falls except in aortic dissection, pulmonary oedema and eclampsia.",
+      "viewKey": "topic:cardiac-emergencies-arrhythmias/hypertensive-emergency",
+      "uiHints": {
+        "icon": "heart",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Confirm organ damage",
+            "detail": "Encephalopathy, stroke/ICH, ACS, pulmonary oedema, aortic dissection, AKI, TMA, retinopathy (malignant), eclampsia. No organ damage = urgency: oral therapy, not IV.",
+            "refs": [
+              "esc-hypem2019"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0-60 min",
+            "title": "Pick target by organ",
+            "detail": "See table. General: MAP fall ≤ 20-25% in the first hours.",
+            "refs": [
+              "esc-hypem2019"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "0-60 min",
+            "title": "Pick drug",
+            "detail": "Labetalol (most), nicardipine (stroke, encephalopathy, AKI), GTN (ACS, pulmonary oedema), esmolol + vasodilator (dissection), labetalol or nicardipine plus magnesium (eclampsia).",
+            "refs": [
+              "esc-hypem2019"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Monitor",
+            "title": "Arterial line",
+            "detail": "BP every 5-15 min during titration; neurological checks."
+          },
+          {
+            "n": 5,
+            "time": "Next",
+            "title": "Find cause",
+            "detail": "Non-adherence, renal artery stenosis, phaeochromocytoma, drugs (cocaine, amphetamine, MAOI), pre-eclampsia, renal disease."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "labetalol",
+            "role": "General first-line",
+            "route": "IV",
+            "dose": "20 mg over 2 min, repeat 20-80 mg every 10 min (max 300 mg) or infusion 1-2 mg/min",
+            "dilution": "Undiluted 5 mg/mL",
+            "workedExample": "1 mg/min = 60 mg/h ÷ 5 = 12 mL/h",
+            "calculatorId": "infusion-rate-fixed",
+            "refs": [
+              "esc-hypem2019"
+            ]
+          },
+          {
+            "drugId": "nicardipine",
+            "role": "Stroke, encephalopathy, AKI",
+            "route": "IV infusion",
+            "dose": "5 mg/h, +2.5 mg/h every 5-15 min, max 15 mg/h",
+            "refs": [
+              "esc-hypem2019"
+            ]
+          },
+          {
+            "drugId": "esmolol",
+            "role": "Aortic dissection (with vasodilator)",
+            "route": "IV",
+            "dose": "500 mcg/kg bolus, then 50-300 mcg/kg/min",
+            "target": "HR < 60, SBP < 120 mmHg",
+            "refs": [
+              "esc-hypem2019"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "bp-targets",
+            "title": "BP targets by clinical presentation (ESC 2019 position)",
+            "columns": [
+              "Presentation",
+              "Timeline",
+              "Target",
+              "First-line"
+            ],
+            "rows": [
+              [
+                "Malignant hypertension ± TMA/AKI",
+                "Several hours",
+                "MAP −20-25%",
+                "Labetalol, nicardipine"
+              ],
+              [
+                "Hypertensive encephalopathy",
+                "Immediate",
+                "MAP −20-25%",
+                "Labetalol, nicardipine"
+              ],
+              [
+                "Acute ischaemic stroke, BP > 220/120 (no lysis)",
+                "1 h",
+                "MAP −15%",
+                "Labetalol, nicardipine"
+              ],
+              [
+                "Ischaemic stroke for thrombolysis, BP > 185/110",
+                "1 h",
+                "< 180/105",
+                "Labetalol, nicardipine"
+              ],
+              [
+                "Acute ICH, SBP > 180",
+                "Immediate",
+                "SBP 130-180",
+                "Labetalol, nicardipine"
+              ],
+              [
+                "ACS",
+                "Immediate",
+                "SBP < 140",
+                "GTN, labetalol"
+              ],
+              [
+                "Acute cardiogenic pulmonary oedema",
+                "Immediate",
+                "SBP < 140",
+                "GTN, nitroprusside (+ loop diuretic)"
+              ],
+              [
+                "Acute aortic dissection",
+                "Immediate",
+                "SBP < 120 and HR < 60",
+                "Esmolol + GTN or nitroprusside"
+              ],
+              [
+                "Eclampsia / severe pre-eclampsia",
+                "Immediate",
+                "SBP < 160 and DBP < 105",
+                "Labetalol or nicardipine + magnesium"
+              ]
+            ],
+            "refs": [
+              "esc-hypem2019"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Neurological decline during BP lowering: you may be lowering too fast."
+          },
+          {
+            "text": "Severe hypertension with tachycardia, sweating, headache: phaeochromocytoma or sympathomimetic toxicity (no beta-blocker first)."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Sublingual nifedipine (uncontrolled falls, stroke, MI)."
+          },
+          {
+            "text": "Treating asymptomatic severe hypertension with IV drugs."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "In stroke and ICH, see module 20 for current targets (INTERACT trials)."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Severe hypertension",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "BP > 180/120 mmHg"
+          },
+          {
+            "id": "org",
+            "type": "decision",
+            "text": "Acute organ damage?"
+          },
+          {
+            "id": "urg",
+            "type": "end",
+            "text": "Urgency: oral therapy, review in 24-48 h"
+          },
+          {
+            "id": "type",
+            "type": "decision",
+            "text": "Which organ?"
+          },
+          {
+            "id": "diss",
+            "type": "end",
+            "text": "Dissection: esmolol then vasodilator; SBP < 120, HR < 60 now",
+            "severity": "critical"
+          },
+          {
+            "id": "pe",
+            "type": "end",
+            "text": "Pulmonary oedema/ACS: GTN; SBP < 140"
+          },
+          {
+            "id": "neuro",
+            "type": "end",
+            "text": "Stroke/ICH: organ-specific targets (module 20)"
+          },
+          {
+            "id": "gen",
+            "type": "end",
+            "text": "Encephalopathy/malignant: labetalol or nicardipine; MAP −20-25%"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "org"
+          },
+          {
+            "from": "org",
+            "to": "urg",
+            "label": "No"
+          },
+          {
+            "from": "org",
+            "to": "type",
+            "label": "Yes"
+          },
+          {
+            "from": "type",
+            "to": "diss",
+            "label": "Aortic dissection"
+          },
+          {
+            "from": "type",
+            "to": "pe",
+            "label": "Heart / lungs"
+          },
+          {
+            "from": "type",
+            "to": "neuro",
+            "label": "Brain (stroke/ICH)"
+          },
+          {
+            "from": "type",
+            "to": "gen",
+            "label": "Encephalopathy, kidney, retina"
+          }
+        ],
+        "refs": [
+          "esc-hypem2019"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **ESC Council on Hypertension 2019:** presentation-specific targets and preferred drugs for hypertensive emergencies.\n- **ESC 2024 hypertension guideline:** reaffirms the approach and the distinction from hypertensive urgency.",
+        "indiaNotes": "- Uncontrolled hypertension is common and under-treated in India; malignant hypertension with AKI is a frequent ICU admission in young adults.\n- IV nicardipine is often unavailable; labetalol, GTN and nitroprusside are the mainstays."
+      },
+      "drugIds": [
+        "labetalol",
+        "nicardipine",
+        "gtn",
+        "esmolol",
+        "nitroprusside"
+      ],
+      "calculatorIds": [
+        "mean-arterial-pressure",
+        "infusion-rate-fixed"
+      ],
+      "references": [
+        "esc-hypem2019",
+        "esc-htn2024"
+      ],
+      "quiz": [
+        {
+          "id": "hypertensive-emergency-q1",
+          "stem": "Target in acute aortic dissection:",
+          "options": [
+            "MAP −25% over 24 h",
+            "SBP < 120 and HR < 60 immediately",
+            "SBP < 180",
+            "No lowering"
+          ],
+          "answerIndex": 1,
+          "explanation": "Rapid reduction of shear stress."
+        },
+        {
+          "id": "hypertensive-emergency-q2",
+          "stem": "Hypertensive urgency without organ damage is treated with:",
+          "options": [
+            "IV labetalol",
+            "Oral agents and follow-up",
+            "Nitroprusside",
+            "Sublingual nifedipine"
+          ],
+          "answerIndex": 1,
+          "explanation": "No IV therapy needed."
+        },
+        {
+          "id": "hypertensive-emergency-q3",
+          "stem": "Before thrombolysis for stroke, BP must be below:",
+          "options": [
+            "220/120",
+            "185/110",
+            "140/90",
+            "160/100"
+          ],
+          "answerIndex": 1,
+          "explanation": "< 185/110, then < 180/105 for 24 h."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "aspirin",
+      "name": "Aspirin",
+      "class": "Antiplatelet (COX inhibitor)",
+      "indications": "All ACS unless contraindicated.",
+      "adultDose": "Loading 150-300 mg orally (chewed, non-enteric coated) or 75-250 mg IV; then 75-100 mg daily.",
+      "preparationIndia": "75 mg, 150 mg and 325 mg tablets; chewable formulations widely available.",
+      "cautions": "Active bleeding, true allergy.",
+      "refs": [
+        "esc-acs2023"
+      ]
+    },
+    {
+      "id": "ticagrelor",
+      "name": "Ticagrelor",
+      "class": "P2Y12 inhibitor",
+      "indications": "ACS (with aspirin), PCI.",
+      "adultDose": "180 mg loading, then 90 mg twice daily for 12 months (default).",
+      "preparationIndia": "90 mg tablets (can be crushed for NG tube).",
+      "cautions": "Dyspnoea, bradyarrhythmia, bleeding; not with fibrinolysis (use clopidogrel).",
+      "refs": [
+        "esc-acs2023"
+      ]
+    },
+    {
+      "id": "clopidogrel",
+      "name": "Clopidogrel",
+      "class": "P2Y12 inhibitor",
+      "indications": "With fibrinolysis; when ticagrelor/prasugrel unavailable or contraindicated; patients on oral anticoagulants.",
+      "adultDose": "PCI: 600 mg loading then 75 mg daily. With fibrinolysis: 300 mg loading (75 mg if age > 75 years), then 75 mg daily.",
+      "preparationIndia": "75 mg and 300 mg tablets; inexpensive.",
+      "cautions": "Variable response (CYP2C19 polymorphism, common in South Asians).",
+      "refs": [
+        "esc-acs2023"
+      ]
+    },
+    {
+      "id": "heparin",
+      "name": "Unfractionated heparin (UFH)",
+      "class": "Indirect thrombin and Xa inhibitor",
+      "indications": "Primary PCI; adjunct to fibrinolysis; NSTE-ACS when early invasive strategy; AF or LV thrombus when rapid reversal may be needed.",
+      "adultDose": "Primary PCI: 70-100 U/kg IV bolus. With fibrinolysis: 60 U/kg bolus (max 4000 U), then 12 U/kg/h (max 1000 U/h), aPTT 1.5-2.0 × control (≈ 50-70 s) for 24-48 h.",
+      "preparationIndia": "5000 U/mL (5 mL vials = 25 000 U). Infusion 25 000 U in 50 mL = 500 U/mL.",
+      "cautions": "Heparin-induced thrombocytopenia; bleeding; monitor platelets.",
+      "monitoring": "aPTT (or anti-Xa) 6 h after start and each change; platelets on alternate days.",
+      "refs": [
+        "esc-acs2023"
+      ]
+    },
+    {
+      "id": "enoxaparin",
+      "name": "Enoxaparin",
+      "class": "Low-molecular-weight heparin",
+      "indications": "NSTE-ACS; adjunct to fibrinolysis; VTE treatment.",
+      "adultDose": "NSTE-ACS: 1 mg/kg SC every 12 h. With fibrinolysis: age < 75: 30 mg IV bolus + 1 mg/kg SC 15 min later then every 12 h (first 2 doses max 100 mg); age ≥ 75: no bolus, 0.75 mg/kg SC every 12 h (first 2 doses max 75 mg). CrCl < 30: 1 mg/kg once daily.",
+      "preparationIndia": "Prefilled syringes 40, 60, 80 mg; biosimilars available.",
+      "cautions": "Accumulates in renal failure; partial protamine reversal only.",
+      "refs": [
+        "esc-acs2023"
+      ]
+    },
+    {
+      "id": "tenecteplase",
+      "name": "Tenecteplase",
+      "class": "Fibrinolytic (tPA variant)",
+      "indications": "STEMI within 12 h when primary PCI cannot be done within 120 min of diagnosis.",
+      "adultDose": "Single IV bolus by weight: < 60 kg 30 mg; 60-69 kg 35 mg; 70-79 kg 40 mg; 80-89 kg 45 mg; ≥ 90 kg 50 mg. Half dose in patients ≥ 75 years.",
+      "preparationIndia": "40 mg vials (8000 U) reconstituted to 5 mg/mL; Indian biosimilars available (20, 30, 40 mg).",
+      "cautions": "Absolute contraindications: previous ICH or unknown-origin stroke, ischaemic stroke within 6 months, CNS tumour/AV malformation, major trauma/surgery/head injury within 1 month, GI bleed within 1 month, bleeding disorder, aortic dissection, non-compressible punctures within 24 h.",
+      "verify": "Check the biosimilar product's own dose table.",
+      "refs": [
+        "esc-acs2023"
+      ]
+    },
+    {
+      "id": "streptokinase",
+      "name": "Streptokinase",
+      "class": "Fibrinolytic (non-fibrin-specific)",
+      "indications": "STEMI fibrinolysis where tenecteplase/alteplase are unavailable or unaffordable.",
+      "adultDose": "1.5 million units IV over 30-60 min.",
+      "preparationIndia": "1.5 MU vials; reconstitute in 100 mL NS.",
+      "cautions": "Hypotension during infusion (slow or pause), allergic reactions; antibodies form, do not repeat after 5 days. Less effective than fibrin-specific agents.",
+      "refs": [
+        "esc-acs2023"
+      ]
+    },
+    {
+      "id": "gtn",
+      "name": "Glyceryl trinitrate (nitroglycerin)",
+      "class": "Nitrate vasodilator",
+      "indications": "Acute pulmonary oedema with SBP > 110 mmHg; ongoing ischaemic pain; hypertensive emergency with ACS or pulmonary oedema.",
+      "adultDose": "Sublingual 0.4-0.5 mg; IV 10-20 mcg/min, increase by 5-10 mcg/min every 3-5 min, up to 200 mcg/min.",
+      "preparationIndia": "5 mg/mL ampoules (25 mg/5 mL). 50 mg in 50 mL NS/D5 = 1 mg/mL (1000 mcg/mL). Use non-PVC tubing if possible.",
+      "cautions": "Avoid with SBP < 90, RV infarction, severe aortic stenosis, PDE-5 inhibitor within 24-48 h. Headache; tachyphylaxis.",
+      "refs": [
+        "esc-hf2021",
+        "esc-acs2023"
+      ]
+    },
+    {
+      "id": "furosemide",
+      "name": "Furosemide",
+      "class": "Loop diuretic",
+      "indications": "Congestion in acute heart failure.",
+      "adultDose": "Diuretic-naïve: 20-40 mg IV. On oral loop diuretic: IV dose 1-2 × the daily oral dose. Check spot urine sodium after 2 h (target > 50-70 mmol/L) or urine output > 100-150 mL/h over 6 h; if inadequate, double the dose (max ~400-600 mg/day).",
+      "preparationIndia": "10 mg/mL, 2 mL ampoules; infusion 250 mg in 50 mL.",
+      "cautions": "Hypokalaemia, hypomagnesaemia, ototoxicity with rapid high doses (≤ 4 mg/min).",
+      "refs": [
+        "esc-hf2021"
+      ]
+    },
+    {
+      "id": "amiodarone",
+      "name": "Amiodarone",
+      "class": "Class III antiarrhythmic",
+      "indications": "AF rate or rhythm control in critically ill or reduced EF; haemodynamically tolerated VT; electrical storm.",
+      "adultDose": "300 mg (or 5-7 mg/kg) IV over 20-60 min, then 900 mg over 24 h; total ≤ 2.2 g/24 h.",
+      "preparationIndia": "150 mg/3 mL ampoules; dilute in 5% dextrose; central line preferred for infusion.",
+      "cautions": "Hypotension, bradycardia, phlebitis, QT prolongation; thyroid, liver and lung toxicity with prolonged use; interacts with warfarin and digoxin.",
+      "refs": [
+        "esc-af2024",
+        "esc-va2022"
+      ]
+    },
+    {
+      "id": "diltiazem",
+      "name": "Diltiazem",
+      "class": "Non-dihydropyridine calcium channel blocker",
+      "indications": "AF/flutter rate control when LVEF > 40%.",
+      "adultDose": "0.25 mg/kg IV over 2 min (≈ 15-20 mg), repeat 0.35 mg/kg after 15 min if needed; infusion 5-15 mg/h.",
+      "preparationIndia": "25 mg/5 mL injection (availability variable).",
+      "cautions": "Avoid in HFrEF, hypotension, pre-excited AF, wide-complex tachycardia.",
+      "verify": "Confirm IV diltiazem availability locally.",
+      "refs": [
+        "esc-af2024"
+      ]
+    },
+    {
+      "id": "metoprolol",
+      "name": "Metoprolol",
+      "class": "Beta-1 selective blocker",
+      "indications": "AF rate control; ACS (tachycardia, hypertension, no heart failure).",
+      "adultDose": "IV 2.5-5 mg over 2 min, repeat every 5 min to max 15 mg. Oral 25-100 mg twice daily.",
+      "preparationIndia": "5 mg/5 mL injection; tablets 25, 50 mg.",
+      "cautions": "Avoid in acute HF, shock, bradycardia, severe bronchospasm, cocaine-related ACS.",
+      "refs": [
+        "esc-af2024",
+        "esc-acs2023"
+      ]
+    },
+    {
+      "id": "esmolol",
+      "name": "Esmolol",
+      "class": "Ultra-short-acting beta-1 blocker",
+      "indications": "Rate control in AF when titratable control is needed; aortic dissection (with vasodilator); hypertensive emergencies with tachycardia.",
+      "adultDose": "500 mcg/kg over 1 min, then 50-300 mcg/kg/min.",
+      "preparationIndia": "100 mg/10 mL vials (10 mg/mL); 2.5 g/250 mL premixed bags in some hospitals.",
+      "cautions": "Hypotension; bradycardia.",
+      "refs": [
+        "esc-hypem2019"
+      ]
+    },
+    {
+      "id": "digoxin",
+      "name": "Digoxin",
+      "class": "Cardiac glycoside",
+      "indications": "AF rate control, especially with reduced EF or hypotension, as add-on.",
+      "adultDose": "IV loading 0.5 mg, then 0.25 mg every 6 h to total 1-1.5 mg (reduce in renal failure and elderly). Maintenance 0.0625-0.25 mg daily by renal function.",
+      "preparationIndia": "0.25 mg/mL injection (2 mL = 0.5 mg); 0.25 mg tablets.",
+      "renalHepatic": "Renally cleared: reduce dose; target level 0.5-0.9 ng/mL.",
+      "cautions": "Toxicity with hypokalaemia, hypomagnesaemia, hypercalcaemia, amiodarone; avoid in pre-excitation.",
+      "verify": "Check local ampoule strength.",
+      "refs": [
+        "esc-af2024"
+      ]
+    },
+    {
+      "id": "adenosine",
+      "name": "Adenosine",
+      "class": "Purinergic AV nodal blocker",
+      "indications": "Regular narrow-complex tachycardia (SVT); diagnostic in stable regular monomorphic wide-complex tachycardia.",
+      "adultDose": "6 mg rapid IV push with 20 mL flush; then 12 mg (repeat 12 mg once per ESC/AHA practice). 3 mg if central line, heart transplant, or on dipyridamole.",
+      "preparationIndia": "3 mg/mL (2 mL = 6 mg) vials.",
+      "cautions": "Asthma (bronchospasm), pre-excited AF, irregular or polymorphic WCT; transient asystole is expected.",
+      "refs": [
+        "aha2025-als"
+      ]
+    },
+    {
+      "id": "atropine",
+      "name": "Atropine",
+      "class": "Antimuscarinic",
+      "indications": "Symptomatic bradycardia.",
+      "adultDose": "0.5-1 mg IV every 3-5 min to max 3 mg.",
+      "preparationIndia": "0.6 mg/mL ampoules.",
+      "cautions": "Ineffective in heart transplant and infranodal block (Mobitz II, wide-escape CHB).",
+      "refs": [
+        "esc-pacing2021",
+        "aha2025-als"
+      ]
+    },
+    {
+      "id": "isoprenaline",
+      "name": "Isoprenaline (isoproterenol)",
+      "class": "Non-selective beta agonist",
+      "indications": "Bradycardia bridge to pacing; bradycardia-dependent torsades.",
+      "adultDose": "Infusion 1-10 mcg/min (start 2-5 mcg/min).",
+      "preparationIndia": "Availability limited; 2 mg/mL or 0.2 mg/mL ampoules depending on supplier.",
+      "cautions": "Tachyarrhythmia, hypotension (beta-2 vasodilation), myocardial ischaemia.",
+      "verify": "Check product concentration carefully.",
+      "refs": [
+        "esc-pacing2021"
+      ]
+    },
+    {
+      "id": "magnesium-sulfate",
+      "name": "Magnesium sulfate",
+      "class": "Electrolyte",
+      "indications": "Torsades de pointes; adjunct in AF and VT when Mg low.",
+      "adultDose": "2 g IV over 10-15 min; may repeat; aim Mg > 1 mmol/L.",
+      "preparationIndia": "50% (500 mg/mL) 2 mL ampoules.",
+      "cautions": "Hypotension, loss of reflexes at high levels; caution in renal failure.",
+      "refs": [
+        "esc-va2022"
+      ]
+    },
+    {
+      "id": "labetalol",
+      "name": "Labetalol",
+      "class": "Alpha-1 and beta blocker",
+      "indications": "Hypertensive emergencies (encephalopathy, stroke, pre-eclampsia, aortic dissection with tachycardia control).",
+      "adultDose": "0.25-0.5 mg/kg IV bolus (typically 20 mg) over 2 min, repeat 20-80 mg every 10 min (max 300 mg); or infusion 1-2 mg/min (some protocols up to 4 mg/min) until target, then reduce.",
+      "preparationIndia": "5 mg/mL, 4 mL ampoules (20 mg). Infusion: undiluted 5 mg/mL or 100 mg in 100 mL.",
+      "cautions": "Bradycardia, heart block, acute HF, asthma.",
+      "refs": [
+        "esc-hypem2019"
+      ]
+    },
+    {
+      "id": "nicardipine",
+      "name": "Nicardipine",
+      "class": "Dihydropyridine calcium channel blocker",
+      "indications": "Hypertensive emergencies (stroke, encephalopathy, AKI).",
+      "adultDose": "5 mg/h IV, increase by 2.5 mg/h every 5-15 min to max 15 mg/h.",
+      "preparationIndia": "Limited availability; check local supply.",
+      "cautions": "Reflex tachycardia; avoid in severe aortic stenosis and acute HF.",
+      "verify": "Availability in India is limited.",
+      "refs": [
+        "esc-hypem2019"
+      ]
+    },
+    {
+      "id": "nitroprusside",
+      "name": "Sodium nitroprusside",
+      "class": "Arterial and venous vasodilator (NO donor)",
+      "indications": "Hypertensive emergencies with acute LV failure or aortic dissection (with beta-blocker) when other agents fail.",
+      "adultDose": "0.3-10 mcg/kg/min; use the lowest dose and shortest duration (< 48-72 h).",
+      "preparationIndia": "50 mg vials; 50 mg in 50 mL D5 = 1000 mcg/mL; protect from light.",
+      "cautions": "Cyanide and thiocyanate toxicity (renal/hepatic failure, high doses); rebound; raises ICP.",
+      "refs": [
+        "esc-hypem2019"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "esc-acs2023",
+      "citation": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826",
+      "url": "https://doi.org/10.1093/eurheartj/ehad191",
+      "year": 2023,
+      "doi": "10.1093/eurheartj/ehad191",
+      "type": "guideline"
+    },
+    {
+      "id": "acc-acs2025",
+      "citation": "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI guideline for the management of patients with acute coronary syndromes. Circulation. 2025",
+      "url": "https://doi.org/10.1161/CIR.0000000000001309",
+      "year": 2025,
+      "doi": "10.1161/CIR.0000000000001309",
+      "type": "guideline"
+    },
+    {
+      "id": "esc-hf2021",
+      "citation": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726",
+      "url": "https://doi.org/10.1093/eurheartj/ehab368",
+      "year": 2021,
+      "doi": "10.1093/eurheartj/ehab368",
+      "type": "guideline"
+    },
+    {
+      "id": "esc-hf2023",
+      "citation": "McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639",
+      "url": "https://doi.org/10.1093/eurheartj/ehad195",
+      "year": 2023,
+      "doi": "10.1093/eurheartj/ehad195",
+      "type": "guideline"
+    },
+    {
+      "id": "esc-af2024",
+      "citation": "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation. Eur Heart J. 2024;45(36):3314-3414",
+      "url": "https://doi.org/10.1093/eurheartj/ehae176",
+      "year": 2024,
+      "doi": "10.1093/eurheartj/ehae176",
+      "type": "guideline"
+    },
+    {
+      "id": "esc-va2022",
+      "citation": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126",
+      "url": "https://doi.org/10.1093/eurheartj/ehac262",
+      "year": 2022,
+      "doi": "10.1093/eurheartj/ehac262",
+      "type": "guideline"
+    },
+    {
+      "id": "esc-pacing2021",
+      "citation": "Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427-3520",
+      "url": "https://doi.org/10.1093/eurheartj/ehab364",
+      "year": 2021,
+      "doi": "10.1093/eurheartj/ehab364",
+      "type": "guideline"
+    },
+    {
+      "id": "aha2025-als",
+      "citation": "Part 9: Adult Advanced Life Support: 2025 American Heart Association Guidelines for CPR and ECC. Circulation. 2025",
+      "url": "https://doi.org/10.1161/CIR.0000000000001376",
+      "year": 2025,
+      "doi": "10.1161/CIR.0000000000001376",
+      "type": "guideline"
+    },
+    {
+      "id": "esc-hypem2019",
+      "citation": "van den Born BH, Lip GYH, Brguljan-Hitij J, et al. ESC Council on hypertension position document on the management of hypertensive emergencies. Eur Heart J Cardiovasc Pharmacother. 2019;5(1):37-46",
+      "url": "https://doi.org/10.1093/ehjcvp/pvy032",
+      "year": 2019,
+      "doi": "10.1093/ehjcvp/pvy032",
+      "type": "consensus"
+    },
+    {
+      "id": "esc-htn2024",
+      "citation": "McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018",
+      "url": "https://doi.org/10.1093/eurheartj/ehae178",
+      "year": 2024,
+      "doi": "10.1093/eurheartj/ehae178",
+      "type": "guideline"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Indian thrombolytic availability",
+      "reason": "Tenecteplase (including Indian biosimilars), reteplase, alteplase and streptokinase are all used in India; streptokinase remains common in public hospitals because of cost. Confirm the agent and dosing used locally."
+    },
+    {
+      "item": "Nicardipine and clevidipine",
+      "reason": "IV nicardipine has limited availability in India; clevidipine is generally unavailable. Labetalol, GTN, esmolol and sodium nitroprusside are the usual IV agents."
+    }
+  ]
+}

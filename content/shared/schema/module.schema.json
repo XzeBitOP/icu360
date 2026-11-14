@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://icu360.local/schema/module.schema.json",
+  "title": "ICU 360 module",
+  "description": "One clinical module (source of truth). See CONTENT_FORMAT.md. Schema version 1.0.0.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "number", "folder", "section", "phase", "title", "summary", "tags", "relatedModules", "version", "lastReviewed", "reviewStatus", "uiHints", "viewKey", "topics", "drugs", "references"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "id": { "$ref": "#/$defs/slug" },
+    "number": { "type": "integer", "minimum": 1, "maximum": 99 },
+    "folder": { "type": "string", "pattern": "^[0-9]{2}-[a-z0-9]+(-[a-z0-9]+)*$" },
+    "section": {
+      "type": "object", "additionalProperties": false, "required": ["id", "title"],
+      "properties": { "id": { "enum": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"] }, "title": { "type": "string" } }
+    },
+    "phase": { "enum": [1, 2, 3] },
+    "title": { "type": "string", "minLength": 3 },
+    "summary": { "type": "string", "minLength": 20 },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "relatedModules": { "type": "array", "items": { "$ref": "#/$defs/slug" } },
+    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "lastReviewed": { "type": ["string", "null"], "format": "date" },
+    "reviewStatus": { "enum": ["draft-needs-consultant-review", "consultant-reviewed", "published"] },
+    "authors": { "type": "array", "items": { "type": "string" } },
+    "uiHints": { "$ref": "#/$defs/uiHints" },
+    "viewKey": { "type": "string", "pattern": "^module:[a-z0-9-]+$" },
+    "topics": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/topic" } },
+    "drugs": { "type": "array", "items": { "$ref": "#/$defs/drug" } },
+    "references": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/reference" } },
+    "verify": { "type": "array", "items": { "$ref": "#/$defs/verifyItem" } }
+  },
+  "$defs": {
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "refIds": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9-]+$" } },
+    "uiHints": {
+      "type": "object", "additionalProperties": false, "required": ["icon", "accent"],
+      "properties": {
+        "icon": { "type": "string", "description": "Lucide icon name, kebab-case, e.g. heart-pulse" },
+        "accent": { "enum": ["critical", "high", "standard"], "description": "critical = red emergency styling; high = amber; standard = teal" }
+      }
+    },
+    "verifyItem": {
+      "type": "object", "additionalProperties": false, "required": ["item", "reason"],
+      "properties": { "item": { "type": "string" }, "reason": { "type": "string" } }
+    },
+    "reference": {
+      "type": "object", "additionalProperties": false, "required": ["id", "citation", "url", "year"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "citation": { "type": "string", "minLength": 10 },
+        "url": { "type": "string", "pattern": "^https://" },
+        "year": { "type": "integer", "minimum": 1950, "maximum": 2030 },
+        "doi": { "type": "string" },
+        "type": { "enum": ["guideline", "trial", "review", "consensus", "textbook", "web"] }
+      }
+    },
+    "callout": {
+      "type": "object", "additionalProperties": false, "required": ["text"],
+      "properties": { "text": { "type": "string" }, "refs": { "$ref": "#/$defs/refIds" } }
+    },
+    "step": {
+      "type": "object", "additionalProperties": false, "required": ["n", "title", "detail"],
+      "properties": {
+        "n": { "type": "integer", "minimum": 1 },
+        "time": { "type": "string", "description": "Short time chip, e.g. '0 min', '≤ 1 h', 'ASAP'" },
+        "title": { "type": "string" },
+        "detail": { "type": "string" },
+        "refs": { "$ref": "#/$defs/refIds" }
+      }
+    },
+    "doseCard": {
+      "type": "object", "additionalProperties": false, "required": ["drugId", "role", "route", "dose"],
+      "properties": {
+        "drugId": { "$ref": "#/$defs/slug" },
+        "role": { "type": "string", "description": "e.g. 'First-line vasopressor'" },
+        "route": { "type": "string" },
+        "dose": { "type": "string", "description": "Human-readable adult dose with units" },
+        "doseRange": {
+          "type": "object", "additionalProperties": false, "required": ["unit"],
+          "properties": { "min": { "type": "number" }, "max": { "type": "number" }, "unit": { "type": "string" } }
+        },
+        "dilution": { "type": "string", "description": "Common Indian ICU preparation, e.g. '4 mg in 50 mL NS = 80 mcg/mL'" },
+        "target": { "type": "string" },
+        "workedExample": { "type": "string", "description": "Adult example with weight, e.g. '70 kg at 0.1 mcg/kg/min = 5.3 mL/h'" },
+        "calculatorId": { "$ref": "#/$defs/slug" },
+        "notes": { "type": "string" },
+        "verify": { "type": "string", "description": "Why this value needs consultant verification" },
+        "refs": { "$ref": "#/$defs/refIds" }
+      }
+    },
+    "table": {
+      "type": "object", "additionalProperties": false, "required": ["id", "title", "columns", "rows"],
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "title": { "type": "string" },
+        "columns": { "type": "array", "minItems": 2, "items": { "type": "string" } },
+        "rows": { "type": "array", "minItems": 1, "items": { "type": "array", "items": { "type": "string" } } },
+        "caption": { "type": "string" },
+        "refs": { "$ref": "#/$defs/refIds" }
+      }
+    },
+    "bedside": {
+      "type": "object", "additionalProperties": false, "required": ["steps", "redFlags"],
+      "properties": {
+        "definition": { "$ref": "#/$defs/callout" },
+        "steps": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/step" } },
+        "doseCards": { "type": "array", "items": { "$ref": "#/$defs/doseCard" } },
+        "tables": { "type": "array", "items": { "$ref": "#/$defs/table" } },
+        "redFlags": { "type": "array", "items": { "$ref": "#/$defs/callout" } },
+        "pitfalls": { "type": "array", "items": { "$ref": "#/$defs/callout" } },
+        "pearls": { "type": "array", "items": { "$ref": "#/$defs/callout" } }
+      }
+    },
+    "node": {
+      "type": "object", "additionalProperties": false, "required": ["id", "type", "text"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+        "type": { "enum": ["start", "action", "decision", "end"] },
+        "text": { "type": "string" },
+        "detail": { "type": "string" },
+        "severity": { "enum": ["critical", "high", "standard"] }
+      }
+    },
+    "edge": {
+      "type": "object", "additionalProperties": false, "required": ["from", "to"],
+      "properties": { "from": { "type": "string" }, "to": { "type": "string" }, "label": { "type": "string" } }
+    },
+    "algorithm": {
+      "type": "object", "additionalProperties": false, "required": ["title", "nodes", "edges"],
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "nodes": { "type": "array", "minItems": 2, "items": { "$ref": "#/$defs/node" } },
+        "edges": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/edge" } },
+        "refs": { "$ref": "#/$defs/refIds" }
+      }
+    },
+    "consultantNotes": {
+      "type": "object", "additionalProperties": false, "required": ["evidence"],
+      "properties": {
+        "pathophysiology": { "type": "string", "description": "Markdown" },
+        "evidence": { "type": "string", "description": "Markdown: key trials and guideline basis" },
+        "controversies": { "type": "string", "description": "Markdown" },
+        "indiaNotes": { "type": "string", "description": "Markdown: Indian availability, practice, epidemiology" }
+      }
+    },
+    "quizItem": {
+      "type": "object", "additionalProperties": false, "required": ["id", "stem", "options", "answerIndex", "explanation"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "stem": { "type": "string" },
+        "options": { "type": "array", "minItems": 4, "maxItems": 5, "items": { "type": "string" } },
+        "answerIndex": { "type": "integer", "minimum": 0, "maximum": 4 },
+        "explanation": { "type": "string" }
+      }
+    },
+    "topic": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "title", "summary", "viewKey", "uiHints", "bedside", "algorithm", "consultantNotes", "drugIds", "calculatorIds", "references", "quiz"],
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "title": { "type": "string" },
+        "summary": { "type": "string" },
+        "viewKey": { "type": "string", "pattern": "^topic:[a-z0-9-]+/[a-z0-9-]+$" },
+        "uiHints": { "$ref": "#/$defs/uiHints" },
+        "bedside": { "$ref": "#/$defs/bedside" },
+        "algorithm": { "oneOf": [{ "$ref": "#/$defs/algorithm" }, { "type": "null" }] },
+        "consultantNotes": { "$ref": "#/$defs/consultantNotes" },
+        "drugIds": { "type": "array", "items": { "$ref": "#/$defs/slug" } },
+        "calculatorIds": { "type": "array", "items": { "$ref": "#/$defs/slug" } },
+        "references": { "$ref": "#/$defs/refIds" },
+        "quiz": { "type": "array", "minItems": 3, "maxItems": 5, "items": { "$ref": "#/$defs/quizItem" } },
+        "verify": { "type": "array", "items": { "$ref": "#/$defs/verifyItem" } }
+      }
+    },
+    "drug": {
+      "type": "object", "additionalProperties": false, "required": ["id", "name", "class", "indications", "adultDose", "refs"],
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "name": { "type": "string" },
+        "class": { "type": "string" },
+        "indications": { "type": "string" },
+        "adultDose": { "type": "string" },
+        "preparationIndia": { "type": "string", "description": "Common Indian presentation and ICU dilution" },
+        "renalHepatic": { "type": "string" },
+        "cautions": { "type": "string" },
+        "monitoring": { "type": "string" },
+        "verify": { "type": "string" },
+        "refs": { "$ref": "#/$defs/refIds" }
+      }
+    }
+  }
+}

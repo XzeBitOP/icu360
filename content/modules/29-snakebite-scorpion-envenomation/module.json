@@ -1,0 +1,1508 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "snakebite-scorpion-envenomation",
+  "number": 29,
+  "folder": "29-snakebite-scorpion-envenomation",
+  "section": {
+    "id": "H",
+    "title": "Toxicology and envenomation"
+  },
+  "phase": 1,
+  "title": "Snakebite, scorpion and envenomation",
+  "summary": "Snakebite and envenomation for Indian ICUs: recognising neurotoxic and haemotoxic syndromes, the 20-minute whole blood clotting test, ASV dosing and reactions under the national protocol, ventilation and the neostigmine trial for neuroparalysis, scorpion sting with prazosin, and bee and wasp stings.",
+  "tags": [
+    "snakebite",
+    "big four",
+    "cobra",
+    "krait",
+    "Russell's viper",
+    "saw-scaled viper",
+    "20WBCT",
+    "VICC",
+    "anti-snake venom",
+    "ASV",
+    "anaphylaxis",
+    "neuroparalysis",
+    "neostigmine",
+    "scorpion",
+    "Mesobuthus tamulus",
+    "prazosin",
+    "autonomic storm",
+    "bee sting",
+    "wasp",
+    "hornet",
+    "rhabdomyolysis"
+  ],
+  "relatedModules": [
+    "airway-management",
+    "mechanical-ventilation",
+    "haematology-coagulation-transfusion",
+    "aki-renal-drug-dosing",
+    "renal-replacement-therapy",
+    "cardiac-emergencies-arrhythmias",
+    "shock-vasoactive-support"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "bug-off",
+    "accent": "critical"
+  },
+  "viewKey": "module:snakebite-scorpion-envenomation",
+  "topics": [
+    {
+      "id": "snakebite-syndromes",
+      "title": "Recognising envenoming: Big Four and syndromes",
+      "summary": "Treat the syndrome, not the snake. Classify early as neurotoxic (ptosis, bulbar weakness, respiratory failure) or haemotoxic (incoagulable blood, bleeding, swelling, AKI), apply sensible first aid, avoid harmful traditional measures, and observe every bite for at least 24 h.",
+      "viewKey": "topic:snakebite-scorpion-envenomation/snakebite-syndromes",
+      "uiHints": {
+        "icon": "bug-off",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Pre-hospital",
+            "title": "First aid: 'Do it R.I.G.H.T.'",
+            "detail": "Reassure, Immobilise the limb like a fracture, Get to hospital, Tell the doctor of symptoms. No cutting, suction, tight tourniquet or herbal remedies.",
+            "refs": [
+              "mohfw-stg2016"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0 min",
+            "title": "Triage",
+            "detail": "ABC, IV access in unbitten limb, 20WBCT, bite site and swelling (mark the edge with time), ptosis, single breath count, urine colour.",
+            "refs": [
+              "who-searo2016"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Tourniquet",
+            "title": "Remove carefully",
+            "detail": "Release slowly only after IV access and ASV ready – sudden release can precipitate collapse from venom bolus.",
+            "refs": [
+              "mohfw-stg2016"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Classify",
+            "title": "Syndrome",
+            "detail": "Neurotoxic: cobra (local swelling/necrosis) or krait (painless night bite on the floor, abdominal pain, little local sign). Haemotoxic: Russell's or saw-scaled viper (swelling, bleeding, incoagulable 20WBCT, AKI in Russell's).",
+            "refs": [
+              "who-searo2016"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Observe",
+            "title": "24 h minimum",
+            "detail": "Even with no signs; krait envenoming can be delayed several hours. Repeat 20WBCT and neuro checks.",
+            "refs": [
+              "mohfw-stg2016"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Supportive",
+            "title": "Avoid harm",
+            "detail": "Paracetamol for pain (no NSAIDs, no IM injections in coagulopathy); tetanus toxoid once coagulopathy corrected; antibiotics only for infected wounds."
+          }
+        ],
+        "tables": [
+          {
+            "id": "big-four",
+            "title": "India's Big Four: typical syndromes",
+            "columns": [
+              "Snake",
+              "Local signs",
+              "Systemic picture",
+              "Typical complications"
+            ],
+            "rows": [
+              [
+                "Spectacled cobra (Naja naja)",
+                "Painful swelling, blistering, necrosis",
+                "Descending paralysis (ptosis, bulbar, respiratory)",
+                "Respiratory failure, local necrosis"
+              ],
+              [
+                "Common krait (Bungarus caeruleus)",
+                "Minimal or none",
+                "Night-time bite while sleeping; abdominal pain, then paralysis",
+                "Prolonged ventilation; poor neostigmine response"
+              ],
+              [
+                "Russell's viper (Daboia russelii)",
+                "Swelling, bleeding from bite",
+                "VICC, bleeding, hypotension",
+                "AKI, hypopituitarism, capillary leak"
+              ],
+              [
+                "Saw-scaled viper (Echis carinatus)",
+                "Swelling",
+                "VICC, bleeding",
+                "Bleeding; AKI less common"
+              ]
+            ],
+            "caption": "Syndromes overlap (e.g. Russell's viper in parts of south India causes neurotoxicity). Polyvalent ASV covers all four.",
+            "refs": [
+              "who-searo2016"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Ptosis, nasal voice, dysphagia or pooling secretions: impending respiratory failure."
+          },
+          {
+            "text": "Spontaneous bleeding, haematuria, or incoagulable 20WBCT."
+          },
+          {
+            "text": "Dark urine or falling urine output (rhabdomyolysis/AKI)."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Discharging a 'dry bite' before 24 h – krait envenoming is often delayed and painless."
+          },
+          {
+            "text": "Waiting to identify the snake before giving ASV."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Early morning abdominal pain and ptosis in someone sleeping on the floor in monsoon: think krait."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Snakebite triage",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Suspected snakebite"
+          },
+          {
+            "id": "ab",
+            "type": "action",
+            "text": "ABC, IV access, 20WBCT, neuro and local exam"
+          },
+          {
+            "id": "env",
+            "type": "decision",
+            "text": "Signs of systemic envenoming or rapidly progressive swelling?"
+          },
+          {
+            "id": "obs",
+            "type": "end",
+            "text": "Observe ≥ 24 h with repeat 20WBCT and neuro checks"
+          },
+          {
+            "id": "syn",
+            "type": "decision",
+            "text": "Dominant syndrome?"
+          },
+          {
+            "id": "neuro",
+            "type": "end",
+            "text": "Neurotoxic pathway: ASV, airway, neostigmine trial"
+          },
+          {
+            "id": "haem",
+            "type": "end",
+            "text": "Haemotoxic pathway: ASV, repeat 20WBCT at 6 h, renal monitoring"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "ab"
+          },
+          {
+            "from": "ab",
+            "to": "env"
+          },
+          {
+            "from": "env",
+            "to": "obs",
+            "label": "No"
+          },
+          {
+            "from": "env",
+            "to": "syn",
+            "label": "Yes"
+          },
+          {
+            "from": "syn",
+            "to": "neuro",
+            "label": "Neurotoxic"
+          },
+          {
+            "from": "syn",
+            "to": "haem",
+            "label": "Haemotoxic"
+          }
+        ],
+        "refs": [
+          "mohfw-stg2016"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "- Neurotoxins: cobra alpha-neurotoxins are postsynaptic (reversible, neostigmine-responsive); krait beta-bungarotoxins are presynaptic (destroy nerve terminals, slow recovery).\n- Viper venoms activate factor X and prothrombin, causing venom-induced consumption coagulopathy (VICC).",
+        "evidence": "- Management recommendations are largely consensus-based (MoHFW STG 2016; WHO SEARO 2016).",
+        "indiaNotes": "- India accounts for close to half of global snakebite deaths (most rural, monsoon season, farmers).\n- NAPSE (2024) aims to halve snakebite deaths by 2030."
+      },
+      "drugIds": [
+        "asv"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "mohfw-stg2016",
+        "who-searo2016"
+      ],
+      "quiz": [
+        {
+          "id": "snakebite-syndromes-q1",
+          "stem": "Recommended first aid for a limb bite:",
+          "options": [
+            "Tight tourniquet",
+            "Incision and suction",
+            "Immobilise and transport",
+            "Ice packs"
+          ],
+          "answerIndex": 2,
+          "explanation": "Do it R.I.G.H.T."
+        },
+        {
+          "id": "snakebite-syndromes-q2",
+          "stem": "Painless night bite with abdominal pain then ptosis suggests:",
+          "options": [
+            "Russell's viper",
+            "Common krait",
+            "Saw-scaled viper",
+            "Python"
+          ],
+          "answerIndex": 1,
+          "explanation": "Krait bites have minimal local signs."
+        },
+        {
+          "id": "snakebite-syndromes-q3",
+          "stem": "Minimum observation for a suspected bite without signs:",
+          "options": [
+            "2 h",
+            "6 h",
+            "24 h",
+            "72 h"
+          ],
+          "answerIndex": 2,
+          "explanation": "Delayed envenoming occurs."
+        }
+      ]
+    },
+    {
+      "id": "wbct-coagulopathy",
+      "title": "20WBCT and venom-induced coagulopathy",
+      "summary": "The 20-minute whole blood clotting test is the bedside decider for haemotoxic envenoming in India. Use a new clean dry glass tube, do it serially, and do not let a single normal result reassure you; ASV, not FFP, corrects VICC.",
+      "viewKey": "topic:snakebite-scorpion-envenomation/wbct-coagulopathy",
+      "uiHints": {
+        "icon": "bug-off",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Method",
+            "title": "Standard technique",
+            "detail": "2 mL fresh venous blood into a NEW, CLEAN, DRY GLASS tube; leave undisturbed 20 min at room temperature; tilt once. Blood flows = incoagulable (positive).",
+            "refs": [
+              "mohfw-stg2016"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Accuracy",
+            "title": "Know the limits",
+            "detail": "Pooled sensitivity ~84% and specificity ~91% for INR > 1.4; a clotted result does not exclude evolving coagulopathy.",
+            "refs": [
+              "lamb2021"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Schedule",
+            "title": "Repeat",
+            "detail": "If clotted: hourly for 3 h, then 6-hourly for 24 h. If non-clotting: repeat 6 h after each ASV loading dose.",
+            "refs": [
+              "mohfw-stg2016"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Labs",
+            "title": "Where available",
+            "detail": "PT/INR, fibrinogen, platelets, creatinine, CK, urine for blood/myoglobin; INR does not replace serial 20WBCT in resource-limited settings."
+          },
+          {
+            "n": 5,
+            "time": "Treat",
+            "title": "ASV first",
+            "detail": "Clotting factors (FFP/cryo) only for life-threatening bleeding after ASV; they are consumed by circulating venom otherwise.",
+            "refs": [
+              "who-searo2016"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Spontaneous systemic bleeding beyond 20 min from bite: give ASV without waiting for 20WBCT."
+          },
+          {
+            "text": "Intracranial bleeding: altered sensorium or focal signs in a viper bite."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Using plastic tubes or reused vials – false 'non-clotting' results."
+          },
+          {
+            "text": "Shaking the tube or checking repeatedly before 20 min."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Hump-nosed pit viper coagulopathy (Western Ghats) does not respond to Indian polyvalent ASV and can last up to 3 weeks."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "20WBCT-guided ASV",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Possible viper bite"
+          },
+          {
+            "id": "t",
+            "type": "action",
+            "text": "20WBCT (glass tube)"
+          },
+          {
+            "id": "r",
+            "type": "decision",
+            "text": "Blood clotted at 20 min?"
+          },
+          {
+            "id": "rep",
+            "type": "end",
+            "text": "Repeat hourly ×3, then 6-hourly to 24 h"
+          },
+          {
+            "id": "asv",
+            "type": "action",
+            "text": "ASV 10 vials over 1 h"
+          },
+          {
+            "id": "r6",
+            "type": "decision",
+            "text": "20WBCT at 6 h still non-clotting?"
+          },
+          {
+            "id": "more",
+            "type": "action",
+            "text": "Repeat ASV 10 vials (usual max 25-30)"
+          },
+          {
+            "id": "ok",
+            "type": "end",
+            "text": "Monitor renal function; recheck at 6-12 h"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "t"
+          },
+          {
+            "from": "t",
+            "to": "r"
+          },
+          {
+            "from": "r",
+            "to": "rep",
+            "label": "Clotted"
+          },
+          {
+            "from": "r",
+            "to": "asv",
+            "label": "Not clotted"
+          },
+          {
+            "from": "asv",
+            "to": "r6"
+          },
+          {
+            "from": "r6",
+            "to": "more",
+            "label": "Yes"
+          },
+          {
+            "from": "r6",
+            "to": "ok",
+            "label": "No"
+          },
+          {
+            "from": "more",
+            "to": "r6"
+          }
+        ],
+        "refs": [
+          "mohfw-stg2016"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Lamb 2021:** meta-analysis of 20WBCT diagnostic accuracy across 12 studies.",
+        "controversies": "- Low-dose versus high-dose ASV: the Indian STG adopted lower-dose infusion regimens as equally effective and ASV-sparing.",
+        "indiaNotes": "- Most district hospitals rely on 20WBCT; keep a stock of glass tubes specifically for it."
+      },
+      "drugIds": [
+        "asv"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "lamb2021",
+        "mohfw-stg2016"
+      ],
+      "quiz": [
+        {
+          "id": "wbct-coagulopathy-q1",
+          "stem": "20WBCT tube must be:",
+          "options": [
+            "Plastic EDTA",
+            "New, clean, dry glass",
+            "Citrate",
+            "Any vial"
+          ],
+          "answerIndex": 1,
+          "explanation": "Glass activates contact clotting."
+        },
+        {
+          "id": "wbct-coagulopathy-q2",
+          "stem": "If 20WBCT is non-clotting after the first ASV dose, retest at:",
+          "options": [
+            "30 min",
+            "1 h",
+            "6 h",
+            "24 h"
+          ],
+          "answerIndex": 2,
+          "explanation": "Liver needs ~6 h to resynthesise clotting factors."
+        },
+        {
+          "id": "wbct-coagulopathy-q3",
+          "stem": "First-line treatment of venom-induced coagulopathy:",
+          "options": [
+            "FFP",
+            "Vitamin K",
+            "ASV",
+            "Heparin"
+          ],
+          "answerIndex": 2,
+          "explanation": "Neutralise venom first."
+        }
+      ]
+    },
+    {
+      "id": "asv-dosing-reactions",
+      "title": "ASV dosing and adverse reactions",
+      "summary": "Give 10 vials of polyvalent ASV IV over an hour for systemic envenoming, the same dose for children and pregnant women, with no test dose and adrenaline drawn up. Repeat by the 6-hour rule (haemotoxic) or 1-2-hour rule (neurotoxic), and manage reactions by pausing, adrenaline IM and restarting.",
+      "viewKey": "topic:snakebite-scorpion-envenomation/asv-dosing-reactions",
+      "uiHints": {
+        "icon": "bug-off",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Indication",
+            "title": "Systemic envenoming",
+            "detail": "Incoagulable 20WBCT, spontaneous bleeding, neurotoxicity, shock, AKI, rhabdomyolysis, or local swelling > half the limb / rapidly progressive.",
+            "refs": [
+              "mohfw-stg2016"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Prepare",
+            "title": "Safety first",
+            "detail": "Adrenaline 0.5 mg drawn up, resuscitation trolley; no test dose; no prophylactic premedication requirement.",
+            "refs": [
+              "who-searo2016"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Give",
+            "title": "Loading",
+            "detail": "10 vials in ~200 mL NS over 1 h (same in children and pregnancy).",
+            "refs": [
+              "mohfw-stg2016"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Repeat",
+            "title": "Rules",
+            "detail": "Haemotoxic: 20WBCT at 6 h, repeat 10 vials if non-clotting, or if bleeding persists 1 h after the first dose. Neurotoxic: repeat 10 vials if no improvement 1-2 h after the first dose.",
+            "refs": [
+              "mohfw-stg2016"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Reaction",
+            "title": "Manage",
+            "detail": "Stop infusion; adrenaline 0.5 mg IM (0.01 mg/kg child); antihistamine and hydrocortisone as adjuncts; restart ASV slowly once settled.",
+            "refs": [
+              "mohfw-stg2016"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Later",
+            "title": "Serum sickness",
+            "detail": "Fever, arthralgia, rash 5-24 days later: antihistamine, prednisolone short course.",
+            "refs": [
+              "who-searo2016"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "asv",
+            "role": "Systemic envenoming (adult or child)",
+            "route": "IV infusion",
+            "dose": "10 vials over 1 h; repeat 10 vials per rules",
+            "workedExample": "A 22 kg child with incoagulable 20WBCT receives 10 vials, not a weight-based reduced dose.",
+            "notes": "Usual maximum: haemotoxic 25-30 vials, neurotoxic 20 vials (MoHFW STG).",
+            "verify": "Confirm vial potency and state protocol limits.",
+            "refs": [
+              "mohfw-stg2016"
+            ]
+          },
+          {
+            "drugId": "adrenaline",
+            "role": "ASV reaction / anaphylaxis",
+            "route": "IM anterolateral thigh",
+            "dose": "0.5 mg (0.01 mg/kg in children, max 0.5 mg); repeat every 5-15 min",
+            "doseRange": {
+              "min": 0.3,
+              "max": 0.5,
+              "unit": "mg"
+            },
+            "workedExample": "22 kg child: 0.22 mg = 0.22 mL of 1 mg/mL.",
+            "refs": [
+              "mohfw-stg2016",
+              "wao2020"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Hypotension, stridor or bronchospasm during ASV: anaphylaxis – adrenaline IM now."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Giving an intradermal test dose – delays treatment and does not predict reactions."
+          },
+          {
+            "text": "Continuing ASV beyond maximum in hump-nosed pit viper or non-Big Four bites."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "ASV cannot reverse established tissue damage (AKI, necrosis); treat early and support organs."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "ASV administration",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Systemic envenoming"
+          },
+          {
+            "id": "p",
+            "type": "action",
+            "text": "Adrenaline drawn up; start ASV 10 vials over 1 h"
+          },
+          {
+            "id": "rx",
+            "type": "decision",
+            "text": "Reaction?"
+          },
+          {
+            "id": "ad",
+            "type": "action",
+            "text": "Stop ASV; adrenaline 0.5 mg IM; restart slowly"
+          },
+          {
+            "id": "re",
+            "type": "decision",
+            "text": "Response by repeat rule?"
+          },
+          {
+            "id": "rep",
+            "type": "action",
+            "text": "Repeat 10 vials"
+          },
+          {
+            "id": "done",
+            "type": "end",
+            "text": "Supportive care and monitoring"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "p"
+          },
+          {
+            "from": "p",
+            "to": "rx"
+          },
+          {
+            "from": "rx",
+            "to": "ad",
+            "label": "Yes"
+          },
+          {
+            "from": "rx",
+            "to": "re",
+            "label": "No"
+          },
+          {
+            "from": "ad",
+            "to": "re"
+          },
+          {
+            "from": "re",
+            "to": "done",
+            "label": "Yes"
+          },
+          {
+            "from": "re",
+            "to": "rep",
+            "label": "No"
+          },
+          {
+            "from": "rep",
+            "to": "re"
+          }
+        ],
+        "refs": [
+          "mohfw-stg2016"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- Dosing is consensus-based; Indian STG adopted low-dose infusion as non-inferior to high-dose bolus regimens.",
+        "indiaNotes": "- Shortages are common; refer to a centre only after the first 10 vials, and never during the ASV drip."
+      },
+      "drugIds": [
+        "asv",
+        "adrenaline"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "mohfw-stg2016",
+        "who-searo2016"
+      ],
+      "quiz": [
+        {
+          "id": "asv-dosing-reactions-q1",
+          "stem": "ASV dose for an 8-year-old with haemotoxic envenoming:",
+          "options": [
+            "1 vial per 10 kg",
+            "Half adult dose",
+            "Same as adult (10 vials)",
+            "2 vials"
+          ],
+          "answerIndex": 2,
+          "explanation": "Venom load, not weight."
+        },
+        {
+          "id": "asv-dosing-reactions-q2",
+          "stem": "ASV test dose is:",
+          "options": [
+            "Mandatory",
+            "Not recommended",
+            "Only in children",
+            "Only in pregnancy"
+          ],
+          "answerIndex": 1,
+          "explanation": "Poor predictive value."
+        },
+        {
+          "id": "asv-dosing-reactions-q3",
+          "stem": "First drug for an ASV anaphylactic reaction:",
+          "options": [
+            "Hydrocortisone",
+            "Chlorpheniramine",
+            "Adrenaline IM",
+            "Salbutamol"
+          ],
+          "answerIndex": 2,
+          "explanation": "Adrenaline is first-line."
+        }
+      ]
+    },
+    {
+      "id": "neuroparalysis-ventilation",
+      "title": "Neuroparalysis: airway, ventilation and neostigmine",
+      "summary": "Neurotoxic envenoming kills by respiratory failure, which is completely survivable with timely intubation and ventilation. Monitor bulbar function and breath count, intubate early, give ASV, and try atropine-neostigmine, which helps cobra bites far more than krait.",
+      "viewKey": "topic:snakebite-scorpion-envenomation/neuroparalysis-ventilation",
+      "uiHints": {
+        "icon": "bug-off",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Monitor",
+            "title": "Bedside",
+            "detail": "Ptosis, neck flexion weakness, bulbar signs (nasal voice, pooling), single breath count < 20 or inability to complete sentences, paradoxical breathing; hourly.",
+            "refs": [
+              "who-searo2016"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Airway",
+            "title": "Early",
+            "detail": "Intubate for bulbar palsy with pooling or respiratory distress; bag-valve-mask ventilation during transfer if needed.",
+            "refs": [
+              "mohfw-stg2016"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Neostigmine trial",
+            "title": "Cobra especially",
+            "detail": "Atropine 0.6 mg IV, then neostigmine 1.5 mg IV; improvement in ptosis/strength within 1 h indicates response – continue 0.5 mg every 30 min, then taper.",
+            "refs": [
+              "mohfw-stg2016"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Ventilate",
+            "title": "Supportive",
+            "detail": "Lung-protective volume-control ventilation; sedation; DVT prophylaxis once coagulation normal. Krait paralysis may need days to weeks of ventilation."
+          },
+          {
+            "n": 5,
+            "time": "Wean",
+            "title": "Clinical",
+            "detail": "Return of ptosis/neck strength, breath count, adequate cough; tracheostomy if prolonged."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "neostigmine",
+            "role": "Neostigmine trial (adult)",
+            "route": "IV",
+            "dose": "1.5 mg after atropine 0.6 mg; if response, 0.5 mg every 30 min",
+            "notes": "Child: atropine 0.05 mg/kg + neostigmine 0.04 mg/kg.",
+            "verify": "Repeat-dose schedule differs between versions of national protocol.",
+            "refs": [
+              "mohfw-stg2016"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Pooling of secretions or inability to lift the head: secure the airway."
+          },
+          {
+            "text": "Fixed dilated pupils in krait bite do not indicate brain death – full recovery is possible."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Declaring brain death in a totally paralysed krait patient."
+          },
+          {
+            "text": "Neostigmine without atropine pre-treatment."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Patients may be fully aware while paralysed: sedate and talk to them."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Neurotoxic envenoming",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Ptosis or weakness after bite"
+          },
+          {
+            "id": "asv",
+            "type": "action",
+            "text": "ASV 10 vials over 1 h; atropine then neostigmine trial"
+          },
+          {
+            "id": "air",
+            "type": "decision",
+            "text": "Bulbar palsy, pooling or respiratory distress?"
+          },
+          {
+            "id": "int",
+            "type": "action",
+            "text": "Intubate and ventilate"
+          },
+          {
+            "id": "imp",
+            "type": "decision",
+            "text": "Improvement at 1-2 h?"
+          },
+          {
+            "id": "rep",
+            "type": "action",
+            "text": "Repeat ASV 10 vials (max ~20)"
+          },
+          {
+            "id": "sup",
+            "type": "end",
+            "text": "Continue supportive care; wean on recovery"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "asv"
+          },
+          {
+            "from": "asv",
+            "to": "air"
+          },
+          {
+            "from": "air",
+            "to": "int",
+            "label": "Yes"
+          },
+          {
+            "from": "air",
+            "to": "imp",
+            "label": "No"
+          },
+          {
+            "from": "int",
+            "to": "imp"
+          },
+          {
+            "from": "imp",
+            "to": "sup",
+            "label": "Yes"
+          },
+          {
+            "from": "imp",
+            "to": "rep",
+            "label": "No"
+          },
+          {
+            "from": "rep",
+            "to": "sup"
+          }
+        ],
+        "refs": [
+          "mohfw-stg2016"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "- Krait presynaptic toxin destroys nerve terminals; recovery requires regeneration, so ASV and neostigmine help little once paralysis is established.",
+        "evidence": "- Neostigmine evidence is from case series and small studies (WHO SEARO 2016).",
+        "indiaNotes": "- Mechanical ventilation availability is the main determinant of survival in krait bites; Ambu-bag ventilation by relatives has saved lives during transfer."
+      },
+      "drugIds": [
+        "asv",
+        "neostigmine",
+        "atropine"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "mohfw-stg2016",
+        "who-searo2016"
+      ],
+      "quiz": [
+        {
+          "id": "neuroparalysis-ventilation-q1",
+          "stem": "Neostigmine response is best in bites by:",
+          "options": [
+            "Krait",
+            "Cobra",
+            "Russell's viper",
+            "Saw-scaled viper"
+          ],
+          "answerIndex": 1,
+          "explanation": "Postsynaptic toxins."
+        },
+        {
+          "id": "neuroparalysis-ventilation-q2",
+          "stem": "Before neostigmine always give:",
+          "options": [
+            "Atropine",
+            "Adrenaline",
+            "Midazolam",
+            "Calcium"
+          ],
+          "answerIndex": 0,
+          "explanation": "Blocks muscarinic effects."
+        },
+        {
+          "id": "neuroparalysis-ventilation-q3",
+          "stem": "Fixed dilated pupils in a paralysed krait patient:",
+          "options": [
+            "Confirm brain death",
+            "Can be due to paralysis; recovery possible",
+            "Indicates stroke",
+            "Stop ventilation"
+          ],
+          "answerIndex": 1,
+          "explanation": "Do not withdraw care."
+        }
+      ]
+    },
+    {
+      "id": "scorpion-sting",
+      "title": "Scorpion sting (Indian red scorpion) and prazosin",
+      "summary": "Mesobuthus tamulus stings cause an autonomic storm with hypertension, myocardial dysfunction and pulmonary oedema, especially in children. Prazosin is the cornerstone; scorpion antivenom added to prazosin speeds recovery.",
+      "viewKey": "topic:snakebite-scorpion-envenomation/scorpion-sting",
+      "uiHints": {
+        "icon": "bug-off",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Recognise",
+            "title": "Grade",
+            "detail": "Local pain only (grade 1); autonomic storm: sweating, salivation, priapism, vomiting, cold extremities, tachycardia/bradycardia, hypertension (grade 2); pulmonary oedema or shock (grade 3-4).",
+            "refs": [
+              "bawaskar2011"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Treat",
+            "title": "Prazosin",
+            "detail": "30 mcg/kg orally every 3 h until peripheries warm and features settle.",
+            "refs": [
+              "bawaskar2011"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Antivenom",
+            "title": "Add if available",
+            "detail": "Scorpion antivenom with prazosin achieved faster resolution (about 8 h vs 17.7 h) and fewer prazosin doses.",
+            "refs": [
+              "bawaskar2011"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Pulmonary oedema",
+            "title": "Cardiogenic",
+            "detail": "Oxygen/NIV, cautious nitrates or dobutamine for myocardial dysfunction; avoid fluid overload."
+          },
+          {
+            "n": 5,
+            "time": "Avoid",
+            "title": "Harmful",
+            "detail": "Routine atropine (worsens tachycardia and hypertension), nifedipine (reflex tachycardia), steroids/antihistamines (no benefit)."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "prazosin",
+            "role": "Scorpion autonomic storm",
+            "route": "Oral or NG",
+            "dose": "30 mcg/kg every 3 h",
+            "workedExample": "20 kg child: 30 × 20 = 600 mcg = 0.6 mg (crushed immediate-release tablet)",
+            "verify": "Adult dose extrapolated; confirm locally.",
+            "refs": [
+              "bawaskar2011"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Cold extremities, tachycardia and cough with frothy sputum: impending pulmonary oedema."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Treating only local pain and sending home within an hour."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Warm peripheries are the bedside endpoint of adequate alpha-blockade."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Scorpion sting",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Scorpion sting"
+          },
+          {
+            "id": "a",
+            "type": "decision",
+            "text": "Autonomic features?"
+          },
+          {
+            "id": "l",
+            "type": "end",
+            "text": "Local analgesia; observe 6 h"
+          },
+          {
+            "id": "p",
+            "type": "action",
+            "text": "Prazosin 30 mcg/kg every 3 h ± scorpion antivenom"
+          },
+          {
+            "id": "o",
+            "type": "decision",
+            "text": "Pulmonary oedema or shock?"
+          },
+          {
+            "id": "icu",
+            "type": "end",
+            "text": "ICU: oxygen/NIV, dobutamine or nitrates"
+          },
+          {
+            "id": "w",
+            "type": "end",
+            "text": "Continue prazosin until peripheries warm"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "a"
+          },
+          {
+            "from": "a",
+            "to": "l",
+            "label": "No"
+          },
+          {
+            "from": "a",
+            "to": "p",
+            "label": "Yes"
+          },
+          {
+            "from": "p",
+            "to": "o"
+          },
+          {
+            "from": "o",
+            "to": "icu",
+            "label": "Yes"
+          },
+          {
+            "from": "o",
+            "to": "w",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "bawaskar2011"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Bawaskar 2011 (BMJ):** 70 patients with grade 2 envenomation; complete resolution at 10 h in 91.4% with antivenom plus prazosin vs 22.9% with prazosin alone; mean recovery 8 h vs 17.7 h; fewer prazosin doses (2 vs 4).",
+        "indiaNotes": "- Common in Maharashtra (Konkan), Karnataka, Andhra Pradesh, Tamil Nadu and Gujarat; Dr Bawaskar's prazosin work transformed outcomes."
+      },
+      "drugIds": [
+        "prazosin",
+        "atropine"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "bawaskar2011"
+      ],
+      "quiz": [
+        {
+          "id": "scorpion-sting-q1",
+          "stem": "Mainstay drug for Indian red scorpion sting:",
+          "options": [
+            "Atropine",
+            "Prazosin",
+            "Nifedipine",
+            "Hydrocortisone"
+          ],
+          "answerIndex": 1,
+          "explanation": "Alpha-1 blockade."
+        },
+        {
+          "id": "scorpion-sting-q2",
+          "stem": "Bedside endpoint of adequate prazosin:",
+          "options": [
+            "Warm peripheries",
+            "Bradycardia",
+            "Miosis",
+            "Diuresis"
+          ],
+          "answerIndex": 0,
+          "explanation": "Reversal of vasoconstriction."
+        },
+        {
+          "id": "scorpion-sting-q3",
+          "stem": "Adding scorpion antivenom to prazosin:",
+          "options": [
+            "Increased mortality",
+            "Speeds recovery",
+            "Has no effect",
+            "Causes pulmonary oedema"
+          ],
+          "answerIndex": 1,
+          "explanation": "Bawaskar 2011."
+        }
+      ]
+    },
+    {
+      "id": "bee-wasp-stings",
+      "title": "Bee, wasp and hornet stings",
+      "summary": "Most sting deaths are from anaphylaxis, treated with IM adrenaline. Massive envenomation from multiple stings causes delayed toxicity – rhabdomyolysis, haemolysis, AKI, myocardial injury – even without allergy; monitor for 24 h.",
+      "viewKey": "topic:snakebite-scorpion-envenomation/bee-wasp-stings",
+      "uiHints": {
+        "icon": "bug-off",
+        "accent": "standard"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Anaphylaxis",
+            "title": "Immediately",
+            "detail": "Adrenaline 0.5 mg IM (0.01 mg/kg child), repeat every 5-15 min; lie flat, oxygen, IV fluid boluses.",
+            "refs": [
+              "wao2020"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Remove stings",
+            "title": "Promptly",
+            "detail": "Scrape or pluck; speed matters more than method."
+          },
+          {
+            "n": 3,
+            "time": "Multiple stings",
+            "title": "Risk stratify",
+            "detail": "Dozens to hundreds of stings: check CK, haemoglobin, LDH, bilirubin, creatinine, troponin, urine myoglobin; monitor 24 h."
+          },
+          {
+            "n": 4,
+            "time": "Supportive",
+            "title": "Organ care",
+            "detail": "Hydrate for rhabdomyolysis, RRT for AKI, treat hyperkalaemia; delayed ARDS and myocarditis possible."
+          },
+          {
+            "n": 5,
+            "time": "Discharge",
+            "title": "Allergy",
+            "detail": "Refer for allergy evaluation and venom immunotherapy; teach adrenaline autoinjector use where available.",
+            "refs": [
+              "wao2020"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Stridor, hypotension or wheeze after a sting: anaphylaxis."
+          },
+          {
+            "text": "Dark urine after multiple stings: rhabdomyolysis/haemolysis."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Antihistamine or steroid instead of adrenaline as first-line."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Biphasic anaphylaxis can recur within 72 h; observe after severe reactions."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Hymenoptera sting",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Bee/wasp/hornet sting"
+          },
+          {
+            "id": "an",
+            "type": "decision",
+            "text": "Anaphylaxis?"
+          },
+          {
+            "id": "ad",
+            "type": "action",
+            "text": "Adrenaline IM, fluids, oxygen"
+          },
+          {
+            "id": "mu",
+            "type": "decision",
+            "text": "Multiple stings (massive envenomation)?"
+          },
+          {
+            "id": "lab",
+            "type": "end",
+            "text": "CK, renal, haemolysis labs; monitor 24 h"
+          },
+          {
+            "id": "loc",
+            "type": "end",
+            "text": "Local care and discharge advice"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "an"
+          },
+          {
+            "from": "an",
+            "to": "ad",
+            "label": "Yes"
+          },
+          {
+            "from": "an",
+            "to": "mu",
+            "label": "No"
+          },
+          {
+            "from": "ad",
+            "to": "mu"
+          },
+          {
+            "from": "mu",
+            "to": "lab",
+            "label": "Yes"
+          },
+          {
+            "from": "mu",
+            "to": "loc",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "wao2020"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **WAO 2020:** adrenaline IM is first-line; antihistamines and glucocorticoids are adjuncts only.",
+        "indiaNotes": "- Mass attacks by rock bees (Apis dorsata) and hornets occur in forested and hill regions (Western Ghats, North-East)."
+      },
+      "drugIds": [
+        "adrenaline"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "wao2020"
+      ],
+      "quiz": [
+        {
+          "id": "bee-wasp-stings-q1",
+          "stem": "First-line drug for sting anaphylaxis:",
+          "options": [
+            "Chlorpheniramine",
+            "Hydrocortisone",
+            "Adrenaline IM",
+            "Salbutamol"
+          ],
+          "answerIndex": 2,
+          "explanation": "WAO 2020."
+        },
+        {
+          "id": "bee-wasp-stings-q2",
+          "stem": "Main delayed toxicity after hundreds of bee stings:",
+          "options": [
+            "Hypoglycaemia",
+            "Rhabdomyolysis and AKI",
+            "Pancreatitis",
+            "Paralysis"
+          ],
+          "answerIndex": 1,
+          "explanation": "Direct venom toxicity."
+        },
+        {
+          "id": "bee-wasp-stings-q3",
+          "stem": "Biphasic anaphylaxis may recur within:",
+          "options": [
+            "1 h",
+            "72 h",
+            "2 weeks",
+            "Never"
+          ],
+          "answerIndex": 1,
+          "explanation": "Observe severe reactions."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "asv",
+      "name": "Anti-snake venom (polyvalent ASV)",
+      "class": "Equine F(ab')2 polyvalent antivenom (Big Four)",
+      "indications": "Systemic envenoming (incoagulable 20WBCT, spontaneous bleeding, neuroparalysis, shock, AKI, rhabdomyolysis) or rapidly progressive local swelling (> half the limb, or within hours).",
+      "adultDose": "10 vials IV (reconstituted, in ~200 mL NS) over 1 h; same dose for children and pregnant women. Haemotoxic: repeat 10 vials if 20WBCT still incoagulable at 6 h (usual max 25-30 vials). Neurotoxic: repeat 10 vials if no improvement at 1-2 h (usual max 20 vials).",
+      "preparationIndia": "Lyophilised vials (each neutralises a stated mg of each venom per 10 mL); reconstitute with 10 mL water for injection. Several Indian manufacturers (e.g. Bharat Serums, VINS, Premium Serums).",
+      "cautions": "No test dose (poor predictive value, delays treatment). Early anaphylactoid reactions in up to ~20-40%: keep adrenaline drawn up. Pyrogenic reactions; serum sickness at 5-24 days.",
+      "verify": "Vial potency and maximum doses vary by manufacturer and state protocol.",
+      "refs": [
+        "mohfw-stg2016",
+        "who-searo2016"
+      ]
+    },
+    {
+      "id": "adrenaline",
+      "name": "Adrenaline (epinephrine)",
+      "class": "Sympathomimetic",
+      "indications": "ASV reactions, anaphylaxis to Hymenoptera stings; shock.",
+      "adultDose": "0.5 mg IM (0.5 mL of 1 mg/mL) into anterolateral thigh, repeat every 5-15 min; child 0.01 mg/kg IM (max 0.5 mg). Refractory: IV infusion 0.05-0.5 mcg/kg/min.",
+      "preparationIndia": "1 mg/mL (1:1000) 1 mL ampoules.",
+      "cautions": "Never give 1 mg/mL IV as a bolus. Tachyarrhythmia, hypertension.",
+      "refs": [
+        "mohfw-stg2016",
+        "wao2020"
+      ]
+    },
+    {
+      "id": "neostigmine",
+      "name": "Neostigmine",
+      "class": "Anticholinesterase",
+      "indications": "Neostigmine trial in neurotoxic (especially cobra, postsynaptic) envenoming with ptosis or weakness.",
+      "adultDose": "After atropine 0.6 mg IV: neostigmine 1.5 mg IV (or 0.5 mg IM); if improvement, continue 0.5 mg IV every 30 min (up to 5 doses), then taper. Child: atropine 0.05 mg/kg + neostigmine 0.04 mg/kg.",
+      "preparationIndia": "0.5 mg/mL 1 mL ampoules (Myostigmin).",
+      "cautions": "Always pre-treat with atropine (bradycardia, bronchorrhoea). Little benefit in krait (presynaptic) bites.",
+      "verify": "Exact repeat schedule varies between national STG and WHO SEARO versions.",
+      "refs": [
+        "mohfw-stg2016",
+        "who-searo2016"
+      ]
+    },
+    {
+      "id": "atropine",
+      "name": "Atropine",
+      "class": "Antimuscarinic",
+      "indications": "Premedication before neostigmine; bradycardia and cholinergic features in scorpion sting only if severe (generally avoided).",
+      "adultDose": "0.6 mg IV before each neostigmine dose (child 0.05 mg/kg).",
+      "preparationIndia": "0.6 mg/mL 1 mL ampoules.",
+      "cautions": "Avoid routine use in scorpion sting – worsens the adrenergic storm.",
+      "refs": [
+        "mohfw-stg2016",
+        "bawaskar2011"
+      ]
+    },
+    {
+      "id": "prazosin",
+      "name": "Prazosin",
+      "class": "Alpha-1 adrenergic blocker",
+      "indications": "Indian red scorpion (Mesobuthus tamulus) sting with autonomic storm: hypertension, tachycardia, cold extremities, pulmonary oedema risk.",
+      "adultDose": "30 mcg/kg orally (adult typically 0.5-1 mg) every 3 h until peripheries warm and features resolve; via nasogastric tube if needed.",
+      "preparationIndia": "1 mg, 2 mg, 5 mg tablets (Minipress XL is extended-release – use immediate-release where possible).",
+      "cautions": "First-dose postural hypotension – keep supine; correct volume. Extended-release preparations act too slowly.",
+      "verify": "Adult dosing extrapolated from paediatric/mixed series; confirm with local protocol.",
+      "refs": [
+        "bawaskar2011"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "mohfw-stg2016",
+      "citation": "Directorate General of Health Services, Ministry of Health and Family Welfare, Government of India. Standard Treatment Guidelines: Snakebite. New Delhi: MoHFW/NHSRC; June 2016",
+      "url": "https://www.nhsrcindia.org/sites/default/files/2021-05/Snakebite_0.pdf",
+      "year": 2016,
+      "type": "guideline"
+    },
+    {
+      "id": "who-searo2016",
+      "citation": "World Health Organization Regional Office for South-East Asia. Guidelines for the management of snakebites. 2nd ed. New Delhi: WHO SEARO; 2016",
+      "url": "https://www.who.int/publications/i/item/9789290225300",
+      "year": 2016,
+      "type": "guideline"
+    },
+    {
+      "id": "lamb2021",
+      "citation": "Lamb T, Abouyannis M, de Oliveira SS, et al. The 20-minute whole blood clotting test (20WBCT) for snakebite coagulopathy – a systematic review and meta-analysis of diagnostic test accuracy. PLoS Negl Trop Dis. 2021;15(8):e0009657",
+      "url": "https://doi.org/10.1371/journal.pntd.0009657",
+      "year": 2021,
+      "doi": "10.1371/journal.pntd.0009657",
+      "type": "review"
+    },
+    {
+      "id": "bawaskar2011",
+      "citation": "Bawaskar HS, Bawaskar PH. Efficacy and safety of scorpion antivenom plus prazosin compared with prazosin alone for venomous scorpion (Mesobuthus tamulus) sting: randomised open label clinical trial. BMJ. 2011;342:c7136",
+      "url": "https://doi.org/10.1136/bmj.c7136",
+      "year": 2011,
+      "doi": "10.1136/bmj.c7136",
+      "type": "trial"
+    },
+    {
+      "id": "wao2020",
+      "citation": "Cardona V, Ansotegui IJ, Ebisawa M, et al. World Allergy Organization anaphylaxis guidance 2020. World Allergy Organ J. 2020;13(10):100472",
+      "url": "https://doi.org/10.1016/j.waojou.2020.100472",
+      "year": 2020,
+      "doi": "10.1016/j.waojou.2020.100472",
+      "type": "guideline"
+    }
+  ],
+  "verify": [
+    {
+      "item": "National protocol",
+      "reason": "MoHFW Standard Treatment Guidelines for snakebite (2016, NHM update 2017) and the National Action Plan for Prevention and Control of Snakebite Envenoming (NAPSE, 2024) – confirm current state protocol and ASV supply."
+    },
+    {
+      "item": "ASV product",
+      "reason": "Indian polyvalent ASV covers the Big Four only (spectacled cobra, common krait, Russell's viper, saw-scaled viper); it does not neutralise hump-nosed pit viper, king cobra or sea snake venom."
+    },
+    {
+      "item": "Notifiable",
+      "reason": "Snakebite envenoming was reported as made a notifiable disease by MoHFW in November 2024; confirm local reporting requirements."
+    }
+  ]
+}

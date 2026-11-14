@@ -1,0 +1,2977 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "sepsis-septic-shock",
+  "number": 4,
+  "folder": "04-sepsis-septic-shock",
+  "section": {
+    "id": "A",
+    "title": "Resuscitation and emergencies"
+  },
+  "phase": 1,
+  "title": "Sepsis and septic shock",
+  "summary": "Recognise sepsis early with Sepsis-3 and SOFA, deliver the first-hour bundle, choose and time empirical antibiotics for Indian resistance patterns, achieve source control, use steroids and vasopressin in refractory shock, and de-escalate safely. Updated to the Surviving Sepsis Campaign 2026 adult guidelines.",
+  "tags": [
+    "sepsis",
+    "septic shock",
+    "SOFA",
+    "qSOFA",
+    "lactate",
+    "antibiotics",
+    "noradrenaline",
+    "vasopressin",
+    "hydrocortisone",
+    "source control",
+    "de-escalation",
+    "procalcitonin",
+    "AMR",
+    "SSC 2026",
+    "Surviving Sepsis Campaign"
+  ],
+  "relatedModules": [
+    "shock-vasoactive-support",
+    "icu-infections-stewardship-immunocompromised",
+    "tropical-monsoon-fevers",
+    "fluids-electrolytes",
+    "aki-renal-drug-dosing",
+    "icu-pharmacology-drug-infusions"
+  ],
+  "version": "0.2.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "shield-alert",
+    "accent": "critical"
+  },
+  "viewKey": "module:sepsis-septic-shock",
+  "topics": [
+    {
+      "id": "recognition-sepsis-3",
+      "title": "Recognition: Sepsis-3, SOFA and screening",
+      "summary": "Sepsis is infection plus organ dysfunction (acute SOFA rise ≥ 2). Septic shock is sepsis needing vasopressors for MAP ≥ 65 with lactate > 2 mmol/L despite adequate fluids.",
+      "viewKey": "topic:sepsis-septic-shock/recognition-sepsis-3",
+      "uiHints": {
+        "icon": "shield-alert",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Sepsis is life-threatening organ dysfunction caused by a dysregulated host response to infection, identified as an acute rise in total SOFA score of ≥ 2 points due to infection. Septic shock is sepsis in which vasopressors are needed to keep MAP ≥ 65 mmHg AND serum lactate is > 2 mmol/L despite adequate fluid resuscitation (hospital mortality > 40%).",
+          "refs": [
+            "sepsis3"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Suspect infection in every deteriorating patient",
+            "detail": "Fever or hypothermia, new confusion, breathlessness, hypotension, oliguria, rising lactate, unexplained tachycardia. In India always consider monsoon fevers (dengue, malaria, scrub typhus, leptospirosis)."
+          },
+          {
+            "n": 2,
+            "time": "0-5 min",
+            "title": "Screen with NEWS2, NEWS, MEWS or SIRS, not qSOFA alone",
+            "detail": "SSC 2026 **recommends** (strong, moderate certainty) NEWS, NEWS2, MEWS or SIRS over qSOFA as a single screening tool, because qSOFA misses many cases. A positive qSOFA (RR ≥ 22, altered mentation, SBP ≤ 100) should still prompt a sepsis review and predicts poor outcome.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "5-15 min",
+            "title": "Look for organ dysfunction",
+            "detail": "MAP < 65, lactate > 2, GCS drop, falling SpO2/FiO2 or P/F, creatinine rise or urine < 0.5 mL/kg/h, bilirubin rise, platelets < 150. Score SOFA: a rise of ≥ 2 from baseline = sepsis."
+          },
+          {
+            "n": 4,
+            "time": "≤ 15 min",
+            "title": "Send lactate and blood cultures; start the bundle",
+            "detail": "Lactate ≥ 2 mmol/L is abnormal. Hypotension or lactate ≥ 4 triggers at least 30 mL/kg crystalloid; consider fluid for lactate 2-4 too if there is no contraindication (SSC 2026). Blood cultures as soon as possible and ideally before antibiotics (SSC 2026, strong), but never let them delay antibiotics.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "≤ 1 h",
+            "title": "Label the patient and escalate",
+            "detail": "Probable or definite sepsis, or any possible septic shock: antibiotics immediately, ideally within 1 h. Possible sepsis without shock: time-limited rapid workup, antibiotics within 3 h if infection is still a concern. Low likelihood of infection and no shock: defer antibiotics and monitor closely (SSC 2026).",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "1-6 h",
+            "title": "Decide the level of care",
+            "detail": "Septic shock, rising lactate, vasopressor or respiratory support need → ICU or HDU. SSC 2026 suggests ICU admission within 6 h of the decision.",
+            "refs": [
+              "ssc2026"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "sofa-summary",
+            "title": "SOFA score (each organ scores 0-4)",
+            "columns": [
+              "System",
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "rows": [
+              [
+                "Respiration P/F (mmHg)",
+                "< 400",
+                "< 300",
+                "< 200 with respiratory support",
+                "< 100 with respiratory support"
+              ],
+              [
+                "Platelets (×10³/µL)",
+                "< 150",
+                "< 100",
+                "< 50",
+                "< 20"
+              ],
+              [
+                "Bilirubin (mg/dL)",
+                "1.2-1.9",
+                "2.0-5.9",
+                "6.0-11.9",
+                "≥ 12"
+              ],
+              [
+                "Cardiovascular",
+                "MAP < 70",
+                "Dopamine ≤ 5 or any dobutamine",
+                "Dopamine > 5 or NA/adrenaline ≤ 0.1",
+                "Dopamine > 15 or NA/adrenaline > 0.1 mcg/kg/min"
+              ],
+              [
+                "GCS",
+                "13-14",
+                "10-12",
+                "6-9",
+                "< 6"
+              ],
+              [
+                "Creatinine (mg/dL) or urine output",
+                "1.2-1.9",
+                "2.0-3.4",
+                "3.5-4.9 or < 500 mL/day",
+                "≥ 5.0 or < 200 mL/day"
+              ]
+            ],
+            "caption": "SOFA (Vincent 1996) as used in Sepsis-3. Baseline SOFA is assumed to be 0 unless pre-existing organ dysfunction is known.",
+            "refs": [
+              "sepsis3"
+            ]
+          },
+          {
+            "id": "sepsis-vs-shock",
+            "title": "Sepsis vs septic shock at a glance",
+            "columns": [
+              "",
+              "Sepsis",
+              "Septic shock"
+            ],
+            "rows": [
+              [
+                "Definition",
+                "Infection + SOFA rise ≥ 2",
+                "Sepsis + vasopressor for MAP ≥ 65 + lactate > 2 after fluids"
+              ],
+              [
+                "Hospital mortality (Sepsis-3 cohorts)",
+                "~10%",
+                "> 40%"
+              ],
+              [
+                "Antibiotic timing (SSC 2026)",
+                "Within 1 h if probable or definite; within 3 h after rapid workup if only possible; defer if infection unlikely",
+                "Within 1 h"
+              ]
+            ],
+            "refs": [
+              "sepsis3",
+              "ssc2026"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "MAP < 65 mmHg or SBP < 90 mmHg after a fluid bolus: septic shock until proven otherwise."
+          },
+          {
+            "text": "Lactate ≥ 4 mmol/L even with normal BP (cryptic shock)."
+          },
+          {
+            "text": "New confusion, mottled knees, or capillary refill > 3 s."
+          },
+          {
+            "text": "Purpura or petechiae with fever: meningococcaemia, dengue, rickettsial disease. Act within minutes."
+          },
+          {
+            "text": "Neutropenia, asplenia or immunosuppression: lower threshold; antibiotics within 1 h."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Waiting for fever: elderly, cirrhotic, CKD and steroid-treated patients may be afebrile or hypothermic."
+          },
+          {
+            "text": "A 'normal' BP in chronic hypertension: SBP 110 may be shock in a patient whose baseline is 170."
+          },
+          {
+            "text": "Using a negative qSOFA to rule out sepsis. It is a prognostic tool, not a screening test."
+          },
+          {
+            "text": "Missing tropical infections in the monsoon: dengue shock and scrub typhus mimic bacterial sepsis."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Respiratory rate ≥ 22 is the earliest and most ignored sign; count it for a full 30 s."
+          },
+          {
+            "text": "Shock index (HR ÷ SBP) > 1 is a quick bedside trigger for occult shock."
+          },
+          {
+            "text": "Sepsis is a clinical diagnosis: no single biomarker or test (lactate, procalcitonin, CRP, novel host-response tests) rules it in or out (SSC 2026 good practice statement).",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "text": "SSC 2026 grades diagnostic certainty as definite, probable, possible or unlikely sepsis. Write which one you think it is in the notes: it sets how fast antibiotics must go in.",
+            "refs": [
+              "ssc2026"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Sepsis screening to ICU decision",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Possible infection or deteriorating patient"
+          },
+          {
+            "id": "screen",
+            "type": "action",
+            "text": "Screen: NEWS2, NEWS, MEWS or SIRS, vitals, mentation, lactate",
+            "detail": "Do not rely on qSOFA alone."
+          },
+          {
+            "id": "od",
+            "type": "decision",
+            "text": "New organ dysfunction? (SOFA rise ≥ 2, lactate > 2, hypotension)"
+          },
+          {
+            "id": "infx",
+            "type": "action",
+            "text": "Infection without organ dysfunction",
+            "detail": "Treat the source; re-screen vitals every 1-4 h."
+          },
+          {
+            "id": "shock",
+            "type": "decision",
+            "text": "Hypotension or lactate ≥ 4 mmol/L?",
+            "severity": "critical"
+          },
+          {
+            "id": "bundle",
+            "type": "action",
+            "text": "Hour-1 bundle: lactate, cultures, antibiotics, 30 mL/kg crystalloid",
+            "severity": "critical"
+          },
+          {
+            "id": "sep",
+            "type": "action",
+            "text": "Sepsis without shock: cultures, antibiotics within 1 h (3 h if only possible sepsis), fluids as needed"
+          },
+          {
+            "id": "vaso",
+            "type": "decision",
+            "text": "MAP < 65 despite fluids?"
+          },
+          {
+            "id": "ss",
+            "type": "end",
+            "text": "Septic shock: vasopressor, ICU, arterial line",
+            "severity": "critical"
+          },
+          {
+            "id": "hdu",
+            "type": "end",
+            "text": "Sepsis: HDU or ward with close monitoring; repeat lactate in 2-4 h"
+          },
+          {
+            "id": "ward",
+            "type": "end",
+            "text": "Infection only: ward care and re-screening"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "screen"
+          },
+          {
+            "from": "screen",
+            "to": "od"
+          },
+          {
+            "from": "od",
+            "to": "shock",
+            "label": "Yes"
+          },
+          {
+            "from": "od",
+            "to": "infx",
+            "label": "No"
+          },
+          {
+            "from": "infx",
+            "to": "ward"
+          },
+          {
+            "from": "shock",
+            "to": "bundle",
+            "label": "Yes"
+          },
+          {
+            "from": "shock",
+            "to": "sep",
+            "label": "No"
+          },
+          {
+            "from": "bundle",
+            "to": "vaso"
+          },
+          {
+            "from": "vaso",
+            "to": "ss",
+            "label": "Yes"
+          },
+          {
+            "from": "vaso",
+            "to": "hdu",
+            "label": "No"
+          },
+          {
+            "from": "sep",
+            "to": "hdu"
+          }
+        ],
+        "refs": [
+          "sepsis3",
+          "ssc2026"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Sepsis is a dysregulated host response. Pathogen- and damage-associated molecular patterns activate innate immunity, causing cytokine release, endothelial glycocalyx injury and capillary leak, microvascular thrombosis, mitochondrial dysfunction and vasoplegia (nitric oxide excess, relative vasopressin deficiency). Organ dysfunction often occurs without global hypoperfusion (\"cytopathic hypoxia\"), which is one reason oxygen-delivery targets (EGDT) did not improve outcomes.\n\nLactate in sepsis is not only anaerobic. Adrenergic stimulation of Na-K-ATPase drives aerobic glycolysis, and hepatic clearance falls. Treat lactate as a marker of severity rather than pure tissue hypoxia.",
+        "evidence": "- **Sepsis-3 (2016)** replaced SIRS-based definitions. In infected patients, SOFA ≥ 2 predicted ~10% in-hospital mortality. qSOFA was derived for prognosis outside the ICU.\n- **SSC 2026 (Prescott, March 2026):** 129 statements, 46 new. It **recommends** NEWS, NEWS2, MEWS or SIRS over qSOFA as a single screening tool (strong, moderate certainty), and a hospital sepsis performance-improvement programme with screening, standard operating procedures and quality improvement (strong).\n- **New in 2026:** suggests a 'code sepsis' or sepsis-huddle protocol (conditional); suggests a standard sepsis screening tool in ambulances (conditional); sepsis is a clinical diagnosis not made or excluded by any single biomarker (good practice); insufficient evidence for novel host-response diagnostics (e.g. monocyte distribution width).\n- **Blood cultures** as soon as possible, ideally before antimicrobials (new strong recommendation, low certainty). Positivity fell from 31% to 19% within ~70 min of antibiotics in one study.\n- **Lactate measurement** remains suggested (conditional, carried over from 2021).",
+        "controversies": "- **SOFA-2 (2025).** An updated SOFA with revised cardiovascular and respiratory criteria was published in 2025. Sepsis-3 has not been formally redefined; this module uses the original SOFA until consultant review.\n- **Lactate cut-offs.** Lactate > 2 defines shock with vasopressors, while lactate ≥ 4 is the fluid trigger in the bundle. There is no single \"safe\" value.\n- **Screening tools** trade sensitivity for specificity. NEWS2 ≥ 5 is a common trigger.\n- **Intermediate lactate (2-4 mmol/L).** SSC 2026 notes it is common, carries higher mortality and may also benefit from fluid; the 4 mmol/L trigger is historical.",
+        "indiaNotes": "- Sepsis is a leading ICU diagnosis in India. In INDICAPS (2016), sepsis was common at ICU admission and carried high mortality. ICMR quotes a severe sepsis or septic shock incidence of 28% in adult ICUs.\n- Delayed presentation and prior antibiotics from local practitioners are common: always ask about antibiotics in the last 90 days.\n- In monsoon months (June-October), send dengue NS1/IgM, malaria antigen and smear, scrub typhus IgM and leptospira IgM in undifferentiated febrile sepsis (module 25)."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "qsofa",
+        "sofa",
+        "news2",
+        "mean-arterial-pressure",
+        "shock-index"
+      ],
+      "references": [
+        "sepsis3",
+        "ssc2026",
+        "indicaps",
+        "icmr2019"
+      ],
+      "quiz": [
+        {
+          "id": "recognition-sepsis-3-q1",
+          "stem": "Under Sepsis-3, which finding defines septic shock in a patient with sepsis?",
+          "options": [
+            "SBP < 90 mmHg once",
+            "Lactate > 4 mmol/L alone",
+            "Vasopressor needed for MAP ≥ 65 mmHg and lactate > 2 mmol/L despite adequate fluids",
+            "qSOFA ≥ 2 with fever",
+            "Heart rate > 120/min after 30 mL/kg"
+          ],
+          "answerIndex": 2,
+          "explanation": "Septic shock needs both a vasopressor requirement to keep MAP ≥ 65 and lactate > 2 mmol/L after adequate fluid resuscitation."
+        },
+        {
+          "id": "recognition-sepsis-3-q2",
+          "stem": "What does SSC 2026 say about qSOFA?",
+          "options": [
+            "Use it as the only screening tool",
+            "Prefer NEWS, NEWS2, MEWS or SIRS over qSOFA as a single screening tool",
+            "It defines sepsis",
+            "It replaced SOFA in the ICU"
+          ],
+          "answerIndex": 1,
+          "explanation": "SSC 2026 recommends (strong) NEWS, NEWS2, MEWS or SIRS over qSOFA as a single screening tool because qSOFA has poor sensitivity. A positive qSOFA still signals risk."
+        },
+        {
+          "id": "recognition-sepsis-3-q3",
+          "stem": "A patient with pneumonia has baseline SOFA 0 and now has P/F 250 and platelets 90,000/µL. What is the SOFA rise?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "answerIndex": 3,
+          "explanation": "P/F < 300 scores 2 and platelets < 100 scores 2: a rise of 4, meeting the sepsis definition."
+        },
+        {
+          "id": "recognition-sepsis-3-q4",
+          "stem": "Which patient most needs antibiotics within 1 hour rather than 3 hours?",
+          "options": [
+            "Cellulitis with normal vitals",
+            "Possible UTI, stable, lactate 1.4",
+            "Fever with MAP 58 after 1 L of fluid",
+            "Low-grade fever on post-operative day 1"
+          ],
+          "answerIndex": 2,
+          "explanation": "Septic shock or probable sepsis needs antibiotics immediately, ideally within 1 h; possible sepsis without shock allows up to 3 h of rapid evaluation (SSC 2026, unchanged from 2021)."
+        }
+      ]
+    },
+    {
+      "id": "hour-1-bundle",
+      "title": "Hour-1 bundle and initial resuscitation",
+      "summary": "Measure lactate, take blood cultures, give antibiotics, give at least 30 mL/kg crystalloid for hypotension or lactate ≥ 4, and start noradrenaline if MAP stays < 65, all begun within the first hour (SSC 2026).",
+      "viewKey": "topic:sepsis-septic-shock/hour-1-bundle",
+      "uiHints": {
+        "icon": "shield-alert",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "The SSC hour-1 bundle (2018) asks that all five elements are started within 1 hour of recognising sepsis or septic shock. Time zero is triage time, or the earliest chart entry consistent with sepsis.",
+          "refs": [
+            "hour1"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Airway, breathing, oxygen",
+            "detail": "Oxygen to SpO2 92-96%. Call senior help early if GCS ≤ 8, high work of breathing, or failing SpO2."
+          },
+          {
+            "n": 2,
+            "time": "0-10 min",
+            "title": "Two large-bore IV cannulae and labs",
+            "detail": "Lactate, blood cultures (2 sets from separate sites, ~10 mL per bottle; 1 set is acceptable where resources are limited), CBC, creatinine, bilirubin, coagulation, glucose, ABG/VBG, and site-specific cultures.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "≤ 1 h",
+            "title": "Antibiotics",
+            "detail": "Broad-spectrum IV antibiotics within 1 h for shock or probable sepsis; do not wait for imaging. See the antibiotics topic.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "0-3 h",
+            "title": "Fluids: at least 30 mL/kg balanced crystalloid",
+            "detail": "For hypotension or lactate ≥ 4 (consider for lactate 2-4): 250-500 mL boluses over 10-15 min, reassessing after each (pulse, BP, capillary refill, lungs, POCUS). 70 kg = 2.1 L. Use actual weight; adjusted or ideal weight if BMI > 30. Stop early for crackles, rising oxygen need or no response. Balanced crystalloid over 0.9% saline (except saline in head injury). No starches or gelatin.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Early",
+            "title": "Noradrenaline for MAP < 65",
+            "detail": "SSC 2026: bolus first, then noradrenaline if hypotension persists. In unstable shock (very low BP, mottling, ashen or cyanosed, altered mentation) start noradrenaline alongside fluid. Start peripherally through a good proximal cannula rather than wait for a central line. Target MAP 65 (keep within ~5 mmHg); aged ≥ 65: MAP 60-65.",
+            "refs": [
+              "ssc2026",
+              "sepsispam"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "2-4 h",
+            "title": "Repeat lactate and reassess perfusion",
+            "detail": "Repeat lactate if the first was > 2 and use the trend to guide resuscitation (SSC 2026). After the first bolus, individualise fluid: do not keep giving fluid until lactate is normal. Capillary refill time (check every 30 min) is a useful extra target (ANDROMEDA-SHOCK).",
+            "refs": [
+              "ssc2026",
+              "andromeda"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "≤ 6 h",
+            "title": "Dynamic fluid assessment",
+            "detail": "Give more fluid only if fluid responsive (passive leg raise, pulse pressure or stroke volume variation, VTI change). After 30 mL/kg with ongoing hypoperfusion, a liberal or a restrictive strategy is equally acceptable (SSC 2026). Use crystalloid alone, not added albumin; albumin only case by case (after large crystalloid volumes, or cirrhosis), never in head injury.",
+            "refs": [
+              "ssc2026",
+              "clovers",
+              "classic",
+              "albios"
+            ]
+          },
+          {
+            "n": 8,
+            "time": "6 h",
+            "title": "Plan",
+            "detail": "Source control plan, ICU admission within 6 h if needed, urinary catheter with hourly output, VTE prophylaxis (LMWH preferred), stress ulcer prophylaxis if at risk. Arterial line if on moderate-high or rising vasopressor doses, several vasopressors, frequent ABGs or unreliable cuff readings; otherwise cuff BP is acceptable (SSC 2026).",
+            "refs": [
+              "ssc2026"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "balanced-crystalloid",
+            "role": "Initial resuscitation fluid",
+            "route": "IV bolus",
+            "dose": "At least 30 mL/kg within 3 h, as 250-500 mL boluses with reassessment",
+            "doseRange": {
+              "min": 20,
+              "max": 30,
+              "unit": "mL/kg"
+            },
+            "target": "MAP ≥ 65, capillary refill ≤ 3 s, falling lactate, urine ≥ 0.5 mL/kg/h",
+            "workedExample": "70 kg → 2.1 L total: give 500 mL over 15 min, reassess, repeat.",
+            "notes": "SSC 2026: calculate on actual body weight, or adjusted or ideal body weight if BMI > 30; use actual weight in thin or underweight patients to avoid overload. Balanced crystalloid is suggested over 0.9% saline, except saline for sepsis with traumatic brain injury. Ringer's lactate is safe in liver disease and hyperkalaemia.",
+            "refs": [
+              "ssc2026",
+              "smart"
+            ],
+            "verify": "SSC 2026 says 'at least 30 mL/kg' in 3 h; the app warning range (20-30 mL/kg) is an author choice for individualised fluid. Consultant to confirm the range."
+          },
+          {
+            "drugId": "noradrenaline",
+            "role": "First-line vasopressor",
+            "route": "IV infusion (central preferred; start peripherally rather than delay)",
+            "dose": "0.05-0.1 mcg/kg/min, titrate every 5-10 min",
+            "doseRange": {
+              "min": 0.05,
+              "max": 0.5,
+              "unit": "mcg/kg/min"
+            },
+            "dilution": "4 mg in 50 mL NS (80 mcg/mL) or 8 mg in 50 mL (160 mcg/mL)",
+            "target": "MAP 65 mmHg (range ~65-70); 60-65 mmHg if aged ≥ 65",
+            "workedExample": "70 kg at 0.1 mcg/kg/min with 80 mcg/mL: 0.1 × 70 × 60 ÷ 80 = 5.25 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "ssc2026"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "hour1-elements",
+            "title": "Hour-1 bundle elements",
+            "columns": [
+              "Element",
+              "Detail",
+              "SSC 2026 strength"
+            ],
+            "rows": [
+              [
+                "Measure lactate",
+                "Re-measure if > 2 mmol/L; use the trend to guide resuscitation",
+                "Conditional (measure lactate; serial lactate to guide resuscitation)"
+              ],
+              [
+                "Blood cultures before antibiotics",
+                "As soon as possible, ideally before antibiotics; never delay antibiotics",
+                "Strong, low certainty (new in 2026)"
+              ],
+              [
+                "Broad-spectrum antibiotics",
+                "Immediately, ideally ≤ 1 h for any septic shock or probable sepsis",
+                "Strong"
+              ],
+              [
+                "≥ 30 mL/kg crystalloid",
+                "For hypotension or hypoperfusion, within 3 h; reassess often",
+                "Conditional, low certainty"
+              ],
+              [
+                "Vasopressor",
+                "Noradrenaline for MAP < 65 after the first bolus (with fluid if unstable); peripheral start is fine",
+                "Strong (noradrenaline over dopamine or adrenaline; MAP 65 target)"
+              ]
+            ],
+            "refs": [
+              "hour1",
+              "ssc2026"
+            ]
+          },
+          {
+            "id": "ssc-2026-changes",
+            "title": "SSC 2026 vs SSC 2021: what changes at the bedside",
+            "columns": [
+              "Topic",
+              "SSC 2021",
+              "SSC 2026"
+            ],
+            "rows": [
+              [
+                "Albumin",
+                "Suggested when large crystalloid volumes were given",
+                "Crystalloid alone suggested over added albumin; albumin case by case (large volumes, cirrhosis); avoid in head injury"
+              ],
+              [
+                "MAP target",
+                "65 mmHg",
+                "65 mmHg, kept within ~5 mmHg; **60-65 mmHg suggested if aged ≥ 65** (new)"
+              ],
+              [
+                "Fluid after 30 mL/kg",
+                "Insufficient evidence on restrictive vs liberal",
+                "Either liberal or restrictive, chosen for the patient and setting"
+              ],
+              [
+                "Fluid volume in obesity",
+                "Not specified",
+                "Adjusted or ideal body weight if BMI > 30"
+              ],
+              [
+                "Fluid then vasopressor",
+                "Not addressed",
+                "Bolus first, vasopressor if still hypotensive; both together in unstable shock (new)"
+              ],
+              [
+                "Gelatin",
+                "Crystalloid suggested over gelatin",
+                "Suggest against gelatin"
+              ],
+              [
+                "Arterial line",
+                "Not addressed",
+                "Invasive or cuff BP both acceptable; arterial line for high, rising or multiple vasopressors (new)"
+              ],
+              [
+                "Fluid removal",
+                "Insufficient evidence",
+                "Active fluid removal (diuretics, then ultrafiltration) suggested once the acute phase is over (new)"
+              ],
+              [
+                "Fever",
+                "Not addressed",
+                "Suggest against antipyretics or cooling just to improve outcome; treating discomfort is fine (new)"
+              ]
+            ],
+            "caption": "Only practice-relevant differences are listed. Strength and certainty are in the consultant notes.",
+            "refs": [
+              "ssc2026",
+              "ssc2026-exec",
+              "ssc2021"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Crackles, rising FiO2 or new B-lines after fluid: stop boluses; start or increase noradrenaline."
+          },
+          {
+            "text": "MAP < 50 or diastolic < 40 mmHg: start noradrenaline now, even peripherally, alongside fluid."
+          },
+          {
+            "text": "Lactate rising despite MAP 65: look for an uncontrolled source, bleeding, cardiac dysfunction or abdominal compartment syndrome."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Giving 30 mL/kg reflexively in severe LV dysfunction or end-stage kidney disease; use small boluses with POCUS."
+          },
+          {
+            "text": "Chasing lactate with fluid when adrenaline or liver failure is the cause."
+          },
+          {
+            "text": "Delaying antibiotics for CT or lumbar puncture."
+          },
+          {
+            "text": "Giving fluid until lactate is normal. SSC 2026 advises using the lactate trend, then individualising fluid after the first bolus.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "text": "Adding albumin by reflex. SSC 2026 now suggests crystalloid alone; keep albumin for selected cases such as cirrhosis or very large crystalloid volumes.",
+            "refs": [
+              "ssc2026"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Capillary refill: press the distal phalanx of the index finger with a glass slide for 10 s; normal ≤ 3 s."
+          },
+          {
+            "text": "Diastolic BP < 40-50 mmHg suggests profound vasoplegia: early noradrenaline beats more fluid."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "First-hour resuscitation loop",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Sepsis or septic shock recognised (time zero)"
+          },
+          {
+            "id": "labs",
+            "type": "action",
+            "text": "Lactate + blood cultures ×2 + labs"
+          },
+          {
+            "id": "abx",
+            "type": "action",
+            "text": "Broad-spectrum antibiotics within 1 h",
+            "severity": "critical"
+          },
+          {
+            "id": "hypo",
+            "type": "decision",
+            "text": "Hypotension or lactate ≥ 4?"
+          },
+          {
+            "id": "bolus",
+            "type": "action",
+            "text": "500 mL balanced crystalloid over 15 min (up to 30 mL/kg in 3 h)"
+          },
+          {
+            "id": "reass",
+            "type": "decision",
+            "text": "Still MAP < 65 or hypoperfused?"
+          },
+          {
+            "id": "over",
+            "type": "decision",
+            "text": "Overloaded or no longer fluid responsive?"
+          },
+          {
+            "id": "nad",
+            "type": "action",
+            "text": "Start noradrenaline to MAP 65 (60-65 if aged ≥ 65)",
+            "severity": "critical"
+          },
+          {
+            "id": "monitor",
+            "type": "action",
+            "text": "Monitor: capillary refill every 30 min, lactate at 2 h, urine output"
+          },
+          {
+            "id": "icu",
+            "type": "end",
+            "text": "ICU: arterial line, source control plan, steroids if vasopressor need persists"
+          },
+          {
+            "id": "ward",
+            "type": "end",
+            "text": "Stable: HDU or ward, repeat lactate, review within 1 h"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "labs"
+          },
+          {
+            "from": "labs",
+            "to": "abx"
+          },
+          {
+            "from": "abx",
+            "to": "hypo"
+          },
+          {
+            "from": "hypo",
+            "to": "bolus",
+            "label": "Yes"
+          },
+          {
+            "from": "hypo",
+            "to": "monitor",
+            "label": "No"
+          },
+          {
+            "from": "bolus",
+            "to": "reass"
+          },
+          {
+            "from": "reass",
+            "to": "over",
+            "label": "Yes"
+          },
+          {
+            "from": "reass",
+            "to": "monitor",
+            "label": "No"
+          },
+          {
+            "from": "over",
+            "to": "nad",
+            "label": "Yes"
+          },
+          {
+            "from": "over",
+            "to": "bolus",
+            "label": "No, still responsive"
+          },
+          {
+            "from": "nad",
+            "to": "icu"
+          },
+          {
+            "from": "monitor",
+            "to": "ward"
+          }
+        ],
+        "refs": [
+          "ssc2026",
+          "hour1"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Early septic hypotension combines venodilatation (less stressed volume), capillary leak, arterial vasoplegia and sometimes septic cardiomyopathy. Fluid restores stressed volume briefly, but much leaks out within an hour. Vasopressors restore venous tone and recruit unstressed volume, which is why early noradrenaline often reduces total fluid needs.",
+        "evidence": "- **EGDT trials (ProCESS, ARISE, ProMISe; PRISM meta-analysis 2017):** protocolised ScvO2-targeted care gave no benefit over usual early care. Early antibiotics and fluids are the active ingredients.\n- **30 mL/kg:** SSC 2026 still suggests *at least* 30 mL/kg of IV crystalloid in the first 3 h (conditional, low certainty), with frequent reassessment and adjusted or ideal body weight if BMI > 30. This differs from ESICM guidance ('up to 30 mL/kg'); SSC notes fluid harm in trials usually came with far larger volumes (> 50 mL/kg).\n- **Fluid then vasopressor (new, conditional, very low certainty):** crystalloid bolus first, then a vasopressor if hypotension persists; concurrent vasopressor in unstable shock case by case. CLOVERS found no difference between early-vasopressor and liberal-fluid strategies; five RCTs are ongoing.\n- **CLASSIC (2022)** and **CLOVERS (2023):** restrictive vs liberal fluid after initial resuscitation showed no mortality difference. SSC 2026 now suggests either strategy (conditional, low certainty), based on the patient (e.g. heart failure) and the setting (monitored beds for vasopressors).\n- **Active fluid removal (new):** once the acute phase is over (no rising or ongoing high-dose vasopressor, no ongoing volume need), SSC 2026 suggests diuretics and, if needed, ultrafiltration (conditional, very low certainty).\n- **Balanced crystalloids** are suggested over 0.9% saline (SSC 2026, conditional, moderate certainty; SMART: fewer major adverse kidney events), except 0.9% saline in sepsis with traumatic brain injury. Starches: recommend against (strong). Gelatin: suggest against.\n- **ANDROMEDA-SHOCK (2019):** capillary refill-targeted resuscitation was not inferior (trend to benefit) to lactate-targeted resuscitation.\n- **MAP 65:** SEPSISPAM found no benefit from 80-85 mmHg overall; chronic hypertensives needed less RRT at the higher target. SSC 2026 keeps the strong recommendation for 65 mmHg and adds that a range (within ~5 mmHg) is needed in practice.\n- **Age ≥ 65 (new, conditional, low certainty):** SSC 2026 suggests MAP 60-65 mmHg. In its meta-analysis of patients ≥ 65, a lower target reduced mortality (RR 0.89, 95% CI 0.81-0.98); the 65 trial (2020) showed less vasopressor exposure with similar mortality.\n- **Albumin (changed in 2026):** SSC 2021 suggested albumin after large crystalloid volumes. An updated meta-analysis (6 RCTs, 4,383 patients) found probably no effect on outcomes, so SSC 2026 suggests crystalloids alone over added albumin (conditional, moderate certainty). ALBIOS showed no overall mortality benefit.\n- **Monitoring (new):** invasive or non-invasive BP both acceptable (conditional, very low certainty); EVERDAC (published after the guideline) found a non-invasive-first strategy non-inferior.",
+        "controversies": "- Fixed 30 mL/kg vs individualised fluid: SSC 2026 keeps 'at least 30 mL/kg' while ESICM says 'up to 30 mL/kg'; many intensivists give 1-2 L, then switch to dynamic measures.\n- Peripheral noradrenaline: SSC 2026 still suggests starting peripherally rather than delaying (conditional, very low certainty) but sets no safe dose, duration or cannula size. Pooled complication rate ~6%. In the panel, about half use peripheral vasopressors for up to 6 h. Check the site hourly; use cautiously if frequent checks are not possible.\n- Lactate clearance targets (e.g. 10-20% per 2 h) are used locally but not mandated.",
+        "indiaNotes": "- Ringer's lactate is the cheapest balanced fluid and widely stocked; Plasma-Lyte costs more.\n- In dengue shock, follow WHO and national dengue fluid protocols, not 30 mL/kg (module 25).\n- Where arterial lines are unavailable, use non-invasive BP every 5-15 min, capillary refill and hourly urine output.\n- Albumin is costly in India; the 2026 change towards crystalloid alone also saves money. Keep albumin for cirrhosis or after very large volumes."
+      },
+      "drugIds": [
+        "balanced-crystalloid",
+        "albumin",
+        "noradrenaline"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-min",
+        "mean-arterial-pressure"
+      ],
+      "references": [
+        "hour1",
+        "ssc2026",
+        "smart",
+        "classic",
+        "clovers",
+        "andromeda",
+        "sepsispam",
+        "albios",
+        "prism",
+        "icmr2019",
+        "ssc2026-exec",
+        "ssc2021"
+      ],
+      "quiz": [
+        {
+          "id": "hour-1-bundle-q1",
+          "stem": "Which hour-1 bundle element carries a STRONG recommendation in SSC 2026?",
+          "options": [
+            "30 mL/kg crystalloid",
+            "Lactate measurement",
+            "Antibiotics within 1 h in septic shock",
+            "Albumin for everyone"
+          ],
+          "answerIndex": 2,
+          "explanation": "Antibiotics immediately (ideally within 1 h) in septic shock or probable sepsis is strong; 'at least 30 mL/kg' remains conditional with low-certainty evidence, and SSC 2026 suggests crystalloid alone over added albumin."
+        },
+        {
+          "id": "hour-1-bundle-q2",
+          "stem": "A 60 kg patient has MAP 58 and lactate 5. What is the 30 mL/kg fluid target?",
+          "options": [
+            "1.2 L",
+            "1.8 L",
+            "2.4 L",
+            "3.0 L"
+          ],
+          "answerIndex": 1,
+          "explanation": "30 × 60 = 1800 mL, given in boluses with reassessment after each."
+        },
+        {
+          "id": "hour-1-bundle-q3",
+          "stem": "ANDROMEDA-SHOCK compared lactate-guided resuscitation with which target?",
+          "options": [
+            "ScvO2",
+            "Capillary refill time",
+            "CVP",
+            "Urine output"
+          ],
+          "answerIndex": 1,
+          "explanation": "Normalising capillary refill time (checked every 30 min) was compared with lactate-guided resuscitation."
+        },
+        {
+          "id": "hour-1-bundle-q4",
+          "stem": "What initial MAP target does SSC 2026 recommend for most adults with septic shock?",
+          "options": [
+            "55 mmHg",
+            "65 mmHg",
+            "75 mmHg",
+            "85 mmHg"
+          ],
+          "answerIndex": 1,
+          "explanation": "An initial MAP target of 65 mmHg (kept within about 5 mmHg) is recommended over higher targets (strong). For patients aged 65 or older, 60-65 mmHg is suggested."
+        },
+        {
+          "id": "hour-1-bundle-q5",
+          "stem": "A 74-year-old has septic shock on noradrenaline. Which initial MAP range does SSC 2026 suggest?",
+          "options": [
+            "55-60 mmHg",
+            "60-65 mmHg",
+            "70-75 mmHg",
+            "80-85 mmHg"
+          ],
+          "answerIndex": 1,
+          "explanation": "New in 2026: for adults aged 65 or older, an initial MAP of 60-65 mmHg is suggested over higher ranges (conditional, low certainty), with less vasopressor exposure."
+        }
+      ]
+    },
+    {
+      "id": "antibiotic-timing-choice",
+      "title": "Antibiotics: timing, choice and dosing",
+      "summary": "Give the right empirical antibiotics immediately (ideally within 1 h) in shock, chosen by source, MDR risk and the local antibiogram, with full loading doses and prolonged-infusion beta-lactams (now a strong SSC 2026 recommendation).",
+      "viewKey": "topic:sepsis-septic-shock/antibiotic-timing-choice",
+      "uiHints": {
+        "icon": "shield-alert",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Time zero",
+            "detail": "Start the clock at triage or recognition. In septic shock each hour of delay is associated with higher mortality.",
+            "refs": [
+              "kumar2006",
+              "seymour2017"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0-45 min",
+            "title": "Cultures first, if fast",
+            "detail": "Blood cultures ×2 (or 1 set where resources are limited) and likely-source samples (sputum or endotracheal aspirate, urine, pus, CSF if safe) before the first dose. SSC 2026 recommends cultures as soon as possible and ideally before antibiotics, but never delay antibiotics for them.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "≤ 1 h",
+            "title": "Choose by source and MDR risk",
+            "detail": "SSC 2026: cover a specific MDR organism only if the risk is high (colonisation or infection with it, prolonged broad-spectrum antibiotics, long stay in a unit where it is common); do not cover it if the risk is low. In India also weigh dialysis, ICU-onset infection and local ESBL/CRE rates. Use the template table and your antibiogram.",
+            "refs": [
+              "ssc2026",
+              "icmr2019"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "≤ 1 h",
+            "title": "Septic shock with unclear focus: combination",
+            "detail": "ICMR prefers a carbapenem (imipenem or meropenem) ± amikacin, adding MRSA, CRE or antifungal cover only with risk factors. Avoid pip-taz in shock until ceftriaxone-resistant bacteraemia is excluded (MERINO).",
+            "refs": [
+              "icmr2019",
+              "merino"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "≤ 1 h",
+            "title": "MRSA cover only with risk",
+            "detail": "Prior MRSA, line or skin/soft-tissue source, haemodialysis, post-operative infection. SSC 2026 suggests no empirical cover for an MDR organism (including MRSA) when the risk is low.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "≤ 1 h",
+            "title": "Anaerobic and antifungal cover only with risk",
+            "detail": "SSC 2026: no routine anaerobic cover (e.g. for lung or urinary sources). Add it for intra-abdominal, deep pelvic or obstetric, necrotising soft-tissue, head and neck, CNS abscess or empyema sources. Pip-taz or a carbapenem already cover anaerobes. No routine empirical antifungal; consider case by case (immunosuppression, long antibiotics or stay, abdominal source).",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "≤ 1 h",
+            "title": "Tropical cover in Indian febrile illness",
+            "detail": "Add doxycycline (or azithromycin) if scrub typhus, rickettsia or leptospirosis is plausible; artesunate if malaria is possible.",
+            "refs": [
+              "icmr2019"
+            ]
+          },
+          {
+            "n": 8,
+            "time": "First dose",
+            "title": "Full loading dose regardless of kidney function",
+            "detail": "Sepsis expands the volume of distribution. Adjust only maintenance doses for kidney function after the first 24 h."
+          },
+          {
+            "n": 9,
+            "time": "Maintenance",
+            "title": "Prolonged beta-lactam infusion",
+            "detail": "After a full first dose over 30 min, give meropenem or pip-taz as an extended (3-4 h) or continuous infusion. SSC 2026 now **recommends** this (strong, moderate certainty; was weak in 2021). Use therapeutic drug monitoring case by case where available.",
+            "refs": [
+              "ssc2026",
+              "blingiii"
+            ]
+          },
+          {
+            "n": 10,
+            "time": "48-72 h",
+            "title": "Review cultures and de-escalate",
+            "detail": "See the de-escalation topic."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "meropenem",
+            "role": "Empirical, septic shock or high ESBL risk",
+            "route": "IV extended infusion",
+            "dose": "1 g every 8 h over 3 h (2 g every 8 h for meningitis or high MIC)",
+            "dilution": "1 g in 50-100 mL NS, prepared fresh",
+            "notes": "First dose over 30 min.",
+            "refs": [
+              "icmr2019"
+            ]
+          },
+          {
+            "drugId": "piperacillin-tazobactam",
+            "role": "Empirical, lower ESBL risk, not in shock until ESBL bacteraemia excluded",
+            "route": "IV extended infusion",
+            "dose": "4.5 g every 6 h; first dose over 30 min, then each over 3-4 h",
+            "dilution": "4.5 g in 100 mL NS",
+            "verify": "Renal adjustment thresholds vary between references.",
+            "refs": [
+              "blingiii",
+              "merino"
+            ]
+          },
+          {
+            "drugId": "amikacin",
+            "role": "Second gram-negative agent in shock",
+            "route": "IV over 30-60 min",
+            "dose": "15-20 mg/kg once daily",
+            "workedExample": "70 kg: 1050-1400 mg once daily (round to 1 g or 1.5 g by local policy)",
+            "verify": "Some units load 25-30 mg/kg in septic shock; confirm policy.",
+            "refs": [
+              "icmr2019"
+            ]
+          },
+          {
+            "drugId": "vancomycin",
+            "role": "MRSA cover when risk factors present",
+            "route": "IV infusion (≤ 1 g/h)",
+            "dose": "Load 20-35 mg/kg (max 3 g), then 15-20 mg/kg every 8-12 h",
+            "target": "AUC 400-600 mg·h/L (trough 15-20 mg/L if AUC unavailable)",
+            "workedExample": "70 kg: load 1.75-2 g over 2 h, then 1 g every 12 h; adjust by levels",
+            "refs": [
+              "vanco2020"
+            ]
+          },
+          {
+            "drugId": "polymyxin-b",
+            "role": "Carbapenem-resistant organisms (non-urinary)",
+            "route": "IV infusion",
+            "dose": "Load 2-2.5 mg/kg over 1 h, then 1.25-1.5 mg/kg every 12 h",
+            "workedExample": "70 kg: load 175 mg (1.75 million units), then 100 mg (1 million units) every 12 h",
+            "notes": "Use in combination; no renal adjustment.",
+            "refs": [
+              "polymyxin2019"
+            ]
+          },
+          {
+            "drugId": "colistin",
+            "role": "Carbapenem-resistant organisms (including UTI)",
+            "route": "IV infusion",
+            "dose": "Load 9 MU, then 4.5 MU every 12 h (normal kidney function)",
+            "refs": [
+              "polymyxin2019",
+              "icmr2019"
+            ]
+          },
+          {
+            "drugId": "ceftazidime-avibactam",
+            "role": "CRE (KPC or OXA-48); with aztreonam for NDM",
+            "route": "IV infusion over 2 h",
+            "dose": "2.5 g every 8 h (+ aztreonam 2 g every 8 h for metallo-beta-lactamase)",
+            "refs": [
+              "idsa-amr2024"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "empirical-by-source",
+            "title": "Empirical templates by source (adapt to the local antibiogram)",
+            "columns": [
+              "Source",
+              "Community, low MDR risk",
+              "Healthcare-associated or high MDR risk",
+              "Add if"
+            ],
+            "rows": [
+              [
+                "Pneumonia",
+                "Ceftriaxone 2 g OD + azithromycin 500 mg OD (or doxycycline)",
+                "Meropenem 1 g q8h EI (or pip-taz 4.5 g q6h EI if ESBL risk low)",
+                "MRSA risk: vancomycin or linezolid; influenza season: oseltamivir"
+              ],
+              [
+                "Urinary",
+                "Ceftriaxone 2 g OD",
+                "Meropenem 1 g q8h ± amikacin",
+                "Obstruction: urgent decompression"
+              ],
+              [
+                "Intra-abdominal",
+                "Ceftriaxone 2 g OD + metronidazole 500 mg q8h",
+                "Meropenem ± echinocandin if recurrent perforation",
+                "Source control, ideally within 6 h (SSC 2026)"
+              ],
+              [
+                "Necrotising soft tissue",
+                "Pip-taz or meropenem + clindamycin 600-900 mg q8h",
+                "Meropenem + vancomycin + clindamycin",
+                "Surgery now"
+              ],
+              [
+                "Meningitis",
+                "Ceftriaxone 2 g q12h + vancomycin (+ ampicillin 2 g q4h if > 50 y or immunocompromised)",
+                "Meropenem 2 g q8h + vancomycin",
+                "Dexamethasone 0.15 mg/kg q6h with or before first dose"
+              ],
+              [
+                "Septic shock, focus unclear (ICMR)",
+                "Carbapenem ± amikacin",
+                "Carbapenem ± amikacin ± polymyxin B/colistin ± vancomycin/teicoplanin",
+                "Doxycycline for tropical cover; echinocandin if Candida risk"
+              ]
+            ],
+            "caption": "Templates only. Many Indian ICUs report ESBL rates above 50% in hospital-onset infection and frequent carbapenemases (NDM, OXA-48-like). EI = extended infusion.",
+            "refs": [
+              "icmr2019",
+              "ssc2026"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Septic shock: antibiotic within 1 h; every hour of delay worsens survival."
+          },
+          {
+            "text": "Known CRE colonisation and shock: discuss polymyxin B or ceftazidime-avibactam ± aztreonam with microbiology now."
+          },
+          {
+            "text": "Purpura fulminans or suspected meningococcaemia: ceftriaxone 2 g IV immediately."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Halving the first dose because of AKI: the loading dose is never reduced."
+          },
+          {
+            "text": "Giving vancomycin as a fast bolus: causes infusion reaction."
+          },
+          {
+            "text": "Starting carbapenem + polymyxin + vancomycin + antifungal in everyone: drives resistance and toxicity."
+          },
+          {
+            "text": "Forgetting doxycycline in monsoon febrile shock."
+          },
+          {
+            "text": "Adding metronidazole by reflex. SSC 2026 suggests no anaerobic cover without risk factors; it adds side effects and may worsen outcomes.",
+            "refs": [
+              "ssc2026"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "For extended infusions, give the first dose over 30 min so levels rise immediately."
+          },
+          {
+            "text": "Ask the lab for an urgent Gram stain on endotracheal aspirate or pus: results within an hour can change therapy."
+          },
+          {
+            "text": "SSC 2026 suggests antibiotics in the ambulance for septic shock when hospital evaluation is > 60 min away, but only where a prehospital sepsis screening process exists. For referral transfers in India, give the first dose before the patient leaves.",
+            "refs": [
+              "ssc2026"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Empirical antibiotic decision",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Sepsis recognised; cultures drawn without delaying treatment"
+          },
+          {
+            "id": "shock",
+            "type": "decision",
+            "text": "Shock or probable sepsis?"
+          },
+          {
+            "id": "fast",
+            "type": "action",
+            "text": "Antibiotics immediately, ideally within 1 h",
+            "severity": "critical"
+          },
+          {
+            "id": "slow",
+            "type": "action",
+            "text": "Possible sepsis: rapid workup; antibiotics within 3 h if concern persists (defer if infection unlikely)"
+          },
+          {
+            "id": "mdr",
+            "type": "decision",
+            "text": "MDR risk? (antibiotics or hospital < 90 d, ICU-onset, colonised, dialysis)"
+          },
+          {
+            "id": "narrow",
+            "type": "action",
+            "text": "Source-based community regimen (e.g. ceftriaxone ± azithromycin or doxycycline)"
+          },
+          {
+            "id": "cre",
+            "type": "decision",
+            "text": "Known CRE colonisation, or high local CRE with shock?"
+          },
+          {
+            "id": "carb",
+            "type": "action",
+            "text": "Carbapenem (± amikacin in shock), prolonged infusion"
+          },
+          {
+            "id": "crer",
+            "type": "action",
+            "text": "Add polymyxin B or ceftazidime-avibactam ± aztreonam (with microbiology)"
+          },
+          {
+            "id": "mrsa",
+            "type": "decision",
+            "text": "MRSA risk?"
+          },
+          {
+            "id": "vanc",
+            "type": "action",
+            "text": "Add vancomycin or teicoplanin"
+          },
+          {
+            "id": "ana",
+            "type": "decision",
+            "text": "Anaerobic risk? (abdominal, pelvic, NSTI, head-neck, CNS abscess, empyema)"
+          },
+          {
+            "id": "anacov",
+            "type": "action",
+            "text": "Make sure anaerobes are covered",
+            "detail": "Metronidazole, or a regimen that already covers anaerobes (pip-taz, carbapenem)."
+          },
+          {
+            "id": "done",
+            "type": "end",
+            "text": "Review at 48-72 h with cultures and procalcitonin"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "shock"
+          },
+          {
+            "from": "shock",
+            "to": "fast",
+            "label": "Yes"
+          },
+          {
+            "from": "shock",
+            "to": "slow",
+            "label": "No"
+          },
+          {
+            "from": "slow",
+            "to": "mdr"
+          },
+          {
+            "from": "fast",
+            "to": "mdr"
+          },
+          {
+            "from": "mdr",
+            "to": "narrow",
+            "label": "No"
+          },
+          {
+            "from": "mdr",
+            "to": "cre",
+            "label": "Yes"
+          },
+          {
+            "from": "cre",
+            "to": "crer",
+            "label": "Yes"
+          },
+          {
+            "from": "cre",
+            "to": "carb",
+            "label": "No"
+          },
+          {
+            "from": "narrow",
+            "to": "mrsa"
+          },
+          {
+            "from": "carb",
+            "to": "mrsa"
+          },
+          {
+            "from": "crer",
+            "to": "mrsa"
+          },
+          {
+            "from": "mrsa",
+            "to": "vanc",
+            "label": "Yes"
+          },
+          {
+            "from": "mrsa",
+            "to": "ana",
+            "label": "No"
+          },
+          {
+            "from": "vanc",
+            "to": "ana"
+          },
+          {
+            "from": "ana",
+            "to": "anacov",
+            "label": "Yes"
+          },
+          {
+            "from": "ana",
+            "to": "done",
+            "label": "No: no anaerobic agent"
+          },
+          {
+            "from": "anacov",
+            "to": "done"
+          }
+        ],
+        "refs": [
+          "ssc2026",
+          "icmr2019"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Kumar 2006:** in septic shock, each hour of delay after hypotension onset was associated with ~7.6% lower survival (observational).\n- **Seymour 2017 (New York sepsis mandate):** each hour to bundle completion and antibiotics increased risk-adjusted mortality.\n- **SSC 2026 timing (unchanged from 2021):** antibiotics immediately, ideally within 1 h, for possible, probable or definite septic shock and for probable or definite sepsis without shock (strong, very low certainty). Possible sepsis without shock: time-limited rapid investigation, antibiotics within 3 h if concern persists (conditional). Low likelihood of infection without shock: defer and monitor (conditional). Procalcitonin should not decide whether to start (conditional).\n- **Prolonged beta-lactam infusion upgraded to strong (moderate certainty):** an 18-RCT meta-analysis (9,108 patients, including BLING III) found lower short-term mortality (RR 0.91; about 25 fewer deaths per 1,000). Give a loading dose first; mind line compatibility.\n- **New in 2026 (all conditional, very low or low certainty):** empirical cover for a specific MDR pathogen only when its risk is high; no anaerobic cover without risk factors; no routine empirical antifungal; no Candida biomarkers (e.g. beta-D-glucan) to decide on starting antifungals; pathogen-specific rapid tests and antimicrobial TDM case by case; prehospital antibiotics for septic shock if evaluation is > 60 min away.\n- **MERINO (2018):** pip-taz was inferior to meropenem for ceftriaxone-resistant E. coli or Klebsiella bacteraemia (30-day mortality 12.3% vs 3.7%).\n- **BLING III (2024):** continuous infusion did not significantly reduce 90-day mortality; a companion meta-analysis suggested lower mortality with prolonged infusion.\n- **Polymyxins (2019 consensus):** polymyxin B preferred for systemic infection; colistin for lower UTI.",
+        "controversies": "- Empirical double gram-negative cover (e.g. adding amikacin) is reasonable in very high-resistance units until cultures return, but adds nephrotoxicity.\n- Empirical antifungals: only with risk factors (prolonged broad-spectrum antibiotics, TPN, recurrent abdominal perforation, multisite Candida colonisation, central lines).\n- Beta-lactam therapeutic drug monitoring: SSC 2026 suggests it case by case, but it is rarely available in India.\n- SSC 2021 suggested two gram-negative agents only when MDR risk is high. SSC 2026 frames this instead as cover for a *specific* MDR organism by risk; the guideline leaves agent choice to IDSA/ESCMID guidance and local data.",
+        "indiaNotes": "- ICMR AMR surveillance (AMRSN) reports high carbapenem resistance in *Klebsiella pneumoniae* and *Acinetobacter baumannii* in Indian ICUs, with NDM and OXA-48-like enzymes predominant. This makes ceftazidime-avibactam + aztreonam important for NDM producers.\n- ICMR 2019 suggests 7-10 days for most sepsis and allows procalcitonin to support shortening.\n- Cost matters: ceftazidime-avibactam is expensive; polymyxin B is cheaper but more toxic."
+      },
+      "drugIds": [
+        "meropenem",
+        "piperacillin-tazobactam",
+        "amikacin",
+        "vancomycin",
+        "teicoplanin",
+        "polymyxin-b",
+        "colistin",
+        "ceftazidime-avibactam",
+        "doxycycline"
+      ],
+      "calculatorIds": [
+        "creatinine-clearance-cg"
+      ],
+      "references": [
+        "ssc2026",
+        "kumar2006",
+        "seymour2017",
+        "icmr2019",
+        "blingiii",
+        "vanco2020",
+        "polymyxin2019",
+        "idsa-amr2024",
+        "merino"
+      ],
+      "quiz": [
+        {
+          "id": "antibiotic-timing-choice-q1",
+          "stem": "A septic shock patient with AKI (creatinine 3.5 mg/dL) needs meropenem. What about the first dose?",
+          "options": [
+            "Halve it",
+            "Give the full dose; adjust later doses",
+            "Wait until creatinine improves",
+            "Give it orally"
+          ],
+          "answerIndex": 1,
+          "explanation": "Loading doses are not reduced in AKI because the volume of distribution is expanded."
+        },
+        {
+          "id": "antibiotic-timing-choice-q2",
+          "stem": "Which carbapenemase, common in India, is NOT inhibited by avibactam?",
+          "options": [
+            "KPC",
+            "OXA-48",
+            "NDM (metallo-beta-lactamase)",
+            "AmpC"
+          ],
+          "answerIndex": 2,
+          "explanation": "Metallo-beta-lactamases such as NDM are not inhibited by avibactam; adding aztreonam (stable to MBLs) is the strategy."
+        },
+        {
+          "id": "antibiotic-timing-choice-q3",
+          "stem": "Which polymyxin is preferred for CRE pneumonia or bacteraemia per the 2019 consensus?",
+          "options": [
+            "Colistin",
+            "Polymyxin B",
+            "Either equally",
+            "Neither"
+          ],
+          "answerIndex": 1,
+          "explanation": "Polymyxin B is preferred for systemic infection (more predictable levels); colistin is preferred for lower UTI."
+        },
+        {
+          "id": "antibiotic-timing-choice-q4",
+          "stem": "A monsoon patient with sepsis has an eschar and thrombocytopenia. Which drug should be added?",
+          "options": [
+            "Vancomycin",
+            "Doxycycline",
+            "Fluconazole",
+            "Metronidazole"
+          ],
+          "answerIndex": 1,
+          "explanation": "An eschar suggests scrub typhus, treated with doxycycline (or azithromycin)."
+        },
+        {
+          "id": "antibiotic-timing-choice-q5",
+          "stem": "MERINO showed that for ceftriaxone-resistant E. coli or Klebsiella bacteraemia:",
+          "options": [
+            "Pip-taz was non-inferior to meropenem",
+            "Pip-taz had higher 30-day mortality than meropenem",
+            "Both were equal to ceftriaxone",
+            "Colistin was best"
+          ],
+          "answerIndex": 1,
+          "explanation": "30-day mortality was 12.3% with pip-taz vs 3.7% with meropenem."
+        }
+      ]
+    },
+    {
+      "id": "source-control",
+      "title": "Source control",
+      "summary": "Find the anatomical source fast, then drain, debride, decompress or remove infected devices as soon as medically and logistically practical, ideally within 6 h (SSC 2026).",
+      "viewKey": "topic:sepsis-septic-shock/source-control",
+      "uiHints": {
+        "icon": "shield-alert",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0-1 h",
+            "title": "Look for a drainable source",
+            "detail": "History and examination (wounds, abdomen, lines, catheters, skin crepitus), plus bedside POCUS: pleural effusion, hydronephrosis, gallbladder, free fluid, abscess."
+          },
+          {
+            "n": 2,
+            "time": "1-6 h",
+            "title": "Image the likely source",
+            "detail": "CT when the patient is stable enough to travel; ultrasound at the bedside if not."
+          },
+          {
+            "n": 3,
+            "time": "ASAP, ideally ≤ 6 h",
+            "title": "Least invasive effective procedure",
+            "detail": "Percutaneous drainage (abscess, empyema), nephrostomy or DJ stent for an obstructed kidney, cholecystostomy, ERCP for cholangitis, before open surgery when that will work. SSC 2026 suggests early source control, ideally within 6 h of diagnosis; sooner is better when feasible.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Immediately",
+            "title": "Remove infected devices",
+            "detail": "Remove intravascular lines that may be the source once other access is in place (SSC 2021 best practice; source control guidance reaffirmed in 2026).",
+            "refs": [
+              "ssc2021",
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Now",
+            "title": "Surgical emergencies",
+            "detail": "Necrotising fasciitis, perforated viscus, ischaemic bowel: operate as part of resuscitation; do not wait for stability."
+          },
+          {
+            "n": 6,
+            "time": "After control",
+            "title": "Short antibiotic course",
+            "detail": "With adequate source control, about 4 days of antibiotics after the procedure is as good as longer courses for intra-abdominal infection (STOP-IT).",
+            "refs": [
+              "stopit"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "source-procedures",
+            "title": "Common sources and their control",
+            "columns": [
+              "Source",
+              "Clue",
+              "Control"
+            ],
+            "rows": [
+              [
+                "Obstructive pyelonephritis",
+                "Hydronephrosis on POCUS, stone",
+                "Nephrostomy or DJ stent, urgently"
+              ],
+              [
+                "Acute cholangitis",
+                "Fever, jaundice, dilated CBD",
+                "ERCP drainage (PTBD if ERCP unavailable)"
+              ],
+              [
+                "Empyema",
+                "Loculated effusion, pH < 7.2",
+                "Chest drain ± fibrinolytics or VATS"
+              ],
+              [
+                "Liver abscess",
+                "Hypoechoic lesion",
+                "Aspiration or catheter drainage if large, left lobe or not improving"
+              ],
+              [
+                "Necrotising soft-tissue infection",
+                "Pain out of proportion, crepitus, bullae",
+                "Urgent surgical debridement"
+              ],
+              [
+                "Perforated viscus",
+                "Free air, peritonitis",
+                "Laparotomy or laparoscopy"
+              ],
+              [
+                "Line infection",
+                "Erythema or pus at site, no other source",
+                "Remove catheter; culture tip"
+              ]
+            ],
+            "refs": [
+              "ssc2026"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Pain out of proportion, skin crepitus, bullae or rising CK: necrotising soft-tissue infection, surgery now."
+          },
+          {
+            "text": "Fever with an obstructed kidney (hydronephrosis + infected urine): emergency decompression."
+          },
+          {
+            "text": "Persistent shock despite correct antibiotics: assume an uncontrolled source until proven otherwise."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Waiting to 'stabilise' a patient who cannot stabilise without source control."
+          },
+          {
+            "text": "Forgetting lines, urinary catheters, and dental, sinus or perianal sources."
+          },
+          {
+            "text": "Early intervention on sterile pancreatic necrosis: drain infected walled-off necrosis late (ideally > 4 weeks) unless deteriorating."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Re-examine at 24-48 h: a failing patient often has a second or residual source."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Source control pathway",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Sepsis with a suspected source"
+          },
+          {
+            "id": "find",
+            "type": "action",
+            "text": "Examine + POCUS + CT when safe"
+          },
+          {
+            "id": "drain",
+            "type": "decision",
+            "text": "Drainable or removable source found?"
+          },
+          {
+            "id": "type",
+            "type": "decision",
+            "text": "Surgical emergency? (NSTI, perforation, ischaemic bowel)"
+          },
+          {
+            "id": "or",
+            "type": "action",
+            "text": "Operate now, resuscitate in parallel",
+            "severity": "critical"
+          },
+          {
+            "id": "perc",
+            "type": "action",
+            "text": "Least invasive drainage, ideally within 6 h (radiology, endoscopy, urology)"
+          },
+          {
+            "id": "line",
+            "type": "action",
+            "text": "Remove any infected line or device"
+          },
+          {
+            "id": "none",
+            "type": "action",
+            "text": "No source found: continue empirical therapy; repeat imaging if not improving"
+          },
+          {
+            "id": "abx",
+            "type": "end",
+            "text": "Antibiotics ~4 days after adequate control (intra-abdominal); review daily"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "find"
+          },
+          {
+            "from": "find",
+            "to": "drain"
+          },
+          {
+            "from": "drain",
+            "to": "type",
+            "label": "Yes"
+          },
+          {
+            "from": "drain",
+            "to": "none",
+            "label": "No"
+          },
+          {
+            "from": "type",
+            "to": "or",
+            "label": "Yes"
+          },
+          {
+            "from": "type",
+            "to": "perc",
+            "label": "No"
+          },
+          {
+            "from": "perc",
+            "to": "line"
+          },
+          {
+            "from": "or",
+            "to": "line"
+          },
+          {
+            "from": "line",
+            "to": "abx"
+          },
+          {
+            "from": "none",
+            "to": "abx"
+          }
+        ],
+        "refs": [
+          "ssc2026",
+          "stopit"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **SSC 2026:** adults with sepsis should be rapidly evaluated for a source needing emergent control (good practice). It suggests early over late source control, ideally within 6 h of diagnosis (conditional, very low certainty). In 11 observational studies, early control was linked to lower short-term mortality (RR 0.70, 95% CI 0.51-0.95). Prolonged attempts to stabilise a severely ill patient without source control are unlikely to succeed.\n- **SSC 2021** added a best-practice statement to remove intravascular devices that may be the source once other access is established.\n- **STOP-IT (2015):** after adequate source control for complicated intra-abdominal infection, a fixed ~4 days of antibiotics gave outcomes similar to treating until 2 days after physiological resolution (median ~8 days).",
+        "controversies": "- Exact timing: SSC 2026 picked 6 h because most observational studies defined 'early' that way; no RCT defines a cut-off. Percutaneous vs surgical control is a research priority.\n- Damage-control laparotomy with an open abdomen vs primary closure in septic peritonitis.",
+        "indiaNotes": "- Interventional radiology may not be available around the clock in smaller centres: plan early transfer or bedside ultrasound-guided drainage.\n- Amoebic and pyogenic liver abscesses are common in India. Aspirate or drain if large (often > 5-10 cm), left lobe, impending rupture or not responding after 48-72 h."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "ssc2026",
+        "stopit",
+        "icmr2019",
+        "ssc2021"
+      ],
+      "quiz": [
+        {
+          "id": "source-control-q1",
+          "stem": "After adequate source control of complicated intra-abdominal infection, STOP-IT supports an antibiotic course of about:",
+          "options": [
+            "2 days",
+            "4 days",
+            "10 days",
+            "14 days"
+          ],
+          "answerIndex": 1,
+          "explanation": "STOP-IT showed ~4 days after source control was as good as longer, physiology-guided courses."
+        },
+        {
+          "id": "source-control-q2",
+          "stem": "A febrile, hypotensive patient has an obstructed, infected kidney. Best next step after antibiotics?",
+          "options": [
+            "Repeat urine culture in 48 h",
+            "Urgent decompression (nephrostomy or DJ stent)",
+            "Add an antifungal",
+            "Increase noradrenaline only"
+          ],
+          "answerIndex": 1,
+          "explanation": "An obstructed infected system needs emergency decompression for source control."
+        },
+        {
+          "id": "source-control-q3",
+          "stem": "Which of these needs surgery rather than percutaneous drainage?",
+          "options": [
+            "6 cm liver abscess",
+            "Necrotising fasciitis",
+            "Moderate parapneumonic effusion",
+            "Gallbladder empyema in an unfit patient"
+          ],
+          "answerIndex": 1,
+          "explanation": "Necrotising soft-tissue infection needs urgent surgical debridement."
+        },
+        {
+          "id": "source-control-q4",
+          "stem": "SSC 2026 suggests source control, when needed, ideally within:",
+          "options": [
+            "1 h",
+            "6 h",
+            "24 h",
+            "72 h"
+          ],
+          "answerIndex": 1,
+          "explanation": "SSC 2026 suggests early source control, ideally within 6 h of diagnosis of sepsis or septic shock needing it (conditional, very low certainty); earlier is better when feasible."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Line removal statement",
+          "reason": "The 2021 best-practice statement on removing possibly infected intravascular devices was not found as a separate statement in the SCCM list of 2026 recommendations; it is kept and cited to SSC 2021. Confirm in the full 2026 text."
+        }
+      ]
+    },
+    {
+      "id": "steroids-vasopressin-adjuncts",
+      "title": "Refractory shock: vasopressin, steroids and adjuncts",
+      "summary": "As noradrenaline doses escalate (commonly about 0.25-0.5 mcg/kg/min), add vasopressin; give IV hydrocortisone for ongoing vasopressor need; add dobutamine or use adrenaline for cardiac dysfunction; avoid vitamin C, beta-blockers, terlipressin and levosimendan.",
+      "viewKey": "topic:sepsis-septic-shock/steroids-vasopressin-adjuncts",
+      "uiHints": {
+        "icon": "shield-alert",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "NA escalating",
+            "title": "Add vasopressin",
+            "detail": "SSC 2026 suggests adding vasopressin 0.03 units/min when noradrenaline doses are escalating (conditional, moderate certainty), rather than escalating noradrenaline further. No start dose is mandated: about 0.25-0.5 mcg/kg/min is common practice, and VASSPR (2026) found no mortality difference between starting at 0.1 or 0.4 mcg/kg/min.",
+            "refs": [
+              "ssc2026",
+              "vasst",
+              "vasspr"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Ongoing vasopressor need",
+            "title": "Start hydrocortisone",
+            "detail": "SSC 2026 suggests IV corticosteroids in septic shock (conditional, low certainty). Usual regimen: hydrocortisone 50 mg IV every 6 h or 200 mg/day infusion. A common unit trigger is NA or adrenaline ≥ 0.25 mcg/kg/min for ≥ 4 h (the 2021 remark); 2026 sets no threshold. Do not wait for a cortisol level.",
+            "refs": [
+              "ssc2026",
+              "ssc2021",
+              "adrenal"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Next",
+            "title": "Echo for septic cardiomyopathy",
+            "detail": "If cardiac dysfunction with low output and hypoperfusion persists despite adequate fluid and MAP: add dobutamine to noradrenaline, or use adrenaline alone (SSC 2026). Inotropes go with, not instead of, a vasopressor. Do not use levosimendan. With known cardiac dysfunction either noradrenaline or adrenaline is a reasonable first vasopressor (noradrenaline if tachyarrhythmia, adrenaline if bradycardia).",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Still refractory",
+            "title": "Add adrenaline and look for causes",
+            "detail": "If MAP is still low on noradrenaline + vasopressin, add adrenaline 0.05-0.3 mcg/kg/min (SSC 2026); where vasopressin is unavailable, add adrenaline to noradrenaline alone. Check for a missed source, bleeding, tamponade, pneumothorax, abdominal compartment syndrome, adrenal crisis, low ionised calcium, severe acidosis.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Avoid",
+            "title": "Things that do not help",
+            "detail": "SSC 2026 suggests against: IV vitamin C (LOVIT harm), beta-blockers (esmolol, landiolol) to treat shock, terlipressin, levosimendan, IV immunoglobulin, blood purification (including polymyxin B haemoperfusion) and vitamin D. Bicarbonate only if pH ≤ 7.2 with AKI (AKIN 2-3). No dopamine first line. Methylene blue: no recommendation (rescue only, consultant decision).",
+            "refs": [
+              "ssc2026",
+              "lovit"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Weaning",
+            "title": "Stop in order",
+            "detail": "Wean noradrenaline first (to about 0.1), then taper vasopressin. Stop hydrocortisone once off vasopressors (tapering optional)."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "vasopressin",
+            "role": "Second vasopressor",
+            "route": "IV infusion, central line",
+            "dose": "0.03 units/min (fixed)",
+            "doseRange": {
+              "min": 0.01,
+              "max": 0.04,
+              "unit": "units/min"
+            },
+            "dilution": "20 units in 50 mL NS = 0.4 units/mL",
+            "workedExample": "0.03 units/min × 60 = 1.8 units/h ÷ 0.4 units/mL = 4.5 mL/h",
+            "calculatorId": "infusion-rate-fixed",
+            "refs": [
+              "ssc2026",
+              "vasst",
+              "vasspr"
+            ],
+            "notes": "Start when noradrenaline doses are escalating (commonly 0.25-0.5 mcg/kg/min). If vasopressin is unavailable, SSC 2026 allows adding adrenaline instead."
+          },
+          {
+            "drugId": "hydrocortisone",
+            "role": "Steroid for vasopressor-dependent septic shock",
+            "route": "IV bolus or infusion",
+            "dose": "50 mg every 6 h (200 mg/day)",
+            "dilution": "Bolus: 100 mg vial in 2 mL water for injection. Infusion: 200 mg in 50 mL NS at 2.1 mL/h.",
+            "notes": "Usually 5-7 days, or until vasopressors stop. SSC 2026 does not set a dose, start threshold or duration; 200 mg/day is the trial dose (ADRENAL, APROCCHSS).",
+            "refs": [
+              "ssc2026",
+              "adrenal",
+              "aprocchss"
+            ],
+            "verify": "SSC 2026 statement is 'suggest IV corticosteroids' without a dose threshold. Confirm the unit's start trigger (e.g. NA ≥ 0.25 mcg/kg/min for ≥ 4 h) and intermittent vs infusion dosing."
+          },
+          {
+            "drugId": "fludrocortisone",
+            "role": "Optional mineralocorticoid add-on",
+            "route": "Enteral",
+            "dose": "50 mcg once daily for 7 days",
+            "verify": "SSC 2026 suggests 'IV corticosteroids' and does not specifically address fludrocortisone. Confirm unit policy and tablet strength.",
+            "refs": [
+              "aprocchss"
+            ]
+          },
+          {
+            "drugId": "adrenaline",
+            "role": "Third agent in refractory shock",
+            "route": "IV infusion, central line",
+            "dose": "0.05-0.3 mcg/kg/min",
+            "doseRange": {
+              "min": 0.05,
+              "max": 0.5,
+              "unit": "mcg/kg/min"
+            },
+            "dilution": "4 mg in 50 mL (80 mcg/mL)",
+            "workedExample": "70 kg at 0.1 mcg/kg/min = 5.25 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "drugId": "dobutamine",
+            "role": "Inotrope for septic cardiomyopathy with low output",
+            "route": "IV infusion",
+            "dose": "2.5-10 mcg/kg/min",
+            "doseRange": {
+              "min": 2.5,
+              "max": 20,
+              "unit": "mcg/kg/min"
+            },
+            "dilution": "250 mg in 50 mL (5000 mcg/mL)",
+            "workedExample": "70 kg at 5 mcg/kg/min: 5 × 70 × 60 ÷ 5000 = 4.2 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "ssc2026"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Noradrenaline > 0.5 mcg/kg/min: call the consultant; re-examine for a missed source, bleeding, tamponade or pneumothorax."
+          },
+          {
+            "text": "Cold peripheries and rising lactate on high-dose vasopressor: echo for low cardiac output."
+          },
+          {
+            "text": "Digital ischaemia on vasopressin: reduce or stop."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Titrating vasopressin up and down like noradrenaline: it is a fixed-dose drug."
+          },
+          {
+            "text": "Starting steroids at the first hint of hypotension: the indication is ongoing vasopressor need."
+          },
+          {
+            "text": "Forgetting to stop hydrocortisone, causing prolonged hyperglycaemia and weakness."
+          },
+          {
+            "text": "Giving esmolol or landiolol to 'treat' septic tachycardia. SSC 2026 suggests against beta-blockers as a shock treatment: they lengthen vasopressor need. Treat the cause (fluid deficit, fever, pain, arrhythmia).",
+            "refs": [
+              "ssc2026"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Vasopressin allows lower noradrenaline doses and may reduce arrhythmias; VASST suggested benefit in less severe shock."
+          },
+          {
+            "text": "Check ionised calcium in refractory shock after large volumes or blood products."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Escalation in refractory septic shock",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Septic shock on noradrenaline"
+          },
+          {
+            "id": "dose",
+            "type": "decision",
+            "text": "NA escalating (about ≥ 0.25 mcg/kg/min)?"
+          },
+          {
+            "id": "cont",
+            "type": "action",
+            "text": "Titrate NA to MAP 65; reassess perfusion"
+          },
+          {
+            "id": "vp",
+            "type": "action",
+            "text": "Add vasopressin 0.03 units/min",
+            "severity": "high"
+          },
+          {
+            "id": "ster",
+            "type": "action",
+            "text": "Hydrocortisone 50 mg IV every 6 h",
+            "detail": "SSC 2026 suggests IV corticosteroids for ongoing vasopressor need; no cortisol test."
+          },
+          {
+            "id": "echo",
+            "type": "decision",
+            "text": "Echo: LV dysfunction with low output?"
+          },
+          {
+            "id": "dob",
+            "type": "action",
+            "text": "Add dobutamine to NA (or use adrenaline alone)"
+          },
+          {
+            "id": "adr",
+            "type": "action",
+            "text": "Add adrenaline 0.05-0.3 mcg/kg/min if MAP still low"
+          },
+          {
+            "id": "hunt",
+            "type": "action",
+            "text": "Hunt causes: source, bleeding, tamponade, ACS, calcium, acidosis",
+            "severity": "critical"
+          },
+          {
+            "id": "end",
+            "type": "end",
+            "text": "Stabilised: wean NA, then vasopressin, then steroids"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "dose"
+          },
+          {
+            "from": "dose",
+            "to": "cont",
+            "label": "No"
+          },
+          {
+            "from": "dose",
+            "to": "vp",
+            "label": "Yes"
+          },
+          {
+            "from": "cont",
+            "to": "end"
+          },
+          {
+            "from": "vp",
+            "to": "ster"
+          },
+          {
+            "from": "ster",
+            "to": "echo"
+          },
+          {
+            "from": "echo",
+            "to": "dob",
+            "label": "Yes"
+          },
+          {
+            "from": "echo",
+            "to": "adr",
+            "label": "No"
+          },
+          {
+            "from": "dob",
+            "to": "hunt"
+          },
+          {
+            "from": "adr",
+            "to": "hunt"
+          },
+          {
+            "from": "hunt",
+            "to": "end"
+          }
+        ],
+        "refs": [
+          "ssc2026"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Septic shock causes relative vasopressin deficiency (pituitary stores deplete within 24-48 h), catecholamine receptor down-regulation and critical illness-related corticosteroid insufficiency (CIRCI). Steroids restore vascular responsiveness to catecholamines; vasopressin acts on non-adrenergic V1 receptors.",
+        "evidence": "- **VASST (2008):** vasopressin 0.01-0.03 U/min added to noradrenaline did not lower 28-day mortality overall; possible benefit in less severe shock.\n- **ADRENAL (2018, n = 3800):** hydrocortisone 200 mg/day did not reduce 90-day mortality but hastened shock resolution and shortened ventilation.\n- **APROCCHSS (2018, n = 1241):** hydrocortisone + fludrocortisone reduced 90-day mortality (43.0% vs 49.1%).\n- **SSC 2026:** suggests IV corticosteroids in septic shock (conditional; certainty downgraded from moderate to low). A 45-RCT meta-analysis (9,543 patients) found a possible small mortality reduction (RR 0.92, 95% CI 0.83-1.01) and more shock reversal by day 7, with more hyperglycaemia and hypernatraemia. The 2021 trigger (NA or adrenaline ≥ 0.25 mcg/kg/min for ≥ 4 h) is not part of the 2026 statement.\n- **Vasopressors in 2026:** noradrenaline first line over dopamine, adrenaline or selepressin (strong); over vasopressin or angiotensin II only conditional (downgraded from strong). Add vasopressin on escalating noradrenaline (conditional, moderate certainty); add adrenaline if MAP stays low on both (conditional, very low certainty). New: suggest against terlipressin; with cardiac dysfunction, either noradrenaline or adrenaline first line.\n- **Inotropes:** suggest an inotrope (with a vasopressor) for cardiac dysfunction with persistent hypoperfusion; dobutamine added to noradrenaline or adrenaline alone; insufficient data for dobutamine vs milrinone; suggest against levosimendan.\n- **Other adjuncts:** suggest against IV vitamin C, IV immunoglobulin, blood purification, polymyxin B haemoperfusion, vitamin D and (new) beta-blockers; insufficient evidence for methylene blue and oral midodrine.\n- **VASSPR (JAMA 2026, n ≈ 3,960):** starting vasopressin at 0.1 vs 0.4 mcg/kg/min noradrenaline-equivalent did not change 28-day mortality (31.8% vs 33.0%); published after SSC 2026.\n- **LOVIT (2022):** IV vitamin C increased the composite of death or persistent organ dysfunction.",
+        "controversies": "- Whether fludrocortisone adds benefit: APROCCHSS was positive while ADRENAL used hydrocortisone alone; there is no head-to-head RCT.\n- Methylene blue: SSC 2026 makes no recommendation (insufficient evidence); it may raise BP but survival benefit is unproven, and 69% of panellists never or almost never use it. Angiotensin II is not routinely available in India.\n- Terlipressin as a vasopressin substitute (common in India because of cost): SSC 2026 now suggests against terlipressin in septic shock (conditional, low certainty); it has different pharmacology and higher ischaemic risk.",
+        "indiaNotes": "- Vasopressin availability and cost vary. Some units use terlipressin instead, but SSC 2026 suggests against terlipressin; where vasopressin is unavailable it allows adding adrenaline to noradrenaline.\n- Hydrocortisone 100 mg vials are widely available; make sure the 6-hourly schedule is not missed overnight."
+      },
+      "drugIds": [
+        "vasopressin",
+        "hydrocortisone",
+        "fludrocortisone",
+        "adrenaline",
+        "dobutamine",
+        "noradrenaline"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-min",
+        "infusion-rate-fixed"
+      ],
+      "references": [
+        "ssc2026",
+        "vasst",
+        "adrenal",
+        "aprocchss",
+        "lovit",
+        "ssc2021",
+        "vasspr"
+      ],
+      "quiz": [
+        {
+          "id": "steroids-vasopressin-adjuncts-q1",
+          "stem": "When is IV hydrocortisone appropriate in septic shock?",
+          "options": [
+            "On arrival in the emergency department",
+            "For ongoing vasopressor need (a common trigger: NA or adrenaline ≥ 0.25 mcg/kg/min for ≥ 4 h)",
+            "Only if random cortisol < 10 mcg/dL",
+            "Only after an ACTH stimulation test"
+          ],
+          "answerIndex": 1,
+          "explanation": "SSC 2026 suggests IV corticosteroids in septic shock (conditional, low certainty). It sets no dose threshold; ongoing vasopressor need, often NA ≥ 0.25 mcg/kg/min for ≥ 4 h, is the usual trigger. No cortisol testing is needed."
+        },
+        {
+          "id": "steroids-vasopressin-adjuncts-q2",
+          "stem": "Vasopressin in septic shock is usually given as:",
+          "options": [
+            "Titrated 0.1-1 units/min",
+            "Fixed 0.03 units/min",
+            "Bolus 40 units every 4 h",
+            "2.4 units/h titrated to MAP 90"
+          ],
+          "answerIndex": 1,
+          "explanation": "Vasopressin is a fixed-dose infusion of about 0.03 units/min."
+        },
+        {
+          "id": "steroids-vasopressin-adjuncts-q3",
+          "stem": "Which adjunct does SSC 2026 suggest AGAINST?",
+          "options": [
+            "Hydrocortisone",
+            "Vasopressin",
+            "IV vitamin C",
+            "Dobutamine for low output"
+          ],
+          "answerIndex": 2,
+          "explanation": "SSC 2026 suggests against IV vitamin C (conditional, low certainty); LOVIT showed harm. Hydrocortisone, vasopressin and dobutamine for low output are all suggested."
+        },
+        {
+          "id": "steroids-vasopressin-adjuncts-q4",
+          "stem": "The main finding of ADRENAL was:",
+          "options": [
+            "Lower 90-day mortality",
+            "No mortality difference but faster shock resolution",
+            "Higher mortality",
+            "Benefit only with fludrocortisone"
+          ],
+          "answerIndex": 1,
+          "explanation": "ADRENAL found no mortality difference, but faster shock reversal and shorter ventilation."
+        },
+        {
+          "id": "steroids-vasopressin-adjuncts-q5",
+          "stem": "A patient in septic shock has sinus tachycardia of 135/min on noradrenaline. What does SSC 2026 say about esmolol or landiolol?",
+          "options": [
+            "Recommends them to reduce mortality",
+            "Suggests against using beta-blockers to treat septic shock",
+            "Suggests them only with vasopressin",
+            "Makes no statement"
+          ],
+          "answerIndex": 1,
+          "explanation": "New in 2026: SSC suggests against short-acting IV beta-blockers as a treatment for septic shock (conditional, very low certainty); they reduce tachyarrhythmias but prolong vasopressor use."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Terlipressin",
+          "reason": "SSC 2026 suggests against terlipressin in septic shock. Kept only as a 'do not use' item; no dose is given. Consultant to confirm local practice."
+        },
+        {
+          "item": "Vasopressin and steroid start thresholds",
+          "reason": "SSC 2026 statements set no noradrenaline dose for adding vasopressin or starting steroids. The 0.25-0.5 mcg/kg/min and ≥ 0.25 for ≥ 4 h triggers are common practice (2021 remark) and need a unit decision."
+        }
+      ]
+    },
+    {
+      "id": "de-escalation-duration",
+      "title": "De-escalation, duration and stewardship",
+      "summary": "Review antibiotics daily, narrow once cultures return, use procalcitonin with clinical judgement to stop, and prefer short courses (often 5-7 days).",
+      "viewKey": "topic:sepsis-septic-shock/de-escalation-duration",
+      "uiHints": {
+        "icon": "shield-alert",
+        "accent": "standard"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Daily",
+            "title": "Antibiotic time-out",
+            "detail": "Every round: Is this infection? Which source? Are cultures back? Can I narrow, switch to oral, or stop? Stop empirical antibiotics if another cause of illness is shown or strongly suspected (SSC 2026).",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "48-72 h",
+            "title": "Narrow to the culture result",
+            "detail": "Switch a carbapenem to ceftriaxone or another narrower agent if susceptible (SSC 2026 recommends de-escalation once the organism and susceptibilities are known). Stop MRSA cover if cultures (and nasal MRSA screen, if done) are negative.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "48-72 h",
+            "title": "Stop double cover",
+            "detail": "Drop the second gram-negative agent (e.g. amikacin) once susceptibility is known."
+          },
+          {
+            "n": 4,
+            "time": "Day 3-5",
+            "title": "Consider oral step-down",
+            "detail": "Stable, absorbing, source controlled, and an oral option with good bioavailability exists."
+          },
+          {
+            "n": 5,
+            "time": "Decision points",
+            "title": "Use procalcitonin to support stopping",
+            "detail": "Where the right duration is unclear, use procalcitonin with clinical review to decide when to stop (SSC 2026, conditional): stop when PCT falls ≥ 80% from its peak or to ≤ 0.5 ng/mL, with clinical improvement (SAPS).",
+            "refs": [
+              "ssc2026",
+              "sapspct"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "End",
+            "title": "Short durations",
+            "detail": "Most sepsis 5-7 days (ICMR: 7-10). Uncomplicated gram-negative bacteraemia 7 days (BALANCE). Intra-abdominal after source control about 4 days. Longer for S. aureus bacteraemia (≥ 14 days), endocarditis, osteomyelitis or undrained abscess.",
+            "refs": [
+              "balance",
+              "stopit",
+              "icmr2019"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "durations",
+            "title": "Typical durations (source controlled, clinically improving)",
+            "columns": [
+              "Infection",
+              "Duration",
+              "Basis"
+            ],
+            "rows": [
+              [
+                "Community-acquired pneumonia",
+                "5-7 days",
+                "Guideline consensus"
+              ],
+              [
+                "Hospital or ventilator-associated pneumonia",
+                "7 days",
+                "IDSA/ATS 2016"
+              ],
+              [
+                "Complicated UTI or pyelonephritis",
+                "7 days",
+                "RCTs"
+              ],
+              [
+                "Intra-abdominal after source control",
+                "~4 days",
+                "STOP-IT"
+              ],
+              [
+                "Gram-negative bacteraemia, uncomplicated",
+                "7 days",
+                "BALANCE 2025"
+              ],
+              [
+                "S. aureus bacteraemia",
+                "≥ 14 days IV (4-6 weeks if complicated)",
+                "Guidelines"
+              ]
+            ],
+            "refs": [
+              "balance",
+              "stopit",
+              "ssc2026"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "New fever on day 5-7 of antibiotics: think line infection, C. difficile, fungal infection, drug fever or VTE before escalating."
+          },
+          {
+            "text": "S. aureus or Candida in a blood culture is never a contaminant: treat and repeat cultures."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Continuing a carbapenem 'because the patient is improving' after a susceptible culture."
+          },
+          {
+            "text": "Treating colonisation (Candida in sputum, Acinetobacter in an endotracheal aspirate without a new infiltrate)."
+          },
+          {
+            "text": "Using PCT to decide whether to start antibiotics. SSC 2026 suggests clinical evaluation alone for starting; PCT helps only with stopping.",
+            "refs": [
+              "ssc2026"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Write the planned stop date on the prescription on day 1."
+          },
+          {
+            "text": "A negative nasal MRSA PCR has a high negative predictive value for MRSA pneumonia."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Daily antibiotic review",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Day 2-3 antibiotic review"
+          },
+          {
+            "id": "inf",
+            "type": "decision",
+            "text": "Is infection still the likely diagnosis?"
+          },
+          {
+            "id": "stop",
+            "type": "end",
+            "text": "Stop antibiotics; look for an alternative diagnosis"
+          },
+          {
+            "id": "cult",
+            "type": "decision",
+            "text": "Cultures identify the organism?"
+          },
+          {
+            "id": "narrow",
+            "type": "action",
+            "text": "Narrow to the simplest effective agent; stop MRSA and double cover"
+          },
+          {
+            "id": "clin",
+            "type": "action",
+            "text": "No organism: narrow or stop if improving; continue only if a source is plausible"
+          },
+          {
+            "id": "oral",
+            "type": "decision",
+            "text": "Stable and able to absorb?"
+          },
+          {
+            "id": "po",
+            "type": "action",
+            "text": "Switch to a suitable oral agent"
+          },
+          {
+            "id": "dur",
+            "type": "end",
+            "text": "Set duration (often 5-7 days); stop when PCT falls ≥ 80% or ≤ 0.5 ng/mL"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "inf"
+          },
+          {
+            "from": "inf",
+            "to": "stop",
+            "label": "No"
+          },
+          {
+            "from": "inf",
+            "to": "cult",
+            "label": "Yes"
+          },
+          {
+            "from": "cult",
+            "to": "narrow",
+            "label": "Yes"
+          },
+          {
+            "from": "cult",
+            "to": "clin",
+            "label": "No"
+          },
+          {
+            "from": "narrow",
+            "to": "oral"
+          },
+          {
+            "from": "clin",
+            "to": "oral"
+          },
+          {
+            "from": "oral",
+            "to": "po",
+            "label": "Yes"
+          },
+          {
+            "from": "oral",
+            "to": "dur",
+            "label": "No"
+          },
+          {
+            "from": "po",
+            "to": "dur"
+          }
+        ],
+        "refs": [
+          "ssc2026",
+          "sapspct"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **SSC 2026:** re-evaluate continuously and stop empirical therapy if another diagnosis is shown or strongly suspected (good practice); **recommends** de-escalation when organism and susceptibilities are known (strong, very low certainty); suggests de-escalation even when final cultures are negative (conditional); shorter over longer courses after adequate source control (conditional); PCT plus clinical evaluation to decide when to stop if the duration is unclear (conditional).\n- **Selective decontamination of the digestive tract (new, conditional, moderate certainty):** suggested for ventilated septic patients only in units with a *low* prevalence of antimicrobial resistance.\n- **SAPS (2016):** PCT-guided stopping reduced antibiotic duration and was associated with lower mortality in Dutch ICUs.\n- **BALANCE (2025, n ≈ 3600):** 7 days was non-inferior to 14 days for bloodstream infection in hospitalised patients, including ICU patients (S. aureus and some others excluded).\n- **STOP-IT (2015):** a fixed ~4 days after source control for intra-abdominal infection.",
+        "controversies": "- De-escalation with no organism grown: SSC 2026 now suggests it (conditional, very low certainty); many clinicians already narrow if the patient is improving.\n- PCT is less reliable in kidney failure, after surgery or trauma, and in fungal or atypical infections.",
+        "indiaNotes": "- Indian stewardship programmes have reduced carbapenem and polymyxin use without harm by using daily antibiotic time-outs.\n- PCT can be expensive in many labs; use it at decision points (day 3-5) rather than daily.\n- ICMR 2019 suggests 7-10 days for most sepsis, with longer courses for slow response, undrainable foci or S. aureus bacteraemia.\n- SSC 2026's suggestion for selective digestive decontamination applies only to low-resistance units; most Indian ICUs report high carbapenem resistance, so it will rarely apply. Consultant to decide whether to mention it in the app."
+      },
+      "drugIds": [
+        "meropenem",
+        "piperacillin-tazobactam"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "ssc2026",
+        "sapspct",
+        "balance",
+        "stopit",
+        "icmr2019"
+      ],
+      "quiz": [
+        {
+          "id": "de-escalation-duration-q1",
+          "stem": "BALANCE (2025) showed that for bloodstream infections:",
+          "options": [
+            "14 days was superior",
+            "7 days was non-inferior to 14 days",
+            "3 days was enough",
+            "Oral switch was harmful"
+          ],
+          "answerIndex": 1,
+          "explanation": "7 days was non-inferior to 14 days for 90-day mortality (S. aureus excluded)."
+        },
+        {
+          "id": "de-escalation-duration-q2",
+          "stem": "Which PCT rule supports stopping antibiotics (SAPS)?",
+          "options": [
+            "PCT rises by 20%",
+            "PCT falls ≥ 80% from peak or to ≤ 0.5 ng/mL",
+            "PCT > 2 ng/mL",
+            "PCT negative on day 1"
+          ],
+          "answerIndex": 1,
+          "explanation": "Stop when PCT falls by ≥ 80% or to ≤ 0.5 ng/mL, together with clinical improvement."
+        },
+        {
+          "id": "de-escalation-duration-q3",
+          "stem": "Candida grows in the sputum of a ventilated patient with no new infiltrate. Best action?",
+          "options": [
+            "Start fluconazole",
+            "Start an echinocandin",
+            "Treat as colonisation: no antifungal for this alone",
+            "Start amphotericin B"
+          ],
+          "answerIndex": 2,
+          "explanation": "Candida in respiratory samples is almost always colonisation and does not need treatment on its own."
+        },
+        {
+          "id": "de-escalation-duration-q4",
+          "stem": "Final cultures are negative and the patient with sepsis is improving. What does SSC 2026 suggest?",
+          "options": [
+            "Continue the empirical broad-spectrum regimen for 14 days",
+            "De-escalate the antimicrobial therapy",
+            "Add an antifungal",
+            "Repeat procalcitonin daily without changing therapy"
+          ],
+          "answerIndex": 1,
+          "explanation": "SSC 2026 suggests de-escalation even when no pathogen is identified (conditional, very low certainty), and recommends it when a pathogen and susceptibilities are known."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "noradrenaline",
+      "name": "Noradrenaline (norepinephrine)",
+      "class": "Catecholamine vasopressor (alpha-1 > beta-1)",
+      "indications": "First-line vasopressor in septic and most vasodilatory shock.",
+      "adultDose": "Start 0.05-0.1 mcg/kg/min and titrate every 5-10 min to MAP 65 mmHg (60-65 if aged ≥ 65). Usual range 0.05-0.5 mcg/kg/min. When doses are escalating (commonly 0.25-0.5 mcg/kg/min) add vasopressin; above ~0.5-1 mcg/kg/min = refractory shock.",
+      "preparationIndia": "Ampoules 2 mg/2 mL. Common ICU syringe: 4 mg in 50 mL NS or D5 (80 mcg/mL), or 8 mg in 50 mL (160 mcg/mL) for fluid-restricted patients.",
+      "cautions": "Extravasation causes tissue necrosis (infiltrate phentolamine 5-10 mg in 10 mL NS if available). Digital and mesenteric ischaemia at high doses. Can be started via a good proximal peripheral cannula while central access is arranged.",
+      "monitoring": "Arterial line once on a vasopressor; MAP, lactate, capillary refill, urine output; peripheral site checks every hour if peripheral.",
+      "verify": "Confirm whether the local ampoule is labelled as noradrenaline base or as bitartrate salt (2 mg bitartrate ≈ 1 mg base). Prescriptions and the app must use the same convention.",
+      "refs": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "vasopressin",
+      "name": "Vasopressin",
+      "class": "V1 receptor agonist (non-catecholamine vasopressor)",
+      "indications": "Second vasopressor in septic shock when noradrenaline doses are escalating (commonly 0.25-0.5 mcg/kg/min).",
+      "adultDose": "Fixed 0.03 units/min (range 0.01-0.03, up to 0.04). Not titrated like noradrenaline.",
+      "preparationIndia": "20 units/mL ampoules. 20 units in 50 mL NS = 0.4 units/mL; 0.03 units/min = 4.5 mL/h.",
+      "cautions": "Digital, mesenteric and myocardial ischaemia; hyponatraemia. Avoid in low cardiac output states without inotropic support. Terlipressin is sometimes substituted in India but is not equivalent (longer acting, more ischaemia), and SSC 2026 suggests against it in septic shock.",
+      "monitoring": "Peripheral perfusion, ECG, sodium. When weaning, taper noradrenaline first, then vasopressin once noradrenaline is low.",
+      "refs": [
+        "ssc2026",
+        "vasst",
+        "vasspr"
+      ]
+    },
+    {
+      "id": "adrenaline",
+      "name": "Adrenaline (epinephrine)",
+      "class": "Catecholamine (beta-1, beta-2, alpha-1)",
+      "indications": "Add-on when MAP is inadequate despite noradrenaline plus vasopressin (or noradrenaline alone if vasopressin is unavailable); inotropic alternative to dobutamine; a first-line option with cardiac dysfunction, especially with bradycardia (SSC 2026).",
+      "adultDose": "0.05-0.3 mcg/kg/min titrated to MAP and perfusion; higher in refractory shock.",
+      "preparationIndia": "1 mg/mL ampoules. 4 mg in 50 mL = 80 mcg/mL.",
+      "cautions": "Raises lactate (beta-2 aerobic glycolysis), which can mask perfusion assessment; tachyarrhythmias; hyperglycaemia.",
+      "monitoring": "Arterial line, ECG, glucose; interpret lactate with care.",
+      "refs": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "dobutamine",
+      "name": "Dobutamine",
+      "class": "Inotrope (beta-1 > beta-2)",
+      "indications": "Septic shock with cardiac dysfunction and persistent hypoperfusion despite adequate volume and MAP.",
+      "adultDose": "2.5-10 mcg/kg/min (max 20).",
+      "preparationIndia": "250 mg/20 mL vials. 250 mg in 50 mL = 5000 mcg/mL.",
+      "cautions": "Vasodilatation and hypotension; tachyarrhythmias. Support MAP with a vasopressor first.",
+      "refs": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "hydrocortisone",
+      "name": "Hydrocortisone",
+      "class": "Corticosteroid",
+      "indications": "Septic shock with ongoing vasopressor need (SSC 2026 suggests IV corticosteroids). Common unit trigger: noradrenaline or adrenaline ≥ 0.25 mcg/kg/min for ≥ 4 h.",
+      "adultDose": "200 mg/day: 50 mg IV every 6 h, or 200 mg/24 h continuous infusion. Usually 5-7 days; stop when off vasopressors (taper optional).",
+      "preparationIndia": "100 mg vial (sodium succinate) reconstituted in 2 mL water for injection. Infusion: 200 mg in 50 mL NS at ~2.1 mL/h.",
+      "cautions": "Hyperglycaemia, hypernatraemia, ICU-acquired weakness, possible superinfection.",
+      "monitoring": "Glucose every 4-6 h, sodium.",
+      "refs": [
+        "ssc2026",
+        "adrenal",
+        "aprocchss"
+      ],
+      "verify": "SSC 2026 does not specify a start threshold, dose or duration; confirm unit protocol."
+    },
+    {
+      "id": "fludrocortisone",
+      "name": "Fludrocortisone",
+      "class": "Mineralocorticoid",
+      "indications": "Optional add-on to hydrocortisone in septic shock (APROCCHSS regimen). Not specifically recommended in SSC 2026.",
+      "adultDose": "50 mcg orally or by nasogastric tube once daily for 7 days, with hydrocortisone 50 mg IV every 6 h.",
+      "preparationIndia": "0.1 mg tablets are the common strength; 50 mcg = half tablet.",
+      "verify": "Confirm local tablet strength and whether the unit uses fludrocortisone.",
+      "refs": [
+        "aprocchss"
+      ]
+    },
+    {
+      "id": "balanced-crystalloid",
+      "name": "Balanced crystalloid (Ringer's lactate / Plasma-Lyte)",
+      "class": "Isotonic crystalloid",
+      "indications": "Initial resuscitation fluid in sepsis-induced hypoperfusion.",
+      "adultDose": "At least 30 mL/kg IV within the first 3 h for hypotension or hypoperfusion (lactate ≥ 4, consider 2-4), as 250-500 mL boluses with reassessment after each. Use actual body weight; adjusted or ideal body weight if BMI > 30.",
+      "preparationIndia": "Ringer's lactate 500 mL bottles are cheap and widely available. Plasma-Lyte A or Sterofundin in larger hospitals.",
+      "cautions": "Fluid overload and worsening oxygenation. Stop boluses when no longer fluid responsive or overloaded. Use 0.9% saline rather than balanced fluid in traumatic brain injury. Starches: recommend against; gelatin: suggest against (SSC 2026).",
+      "refs": [
+        "ssc2026",
+        "smart"
+      ]
+    },
+    {
+      "id": "albumin",
+      "name": "Human albumin 20%",
+      "class": "Colloid",
+      "indications": "Not routine. SSC 2026 suggests crystalloid alone over added albumin; consider case by case after large crystalloid volumes or in cirrhosis.",
+      "adultDose": "Commonly 100 mL of 20% (20 g) per dose; ALBIOS targeted serum albumin ≥ 30 g/L.",
+      "preparationIndia": "20% in 50 mL and 100 mL vials; expensive.",
+      "cautions": "Cost. Avoid in traumatic brain injury (SAFE-TBI signal; SSC 2026).",
+      "refs": [
+        "ssc2026",
+        "albios"
+      ]
+    },
+    {
+      "id": "piperacillin-tazobactam",
+      "name": "Piperacillin-tazobactam",
+      "class": "Antipseudomonal penicillin + beta-lactamase inhibitor",
+      "indications": "Empirical cover for sepsis with lower ESBL risk; intra-abdominal and many hospital-onset infections if the local antibiogram allows.",
+      "adultDose": "4.5 g IV every 6 h. First dose over 30 min, then extended infusion over 3-4 h (SSC 2026: strong recommendation) (or continuous infusion 18 g/24 h after a loading dose).",
+      "preparationIndia": "4.5 g vials; reconstitute and dilute in 50-100 mL NS.",
+      "renalHepatic": "Reduce frequency when CrCl < 40 mL/min (e.g. 4.5 g every 8 h; every 12 h if < 20). Always give a full first dose.",
+      "cautions": "Not for ESBL (ceftriaxone-resistant) bacteraemia (MERINO). ICMR advises avoiding it in septic shock until such bacteraemia is excluded. Hypokalaemia; more AKI when combined with vancomycin.",
+      "verify": "Renal adjustment thresholds vary between references; align with the hospital renal dosing guide.",
+      "refs": [
+        "ssc2026",
+        "blingiii",
+        "icmr2019",
+        "merino"
+      ]
+    },
+    {
+      "id": "meropenem",
+      "name": "Meropenem",
+      "class": "Carbapenem",
+      "indications": "Empirical therapy for septic shock with unclear focus (ICMR preferred, with imipenem), or high ESBL risk.",
+      "adultDose": "1 g IV every 8 h as a 3-h extended infusion (2 g every 8 h for CNS infection or higher-MIC organisms). First dose over 30 min.",
+      "preparationIndia": "500 mg and 1 g vials. Dilute in 50-100 mL NS; limited stability at room temperature, so prepare each dose fresh.",
+      "renalHepatic": "CrCl 26-50: 1 g every 12 h; 10-25: 500 mg every 12 h; < 10: 500 mg every 24 h.",
+      "cautions": "Overuse drives carbapenem resistance: de-escalate. Sharply lowers valproate levels.",
+      "refs": [
+        "ssc2026",
+        "icmr2019"
+      ]
+    },
+    {
+      "id": "vancomycin",
+      "name": "Vancomycin",
+      "class": "Glycopeptide",
+      "indications": "Add when MRSA risk is high (known colonisation, prior MRSA, line or skin source, post-operative or dialysis patients).",
+      "adultDose": "Loading 20-35 mg/kg actual body weight (max 3 g), then 15-20 mg/kg every 8-12 h, adjusted to AUC 400-600 (trough 15-20 mg/L if AUC monitoring is unavailable).",
+      "preparationIndia": "500 mg and 1 g vials. Infuse at ≤ 1 g/h in 200-250 mL NS.",
+      "renalHepatic": "Keep the loading dose; extend the interval and use levels in AKI.",
+      "cautions": "Nephrotoxicity (more with pip-taz or aminoglycosides); infusion (flushing) reaction.",
+      "monitoring": "Level before the 4th dose; creatinine daily.",
+      "refs": [
+        "vanco2020"
+      ]
+    },
+    {
+      "id": "teicoplanin",
+      "name": "Teicoplanin",
+      "class": "Glycopeptide",
+      "indications": "Alternative to vancomycin for MRSA; widely used in India.",
+      "adultDose": "Loading 12 mg/kg (≈ 800 mg) IV every 12 h for 3-5 doses, then 12 mg/kg once daily (6 mg/kg for less severe infection).",
+      "preparationIndia": "200 mg and 400 mg vials; slow IV bolus or 30-min infusion.",
+      "renalHepatic": "Keep loading doses; reduce maintenance frequency from day 4 in renal impairment.",
+      "verify": "Loading regimen and trough target (≥ 20 mg/L in serious infection) vary by local practice.",
+      "refs": [
+        "icmr2019"
+      ]
+    },
+    {
+      "id": "colistin",
+      "name": "Colistin (colistimethate sodium)",
+      "class": "Polymyxin",
+      "indications": "Carbapenem-resistant Acinetobacter, Pseudomonas or Enterobacterales when better options are unavailable; preferred polymyxin for lower UTI.",
+      "adultDose": "Loading 9 million units (MU) IV, then 4.5 MU every 12 h (or 3 MU every 8 h), starting 12-24 h after the load. Use in combination.",
+      "preparationIndia": "1 MU and 2 MU vials (1 MU ≈ 33 mg colistin base activity).",
+      "renalHepatic": "Loading dose unchanged; maintenance reduced by creatinine clearance; supplement after dialysis.",
+      "cautions": "Nephrotoxicity and neurotoxicity.",
+      "refs": [
+        "polymyxin2019",
+        "icmr2019"
+      ]
+    },
+    {
+      "id": "polymyxin-b",
+      "name": "Polymyxin B",
+      "class": "Polymyxin",
+      "indications": "Preferred polymyxin for systemic carbapenem-resistant infection (not lower UTI).",
+      "adultDose": "Loading 2-2.5 mg/kg (20,000-25,000 units/kg) over 1 h, then 1.25-1.5 mg/kg (12,500-15,000 units/kg) every 12 h. No renal adjustment.",
+      "preparationIndia": "500,000-unit vials (1 mg = 10,000 units).",
+      "cautions": "Nephrotoxicity, neurotoxicity, skin hyperpigmentation.",
+      "refs": [
+        "polymyxin2019"
+      ]
+    },
+    {
+      "id": "ceftazidime-avibactam",
+      "name": "Ceftazidime-avibactam",
+      "class": "Cephalosporin + novel beta-lactamase inhibitor",
+      "indications": "CRE producing KPC or OXA-48-like enzymes (OXA-48-like are common in India). With aztreonam for metallo-beta-lactamase (NDM) producers.",
+      "adultDose": "2.5 g IV every 8 h over 2 h. For NDM: plus aztreonam 2 g IV every 8 h, given together.",
+      "preparationIndia": "2.5 g vials (costly). Aztreonam 1 g vials.",
+      "renalHepatic": "Reduce when CrCl ≤ 50 mL/min (e.g. 1.25 g every 8 h for CrCl 31-50).",
+      "cautions": "Use with susceptibility data or strong local epidemiology; involve microbiology.",
+      "refs": [
+        "idsa-amr2024",
+        "icmr2019"
+      ]
+    },
+    {
+      "id": "amikacin",
+      "name": "Amikacin",
+      "class": "Aminoglycoside",
+      "indications": "Second gram-negative agent in septic shock with unclear focus (ICMR), or urinary sepsis in high-resistance settings.",
+      "adultDose": "15-20 mg/kg IV once daily (up to 25-30 mg/kg once daily in septic shock per some protocols), over 30-60 min.",
+      "preparationIndia": "100 mg, 250 mg and 500 mg vials.",
+      "renalHepatic": "Extend interval in AKI and use levels; avoid prolonged courses.",
+      "cautions": "Nephrotoxicity and ototoxicity; stop after 48-72 h when susceptibilities are known.",
+      "verify": "Septic-shock loading (25-30 mg/kg) is debated; confirm unit policy.",
+      "refs": [
+        "icmr2019"
+      ]
+    },
+    {
+      "id": "doxycycline",
+      "name": "Doxycycline",
+      "class": "Tetracycline",
+      "indications": "Add empirically in Indian febrile sepsis when scrub typhus, rickettsia or leptospirosis is plausible.",
+      "adultDose": "100 mg orally or by NG tube every 12 h (IV where available).",
+      "preparationIndia": "100 mg capsules or tablets; IV form has limited availability. Azithromycin 500 mg IV daily is an alternative.",
+      "refs": [
+        "icmr2019"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "ssc2021",
+      "citation": "Evans L, Rhodes A, Alhazzani W, et al. Surviving Sepsis Campaign: international guidelines for management of sepsis and septic shock 2021. Intensive Care Med. 2021;47(11):1181-1247",
+      "url": "https://doi.org/10.1007/s00134-021-06506-y",
+      "year": 2021,
+      "doi": "10.1007/s00134-021-06506-y",
+      "type": "guideline"
+    },
+    {
+      "id": "sepsis3",
+      "citation": "Singer M, Deutschman CS, Seymour CW, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3). JAMA. 2016;315(8):801-810",
+      "url": "https://doi.org/10.1001/jama.2016.0287",
+      "year": 2016,
+      "doi": "10.1001/jama.2016.0287",
+      "type": "consensus"
+    },
+    {
+      "id": "hour1",
+      "citation": "Levy MM, Evans LE, Rhodes A. The Surviving Sepsis Campaign Bundle: 2018 update. Intensive Care Med. 2018;44(6):925-928",
+      "url": "https://doi.org/10.1007/s00134-018-5085-0",
+      "year": 2018,
+      "doi": "10.1007/s00134-018-5085-0",
+      "type": "consensus"
+    },
+    {
+      "id": "seymour2017",
+      "citation": "Seymour CW, Gesten F, Prescott HC, et al. Time to treatment and mortality during mandated emergency care for sepsis. N Engl J Med. 2017;376(23):2235-2244",
+      "url": "https://doi.org/10.1056/NEJMoa1703058",
+      "year": 2017,
+      "doi": "10.1056/NEJMoa1703058",
+      "type": "trial"
+    },
+    {
+      "id": "kumar2006",
+      "citation": "Kumar A, Roberts D, Wood KE, et al. Duration of hypotension before initiation of effective antimicrobial therapy is the critical determinant of survival in human septic shock. Crit Care Med. 2006;34(6):1589-1596",
+      "url": "https://doi.org/10.1097/01.CCM.0000217961.75225.E9",
+      "year": 2006,
+      "doi": "10.1097/01.CCM.0000217961.75225.E9",
+      "type": "trial"
+    },
+    {
+      "id": "smart",
+      "citation": "Semler MW, Self WH, Wanderer JP, et al. Balanced crystalloids versus saline in critically ill adults (SMART). N Engl J Med. 2018;378(9):829-839",
+      "url": "https://doi.org/10.1056/NEJMoa1711584",
+      "year": 2018,
+      "doi": "10.1056/NEJMoa1711584",
+      "type": "trial"
+    },
+    {
+      "id": "classic",
+      "citation": "Meyhoff TS, Hjortrup PB, Wetterslev J, et al. Restriction of intravenous fluid in ICU patients with septic shock (CLASSIC). N Engl J Med. 2022;386(26):2459-2470",
+      "url": "https://doi.org/10.1056/NEJMoa2202707",
+      "year": 2022,
+      "doi": "10.1056/NEJMoa2202707",
+      "type": "trial"
+    },
+    {
+      "id": "clovers",
+      "citation": "NHLBI PETAL Clinical Trials Network; Shapiro NI, Douglas IS, Brower RG, et al. Early restrictive or liberal fluid management for sepsis-induced hypotension (CLOVERS). N Engl J Med. 2023;388(6):499-510",
+      "url": "https://doi.org/10.1056/NEJMoa2212663",
+      "year": 2023,
+      "doi": "10.1056/NEJMoa2212663",
+      "type": "trial"
+    },
+    {
+      "id": "andromeda",
+      "citation": "Hernández G, Ospina-Tascón GA, Damiani LP, et al. Effect of a resuscitation strategy targeting peripheral perfusion status vs serum lactate levels on 28-day mortality among patients with septic shock (ANDROMEDA-SHOCK). JAMA. 2019;321(7):654-664",
+      "url": "https://doi.org/10.1001/jama.2019.0071",
+      "year": 2019,
+      "doi": "10.1001/jama.2019.0071",
+      "type": "trial"
+    },
+    {
+      "id": "sepsispam",
+      "citation": "Asfar P, Meziani F, Hamel JF, et al. High versus low blood-pressure target in patients with septic shock (SEPSISPAM). N Engl J Med. 2014;370(17):1583-1593",
+      "url": "https://doi.org/10.1056/NEJMoa1312173",
+      "year": 2014,
+      "doi": "10.1056/NEJMoa1312173",
+      "type": "trial"
+    },
+    {
+      "id": "vasst",
+      "citation": "Russell JA, Walley KR, Singer J, et al. Vasopressin versus norepinephrine infusion in patients with septic shock (VASST). N Engl J Med. 2008;358(9):877-887",
+      "url": "https://doi.org/10.1056/NEJMoa067373",
+      "year": 2008,
+      "doi": "10.1056/NEJMoa067373",
+      "type": "trial"
+    },
+    {
+      "id": "albios",
+      "citation": "Caironi P, Tognoni G, Masson S, et al. Albumin replacement in patients with severe sepsis or septic shock (ALBIOS). N Engl J Med. 2014;370(15):1412-1421",
+      "url": "https://doi.org/10.1056/NEJMoa1305727",
+      "year": 2014,
+      "doi": "10.1056/NEJMoa1305727",
+      "type": "trial"
+    },
+    {
+      "id": "adrenal",
+      "citation": "Venkatesh B, Finfer S, Cohen J, et al. Adjunctive glucocorticoid therapy in patients with septic shock (ADRENAL). N Engl J Med. 2018;378(9):797-808",
+      "url": "https://doi.org/10.1056/NEJMoa1705835",
+      "year": 2018,
+      "doi": "10.1056/NEJMoa1705835",
+      "type": "trial"
+    },
+    {
+      "id": "aprocchss",
+      "citation": "Annane D, Renault A, Brun-Buisson C, et al. Hydrocortisone plus fludrocortisone for adults with septic shock (APROCCHSS). N Engl J Med. 2018;378(9):809-818",
+      "url": "https://doi.org/10.1056/NEJMoa1705716",
+      "year": 2018,
+      "doi": "10.1056/NEJMoa1705716",
+      "type": "trial"
+    },
+    {
+      "id": "lovit",
+      "citation": "Lamontagne F, Masse MH, Menard J, et al. Intravenous vitamin C in adults with sepsis in the intensive care unit (LOVIT). N Engl J Med. 2022;386(25):2387-2398",
+      "url": "https://doi.org/10.1056/NEJMoa2200644",
+      "year": 2022,
+      "doi": "10.1056/NEJMoa2200644",
+      "type": "trial"
+    },
+    {
+      "id": "stopit",
+      "citation": "Sawyer RG, Claridge JA, Nathens AB, et al. Trial of short-course antimicrobial therapy for intraabdominal infection (STOP-IT). N Engl J Med. 2015;372(21):1996-2005",
+      "url": "https://doi.org/10.1056/NEJMoa1411162",
+      "year": 2015,
+      "doi": "10.1056/NEJMoa1411162",
+      "type": "trial"
+    },
+    {
+      "id": "balance",
+      "citation": "BALANCE Investigators; Daneman N, Rishu A, Pinto R, et al. Antibiotic treatment for 7 versus 14 days in patients with bloodstream infections. N Engl J Med. 2025;392(11):1065-1078",
+      "url": "https://doi.org/10.1056/NEJMoa2404991",
+      "year": 2025,
+      "doi": "10.1056/NEJMoa2404991",
+      "type": "trial"
+    },
+    {
+      "id": "sapspct",
+      "citation": "de Jong E, van Oers JA, Beishuizen A, et al. Efficacy and safety of procalcitonin guidance in reducing the duration of antibiotic treatment in critically ill patients (SAPS). Lancet Infect Dis. 2016;16(7):819-827",
+      "url": "https://doi.org/10.1016/S1473-3099(16)00053-0",
+      "year": 2016,
+      "doi": "10.1016/S1473-3099(16)00053-0",
+      "type": "trial"
+    },
+    {
+      "id": "blingiii",
+      "citation": "Dulhunty JM, Brett SJ, De Waele JJ, et al. Continuous vs intermittent beta-lactam antibiotic infusions in critically ill patients with sepsis (BLING III). JAMA. 2024;332(8):629-637",
+      "url": "https://doi.org/10.1001/jama.2024.9779",
+      "year": 2024,
+      "doi": "10.1001/jama.2024.9779",
+      "type": "trial"
+    },
+    {
+      "id": "idsa-amr2024",
+      "citation": "Tamma PD, Heil EL, Justo JA, Mathers AJ, Satlin MJ, Bonomo RA. Infectious Diseases Society of America 2024 guidance on the treatment of antimicrobial-resistant gram-negative infections. Clin Infect Dis. 2024",
+      "url": "https://doi.org/10.1093/cid/ciae403",
+      "year": 2024,
+      "doi": "10.1093/cid/ciae403",
+      "type": "guideline"
+    },
+    {
+      "id": "vanco2020",
+      "citation": "Rybak MJ, Le J, Lodise TP, et al. Therapeutic monitoring of vancomycin for serious methicillin-resistant Staphylococcus aureus infections: a revised consensus guideline. Am J Health Syst Pharm. 2020;77(11):835-864",
+      "url": "https://doi.org/10.1093/ajhp/zxaa036",
+      "year": 2020,
+      "doi": "10.1093/ajhp/zxaa036",
+      "type": "guideline"
+    },
+    {
+      "id": "polymyxin2019",
+      "citation": "Tsuji BT, Pogue JM, Zavascki AP, et al. International consensus guidelines for the optimal use of the polymyxins. Pharmacotherapy. 2019;39(1):10-39",
+      "url": "https://doi.org/10.1002/phar.2209",
+      "year": 2019,
+      "doi": "10.1002/phar.2209",
+      "type": "consensus"
+    },
+    {
+      "id": "icmr2019",
+      "citation": "Indian Council of Medical Research. Treatment Guidelines for Antimicrobial Use in Common Syndromes, 2nd edition. New Delhi: ICMR; 2019",
+      "url": "https://www.icmr.gov.in/icmrobject/custom_data/pdf/resource-guidelines/Treatment_Guidelines_2019_Final.pdf",
+      "year": 2019,
+      "type": "guideline"
+    },
+    {
+      "id": "indicaps",
+      "citation": "Divatia JV, Amin PR, Ramakrishnan N, et al. Intensive care in India: the Indian Intensive Care Case Mix and Practice Patterns Study (INDICAPS). Indian J Crit Care Med. 2016;20(4):216-225",
+      "url": "https://doi.org/10.4103/0972-5229.180042",
+      "year": 2016,
+      "doi": "10.4103/0972-5229.180042",
+      "type": "trial"
+    },
+    {
+      "id": "merino",
+      "citation": "Harris PNA, Tambyah PA, Lye DC, et al. Effect of piperacillin-tazobactam vs meropenem on 30-day mortality for patients with E coli or Klebsiella pneumoniae bloodstream infection and ceftriaxone resistance (MERINO). JAMA. 2018;320(10):984-994",
+      "url": "https://doi.org/10.1001/jama.2018.12163",
+      "year": 2018,
+      "doi": "10.1001/jama.2018.12163",
+      "type": "trial"
+    },
+    {
+      "id": "prism",
+      "citation": "PRISM Investigators; Rowan KM, Angus DC, Bailey M, et al. Early, goal-directed therapy for septic shock: a patient-level meta-analysis. N Engl J Med. 2017;376(23):2223-2234",
+      "url": "https://doi.org/10.1056/NEJMoa1701380",
+      "year": 2017,
+      "doi": "10.1056/NEJMoa1701380",
+      "type": "trial"
+    },
+    {
+      "id": "ssc2026",
+      "citation": "Prescott HC, Antonelli M, Alhazzani W, et al. Surviving Sepsis Campaign: international guidelines for management of sepsis and septic shock 2026. Intensive Care Med. 2026;52(5):863-936. Co-published in Crit Care Med. 2026 (doi:10.1097/CCM.0000000000007075)",
+      "url": "https://doi.org/10.1007/s00134-026-08361-1",
+      "year": 2026,
+      "doi": "10.1007/s00134-026-08361-1",
+      "type": "guideline"
+    },
+    {
+      "id": "ssc2026-exec",
+      "citation": "Prescott HC, Antonelli M, Alhazzani W, et al. Executive summary: Surviving Sepsis Campaign: international guidelines for management of sepsis and septic shock 2026. Crit Care Med. 2026;54(4):715-724",
+      "url": "https://doi.org/10.1097/CCM.0000000000007089",
+      "year": 2026,
+      "doi": "10.1097/CCM.0000000000007089",
+      "type": "guideline"
+    },
+    {
+      "id": "vasspr",
+      "citation": "Peltan ID, Groat D, Jacobs JR, et al. Effect of vasopressin initiation threshold on septic shock mortality (VASSPR). JAMA. 2026 (published online 14 Oct 2026)",
+      "url": "https://doi.org/10.1001/jama.2026.21333",
+      "year": 2026,
+      "doi": "10.1001/jama.2026.21333",
+      "type": "trial"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Surviving Sepsis Campaign version",
+      "reason": "Updated from SSC 2021 to SSC 2026 (Prescott et al., Intensive Care Med / Crit Care Med, 23 Mar 2026) on 15 Nov 2026. Recommendation wording was checked against the official SCCM recommendation list; dosing details the 2026 statements do not specify (steroid start threshold, vasopressin start dose) are kept as common practice and flagged. Still decide whether SOFA-2 (2025) should replace SOFA in the app."
+    },
+    {
+      "item": "Empirical antibiotic choices",
+      "reason": "Indian ICU resistance varies hugely between hospitals. Regimens are templates; each hospital should map them to its own antibiogram and ICMR guidance."
+    },
+    {
+      "item": "SSC 2026 'In our practice' figures",
+      "reason": "Panel-practice percentages quoted for steroids and vasopressin come from secondary summaries of the 2026 guideline (ICU Management & Practice 2026; The Clinical Database), not from the primary text read in full. Confirm against the full guideline before publishing."
+    }
+  ]
+}

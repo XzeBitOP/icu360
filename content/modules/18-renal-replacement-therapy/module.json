@@ -1,0 +1,1847 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "renal-replacement-therapy",
+  "number": 18,
+  "folder": "18-renal-replacement-therapy",
+  "section": {
+    "id": "D",
+    "title": "Renal, fluids and metabolic"
+  },
+  "phase": 2,
+  "title": "Renal replacement therapy",
+  "summary": "Renal replacement therapy in the ICU: when to start (AEIOU, STARRT-AKI, AKIKI 2), choosing CRRT, IHD or SLED, writing a CRRT prescription, citrate vs heparin, troubleshooting circuits, and antibiotic dosing on CRRT.",
+  "tags": [
+    "RRT",
+    "CRRT",
+    "CVVHDF",
+    "SLED",
+    "dialysis",
+    "citrate",
+    "heparin",
+    "filter clotting",
+    "antibiotic dosing",
+    "STARRT-AKI"
+  ],
+  "relatedModules": [
+    "aki-renal-drug-dosing",
+    "fluids-electrolytes",
+    "acid-base-abg",
+    "poisoning-approach-drug-overdoses",
+    "icu-pharmacology-drug-infusions",
+    "liver-failure"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "repeat",
+    "accent": "standard"
+  },
+  "viewKey": "module:renal-replacement-therapy",
+  "topics": [
+    {
+      "id": "rrt-indications-timing",
+      "title": "Indications and timing of RRT",
+      "summary": "Absolute indications (AEIOU), why routine early RRT does not help (STARRT-AKI, AKIKI), and when not to delay further (AKIKI-2).",
+      "viewKey": "topic:renal-replacement-therapy/rrt-indications-timing",
+      "uiHints": {
+        "icon": "timer",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Start RRT emergently for life-threatening complications of AKI not responding to medical therapy. Without these, a watchful-waiting strategy with close monitoring is safe; many patients recover without RRT.",
+          "refs": [
+            "kdigo-aki",
+            "starrt-aki"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Check emergency indications (AEIOU)",
+            "detail": "A: acidosis pH < 7.15 (metabolic) refractory; E: K > 6.0-6.5 mmol/L or ECG changes refractory to medical therapy; I: intoxication with dialysable toxin (methanol, ethylene glycol, lithium, salicylate, metformin with lactic acidosis, valproate); O: fluid overload with pulmonary oedema refractory to diuretics; U: uraemic complications (pericarditis, encephalopathy, bleeding).",
+            "time": "Immediate",
+            "refs": [
+              "kdigo-aki",
+              "akiki"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "If none: watch and wait",
+            "detail": "Daily (or 12-hourly) review: urine output, fluid balance, K, bicarbonate, urea, creatinine. Optimise haemodynamics, stop nephrotoxins, try diuretics for overload.",
+            "refs": [
+              "starrt-aki",
+              "akiki"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Do not delay beyond reasonable thresholds",
+            "detail": "AKIKI-2: when oliguria > 72 h or blood urea nitrogen > 112 mg/dL (urea ~240 mg/dL), postponing RRT further gave no benefit and possible harm.",
+            "refs": [
+              "akiki2"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Consider the whole patient",
+            "detail": "Severe fluid overload (> 10% body weight) with worsening oxygenation, rising K with ongoing tissue breakdown (rhabdo, tumour lysis), or severe sepsis needing large volumes may justify earlier start.",
+            "refs": [
+              "adqi-timing-2016"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Discuss goals",
+            "detail": "In patients with poor prognosis, discuss whether RRT matches their goals of care before starting.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Assess for recovery daily",
+            "detail": "Rising urine output (> 400-500 mL/day without diuretics, or > 2 L/day with diuretics) suggests recovery; trial off CRRT.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "aeiou",
+            "title": "Emergency indications for RRT",
+            "columns": [
+              "Indication",
+              "Threshold (refractory to medical therapy)"
+            ],
+            "rows": [
+              [
+                "Acidosis",
+                "pH < 7.15 metabolic, or rapidly worsening"
+              ],
+              [
+                "Electrolytes",
+                "K > 6.0-6.5 mmol/L or ECG changes; severe hyper/hyponatraemia with AKI; tumour lysis"
+              ],
+              [
+                "Intoxications",
+                "Methanol, ethylene glycol, lithium, salicylates, metformin-associated lactic acidosis, valproate, theophylline, barbiturates"
+              ],
+              [
+                "Overload",
+                "Pulmonary oedema / hypoxaemia not responding to diuretics"
+              ],
+              [
+                "Uraemia",
+                "Pericarditis, encephalopathy, uraemic bleeding; urea very high (e.g. BUN > 112 mg/dL)"
+              ]
+            ],
+            "refs": [
+              "kdigo-aki",
+              "akiki2"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Hyperkalaemia with ECG changes in anuric AKI: give calcium, insulin-dextrose and salbutamol as a bridge, and call for dialysis access now.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Starting RRT purely on a creatinine number in a stable, non-oliguric patient: exposes them to catheter and circuit risks with no benefit (STARRT-AKI more RRT dependence at 90 days).",
+            "refs": [
+              "starrt-aki"
+            ]
+          },
+          {
+            "text": "Waiting indefinitely: in AKIKI-2, deferring beyond the thresholds was harmful.",
+            "refs": [
+              "akiki2"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "In India blood urea (not BUN) is usually reported: BUN (mg/dL) ≈ urea (mg/dL) ÷ 2.14.",
+            "refs": [
+              "akiki2"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Should we start RRT?",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Severe AKI (KDIGO stage 2-3)"
+          },
+          {
+            "id": "emerg",
+            "type": "decision",
+            "text": "Refractory AEIOU indication?"
+          },
+          {
+            "id": "startrrt",
+            "type": "end",
+            "text": "Start RRT urgently",
+            "severity": "critical"
+          },
+          {
+            "id": "goals",
+            "type": "decision",
+            "text": "RRT consistent with goals of care?"
+          },
+          {
+            "id": "pall",
+            "type": "end",
+            "text": "Conservative/palliative management"
+          },
+          {
+            "id": "wait",
+            "type": "action",
+            "text": "Watchful waiting: 12-24 h review of UO, K, pH, fluids, urea"
+          },
+          {
+            "id": "thr",
+            "type": "decision",
+            "text": "Oliguria > 72 h or BUN > 112 mg/dL, or worsening overload?"
+          },
+          {
+            "id": "startnow",
+            "type": "end",
+            "text": "Start RRT",
+            "severity": "high"
+          },
+          {
+            "id": "rec",
+            "type": "decision",
+            "text": "Recovering (UO rising, creatinine falling)?"
+          },
+          {
+            "id": "done",
+            "type": "end",
+            "text": "Continue supportive care; RRT avoided"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "emerg"
+          },
+          {
+            "from": "emerg",
+            "to": "startrrt",
+            "label": "Yes"
+          },
+          {
+            "from": "emerg",
+            "to": "goals",
+            "label": "No"
+          },
+          {
+            "from": "goals",
+            "to": "pall",
+            "label": "No"
+          },
+          {
+            "from": "goals",
+            "to": "wait",
+            "label": "Yes"
+          },
+          {
+            "from": "wait",
+            "to": "thr"
+          },
+          {
+            "from": "thr",
+            "to": "startnow",
+            "label": "Yes"
+          },
+          {
+            "from": "thr",
+            "to": "rec",
+            "label": "No"
+          },
+          {
+            "from": "rec",
+            "to": "done",
+            "label": "Yes"
+          },
+          {
+            "from": "rec",
+            "to": "wait",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "akiki",
+          "akiki2",
+          "starrt-aki"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "RRT replaces solute clearance and fluid removal but adds risks: catheter infection and thrombosis, hypotension, hypophosphataemia, drug and nutrient removal, and possibly delayed renal recovery from haemodynamic insults.",
+        "evidence": "- AKIKI (2016): delayed strategy avoided RRT in 49% with similar mortality [Gaudry 2016].\n- ELAIN (2016, single-centre surgical): early RRT reduced 90-day mortality; not replicated [Zarbock 2016].\n- STARRT-AKI (2020, n=3,019): accelerated RRT did not reduce mortality and increased RRT dependence at 90 days [STARRT-AKI 2020].\n- AKIKI 2 (2021): a more-delayed strategy beyond oliguria > 72 h or BUN > 112 mg/dL offered no benefit and was associated with harm [Gaudry 2021].",
+        "controversies": "- Which patients benefit from earlier RRT (e.g. severe overload, ARDS); biomarker-guided timing.",
+        "indiaNotes": "- Cost and availability of CRRT shape decisions in India; SLED on a standard dialysis machine is widely used.\n- Dialysis for toxins: methanol outbreaks (illicit liquor) need urgent haemodialysis as fomepizole is scarce."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "kdigo-aki",
+        "starrt-aki",
+        "akiki",
+        "akiki2",
+        "elain",
+        "adqi-timing-2016"
+      ],
+      "quiz": [
+        {
+          "id": "rrt-indications-timing-q1",
+          "stem": "STARRT-AKI showed that accelerated RRT:",
+          "options": [
+            "Reduced mortality",
+            "Did not reduce mortality and increased RRT dependence at 90 days",
+            "Reduced length of stay",
+            "Improved renal recovery"
+          ],
+          "answerIndex": 1,
+          "explanation": "No benefit and more dependence."
+        },
+        {
+          "id": "rrt-indications-timing-q2",
+          "stem": "Which is an emergency RRT indication?",
+          "options": [
+            "Creatinine 3.5 mg/dL, stable",
+            "K 7.0 mmol/L with ECG changes refractory to treatment",
+            "Urea 80 mg/dL",
+            "Mild oedema"
+          ],
+          "answerIndex": 1,
+          "explanation": "Refractory hyperkalaemia with ECG changes."
+        },
+        {
+          "id": "rrt-indications-timing-q3",
+          "stem": "Toxin effectively removed by haemodialysis:",
+          "options": [
+            "Digoxin",
+            "Methanol",
+            "Amitriptyline",
+            "Paraquat (late)"
+          ],
+          "answerIndex": 1,
+          "explanation": "Methanol, ethylene glycol, lithium, salicylates are dialysable."
+        }
+      ]
+    },
+    {
+      "id": "crrt-ihd-sled",
+      "title": "CRRT vs IHD vs SLED",
+      "summary": "Choose the modality by haemodynamics, brain risk, resources and cost; understand convection vs diffusion and vascular access.",
+      "viewKey": "topic:renal-replacement-therapy/crrt-ihd-sled",
+      "uiHints": {
+        "icon": "git-compare",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "IHD: 3-5 h sessions, fast clearance, more hypotension. CRRT (CVVH/CVVHD/CVVHDF): 24 h, gentle fluid removal, best for unstable patients and raised ICP. SLED/PIRRT: 6-12 h on a standard machine with low blood and dialysate flows: a cheaper hybrid.",
+          "refs": [
+            "kdigo-aki"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Choose by haemodynamics",
+            "detail": "Shock on vasopressors or needing large fluid removal: CRRT or SLED. Stable patients: IHD. KDIGO: use CRRT and IHD as complementary therapies.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Brain at risk",
+            "detail": "Acute liver failure, TBI, cerebral oedema: CRRT preferred (avoids osmotic shifts and hypotension).",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Choose the technique",
+            "detail": "Convection (CVVH: replacement fluid; better middle-molecule removal) vs diffusion (CVVHD: dialysate) vs both (CVVHDF). Outcome differences are not proven; follow unit practice.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Vascular access",
+            "detail": "Non-cuffed dialysis catheter, ultrasound-guided. Preference: right internal jugular (12-15 cm) > femoral (19-24 cm) > left internal jugular (15-20 cm) > subclavian (avoid: stenosis risk for future fistula).",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Prescribe fluid removal",
+            "detail": "Net ultrafiltration usually 0-2 mL/kg/h, adjusted hourly to haemodynamics; very high net UF (> 1.75 mL/kg/h) associated with worse outcomes in observational data.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Monitor",
+            "detail": "Electrolytes (K, PO4, Mg) 6-12 hourly on CRRT, ABG, temperature (CRRT cools), drug levels, circuit pressures.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "modalities",
+            "title": "Modalities compared",
+            "columns": [
+              "Feature",
+              "IHD",
+              "SLED / PIRRT",
+              "CRRT"
+            ],
+            "rows": [
+              [
+                "Duration",
+                "3-5 h, 3-6x/week",
+                "6-12 h daily",
+                "Continuous 24 h"
+              ],
+              [
+                "Blood flow",
+                "250-400 mL/min",
+                "150-200 mL/min",
+                "150-250 mL/min"
+              ],
+              [
+                "Haemodynamic stability",
+                "Least",
+                "Intermediate",
+                "Best"
+              ],
+              [
+                "Raised ICP",
+                "Avoid",
+                "Caution",
+                "Preferred"
+              ],
+              [
+                "Anticoagulation need",
+                "Often none",
+                "Low/none",
+                "Usually needed (citrate/heparin)"
+              ],
+              [
+                "Cost in India",
+                "Lowest",
+                "Low-moderate",
+                "Highest (fluids, filters)"
+              ],
+              [
+                "Drug dosing",
+                "Dose after session",
+                "Dose after session",
+                "Continuous clearance (CrCl ~ 25-50)"
+              ]
+            ],
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Hypotension at the start of IHD/SLED: reduce UF, lower blood flow initially, cool dialysate, increase vasopressor; switch to CRRT if recurrent.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Subclavian dialysis catheters: high central vein stenosis risk that ruins future AV fistula access.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "text": "Forgetting that CRRT removes heat: hypothermia masks fever.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "SLED on a standard haemodialysis machine using online dialysate is the cost-effective choice for unstable patients in many Indian ICUs.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Choosing RRT modality",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "RRT indicated"
+          },
+          {
+            "id": "icp",
+            "type": "decision",
+            "text": "Raised ICP / acute liver failure / cerebral oedema?"
+          },
+          {
+            "id": "crrt",
+            "type": "end",
+            "text": "CRRT (CVVH/CVVHDF), citrate if no contraindication",
+            "severity": "high"
+          },
+          {
+            "id": "unstable",
+            "type": "decision",
+            "text": "On vasopressors or needs large UF?"
+          },
+          {
+            "id": "avail",
+            "type": "decision",
+            "text": "CRRT available and affordable?"
+          },
+          {
+            "id": "sled",
+            "type": "end",
+            "text": "SLED / PIRRT 6-12 h on standard machine"
+          },
+          {
+            "id": "ihd",
+            "type": "end",
+            "text": "Intermittent haemodialysis"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "icp"
+          },
+          {
+            "from": "icp",
+            "to": "crrt",
+            "label": "Yes"
+          },
+          {
+            "from": "icp",
+            "to": "unstable",
+            "label": "No"
+          },
+          {
+            "from": "unstable",
+            "to": "avail",
+            "label": "Yes"
+          },
+          {
+            "from": "unstable",
+            "to": "ihd",
+            "label": "No"
+          },
+          {
+            "from": "avail",
+            "to": "crrt",
+            "label": "Yes"
+          },
+          {
+            "from": "avail",
+            "to": "sled",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "kdigo-aki"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Diffusion moves small solutes (urea, K) down a concentration gradient; convection drags solutes with water through the membrane (solvent drag), clearing larger molecules. Slow continuous removal avoids rapid osmotic shifts (dialysis disequilibrium, cerebral oedema) and hypotension.",
+        "evidence": "- RCTs and meta-analyses show no mortality difference between CRRT and IHD; CRRT may be associated with better renal recovery in observational data [KDIGO 2012].",
+        "controversies": "- CVVH vs CVVHDF; high cut-off membranes; adsorptive filters (oXiris, CytoSorb) in sepsis - unproven.",
+        "indiaNotes": "- CRRT costs (filters, bags) run to tens of thousands of rupees per day; SLED with online fluid reduces cost several-fold.\n- Many Indian ICUs depend on the hospital dialysis unit for IHD/SLED staffing; agree escalation pathways."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "kdigo-aki"
+      ],
+      "quiz": [
+        {
+          "id": "crrt-ihd-sled-q1",
+          "stem": "Best modality for AKI with acute liver failure and cerebral oedema:",
+          "options": [
+            "IHD",
+            "CRRT",
+            "Peritoneal dialysis",
+            "SLED with high UF"
+          ],
+          "answerIndex": 1,
+          "explanation": "CRRT avoids osmotic shifts and hypotension."
+        },
+        {
+          "id": "crrt-ihd-sled-q2",
+          "stem": "Preferred first site for a dialysis catheter (KDIGO):",
+          "options": [
+            "Left subclavian",
+            "Right internal jugular",
+            "Left internal jugular",
+            "Right subclavian"
+          ],
+          "answerIndex": 1,
+          "explanation": "Right IJ, then femoral, then left IJ, subclavian last."
+        },
+        {
+          "id": "crrt-ihd-sled-q3",
+          "stem": "CVVH clears solutes mainly by:",
+          "options": [
+            "Diffusion",
+            "Convection",
+            "Adsorption only",
+            "Osmosis"
+          ],
+          "answerIndex": 1,
+          "explanation": "Haemofiltration is convective."
+        }
+      ]
+    },
+    {
+      "id": "crrt-prescription-dose",
+      "title": "Prescribing CRRT dose",
+      "summary": "Write a CRRT prescription: modality, blood flow, effluent dose 20-25 mL/kg/h delivered, fluids, net ultrafiltration, and monitoring.",
+      "viewKey": "topic:renal-replacement-therapy/crrt-prescription-dose",
+      "uiHints": {
+        "icon": "file-pen-line",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "CRRT dose = effluent flow rate (replacement + dialysate + net UF) per kg per hour. KDIGO: deliver 20-25 mL/kg/h; prescribe ~25-30 mL/kg/h to allow for downtime. Higher doses (35-40) do not improve survival (RENAL, ATN).",
+          "refs": [
+            "kdigo-aki",
+            "renal-trial",
+            "atn-trial"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Modality and filter",
+            "detail": "CVVHDF (or CVVH) with a high-flux filter (~1.0-1.5 m²).",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Blood flow",
+            "detail": "Start 100-150 mL/min, increase to 150-250 mL/min as tolerated.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Effluent dose",
+            "detail": "Prescribe 25-30 mL/kg/h (actual body weight). Example split CVVHDF: replacement and dialysate equally; pre-dilution replacement (part) prolongs filter life but reduces efficiency.",
+            "refs": [
+              "kdigo-aki",
+              "renal-trial"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Fluids",
+            "detail": "Bicarbonate-buffered solutions; adjust K (usually 4 mmol/L) and phosphate; avoid lactate buffer in liver failure/lactic acidosis.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Net ultrafiltration",
+            "detail": "Set hourly target (e.g. 0-150 mL/h) based on fluid goals and haemodynamics; review every 4-6 h.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Keep filtration fraction < 20-25%",
+            "detail": "FF = UF rate / plasma flow. High FF (convective, high UF, low blood flow, high haematocrit) clots filters. Use pre-dilution or increase blood flow.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Monitor delivered dose",
+            "detail": "Record downtime (filter changes, procedures, CT); adjust prescription if delivered < 20 mL/kg/h.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "crrt-example",
+            "title": "Worked CRRT prescription (70 kg, CVVHDF)",
+            "columns": [
+              "Parameter",
+              "Setting"
+            ],
+            "rows": [
+              [
+                "Target effluent dose",
+                "25-30 mL/kg/h → 1,750-2,100 mL/h"
+              ],
+              [
+                "Blood flow",
+                "180 mL/min"
+              ],
+              [
+                "Dialysate",
+                "1,000 mL/h"
+              ],
+              [
+                "Replacement (pre-filter 500 + post-filter 400)",
+                "900 mL/h"
+              ],
+              [
+                "Net UF",
+                "100 mL/h"
+              ],
+              [
+                "Total effluent",
+                "2,000 mL/h ≈ 28.6 mL/kg/h"
+              ],
+              [
+                "Anticoagulation",
+                "Regional citrate (if no contraindication) or UFH"
+              ]
+            ],
+            "caption": "Example only; adjust to machine and unit protocol.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Severe hypophosphataemia (< 1 mg/dL) and hypokalaemia are common after 24-48 h of CRRT: replace or use phosphate-containing solutions.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Prescribing exactly 20 mL/kg/h: downtime means delivered dose falls below target.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "text": "Ignoring the fluid balance of all other infusions (drugs, feeds) when setting net UF.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Higher effluent doses also remove more antibiotics, amino acids and trace elements; there is no benefit beyond 25 mL/kg/h.",
+            "refs": [
+              "renal-trial"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Small-solute clearance on CRRT approximates effluent flow (fully saturated with urea in post-dilution or diffusion at low flows). Pre-dilution reduces solute concentration entering the filter, reducing clearance by ~15-20%.",
+        "evidence": "- RENAL (1,508 patients): 40 vs 25 mL/kg/h effluent - no difference in 90-day mortality [RENAL 2009].\n- ATN (1,124 patients): intensive vs less-intensive RRT - no difference in 60-day mortality [ATN 2008].",
+        "controversies": "- Dosing by actual vs ideal body weight in obesity; dose adaptation for sepsis or high catabolism.",
+        "indiaNotes": "- Commercial CRRT fluids are expensive; some Indian units use locally prepared fluids with strict pharmacy protocols - infection and composition errors are risks."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "kdigo-aki",
+        "renal-trial",
+        "atn-trial"
+      ],
+      "quiz": [
+        {
+          "id": "crrt-prescription-dose-q1",
+          "stem": "KDIGO-recommended delivered CRRT dose:",
+          "options": [
+            "10 mL/kg/h",
+            "20-25 mL/kg/h",
+            "40 mL/kg/h",
+            "60 mL/kg/h"
+          ],
+          "answerIndex": 1,
+          "explanation": "RENAL and ATN trials support 20-25 mL/kg/h delivered."
+        },
+        {
+          "id": "crrt-prescription-dose-q2",
+          "stem": "Filtration fraction should be kept below:",
+          "options": [
+            "5%",
+            "20-25%",
+            "50%",
+            "75%"
+          ],
+          "answerIndex": 1,
+          "explanation": "High FF causes haemoconcentration and filter clotting."
+        },
+        {
+          "id": "crrt-prescription-dose-q3",
+          "stem": "Why prescribe 25-30 mL/kg/h rather than 20?",
+          "options": [
+            "To raise mortality",
+            "To compensate for downtime",
+            "To remove more K only",
+            "It is cheaper"
+          ],
+          "answerIndex": 1,
+          "explanation": "Delivered dose is usually lower than prescribed."
+        }
+      ]
+    },
+    {
+      "id": "crrt-anticoagulation",
+      "title": "Heparin vs citrate anticoagulation",
+      "summary": "Regional citrate as first choice for CRRT, heparin when citrate is unsuitable, and options in bleeding or HIT.",
+      "viewKey": "topic:renal-replacement-therapy/crrt-anticoagulation",
+      "uiHints": {
+        "icon": "droplet",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "KDIGO suggests regional citrate anticoagulation (RCA) rather than heparin for CRRT in patients without contraindications, and heparin (UFH or LMWH) when citrate cannot be used. RICH (2020): citrate prolonged filter life with fewer bleeding complications.",
+          "refs": [
+            "kdigo-aki",
+            "rich-2020"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Assess bleeding and liver function",
+            "detail": "Active bleeding, recent surgery, platelets < 50 x10^9/L, coagulopathy: avoid systemic heparin. Severe liver failure or lactate > 4 mmol/L with shock: caution with citrate (accumulation).",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Citrate (first choice)",
+            "detail": "Pre-filter citrate to post-filter iCa 0.25-0.35 mmol/L; calcium infusion to systemic iCa 1.0-1.2 mmol/L. Check iCa at 1 h and 6-hourly.",
+            "refs": [
+              "kdigo-aki",
+              "rich-2020"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Detect citrate accumulation",
+            "detail": "Total Ca/ionised Ca ratio > 2.5, rising anion gap acidosis, falling systemic iCa despite increasing Ca infusion: reduce citrate/blood flow, increase dialysate, or switch method.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Heparin (if citrate unsuitable)",
+            "detail": "UFH pre-filter 5-10 units/kg/h, aPTT target 45-60 s (or per protocol); avoid in HIT.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "No anticoagulation",
+            "detail": "In high bleeding risk: pre-dilution, higher blood flow (200-250 mL/min), low FF, minimise interruptions; accept shorter filter life.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "HIT",
+            "detail": "Stop all heparin; use citrate or argatroban (or no anticoagulation).",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "citrate",
+            "role": "Regional anticoagulation",
+            "route": "Pre-filter infusion (machine protocol)",
+            "dose": "Titrate to post-filter iCa 0.25-0.35 mmol/L",
+            "target": "Systemic iCa 1.0-1.2 mmol/L; total/iCa ratio < 2.5",
+            "verify": "Machine-specific protocol.",
+            "refs": [
+              "kdigo-aki",
+              "rich-2020"
+            ]
+          },
+          {
+            "drugId": "ufh-crrt",
+            "role": "Systemic heparin for circuit",
+            "route": "Pre-filter IV infusion",
+            "dose": "5-10 units/kg/h (typically 300-1,000 units/h)",
+            "dilution": "5,000 units in 50 mL NS = 100 units/mL",
+            "target": "aPTT 45-60 s",
+            "workedExample": "70 kg at 7 units/kg/h = 490 units/h = 4.9 mL/h of 100 units/mL",
+            "calculatorId": "infusion-rate-weight-hour",
+            "verify": "Local protocols vary.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Rising anion gap, falling iCa and total/iCa > 2.5 on citrate = citrate accumulation: act now (risk of severe hypocalcaemia and acidosis).",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Measuring 'systemic' iCa from the post-filter port.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "text": "Running citrate in a patient with acute liver failure and lactate 8 mmol/L without close monitoring.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Citrate also supplies bicarbonate (metabolised to bicarbonate in liver/muscle): watch for metabolic alkalosis and reduce bicarbonate in fluids.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Choosing CRRT anticoagulation",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Starting CRRT"
+          },
+          {
+            "id": "bleed",
+            "type": "decision",
+            "text": "High bleeding risk?"
+          },
+          {
+            "id": "citok",
+            "type": "decision",
+            "text": "Citrate contraindicated (severe liver failure, lactate > 4 with shock)?"
+          },
+          {
+            "id": "cit",
+            "type": "end",
+            "text": "Regional citrate protocol",
+            "severity": "high"
+          },
+          {
+            "id": "hit",
+            "type": "decision",
+            "text": "HIT suspected?"
+          },
+          {
+            "id": "arg",
+            "type": "end",
+            "text": "Argatroban or no anticoagulation"
+          },
+          {
+            "id": "hep",
+            "type": "end",
+            "text": "Systemic UFH, aPTT 45-60 s"
+          },
+          {
+            "id": "cit2",
+            "type": "decision",
+            "text": "Citrate possible?"
+          },
+          {
+            "id": "none",
+            "type": "end",
+            "text": "No anticoagulation: pre-dilution, high blood flow, low FF"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "bleed"
+          },
+          {
+            "from": "bleed",
+            "to": "cit2",
+            "label": "Yes"
+          },
+          {
+            "from": "bleed",
+            "to": "citok",
+            "label": "No"
+          },
+          {
+            "from": "citok",
+            "to": "cit",
+            "label": "No"
+          },
+          {
+            "from": "citok",
+            "to": "hit",
+            "label": "Yes"
+          },
+          {
+            "from": "hit",
+            "to": "arg",
+            "label": "Yes"
+          },
+          {
+            "from": "hit",
+            "to": "hep",
+            "label": "No"
+          },
+          {
+            "from": "cit2",
+            "to": "cit",
+            "label": "Yes"
+          },
+          {
+            "from": "cit2",
+            "to": "none",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "kdigo-aki",
+          "rich-2020"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Citrate chelates ionised calcium in the circuit, blocking the coagulation cascade only in the filter. Most citrate-calcium complexes are removed in the effluent; the remainder is metabolised (liver, muscle) to bicarbonate. Accumulation occurs when metabolism fails.",
+        "evidence": "- RICH (596 patients): citrate vs heparin - longer filter life (47 vs 26 h), fewer bleeding complications, no 90-day mortality difference; more new infections in citrate group [Zarbock 2020].\n- KDIGO 2012 suggests citrate for CRRT in patients without contraindications [KDIGO 2012].",
+        "controversies": "- Citrate in liver failure: increasingly used with careful monitoring.",
+        "indiaNotes": "- Citrate solutions are not available in many Indian ICUs; heparin or no-anticoagulation CRRT/SLED is common. Filter cost makes filter life an important outcome."
+      },
+      "drugIds": [
+        "citrate",
+        "ufh-crrt"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-hour",
+        "corrected-calcium"
+      ],
+      "references": [
+        "kdigo-aki",
+        "rich-2020"
+      ],
+      "quiz": [
+        {
+          "id": "crrt-anticoagulation-q1",
+          "stem": "KDIGO first-choice CRRT anticoagulant without contraindication:",
+          "options": [
+            "UFH",
+            "Regional citrate",
+            "LMWH",
+            "Aspirin"
+          ],
+          "answerIndex": 1,
+          "explanation": "Citrate is preferred."
+        },
+        {
+          "id": "crrt-anticoagulation-q2",
+          "stem": "Sign of citrate accumulation:",
+          "options": [
+            "Total/ionised Ca ratio > 2.5",
+            "Metabolic alkalosis only",
+            "Low anion gap",
+            "High iCa"
+          ],
+          "answerIndex": 0,
+          "explanation": "Citrate-bound calcium raises total Ca relative to ionised Ca."
+        },
+        {
+          "id": "crrt-anticoagulation-q3",
+          "stem": "Target post-filter ionised calcium on citrate:",
+          "options": [
+            "1.1-1.3 mmol/L",
+            "0.25-0.35 mmol/L",
+            "0.8-1.0 mmol/L",
+            "2.0 mmol/L"
+          ],
+          "answerIndex": 1,
+          "explanation": "Low post-filter iCa prevents circuit clotting."
+        }
+      ]
+    },
+    {
+      "id": "filter-clotting-troubleshooting",
+      "title": "Filter clotting and CRRT troubleshooting",
+      "summary": "Read circuit pressures, fix access problems, prevent early filter clotting and handle common alarms.",
+      "viewKey": "topic:renal-replacement-therapy/filter-clotting-troubleshooting",
+      "uiHints": {
+        "icon": "wrench",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Common CRRT problems: access (arterial) pressure too negative, high return pressure, rising transmembrane pressure (TMP) and pressure drop = filter clotting, air alarms, blood leak.",
+          "refs": [
+            "kdigo-aki"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Read the pressures",
+            "detail": "Access pressure (normally -50 to -150 mmHg), return pressure (+50 to +150), filter pressure, effluent pressure, TMP (rising > 200-250 mmHg suggests clotting), pressure drop across filter (rising = clotting).",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Access alarms (very negative pressure)",
+            "detail": "Catheter kinked, patient position (femoral - straighten leg), catheter against vessel wall, thrombus. Reposition, flush with saline, reverse lines (increases recirculation), reduce blood flow; replace catheter if persistent.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "High return pressure",
+            "detail": "Kink or clot in return limb/venous chamber, catheter problem. Check line, chamber, catheter.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Early filter clotting (< 24 h)",
+            "detail": "Check anticoagulation (citrate post-filter iCa, aPTT), catheter function, FF > 25%, frequent interruptions, high haematocrit. Increase blood flow, increase pre-dilution, reduce net UF, optimise catheter (right IJ, correct length).",
+            "refs": [
+              "kdigo-aki",
+              "rich-2020"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Return blood before the filter clots fully",
+            "detail": "If TMP rising rapidly, return blood to the patient (saves ~150-200 mL blood) and replace the circuit.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Patient-side issues",
+            "detail": "Hypothermia (use warmer), hypotension at connection (prime with saline/albumin, start low blood flow), electrolyte drift (6-12 hourly labs), catheter infection.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "crrt-alarms",
+            "title": "CRRT alarms and actions",
+            "columns": [
+              "Alarm/finding",
+              "Likely cause",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Access pressure very negative",
+                "Catheter kink/position/clot, hypovolaemia",
+                "Reposition, flush, reverse lines, reduce Qb, change catheter"
+              ],
+              [
+                "Return pressure high",
+                "Kink or clot in return line/chamber/catheter",
+                "Check lines, change chamber/catheter"
+              ],
+              [
+                "TMP rising, pressure drop rising",
+                "Filter clotting",
+                "Check anticoagulation, FF; return blood and replace set"
+              ],
+              [
+                "Air detector",
+                "Loose connection, empty bag",
+                "Check connections, remove air per machine"
+              ],
+              [
+                "Blood leak",
+                "Filter membrane rupture (or hydroxocobalamin colour)",
+                "Stop, do not return blood if true leak, replace filter"
+              ]
+            ],
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Repeated circuit loss means repeated blood loss (~150-200 mL each) and underdosed therapy: fix the cause, not just the filter.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Reversing lines as routine: increases recirculation and lowers clearance.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Femoral catheters must reach the IVC (19-24 cm) to reduce recirculation and access problems.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "CRRT pressure alarm",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "CRRT pressure alarm"
+          },
+          {
+            "id": "which",
+            "type": "decision",
+            "text": "Which pressure is abnormal?"
+          },
+          {
+            "id": "access",
+            "type": "action",
+            "text": "Check catheter: kink, position, flush; reduce Qb"
+          },
+          {
+            "id": "accok",
+            "type": "decision",
+            "text": "Resolved?"
+          },
+          {
+            "id": "rev",
+            "type": "action",
+            "text": "Reverse lines temporarily; plan catheter change"
+          },
+          {
+            "id": "ret",
+            "type": "action",
+            "text": "Check return line, venous chamber, catheter"
+          },
+          {
+            "id": "tmp",
+            "type": "action",
+            "text": "Check anticoagulation, FF, interruptions"
+          },
+          {
+            "id": "clot",
+            "type": "decision",
+            "text": "Filter clotting imminent?"
+          },
+          {
+            "id": "returnb",
+            "type": "end",
+            "text": "Return blood and replace circuit",
+            "severity": "high"
+          },
+          {
+            "id": "adj",
+            "type": "end",
+            "text": "Adjust Qb, pre-dilution, net UF; continue"
+          },
+          {
+            "id": "ok",
+            "type": "end",
+            "text": "Continue therapy, document"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "which"
+          },
+          {
+            "from": "which",
+            "to": "access",
+            "label": "Access very negative"
+          },
+          {
+            "from": "which",
+            "to": "ret",
+            "label": "Return high"
+          },
+          {
+            "from": "which",
+            "to": "tmp",
+            "label": "TMP rising"
+          },
+          {
+            "from": "access",
+            "to": "accok"
+          },
+          {
+            "from": "accok",
+            "to": "ok",
+            "label": "Yes"
+          },
+          {
+            "from": "accok",
+            "to": "rev",
+            "label": "No"
+          },
+          {
+            "from": "rev",
+            "to": "ok"
+          },
+          {
+            "from": "ret",
+            "to": "ok"
+          },
+          {
+            "from": "tmp",
+            "to": "clot"
+          },
+          {
+            "from": "clot",
+            "to": "returnb",
+            "label": "Yes"
+          },
+          {
+            "from": "clot",
+            "to": "adj",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "kdigo-aki"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Filter clotting results from blood-membrane contact activation, haemoconcentration at the filter outlet (especially with high post-dilution UF), blood stasis during flow interruptions, and inadequate anticoagulation.",
+        "evidence": "- KDIGO and RICH data: citrate and adequate catheter function are the main determinants of filter life [KDIGO 2012; RICH 2020].",
+        "controversies": "- Routine filter change interval (often 72 h maximum per manufacturer).",
+        "indiaNotes": "- Filters are the major cost item; filter lives under 24 h are common without citrate. Audit filter life monthly."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "kdigo-aki",
+        "rich-2020"
+      ],
+      "quiz": [
+        {
+          "id": "filter-clotting-troubleshooting-q1",
+          "stem": "Rising TMP and pressure drop on CRRT suggest:",
+          "options": [
+            "Catheter kink",
+            "Filter clotting",
+            "Air in line",
+            "Low blood flow alarm"
+          ],
+          "answerIndex": 1,
+          "explanation": "Both rise as the filter clots."
+        },
+        {
+          "id": "filter-clotting-troubleshooting-q2",
+          "stem": "Very negative access pressure: first action:",
+          "options": [
+            "Increase blood flow",
+            "Check catheter position, kinks and flush",
+            "Change filter",
+            "Stop anticoagulation"
+          ],
+          "answerIndex": 1,
+          "explanation": "Access problems are usually catheter-related."
+        },
+        {
+          "id": "filter-clotting-troubleshooting-q3",
+          "stem": "Effect of reversing catheter lines:",
+          "options": [
+            "Improves clearance",
+            "Increases recirculation, reduces clearance",
+            "No effect",
+            "Causes air embolism"
+          ],
+          "answerIndex": 1,
+          "explanation": "Recirculation rises with reversed lines."
+        }
+      ]
+    },
+    {
+      "id": "antibiotic-dosing-crrt",
+      "title": "Antibiotic dosing on CRRT and SLED",
+      "summary": "Avoid underdosing: full loading doses, CRRT maintenance roughly equal to CrCl 25-50 mL/min, and timing doses around IHD/SLED.",
+      "viewKey": "topic:renal-replacement-therapy/antibiotic-dosing-crrt",
+      "uiHints": {
+        "icon": "pill",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "CRRT at 20-25 mL/kg/h clears drugs roughly like a native CrCl of ~25-50 mL/min. Underdosing beta-lactams is common and dangerous in sepsis. IHD and SLED remove large amounts during sessions: give doses after the session.",
+          "refs": [
+            "hoff-abx-2020"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Give full loading doses",
+            "detail": "Always the normal loading dose regardless of RRT.",
+            "refs": [
+              "hoff-abx-2020"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Maintenance on CRRT",
+            "detail": "Dose for CrCl ~25-50 mL/min equivalent for renally cleared drugs; higher for very high effluent rates. Prefer extended/continuous infusion for beta-lactams.",
+            "refs": [
+              "hoff-abx-2020"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "IHD / SLED timing",
+            "detail": "Give doses after dialysis or SLED sessions (or supplement after). SLED clears drugs substantially - doses resemble CRRT or higher.",
+            "refs": [
+              "hoff-abx-2020"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Therapeutic drug monitoring",
+            "detail": "Vancomycin and aminoglycosides by levels; beta-lactam TDM where available.",
+            "refs": [
+              "hoff-abx-2020"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Adjust when RRT stops or kidneys recover",
+            "detail": "Re-dose to native function; avoid accumulation when CRRT is interrupted for long periods.",
+            "refs": [
+              "hoff-abx-2020"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "meropenem",
+            "role": "Carbapenem on CRRT",
+            "route": "IV extended infusion",
+            "dose": "1 g q8h (2 g q8h for CNS/high MIC)",
+            "dilution": "1 g in 50 mL NS over 3 h",
+            "workedExample": "70 kg on CVVHDF 25 mL/kg/h: 1 g q8h over 3 h",
+            "refs": [
+              "hoff-abx-2020"
+            ]
+          },
+          {
+            "drugId": "pip-tazo",
+            "role": "Antipseudomonal on CRRT",
+            "route": "IV extended infusion",
+            "dose": "4.5 g q8h (or 3.375 g q6h)",
+            "workedExample": "4.5 g in 100 mL NS over 4 h every 8 h",
+            "refs": [
+              "hoff-abx-2020"
+            ]
+          },
+          {
+            "drugId": "vancomycin",
+            "role": "MRSA on CRRT",
+            "route": "IV",
+            "dose": "Load 20-25 mg/kg then ~15 mg/kg q24h by levels",
+            "workedExample": "70 kg: 1.75 g load, then 1 g q24h; trough before 3rd/4th dose",
+            "verify": "Maintenance strongly level-dependent.",
+            "refs": [
+              "hoff-abx-2020"
+            ]
+          },
+          {
+            "drugId": "colistin",
+            "role": "CRE on CRRT",
+            "route": "IV",
+            "dose": "Load 9 million units (300 mg CBA), maintenance increased for CRRT",
+            "verify": "Uncertain; follow pharmacist/consensus.",
+            "refs": [
+              "hoff-abx-2020"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "crrt-abx",
+            "title": "Typical adult antimicrobial doses on CRRT (effluent 20-25 mL/kg/h)",
+            "columns": [
+              "Drug",
+              "CRRT dose",
+              "IHD dose (after session)"
+            ],
+            "rows": [
+              [
+                "Meropenem",
+                "1 g q8h (extended infusion)",
+                "500 mg-1 g q24h"
+              ],
+              [
+                "Piperacillin-tazobactam",
+                "4.5 g q8h or 3.375 g q6h",
+                "2.25 g q8-12h"
+              ],
+              [
+                "Cefepime",
+                "2 g q12h (1-2 g q8h if high effluent)",
+                "1-2 g q24h"
+              ],
+              [
+                "Ceftazidime-avibactam",
+                "1.25 g q8h (CrCl 31-50 dose) - check effluent rate",
+                "0.94 g q24-48h"
+              ],
+              [
+                "Vancomycin",
+                "Load 20-25 mg/kg; ~15 mg/kg q24h by levels",
+                "Load; 500-1,000 mg after each session by levels"
+              ],
+              [
+                "Amikacin",
+                "Load 25 mg/kg; redose by levels (q24-48h)",
+                "Load; redose after HD by levels"
+              ],
+              [
+                "Fluconazole",
+                "800 mg q24h (or 400 mg q12h)",
+                "100% dose after each session"
+              ],
+              [
+                "Levetiracetam",
+                "500-1,000 mg q12h",
+                "500-1,000 mg q24h + 250-500 mg after HD"
+              ],
+              [
+                "Polymyxin B",
+                "No adjustment (load 2-2.5 mg/kg, then 1.25-1.5 mg/kg q12h)",
+                "No adjustment"
+              ]
+            ],
+            "caption": "Typical values from published reviews; verify against current references and local antibiogram.",
+            "refs": [
+              "hoff-abx-2020"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Septic patient on CRRT not improving: consider beta-lactam underdosing before adding more antibiotics.",
+            "refs": [
+              "hoff-abx-2020"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Using 'dialysis doses' (designed for IHD 3x/week) for patients on 24-h CRRT.",
+            "refs": [
+              "hoff-abx-2020"
+            ]
+          },
+          {
+            "text": "Giving the daily dose just before an IHD/SLED session.",
+            "refs": [
+              "hoff-abx-2020"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Polymyxin B is not renally cleared and needs no CRRT adjustment; colistin is cleared and needs higher maintenance on CRRT.",
+            "refs": [
+              "hoff-abx-2020"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Drug removal by CRRT depends on molecular size, protein binding (only free drug is filtered), volume of distribution and effluent rate. Highly protein-bound or large-Vd drugs (e.g. ceftriaxone, linezolid, polymyxin B) are minimally affected.",
+        "evidence": "- Hoff 2020 review summarises dosing for IHD, PIRRT and CRRT for common antibiotics [Hoff 2020].\n- Pharmacokinetic studies show frequent beta-lactam underexposure on CRRT with traditional renal doses.",
+        "controversies": "- Optimal beta-lactam targets (100% fT > MIC vs 4x MIC); availability of TDM.",
+        "indiaNotes": "- CRE and colistin/polymyxin use are common in Indian ICUs; polymyxin B is often preferred in AKI/RRT because it needs no renal adjustment.\n- Involve a clinical pharmacist where available; publish a unit-level CRRT dosing chart."
+      },
+      "drugIds": [
+        "meropenem",
+        "pip-tazo",
+        "vancomycin",
+        "colistin"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "hoff-abx-2020"
+      ],
+      "quiz": [
+        {
+          "id": "antibiotic-dosing-crrt-q1",
+          "stem": "CRRT at 25 mL/kg/h approximates a native CrCl of about:",
+          "options": [
+            "5 mL/min",
+            "25-50 mL/min",
+            "100 mL/min",
+            "150 mL/min"
+          ],
+          "answerIndex": 1,
+          "explanation": "Moderate clearance; avoid underdosing."
+        },
+        {
+          "id": "antibiotic-dosing-crrt-q2",
+          "stem": "When should antibiotics be given relative to IHD?",
+          "options": [
+            "Just before session",
+            "After the session",
+            "Timing irrelevant",
+            "Only on non-dialysis days"
+          ],
+          "answerIndex": 1,
+          "explanation": "Dosing after dialysis avoids removal."
+        },
+        {
+          "id": "antibiotic-dosing-crrt-q3",
+          "stem": "Which antibiotic needs no dose adjustment on CRRT?",
+          "options": [
+            "Meropenem",
+            "Polymyxin B",
+            "Vancomycin",
+            "Cefepime"
+          ],
+          "answerIndex": 1,
+          "explanation": "Polymyxin B is non-renally cleared."
+        }
+      ],
+      "verify": [
+        {
+          "item": "CRRT antibiotic dosing table",
+          "reason": "Values vary by effluent dose, MIC and reference; confirm with ICU pharmacist before publishing."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "citrate",
+      "name": "Trisodium citrate (regional citrate anticoagulation)",
+      "class": "Regional anticoagulant (chelates calcium)",
+      "indications": "First-line CRRT anticoagulation (KDIGO) in patients without contraindication",
+      "adultDose": "Pre-filter citrate (e.g. 4% trisodium citrate or citrate-containing replacement fluid) dosed to achieve post-filter ionised Ca 0.25-0.35 mmol/L; systemic calcium chloride/gluconate infusion post-filter to keep patient ionised Ca 1.0-1.2 mmol/L.",
+      "preparationIndia": "Commercial citrate solutions (e.g. 4% trisodium citrate, Prismocitrate/Regiocit) - availability limited in India; machine-specific protocols.",
+      "cautions": "Citrate accumulation in liver failure, severe lactic acidosis (lactate > 4 mmol/L) or severe shock: high anion gap acidosis, total/ionised Ca ratio > 2.5. Metabolic alkalosis and hypernatraemia with excessive citrate.",
+      "monitoring": "Post-filter and systemic iCa at 1 h, then 6-hourly; total Ca daily; ABG, Na, Mg.",
+      "verify": "Protocol is machine- and solution-specific; follow the manufacturer's/unit protocol.",
+      "refs": [
+        "kdigo-aki",
+        "rich-2020"
+      ]
+    },
+    {
+      "id": "ufh-crrt",
+      "name": "Unfractionated heparin (CRRT circuit)",
+      "class": "Anticoagulant",
+      "indications": "CRRT circuit anticoagulation when citrate is unavailable or contraindicated",
+      "adultDose": "Optional priming; pre-filter infusion 5-10 units/kg/h (typically 300-1,000 units/h), titrated to aPTT 45-60 s (≈ 1.5x control) or per local protocol.",
+      "preparationIndia": "25,000 units in 50 mL NS = 500 units/mL (or 5,000 units in 50 mL = 100 units/mL for low-dose circuit use).",
+      "cautions": "Bleeding, HIT (switch to citrate/argatroban). Avoid if active bleeding or platelets < 50 x10^9/L.",
+      "monitoring": "aPTT 6-hourly initially, platelets daily.",
+      "verify": "Target aPTT and dose vary widely between Indian units; align with local CRRT protocol.",
+      "refs": [
+        "kdigo-aki"
+      ]
+    },
+    {
+      "id": "meropenem",
+      "name": "Meropenem",
+      "class": "Carbapenem",
+      "indications": "Severe hospital-acquired / ESBL infections",
+      "adultDose": "CRRT (effluent 20-25 mL/kg/h): 1 g q8h (2 g q8h for CNS or high MIC). IHD: 500 mg-1 g q24h, dose after dialysis. SLED: 1 g q12h (after session).",
+      "preparationIndia": "500 mg and 1 g vials; extended infusion over 3 h.",
+      "refs": [
+        "hoff-abx-2020"
+      ]
+    },
+    {
+      "id": "pip-tazo",
+      "name": "Piperacillin-tazobactam",
+      "class": "Antipseudomonal penicillin + beta-lactamase inhibitor",
+      "indications": "Hospital-acquired infections",
+      "adultDose": "CRRT: 4.5 g q8h (or 3.375 g q6h); extended infusion. IHD: 2.25 g q8-12h + dose after dialysis.",
+      "preparationIndia": "4.5 g vials.",
+      "refs": [
+        "hoff-abx-2020"
+      ]
+    },
+    {
+      "id": "vancomycin",
+      "name": "Vancomycin",
+      "class": "Glycopeptide",
+      "indications": "MRSA infections",
+      "adultDose": "Load 20-25 mg/kg (actual body weight) for all; CRRT maintenance ~15 mg/kg q24h (or 7.5-10 mg/kg q12h) guided by levels (trough 15-20 mg/L or AUC 400-600). IHD: 15-25 mg/kg load, then 500-1,000 mg after each session by pre-dialysis levels.",
+      "preparationIndia": "500 mg and 1 g vials; infuse ≤ 10 mg/min.",
+      "refs": [
+        "hoff-abx-2020"
+      ]
+    },
+    {
+      "id": "colistin",
+      "name": "Colistin (colistimethate sodium)",
+      "class": "Polymyxin",
+      "indications": "CRE/MDR gram-negative infections",
+      "adultDose": "Load 300 mg colistin base activity (CBA) = 9 million units. CRRT: maintenance ~220-440 mg CBA/day in divided doses (international consensus suggests higher doses due to clearance). IHD: daily dose on non-dialysis days + supplemental dose after dialysis.",
+      "preparationIndia": "1 million and 2 million unit vials (1 million units ≈ 33 mg CBA).",
+      "cautions": "Nephrotoxicity, neurotoxicity; dose labelling confusion (units vs mg CBA vs mg CMS).",
+      "verify": "Colistin dosing on CRRT is uncertain; follow the 2019 international polymyxin consensus or ICU pharmacist.",
+      "refs": [
+        "hoff-abx-2020"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "kdigo-aki",
+      "citation": "Kidney Disease: Improving Global Outcomes (KDIGO) AKI Work Group. KDIGO Clinical Practice Guideline for Acute Kidney Injury. Kidney Int Suppl 2012;2:1-138 (summary: Nephron Clin Pract 2012;120:c179-84).",
+      "url": "https://doi.org/10.1159/000339789",
+      "year": 2012,
+      "type": "guideline",
+      "doi": "10.1159/000339789"
+    },
+    {
+      "id": "starrt-aki",
+      "citation": "STARRT-AKI Investigators. Timing of initiation of renal-replacement therapy in acute kidney injury. N Engl J Med 2020;383:240-51.",
+      "url": "https://doi.org/10.1056/NEJMoa2000741",
+      "year": 2020,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa2000741"
+    },
+    {
+      "id": "akiki",
+      "citation": "Gaudry S, Hajage D, Schortgen F, et al. Initiation strategies for renal-replacement therapy in the intensive care unit (AKIKI). N Engl J Med 2016;375:122-33.",
+      "url": "https://doi.org/10.1056/NEJMoa1603017",
+      "year": 2016,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1603017"
+    },
+    {
+      "id": "akiki2",
+      "citation": "Gaudry S, Hajage D, Martin-Lefevre L, et al. Comparison of two delayed strategies for renal replacement therapy initiation for severe acute kidney injury (AKIKI 2). Lancet 2021;397:1293-300.",
+      "url": "https://doi.org/10.1016/S0140-6736(21)00350-0",
+      "year": 2021,
+      "type": "trial",
+      "doi": "10.1016/S0140-6736(21)00350-0"
+    },
+    {
+      "id": "elain",
+      "citation": "Zarbock A, Kellum JA, Schmidt C, et al. Effect of early vs delayed initiation of renal replacement therapy on mortality in critically ill patients with acute kidney injury: the ELAIN randomized clinical trial. JAMA 2016;315:2190-9.",
+      "url": "https://doi.org/10.1001/jama.2016.5828",
+      "year": 2016,
+      "type": "trial",
+      "doi": "10.1001/jama.2016.5828"
+    },
+    {
+      "id": "renal-trial",
+      "citation": "RENAL Replacement Therapy Study Investigators. Intensity of continuous renal-replacement therapy in critically ill patients. N Engl J Med 2009;361:1627-38.",
+      "url": "https://doi.org/10.1056/NEJMoa0902413",
+      "year": 2009,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa0902413"
+    },
+    {
+      "id": "atn-trial",
+      "citation": "VA/NIH Acute Renal Failure Trial Network. Intensity of renal support in critically ill patients with acute kidney injury. N Engl J Med 2008;359:7-20.",
+      "url": "https://doi.org/10.1056/NEJMoa0802639",
+      "year": 2008,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa0802639"
+    },
+    {
+      "id": "rich-2020",
+      "citation": "Zarbock A, Kullmar M, Kindgen-Milles D, et al. Effect of regional citrate anticoagulation vs systemic heparin anticoagulation during continuous kidney replacement therapy on dialysis filter life span and mortality (RICH). JAMA 2020;324:1629-39.",
+      "url": "https://doi.org/10.1001/jama.2020.18618",
+      "year": 2020,
+      "type": "trial",
+      "doi": "10.1001/jama.2020.18618"
+    },
+    {
+      "id": "hoff-abx-2020",
+      "citation": "Hoff BM, Maker JH, Dager WE, Heintz BH. Antibiotic dosing for critically ill adult patients receiving intermittent hemodialysis, prolonged intermittent renal replacement therapy, and continuous renal replacement therapy: an update. Ann Pharmacother 2020;54:43-55.",
+      "url": "https://doi.org/10.1177/1060028019865873",
+      "year": 2019,
+      "type": "review",
+      "doi": "10.1177/1060028019865873"
+    },
+    {
+      "id": "adqi-timing-2016",
+      "citation": "Ostermann M, Joannidis M, Pani A, et al. Patient selection and timing of continuous renal replacement therapy (ADQI 17). Blood Purif 2016;42:224-37.",
+      "url": "https://doi.org/10.1159/000448506",
+      "year": 2016,
+      "type": "consensus",
+      "doi": "10.1159/000448506"
+    }
+  ]
+}

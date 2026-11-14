@@ -1,0 +1,3072 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ecmo-mechanical-circulatory-support",
+  "number": 14,
+  "folder": "14-ecmo-mechanical-circulatory-support",
+  "section": {
+    "id": "C",
+    "title": "Cardiovascular and haemodynamics"
+  },
+  "phase": 3,
+  "title": "ECMO and mechanical circulatory support",
+  "summary": "Advanced module on extracorporeal membrane oxygenation (VV and VA), referral and ECPR, IABP and Impella, daily ECMO rounds, complications and emergencies, and weaning — written so a junior can recognise when to call for help and safely look after an ECMO patient overnight.",
+  "tags": [
+    "ECMO",
+    "VV ECMO",
+    "VA ECMO",
+    "ECPR",
+    "IABP",
+    "Impella",
+    "cardiogenic shock",
+    "ARDS",
+    "mechanical circulatory support",
+    "ELSO",
+    "anticoagulation"
+  ],
+  "relatedModules": [
+    "ards-refractory-hypoxaemia",
+    "shock-vasoactive-support",
+    "cardiac-arrest-post-rosc",
+    "cardiac-emergencies-arrhythmias",
+    "pe-tamponade-aortic-emergencies",
+    "haemodynamic-monitoring",
+    "pocus-critical-care-echo",
+    "haematology-coagulation-transfusion",
+    "perioperative-cardiac-surgical-icu",
+    "handover-transport-icu-safety",
+    "agrochemical-household-poisons"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted, pending consultant review)"
+  ],
+  "uiHints": {
+    "icon": "refresh-cw",
+    "accent": "high"
+  },
+  "viewKey": "module:ecmo-mechanical-circulatory-support",
+  "topics": [
+    {
+      "id": "vv-vs-va-ecmo-indications",
+      "title": "VV vs VA ECMO: modes and indications",
+      "summary": "How the two ECMO configurations work, who each is for, contraindications, and the physiology a junior must understand before touching the circuit.",
+      "viewKey": "topic:ecmo-mechanical-circulatory-support/vv-vs-va-ecmo-indications",
+      "uiHints": {
+        "icon": "git-compare",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "ECMO pumps blood through an artificial membrane lung. VV ECMO drains venous blood and returns it oxygenated to the venous side (gas exchange only; relies on the native heart). VA ECMO drains venous blood and returns it into the arterial system (supports circulation and gas exchange, in parallel with the native heart).",
+          "refs": [
+            "elso-vv-2021",
+            "elso-va-2021"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Name the failing organ",
+            "detail": "Lungs only with adequate heart function → VV ECMO (gas exchange support). Heart failing (± lungs) → VA ECMO (circulatory + gas exchange support). Do a bedside echo before deciding: severe LV/RV failure on VV may need VA or a hybrid configuration.",
+            "refs": [
+              "elso-vv-2021",
+              "elso-va-2021"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Before ECMO",
+            "title": "Optimise conventional care first",
+            "detail": "Severe ARDS: lung-protective ventilation (VT 6 mL/kg PBW, Pplat ≤30, driving pressure ≤15), PEEP titration, neuromuscular blockade, and prone positioning ≥12–16 h/day unless contraindicated. Shock: fluids if responsive, noradrenaline, inotropes, revascularisation, treat arrhythmia.",
+            "refs": [
+              "elso-vv-2021",
+              "eolia-2018"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Decide",
+            "title": "Check VV indications (ELSO 2021)",
+            "detail": "Any of: PaO₂/FiO₂ <80 mmHg after optimal care including a prone trial; hypercapnic failure with pH <7.25 despite RR 35/min and Pplat ≤30; bridge to lung transplant. EOLIA entry (used by many centres): P/F <50 for >3 h, P/F <80 for >6 h, or pH <7.25 with PaCO₂ ≥60 mmHg for >6 h despite optimisation.",
+            "refs": [
+              "elso-vv-2021",
+              "eolia-2018"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Decide",
+            "title": "Check VA indications",
+            "detail": "Refractory cardiogenic shock (SCAI D–E) despite vasopressors/inotropes, with a plan (recovery, durable VAD, transplant or decision): fulminant myocarditis, massive PE with arrest/shock, post-cardiotomy shock, cardiotoxic poisoning (e.g. calcium-channel blocker, aluminium phosphide), refractory VT/VF storm, primary graft failure; and ECPR in selected refractory arrests.",
+            "refs": [
+              "elso-va-2021",
+              "scai-shock-2022",
+              "elso-ecpr-2021"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Decide",
+            "title": "Screen contraindications",
+            "detail": "Absolute: no exit strategy (irreversible disease, not a transplant/VAD candidate). Relative: intracranial haemorrhage or major brain injury, contraindication to anticoagulation, >7 days of high-pressure ventilation (Pplat >30 and FiO₂ >0.9), advanced age or frailty, end-stage malignancy, severe immunosuppression. For VA: significant aortic regurgitation and aortic dissection.",
+            "refs": [
+              "elso-vv-2021",
+              "elso-va-2021"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Act",
+            "title": "Call the ECMO centre early",
+            "detail": "Discuss with the regional ECMO team while the patient is still transportable; calculate RESP (VV) or SAVE (VA) to frame the discussion, not to decide alone.",
+            "refs": [
+              "combes-ecmo-programs-2014",
+              "resp-score-2014",
+              "save-score-2015"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "vv-va-compare",
+            "title": "VV vs VA ECMO at a glance",
+            "columns": [
+              "Feature",
+              "VV ECMO",
+              "VA ECMO"
+            ],
+            "rows": [
+              [
+                "Supports",
+                "Gas exchange only",
+                "Circulation + gas exchange"
+              ],
+              [
+                "Typical cannulae",
+                "Femoral drainage (23–25 Fr) + internal jugular return (17–21 Fr), or a single dual-lumen bicaval cannula via right IJ",
+                "Peripheral: femoral venous drainage (21–25 Fr) + femoral arterial return (15–19 Fr) with a distal perfusion cannula (6–8 Fr); central (post-cardiotomy): RA + aorta"
+              ],
+              [
+                "Typical blood flow",
+                "60–80 mL/kg/min (adult often 4–6 L/min)",
+                "Enough for cardiac index ~2.2–2.5 L/min/m² (adult often 3–5 L/min); use the lowest flow that maintains perfusion"
+              ],
+              [
+                "Oxygenation target",
+                "SaO₂ 85–92% often acceptable (mixing with native venous return)",
+                "Normal saturations; check the right radial ABG for differential hypoxia"
+              ],
+              [
+                "Main physiology problems",
+                "Recirculation; hypoxaemia with high cardiac output",
+                "LV distension, differential (north–south) hypoxia, limb ischaemia"
+              ],
+              [
+                "Native heart must",
+                "Pump the oxygenated blood through the lungs",
+                "Eject at least partly (aortic valve opening) to avoid LV stasis"
+              ]
+            ],
+            "caption": "Cannula sizes are typical adult ranges; the ECMO team chooses size from ultrasound vessel diameter and target flow.",
+            "refs": [
+              "elso-vv-2021",
+              "elso-va-2021"
+            ]
+          },
+          {
+            "id": "ecmo-indications-list",
+            "title": "Common indications",
+            "columns": [
+              "Mode",
+              "Conditions"
+            ],
+            "rows": [
+              [
+                "VV",
+                "ARDS (viral, bacterial, aspiration), severe asthma, pulmonary haemorrhage/DAH, inhalational injury, chest trauma/contusion, large bronchopleural fistula, bridge to or after lung transplant"
+              ],
+              [
+                "VA",
+                "Selected AMI cardiogenic shock, fulminant myocarditis, massive PE, post-cardiotomy shock, decompensated cardiomyopathy as bridge, refractory arrhythmia, cardiotoxic poisoning, peripartum cardiomyopathy, hypothermic arrest, ECPR"
+              ]
+            ],
+            "refs": [
+              "elso-vv-2021",
+              "elso-va-2021"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "P/F <80 mmHg on FiO₂ 1.0 despite proning and paralysis: the ECMO window is closing — refer now.",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          },
+          {
+            "text": "Rising lactate, falling urine output and escalating vasopressor plus inotrope (SCAI C→D): mechanical support discussion must happen within hours.",
+            "refs": [
+              "scai-shock-2022"
+            ]
+          },
+          {
+            "text": "New intracranial bleed or uncontrolled bleeding: anticoagulated ECMO may be lethal — consultant decision.",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          },
+          {
+            "text": "On peripheral VA ECMO: loss of arterial pulsatility with pink frothy secretions = LV distension; needs urgent unloading.",
+            "refs": [
+              "elso-va-2021"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Starting ECMO before a genuine trial of prone positioning: ELSO lists a prone trial as part of optimal management unless contraindicated.",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          },
+          {
+            "text": "Choosing VV for a patient with severe septic cardiomyopathy: the native heart must still pump the oxygenated blood; echo first.",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          },
+          {
+            "text": "Referring after 7+ days of injurious ventilation: outcomes fall with longer pre-ECMO ventilation (a strong negative weight in RESP).",
+            "refs": [
+              "resp-score-2014"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "VV ECMO SaO₂ is rarely 100%: arterial saturation reflects the mix of oxygenated circuit blood and native venous return. 85–90% is often fine if oxygen delivery and lactate are adequate.",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          },
+          {
+            "text": "'Sweep for CO₂, flow for O₂': CO₂ clearance is controlled by sweep gas flow; oxygenation mainly by blood flow (and FdO₂).",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          },
+          {
+            "text": "Lower PaCO₂ slowly after initiation: rapid CO₂ falls are associated with neurological injury. ELSO suggests starting sweep around 2 L/min and titrating.",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Choosing ECMO mode",
+        "description": "Decision pathway from refractory organ failure to VV, VA or no ECMO.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Refractory respiratory and/or circulatory failure despite optimal conventional care"
+          },
+          {
+            "id": "exit",
+            "type": "decision",
+            "text": "Realistic exit strategy (recovery, transplant, VAD, or bridge-to-decision)?"
+          },
+          {
+            "id": "no_ecmo",
+            "type": "end",
+            "text": "ECMO not appropriate: continue maximal conventional care; discuss goals with family",
+            "severity": "high"
+          },
+          {
+            "id": "contra",
+            "type": "decision",
+            "text": "Active intracranial bleed, uncontrolled bleeding or contraindication to anticoagulation?"
+          },
+          {
+            "id": "senior",
+            "type": "action",
+            "text": "Consultant + ECMO centre risk–benefit discussion (heparin-free start possible in selected VV cases)"
+          },
+          {
+            "id": "heart",
+            "type": "decision",
+            "text": "Echo: adequate cardiac function (no cardiogenic shock)?"
+          },
+          {
+            "id": "vv_crit",
+            "type": "decision",
+            "text": "Meets VV criteria? P/F <80 after prone trial, or pH <7.25 with RR 35 and Pplat ≤30"
+          },
+          {
+            "id": "optimise",
+            "type": "action",
+            "text": "Optimise: prone ≥16 h, NMB, PEEP titration, conservative fluids; reassess within 6 h"
+          },
+          {
+            "id": "vv",
+            "type": "end",
+            "text": "Refer/initiate VV ECMO",
+            "severity": "high"
+          },
+          {
+            "id": "va_crit",
+            "type": "decision",
+            "text": "Refractory cardiogenic shock (SCAI D–E) or refractory arrest meeting ECPR criteria?"
+          },
+          {
+            "id": "mcs_other",
+            "type": "action",
+            "text": "Optimise inotropes/vasopressors, revascularise; consider Impella/IABP per indication"
+          },
+          {
+            "id": "va",
+            "type": "end",
+            "text": "Refer/initiate VA ECMO with an LV-unloading plan",
+            "severity": "critical"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "exit"
+          },
+          {
+            "from": "exit",
+            "to": "no_ecmo",
+            "label": "No"
+          },
+          {
+            "from": "exit",
+            "to": "contra",
+            "label": "Yes"
+          },
+          {
+            "from": "contra",
+            "to": "senior",
+            "label": "Yes"
+          },
+          {
+            "from": "contra",
+            "to": "heart",
+            "label": "No"
+          },
+          {
+            "from": "senior",
+            "to": "heart"
+          },
+          {
+            "from": "heart",
+            "to": "vv_crit",
+            "label": "Yes"
+          },
+          {
+            "from": "heart",
+            "to": "va_crit",
+            "label": "No"
+          },
+          {
+            "from": "vv_crit",
+            "to": "vv",
+            "label": "Yes"
+          },
+          {
+            "from": "vv_crit",
+            "to": "optimise",
+            "label": "Not yet"
+          },
+          {
+            "from": "optimise",
+            "to": "vv_crit",
+            "label": "Reassess"
+          },
+          {
+            "from": "va_crit",
+            "to": "va",
+            "label": "Yes"
+          },
+          {
+            "from": "va_crit",
+            "to": "mcs_other",
+            "label": "Not yet"
+          },
+          {
+            "from": "mcs_other",
+            "to": "va_crit",
+            "label": "Reassess"
+          }
+        ],
+        "refs": [
+          "elso-vv-2021",
+          "elso-va-2021",
+          "scai-shock-2022"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "**Oxygen delivery on ECMO.** Circuit O₂ supply = blood flow × (post- minus pre-oxygenator O₂ content). ELSO suggests a VV circuit able to supply at least 240 mL/m²/min of oxygen (rest requirement ~120 mL/m²/min; normal systemic DO₂ ~600 mL/m²/min). Because the circuit only oxygenates the fraction of venous return it drains, **SaO₂ on VV depends on the ratio of ECMO flow to native cardiac output** — a hyperdynamic septic patient can be hypoxaemic despite a perfectly working oxygenator.\n\n**VA physiology.** Retrograde femoral arterial flow raises LV afterload. A weak LV may fail to open the aortic valve → LV distension, rising LA pressure, pulmonary oedema and stasis thrombus. If the heart recovers while the lungs are poor, deoxygenated blood ejected by the LV perfuses the coronaries and upper body (**differential or north–south hypoxia**).",
+        "evidence": "**Respiratory ECMO**\n- **CESAR (2009, UK):** referral to a single ECMO centre (75% actually received ECMO) reduced death or severe disability at 6 months (37% vs 53%). It tested *referral to an expert centre*, not ECMO itself.\n- **EOLIA (2018):** early VV ECMO vs conventional lung-protective ventilation in very severe ARDS. 60-day mortality 35% vs 46% (RR 0.76; p=0.09), with 28% crossover to rescue ECMO in controls.\n- **ELSO VV guideline (2021):** P/F <80 after optimal care including a prone trial, or pH <7.25 with RR 35 and Pplat ≤30; rest ventilator settings at minimum Pplat ≤25 cmH₂O and PEEP ≥10.\n\n**Cardiac ECMO**\n- **ECLS-SHOCK (2023):** routine VA ECMO in AMI cardiogenic shock with planned revascularisation did **not** reduce 30-day mortality (47.8% vs 49.0%) and increased moderate–severe bleeding and peripheral vascular complications.\n- **ECMO-CS (2023):** immediate VA ECMO in rapidly deteriorating or severe CS did not improve the composite outcome vs early conservative therapy with rescue ECMO allowed.\n- VA ECMO in AMI-CS is therefore for *selected* patients rather than routine use (ESC 2023 ACS guideline).\n- **SCAI SHOCK stages (A–E)** give a shared language for escalation: C classic, D deteriorating, E extremis.",
+        "controversies": "- **Age cut-off:** no threshold is defined; risk rises steadily with age.\n- **Timing:** 'early' ECMO (EOLIA criteria) vs rescue — many Indian centres can only offer rescue because of cost.\n- **Awake ECMO** and extubation on VV ECMO: attractive, but evidence is from cohorts.\n- **VA ECMO in AMI-CS** after ECLS-SHOCK: limited to selected patients, arrest and mechanical complications.\n- **Hybrid configurations** (V-AV, V-VA) for mixed failure need expert teams.",
+        "indiaNotes": "- ECMO is available mainly in tertiary private and some government institutes in large cities; most district and medical-college ICUs must **refer**. Build a referral relationship with your nearest ECMO centre before you need it.\n- Cost is largely out-of-pocket; insurance and government-scheme coverage for ECMO varies — discuss realistic costs and duration (VV runs often last 1–3 weeks) with families early.\n- Indian indications with a strong case for VA ECMO include **aluminium phosphide cardiotoxicity**, myocarditis, peripartum cardiomyopathy and massive PE; for VV, severe influenza/COVID-19 ARDS, leptospirosis pulmonary haemorrhage and scrub typhus ARDS.\n- Leptospirosis pulmonary haemorrhage may need heparin-sparing strategies — a decision for the ECMO centre."
+      },
+      "drugIds": [
+        "noradrenaline",
+        "dobutamine"
+      ],
+      "calculatorIds": [
+        "pf-ratio",
+        "driving-pressure",
+        "predicted-body-weight",
+        "tidal-volume-pbw",
+        "oxygenation-index"
+      ],
+      "references": [
+        "elso-vv-2021",
+        "elso-va-2021",
+        "eolia-2018",
+        "cesar-2009",
+        "ecls-shock-2023",
+        "ecmo-cs-2023",
+        "scai-shock-2022",
+        "esc-acs-2023"
+      ],
+      "quiz": [
+        {
+          "id": "q14-1-1",
+          "stem": "A 34-year-old with influenza ARDS has P/F 68 mmHg on FiO₂ 1.0, PEEP 14, Pplat 29 after 18 h prone and cisatracurium. Echo shows normal LV and RV. The best mode of support is:",
+          "options": [
+            "VA ECMO via femoral vessels",
+            "VV ECMO",
+            "IABP",
+            "Impella CP",
+            "Inhaled nitric oxide only and wait 48 h"
+          ],
+          "answerIndex": 1,
+          "explanation": "Isolated refractory hypoxaemic failure with adequate cardiac function = VV ECMO (ELSO: P/F <80 after optimal care including proning)."
+        },
+        {
+          "id": "q14-1-2",
+          "stem": "On VV ECMO, which change most directly lowers PaCO₂?",
+          "options": [
+            "Increase blood flow",
+            "Increase sweep gas flow",
+            "Increase FdO₂",
+            "Increase PEEP",
+            "Increase pump inlet pressure"
+          ],
+          "answerIndex": 1,
+          "explanation": "CO₂ removal is controlled by sweep gas flow; oxygenation by blood flow and FdO₂."
+        },
+        {
+          "id": "q14-1-3",
+          "stem": "In ECLS-SHOCK (2023), routine VA ECMO in AMI cardiogenic shock:",
+          "options": [
+            "Halved 30-day mortality",
+            "Did not reduce 30-day mortality and increased bleeding",
+            "Reduced mortality only in women",
+            "Was stopped early for benefit",
+            "Reduced need for RRT"
+          ],
+          "answerIndex": 1,
+          "explanation": "30-day mortality 47.8% vs 49.0%, with more bleeding and vascular complications."
+        },
+        {
+          "id": "q14-1-4",
+          "stem": "On peripheral femoral VA ECMO, right radial SpO₂ is 82% while the post-oxygenator gas is normal and the femoral arterial PaO₂ is 300 mmHg. The likely cause is:",
+          "options": [
+            "Oxygenator failure",
+            "Recirculation",
+            "Differential (north–south) hypoxia from native lung failure",
+            "Air embolism",
+            "Haemolysis"
+          ],
+          "answerIndex": 2,
+          "explanation": "Native ejection of deoxygenated blood perfuses the upper body; improve native lung ventilation or convert to V-AV."
+        }
+      ]
+    },
+    {
+      "id": "ecmo-referral-criteria",
+      "title": "ECMO referral: who, when and how",
+      "summary": "Practical referral criteria for respiratory and cardiac ECMO and ECPR, the scores used (Murray, RESP, SAVE), what the ECMO centre needs on the phone, and how to prepare for retrieval.",
+      "viewKey": "topic:ecmo-mechanical-circulatory-support/ecmo-referral-criteria",
+      "uiHints": {
+        "icon": "phone-call",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Early",
+            "title": "Recognise the trigger",
+            "detail": "Respiratory: P/F <150 despite optimisation is the time to *call* (not necessarily cannulate); P/F <80, or pH <7.25 with hypercapnia, is the time to *act*. Cardiac: SCAI stage C not improving, or any stage D/E. ECPR: witnessed refractory arrest — call within the first 10–15 min of CPR.",
+            "refs": [
+              "combes-ecmo-programs-2014",
+              "scai-shock-2022",
+              "elso-ecpr-2021"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Call",
+            "title": "Phone the ECMO centre with an ISBAR summary",
+            "detail": "Age, weight, height, diagnosis and day of illness, days on ventilator, current settings (mode, FiO₂, PEEP, Pplat, RR, VT), ABG with P/F, prone/NMB done, vasopressor doses, echo, lactate, renal function, platelets/INR, neuro status, comorbidities, CT head if relevant, family wishes.",
+            "refs": [
+              "elso-transport-2022"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Score",
+            "title": "Calculate Murray and RESP (VV) or SAVE (VA)",
+            "detail": "Murray lung injury score >3 was the CESAR referral trigger. RESP and SAVE estimate survival if ECMO is given; they support but do not replace clinical judgement.",
+            "refs": [
+              "murray-1988",
+              "resp-score-2014",
+              "save-score-2015"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Prepare",
+            "title": "Prepare for cannulation or retrieval",
+            "detail": "Cross-match blood (at least 4 units PRBC or as the centre asks), check platelets, fibrinogen, INR; ask which vessels to keep free (often right IJ and both femoral veins); arterial line in the right radial for VA (upper-body oxygenation).",
+            "refs": [
+              "elso-transport-2022"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Transfer",
+            "title": "If the patient is too unstable to move",
+            "detail": "Request mobile ECMO retrieval: the team cannulates at your bedside and transports on ECMO. Conventional transfer of a very hypoxaemic patient is high risk.",
+            "refs": [
+              "elso-transport-2022"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Family",
+            "title": "Inform and consent",
+            "detail": "ECMO is a bridge, not a cure: explain likely duration, bleeding and stroke risk, cost, and the possibility of withdrawal if there is no recovery.",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "referral-triggers",
+            "title": "Referral triggers (call the ECMO centre)",
+            "columns": [
+              "Situation",
+              "Call when",
+              "Usual action threshold"
+            ],
+            "rows": [
+              [
+                "Severe ARDS",
+                "P/F <150 on FiO₂ ≥0.6 despite optimisation, or proning needed",
+                "P/F <80 (ELSO/EOLIA) or Murray >3 (CESAR)"
+              ],
+              [
+                "Hypercapnic failure",
+                "pH <7.30 with Pplat approaching 30",
+                "pH <7.25 with PaCO₂ ≥60 for >6 h despite RR 35"
+              ],
+              [
+                "Cardiogenic shock",
+                "SCAI C with rising lactate or escalating drugs",
+                "SCAI D–E: refractory hypotension, worsening lactate, end-organ failure"
+              ],
+              [
+                "Massive PE",
+                "Arrest or refractory shock despite (or contraindication to) thrombolysis",
+                "Immediate"
+              ],
+              [
+                "Refractory cardiac arrest (ECPR)",
+                "Witnessed arrest, shockable rhythm, good CPR",
+                "No ROSC after 10–15 min of ALS in an eligible patient"
+              ]
+            ],
+            "caption": "Thresholds summarise ELSO, EOLIA and CESAR entry criteria; local centres may differ.",
+            "refs": [
+              "elso-vv-2021",
+              "eolia-2018",
+              "cesar-2009",
+              "scai-shock-2022",
+              "elso-ecpr-2021"
+            ]
+          },
+          {
+            "id": "ecpr-criteria",
+            "title": "Typical ECPR inclusion criteria (centre-specific)",
+            "columns": [
+              "Criterion",
+              "Typical requirement"
+            ],
+            "rows": [
+              [
+                "Age",
+                "Usually <65–70 years (biological, not only chronological)"
+              ],
+              [
+                "Arrest",
+                "Witnessed, with immediate bystander CPR (no-flow <5 min)"
+              ],
+              [
+                "Rhythm",
+                "Initial shockable rhythm favoured; PE, hypothermia and poisoning also considered"
+              ],
+              [
+                "Low-flow time",
+                "Expected arrest-to-ECMO-flow <60 min"
+              ],
+              [
+                "Signs of life",
+                "ETCO₂ >10 mmHg, gasping or pupillary reaction during CPR favour candidacy"
+              ],
+              [
+                "Exclusions",
+                "Unwitnessed arrest, end-stage disease, known DNAR, aortic dissection, severe AR, uncontrolled bleeding"
+              ]
+            ],
+            "refs": [
+              "elso-ecpr-2021",
+              "aha-als-2025"
+            ]
+          },
+          {
+            "id": "resp-classes",
+            "title": "RESP score risk classes (survival on VV ECMO)",
+            "columns": [
+              "RESP score",
+              "Class",
+              "Hospital survival in derivation cohort"
+            ],
+            "rows": [
+              [
+                "≥6",
+                "I",
+                "92%"
+              ],
+              [
+                "3 to 5",
+                "II",
+                "76%"
+              ],
+              [
+                "−1 to 2",
+                "III",
+                "57%"
+              ],
+              [
+                "−5 to −2",
+                "IV",
+                "33%"
+              ],
+              [
+                "≤−6",
+                "V",
+                "18%"
+              ]
+            ],
+            "caption": "Pre-ECMO variables: age, immunocompromise, days of ventilation, diagnosis group, CNS dysfunction, non-pulmonary infection, NMB, nitric oxide, bicarbonate infusion, cardiac arrest, PaCO₂ and peak pressure.",
+            "refs": [
+              "resp-score-2014"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Do not wait for 'one more day' of conventional ventilation: pre-ECMO ventilation >7 days lowers survival and is a relative contraindication.",
+            "refs": [
+              "elso-vv-2021",
+              "resp-score-2014"
+            ]
+          },
+          {
+            "text": "ECPR candidates need flow within ~60 min of collapse: call at minute 10–15, not minute 40.",
+            "refs": [
+              "elso-ecpr-2021"
+            ]
+          },
+          {
+            "text": "Severe hypoxaemia during conventional transfer is dangerous — prefer mobile ECMO retrieval for the sickest patients.",
+            "refs": [
+              "elso-transport-2022"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Inserting a large central line in the right IJ when a bicaval dual-lumen cannula may be needed: ask the ECMO team which vessels to keep free.",
+            "refs": [
+              "elso-transport-2022"
+            ]
+          },
+          {
+            "text": "Presenting a single ABG without ventilator settings: the centre needs P/F, PEEP, Pplat and proning status to judge reversibility.",
+            "refs": [
+              "elso-transport-2022"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "CESAR showed the value of transfer to an experienced high-volume centre — the referral itself matters, even if the centre does not cannulate.",
+            "refs": [
+              "cesar-2009"
+            ]
+          },
+          {
+            "text": "ECMO programmes work best in regional hub-and-spoke networks with mobile retrieval capability.",
+            "refs": [
+              "combes-ecmo-programs-2014"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "ECMO referral pathway",
+        "description": "From deterioration to referral, retrieval or ECPR.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Severe respiratory or cardiac failure on maximal therapy"
+          },
+          {
+            "id": "arrest",
+            "type": "decision",
+            "text": "Refractory cardiac arrest now?"
+          },
+          {
+            "id": "ecpr_elig",
+            "type": "decision",
+            "text": "Meets local ECPR criteria (witnessed, bystander CPR, shockable/reversible cause, low-flow <60 min possible)?"
+          },
+          {
+            "id": "ecpr",
+            "type": "end",
+            "text": "Activate ECPR team now; continue high-quality (mechanical if available) CPR during transfer to cath lab/ECMO bay",
+            "severity": "critical"
+          },
+          {
+            "id": "acls",
+            "type": "end",
+            "text": "Continue standard ALS; consider termination of resuscitation per guideline",
+            "severity": "high"
+          },
+          {
+            "id": "call",
+            "type": "action",
+            "text": "Call ECMO centre: ISBAR summary, ABG + vent settings or haemodynamics + echo; calculate Murray/RESP/SAVE"
+          },
+          {
+            "id": "accept",
+            "type": "decision",
+            "text": "Centre accepts?"
+          },
+          {
+            "id": "cont",
+            "type": "action",
+            "text": "Continue optimisation; agree re-discussion triggers and time"
+          },
+          {
+            "id": "stable",
+            "type": "decision",
+            "text": "Safe for conventional transfer (oxygenating on transport ventilator, stable on modest vasopressor)?"
+          },
+          {
+            "id": "transfer",
+            "type": "end",
+            "text": "Conventional critical-care transfer with senior escort",
+            "severity": "high"
+          },
+          {
+            "id": "mobile",
+            "type": "end",
+            "text": "Mobile ECMO retrieval: cannulate on site, transfer on ECMO",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "arrest"
+          },
+          {
+            "from": "arrest",
+            "to": "ecpr_elig",
+            "label": "Yes"
+          },
+          {
+            "from": "arrest",
+            "to": "call",
+            "label": "No"
+          },
+          {
+            "from": "ecpr_elig",
+            "to": "ecpr",
+            "label": "Yes"
+          },
+          {
+            "from": "ecpr_elig",
+            "to": "acls",
+            "label": "No"
+          },
+          {
+            "from": "call",
+            "to": "accept"
+          },
+          {
+            "from": "accept",
+            "to": "stable",
+            "label": "Yes"
+          },
+          {
+            "from": "accept",
+            "to": "cont",
+            "label": "No / not yet"
+          },
+          {
+            "from": "cont",
+            "to": "call",
+            "label": "Re-discuss"
+          },
+          {
+            "from": "stable",
+            "to": "transfer",
+            "label": "Yes"
+          },
+          {
+            "from": "stable",
+            "to": "mobile",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "elso-transport-2022",
+          "elso-ecpr-2021"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Reversibility is the key concept: ECMO buys time for the lung or heart to recover. Time on injurious ventilation causes fibroproliferation and reduces reversibility; each minute of low-flow CPR worsens hypoxic brain injury.",
+        "evidence": "- **ECPR trials:** ARREST (2020, n=30, refractory VF OHCA) stopped early: survival to discharge 43% vs 7% with ECMO-facilitated resuscitation in an expert system. Prague OHCA (2022) — invasive strategy including ECPR: 180-day good neurological survival 31.5% vs 22.0% (p=0.09). INCEPTION (2023, multicentre): 30-day good neurological survival 20% vs 16% (not significant).\n- **AHA 2025 ALS:** ECPR may be reasonable for selected patients with refractory arrest when delivered within a skilled, organised system of care.\n- **Scores:** RESP (VV) and SAVE (VA) were derived from ELSO registry data; discrimination is moderate and they were not designed to select or exclude individual patients.",
+        "controversies": "- How far to transport a severely hypoxaemic patient conventionally vs waiting for retrieval.\n- ECPR in Indian cities: long EMS response times and low bystander CPR rates mean most out-of-hospital arrests are not ECPR candidates; in-hospital witnessed arrests (cath lab, ICU, ED) are the realistic population.",
+        "indiaNotes": "- Keep an updated list of regional ECMO centres and retrieval teams (phone numbers) on the ICU wall.\n- Road transfer times in Indian cities are unpredictable; factor traffic into the choice between conventional transfer and mobile retrieval.\n- Families often need time to arrange funds — start the conversation at the 'call' threshold, not the 'act' threshold."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "pf-ratio",
+        "oxygenation-index",
+        "driving-pressure"
+      ],
+      "references": [
+        "elso-transport-2022",
+        "elso-ecpr-2021",
+        "resp-score-2014",
+        "save-score-2015",
+        "murray-1988",
+        "cesar-2009",
+        "combes-ecmo-programs-2014",
+        "arrest-2020",
+        "prague-ohca-2022",
+        "inception-2023",
+        "aha-als-2025"
+      ],
+      "quiz": [
+        {
+          "id": "q14-2-1",
+          "stem": "Which pre-ECMO factor most strongly lowers predicted survival in the RESP score?",
+          "options": [
+            "Asthma as diagnosis",
+            "Ventilation for more than 7 days before ECMO",
+            "Age 30 years",
+            "Use of NMB before ECMO",
+            "Viral pneumonia"
+          ],
+          "answerIndex": 1,
+          "explanation": "Longer pre-ECMO ventilation (>7 days) carries a major negative weight; asthma, NMB use and viral pneumonia carry positive weights."
+        },
+        {
+          "id": "q14-2-2",
+          "stem": "A 45-year-old has a witnessed VF arrest in the cath lab with no ROSC after 12 minutes of ALS. In a centre with ECPR, the best next step is:",
+          "options": [
+            "Stop resuscitation",
+            "Activate ECPR while continuing high-quality CPR",
+            "Give sodium bicarbonate and wait",
+            "Insert IABP",
+            "Give 3 mg adrenaline at once"
+          ],
+          "answerIndex": 1,
+          "explanation": "Witnessed shockable refractory arrest within an ECPR system — activate early to keep low-flow time short."
+        },
+        {
+          "id": "q14-2-3",
+          "stem": "Before a planned bicaval dual-lumen VV cannula, which vessel should be kept free?",
+          "options": [
+            "Left radial artery",
+            "Right internal jugular vein",
+            "Left subclavian vein",
+            "Right femoral artery",
+            "Left femoral artery"
+          ],
+          "answerIndex": 1,
+          "explanation": "Dual-lumen bicaval cannulae are usually placed via the right IJ."
+        },
+        {
+          "id": "q14-2-4",
+          "stem": "CESAR primarily tested:",
+          "options": [
+            "VA ECMO in cardiogenic shock",
+            "Referral to an ECMO centre vs conventional care",
+            "ECPR",
+            "Prone positioning",
+            "High-frequency oscillation"
+          ],
+          "answerIndex": 1,
+          "explanation": "CESAR randomised to referral to a specialist centre for consideration of ECMO."
+        }
+      ]
+    },
+    {
+      "id": "iabp-impella-basics",
+      "title": "IABP and Impella basics",
+      "summary": "How intra-aortic balloon pumps and microaxial flow pumps work, current evidence and indications, setting up and troubleshooting, and the checks each shift.",
+      "viewKey": "topic:ecmo-mechanical-circulatory-support/iabp-impella-basics",
+      "uiHints": {
+        "icon": "heart-pulse",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "IABP: a helium-filled balloon in the descending aorta that inflates in diastole (raising coronary perfusion pressure) and deflates just before systole (lowering afterload); adds roughly 0.5 L/min of cardiac output. Impella: a catheter-mounted microaxial pump that pulls blood from the LV and ejects it into the ascending aorta; CP delivers up to about 3.5–4 L/min, 5.0/5.5 up to about 5–5.5 L/min.",
+          "refs": [
+            "ibcc-ecmo"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "Indication",
+            "title": "Know when each device is used",
+            "detail": "IABP: mechanical complications of MI (acute MR, VSR) as a bridge, refractory ischaemia, selected high-risk PCI, LV unloading on VA ECMO. Routine IABP in AMI shock is NOT recommended after IABP-SHOCK II. Impella CP: selected STEMI cardiogenic shock (DanGer Shock), high-risk PCI, LV venting on VA ECMO ('ECPELLA'); Impella RP for RV failure.",
+            "refs": [
+              "iabp-shock-ii-2012",
+              "danger-shock-2024",
+              "esc-acs-2023"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Position",
+            "title": "Confirm position",
+            "detail": "IABP tip 2–3 cm below the origin of the left subclavian artery — on CXR around the level of the carina / 2nd–3rd intercostal space. Impella: inlet in the LV below the aortic valve (about 3.5 cm for CP), outlet above the valve; confirm with echo and the console position waveform.",
+            "refs": [
+              "ibcc-ecmo"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Timing",
+            "title": "IABP timing (check on 1:2)",
+            "detail": "Inflate at the dicrotic notch (aortic valve closure) → diastolic augmentation; deflate just before systole → assisted end-diastolic pressure lower than unassisted, and assisted systole lower than unassisted systole. Trigger: ECG (R wave) or arterial pressure.",
+            "refs": [
+              "ibcc-ecmo"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Anticoagulate",
+            "title": "Anticoagulation",
+            "detail": "Impella: systemic heparin plus heparinised (or bicarbonate-based) purge per manufacturer/protocol. IABP: heparin commonly used, especially at 1:2–1:3 or prolonged support; unit protocols vary.",
+            "refs": [
+              "elso-anticoag-2021"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Monitor",
+            "title": "Hourly device checks",
+            "detail": "Limb: distal pulses/Doppler, colour, temperature, sensation hourly. Left radial pulse and urine output (IABP migration can occlude the subclavian or renal arteries). Haemolysis (Impella): urine colour, plasma free Hb, LDH. Console alarms, purge pressure (Impella), helium supply (IABP).",
+            "refs": [
+              "danger-shock-2024",
+              "ibcc-ecmo"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Wean",
+            "title": "Wean and remove",
+            "detail": "IABP: reduce ratio 1:1 → 1:2 → 1:3 (or reduce augmentation) while haemodynamics and lactate stay stable; avoid prolonged 1:3 (thrombosis). Impella: reduce P-level stepwise with echo and haemodynamic checks. Remove with a haemostasis plan; check the limb afterwards.",
+            "refs": [
+              "ibcc-ecmo"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "mcs-compare",
+            "title": "Temporary mechanical circulatory support compared",
+            "columns": [
+              "Device",
+              "Flow added",
+              "Access",
+              "Main benefit",
+              "Main risks"
+            ],
+            "rows": [
+              [
+                "IABP",
+                "~0.5 L/min",
+                "Femoral (7–8 Fr); axillary for longer use",
+                "Afterload reduction, coronary perfusion; simple, cheap, widely available",
+                "Limb ischaemia, migration, balloon rupture, thrombocytopenia; no mortality benefit in AMI-CS"
+              ],
+              [
+                "Impella CP",
+                "~3.5–4 L/min",
+                "Femoral (14 Fr)",
+                "Direct LV unloading; DanGer Shock mortality benefit in selected STEMI-CS",
+                "Haemolysis, bleeding, limb ischaemia, AKI, malposition; high cost"
+              ],
+              [
+                "Impella 5.0/5.5",
+                "~5–5.5 L/min",
+                "Surgical axillary cut-down",
+                "Fuller LV support, allows mobilisation",
+                "Surgical access, bleeding, haemolysis"
+              ],
+              [
+                "Impella RP",
+                "~4 L/min (right side)",
+                "Femoral vein",
+                "RV failure (e.g. RV infarct, post-LVAD)",
+                "Haemolysis, thrombosis, malposition"
+              ],
+              [
+                "VA ECMO",
+                "3–6 L/min",
+                "Femoral artery + vein",
+                "Biventricular + respiratory support",
+                "LV distension, bleeding, limb ischaemia, stroke"
+              ]
+            ],
+            "caption": "Flows are approximate manufacturer ranges.",
+            "refs": [
+              "ibcc-ecmo",
+              "danger-shock-2024",
+              "iabp-shock-ii-2012"
+            ]
+          },
+          {
+            "id": "iabp-timing-errors",
+            "title": "IABP timing errors",
+            "columns": [
+              "Error",
+              "Waveform clue",
+              "Consequence"
+            ],
+            "rows": [
+              [
+                "Early inflation",
+                "Inflation before the dicrotic notch; augmentation encroaches on systole",
+                "Premature aortic valve closure, ↑ LVEDV, ↑ afterload"
+              ],
+              [
+                "Late inflation",
+                "Inflation well after the dicrotic notch; notch visible",
+                "Reduced coronary perfusion benefit"
+              ],
+              [
+                "Early deflation",
+                "Sharp drop after augmentation; assisted end-diastolic pressure may equal unassisted; U-shaped",
+                "Sub-optimal afterload reduction, possible retrograde coronary flow"
+              ],
+              [
+                "Late deflation",
+                "Assisted end-diastolic pressure ≥ unassisted",
+                "Increased afterload and myocardial O₂ demand — most harmful"
+              ]
+            ],
+            "refs": [
+              "ibcc-ecmo"
+            ]
+          },
+          {
+            "id": "iabp-size",
+            "title": "IABP balloon size by patient height (typical manufacturer guide)",
+            "columns": [
+              "Height",
+              "Balloon volume"
+            ],
+            "rows": [
+              [
+                "<152 cm",
+                "25–30 mL"
+              ],
+              [
+                "152–163 cm",
+                "34 mL"
+              ],
+              [
+                "163–183 cm",
+                "40 mL"
+              ],
+              [
+                ">183 cm",
+                "50 mL"
+              ]
+            ],
+            "caption": "Manufacturer charts differ slightly; check the device insert. Many Indian adults need 34 mL rather than 40 mL.",
+            "refs": [
+              "ibcc-ecmo"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Loss of left radial pulse or left arm ischaemia with an IABP = balloon migrated too high; reposition urgently.",
+            "refs": [
+              "ibcc-ecmo"
+            ]
+          },
+          {
+            "text": "Sudden anuria with an IABP: consider low position occluding renal arteries (check CXR/ultrasound).",
+            "refs": [
+              "ibcc-ecmo"
+            ]
+          },
+          {
+            "text": "Blood (rust-coloured flecks) in the IABP helium tubing = balloon rupture: stop pumping, clamp, keep flat, arrange prompt removal (risk of entrapment).",
+            "refs": [
+              "ibcc-ecmo"
+            ]
+          },
+          {
+            "text": "Red urine or rising plasma free Hb on Impella: haemolysis — check position (echo), suction alarms, and reduce P-level.",
+            "refs": [
+              "danger-shock-2024"
+            ]
+          },
+          {
+            "text": "Cold, pale, pulseless limb distal to a large-bore device: limb ischaemia — vascular surgery now.",
+            "refs": [
+              "danger-shock-2024"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Inserting an IABP 'routinely' for AMI cardiogenic shock: IABP-SHOCK II showed no mortality benefit; ESC advises against routine use.",
+            "refs": [
+              "iabp-shock-ii-2012",
+              "esc-acs-2023"
+            ]
+          },
+          {
+            "text": "Ignoring RV function before Impella CP: an LV pump cannot fill if the RV fails; check RV size/TAPSE and CVP.",
+            "refs": [
+              "danger-shock-2024"
+            ]
+          },
+          {
+            "text": "Running an IABP at 1:3 for hours to 'wean': stasis promotes thrombus on the balloon; wean promptly or remove.",
+            "refs": [
+              "ibcc-ecmo"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "DanGer Shock (2024): Impella CP in STEMI cardiogenic shock (excluding comatose OHCA patients) reduced 180-day mortality 45.8% vs 58.5%, with more severe bleeding, limb ischaemia and RRT. Patient selection mattered.",
+            "refs": [
+              "danger-shock-2024"
+            ]
+          },
+          {
+            "text": "On VA ECMO, an IABP or Impella can 'vent' the LV — consider when pulse pressure falls below ~10 mmHg or the aortic valve stops opening.",
+            "refs": [
+              "elso-va-2021"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Escalating mechanical support in cardiogenic shock",
+        "description": "Simplified decision tree for temporary MCS (heart-team decisions).",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Cardiogenic shock (SCAI C+) despite optimal drugs; revascularise if ACS"
+          },
+          {
+            "id": "mech",
+            "type": "decision",
+            "text": "Mechanical complication of MI (acute MR, VSR, free-wall rupture)?"
+          },
+          {
+            "id": "iabp_bridge",
+            "type": "end",
+            "text": "IABP (or Impella/ECMO) as bridge to urgent surgery",
+            "severity": "critical"
+          },
+          {
+            "id": "rv",
+            "type": "decision",
+            "text": "Predominant RV failure?"
+          },
+          {
+            "id": "rvsupport",
+            "type": "end",
+            "text": "Optimise RV (preload, pulmonary vasodilators, inotropes); consider Impella RP or VA ECMO",
+            "severity": "high"
+          },
+          {
+            "id": "resp",
+            "type": "decision",
+            "text": "Severe hypoxaemia, cardiac arrest or biventricular failure?"
+          },
+          {
+            "id": "vaecmo",
+            "type": "end",
+            "text": "VA ECMO with LV-unloading plan (IABP/Impella)",
+            "severity": "critical"
+          },
+          {
+            "id": "stemi",
+            "type": "decision",
+            "text": "STEMI-CS, not comatose after OHCA, LV-dominant?"
+          },
+          {
+            "id": "impella",
+            "type": "end",
+            "text": "Consider Impella CP (DanGer Shock population) in an experienced centre",
+            "severity": "high"
+          },
+          {
+            "id": "other",
+            "type": "end",
+            "text": "Heart-team decision: Impella vs VA ECMO vs continued medical therapy; avoid routine IABP",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "mech"
+          },
+          {
+            "from": "mech",
+            "to": "iabp_bridge",
+            "label": "Yes"
+          },
+          {
+            "from": "mech",
+            "to": "rv",
+            "label": "No"
+          },
+          {
+            "from": "rv",
+            "to": "rvsupport",
+            "label": "Yes"
+          },
+          {
+            "from": "rv",
+            "to": "resp",
+            "label": "No"
+          },
+          {
+            "from": "resp",
+            "to": "vaecmo",
+            "label": "Yes"
+          },
+          {
+            "from": "resp",
+            "to": "stemi",
+            "label": "No"
+          },
+          {
+            "from": "stemi",
+            "to": "impella",
+            "label": "Yes"
+          },
+          {
+            "from": "stemi",
+            "to": "other",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "iabp-shock-ii-2012",
+          "danger-shock-2024",
+          "esc-acs-2023",
+          "elso-va-2021"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "**IABP:** diastolic inflation displaces ~30–50 mL of blood, raising aortic diastolic pressure (coronary perfusion); deflation lowers aortic end-diastolic pressure and LV afterload. Its effect needs a native rhythm and some LV function, and is blunted in tachyarrhythmias.\n\n**Impella:** draws blood from the LV into the aorta continuously, lowering LV end-diastolic pressure and volume (myocardial O₂ demand) while increasing forward flow — 'unloading'. Suction events occur with hypovolaemia, RV failure or malposition against the LV wall.",
+        "evidence": "- **IABP-SHOCK II (2012):** 600 patients with AMI-CS undergoing early revascularisation; IABP did not reduce 30-day mortality (39.7% vs 41.3%), and later follow-up showed no long-term benefit.\n- **DanGer Shock (2024):** 360 STEMI-CS patients; Impella CP reduced all-cause death at 180 days (45.8% vs 58.5%; HR 0.74). The composite of serious adverse events (severe bleeding, limb ischaemia, haemolysis, device failure, worsening aortic regurgitation) was more frequent, as was RRT.\n- **ESC 2023 ACS:** routine IABP not recommended in CS without mechanical complications; short-term MCS may be considered in selected patients.\n- **SCAI stages** guide timing: escalation is usually considered at stage C not responding, or D.",
+        "controversies": "- Impella outside the DanGer Shock population (e.g. NSTEMI-CS, comatose OHCA) remains uncertain.\n- Routine LV venting on VA ECMO: observational data suggest benefit; randomised evidence is limited.\n- IABP retains a role in resource-limited settings for mechanical complications and as a bridge, given low cost and familiarity.",
+        "indiaNotes": "- IABP is widely available in Indian cath labs and is often the only device in tier-2 cities; use it for evidence-based indications (mechanical complications, bridge) rather than routinely.\n- Impella is limited and expensive in India; mainly found in large cardiac centres.\n- Many Indian adults are of shorter stature: check balloon size against height (34 mL is common)."
+      },
+      "drugIds": [
+        "unfractionated-heparin",
+        "dobutamine",
+        "noradrenaline"
+      ],
+      "calculatorIds": [
+        "mean-arterial-pressure",
+        "infusion-rate-weight-min"
+      ],
+      "references": [
+        "iabp-shock-ii-2012",
+        "danger-shock-2024",
+        "esc-acs-2023",
+        "scai-shock-2022",
+        "ibcc-ecmo",
+        "elso-va-2021",
+        "elso-anticoag-2021"
+      ],
+      "quiz": [
+        {
+          "id": "q14-3-1",
+          "stem": "On a 1:2 IABP trace, the assisted end-diastolic pressure is higher than the unassisted end-diastolic pressure. This indicates:",
+          "options": [
+            "Early inflation",
+            "Late inflation",
+            "Early deflation",
+            "Late deflation",
+            "Correct timing"
+          ],
+          "answerIndex": 3,
+          "explanation": "Late deflation means the balloon is still inflated as the LV starts ejecting, increasing afterload — the most harmful error."
+        },
+        {
+          "id": "q14-3-2",
+          "stem": "After IABP insertion the left radial pulse disappears. The most likely cause is:",
+          "options": [
+            "Balloon too low",
+            "Balloon migrated too high, occluding the left subclavian",
+            "Balloon rupture",
+            "Aortic regurgitation",
+            "Late inflation"
+          ],
+          "answerIndex": 1,
+          "explanation": "The tip should lie 2–3 cm below the left subclavian origin; upward migration can occlude it."
+        },
+        {
+          "id": "q14-3-3",
+          "stem": "DanGer Shock showed that Impella CP in STEMI cardiogenic shock:",
+          "options": [
+            "Had no effect on mortality",
+            "Reduced 180-day mortality but increased complications",
+            "Reduced bleeding",
+            "Was harmful overall",
+            "Was equivalent to IABP"
+          ],
+          "answerIndex": 1,
+          "explanation": "180-day death 45.8% vs 58.5%, with more bleeding, limb ischaemia and RRT."
+        },
+        {
+          "id": "q14-3-4",
+          "stem": "Which is a contraindication to IABP?",
+          "options": [
+            "Acute mitral regurgitation",
+            "Ventricular septal rupture",
+            "Moderate-to-severe aortic regurgitation",
+            "Refractory angina",
+            "High-risk PCI"
+          ],
+          "answerIndex": 2,
+          "explanation": "Diastolic inflation worsens regurgitant flow in significant AR; aortic dissection is another contraindication."
+        }
+      ]
+    },
+    {
+      "id": "daily-ecmo-checks",
+      "title": "Daily ECMO checks and rounds",
+      "summary": "A structured patient-and-circuit checklist for every ECMO patient: neurology, haemodynamics, pump, oxygenator, anticoagulation, ventilator 'rest', and the daily plan.",
+      "viewKey": "topic:ecmo-mechanical-circulatory-support/daily-ecmo-checks",
+      "uiHints": {
+        "icon": "clipboard-check",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Every shift",
+            "title": "Patient: neurology and sedation",
+            "detail": "Pupils, GCS/RASS off sedation where possible, focal signs; low threshold for CT head (ICH risk). Aim for light sedation once stable; awake ECMO when possible.",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Every shift",
+            "title": "Haemodynamics and perfusion",
+            "detail": "MAP (VA: usually 65–80 mmHg), pulse pressure (VA: >10 mmHg suggests LV ejection), lactate, urine output, cannulated-limb perfusion with Doppler and NIRS if available. Pre-oxygenator saturation is a venous surrogate on VV but is distorted by recirculation.",
+            "refs": [
+              "elso-va-2021"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Every shift",
+            "title": "Circuit: pump and flow",
+            "detail": "Record RPM, blood flow and their relationship (rising RPM for the same flow = drainage problem or circuit resistance). Look/listen for line 'chatter' (shaking drainage line = hypovolaemia or cannula obstruction). Drainage (pre-pump) pressure is normally kept less negative than about −100 mmHg.",
+            "refs": [
+              "elso-vv-2021",
+              "ibcc-ecmo"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Every shift",
+            "title": "Circuit: oxygenator",
+            "detail": "Pre- and post-oxygenator pressures and the gradient across the membrane (rising ΔP = clot); post-oxygenator blood gas daily (PO₂ should be very high on FdO₂ 1.0); inspect connectors and oxygenator with a torch for clot and fibrin; check gas line, blender, heater temperature.",
+            "refs": [
+              "elso-vv-2021",
+              "ibcc-ecmo"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Daily",
+            "title": "Anticoagulation and blood",
+            "detail": "Anti-Xa or aPTT, ACT if used, platelets, fibrinogen, INR, Hb, LDH, plasma free Hb, bilirubin; antithrombin if heparin resistance. Common targets: Hb ≥7–8 g/dL (higher if DO₂ inadequate), platelets >50 × 10⁹/L (higher if bleeding), fibrinogen >1.5 g/L.",
+            "refs": [
+              "elso-anticoag-2021",
+              "elso-vv-2021"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Daily",
+            "title": "Ventilator 'rest' settings (VV)",
+            "detail": "Pplat <25 cmH₂O (≤30 acceptable), PEEP ≥10, low RR (4–30), FiO₂ 0.3–0.5; avoid hyperoxia and VILI. Track compliance and tidal volume at a fixed driving pressure, plus CXR.",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Daily",
+            "title": "Echo and imaging",
+            "detail": "VA: LV size, aortic valve opening, LV/aortic-root smoke or thrombus, RV, pericardial collection. VV: cannula position (dual-lumen jet towards the tricuspid valve), RV function. CXR: cannula position, lung opacity.",
+            "refs": [
+              "elso-va-2021",
+              "elso-vv-2021"
+            ]
+          },
+          {
+            "n": 8,
+            "time": "Daily",
+            "title": "Whole-patient care",
+            "detail": "Infection screen (heater masks fever), early enteral nutrition, skin and pressure areas, physiotherapy/mobilisation, CRRT integration if used, drug dosing (circuit sequesters lipophilic drugs such as fentanyl, midazolam, propofol), family update.",
+            "refs": [
+              "elso-vv-2021",
+              "elso-guidelines-page"
+            ]
+          },
+          {
+            "n": 9,
+            "time": "Daily",
+            "title": "Daily goals and weaning screen",
+            "detail": "Can sweep or FdO₂ be weaned (VV)? Is there native cardiac recovery (VA)? Write today's targets: SpO₂, PaCO₂, MAP, anti-Xa, fluid balance.",
+            "refs": [
+              "elso-vv-2021",
+              "elso-va-2021"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "unfractionated-heparin",
+            "role": "Circuit anticoagulation (standard)",
+            "route": "IV infusion",
+            "dose": "Bolus 50–100 units/kg at cannulation; infusion about 7.5–20 units/kg/h titrated to target",
+            "doseRange": {
+              "unit": "units/kg/h",
+              "min": 7.5,
+              "max": 20
+            },
+            "dilution": "25,000 units in 50 mL NS = 500 units/mL",
+            "target": "anti-Xa 0.3–0.7 units/mL (or aPTT ~1.5–2.5 × baseline) per unit protocol; lower targets if bleeding",
+            "workedExample": "70 kg at 10 units/kg/h = 700 units/h = 1.4 mL/h of 500 units/mL",
+            "calculatorId": "infusion-rate-weight-hour",
+            "verify": "Targets vary between ECMO centres; follow the unit protocol.",
+            "refs": [
+              "elso-anticoag-2021"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "ecmo-daily-checklist",
+            "title": "ECMO round checklist (bedside chart)",
+            "columns": [
+              "Domain",
+              "Check",
+              "Typical target / red flag"
+            ],
+            "rows": [
+              [
+                "Neuro",
+                "Pupils, GCS/RASS, CAM-ICU",
+                "New asymmetry → CT head"
+              ],
+              [
+                "Haemodynamics",
+                "MAP, pulse pressure (VA), lactate, urine output",
+                "MAP 65–80 (VA); lactate falling; UO >0.5 mL/kg/h"
+              ],
+              [
+                "Gas exchange",
+                "Right radial ABG (VA), patient ABG, post-oxygenator ABG",
+                "SaO₂ ≥85–88% on VV; post-oxy PO₂ high; PaCO₂ corrected slowly"
+              ],
+              [
+                "Pump",
+                "RPM, flow, chatter, drainage pressure",
+                "Stable RPM:flow; drainage pressure less negative than about −100 mmHg"
+              ],
+              [
+                "Oxygenator",
+                "ΔP pre/post, clots, sweep, FdO₂, gas line",
+                "Rising ΔP or visible clot = plan change"
+              ],
+              [
+                "Anticoagulation",
+                "Anti-Xa/aPTT, platelets, fibrinogen, antithrombin",
+                "Per unit protocol (often anti-Xa 0.3–0.7 units/mL)"
+              ],
+              [
+                "Haemolysis",
+                "Plasma free Hb, LDH, urine colour",
+                "pfHb >50 mg/dL (0.5 g/L) is significant"
+              ],
+              [
+                "Cannulae",
+                "Sites, sutures, dressing, depth marks, limb perfusion",
+                "Bleeding, migration, ischaemia"
+              ],
+              [
+                "Ventilator",
+                "Rest settings, compliance",
+                "Pplat <25, PEEP ≥10, FiO₂ ≤0.5"
+              ],
+              [
+                "Infection",
+                "Temperature (heater-controlled), WBC, cultures, line days",
+                "Fever may be masked"
+              ],
+              [
+                "Nutrition/renal",
+                "Enteral feed, fluid balance, CRRT",
+                "Avoid fluid overload"
+              ],
+              [
+                "Plan",
+                "Weaning trial? Family update? Exit strategy?",
+                "Documented daily"
+              ]
+            ],
+            "refs": [
+              "elso-vv-2021",
+              "elso-va-2021",
+              "elso-anticoag-2021",
+              "ibcc-ecmo"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Rising membrane pressure gradient, falling post-oxygenator PO₂ and rising D-dimer/plasma free Hb = oxygenator failing: plan a change before it fails.",
+            "refs": [
+              "ibcc-ecmo"
+            ]
+          },
+          {
+            "text": "Shaking drainage line with falling flow: hypovolaemia, tamponade, pneumothorax, cannula malposition or abdominal compartment — do NOT just increase RPM.",
+            "refs": [
+              "ibcc-ecmo"
+            ]
+          },
+          {
+            "text": "Unequal pupils or sudden GCS drop: urgent CT head (intracranial haemorrhage); hold anticoagulation per consultant.",
+            "refs": [
+              "elso-anticoag-2021"
+            ]
+          },
+          {
+            "text": "Cold, mottled cannulated leg on VA: check distal perfusion cannula flow; vascular surgery review.",
+            "refs": [
+              "elso-va-2021"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Relying on aPTT alone: on ECMO it is confounded by coagulopathy, low fibrinogen and inflammation; anti-Xa is more specific for heparin effect.",
+            "refs": [
+              "elso-anticoag-2021"
+            ]
+          },
+          {
+            "text": "Missing infection because there is no fever: the heat exchanger holds blood temperature; watch WBC, inflammatory-marker trends and new organ dysfunction.",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          },
+          {
+            "text": "Unexplained under-dosing of sedatives and antibiotics: circuit components sequester lipophilic and highly protein-bound drugs; use TDM where available.",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Recirculation on VV: pre-oxygenator saturation rises towards post-oxygenator saturation while patient SaO₂ falls. Increase cannula tip distance or adjust flow; check with echo.",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          },
+          {
+            "text": "Keep an 'emergency card' at each ECMO bed: emergency ventilator settings, clamp locations, hand-crank instructions and the ECMO specialist's phone number.",
+            "refs": [
+              "elso-guidelines-page"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Low flow or 'chattering' circuit",
+        "description": "Troubleshooting falling ECMO flow with drainage-line vibration.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "ECMO flow falling and/or drainage line shaking"
+          },
+          {
+            "id": "reduce",
+            "type": "action",
+            "text": "Reduce RPM until chatter stops; keep minimum safe flow; call ECMO specialist"
+          },
+          {
+            "id": "kink",
+            "type": "decision",
+            "text": "Kink, clot or cannula displacement visible?"
+          },
+          {
+            "id": "fix",
+            "type": "action",
+            "text": "Relieve kink / secure cannula; check depth marks and imaging",
+            "severity": "high"
+          },
+          {
+            "id": "tamp",
+            "type": "decision",
+            "text": "Echo: tamponade, pneumothorax, collapsed IVC/RA or cannula malposition?"
+          },
+          {
+            "id": "treat_cause",
+            "type": "action",
+            "text": "Treat cause: drain tamponade, chest drain, reposition cannula under echo",
+            "severity": "critical"
+          },
+          {
+            "id": "hypov",
+            "type": "decision",
+            "text": "Hypovolaemia likely (bleeding, diuresis, vasodilation, CRRT removal)?"
+          },
+          {
+            "id": "fluid",
+            "type": "action",
+            "text": "Give 250–500 mL crystalloid, or blood if Hb low; treat bleeding; review CRRT net removal"
+          },
+          {
+            "id": "other",
+            "type": "action",
+            "text": "Consider abdominal compartment syndrome (bladder pressure), high intrathoracic pressure, coughing/agitation (sedate)"
+          },
+          {
+            "id": "end",
+            "type": "end",
+            "text": "Restore flow gradually; document the new RPM:flow baseline"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "reduce"
+          },
+          {
+            "from": "reduce",
+            "to": "kink"
+          },
+          {
+            "from": "kink",
+            "to": "fix",
+            "label": "Yes"
+          },
+          {
+            "from": "kink",
+            "to": "tamp",
+            "label": "No"
+          },
+          {
+            "from": "fix",
+            "to": "end"
+          },
+          {
+            "from": "tamp",
+            "to": "treat_cause",
+            "label": "Yes"
+          },
+          {
+            "from": "tamp",
+            "to": "hypov",
+            "label": "No"
+          },
+          {
+            "from": "treat_cause",
+            "to": "end"
+          },
+          {
+            "from": "hypov",
+            "to": "fluid",
+            "label": "Yes"
+          },
+          {
+            "from": "hypov",
+            "to": "other",
+            "label": "No"
+          },
+          {
+            "from": "fluid",
+            "to": "end"
+          },
+          {
+            "from": "other",
+            "to": "end"
+          }
+        ],
+        "refs": [
+          "elso-vv-2021",
+          "ibcc-ecmo"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "**Pressures in a centrifugal circuit.** Pre-pump (drainage) pressure is negative; the more negative, the greater the suction on the vein (haemolysis, chatter, cavitation). Pre-oxygenator pressure is the highest in the circuit; post-oxygenator pressure reflects return-cannula resistance and patient afterload. The gradient across the oxygenator rises as the membrane clots.",
+        "evidence": "- **ELSO VV 2021** gives ventilator 'rest' ranges (Pplat <25 recommended, ≤30 acceptable; PEEP ≥10; RR 4–30; FiO₂ 0.3–0.5) and notes variable transfusion practice (some target Hb >7 g/dL, others up to 12 g/dL; restrictive practice may be considered).\n- **ELSO Anticoagulation 2021:** heparin first-line; DTIs (bivalirudin, argatroban) for HIT or heparin resistance; no single monitoring test is perfect, so centres should use a consistent protocol combining tests.\n- Daily structured checklists are expert-consensus practice to reduce missed complications.",
+        "controversies": "- Haemoglobin target on VV ECMO (7 g/dL vs higher) — oxygen delivery depends on both Hb and flow.\n- Anti-Xa vs aPTT vs viscoelastic tests (TEG/ROTEM) for monitoring.\n- Low-dose or anticoagulation-free VV ECMO in bleeding patients is increasingly used with modern coated circuits.",
+        "indiaNotes": "- Anti-Xa assays may not be available 24/7 in many Indian labs; agree an aPTT/ACT-based fallback protocol.\n- Plasma free Hb is not routinely available in many hospitals — use LDH, bilirubin and urine-colour trends as surrogates.\n- Oxygenators and circuits are expensive; early recognition of rising ΔP allows a planned (safer) change."
+      },
+      "drugIds": [
+        "unfractionated-heparin",
+        "bivalirudin",
+        "argatroban"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-hour",
+        "pf-ratio",
+        "driving-pressure",
+        "static-compliance",
+        "mean-arterial-pressure"
+      ],
+      "references": [
+        "elso-vv-2021",
+        "elso-va-2021",
+        "elso-anticoag-2021",
+        "ibcc-ecmo",
+        "elso-guidelines-page"
+      ],
+      "quiz": [
+        {
+          "id": "q14-4-1",
+          "stem": "On VV ECMO the pre-oxygenator saturation has risen from 65% to 88% and patient SaO₂ has fallen from 90% to 80% at unchanged flow. The most likely problem is:",
+          "options": [
+            "Oxygenator failure",
+            "Recirculation",
+            "Increased cardiac output",
+            "Haemolysis",
+            "Pneumothorax"
+          ],
+          "answerIndex": 1,
+          "explanation": "Returned oxygenated blood is being drained straight back into the circuit."
+        },
+        {
+          "id": "q14-4-2",
+          "stem": "The pressure gradient across the oxygenator has doubled over 24 h. This suggests:",
+          "options": [
+            "Drainage cannula malposition",
+            "Clot in the oxygenator",
+            "Hypovolaemia",
+            "Air in the circuit",
+            "Low sweep"
+          ],
+          "answerIndex": 1,
+          "explanation": "Rising pre-to-post oxygenator ΔP indicates increasing resistance from thrombus."
+        },
+        {
+          "id": "q14-4-3",
+          "stem": "The recommended VV ECMO 'rest' plateau pressure in ELSO 2021 is:",
+          "options": [
+            "<35 cmH₂O",
+            "<30 cmH₂O only",
+            "<25 cmH₂O",
+            "<15 cmH₂O",
+            "No limit"
+          ],
+          "answerIndex": 2,
+          "explanation": "ELSO recommends Pplat <25 cmH₂O (≤30 acceptable) with PEEP ≥10."
+        },
+        {
+          "id": "q14-4-4",
+          "stem": "Why can fever be absent in an infected ECMO patient?",
+          "options": [
+            "ECMO always causes immunosuppression",
+            "The heat exchanger controls blood temperature",
+            "Heparin lowers temperature",
+            "Sedation always prevents fever",
+            "Oxygenators filter bacteria"
+          ],
+          "answerIndex": 1,
+          "explanation": "The heater/cooler holds blood at its set temperature, masking fever."
+        }
+      ]
+    },
+    {
+      "id": "ecmo-complications",
+      "title": "ECMO complications and emergencies",
+      "summary": "Recognition and first actions for air in the circuit, pump failure, decannulation, bleeding, LV distension, differential hypoxia, haemolysis, thrombosis, limb ischaemia and HIT.",
+      "viewKey": "topic:ecmo-mechanical-circulatory-support/ecmo-complications",
+      "uiHints": {
+        "icon": "triangle-alert",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Call for help and protect the patient",
+            "detail": "Call the ECMO specialist/perfusionist and consultant. VV: switch the ventilator to the pre-agreed emergency settings (e.g. FiO₂ 1.0, PEEP 10–15, VT ~6 mL/kg PBW, RR 20–30). VA: prepare for CPR and vasopressors if flow stops.",
+            "refs": [
+              "elso-vv-2021",
+              "elso-va-2021"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0–2 min",
+            "title": "Air in the circuit",
+            "detail": "Clamp the return line close to the patient (then the drainage line) and stop/minimise the pump; if air may have entered the arterial circulation (VA), head-down left-side position and 100% O₂. De-airing and restart are specialist tasks. Find the source (loose connector, open port, cavitation from very negative drainage pressure).",
+            "refs": [
+              "ibcc-ecmo"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "0–2 min",
+            "title": "Pump or power failure",
+            "detail": "Check power and plug into mains/UPS; if the pump head or console fails, clamp, move the pump head to the hand crank and turn at the previous RPM until a back-up console is connected.",
+            "refs": [
+              "ibcc-ecmo"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "0–2 min",
+            "title": "Accidental decannulation",
+            "detail": "Clamp the circuit, apply firm pressure to the site, emergency ventilator settings (VV) or CPR/vasopressors (VA), activate massive transfusion, call surgeon/ECMO team for recannulation.",
+            "refs": [
+              "ibcc-ecmo"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Minutes",
+            "title": "Bleeding",
+            "detail": "Find the site (cannula, surgical, airway, GI, intracranial). Check platelets, fibrinogen, anti-Xa/aPTT and TEG/ROTEM if available. Reduce or hold heparin (consultant), give platelets (often to >80–100 × 10⁹/L if bleeding) and fibrinogen (>1.5–2 g/L), consider tranexamic acid. Intracranial haemorrhage: stop anticoagulation, neurosurgical opinion.",
+            "refs": [
+              "elso-anticoag-2021"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Hours",
+            "title": "LV distension on VA",
+            "detail": "Signs: pulse pressure <10 mmHg, aortic valve not opening, LV dilatation/smoke on echo, pulmonary oedema. Act: lowest adequate ECMO flow, add dobutamine, avoid high afterload (MAP ~65), consider IABP or Impella venting, or atrial septostomy.",
+            "refs": [
+              "elso-va-2021"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Hours",
+            "title": "Differential (north–south) hypoxia on femoral VA",
+            "detail": "Right radial SpO₂/ABG low while the lower body is well oxygenated. Act: improve native lung (FiO₂, PEEP, secretion clearance), or convert to V-AV (add a return limb to the IJ) or central cannulation.",
+            "refs": [
+              "elso-va-2021"
+            ]
+          },
+          {
+            "n": 8,
+            "time": "Hours",
+            "title": "Haemolysis and thrombosis",
+            "detail": "Haemolysis: rising plasma free Hb/LDH, dark urine — check drainage pressure (too negative), clot in pump head (noise, heat), oxygenator thrombus; change component. Thrombosis: visible clot, rising ΔP, DVT at cannula sites, LV/aortic-root thrombus (VA), limb ischaemia.",
+            "refs": [
+              "elso-anticoag-2021",
+              "ibcc-ecmo"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "tranexamic-acid",
+            "role": "Antifibrinolytic for significant bleeding",
+            "route": "IV",
+            "dose": "1 g over 10 min, may follow with 1 g over 8 h",
+            "notes": "Reduce dose in renal failure; watch the circuit for clot.",
+            "verify": "Use on ECMO is based on observational data; consultant decision.",
+            "refs": [
+              "elso-anticoag-2021"
+            ]
+          },
+          {
+            "drugId": "bivalirudin",
+            "role": "Anticoagulant if HIT is suspected",
+            "route": "IV infusion",
+            "dose": "Start about 0.025–0.05 mg/kg/h; titrate to aPTT 1.5–2.5 × baseline",
+            "doseRange": {
+              "unit": "mg/kg/h",
+              "min": 0.025,
+              "max": 0.2
+            },
+            "dilution": "250 mg in 50 mL NS = 5 mg/mL",
+            "workedExample": "70 kg at 0.05 mg/kg/h = 3.5 mg/h = 0.7 mL/h",
+            "calculatorId": "infusion-rate-weight-hour",
+            "verify": "Reduce in AKI; follow ECMO centre protocol.",
+            "refs": [
+              "elso-anticoag-2021"
+            ]
+          },
+          {
+            "drugId": "dobutamine",
+            "role": "Inotrope to promote LV ejection on VA ECMO",
+            "route": "IV infusion",
+            "dose": "2.5–10 mcg/kg/min",
+            "doseRange": {
+              "unit": "mcg/kg/min",
+              "min": 2.5,
+              "max": 10
+            },
+            "dilution": "250 mg in 50 mL = 5,000 mcg/mL",
+            "workedExample": "70 kg at 5 mcg/kg/min = 4.2 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "elso-va-2021"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "ecmo-complications-table",
+            "title": "ECMO complications: recognise and respond",
+            "columns": [
+              "Complication",
+              "How it presents",
+              "First actions"
+            ],
+            "rows": [
+              [
+                "Cannula-site bleeding",
+                "Ooze/haematoma, falling Hb",
+                "Pressure, local haemostatics, suture review, correct coagulopathy, reduce heparin"
+              ],
+              [
+                "Intracranial haemorrhage",
+                "Pupil change, seizures, GCS fall",
+                "CT; stop anticoagulation; neurosurgery; BP control"
+              ],
+              [
+                "Circuit thrombosis",
+                "Dark deposits, rising ΔP, falling post-oxy PO₂, rising D-dimer",
+                "Plan oxygenator/circuit change; review anticoagulation, antithrombin, HIT"
+              ],
+              [
+                "Haemolysis",
+                "pfHb >50 mg/dL, LDH ↑, red/brown urine, AKI",
+                "Check drainage pressure, pump head, oxygenator; adjust flow/cannula; change component"
+              ],
+              [
+                "Recirculation (VV)",
+                "Pre-oxy sat ↑, patient SaO₂ ↓",
+                "Reposition cannulae (tip distance), adjust flow"
+              ],
+              [
+                "LV distension (VA)",
+                "Pulse pressure <10, aortic valve closed, pulmonary oedema",
+                "Reduce flow, inotrope, vent (IABP/Impella/septostomy)"
+              ],
+              [
+                "Differential hypoxia (VA)",
+                "Low right radial SaO₂",
+                "Improve native lung; V-AV conversion"
+              ],
+              [
+                "Limb ischaemia (femoral VA)",
+                "Cold pale leg, NIRS ↓, CK ↑",
+                "Distal perfusion cannula; vascular surgery; fasciotomy if compartment syndrome"
+              ],
+              [
+                "Infection",
+                "New organ dysfunction, rising inflammatory markers (fever masked)",
+                "Cultures from the patient, source control, PK-guided antibiotics"
+              ],
+              [
+                "HIT",
+                "Platelet fall >50%, new thrombosis",
+                "Stop all heparin (including flushes), start DTI, send PF4 antibodies"
+              ],
+              [
+                "Acquired von Willebrand syndrome",
+                "Mucosal bleeding despite acceptable routine tests",
+                "Consider vWF assays; resolves after decannulation"
+              ],
+              [
+                "AKI",
+                "Oliguria, rising creatinine",
+                "CRRT via the circuit or separately; avoid overload"
+              ]
+            ],
+            "refs": [
+              "elso-vv-2021",
+              "elso-va-2021",
+              "elso-anticoag-2021",
+              "ibcc-ecmo"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Air in the return line: CLAMP NOW — arterial air on VA can cause massive stroke and coronary embolism.",
+            "refs": [
+              "ibcc-ecmo"
+            ]
+          },
+          {
+            "text": "Sudden loss of flow with no power: hand crank immediately — know where it is stored.",
+            "refs": [
+              "ibcc-ecmo"
+            ]
+          },
+          {
+            "text": "New neurological deficit or pupil change: CT head; intracranial haemorrhage is among the most lethal ECMO complications.",
+            "refs": [
+              "elso-anticoag-2021"
+            ]
+          },
+          {
+            "text": "Pink frothy ETT secretions on VA ECMO: LV distension with pulmonary oedema — urgent unloading.",
+            "refs": [
+              "elso-va-2021"
+            ]
+          },
+          {
+            "text": "Platelets falling >50% from day 5–10 of heparin: think HIT; switch to a direct thrombin inhibitor while testing.",
+            "refs": [
+              "elso-anticoag-2021"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Turning up RPM to fix low flow: worsens negative pressure, haemolysis and cavitation without treating the cause.",
+            "refs": [
+              "ibcc-ecmo"
+            ]
+          },
+          {
+            "text": "Taking ABGs from the left radial or a femoral line on femoral VA: these mostly reflect circuit blood; the right radial best represents coronary/cerebral oxygenation.",
+            "refs": [
+              "elso-va-2021"
+            ]
+          },
+          {
+            "text": "Continuing heparin flushes after HIT is suspected: stop every heparin source.",
+            "refs": [
+              "elso-anticoag-2021"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Everyone on the unit should know three things: where the clamps are, where the hand crank is, and each ECMO patient's emergency ventilator settings.",
+            "refs": [
+              "ibcc-ecmo"
+            ]
+          },
+          {
+            "text": "A distal perfusion cannula placed at femoral VA cannulation reduces limb ischaemia; check its flow every shift.",
+            "refs": [
+              "elso-va-2021"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Sudden hypoxaemia on VV ECMO",
+        "description": "Stepwise troubleshooting when patient SaO₂ falls on VV ECMO.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Patient SaO₂ falls on VV ECMO"
+          },
+          {
+            "id": "circuit",
+            "type": "decision",
+            "text": "Flow and sweep as set? Gas line connected and FdO₂ 1.0?"
+          },
+          {
+            "id": "fixgas",
+            "type": "action",
+            "text": "Reconnect gas, check blender/cylinder, restore flow",
+            "severity": "critical"
+          },
+          {
+            "id": "postoxy",
+            "type": "decision",
+            "text": "Post-oxygenator PO₂ low?"
+          },
+          {
+            "id": "oxyfail",
+            "type": "action",
+            "text": "Oxygenator failure: urgent change; emergency vent settings meanwhile",
+            "severity": "critical"
+          },
+          {
+            "id": "recirc",
+            "type": "decision",
+            "text": "Pre-oxygenator saturation high (recirculation)?"
+          },
+          {
+            "id": "reposition",
+            "type": "action",
+            "text": "Reposition cannulae under echo/X-ray; adjust flow"
+          },
+          {
+            "id": "demand",
+            "type": "decision",
+            "text": "High cardiac output / high VO₂ (fever, sepsis, agitation, shivering)?"
+          },
+          {
+            "id": "lower_demand",
+            "type": "action",
+            "text": "Cool, deepen sedation ± paralysis, treat sepsis; consider more flow or higher Hb"
+          },
+          {
+            "id": "native",
+            "type": "action",
+            "text": "Native lung worse: check ETT, pneumothorax, secretions, effusion; raise vent FiO₂/PEEP temporarily"
+          },
+          {
+            "id": "end",
+            "type": "end",
+            "text": "Reassess SaO₂ and lactate; document plan"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "circuit"
+          },
+          {
+            "from": "circuit",
+            "to": "fixgas",
+            "label": "No"
+          },
+          {
+            "from": "circuit",
+            "to": "postoxy",
+            "label": "Yes"
+          },
+          {
+            "from": "fixgas",
+            "to": "end"
+          },
+          {
+            "from": "postoxy",
+            "to": "oxyfail",
+            "label": "Yes"
+          },
+          {
+            "from": "postoxy",
+            "to": "recirc",
+            "label": "No"
+          },
+          {
+            "from": "oxyfail",
+            "to": "end"
+          },
+          {
+            "from": "recirc",
+            "to": "reposition",
+            "label": "Yes"
+          },
+          {
+            "from": "recirc",
+            "to": "demand",
+            "label": "No"
+          },
+          {
+            "from": "reposition",
+            "to": "end"
+          },
+          {
+            "from": "demand",
+            "to": "lower_demand",
+            "label": "Yes"
+          },
+          {
+            "from": "demand",
+            "to": "native",
+            "label": "No"
+          },
+          {
+            "from": "lower_demand",
+            "to": "end"
+          },
+          {
+            "from": "native",
+            "to": "end"
+          }
+        ],
+        "refs": [
+          "elso-vv-2021",
+          "ibcc-ecmo"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Blood contact with the circuit triggers contact activation, inflammation and consumption of platelets and fibrinogen; high shear degrades large vWF multimers (acquired von Willebrand syndrome). At the same time, stasis zones and foreign surfaces promote thrombosis — ECMO patients bleed and clot simultaneously.",
+        "evidence": "- Bleeding and thrombosis are the commonest ECMO complications in registry reports; intracranial haemorrhage carries very high mortality.\n- **ECLS-SHOCK** and **DanGer Shock** both showed more bleeding and vascular complications with device therapy, underlining careful selection and vascular technique (ultrasound-guided access, distal perfusion cannula).\n- **ELSO Anticoagulation 2021** supports direct thrombin inhibitors when heparin is contraindicated (HIT) or ineffective.",
+        "controversies": "- Routine vs on-demand LV venting on VA ECMO.\n- Prophylactic vs reactive distal perfusion cannulation.\n- Anticoagulation-free periods for bleeding on VV ECMO — increasingly accepted with modern coated circuits.",
+        "indiaNotes": "- Run regular ECMO emergency drills (air, pump failure, decannulation); staff turnover is high in many Indian ICUs.\n- Test UPS/back-up power and generator change-over; power fluctuations are common in some regions.\n- Keep a spare oxygenator, pump head and hand crank in the unit."
+      },
+      "drugIds": [
+        "tranexamic-acid",
+        "bivalirudin",
+        "argatroban",
+        "dobutamine",
+        "unfractionated-heparin"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-min",
+        "infusion-rate-weight-hour",
+        "predicted-body-weight"
+      ],
+      "references": [
+        "elso-vv-2021",
+        "elso-va-2021",
+        "elso-anticoag-2021",
+        "ibcc-ecmo",
+        "ecls-shock-2023",
+        "danger-shock-2024"
+      ],
+      "quiz": [
+        {
+          "id": "q14-5-1",
+          "stem": "You see a column of air in the return line of a VA ECMO circuit. The first action is:",
+          "options": [
+            "Increase RPM",
+            "Clamp the return line close to the patient and call for help",
+            "Give adrenaline",
+            "Increase sweep",
+            "Disconnect the oxygenator"
+          ],
+          "answerIndex": 1,
+          "explanation": "Clamp to stop arterial air embolism, then de-air under specialist control."
+        },
+        {
+          "id": "q14-5-2",
+          "stem": "On femoral VA ECMO, pulse pressure is 4 mmHg, the aortic valve stays closed and pink froth appears in the ETT. Which response is NOT appropriate?",
+          "options": [
+            "Add dobutamine",
+            "Reduce ECMO flow to the lowest adequate level",
+            "Increase noradrenaline to raise MAP to 95 mmHg",
+            "Consider IABP or Impella venting",
+            "Consider atrial septostomy"
+          ],
+          "answerIndex": 2,
+          "explanation": "Raising afterload worsens LV distension; aim for MAP around 65 and unload the LV."
+        },
+        {
+          "id": "q14-5-3",
+          "stem": "Platelets fall from 220 to 80 × 10⁹/L on day 7 of heparin on ECMO with a new cannula-site DVT. The next step is:",
+          "options": [
+            "Platelet transfusion and continue heparin",
+            "Stop all heparin, start bivalirudin or argatroban, send PF4 antibodies",
+            "Increase heparin",
+            "Change the oxygenator only",
+            "Give vitamin K"
+          ],
+          "answerIndex": 1,
+          "explanation": "Intermediate–high 4Ts probability of HIT: switch to a DTI pending tests."
+        },
+        {
+          "id": "q14-5-4",
+          "stem": "The pump console loses power and does not restart. What do you do immediately?",
+          "options": [
+            "Start CPR on a VV patient",
+            "Clamp and hand-crank the pump head at the previous RPM",
+            "Remove the cannulae",
+            "Turn off sweep",
+            "Wait for biomedical engineering"
+          ],
+          "answerIndex": 1,
+          "explanation": "Hand-cranking maintains flow until a back-up console is connected."
+        }
+      ]
+    },
+    {
+      "id": "ecmo-weaning-decannulation",
+      "title": "Weaning and decannulation",
+      "summary": "Judging readiness and running trials off VV and VA ECMO, echo criteria for VA weaning, decannulation, and care afterwards.",
+      "viewKey": "topic:ecmo-mechanical-circulatory-support/ecmo-weaning-decannulation",
+      "uiHints": {
+        "icon": "trending-down",
+        "accent": "standard"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Daily",
+            "title": "Screen readiness (VV)",
+            "detail": "Improving CXR and compliance; FiO₂ ≤0.6, PEEP ≤10, PaO₂ ≥70 mmHg on the ventilator; ventilation achievable with VT ≤6 mL/kg PBW, Pplat ≤28, RR ≤28 (ELSO criteria).",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Trial",
+            "title": "VV wean: FdO₂, then sweep",
+            "detail": "Reduce FdO₂ stepwise from 1.0 to 0.21 (about 20% steps) keeping SpO₂ >92% or PaO₂ ≥70; then reduce sweep by 0.5–1 L/min steps to 1 L/min; then sweep OFF (gas capped) for a trial of several hours, checking ABG, work of breathing and haemodynamics.",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Daily",
+            "title": "Screen readiness (VA)",
+            "detail": "Cause reversed/recovering, MAP ≥65 with pulsatility on reduced flow, low inotrope/vasopressor needs, normal lactate, adequate oxygenation on the ventilator (FiO₂ ≤0.5).",
+            "refs": [
+              "elso-va-2021"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Trial",
+            "title": "VA wean: flow reduction with echo",
+            "detail": "Reduce flow stepwise (e.g. 0.5–1 L/min steps) to ~1–1.5 L/min with adequate anticoagulation. At minimum flow, echo predictors of success in one cohort: LVEF >20–25%, aortic VTI ≥10 cm, lateral mitral annulus peak systolic velocity (TDSa) ≥6 cm/s; plus stable MAP and no RV dilatation.",
+            "refs": [
+              "elso-va-2021",
+              "aissaoui-2011"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Decide",
+            "title": "Decannulate",
+            "detail": "Plan with the team: stop heparin per protocol beforehand; VV cannulae are usually removed percutaneously with a purse-string/figure-of-8 suture and pressure; the VA arterial cannula usually needs surgical repair or a closure device. Have blood available.",
+            "refs": [
+              "elso-vv-2021",
+              "elso-va-2021"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "After",
+            "title": "Post-decannulation care",
+            "detail": "Duplex for cannula-associated DVT (common), limb checks after arterial decannulation, restart thromboprophylaxis when safe, watch for re-deterioration, start rehabilitation and family follow-up.",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "levosimendan",
+            "role": "Adjunct to facilitate VA weaning (selected)",
+            "route": "IV infusion",
+            "dose": "0.05–0.2 mcg/kg/min for 24 h, no bolus",
+            "doseRange": {
+              "unit": "mcg/kg/min",
+              "min": 0.05,
+              "max": 0.2
+            },
+            "dilution": "12.5 mg in 500 mL D5W = 25 mcg/mL",
+            "workedExample": "70 kg at 0.1 mcg/kg/min = 16.8 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "verify": "Evidence for ECMO weaning is observational/small RCTs; consultant decision.",
+            "refs": [
+              "esc-hf-2021"
+            ]
+          },
+          {
+            "drugId": "milrinone",
+            "role": "Inodilator for RV/LV support during weaning",
+            "route": "IV infusion",
+            "dose": "0.125–0.5 mcg/kg/min (no load)",
+            "doseRange": {
+              "unit": "mcg/kg/min",
+              "min": 0.125,
+              "max": 0.5
+            },
+            "dilution": "10 mg in 50 mL = 200 mcg/mL",
+            "workedExample": "70 kg at 0.375 mcg/kg/min = 7.9 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "esc-hf-2021"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "vv-wean-criteria",
+            "title": "Conditions for a VV weaning trial (ELSO 2021)",
+            "columns": [
+              "Domain",
+              "Intubated",
+              "Non-intubated"
+            ],
+            "rows": [
+              [
+                "Oxygenation",
+                "FiO₂ ≤60%, PEEP ≤10, PaO₂ ≥70 mmHg",
+                "PaO₂ ≥70 on ≤6 L/min nasal cannula/face mask, or HFNC ≤40 L/min with FiO₂ ≤0.3"
+              ],
+              [
+                "Ventilation",
+                "VT ≤6 mL/kg PBW, Pplat ≤28, RR ≤28; acceptable pH/PaCO₂ without excessive work of breathing",
+                "Acceptable pH without excessive work of breathing"
+              ],
+              [
+                "Radiology",
+                "Improving chest X-ray",
+                "Improving chest X-ray"
+              ]
+            ],
+            "refs": [
+              "elso-vv-2021"
+            ]
+          },
+          {
+            "id": "va-wean-echo",
+            "title": "Echo predictors of successful VA weaning at minimal flow",
+            "columns": [
+              "Parameter",
+              "Favourable value"
+            ],
+            "rows": [
+              [
+                "LVEF",
+                ">20–25%"
+              ],
+              [
+                "Aortic VTI",
+                "≥10 cm"
+              ],
+              [
+                "Lateral mitral annulus TDSa",
+                "≥6 cm/s"
+              ],
+              [
+                "RV",
+                "Not dilated; function preserved"
+              ],
+              [
+                "Haemodynamics",
+                "MAP ≥65, pulsatile, stable lactate"
+              ]
+            ],
+            "caption": "From Aissaoui et al. 2011 (single-centre cohort); combine with clinical judgement.",
+            "refs": [
+              "aissaoui-2011",
+              "elso-va-2021"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "SpO₂ falls or respiratory rate rises above ~35 with sweep off: trial failed — resume support; do not 'push through'.",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          },
+          {
+            "text": "RV dilatation or MAP fall during VA flow reduction: not ready; restore flow and reassess in 24 h.",
+            "refs": [
+              "elso-va-2021"
+            ]
+          },
+          {
+            "text": "At very low VA flow (<1–1.5 L/min), circuit thrombosis risk rises: keep trials short and anticoagulated.",
+            "refs": [
+              "elso-anticoag-2021"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Testing VV readiness by cutting blood flow to very low levels: reducing gas (FdO₂, sweep) with preserved blood flow avoids low-flow circuit thrombosis.",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          },
+          {
+            "text": "Forgetting cannula-associated DVT after decannulation: screen with duplex and anticoagulate if present.",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "A sweep-off trial tests both oxygenation and CO₂ clearance by the native lungs; many centres observe for several hours before decannulation.",
+            "refs": [
+              "elso-vv-2021"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "VV ECMO weaning trial",
+        "description": "ELSO-based gas-weaning pathway with preserved blood flow.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Daily screen on VV ECMO"
+          },
+          {
+            "id": "ready",
+            "type": "decision",
+            "text": "Meets ELSO trial conditions (FiO₂ ≤0.6, PEEP ≤10, PaO₂ ≥70, VT ≤6 mL/kg, Pplat ≤28, RR ≤28, improving CXR)?"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Continue support; rescreen tomorrow"
+          },
+          {
+            "id": "fdo2",
+            "type": "action",
+            "text": "Wean FdO₂ 1.0 → 0.21 in ~20% steps (SpO₂ >92% / PaO₂ ≥70)"
+          },
+          {
+            "id": "sweep",
+            "type": "action",
+            "text": "Wean sweep in 0.5–1 L/min steps to 1 L/min; ABG each step"
+          },
+          {
+            "id": "off",
+            "type": "action",
+            "text": "Sweep off (gas capped) for several hours: ABG, RR, work of breathing, haemodynamics"
+          },
+          {
+            "id": "pass",
+            "type": "decision",
+            "text": "Stable gas exchange and work of breathing?"
+          },
+          {
+            "id": "fail",
+            "type": "action",
+            "text": "Resume previous sweep/FdO₂; identify the reason (fluid, secretions, weakness)"
+          },
+          {
+            "id": "decan",
+            "type": "end",
+            "text": "Plan decannulation with the team; stop heparin per protocol",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "ready"
+          },
+          {
+            "from": "ready",
+            "to": "cont",
+            "label": "No"
+          },
+          {
+            "from": "ready",
+            "to": "fdo2",
+            "label": "Yes"
+          },
+          {
+            "from": "fdo2",
+            "to": "sweep"
+          },
+          {
+            "from": "sweep",
+            "to": "off"
+          },
+          {
+            "from": "off",
+            "to": "pass"
+          },
+          {
+            "from": "pass",
+            "to": "decan",
+            "label": "Yes"
+          },
+          {
+            "from": "pass",
+            "to": "fail",
+            "label": "No"
+          },
+          {
+            "from": "fail",
+            "to": "cont"
+          }
+        ],
+        "refs": [
+          "elso-vv-2021"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "VV weaning tests whether the native lungs can oxygenate and clear CO₂ at safe ventilator settings. VA weaning tests whether the native heart can generate adequate output against normal afterload — reducing flow increases preload and lowers afterload, unmasking true LV/RV function.",
+        "evidence": "- **ELSO VV 2021** provides explicit weaning-trial conditions and a gas-flow weaning sequence with preserved blood flow.\n- **VA weaning:** Aissaoui et al. (2011) found that at minimal flow, aortic VTI ≥10 cm, LVEF >20–25% and TDSa ≥6 cm/s predicted successful weaning.\n- Levosimendan has been associated with better VA weaning success in observational cohorts; randomised data are limited.",
+        "controversies": "- Duration of sweep-off trials (2 h vs 24 h).\n- Decannulation while intubated vs after extubation on ECMO.\n- Pump-controlled retrograde trial off (PCRTO) for VA weaning — limited evidence.",
+        "indiaNotes": "- Financial pressure to decannulate early is real for many families; still follow objective criteria — failed early decannulation followed by recannulation is costlier and more dangerous.\n- Arrange vascular surgical support for VA arterial decannulation in advance."
+      },
+      "drugIds": [
+        "levosimendan",
+        "milrinone",
+        "unfractionated-heparin"
+      ],
+      "calculatorIds": [
+        "predicted-body-weight",
+        "tidal-volume-pbw",
+        "pf-ratio",
+        "infusion-rate-weight-min"
+      ],
+      "references": [
+        "elso-vv-2021",
+        "elso-va-2021",
+        "aissaoui-2011",
+        "esc-hf-2021",
+        "elso-anticoag-2021"
+      ],
+      "quiz": [
+        {
+          "id": "q14-6-1",
+          "stem": "In the ELSO gas-weaning approach for VV ECMO, which parameter is reduced first?",
+          "options": [
+            "Blood flow",
+            "FdO₂ (oxygen fraction delivered to the oxygenator)",
+            "PEEP",
+            "Heparin",
+            "RPM"
+          ],
+          "answerIndex": 1,
+          "explanation": "Stepwise FdO₂ reduction from 1.0 to 0.21, then sweep reduction, with blood flow preserved."
+        },
+        {
+          "id": "q14-6-2",
+          "stem": "Which echo finding at minimal VA flow predicts successful weaning?",
+          "options": [
+            "Aortic VTI 6 cm",
+            "LVEF 10%",
+            "Aortic VTI ≥10 cm and TDSa ≥6 cm/s",
+            "Dilated RV with septal flattening",
+            "Aortic valve not opening"
+          ],
+          "answerIndex": 2,
+          "explanation": "Aissaoui criteria: VTI ≥10 cm, LVEF >20–25%, TDSa ≥6 cm/s."
+        },
+        {
+          "id": "q14-6-3",
+          "stem": "A common complication to screen for after VV decannulation is:",
+          "options": [
+            "Aortic dissection",
+            "Cannula-associated deep vein thrombosis",
+            "Pericarditis",
+            "Hypercalcaemia",
+            "Splenic rupture"
+          ],
+          "answerIndex": 1,
+          "explanation": "Cannula-associated DVT is common; duplex screening is advised."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "unfractionated-heparin",
+      "name": "Unfractionated heparin (UFH)",
+      "class": "Indirect thrombin/Xa inhibitor (via antithrombin)",
+      "indications": "Standard circuit anticoagulation on VV/VA ECMO; IABP and Impella systemic anticoagulation",
+      "adultDose": "Cannulation bolus 50–100 units/kg IV (many centres use about 5,000 units). Infusion typically started at 7.5–20 units/kg/h once bleeding is controlled, titrated to anti-Xa 0.3–0.7 units/mL or aPTT about 1.5–2.5 × baseline (unit protocol). Low-intensity targets (anti-Xa 0.2–0.3 units/mL) or temporary holds are used on VV ECMO with active bleeding.",
+      "preparationIndia": "5,000 units/mL vials (1 mL and 5 mL). Common infusion: 25,000 units in 50 mL NS = 500 units/mL.",
+      "renalHepatic": "No renal adjustment. Antithrombin deficiency causes heparin resistance (high dose needed, low anti-Xa).",
+      "cautions": "HIT (check platelets daily; 4Ts if fall >50%). Bleeding. aPTT is unreliable on ECMO (confounded by coagulopathy, low fibrinogen, inflammation); prefer anti-Xa where available.",
+      "monitoring": "anti-Xa or aPTT 6-hourly until stable then 12–24-hourly; ACT at bedside only as a crude check; platelets, fibrinogen, antithrombin if resistance.",
+      "verify": "Target ranges and starting infusion rates differ between ECMO centres; align to the unit's written protocol.",
+      "refs": [
+        "elso-anticoag-2021"
+      ]
+    },
+    {
+      "id": "bivalirudin",
+      "name": "Bivalirudin",
+      "class": "Direct thrombin inhibitor (IV)",
+      "indications": "Anticoagulation on ECMO when HIT is suspected/confirmed or heparin resistance",
+      "adultDose": "No bolus usually; start about 0.025–0.05 mg/kg/h and titrate to aPTT 1.5–2.5 × baseline (reported ranges up to ~0.2 mg/kg/h; reduce in renal failure and per protocol on CRRT).",
+      "preparationIndia": "250 mg lyophilised vial; e.g. 250 mg in 50 mL NS = 5 mg/mL.",
+      "renalHepatic": "Partly renally cleared: reduce dose substantially in AKI.",
+      "cautions": "No reversal agent. Stasis areas of the circuit (and stagnant blood in the LV on VA) can clot because the drug is cleaved locally.",
+      "monitoring": "aPTT (or dilute thrombin time where available) 4–6-hourly initially.",
+      "verify": "Dosing ranges come from observational ECMO data and vary widely; use only with an ECMO-centre protocol.",
+      "refs": [
+        "elso-anticoag-2021"
+      ]
+    },
+    {
+      "id": "argatroban",
+      "name": "Argatroban",
+      "class": "Direct thrombin inhibitor (IV)",
+      "indications": "Alternative anticoagulant for HIT on ECMO",
+      "adultDose": "Critically ill/ECMO: start low, about 0.2–0.5 mcg/kg/min (standard HIT dose 2 mcg/kg/min is often too high in critical illness and hepatic dysfunction); titrate to aPTT 1.5–3 × baseline.",
+      "preparationIndia": "Limited availability and costly in India; check pharmacy.",
+      "renalHepatic": "Hepatic clearance: markedly reduce in liver dysfunction or congestion.",
+      "cautions": "Raises INR (confounds warfarin transition).",
+      "monitoring": "aPTT 2–4 hours after each change.",
+      "verify": "Low-dose ECMO starting rates are from case series; confirm with haematology.",
+      "refs": [
+        "elso-anticoag-2021"
+      ]
+    },
+    {
+      "id": "dobutamine",
+      "name": "Dobutamine",
+      "class": "Beta-1 agonist inotrope",
+      "indications": "VA ECMO: maintain LV ejection/aortic valve opening and prevent LV distension; low-output states during weaning trials",
+      "adultDose": "2.5–10 mcg/kg/min IV infusion (up to 20 mcg/kg/min).",
+      "preparationIndia": "250 mg/20 mL ampoule; 250 mg in 50 mL = 5,000 mcg/mL.",
+      "cautions": "Tachyarrhythmias, myocardial oxygen demand, hypotension from beta-2 vasodilation.",
+      "monitoring": "Heart rate and rhythm, arterial pulse pressure, echo LV ejection.",
+      "refs": [
+        "elso-va-2021",
+        "esc-hf-2021"
+      ]
+    },
+    {
+      "id": "milrinone",
+      "name": "Milrinone",
+      "class": "Phosphodiesterase-3 inhibitor (inodilator)",
+      "indications": "RV support, LV support on VA ECMO, weaning",
+      "adultDose": "0.125–0.5 mcg/kg/min IV infusion; loading dose usually omitted in shock (hypotension).",
+      "preparationIndia": "10 mg/10 mL ampoule; 10 mg in 50 mL = 200 mcg/mL.",
+      "renalHepatic": "Renally cleared: reduce to 0.125–0.25 mcg/kg/min in AKI.",
+      "cautions": "Hypotension, arrhythmias, long half-life (longer in AKI).",
+      "monitoring": "MAP, arrhythmia, renal function.",
+      "refs": [
+        "esc-hf-2021"
+      ]
+    },
+    {
+      "id": "levosimendan",
+      "name": "Levosimendan",
+      "class": "Calcium sensitiser / K-ATP opener (inodilator)",
+      "indications": "Facilitating VA ECMO weaning (observational data); low-output states",
+      "adultDose": "0.05–0.2 mcg/kg/min IV for 24 h, usually without bolus in hypotensive patients.",
+      "preparationIndia": "12.5 mg/5 mL vial; 12.5 mg in 500 mL D5W = 25 mcg/mL.",
+      "renalHepatic": "Active metabolite persists about a week; avoid in severe renal/hepatic impairment.",
+      "cautions": "Hypotension (vasodilation), hypokalaemia, AF.",
+      "monitoring": "MAP, K+, rhythm.",
+      "verify": "Use for ECMO weaning rests on observational and small randomised data; consultant decision.",
+      "refs": [
+        "esc-hf-2021"
+      ]
+    },
+    {
+      "id": "tranexamic-acid",
+      "name": "Tranexamic acid",
+      "class": "Antifibrinolytic",
+      "indications": "Significant bleeding on ECMO/MCS (cannula site, mucosal, post-cardiotomy)",
+      "adultDose": "1 g IV over 10 min, may follow with 1 g over 8 h; reduce in renal impairment.",
+      "preparationIndia": "500 mg/5 mL ampoules widely available.",
+      "renalHepatic": "Reduce dose in renal impairment (seizure risk).",
+      "cautions": "Theoretical circuit/oxygenator thrombosis; seizures at high doses.",
+      "monitoring": "Circuit inspection for clot, oxygenator pressure gradient.",
+      "verify": "ECMO-specific evidence is observational; consultant decision.",
+      "refs": [
+        "elso-anticoag-2021"
+      ]
+    },
+    {
+      "id": "noradrenaline",
+      "name": "Noradrenaline (norepinephrine)",
+      "class": "Alpha-1 > beta-1 agonist vasopressor",
+      "indications": "MAP support on ECMO (usual MAP target 65–80 mmHg on VA ECMO; avoid excess afterload)",
+      "adultDose": "0.05–0.5 mcg/kg/min IV via central line; titrate to MAP.",
+      "preparationIndia": "2 mg/2 mL ampoules (check whether the label states base or bitartrate). Common: 4 mg in 50 mL = 80 mcg/mL; 8 mg in 50 mL = 160 mcg/mL.",
+      "cautions": "On peripheral VA ECMO excess vasopressor raises LV afterload and can stop aortic valve opening.",
+      "monitoring": "Arterial line, pulse pressure, echo, limb perfusion.",
+      "refs": [
+        "elso-va-2021"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "elso-vv-2021",
+      "citation": "Tonna JE, Abrams D, Brodie D, et al. Management of Adult Patients Supported with Venovenous Extracorporeal Membrane Oxygenation (VV ECMO): Guideline from the Extracorporeal Life Support Organization (ELSO). ASAIO J. 2021;67(6):601-610.",
+      "url": "https://doi.org/10.1097/MAT.0000000000001432",
+      "year": 2021,
+      "doi": "10.1097/MAT.0000000000001432",
+      "type": "guideline"
+    },
+    {
+      "id": "elso-va-2021",
+      "citation": "Lorusso R, Shekar K, MacLaren G, et al. ELSO Interim Guidelines for Venoarterial Extracorporeal Membrane Oxygenation in Adult Cardiac Patients. ASAIO J. 2021;67(8):827-844.",
+      "url": "https://doi.org/10.1097/MAT.0000000000001510",
+      "year": 2021,
+      "doi": "10.1097/MAT.0000000000001510",
+      "type": "guideline"
+    },
+    {
+      "id": "elso-anticoag-2021",
+      "citation": "McMichael ABV, Ryerson LM, Ratano D, et al. 2021 ELSO Adult and Pediatric Anticoagulation Guidelines. ASAIO J. 2022;68(3):303-310.",
+      "url": "https://doi.org/10.1097/MAT.0000000000001652",
+      "year": 2022,
+      "doi": "10.1097/MAT.0000000000001652",
+      "type": "guideline"
+    },
+    {
+      "id": "elso-ecpr-2021",
+      "citation": "Richardson ASC, Tonna JE, Nanjayya V, et al. Extracorporeal Cardiopulmonary Resuscitation in Adults. Interim Guideline Consensus Statement From the Extracorporeal Life Support Organization. ASAIO J. 2021;67(3):221-228.",
+      "url": "https://doi.org/10.1097/MAT.0000000000001344",
+      "year": 2021,
+      "doi": "10.1097/MAT.0000000000001344",
+      "type": "guideline"
+    },
+    {
+      "id": "elso-transport-2022",
+      "citation": "Labib A, August E, Agerstrand C, et al. Extracorporeal Life Support Organization Guideline for Transport and Retrieval of Adult and Pediatric Patients with ECMO Support. ASAIO J. 2022;68(4):447-455.",
+      "url": "https://doi.org/10.1097/MAT.0000000000001653",
+      "year": 2022,
+      "doi": "10.1097/MAT.0000000000001653",
+      "type": "guideline"
+    },
+    {
+      "id": "elso-guidelines-page",
+      "citation": "Extracorporeal Life Support Organization. ELSO ECMO Guidelines (index of current guidelines).",
+      "url": "https://www.elso.org/ecmo-resources/elso-ecmo-guidelines.aspx",
+      "year": 2025,
+      "type": "web"
+    },
+    {
+      "id": "combes-ecmo-programs-2014",
+      "citation": "Combes A, Brodie D, Bartlett R, et al. Position Paper for the Organization of Extracorporeal Membrane Oxygenation Programs for Acute Respiratory Failure in Adult Patients. Am J Respir Crit Care Med. 2014;190(5):488-496.",
+      "url": "https://doi.org/10.1164/rccm.201404-0630CP",
+      "year": 2014,
+      "doi": "10.1164/rccm.201404-0630CP",
+      "type": "consensus"
+    },
+    {
+      "id": "eolia-2018",
+      "citation": "Combes A, Hajage D, Capellier G, et al. Extracorporeal Membrane Oxygenation for Severe Acute Respiratory Distress Syndrome (EOLIA). N Engl J Med. 2018;378(21):1965-1975.",
+      "url": "https://doi.org/10.1056/NEJMoa1800385",
+      "year": 2018,
+      "doi": "10.1056/NEJMoa1800385",
+      "type": "trial"
+    },
+    {
+      "id": "cesar-2009",
+      "citation": "Peek GJ, Mugford M, Tiruvoipati R, et al. Efficacy and economic assessment of conventional ventilatory support versus extracorporeal membrane oxygenation for severe adult respiratory failure (CESAR). Lancet. 2009;374(9698):1351-1363.",
+      "url": "https://doi.org/10.1016/S0140-6736(09)61069-2",
+      "year": 2009,
+      "doi": "10.1016/S0140-6736(09)61069-2",
+      "type": "trial"
+    },
+    {
+      "id": "murray-1988",
+      "citation": "Murray JF, Matthay MA, Luce JM, Flick MR. An expanded definition of the adult respiratory distress syndrome. Am Rev Respir Dis. 1988;138(3):720-723.",
+      "url": "https://doi.org/10.1164/ajrccm/138.3.720",
+      "year": 1988,
+      "doi": "10.1164/ajrccm/138.3.720",
+      "type": "review"
+    },
+    {
+      "id": "resp-score-2014",
+      "citation": "Schmidt M, Bailey M, Sheldrake J, et al. Predicting survival after extracorporeal membrane oxygenation for severe acute respiratory failure. The Respiratory ECMO Survival Prediction (RESP) score. Am J Respir Crit Care Med. 2014;189(11):1374-1382.",
+      "url": "https://doi.org/10.1164/rccm.201311-2023OC",
+      "year": 2014,
+      "doi": "10.1164/rccm.201311-2023OC",
+      "type": "trial"
+    },
+    {
+      "id": "save-score-2015",
+      "citation": "Schmidt M, Burrell A, Roberts L, et al. Predicting survival after ECMO for refractory cardiogenic shock: the survival after veno-arterial-ECMO (SAVE)-score. Eur Heart J. 2015;36(33):2246-2256.",
+      "url": "https://doi.org/10.1093/eurheartj/ehv194",
+      "year": 2015,
+      "doi": "10.1093/eurheartj/ehv194",
+      "type": "trial"
+    },
+    {
+      "id": "ecls-shock-2023",
+      "citation": "Thiele H, Zeymer U, Akin I, et al. Extracorporeal Life Support in Infarct-Related Cardiogenic Shock (ECLS-SHOCK). N Engl J Med. 2023;389(14):1286-1297.",
+      "url": "https://doi.org/10.1056/NEJMoa2307227",
+      "year": 2023,
+      "doi": "10.1056/NEJMoa2307227",
+      "type": "trial"
+    },
+    {
+      "id": "ecmo-cs-2023",
+      "citation": "Ostadal P, Rokyta R, Karasek J, et al. Extracorporeal Membrane Oxygenation in the Therapy of Cardiogenic Shock: Results of the ECMO-CS Randomized Clinical Trial. Circulation. 2023;147(6):454-464.",
+      "url": "https://doi.org/10.1161/CIRCULATIONAHA.122.062949",
+      "year": 2023,
+      "doi": "10.1161/CIRCULATIONAHA.122.062949",
+      "type": "trial"
+    },
+    {
+      "id": "danger-shock-2024",
+      "citation": "Møller JE, Engstrøm T, Jensen LO, et al. Microaxial Flow Pump or Standard Care in Infarct-Related Cardiogenic Shock (DanGer Shock). N Engl J Med. 2024;390(15):1382-1393.",
+      "url": "https://doi.org/10.1056/NEJMoa2312572",
+      "year": 2024,
+      "doi": "10.1056/NEJMoa2312572",
+      "type": "trial"
+    },
+    {
+      "id": "iabp-shock-ii-2012",
+      "citation": "Thiele H, Zeymer U, Neumann FJ, et al. Intraaortic Balloon Support for Myocardial Infarction with Cardiogenic Shock (IABP-SHOCK II). N Engl J Med. 2012;367(14):1287-1296.",
+      "url": "https://doi.org/10.1056/NEJMoa1208410",
+      "year": 2012,
+      "doi": "10.1056/NEJMoa1208410",
+      "type": "trial"
+    },
+    {
+      "id": "scai-shock-2022",
+      "citation": "Naidu SS, Baran DA, Jentzer JC, et al. SCAI SHOCK Stage Classification Expert Consensus Update: A Review and Incorporation of Validation Studies. J Am Coll Cardiol. 2022;79(9):933-946.",
+      "url": "https://doi.org/10.1016/j.jacc.2022.01.018",
+      "year": 2022,
+      "doi": "10.1016/j.jacc.2022.01.018",
+      "type": "consensus"
+    },
+    {
+      "id": "esc-hf-2021",
+      "citation": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726.",
+      "url": "https://doi.org/10.1093/eurheartj/ehab368",
+      "year": 2021,
+      "doi": "10.1093/eurheartj/ehab368",
+      "type": "guideline"
+    },
+    {
+      "id": "esc-acs-2023",
+      "citation": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826.",
+      "url": "https://doi.org/10.1093/eurheartj/ehad191",
+      "year": 2023,
+      "doi": "10.1093/eurheartj/ehad191",
+      "type": "guideline"
+    },
+    {
+      "id": "arrest-2020",
+      "citation": "Yannopoulos D, Bartos J, Raveendran G, et al. Advanced reperfusion strategies for patients with out-of-hospital cardiac arrest and refractory ventricular fibrillation (ARREST): a phase 2, single centre, open-label, randomised controlled trial. Lancet. 2020;396(10265):1807-1816.",
+      "url": "https://doi.org/10.1016/S0140-6736(20)32338-2",
+      "year": 2020,
+      "doi": "10.1016/S0140-6736(20)32338-2",
+      "type": "trial"
+    },
+    {
+      "id": "prague-ohca-2022",
+      "citation": "Belohlavek J, Smalcova J, Rob D, et al. Effect of Intra-arrest Transport, Extracorporeal Cardiopulmonary Resuscitation, and Immediate Invasive Assessment and Treatment on Functional Neurologic Outcome in Refractory Out-of-Hospital Cardiac Arrest. JAMA. 2022;327(8):737-747.",
+      "url": "https://doi.org/10.1001/jama.2022.1025",
+      "year": 2022,
+      "doi": "10.1001/jama.2022.1025",
+      "type": "trial"
+    },
+    {
+      "id": "inception-2023",
+      "citation": "Suverein MM, Delnoij TSR, Lorusso R, et al. Early Extracorporeal CPR for Refractory Out-of-Hospital Cardiac Arrest (INCEPTION). N Engl J Med. 2023;388(4):299-309.",
+      "url": "https://doi.org/10.1056/NEJMoa2204511",
+      "year": 2023,
+      "doi": "10.1056/NEJMoa2204511",
+      "type": "trial"
+    },
+    {
+      "id": "aha-als-2025",
+      "citation": "Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Adult Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(suppl 2):S538-S577.",
+      "url": "https://doi.org/10.1161/CIR.0000000000001376",
+      "year": 2025,
+      "doi": "10.1161/CIR.0000000000001376",
+      "type": "guideline"
+    },
+    {
+      "id": "aissaoui-2011",
+      "citation": "Aissaoui N, Luyt CE, Leprince P, et al. Predictors of successful extracorporeal membrane oxygenation (ECMO) weaning after assistance for refractory cardiogenic shock. Intensive Care Med. 2011;37(11):1738-1745.",
+      "url": "https://doi.org/10.1007/s00134-011-2358-2",
+      "year": 2011,
+      "doi": "10.1007/s00134-011-2358-2",
+      "type": "trial"
+    },
+    {
+      "id": "ibcc-ecmo",
+      "citation": "Farkas J. ECMO. Internet Book of Critical Care (EMCrit).",
+      "url": "https://emcrit.org/ibcc/ecmo/",
+      "year": 2024,
+      "type": "web"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Heparin targets (anti-Xa 0.3–0.7 units/mL; aPTT 1.5–2.5×) and starting infusion 7.5–20 units/kg/h",
+      "reason": "ECMO centres use different protocols; align to the local ECMO programme."
+    },
+    {
+      "item": "Bivalirudin and argatroban ECMO dosing",
+      "reason": "Based on observational ECMO data with wide variation; needs haematology/ECMO-centre protocol."
+    },
+    {
+      "item": "IABP balloon sizing by height and Impella CP inlet depth (~3.5 cm below the aortic valve)",
+      "reason": "Manufacturer charts differ; check the device instructions used locally."
+    },
+    {
+      "item": "Drainage pressure threshold (about −100 mmHg) and 'very high' post-oxygenator PO₂ rule of thumb",
+      "reason": "Expert-practice values from ECMO teaching resources, not hard guideline cut-offs."
+    },
+    {
+      "item": "RESP survival percentages by class and DanGer Shock complication rates",
+      "reason": "Quoted from the original papers from memory of published figures; confirm against the PDFs before display."
+    },
+    {
+      "item": "India-specific statements on ECMO availability and insurance coverage",
+      "reason": "Coverage and availability change; confirm locally."
+    }
+  ]
+}

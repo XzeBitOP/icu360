@@ -1,0 +1,2623 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "cardiac-arrest-post-rosc",
+  "number": 2,
+  "folder": "02-cardiac-arrest-post-rosc",
+  "section": {
+    "id": "A",
+    "title": "Resuscitation and emergencies"
+  },
+  "phase": 1,
+  "title": "Cardiac arrest and post-ROSC care",
+  "summary": "Run high-quality CPR and ALS for shockable and non-shockable rhythms, find and fix the Hs and Ts, manage peri-arrest rhythms, then deliver a structured post-ROSC bundle, fever prevention and safe multimodal neuroprognostication.",
+  "tags": [
+    "cardiac arrest",
+    "CPR",
+    "BLS",
+    "ACLS",
+    "ALS",
+    "VF",
+    "pulseless VT",
+    "PEA",
+    "asystole",
+    "adrenaline",
+    "amiodarone",
+    "lidocaine",
+    "defibrillation",
+    "ROSC",
+    "post-cardiac arrest syndrome",
+    "temperature control",
+    "TTM",
+    "prognostication",
+    "NSE",
+    "SSEP",
+    "ETCO2"
+  ],
+  "relatedModules": [
+    "cardiac-emergencies-arrhythmias",
+    "shock-vasoactive-support",
+    "airway-management",
+    "fluids-electrolytes",
+    "pocus-critical-care-echo",
+    "ethics-communication-palliative-care",
+    "agrochemical-household-poisons"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "heart-pulse",
+    "accent": "critical"
+  },
+  "viewKey": "module:cardiac-arrest-post-rosc",
+  "topics": [
+    {
+      "id": "bls-high-quality-cpr",
+      "title": "Recognition and high-quality CPR",
+      "summary": "Recognise arrest in under 10 s, start compressions immediately at 100-120/min and 5-6 cm depth, attach the defibrillator, and protect compression fraction.",
+      "viewKey": "topic:cardiac-arrest-post-rosc/bls-high-quality-cpr",
+      "uiHints": {
+        "icon": "heart-pulse",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0-10 s",
+            "title": "Recognise arrest",
+            "detail": "Unresponsive and not breathing normally (gasping = arrest). Check for a carotid pulse for no more than 10 s. If in doubt, start CPR.",
+            "refs": [
+              "aha2025-bls",
+              "erc2025-bls"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0 s",
+            "title": "Call for help and the defibrillator",
+            "detail": "Shout for help, call the arrest team (in hospital) and bring the defibrillator/AED and arrest trolley. Note the time."
+          },
+          {
+            "n": 3,
+            "time": "Immediately",
+            "title": "Start chest compressions",
+            "detail": "Lower half of the sternum, 100-120/min, 5-6 cm deep, full recoil, minimal leaning. Firm surface (CPR board or bed CPR mode)."
+          },
+          {
+            "n": 4,
+            "time": "Without airway",
+            "title": "Ventilate 30:2",
+            "detail": "Bag-valve-mask with 100% O2 and an oropharyngeal airway: 2 breaths over ~1 s each with visible chest rise, then 30 compressions."
+          },
+          {
+            "n": 5,
+            "time": "With advanced airway",
+            "title": "Continuous compressions",
+            "detail": "Once intubated or SGA placed: continuous compressions and 1 breath every 6 s (10/min). Confirm tube with waveform capnography.",
+            "refs": [
+              "aha2025-als"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "≤ 3 min",
+            "title": "Attach pads and analyse",
+            "detail": "Pads on during compressions (right infraclavicular + left mid-axillary V6, or antero-posterior). Pause ≤ 10 s for rhythm check."
+          },
+          {
+            "n": 7,
+            "time": "Every 2 min",
+            "title": "Swap compressors and check",
+            "detail": "Change compressor at each rhythm check to avoid fatigue. Aim for a compression fraction > 80%."
+          },
+          {
+            "n": 8,
+            "time": "Throughout",
+            "title": "Monitor CPR quality",
+            "detail": "Waveform ETCO2: aim ≥ 10 mmHg and ideally ≥ 20 mmHg; a sudden rise (often > 10 mmHg jump) suggests ROSC. Arterial diastolic pressure if an arterial line is in place.",
+            "refs": [
+              "aha2025-als"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "cpr-quality",
+            "title": "High-quality CPR targets",
+            "columns": [
+              "Parameter",
+              "Target",
+              "Avoid"
+            ],
+            "rows": [
+              [
+                "Rate",
+                "100-120/min",
+                "< 100 or > 120"
+              ],
+              [
+                "Depth",
+                "5-6 cm (adult)",
+                "< 5 cm or > 6 cm"
+              ],
+              [
+                "Recoil",
+                "Full chest recoil",
+                "Leaning on the chest"
+              ],
+              [
+                "Pauses",
+                "< 10 s for rhythm or pulse check, pre-shock pause < 5 s",
+                "Long pauses for intubation or IV access"
+              ],
+              [
+                "Ventilation (no airway)",
+                "30:2, ~1 s breaths, visible rise",
+                "Hyperventilation"
+              ],
+              [
+                "Ventilation (advanced airway)",
+                "10 breaths/min, continuous compressions",
+                "> 12/min"
+              ],
+              [
+                "ETCO2",
+                "≥ 10 mmHg, ideally ≥ 20 mmHg",
+                "Falling ETCO2 = tiring compressor or poor CPR"
+              ]
+            ],
+            "refs": [
+              "aha2025-bls",
+              "aha2025-als",
+              "erc2025-bls"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Agonal gasping is cardiac arrest: start CPR."
+          },
+          {
+            "text": "ETCO2 persistently < 10 mmHg in an intubated patient: improve compressions, check tube position, look for a cause."
+          },
+          {
+            "text": "Pre-shock pause > 5 s or pauses for intubation: re-plan the team."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Spending > 10 s searching for a pulse."
+          },
+          {
+            "text": "Hyperventilation with the bag: raises intrathoracic pressure and reduces venous return."
+          },
+          {
+            "text": "Compressing on a soft ICU mattress without activating the CPR function."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Assign roles early: leader, compressors (2-3), airway, defibrillator, drugs, recorder/timer."
+          },
+          {
+            "text": "Indian Resuscitation Council (IRC) teaches compression-only life support (COLS) to lay rescuers; in hospital use full CCLS/ACLS."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Arrest recognition to first rhythm check",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Collapsed or unresponsive patient"
+          },
+          {
+            "id": "safe",
+            "type": "action",
+            "text": "Ensure safety; shout for help"
+          },
+          {
+            "id": "breath",
+            "type": "decision",
+            "text": "Breathing normally / definite pulse within 10 s?"
+          },
+          {
+            "id": "noarrest",
+            "type": "end",
+            "text": "Not in arrest: ABCDE, recovery position or rapid response"
+          },
+          {
+            "id": "call",
+            "type": "action",
+            "text": "Call arrest team, bring defibrillator",
+            "severity": "critical"
+          },
+          {
+            "id": "cpr",
+            "type": "action",
+            "text": "CPR 30:2 at 100-120/min, 5-6 cm",
+            "severity": "critical"
+          },
+          {
+            "id": "pads",
+            "type": "action",
+            "text": "Attach pads during CPR; pause ≤ 10 s for rhythm check"
+          },
+          {
+            "id": "rhythm",
+            "type": "end",
+            "text": "Go to ALS: shockable or non-shockable pathway"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "safe"
+          },
+          {
+            "from": "safe",
+            "to": "breath"
+          },
+          {
+            "from": "breath",
+            "to": "noarrest",
+            "label": "Yes"
+          },
+          {
+            "from": "breath",
+            "to": "call",
+            "label": "No or unsure"
+          },
+          {
+            "from": "call",
+            "to": "cpr"
+          },
+          {
+            "from": "cpr",
+            "to": "pads"
+          },
+          {
+            "from": "pads",
+            "to": "rhythm"
+          }
+        ],
+        "refs": [
+          "aha2025-bls",
+          "erc2025-bls"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Compressions generate cardiac output by direct cardiac and thoracic pump effects, producing at best 25-30% of normal output. Coronary perfusion pressure (aortic diastolic minus right atrial pressure) above ~15-20 mmHg is linked to ROSC, and it falls within seconds of stopping compressions. That is why pauses are so harmful.",
+        "evidence": "- AHA 2025 BLS and ERC 2025 BLS keep 100-120/min and 5-6 cm depth with full recoil.\n- AHA 2025 ALS: 10 breaths/min with an advanced airway; waveform capnography is recommended to confirm and monitor tube placement; ETCO2 or arterial diastolic pressure may be used to monitor CPR quality; head-up CPR is not recommended outside trials.\n- Compression fraction > 60-80% and shorter peri-shock pauses are associated with better survival in observational data.",
+        "controversies": "- Optimal ventilation strategy before an advanced airway (30:2 vs continuous compressions with asynchronous breaths).\n- Mechanical CPR devices are not better than good manual CPR, but help during transport, PCI or prolonged resuscitation.",
+        "indiaNotes": "- The Indian Resuscitation Council (IRC, a joint initiative led by the Indian Society of Anaesthesiologists) published BCLS and CCLS guidelines in 2017 adapted to Indian settings, and promotes compression-only life support for lay rescuers.\n- Many Indian wards lack AEDs; place defibrillators on every floor and train nurses to defibrillate before the doctor arrives."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "aha2025-bls",
+        "erc2025-bls",
+        "irc-bcls2017",
+        "irc-ccls2017",
+        "aha2025-als"
+      ],
+      "quiz": [
+        {
+          "id": "bls-high-quality-cpr-q1",
+          "stem": "What compression rate and depth are recommended for adult CPR?",
+          "options": [
+            "80-100/min, 4-5 cm",
+            "100-120/min, 5-6 cm",
+            "120-140/min, 6-7 cm",
+            "100/min, 3-4 cm"
+          ],
+          "answerIndex": 1,
+          "explanation": "100-120/min at 5-6 cm depth with full recoil."
+        },
+        {
+          "id": "bls-high-quality-cpr-q2",
+          "stem": "Once an endotracheal tube is placed during CPR, ventilation should be:",
+          "options": [
+            "30:2 continue",
+            "1 breath every 6 s with continuous compressions",
+            "20 breaths/min",
+            "Only when compressions pause"
+          ],
+          "answerIndex": 1,
+          "explanation": "With an advanced airway, give 10 breaths/min without pausing compressions."
+        },
+        {
+          "id": "bls-high-quality-cpr-q3",
+          "stem": "During CPR the ETCO2 suddenly rises from 14 to 38 mmHg. Most likely?",
+          "options": [
+            "Tube displaced",
+            "ROSC",
+            "Hyperventilation",
+            "Pneumothorax"
+          ],
+          "answerIndex": 1,
+          "explanation": "An abrupt rise in ETCO2 suggests return of spontaneous circulation; check rhythm and pulse at the next check."
+        }
+      ]
+    },
+    {
+      "id": "als-shockable",
+      "title": "ALS: shockable rhythms (VF / pulseless VT)",
+      "summary": "Shock early, resume CPR immediately for 2 min, give adrenaline after initial shocks fail and amiodarone (or lidocaine) for persisting VF, and treat the cause.",
+      "viewKey": "topic:cardiac-arrest-post-rosc/als-shockable",
+      "uiHints": {
+        "icon": "heart-pulse",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Shock immediately",
+            "detail": "Biphasic at the manufacturer's recommended energy (commonly 150-200 J; if unknown use maximum). Resume CPR immediately without pulse check.",
+            "refs": [
+              "aha2025-als",
+              "erc2025-als"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "2 min",
+            "title": "Rhythm check → 2nd shock",
+            "detail": "Still VF/pVT: shock (same or higher energy), resume CPR. Get IV access (IO if IV fails).",
+            "refs": [
+              "aha2025-als"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "4 min",
+            "title": "3rd shock, then drugs",
+            "detail": "After the 3rd shock: adrenaline 1 mg IV and amiodarone 300 mg IV (ERC timing). AHA: adrenaline after initial defibrillation attempts fail; amiodarone or lidocaine for shock-refractory VF.",
+            "refs": [
+              "erc2025-als",
+              "aha2025-als"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Every 3-5 min",
+            "title": "Repeat adrenaline",
+            "detail": "1 mg every alternate 2-min cycle."
+          },
+          {
+            "n": 5,
+            "time": "After 5th shock",
+            "title": "Second antiarrhythmic dose",
+            "detail": "Amiodarone 150 mg (or lidocaine 0.5-0.75 mg/kg)."
+          },
+          {
+            "n": 6,
+            "time": "Persisting VF",
+            "title": "Optimise and think",
+            "detail": "Check pad contact and position, consider antero-posterior pads (vector change); check K+, Mg2+, ischaemia; consider early PCI or ECPR where available. VC and double sequential defibrillation are not established (AHA 2025).",
+            "refs": [
+              "dosevf",
+              "aha2025-als"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Monitored, witnessed VF in ICU or cath lab",
+            "title": "Up to 3 stacked shocks",
+            "detail": "If pads are already on, give up to three quick successive shocks before starting compressions (ERC).",
+            "refs": [
+              "erc2025-als"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "adrenaline",
+            "role": "Vasopressor in arrest",
+            "route": "IV/IO bolus, flush 20 mL",
+            "dose": "1 mg every 3-5 min, starting after the 3rd shock (ERC)",
+            "dilution": "1 mL of 1 mg/mL ampoule, or 10 mL of 100 mcg/mL",
+            "refs": [
+              "erc2025-als",
+              "aha2025-als"
+            ]
+          },
+          {
+            "drugId": "amiodarone",
+            "role": "Antiarrhythmic for shock-refractory VF/pVT",
+            "route": "IV/IO bolus",
+            "dose": "300 mg after 3rd shock; 150 mg after 5th shock",
+            "dilution": "150 mg/3 mL ampoules: 300 mg = 6 mL; may dilute to 20 mL D5",
+            "refs": [
+              "erc2025-als",
+              "alps"
+            ]
+          },
+          {
+            "drugId": "lidocaine",
+            "role": "Alternative antiarrhythmic",
+            "route": "IV/IO bolus",
+            "dose": "1-1.5 mg/kg, then 0.5-0.75 mg/kg (max 3 mg/kg)",
+            "workedExample": "70 kg: 100 mg (5 mL of 2%), then 50 mg",
+            "refs": [
+              "aha2025-als",
+              "alps"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Polymorphic VT is always unstable: unsynchronised shock immediately (AHA 2025).",
+            "refs": [
+              "aha2025-als"
+            ]
+          },
+          {
+            "text": "Recurrent VF after ROSC: correct K+ (aim 4-4.5) and Mg2+, give amiodarone infusion, urgent cardiology for ischaemia."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Pausing CPR to check a pulse straight after the shock: resume compressions first."
+          },
+          {
+            "text": "Charging the defibrillator with compressions stopped: charge during compressions."
+          },
+          {
+            "text": "Synchronised mode left on for VF: the defibrillator will not fire."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Most VF seen at the next rhythm check is recurrent VF after a successful shock, not shock failure (AHA 2025)."
+          },
+          {
+            "text": "In India, consider hyperkalaemia, organophosphate and aluminium phosphide poisoning as causes of refractory arrhythmia."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Shockable rhythm loop",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Rhythm check: VF or pulseless VT"
+          },
+          {
+            "id": "shock",
+            "type": "action",
+            "text": "Shock (biphasic 150-200 J or maximum)",
+            "severity": "critical"
+          },
+          {
+            "id": "cpr",
+            "type": "action",
+            "text": "CPR 2 min immediately; IV/IO access; airway when it does not interrupt CPR"
+          },
+          {
+            "id": "check",
+            "type": "decision",
+            "text": "Rhythm check: still VF/pVT?"
+          },
+          {
+            "id": "count",
+            "type": "decision",
+            "text": "Is this after the 3rd shock or later?"
+          },
+          {
+            "id": "drugs",
+            "type": "action",
+            "text": "Adrenaline 1 mg every 3-5 min; amiodarone 300 mg (150 mg after 5th shock)"
+          },
+          {
+            "id": "rosc",
+            "type": "decision",
+            "text": "Organised rhythm with pulse or ETCO2/arterial waveform?"
+          },
+          {
+            "id": "nonshock",
+            "type": "end",
+            "text": "Go to non-shockable pathway"
+          },
+          {
+            "id": "post",
+            "type": "end",
+            "text": "ROSC: go to post-ROSC bundle"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "shock"
+          },
+          {
+            "from": "shock",
+            "to": "cpr"
+          },
+          {
+            "from": "cpr",
+            "to": "check"
+          },
+          {
+            "from": "check",
+            "to": "count",
+            "label": "Yes"
+          },
+          {
+            "from": "check",
+            "to": "rosc",
+            "label": "No"
+          },
+          {
+            "from": "count",
+            "to": "drugs",
+            "label": "Yes"
+          },
+          {
+            "from": "count",
+            "to": "shock",
+            "label": "No"
+          },
+          {
+            "from": "drugs",
+            "to": "shock"
+          },
+          {
+            "from": "rosc",
+            "to": "post",
+            "label": "Yes"
+          },
+          {
+            "from": "rosc",
+            "to": "nonshock",
+            "label": "No (PEA/asystole)"
+          }
+        ],
+        "refs": [
+          "erc2025-als",
+          "aha2025-als"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **AHA 2025:** biphasic preferred; single shocks rather than stacked; manufacturer energy (maximum if unknown); higher energy for subsequent shocks may be considered. Adrenaline 1 mg every 3-5 min; in shockable rhythms after initial defibrillation attempts fail. Amiodarone or lidocaine may be considered for shock-refractory VF/pVT. Routine calcium, bicarbonate and magnesium are not recommended.\n- **ALPS (2016):** amiodarone and lidocaine did not improve survival to discharge overall, but improved survival in bystander-witnessed arrests.\n- **PARAMEDIC2 (2018):** adrenaline improved 30-day survival but not favourable neurological survival.\n- **DOSE-VF (2022):** vector change and double sequential defibrillation improved survival in refractory VF by intention-to-treat; AHA 2025 judges usefulness \"not established\" given methodological concerns.",
+        "controversies": "- Adrenaline timing in VF differs slightly between AHA (\"after initial shocks fail\") and ERC (\"after the 3rd shock\").\n- Double sequential defibrillation risks defibrillator damage and requires millisecond timing.\n- ECPR for refractory VF needs a system (rapid transport, cannulation team) that very few Indian centres have.",
+        "indiaNotes": "- Biphasic defibrillators are now standard in most Indian ICUs; older monophasic units (360 J) may still be found in smaller hospitals.\n- Lidocaine for IV use must be the preservative-free plain 2% preparation; avoid adrenaline-containing local anaesthetic vials."
+      },
+      "drugIds": [
+        "adrenaline",
+        "amiodarone",
+        "lidocaine"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "aha2025-als",
+        "erc2025-als",
+        "alps",
+        "dosevf",
+        "paramedic2"
+      ],
+      "quiz": [
+        {
+          "id": "als-shockable-q1",
+          "stem": "According to ERC, when is the first adrenaline given in VF arrest?",
+          "options": [
+            "Immediately on recognising arrest",
+            "After the 1st shock",
+            "After the 3rd shock",
+            "Only after 10 minutes"
+          ],
+          "answerIndex": 2,
+          "explanation": "ERC gives adrenaline 1 mg and amiodarone 300 mg after the 3rd shock; AHA says after initial defibrillation attempts fail."
+        },
+        {
+          "id": "als-shockable-q2",
+          "stem": "What is the second dose of amiodarone in refractory VF?",
+          "options": [
+            "300 mg",
+            "150 mg",
+            "450 mg",
+            "75 mg"
+          ],
+          "answerIndex": 1,
+          "explanation": "300 mg first, then 150 mg after the 5th shock."
+        },
+        {
+          "id": "als-shockable-q3",
+          "stem": "Immediately after delivering a shock, you should:",
+          "options": [
+            "Check the pulse",
+            "Analyse the rhythm again",
+            "Resume chest compressions",
+            "Give adrenaline"
+          ],
+          "answerIndex": 2,
+          "explanation": "Resume CPR immediately for 2 minutes; pulse checks come at the next rhythm check."
+        },
+        {
+          "id": "als-shockable-q4",
+          "stem": "AHA 2025 says polymorphic VT should be treated with:",
+          "options": [
+            "Adenosine",
+            "Synchronised cardioversion at 50 J",
+            "Immediate unsynchronised shock",
+            "Amiodarone infusion first"
+          ],
+          "answerIndex": 2,
+          "explanation": "Sustained polymorphic VT cannot be synchronised reliably and is always unstable: defibrillate."
+        }
+      ]
+    },
+    {
+      "id": "als-nonshockable-hs-ts",
+      "title": "ALS: PEA, asystole and the reversible causes (Hs and Ts)",
+      "summary": "Give adrenaline as soon as possible, keep CPR going, and actively search for and treat the 4 Hs and 4 Ts, using POCUS only without interrupting compressions.",
+      "viewKey": "topic:cardiac-arrest-post-rosc/als-nonshockable-hs-ts",
+      "uiHints": {
+        "icon": "heart-pulse",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Confirm PEA or asystole",
+            "detail": "Check leads, gain and pads; fine VF can look like asystole. Continue CPR."
+          },
+          {
+            "n": 2,
+            "time": "ASAP",
+            "title": "Adrenaline 1 mg IV/IO",
+            "detail": "As soon as access is available, then every 3-5 min.",
+            "refs": [
+              "aha2025-als",
+              "erc2025-als"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Every 2 min",
+            "title": "Rhythm check",
+            "detail": "Shockable → shock pathway. Organised rhythm → pulse check. Otherwise continue CPR."
+          },
+          {
+            "n": 4,
+            "time": "Throughout",
+            "title": "Work through Hs and Ts",
+            "detail": "Use history, ABG/VBG (K+, pH, glucose, Hb), ETCO2 and POCUS during the pulse check, without prolonging pauses.",
+            "refs": [
+              "aha2025-als"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Targeted",
+            "title": "Treat the cause",
+            "detail": "Hyperkalaemia: calcium + insulin-dextrose + bicarbonate; tension: needle/finger thoracostomy; tamponade: pericardiocentesis; PE: thrombolysis; hypovolaemia: fluids/blood; toxins: antidotes.",
+            "refs": [
+              "erc2025-special"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "If thrombolysed",
+            "title": "Continue CPR 60-90 min",
+            "detail": "After fibrinolysis for PE, continue resuscitation for 60-90 min before stopping.",
+            "refs": [
+              "erc2025-special"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "20+ min",
+            "title": "Decide on continuing",
+            "detail": "Consider cause, ETCO2 trend (persistently < 10 mmHg after 20 min of ALS in an intubated patient supports stopping as part of a multimodal decision), comorbidity, and wishes.",
+            "refs": [
+              "aha2025-als"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "calcium-gluconate",
+            "role": "Hyperkalaemia, hypocalcaemia, CCB overdose arrest",
+            "route": "IV push",
+            "dose": "Calcium gluconate 10% 30 mL (or calcium chloride 10% 10 mL)",
+            "notes": "Not routine in arrest; separate line from bicarbonate.",
+            "refs": [
+              "erc2025-special"
+            ]
+          },
+          {
+            "drugId": "sodium-bicarbonate",
+            "role": "Hyperkalaemia or tricyclic overdose arrest",
+            "route": "IV",
+            "dose": "50 mmol",
+            "dilution": "≈ 50 mL of 8.4% or ≈ 56 mL of 7.5%",
+            "verify": "Check local concentration.",
+            "refs": [
+              "erc2025-special"
+            ]
+          },
+          {
+            "drugId": "alteplase",
+            "role": "PE-related arrest",
+            "route": "IV bolus",
+            "dose": "50 mg bolus; consider repeat 50 mg after 15 min",
+            "notes": "Continue CPR 60-90 min.",
+            "refs": [
+              "erc2025-special"
+            ]
+          },
+          {
+            "drugId": "tenecteplase",
+            "role": "PE-related arrest (alternative)",
+            "route": "IV bolus",
+            "dose": "Weight-based 30-50 mg (70-79 kg: 40 mg)",
+            "verify": "Extrapolated from STEMI dosing; confirm local protocol.",
+            "refs": [
+              "erc2025-special"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "hs-ts",
+            "title": "4 Hs and 4 Ts: clues and treatment",
+            "columns": [
+              "Cause",
+              "Clues",
+              "Treat"
+            ],
+            "rows": [
+              [
+                "Hypoxia",
+                "Respiratory arrest, blocked/displaced tube, low SpO2 before arrest",
+                "100% O2, confirm tube with capnography, DOPE check"
+              ],
+              [
+                "Hypovolaemia",
+                "Bleeding, GI loss, flat IVC, empty heart on POCUS",
+                "Rapid fluids/blood, stop bleeding"
+              ],
+              [
+                "Hypo/hyperkalaemia and metabolic",
+                "CKD, missed dialysis, peaked T, wide QRS; DKA; hypocalcaemia",
+                "Calcium, insulin-dextrose, bicarbonate; dialysis"
+              ],
+              [
+                "Hypothermia",
+                "Core temp < 30 °C, drowning",
+                "Rewarm; ECPR if available; withhold drugs < 30 °C (ERC)"
+              ],
+              [
+                "Tension pneumothorax",
+                "Ventilated, trauma, line insertion, absent breath sounds, no lung sliding",
+                "Needle or finger thoracostomy, then drain"
+              ],
+              [
+                "Tamponade",
+                "Post-cardiac surgery, trauma, malignancy, effusion with RV collapse on POCUS",
+                "Pericardiocentesis or resuscitative thoracotomy"
+              ],
+              [
+                "Toxins",
+                "OP, aluminium phosphide, tricyclics, beta-blockers, calcium-channel blockers, local anaesthetics",
+                "Specific antidotes (atropine, bicarbonate, calcium, high-dose insulin, lipid emulsion)"
+              ],
+              [
+                "Thrombosis (PE / coronary)",
+                "Dilated RV, DVT, chest pain, STEMI before arrest",
+                "Thrombolysis (PE), PCI (coronary), consider ECPR"
+              ]
+            ],
+            "refs": [
+              "erc2025-special",
+              "aha2025-als"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "PEA with a dilated RV on POCUS and DVT risk: massive PE → thrombolyse."
+          },
+          {
+            "text": "Arrest in a dialysis patient: give calcium immediately; assume hyperkalaemia."
+          },
+          {
+            "text": "Arrest after central line insertion or in a ventilated patient: think tension pneumothorax."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Long POCUS pauses: AHA 2025 says POCUS may help only if it does not interrupt CPR."
+          },
+          {
+            "text": "Giving routine calcium or bicarbonate in every PEA: not recommended without a specific indication."
+          },
+          {
+            "text": "Calling asystole without checking leads and gain."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Pseudo-PEA (cardiac motion on echo without palpable pulse) has a better prognosis: treat aggressively and look hard for causes."
+          },
+          {
+            "text": "Narrow-complex PEA suggests a mechanical cause (tamponade, tension, PE, hypovolaemia); wide-complex PEA suggests metabolic or toxic causes (K+, sodium-channel blockers)."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Non-shockable rhythm loop with reversible causes",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Rhythm check: PEA or asystole"
+          },
+          {
+            "id": "cpr",
+            "type": "action",
+            "text": "CPR 2 min; IV/IO; adrenaline 1 mg ASAP then every 3-5 min",
+            "severity": "critical"
+          },
+          {
+            "id": "hsts",
+            "type": "action",
+            "text": "Look for Hs and Ts: gas, K+, glucose, POCUS during pauses, history"
+          },
+          {
+            "id": "cause",
+            "type": "decision",
+            "text": "Specific cause found?"
+          },
+          {
+            "id": "treat",
+            "type": "action",
+            "text": "Targeted treatment (calcium, decompression, pericardiocentesis, thrombolysis, blood, antidote)"
+          },
+          {
+            "id": "check",
+            "type": "decision",
+            "text": "Rhythm at 2-min check?"
+          },
+          {
+            "id": "shock",
+            "type": "end",
+            "text": "Shockable: go to VF/pVT pathway"
+          },
+          {
+            "id": "rosc",
+            "type": "end",
+            "text": "ROSC: post-ROSC bundle"
+          },
+          {
+            "id": "stop",
+            "type": "decision",
+            "text": "Prolonged arrest with no reversible cause and ETCO2 < 10 after 20 min?"
+          },
+          {
+            "id": "tor",
+            "type": "end",
+            "text": "Consider stopping as a team decision; document; support family"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "cpr"
+          },
+          {
+            "from": "cpr",
+            "to": "hsts"
+          },
+          {
+            "from": "hsts",
+            "to": "cause"
+          },
+          {
+            "from": "cause",
+            "to": "treat",
+            "label": "Yes"
+          },
+          {
+            "from": "cause",
+            "to": "check",
+            "label": "No"
+          },
+          {
+            "from": "treat",
+            "to": "check"
+          },
+          {
+            "from": "check",
+            "to": "shock",
+            "label": "VF/pVT"
+          },
+          {
+            "from": "check",
+            "to": "rosc",
+            "label": "Organised rhythm with pulse"
+          },
+          {
+            "from": "check",
+            "to": "stop",
+            "label": "Still PEA/asystole"
+          },
+          {
+            "from": "stop",
+            "to": "cpr",
+            "label": "No, continue"
+          },
+          {
+            "from": "stop",
+            "to": "tor",
+            "label": "Yes"
+          }
+        ],
+        "refs": [
+          "aha2025-als",
+          "erc2025-als"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **AHA 2025:** adrenaline as soon as feasible in non-shockable rhythms. Routine calcium, bicarbonate and magnesium are not recommended. Pacing in established arrest is not recommended. POCUS for reversible causes \"is not well established\" and must not interrupt CPR. In intubated patients, ETCO2 ≤ 10 mmHg after 20 min of ALS may be one part of a multimodal decision to stop; never use ETCO2 alone in non-intubated patients.\n- **ERC 2025 Special Circumstances:** detailed guidance on hyperkalaemia, hypothermia, PE, tamponade, toxins and other causes.",
+        "controversies": "- Bicarbonate in prolonged non-shockable arrest: observational signals but resuscitation-time bias; not recommended routinely.\n- Termination of resuscitation rules are validated mainly in North American out-of-hospital settings, not in Indian in-hospital arrest.",
+        "indiaNotes": "- Toxic causes are common in Indian ICUs: organophosphates, aluminium phosphide (celphos), yellow oleander, and snakebite with neuroparalysis (hypoxic arrest). See modules 28 and 29.\n- Hyperkalaemia from missed dialysis and AKI is a frequent cause of PEA in Indian emergency departments."
+      },
+      "drugIds": [
+        "adrenaline",
+        "calcium-gluconate",
+        "sodium-bicarbonate",
+        "alteplase",
+        "tenecteplase"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "aha2025-als",
+        "erc2025-als",
+        "erc2025-special"
+      ],
+      "quiz": [
+        {
+          "id": "als-nonshockable-hs-ts-q1",
+          "stem": "In asystole, adrenaline should be given:",
+          "options": [
+            "After 3 cycles of CPR",
+            "As soon as IV/IO access is obtained",
+            "Only if POCUS shows cardiac standstill",
+            "Never"
+          ],
+          "answerIndex": 1,
+          "explanation": "In non-shockable rhythms, give adrenaline as soon as feasible."
+        },
+        {
+          "id": "als-nonshockable-hs-ts-q2",
+          "stem": "A patient on haemodialysis arrests with wide-complex PEA. First specific drug?",
+          "options": [
+            "Amiodarone",
+            "Calcium gluconate or chloride",
+            "Adenosine",
+            "Magnesium"
+          ],
+          "answerIndex": 1,
+          "explanation": "Presume hyperkalaemia: calcium stabilises the myocardium; then insulin-dextrose and bicarbonate."
+        },
+        {
+          "id": "als-nonshockable-hs-ts-q3",
+          "stem": "After thrombolysis for PE-related arrest, CPR should continue for at least:",
+          "options": [
+            "5 min",
+            "15 min",
+            "60-90 min",
+            "No further CPR"
+          ],
+          "answerIndex": 2,
+          "explanation": "Fibrinolytics need time to work; continue CPR 60-90 min."
+        },
+        {
+          "id": "als-nonshockable-hs-ts-q4",
+          "stem": "Which is NOT one of the 4 Ts?",
+          "options": [
+            "Tamponade",
+            "Tension pneumothorax",
+            "Toxins",
+            "Tachycardia"
+          ],
+          "answerIndex": 3,
+          "explanation": "The Ts are tension pneumothorax, tamponade, toxins and thrombosis."
+        }
+      ]
+    },
+    {
+      "id": "peri-arrest-arrhythmias",
+      "title": "Peri-arrest rhythms: unstable tachycardia and bradycardia",
+      "summary": "Decide if the patient is unstable (shock, syncope, ischaemia, heart failure). Unstable tachycardia: synchronised cardioversion. Unstable bradycardia: atropine, then adrenaline infusion or pacing.",
+      "viewKey": "topic:cardiac-arrest-post-rosc/peri-arrest-arrhythmias",
+      "uiHints": {
+        "icon": "heart-pulse",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "ABCDE, O2, IV, 12-lead ECG, monitor",
+            "detail": "Treat the patient, not the monitor. Ask: is the arrhythmia the cause of instability or a response to it (sepsis, bleeding, hypoxia)?"
+          },
+          {
+            "n": 2,
+            "time": "Assess",
+            "title": "Adverse features",
+            "detail": "Shock (SBP < 90 or MAP < 65, cold, confused), syncope, myocardial ischaemia, severe heart failure. Any = unstable."
+          },
+          {
+            "n": 3,
+            "time": "Unstable tachycardia",
+            "title": "Synchronised cardioversion",
+            "detail": "Sedate if conscious (e.g. ketamine or small-dose propofol/midazolam). AF or flutter: start ≥ 200 J biphasic (AHA 2025). Regular narrow or monomorphic VT: 100-200 J, escalate. Up to 3 attempts, then amiodarone 300 mg over 10-20 min and repeat.",
+            "refs": [
+              "aha2025-als",
+              "erc2025-als"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Stable regular narrow",
+            "title": "Vagal then adenosine",
+            "detail": "Modified Valsalva (blow into a 10 mL syringe for 15 s then lie flat with legs raised), then adenosine 6 mg → 12 mg rapid push. See module 10 for full tachycardia care.",
+            "refs": [
+              "aha2025-als"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Unstable bradycardia",
+            "title": "Atropine",
+            "detail": "AHA: 1 mg IV every 3-5 min (max 3 mg). ERC: 500 mcg repeated to 3 mg. Indian ampoule 0.6 mg/mL.",
+            "refs": [
+              "aha2025-als",
+              "erc2025-als"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Atropine fails",
+            "title": "Adrenaline infusion or pacing",
+            "detail": "Adrenaline 2-10 mcg/min (or isoprenaline/dopamine) while arranging transcutaneous then transvenous pacing. Mobitz II, complete heart block with wide QRS, or asystole risk: pace early."
+          },
+          {
+            "n": 7,
+            "time": "Torsades",
+            "title": "Magnesium",
+            "detail": "2 g IV over 10-15 min; correct K+; stop QT-prolonging drugs; overdrive pacing or isoprenaline if bradycardia-dependent.",
+            "refs": [
+              "aha2025-als"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "atropine",
+            "role": "First-line for unstable bradycardia",
+            "route": "IV push",
+            "dose": "AHA 1 mg every 3-5 min (max 3 mg); ERC 500 mcg every 3-5 min (max 3 mg)",
+            "dilution": "0.6 mg/mL ampoule: 1 mg ≈ 1.7 mL",
+            "verify": "Confirm ampoule strength.",
+            "refs": [
+              "aha2025-als",
+              "erc2025-als"
+            ]
+          },
+          {
+            "drugId": "adrenaline",
+            "role": "Bradycardia not responding to atropine",
+            "route": "IV infusion",
+            "dose": "2-10 mcg/min",
+            "dilution": "4 mg in 50 mL (80 mcg/mL)",
+            "workedExample": "5 mcg/min × 60 = 300 mcg/h ÷ 80 = 3.75 mL/h",
+            "calculatorId": "infusion-rate-fixed",
+            "refs": [
+              "aha2025-als"
+            ]
+          },
+          {
+            "drugId": "adenosine",
+            "role": "Stable regular narrow-complex tachycardia",
+            "route": "Rapid IV push + 20 mL flush",
+            "dose": "6 mg, then 12 mg",
+            "notes": "3 mg via central line or after heart transplant.",
+            "refs": [
+              "aha2025-als"
+            ]
+          },
+          {
+            "drugId": "amiodarone",
+            "role": "After failed cardioversion, or stable VT",
+            "route": "IV infusion",
+            "dose": "300 mg over 10-20 min (ERC) or 150 mg over 10 min (AHA), then 900 mg over 24 h",
+            "dilution": "In 5% dextrose only",
+            "refs": [
+              "aha2025-als",
+              "erc2025-als"
+            ]
+          },
+          {
+            "drugId": "magnesium-sulfate",
+            "role": "Torsades de pointes",
+            "route": "IV",
+            "dose": "2 g over 10-15 min",
+            "dilution": "4 mL of 50% in 20-100 mL NS",
+            "refs": [
+              "aha2025-als"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Irregular broad-complex tachycardia (pre-excited AF): no adenosine, verapamil, beta-blocker, digoxin or IV amiodarone; cardiovert."
+          },
+          {
+            "text": "Complete heart block with broad escape, Mobitz II or pauses > 3 s: pace early."
+          },
+          {
+            "text": "Sinus tachycardia in shock is compensation: do not cardiovert or rate-control it."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Cardioverting without the SYNC button (risk of R-on-T VF), or forgetting to re-select SYNC for each shock on some devices."
+          },
+          {
+            "text": "Giving low-dose atropine (< 0.5 mg)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Transcutaneous pacing: set rate 60-70, increase current until electrical capture, then confirm mechanical capture with a femoral pulse; give analgesia."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Peri-arrest rhythm decision",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Pulse present with abnormal rhythm"
+          },
+          {
+            "id": "unst",
+            "type": "decision",
+            "text": "Adverse features? (shock, syncope, ischaemia, heart failure)"
+          },
+          {
+            "id": "fast",
+            "type": "decision",
+            "text": "Tachycardia or bradycardia?"
+          },
+          {
+            "id": "dccv",
+            "type": "action",
+            "text": "Synchronised cardioversion (≥ 200 J for AF/flutter); amiodarone if it fails",
+            "severity": "critical"
+          },
+          {
+            "id": "atr",
+            "type": "action",
+            "text": "Atropine; if no response adrenaline 2-10 mcg/min; pace",
+            "severity": "critical"
+          },
+          {
+            "id": "stable",
+            "type": "action",
+            "text": "Stable: 12-lead ECG, identify rhythm, treat cause"
+          },
+          {
+            "id": "mod10",
+            "type": "end",
+            "text": "Detailed management in module 10 (arrhythmias)"
+          },
+          {
+            "id": "fixed",
+            "type": "end",
+            "text": "Rhythm controlled: monitor, correct K+ and Mg2+, find cause"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "unst"
+          },
+          {
+            "from": "unst",
+            "to": "fast",
+            "label": "Yes"
+          },
+          {
+            "from": "unst",
+            "to": "stable",
+            "label": "No"
+          },
+          {
+            "from": "fast",
+            "to": "dccv",
+            "label": "Tachycardia"
+          },
+          {
+            "from": "fast",
+            "to": "atr",
+            "label": "Bradycardia"
+          },
+          {
+            "from": "dccv",
+            "to": "fixed"
+          },
+          {
+            "from": "atr",
+            "to": "fixed"
+          },
+          {
+            "from": "stable",
+            "to": "mod10"
+          }
+        ],
+        "refs": [
+          "aha2025-als",
+          "erc2025-als"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **AHA 2025 ALS:** stability assessment drives therapy. Synchronised cardioversion for unstable wide- or narrow-complex tachycardia. ≥ 200 J initial energy for AF and atrial flutter cardioversion. Adenosine for regular narrow-complex tachycardia; may be considered for stable regular monomorphic wide-complex tachycardia; never for unstable, irregular or polymorphic wide-complex tachycardia. Verapamil and diltiazem must not be given for wide-complex tachycardia.\n- **ERC 2025:** atropine 500 mcg boluses for bradycardia; second-line drugs include isoprenaline and adrenaline; pacing for high-risk bradycardia.",
+        "controversies": "- Atropine dose difference (AHA 1 mg vs ERC 500 mcg). The app should state one unit protocol.",
+        "indiaNotes": "- Atropine ampoules are 0.6 mg/mL in most Indian hospitals, so \"1 mg\" means 1.7 mL; mistakes are common.\n- Isoprenaline availability varies; adrenaline infusion is the practical second line in most Indian ICUs."
+      },
+      "drugIds": [
+        "atropine",
+        "adenosine",
+        "amiodarone",
+        "adrenaline",
+        "magnesium-sulfate"
+      ],
+      "calculatorIds": [
+        "infusion-rate-fixed",
+        "qtc-bazett"
+      ],
+      "references": [
+        "aha2025-als",
+        "erc2025-als"
+      ],
+      "quiz": [
+        {
+          "id": "peri-arrest-arrhythmias-q1",
+          "stem": "AHA 2025 recommends what initial energy for synchronised cardioversion of AF?",
+          "options": [
+            "50 J",
+            "100 J",
+            "At least 200 J",
+            "360 J monophasic only"
+          ],
+          "answerIndex": 2,
+          "explanation": "Higher first-shock energy (≥ 200 J biphasic) is preferred for AF and flutter."
+        },
+        {
+          "id": "peri-arrest-arrhythmias-q2",
+          "stem": "Adenosine is contraindicated in:",
+          "options": [
+            "Regular narrow-complex tachycardia",
+            "Pre-excited irregular wide-complex tachycardia",
+            "Stable regular monomorphic WCT for diagnosis",
+            "AVNRT"
+          ],
+          "answerIndex": 1,
+          "explanation": "Adenosine can precipitate VF in pre-excited AF; cardiovert instead."
+        },
+        {
+          "id": "peri-arrest-arrhythmias-q3",
+          "stem": "An Indian ampoule of atropine is 0.6 mg/mL. How much for a 1 mg dose?",
+          "options": [
+            "0.6 mL",
+            "1 mL",
+            "1.7 mL",
+            "6 mL"
+          ],
+          "answerIndex": 2,
+          "explanation": "1 ÷ 0.6 ≈ 1.7 mL."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Isoprenaline",
+          "reason": "Availability and ampoule strength in India vary; not given a dose card here."
+        }
+      ]
+    },
+    {
+      "id": "post-rosc-bundle",
+      "title": "Post-ROSC care: the first hours",
+      "summary": "Secure the airway, titrate oxygen to SpO2 92-98%, keep normocapnia and MAP ≥ 65 mmHg, get a 12-lead ECG, decide on angiography, find the cause, and plan temperature control and neuroprotection.",
+      "viewKey": "topic:cardiac-arrest-post-rosc/post-rosc-bundle",
+      "uiHints": {
+        "icon": "heart-pulse",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0-10 min",
+            "title": "Airway and breathing",
+            "detail": "Intubate if not already (RSI drugs at reduced doses; haemodynamics are fragile). Confirm with waveform capnography. Tidal volume 6-8 mL/kg PBW.",
+            "refs": [
+              "aha2025-pcac"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0-10 min",
+            "title": "Oxygen",
+            "detail": "100% FiO2 until SpO2 is reliable, then titrate to SpO2 92-98% (AHA: 90-98%, PaO2 60-105 mmHg). Avoid hypoxaemia and hyperoxia.",
+            "refs": [
+              "aha2025-pcac",
+              "ercesicm2025"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "0-10 min",
+            "title": "Ventilation",
+            "detail": "Normocapnia: PaCO2 35-45 mmHg. Remember PaCO2 runs above ETCO2 after arrest; check an ABG.",
+            "refs": [
+              "aha2025-pcac",
+              "ercesicm2025"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "0-30 min",
+            "title": "Circulation",
+            "detail": "Arterial line. MAP ≥ 65 mmHg (ERC: > 65, SBP > 100). Fluids if preload-responsive, noradrenaline first-line, dobutamine for low output. Avoid hypotension.",
+            "refs": [
+              "aha2025-pcac",
+              "ercesicm2025",
+              "box"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "≤ 10 min",
+            "title": "12-lead ECG",
+            "detail": "STEMI or new LBBB with high suspicion → emergency coronary angiography.",
+            "refs": [
+              "aha2025-pcac"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "0-60 min",
+            "title": "Find the cause",
+            "detail": "Echo; ABG, K+, glucose, troponin, lactate; CT head-to-pelvis (with CT pulmonary angiography) if no obvious cardiac cause (ERC).",
+            "refs": [
+              "ercesicm2025"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Decide",
+            "title": "Angiography without STE",
+            "detail": "Not routinely emergent in stable comatose patients (COACT, TOMAHAWK). Go early if shock, electrical instability or ongoing ischaemia.",
+            "refs": [
+              "coact",
+              "tomahawk",
+              "aha2025-pcac"
+            ]
+          },
+          {
+            "n": 8,
+            "time": "First hours",
+            "title": "Brain protection",
+            "detail": "Temperature control (next topic); short-acting sedation; glucose 140-180 mg/dL (70-180 per AHA); head up 30°; EEG if seizures suspected or patient sedated/paralysed.",
+            "refs": [
+              "aha2025-pcac",
+              "ercesicm2025"
+            ]
+          },
+          {
+            "n": 9,
+            "time": "Ongoing",
+            "title": "Organ support and family",
+            "detail": "Lung-protective ventilation, AKI monitoring, no routine prophylactic antibiotics or steroids. Early, honest communication with family; document the arrest timeline (no-flow, low-flow).",
+            "refs": [
+              "aha2025-pcac"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "noradrenaline",
+            "role": "First-line vasopressor for post-ROSC hypotension",
+            "route": "Central IV infusion",
+            "dose": "0.05-0.5 mcg/kg/min, titrate to MAP ≥ 65",
+            "doseRange": {
+              "min": 0.02,
+              "max": 1,
+              "unit": "mcg/kg/min"
+            },
+            "dilution": "Norad base 4 mg in 50 mL NS (80 mcg/mL); Indian ampoule 2 mg base/2 mL",
+            "workedExample": "70 kg at 0.1 mcg/kg/min = 7 mcg/min = 420 mcg/h ÷ 80 = 5.25 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "verify": "Indian labels may state noradrenaline bitartrate (4 mg bitartrate ≈ 2 mg base); confirm base vs salt.",
+            "refs": [
+              "aha2025-pcac"
+            ]
+          },
+          {
+            "drugId": "dobutamine",
+            "role": "Low cardiac output after ROSC",
+            "route": "IV infusion",
+            "dose": "2.5-10 mcg/kg/min",
+            "dilution": "250 mg in 50 mL (5000 mcg/mL)",
+            "workedExample": "70 kg at 5 mcg/kg/min = 350 mcg/min = 21 000 mcg/h ÷ 5000 = 4.2 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "aha2025-pcac"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "post-rosc-targets",
+            "title": "Post-ROSC physiological targets",
+            "columns": [
+              "Variable",
+              "AHA 2025",
+              "ERC-ESICM 2025"
+            ],
+            "rows": [
+              [
+                "SpO2",
+                "90-98% (PaO2 60-105 mmHg)",
+                "94-98%"
+              ],
+              [
+                "PaCO2",
+                "35-45 mmHg",
+                "Normocapnia (35-45 mmHg)"
+              ],
+              [
+                "MAP",
+                "≥ 65 mmHg; avoid SBP < 90",
+                "> 60-65 mmHg; SBP > 100 mmHg"
+              ],
+              [
+                "Glucose",
+                "70-180 mg/dL; avoid hypoglycaemia",
+                "Avoid hypoglycaemia; insulin for hyperglycaemia"
+              ],
+              [
+                "Temperature",
+                "32-37.5 °C for ≥ 36 h (not following commands)",
+                "Prevent fever > 37.5 °C for ≥ 72 h"
+              ],
+              [
+                "Seizures",
+                "Treat clinical seizures; no prophylaxis",
+                "EEG; treat seizures; no prophylaxis"
+              ]
+            ],
+            "refs": [
+              "aha2025-pcac",
+              "ercesicm2025"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Recurrent VF/VT after ROSC: K+, Mg2+, ischaemia → cardiology now."
+          },
+          {
+            "text": "Persistent shock despite noradrenaline: echo for LV failure, tamponade, RV failure; think bleeding after CPR (liver/spleen injury)."
+          },
+          {
+            "text": "STEMI on ECG: emergency PCI, even in a comatose patient."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Keeping FiO2 1.0 for hours after ROSC (hyperoxia)."
+          },
+          {
+            "text": "Hyperventilating to 'correct' acidosis: causes cerebral vasoconstriction."
+          },
+          {
+            "text": "Early prognostic statements to family in the first 24 h."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "BOX (2022): MAP 63 vs 77 mmHg and liberal vs restrictive O2 gave similar outcomes; so a 'safe' band, not a high target, is enough."
+          },
+          {
+            "text": "Record no-flow and low-flow times; they inform later prognostication and family conversations."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Post-ROSC bundle",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "ROSC achieved"
+          },
+          {
+            "id": "abc",
+            "type": "action",
+            "text": "Airway, capnography, SpO2 92-98%, PaCO2 35-45, MAP ≥ 65",
+            "severity": "critical"
+          },
+          {
+            "id": "ecg",
+            "type": "decision",
+            "text": "12-lead ECG: STEMI?"
+          },
+          {
+            "id": "pci",
+            "type": "action",
+            "text": "Emergency coronary angiography / PCI",
+            "severity": "high"
+          },
+          {
+            "id": "unst",
+            "type": "decision",
+            "text": "Shock, electrical instability or suspected ongoing ischaemia?"
+          },
+          {
+            "id": "ct",
+            "type": "action",
+            "text": "Echo + CT head-to-pelvis (± CTPA) to find cause"
+          },
+          {
+            "id": "obey",
+            "type": "decision",
+            "text": "Following commands?"
+          },
+          {
+            "id": "icu",
+            "type": "end",
+            "text": "ICU: temperature control, sedation, EEG, prognostication ≥ 72 h"
+          },
+          {
+            "id": "ward",
+            "type": "end",
+            "text": "Monitored care, treat cause, secondary prevention (ICD review)"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "abc"
+          },
+          {
+            "from": "abc",
+            "to": "ecg"
+          },
+          {
+            "from": "ecg",
+            "to": "pci",
+            "label": "Yes"
+          },
+          {
+            "from": "ecg",
+            "to": "unst",
+            "label": "No"
+          },
+          {
+            "from": "unst",
+            "to": "pci",
+            "label": "Yes"
+          },
+          {
+            "from": "unst",
+            "to": "ct",
+            "label": "No"
+          },
+          {
+            "from": "pci",
+            "to": "obey"
+          },
+          {
+            "from": "ct",
+            "to": "obey"
+          },
+          {
+            "from": "obey",
+            "to": "ward",
+            "label": "Yes"
+          },
+          {
+            "from": "obey",
+            "to": "icu",
+            "label": "No (comatose)"
+          }
+        ],
+        "refs": [
+          "aha2025-pcac",
+          "ercesicm2025"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Post-cardiac arrest syndrome has four parts: brain injury, myocardial dysfunction (stunning, recovers over 24-72 h), systemic ischaemia-reperfusion response (sepsis-like vasoplegia), and the persisting precipitating cause.",
+        "evidence": "- **AHA 2025 post-cardiac arrest care:** SpO2 90-98%; normocapnia; avoid SBP < 90 and MAP < 65; emergency angiography for STEMI or shock/instability; head-to-pelvis CT and echo may be reasonable; no routine prophylactic antibiotics, steroids or seizure prophylaxis; routine MCS not recommended.\n- **ERC-ESICM 2025:** SpO2 94-98%; normocapnia; MAP > 60-65; CT including CTPA when no cardiac cause; delay angiography in absence of STE unless coronary occlusion likely.\n- **COACT (2019) and TOMAHAWK (2021):** immediate angiography did not improve survival in resuscitated patients without STE.\n- **BOX (2022):** MAP target 63 vs 77 mmHg and restrictive vs liberal oxygen showed no difference in death or poor neurological outcome.",
+        "controversies": "- Exact oxygen target (90-98% vs 94-98%), and whether a higher MAP benefits chronic hypertensive patients.\n- Mild hypercapnia (TAME 2023, not cited here) did not help.",
+        "indiaNotes": "- Cath-lab access is limited outside metros; thrombolysis (tenecteplase) is reasonable for STEMI after ROSC if PCI cannot be done within 120 min, accepting the CPR-trauma bleeding risk. Discuss with cardiology.\n- CT transfer of an unstable post-ROSC patient carries real risk in Indian hospitals without transport ventilators; use echo and bedside tests first."
+      },
+      "drugIds": [
+        "noradrenaline",
+        "dobutamine"
+      ],
+      "calculatorIds": [
+        "mean-arterial-pressure",
+        "infusion-rate-weight-min",
+        "predicted-body-weight"
+      ],
+      "references": [
+        "aha2025-pcac",
+        "ercesicm2025",
+        "box",
+        "coact",
+        "tomahawk"
+      ],
+      "quiz": [
+        {
+          "id": "post-rosc-bundle-q1",
+          "stem": "Which statement about coronary angiography after ROSC is correct?",
+          "options": [
+            "All comatose patients need emergency angiography",
+            "Emergency angiography is indicated for STEMI or shock/electrical instability",
+            "Angiography is contraindicated in comatose patients",
+            "Only after 72 h"
+          ],
+          "answerIndex": 1,
+          "explanation": "COACT and TOMAHAWK showed no benefit of routine immediate angiography without STE in stable patients."
+        },
+        {
+          "id": "post-rosc-bundle-q2",
+          "stem": "After ROSC, the ERC-ESICM SpO2 target is:",
+          "options": [
+            "88-92%",
+            "94-98%",
+            "100%",
+            "> 90% only"
+          ],
+          "answerIndex": 1,
+          "explanation": "ERC-ESICM 2025 targets 94-98%; AHA 2025 accepts 90-98%."
+        },
+        {
+          "id": "post-rosc-bundle-q3",
+          "stem": "The BOX trial compared:",
+          "options": [
+            "Hypothermia 33 vs 36 °C",
+            "MAP 63 vs 77 mmHg and O2 targets",
+            "Adrenaline vs placebo",
+            "Amiodarone vs lidocaine"
+          ],
+          "answerIndex": 1,
+          "explanation": "BOX tested blood pressure and oxygen targets in comatose survivors; neither changed outcome."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Thrombolysis for STEMI after CPR",
+          "reason": "Practice point from STEMI guidelines; not a specific recommendation in the cited cardiac-arrest guidelines."
+        }
+      ]
+    },
+    {
+      "id": "temperature-control",
+      "title": "Temperature control after cardiac arrest",
+      "summary": "In patients who remain comatose after ROSC, actively prevent fever (≤ 37.5 °C) for at least 72 h. Hypothermia at 32-36 °C is acceptable but not proven better.",
+      "viewKey": "topic:cardiac-arrest-post-rosc/temperature-control",
+      "uiHints": {
+        "icon": "heart-pulse",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0-1 h",
+            "title": "Identify eligible patients",
+            "detail": "Any adult not following commands after ROSC, regardless of rhythm or location.",
+            "refs": [
+              "aha2025-pcac",
+              "ercesicm2025"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0-1 h",
+            "title": "Measure core temperature",
+            "detail": "Bladder, oesophageal or blood (PA/femoral catheter) probe. Avoid axillary readings."
+          },
+          {
+            "n": 3,
+            "time": "Start",
+            "title": "Choose target",
+            "detail": "ERC-ESICM: actively prevent fever, keeping temperature ≤ 37.5 °C. AHA: choose and maintain a constant temperature between 32 and 37.5 °C.",
+            "refs": [
+              "ercesicm2025",
+              "aha2025-pcac"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Start",
+            "title": "Devices",
+            "detail": "Feedback-controlled surface or intravascular device if available. Otherwise cold packs, cooling blankets, fans, paracetamol. No prehospital cold IV fluid boluses.",
+            "refs": [
+              "aha2025-pcac"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Throughout",
+            "title": "Sedation and shivering",
+            "detail": "Short-acting sedation (propofol, fentanyl/remifentanil); manage shivering (Bedside Shivering Assessment Scale) with skin counter-warming, magnesium, opioids, dexmedetomidine; neuromuscular block as last resort."
+          },
+          {
+            "n": 6,
+            "time": "≥ 36-72 h",
+            "title": "Duration",
+            "detail": "AHA: ≥ 36 h; ERC-ESICM: prevent fever for at least 72 h.",
+            "refs": [
+              "aha2025-pcac",
+              "ercesicm2025"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Rewarming",
+            "title": "Slow",
+            "detail": "If cooled below 36 °C: rewarm ≤ 0.25-0.5 °C/h; continue to prevent fever after rewarming. Do not actively rewarm patients with mild spontaneous hypothermia (32-36 °C) (ERC).",
+            "refs": [
+              "aha2025-pcac",
+              "ercesicm2025"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "ttm-trials",
+            "title": "Key temperature trials",
+            "columns": [
+              "Trial",
+              "Population",
+              "Comparison",
+              "Result"
+            ],
+            "rows": [
+              [
+                "TTM1 (2013)",
+                "OHCA, all rhythms, n=950",
+                "33 vs 36 °C",
+                "No difference in mortality or neurological outcome"
+              ],
+              [
+                "HYPERION (2019)",
+                "Non-shockable, OHCA and IHCA, n=584",
+                "33 °C vs 37 °C",
+                "Better neurological outcome at 90 days with 33 °C (10.2% vs 5.7%); fragile result"
+              ],
+              [
+                "TTM2 (2021)",
+                "OHCA, n=1900",
+                "33 °C vs normothermia with fever prevention (≤ 37.8 °C)",
+                "No difference in 6-month mortality; more arrhythmias with hypothermia"
+              ]
+            ],
+            "refs": [
+              "ttm1",
+              "hyperion",
+              "ttm2"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Fever > 37.7 °C in a comatose post-arrest patient: treat promptly; it is associated with worse outcome."
+          },
+          {
+            "text": "Bradycardia < 40/min, arrhythmia or bleeding during hypothermia: consider warming to a higher target."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Stopping temperature control at 24 h and allowing rebound fever."
+          },
+          {
+            "text": "Unrecognised shivering raises metabolic rate and temperature: assess it every hour."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Hypothermia causes cold diuresis, hypokalaemia, hyperglycaemia and slower drug clearance; rewarming causes K+ to rise."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Temperature control pathway",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "ROSC, patient not obeying commands"
+          },
+          {
+            "id": "probe",
+            "type": "action",
+            "text": "Core temperature probe; sedation; arterial line"
+          },
+          {
+            "id": "temp",
+            "type": "decision",
+            "text": "Current core temperature?"
+          },
+          {
+            "id": "hot",
+            "type": "action",
+            "text": "> 37.5 °C: active cooling (device, ice packs, blankets, paracetamol)",
+            "severity": "high"
+          },
+          {
+            "id": "mild",
+            "type": "action",
+            "text": "32-37.5 °C: do not actively rewarm; prevent fever"
+          },
+          {
+            "id": "shiver",
+            "type": "action",
+            "text": "Hourly shivering check; counter-warming, magnesium, opioid, dexmedetomidine"
+          },
+          {
+            "id": "dur",
+            "type": "decision",
+            "text": "≥ 72 h of fever prevention (AHA ≥ 36 h) and patient stable?"
+          },
+          {
+            "id": "cont",
+            "type": "action",
+            "text": "Continue fever prevention"
+          },
+          {
+            "id": "done",
+            "type": "end",
+            "text": "Stop active control; keep monitoring for fever; proceed to prognostication"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "probe"
+          },
+          {
+            "from": "probe",
+            "to": "temp"
+          },
+          {
+            "from": "temp",
+            "to": "hot",
+            "label": "Above 37.5 °C"
+          },
+          {
+            "from": "temp",
+            "to": "mild",
+            "label": "32-37.5 °C"
+          },
+          {
+            "from": "hot",
+            "to": "shiver"
+          },
+          {
+            "from": "mild",
+            "to": "shiver"
+          },
+          {
+            "from": "shiver",
+            "to": "dur"
+          },
+          {
+            "from": "dur",
+            "to": "done",
+            "label": "Yes"
+          },
+          {
+            "from": "dur",
+            "to": "cont",
+            "label": "No"
+          },
+          {
+            "from": "cont",
+            "to": "shiver"
+          }
+        ],
+        "refs": [
+          "ercesicm2025",
+          "aha2025-pcac"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **TTM2 (2021)** found no benefit of 33 °C over normothermia with active fever prevention.\n- **HYPERION (2019)** suggested benefit for non-shockable rhythms; the ERC-ESICM 2025 guideline nevertheless recommends against routine active cooling and instead recommends fever prevention ≤ 37.5 °C for at least 72 h.\n- **AHA 2025** still allows a deliberate constant target between 32 and 37.5 °C for at least 36 h.",
+        "controversies": "- Whether subgroups (severe brain injury, non-shockable, in-hospital arrest) benefit from deeper hypothermia.\n- Device-based vs simple methods: feedback devices achieve targets better but outcome benefit is unproven.",
+        "indiaNotes": "- Most Indian ICUs do not have feedback cooling devices; ice packs, cooling blankets, cold room air, fans and scheduled paracetamol are practical. Accept \"fever prevention\" as the realistic standard.\n- Ambient temperatures above 35 °C in summer make passive fever prevention harder; plan for active measures."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "aha2025-pcac",
+        "ercesicm2025",
+        "ttm1",
+        "ttm2",
+        "hyperion"
+      ],
+      "quiz": [
+        {
+          "id": "temperature-control-q1",
+          "stem": "TTM2 compared 33 °C with:",
+          "options": [
+            "36 °C",
+            "Normothermia with active fever prevention",
+            "No temperature management",
+            "30 °C"
+          ],
+          "answerIndex": 1,
+          "explanation": "TTM2 randomised 33 °C hypothermia vs normothermia with treatment of fever ≥ 37.8 °C; no difference."
+        },
+        {
+          "id": "temperature-control-q2",
+          "stem": "ERC-ESICM 2025 recommends fever prevention for at least:",
+          "options": [
+            "12 h",
+            "24 h",
+            "72 h",
+            "7 days"
+          ],
+          "answerIndex": 2,
+          "explanation": "Prevent fever (≤ 37.5 °C) for at least 72 hours in comatose survivors."
+        },
+        {
+          "id": "temperature-control-q3",
+          "stem": "Which is NOT recommended?",
+          "options": [
+            "Fever prevention",
+            "Bladder temperature probe",
+            "Prehospital rapid infusion of cold IV fluids",
+            "Treating shivering"
+          ],
+          "answerIndex": 2,
+          "explanation": "Prehospital cold fluid boluses increased pulmonary oedema and re-arrest without benefit."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Rewarming rate",
+          "reason": "AHA states avoid > 0.5 °C/h; many protocols use 0.25 °C/h."
+        }
+      ]
+    },
+    {
+      "id": "neuroprognostication",
+      "title": "Neuroprognostication after cardiac arrest",
+      "summary": "Never decide on prognosis early. At ≥ 72 h after ROSC (and after sedation clears), combine examination, EEG, SSEP, NSE and imaging; poor outcome is likely only when two or more predictors agree.",
+      "viewKey": "topic:cardiac-arrest-post-rosc/neuroprognostication",
+      "uiHints": {
+        "icon": "heart-pulse",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Day 0-3",
+            "title": "Do not prognosticate",
+            "detail": "Exclude confounders: sedatives, neuromuscular block, hypothermia, severe hypotension, hypoglycaemia, uraemia, hepatic failure.",
+            "refs": [
+              "ercesicm2025"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Day 1-3",
+            "title": "Collect data",
+            "detail": "Daily neurological exam (GCS motor, pupils, corneals, myoclonus). EEG (continuous or intermittent). NSE at 24, 48 and 72 h. SSEP at ≥ 24 h. CT brain early; MRI at 2-7 days.",
+            "refs": [
+              "ercesicm2025",
+              "aha2025-pcac"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "≥ 72 h",
+            "title": "Assess unconscious patient",
+            "detail": "Consider prognostication in any patient not awake and obeying commands (GCS motor < 6) at ≥ 72 h, with no confounders.",
+            "refs": [
+              "ercesicm2025"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "≥ 72 h",
+            "title": "Look for ≥ 2 poor-outcome predictors",
+            "detail": "Bilaterally absent pupillary and corneal reflexes; bilaterally absent N20 SSEP; highly malignant EEG (suppressed background ± periodic discharges, or burst-suppression) > 24 h; NSE > 60 µg/L at 48 or 72 h; status myoclonus ≤ 72 h; diffuse anoxic injury on CT/MRI.",
+            "refs": [
+              "ercesicm2025"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Interpret",
+            "title": "Indeterminate if < 2",
+            "detail": "Continue support and reassess; look for favourable signs (motor withdrawal or better, NSE < 17 µg/L, continuous/reactive EEG, normal MRI).",
+            "refs": [
+              "ercesicm2025",
+              "aha2025-pcac"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Decide",
+            "title": "Shared decision",
+            "detail": "Multidisciplinary, documented, with family; separate brain death testing (module 21) from prognostication."
+          }
+        ],
+        "tables": [
+          {
+            "id": "prognostic-predictors",
+            "title": "Predictors of poor neurological outcome (ERC-ESICM 2025)",
+            "columns": [
+              "Test",
+              "Timing",
+              "Poor-outcome finding"
+            ],
+            "rows": [
+              [
+                "Pupillary + corneal reflexes",
+                "≥ 72 h",
+                "Bilaterally absent (quantitative pupillometry preferred)"
+              ],
+              [
+                "SSEP",
+                "≥ 24 h",
+                "Bilaterally absent N20 waves"
+              ],
+              [
+                "EEG",
+                "> 24 h",
+                "Highly malignant pattern: suppressed background with or without periodic discharges, or burst suppression"
+              ],
+              [
+                "NSE",
+                "48 and 72 h",
+                "> 60 µg/L"
+              ],
+              [
+                "Myoclonus",
+                "≤ 72 h",
+                "Status myoclonus (with EEG correlate)"
+              ],
+              [
+                "CT / MRI",
+                "CT early; MRI 2-7 days",
+                "Diffuse, extensive anoxic injury (loss of grey-white differentiation, diffusion restriction)"
+              ]
+            ],
+            "refs": [
+              "ercesicm2025"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Any prognostic statement before 72 h is unreliable unless brain death is confirmed."
+          },
+          {
+            "text": "Renal or hepatic failure delays clearance of midazolam and opioids; prognosticate later."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Using a single test (for example one absent pupillary reflex) to withdraw care."
+          },
+          {
+            "text": "Self-fulfilling prophecy: early pessimism leads to early withdrawal and confirms the prediction."
+          },
+          {
+            "text": "Haemolysed samples falsely raise NSE."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Myoclonus alone is not a reliable predictor; Lance-Adams syndrome (chronic post-hypoxic myoclonus) can occur with good cognition."
+          },
+          {
+            "text": "AHA 2025 also allows serum neurofilament light (NfL) as part of multimodal assessment where available."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "ERC-ESICM prognostication strategy",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Comatose ≥ 72 h after ROSC"
+          },
+          {
+            "id": "conf",
+            "type": "decision",
+            "text": "Confounders excluded (sedation, temp, metabolic)?"
+          },
+          {
+            "id": "wait",
+            "type": "action",
+            "text": "Correct confounders; wait and reassess"
+          },
+          {
+            "id": "motor",
+            "type": "decision",
+            "text": "Still not obeying commands (GCS motor ≤ 5)?"
+          },
+          {
+            "id": "better",
+            "type": "end",
+            "text": "Obeying commands: no prognostication needed; rehabilitation"
+          },
+          {
+            "id": "two",
+            "type": "decision",
+            "text": "≥ 2 poor-outcome predictors present?"
+          },
+          {
+            "id": "poor",
+            "type": "end",
+            "text": "Poor outcome very likely: multidisciplinary discussion with family",
+            "severity": "high"
+          },
+          {
+            "id": "indet",
+            "type": "end",
+            "text": "Indeterminate: continue support, repeat assessment"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "conf"
+          },
+          {
+            "from": "conf",
+            "to": "motor",
+            "label": "Yes"
+          },
+          {
+            "from": "conf",
+            "to": "wait",
+            "label": "No"
+          },
+          {
+            "from": "wait",
+            "to": "conf"
+          },
+          {
+            "from": "motor",
+            "to": "two",
+            "label": "Yes"
+          },
+          {
+            "from": "motor",
+            "to": "better",
+            "label": "No"
+          },
+          {
+            "from": "two",
+            "to": "poor",
+            "label": "Yes"
+          },
+          {
+            "from": "two",
+            "to": "indet",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "ercesicm2025"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **ERC-ESICM 2025** extend prognostication to all unconscious patients (GCS motor ≤ 5, previously ≤ 3) and keep the multimodal strategy at ≥ 72 h with ≥ 2 concordant predictors of poor outcome; NSE > 60 µg/L at 48/72 h; favourable signs include NSE < 17 µg/L and continuous EEG background.\n- **AHA 2025** endorses multimodal prognostication no earlier than 72 h after normothermia and sedation clearance; NSE and NfL may be used.",
+        "controversies": "- NSE thresholds vary between analysers and studies; specificity is never 100%.\n- Withdrawal of life-sustaining therapy and organ donation pathways differ greatly between countries.",
+        "indiaNotes": "- SSEP, cEEG and NSE are unavailable in many Indian ICUs; rely on serial clinical examination, CT/MRI, and time. When tests are missing, be more conservative and allow longer observation.\n- Families may need extended counselling; involve senior staff early. Indian law (Common Cause 2018 and 2023 modifications) allows withdrawal of life support with medical board process; see module 39."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "ercesicm2025",
+        "aha2025-pcac",
+        "rcuk2025-post"
+      ],
+      "quiz": [
+        {
+          "id": "neuroprognostication-q1",
+          "stem": "Earliest time for routine multimodal prognostication in a comatose survivor?",
+          "options": [
+            "12 h",
+            "24 h",
+            "72 h after ROSC and sedation clearance",
+            "7 days"
+          ],
+          "answerIndex": 2,
+          "explanation": "At least 72 h, after excluding confounders."
+        },
+        {
+          "id": "neuroprognostication-q2",
+          "stem": "Which NSE value supports a poor outcome (ERC-ESICM 2025)?",
+          "options": [
+            "> 17 µg/L at 24 h",
+            "> 60 µg/L at 48 or 72 h",
+            "> 35 µg/L at 6 h",
+            "Any rise"
+          ],
+          "answerIndex": 1,
+          "explanation": "NSE > 60 µg/L at 48/72 h is one predictor; NSE < 17 µg/L is favourable."
+        },
+        {
+          "id": "neuroprognostication-q3",
+          "stem": "How many concordant poor-outcome predictors are needed in the ERC-ESICM strategy?",
+          "options": [
+            "1",
+            "2 or more",
+            "4",
+            "All 6"
+          ],
+          "answerIndex": 1,
+          "explanation": "Poor outcome is likely when two or more predictors are present."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Indian law reference",
+          "reason": "Common Cause v Union of India (2018) and its 2023 modification; confirm details in module 39."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "adrenaline",
+      "name": "Adrenaline (epinephrine)",
+      "class": "Catecholamine vasopressor",
+      "indications": "All cardiac arrest rhythms; post-ROSC shock or symptomatic bradycardia as an infusion; anaphylaxis (IM).",
+      "adultDose": "Arrest: 1 mg IV/IO every 3-5 min (every second 2-min CPR cycle). Non-shockable: as soon as access is obtained. Shockable: after initial defibrillation attempts fail (ERC: after the 3rd shock; AHA: after initial shocks). Bradycardia or shock infusion: 2-10 mcg/min (≈ 0.02-0.15 mcg/kg/min).",
+      "preparationIndia": "1 mg/mL (1:1000) ampoules are standard in India. For arrest: give 1 mL undiluted and flush with 20 mL NS, or dilute 1 mg to 10 mL (100 mcg/mL). Infusion: 4 mg in 50 mL (80 mcg/mL).",
+      "cautions": "High-dose adrenaline is not recommended. Tachyarrhythmias and hypertension after ROSC: stop the bolus schedule once ROSC is achieved.",
+      "refs": [
+        "aha2025-als",
+        "erc2025-als",
+        "paramedic2"
+      ]
+    },
+    {
+      "id": "amiodarone",
+      "name": "Amiodarone",
+      "class": "Class III antiarrhythmic",
+      "indications": "VF/pulseless VT persisting after shocks; stable VT; AF rate/rhythm control in the critically ill.",
+      "adultDose": "Arrest: 300 mg IV/IO bolus after the 3rd shock, then 150 mg after the 5th shock (ERC); AHA: 300 mg then 150 mg. Stable VT or after ROSC: 150 mg over 10 min, then 1 mg/min for 6 h, then 0.5 mg/min for 18 h (max ~2.2 g/24 h).",
+      "preparationIndia": "150 mg/3 mL ampoules. In arrest, 300 mg (2 ampoules) can be pushed and flushed. Infusions must be made in 5% dextrose (e.g. 900 mg in 500 mL D5 or 300 mg in 50 mL D5 via central line).",
+      "cautions": "Hypotension and bradycardia (polysorbate solvent); phlebitis peripherally; QT prolongation; long-term thyroid, liver and lung toxicity.",
+      "refs": [
+        "aha2025-als",
+        "erc2025-als",
+        "alps"
+      ]
+    },
+    {
+      "id": "lidocaine",
+      "name": "Lidocaine (lignocaine)",
+      "class": "Class IB antiarrhythmic",
+      "indications": "Alternative to amiodarone for shock-refractory VF/pVT.",
+      "adultDose": "1-1.5 mg/kg IV/IO, then 0.5-0.75 mg/kg every 5-10 min if needed (max 3 mg/kg). Maintenance after ROSC 1-4 mg/min.",
+      "preparationIndia": "2% (20 mg/mL) preservative-free plain lignocaine for IV use (do NOT use the adrenaline-containing local anaesthetic vials).",
+      "cautions": "CNS toxicity (seizures) and myocardial depression at high levels, especially in liver failure.",
+      "refs": [
+        "aha2025-als",
+        "alps"
+      ]
+    },
+    {
+      "id": "atropine",
+      "name": "Atropine",
+      "class": "Antimuscarinic",
+      "indications": "Symptomatic or unstable bradycardia; organophosphate poisoning (very different doses, see module 28). Not used routinely in PEA/asystole.",
+      "adultDose": "Bradycardia: AHA 1 mg IV every 3-5 min (max 3 mg); ERC 500 mcg IV, repeat every 3-5 min to max 3 mg.",
+      "preparationIndia": "Commonly 0.6 mg/mL ampoules in India: 1 mg ≈ 1.7 mL, 0.5 mg ≈ 0.8 mL. Push fast and flush.",
+      "cautions": "Often ineffective in heart transplant patients and in infranodal (Mobitz II / complete) block with wide QRS. Doses < 0.5 mg can cause paradoxical bradycardia.",
+      "verify": "Confirm local ampoule strength (0.6 mg/mL vs 1 mg/mL).",
+      "refs": [
+        "aha2025-als",
+        "erc2025-als"
+      ]
+    },
+    {
+      "id": "adenosine",
+      "name": "Adenosine",
+      "class": "AV nodal blocker (purinergic)",
+      "indications": "Stable regular narrow-complex tachycardia; diagnostic in stable regular monomorphic wide-complex tachycardia.",
+      "adultDose": "6 mg rapid IV push with immediate 20 mL flush; if no effect 12 mg (AHA: may repeat 12 mg once; ERC: then 18 mg).",
+      "preparationIndia": "6 mg/2 mL vials. Use a large antecubital vein and a three-way tap for push-flush.",
+      "cautions": "Avoid in asthma/severe bronchospasm, pre-excited AF, irregular or polymorphic wide-complex tachycardia. Reduce to 3 mg with central line, heart transplant, or dipyridamole/carbamazepine.",
+      "refs": [
+        "aha2025-als",
+        "erc2025-als"
+      ]
+    },
+    {
+      "id": "magnesium-sulfate",
+      "name": "Magnesium sulfate",
+      "class": "Electrolyte / antiarrhythmic",
+      "indications": "Torsades de pointes; documented hypomagnesaemia. Not routine in cardiac arrest.",
+      "adultDose": "Torsades: 2 g IV over 1-2 min (arrest) or over 10-15 min (with pulse); may repeat once; then infusion 0.5-1 g/h if recurrent.",
+      "preparationIndia": "50% solution, 1 g in 2 mL ampoules (≈ 4 mmol Mg per g). 2 g = 4 mL; dilute in 10-20 mL NS for bolus.",
+      "cautions": "Hypotension, flushing; caution in renal failure.",
+      "refs": [
+        "aha2025-als"
+      ]
+    },
+    {
+      "id": "calcium-gluconate",
+      "name": "Calcium gluconate 10% (or calcium chloride 10%)",
+      "class": "Electrolyte",
+      "indications": "Cardiac arrest from hyperkalaemia, hypocalcaemia or calcium-channel-blocker overdose. NOT routine in arrest.",
+      "adultDose": "Calcium gluconate 10% 30 mL IV (≈ 6.8 mmol Ca), or calcium chloride 10% 10 mL (≈ 6.8 mmol); repeat as needed.",
+      "preparationIndia": "Calcium gluconate 10% 10 mL ampoules are widely available; calcium chloride is less commonly stocked.",
+      "cautions": "Do not give through the same line as bicarbonate (precipitates). Tissue necrosis with extravasation (especially chloride).",
+      "refs": [
+        "aha2025-als",
+        "erc2025-special"
+      ]
+    },
+    {
+      "id": "sodium-bicarbonate",
+      "name": "Sodium bicarbonate",
+      "class": "Alkalinising agent",
+      "indications": "Arrest due to hyperkalaemia or tricyclic/sodium-channel-blocker overdose. NOT routine in arrest.",
+      "adultDose": "50 mmol IV (≈ 50 mL of 8.4% or ≈ 56 mL of 7.5%), repeat according to blood gas.",
+      "preparationIndia": "7.5% (0.89 mmol/mL) and 8.4% (1 mmol/mL) 10 mL and 25 mL ampoules are both sold in India; check which you have.",
+      "cautions": "Hypernatraemia, CO2 generation (ensure ventilation), inactivates catecholamines in the same line.",
+      "verify": "Confirm concentration in local stock.",
+      "refs": [
+        "aha2025-als",
+        "erc2025-special"
+      ]
+    },
+    {
+      "id": "alteplase",
+      "name": "Alteplase",
+      "class": "Fibrinolytic",
+      "indications": "Cardiac arrest with suspected or confirmed massive pulmonary embolism.",
+      "adultDose": "Arrest from PE: 50 mg IV bolus (ERC); consider a further 50 mg after 15 min; continue CPR for 60-90 min after thrombolysis.",
+      "preparationIndia": "50 mg vials (Actilyse). Expensive; tenecteplase is often more available in Indian emergency departments.",
+      "cautions": "Bleeding. Do not stop CPR early after giving a fibrinolytic.",
+      "refs": [
+        "erc2025-special"
+      ]
+    },
+    {
+      "id": "tenecteplase",
+      "name": "Tenecteplase",
+      "class": "Fibrinolytic",
+      "indications": "Alternative fibrinolytic for PE-related arrest when alteplase is unavailable (off-label for PE in many countries).",
+      "adultDose": "Weight-based single bolus as for STEMI: < 60 kg 30 mg; 60-69 kg 35 mg; 70-79 kg 40 mg; 80-89 kg 45 mg; ≥ 90 kg 50 mg.",
+      "preparationIndia": "20 mg, 30 mg and 40 mg vials are marketed in India (including biosimilars).",
+      "verify": "Use for PE arrest is extrapolated; confirm local protocol.",
+      "refs": [
+        "erc2025-special"
+      ]
+    },
+    {
+      "id": "noradrenaline",
+      "name": "Noradrenaline (norepinephrine)",
+      "class": "Vasopressor",
+      "indications": "Post-ROSC hypotension (MAP < 65 mmHg) after correcting volume.",
+      "adultDose": "0.05-0.5 mcg/kg/min titrated to MAP ≥ 65 mmHg.",
+      "preparationIndia": "4 mg in 50 mL (80 mcg/mL).",
+      "refs": [
+        "aha2025-pcac",
+        "ercesicm2025"
+      ]
+    },
+    {
+      "id": "dobutamine",
+      "name": "Dobutamine",
+      "class": "Inotrope",
+      "indications": "Post-arrest myocardial dysfunction with low cardiac output.",
+      "adultDose": "2.5-10 mcg/kg/min.",
+      "preparationIndia": "250 mg in 50 mL (5000 mcg/mL).",
+      "refs": [
+        "ercesicm2025"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "aha2025-als",
+      "citation": "Part 9: Adult Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025",
+      "url": "https://doi.org/10.1161/CIR.0000000000001376",
+      "year": 2025,
+      "doi": "10.1161/CIR.0000000000001376",
+      "type": "guideline"
+    },
+    {
+      "id": "aha2025-bls",
+      "citation": "Part 7: Adult Basic Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025",
+      "url": "https://doi.org/10.1161/CIR.0000000000001369",
+      "year": 2025,
+      "doi": "10.1161/CIR.0000000000001369",
+      "type": "guideline"
+    },
+    {
+      "id": "aha2025-pcac",
+      "citation": "Part 11: Post-Cardiac Arrest Care: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025",
+      "url": "https://doi.org/10.1161/CIR.0000000000001375",
+      "year": 2025,
+      "doi": "10.1161/CIR.0000000000001375",
+      "type": "guideline"
+    },
+    {
+      "id": "erc2025-als",
+      "citation": "Soar J, Böttiger BW, Carli P, et al. European Resuscitation Council Guidelines 2025 Adult Advanced Life Support. Resuscitation. 2025;215 Suppl 1:110769",
+      "url": "https://doi.org/10.1016/j.resuscitation.2025.110769",
+      "year": 2025,
+      "doi": "10.1016/j.resuscitation.2025.110769",
+      "type": "guideline"
+    },
+    {
+      "id": "erc2025-bls",
+      "citation": "European Resuscitation Council Guidelines 2025 Adult Basic Life Support. Resuscitation. 2025",
+      "url": "https://doi.org/10.1016/j.resuscitation.2025.110771",
+      "year": 2025,
+      "doi": "10.1016/j.resuscitation.2025.110771",
+      "type": "guideline"
+    },
+    {
+      "id": "erc2025-special",
+      "citation": "European Resuscitation Council Guidelines 2025 Special Circumstances in Resuscitation. Resuscitation. 2025",
+      "url": "https://doi.org/10.1016/j.resuscitation.2025.110753",
+      "year": 2025,
+      "doi": "10.1016/j.resuscitation.2025.110753",
+      "type": "guideline"
+    },
+    {
+      "id": "ercesicm2025",
+      "citation": "Nolan JP, Sandroni C, Cariou A, et al. European Resuscitation Council and European Society of Intensive Care Medicine guidelines 2025: post-resuscitation care. Intensive Care Med. 2025;51(12):2213-2288",
+      "url": "https://doi.org/10.1007/s00134-025-08117-3",
+      "year": 2025,
+      "doi": "10.1007/s00134-025-08117-3",
+      "type": "guideline"
+    },
+    {
+      "id": "rcuk2025-post",
+      "citation": "Resuscitation Council UK. 2025 Resuscitation Guidelines: Post-resuscitation care (adapted from ERC-ESICM 2025)",
+      "url": "https://www.resus.org.uk/professional-library/2025-resuscitation-guidelines/post-resuscitation-care-guidelines",
+      "year": 2025,
+      "type": "guideline"
+    },
+    {
+      "id": "irc-bcls2017",
+      "citation": "Garg R, Ahmed SM, Kapoor MC, Mishra BB, et al. Basic cardiopulmonary life support (BCLS) for cardiopulmonary resuscitation by trained paramedics and medics outside the hospital. Indian J Anaesth. 2017;61(11):874-882",
+      "url": "https://doi.org/10.4103/ija.IJA_637_17",
+      "year": 2017,
+      "doi": "10.4103/ija.IJA_637_17",
+      "type": "guideline"
+    },
+    {
+      "id": "irc-ccls2017",
+      "citation": "Garg R, Ahmed SM, Kapoor MC, et al. Comprehensive cardiopulmonary life support (CCLS) for cardiopulmonary resuscitation by trained paramedics and medics inside the hospital. Indian J Anaesth. 2017;61(11):883-894",
+      "url": "https://doi.org/10.4103/ija.IJA_664_17",
+      "year": 2017,
+      "doi": "10.4103/ija.IJA_664_17",
+      "type": "guideline"
+    },
+    {
+      "id": "ttm2",
+      "citation": "Dankiewicz J, Cronberg T, Lilja G, et al. Hypothermia versus normothermia after out-of-hospital cardiac arrest (TTM2). N Engl J Med. 2021;384(24):2283-2294",
+      "url": "https://doi.org/10.1056/NEJMoa2100591",
+      "year": 2021,
+      "doi": "10.1056/NEJMoa2100591",
+      "type": "trial"
+    },
+    {
+      "id": "ttm1",
+      "citation": "Nielsen N, Wetterslev J, Cronberg T, et al. Targeted temperature management at 33°C versus 36°C after cardiac arrest. N Engl J Med. 2013;369(23):2197-2206",
+      "url": "https://doi.org/10.1056/NEJMoa1310519",
+      "year": 2013,
+      "doi": "10.1056/NEJMoa1310519",
+      "type": "trial"
+    },
+    {
+      "id": "hyperion",
+      "citation": "Lascarrou JB, Merdji H, Le Gouge A, et al. Targeted temperature management for cardiac arrest with nonshockable rhythm (HYPERION). N Engl J Med. 2019;381(24):2327-2337",
+      "url": "https://doi.org/10.1056/NEJMoa1906661",
+      "year": 2019,
+      "doi": "10.1056/NEJMoa1906661",
+      "type": "trial"
+    },
+    {
+      "id": "box",
+      "citation": "Kjaergaard J, Møller JE, Schmidt H, et al. Blood-pressure targets in comatose survivors of cardiac arrest (BOX). N Engl J Med. 2022;387(16):1456-1466",
+      "url": "https://doi.org/10.1056/NEJMoa2208687",
+      "year": 2022,
+      "doi": "10.1056/NEJMoa2208687",
+      "type": "trial"
+    },
+    {
+      "id": "coact",
+      "citation": "Lemkes JS, Janssens GN, van der Hoeven NW, et al. Coronary angiography after cardiac arrest without ST-segment elevation (COACT). N Engl J Med. 2019;380(15):1397-1407",
+      "url": "https://doi.org/10.1056/NEJMoa1816897",
+      "year": 2019,
+      "doi": "10.1056/NEJMoa1816897",
+      "type": "trial"
+    },
+    {
+      "id": "tomahawk",
+      "citation": "Desch S, Freund A, Akin I, et al. Angiography after out-of-hospital cardiac arrest without ST-segment elevation (TOMAHAWK). N Engl J Med. 2021;385(27):2544-2553",
+      "url": "https://doi.org/10.1056/NEJMoa2101909",
+      "year": 2021,
+      "doi": "10.1056/NEJMoa2101909",
+      "type": "trial"
+    },
+    {
+      "id": "paramedic2",
+      "citation": "Perkins GD, Ji C, Deakin CD, et al. A randomized trial of epinephrine in out-of-hospital cardiac arrest (PARAMEDIC2). N Engl J Med. 2018;379(8):711-721",
+      "url": "https://doi.org/10.1056/NEJMoa1806842",
+      "year": 2018,
+      "doi": "10.1056/NEJMoa1806842",
+      "type": "trial"
+    },
+    {
+      "id": "alps",
+      "citation": "Kudenchuk PJ, Brown SP, Daya M, et al. Amiodarone, lidocaine, or placebo in out-of-hospital cardiac arrest (ALPS). N Engl J Med. 2016;374(18):1711-1722",
+      "url": "https://doi.org/10.1056/NEJMoa1514204",
+      "year": 2016,
+      "doi": "10.1056/NEJMoa1514204",
+      "type": "trial"
+    },
+    {
+      "id": "dosevf",
+      "citation": "Cheskes S, Verbeek PR, Drennan IR, et al. Defibrillation strategies for refractory ventricular fibrillation (DOSE-VF). N Engl J Med. 2022;387(21):1947-1956",
+      "url": "https://doi.org/10.1056/NEJMoa2207304",
+      "year": 2022,
+      "doi": "10.1056/NEJMoa2207304",
+      "type": "trial"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Guideline versions",
+      "reason": "Written against AHA 2025, ERC 2025 and ERC-ESICM 2025 post-resuscitation guidance (key recommendations read from the AHA guideline pages and published summaries). Where AHA and ERC differ, both are shown; the unit should choose one convention for the app."
+    },
+    {
+      "item": "Indian ampoule strengths",
+      "reason": "Atropine is commonly 0.6 mg/mL in India; adrenaline 1 mg/mL (1:1000); amiodarone 150 mg/3 mL; sodium bicarbonate 7.5% and 8.4% both exist. Confirm local stock before publishing dose volumes."
+    }
+  ]
+}

@@ -1,0 +1,1788 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "endocrine-metabolic-emergencies",
+  "number": 19,
+  "folder": "19-endocrine-metabolic-emergencies",
+  "section": {
+    "id": "D",
+    "title": "Renal, fluids and metabolic"
+  },
+  "phase": 1,
+  "title": "Endocrine and metabolic emergencies",
+  "summary": "Recognise and treat the endocrine emergencies seen in Indian ICUs: DKA (including euglycaemic DKA with SGLT2 inhibitors), HHS, adrenal crisis, thyroid storm and myxoedema coma, plus ICU glucose targets and hypoglycaemia.",
+  "tags": [
+    "DKA",
+    "euglycaemic DKA",
+    "SGLT2 inhibitor",
+    "HHS",
+    "hyperosmolar",
+    "insulin infusion",
+    "potassium",
+    "adrenal crisis",
+    "hydrocortisone",
+    "thyroid storm",
+    "Burch-Wartofsky",
+    "propylthiouracil",
+    "myxoedema coma",
+    "levothyroxine",
+    "glucose control",
+    "NICE-SUGAR",
+    "hypoglycaemia",
+    "dextrose",
+    "glucagon"
+  ],
+  "relatedModules": [
+    "fluids-electrolytes",
+    "acid-base-abg",
+    "sepsis-septic-shock",
+    "shock-vasoactive-support"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "syringe",
+    "accent": "high"
+  },
+  "viewKey": "module:endocrine-metabolic-emergencies",
+  "topics": [
+    {
+      "id": "dka",
+      "title": "Diabetic ketoacidosis (including euglycaemic DKA)",
+      "summary": "DKA = diabetes or glucose ≥ 200 mg/dL + β-hydroxybutyrate ≥ 3.0 mmol/L (or urine ketones ≥ 2+) + pH < 7.3 and/or HCO3- < 18. Treat with fluids, fixed-rate insulin 0.1 units/kg/h once K+ ≥ 3.5, potassium replacement, and dextrose once glucose < 250 mg/dL until ketones clear.",
+      "viewKey": "topic:endocrine-metabolic-emergencies/dka",
+      "uiHints": {
+        "icon": "syringe",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "ADA/EASD/JBDS 2024: D (glucose ≥ 200 mg/dL or known diabetes), K (β-hydroxybutyrate ≥ 3.0 mmol/L or urine ketones ≥ 2+), A (pH < 7.3 and/or bicarbonate < 18 mmol/L).",
+          "refs": [
+            "ada2024"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "0-1 h",
+            "title": "Fluids",
+            "detail": "0.9% saline or balanced crystalloid 500-1000 mL/h for the first 2-4 h (250 mL boluses if elderly, heart or kidney failure). Balanced fluids resolve DKA faster with less hyperchloraemia.",
+            "refs": [
+              "ada2024"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0-1 h",
+            "title": "Potassium first",
+            "detail": "K+ < 3.5: give KCl 10 mmol/h and delay insulin until > 3.5. K+ 3.5-5.0: add 20-30 mmol KCl per litre to keep 4-5. K+ > 5.0: no K+, recheck in 2 h.",
+            "refs": [
+              "ada2024"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "1 h",
+            "title": "Insulin",
+            "detail": "Fixed-rate IV regular insulin 0.1 units/kg/h (0.1 units/kg bolus if access delayed). Continue the patient's basal insulin; or start basal 0.15-0.3 units/kg SC early.",
+            "refs": [
+              "ada2024"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Ongoing",
+            "title": "Glucose < 250 mg/dL",
+            "detail": "Add 5-10% dextrose and reduce insulin to 0.05 units/kg/h; keep glucose ~200 mg/dL; never stop insulin while ketotic. Euglycaemic DKA: start dextrose with the saline from the outset.",
+            "refs": [
+              "ada2024"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Monitor",
+            "title": "Every 1-2 h / 4 h",
+            "detail": "Capillary glucose hourly; K+ at 2 h then 4-hourly; electrolytes, β-hydroxybutyrate, venous pH every 4 h.",
+            "refs": [
+              "ada2024"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Bicarbonate",
+            "title": "Only pH < 7.0",
+            "detail": "100 mmol 8.4% in 400 mL water over 2 h, repeat until pH > 7.0. Phosphate only if < 1.0 mg/dL with weakness.",
+            "refs": [
+              "ada2024"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Resolution",
+            "title": "Then transition",
+            "detail": "Ketones < 0.6 mmol/L and venous pH ≥ 7.3 or HCO3- ≥ 18. Give SC basal-bolus insulin (0.5-0.6 units/kg/day; 0.3 if frail/CKD), overlap 1-2 h before stopping IV insulin.",
+            "refs": [
+              "ada2024"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "insulin-regular",
+            "role": "DKA fixed-rate infusion",
+            "route": "IV infusion",
+            "dose": "0.1 units/kg/h; reduce to 0.05 units/kg/h when glucose < 250 mg/dL with dextrose added",
+            "workedExample": "60 kg: 6 units/h (6 mL/h of 1 unit/mL) → 3 units/h with 10% dextrose once glucose < 250",
+            "verify": "Prepare by units (U-40 vs U-100 vials).",
+            "refs": [
+              "ada2024"
+            ]
+          },
+          {
+            "drugId": "sodium-bicarbonate",
+            "role": "DKA with pH < 7.0",
+            "route": "IV",
+            "dose": "100 mmol (100 mL 8.4%) in 400 mL sterile water over 2 h, repeat to pH > 7.0",
+            "refs": [
+              "ada2024"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "dka-severity",
+            "title": "DKA severity (ADA 2024)",
+            "columns": [
+              "",
+              "Mild",
+              "Moderate",
+              "Severe"
+            ],
+            "rows": [
+              [
+                "β-hydroxybutyrate",
+                "3.0-6.0 mmol/L",
+                "3.0-6.0 mmol/L",
+                "> 6.0 mmol/L"
+              ],
+              [
+                "pH",
+                "7.25-7.30",
+                "7.0-7.25",
+                "< 7.0"
+              ],
+              [
+                "Bicarbonate",
+                "15-18",
+                "10-15",
+                "< 10"
+              ],
+              [
+                "Mental status",
+                "Alert",
+                "Alert/drowsy",
+                "Stupor/coma"
+              ],
+              [
+                "Level of care",
+                "Ward/observation",
+                "Step-down/HDU",
+                "ICU"
+              ]
+            ],
+            "caption": "Not all variables need to be met; level of care is a clinical decision. Mild-moderate DKA can be treated with hourly-2-hourly SC rapid-acting analogues.",
+            "refs": [
+              "ada2024"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "K+ < 3.5 on arrival: insulin waits until potassium is replaced."
+          },
+          {
+            "text": "Falling GCS during treatment, especially in young patients: cerebral oedema; mannitol and CT."
+          },
+          {
+            "text": "Euglycaemic DKA on SGLT2 inhibitors (glucose < 200 mg/dL): missed if only glucose is checked."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Stopping insulin when glucose normalises while ketones persist."
+          },
+          {
+            "text": "Using anion gap or urine ketones to define resolution (hyperchloraemia and acetoacetate conversion mislead)."
+          },
+          {
+            "text": "Stopping IV insulin without overlapping SC basal insulin → rebound DKA."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Bedside β-hydroxybutyrate meters make monitoring easy and cheap; urine ketones are a poor substitute."
+          },
+          {
+            "text": "Look for the trigger: infection, missed insulin, MI, pancreatitis, SGLT2 inhibitor."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "DKA first hours",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "DKA confirmed"
+          },
+          {
+            "id": "fl",
+            "type": "action",
+            "text": "Crystalloid 500-1000 mL/h"
+          },
+          {
+            "id": "k",
+            "type": "decision",
+            "text": "K+ < 3.5 mmol/L?"
+          },
+          {
+            "id": "kfirst",
+            "type": "action",
+            "text": "KCl 10 mmol/h; hold insulin until K+ > 3.5",
+            "severity": "critical"
+          },
+          {
+            "id": "ins",
+            "type": "action",
+            "text": "Insulin 0.1 units/kg/h; KCl 20-30 mmol/L if K+ 3.5-5.0"
+          },
+          {
+            "id": "g",
+            "type": "decision",
+            "text": "Glucose < 250 mg/dL?"
+          },
+          {
+            "id": "dex",
+            "type": "action",
+            "text": "Add 5-10% dextrose; insulin 0.05 units/kg/h"
+          },
+          {
+            "id": "res",
+            "type": "decision",
+            "text": "Ketones < 0.6 and pH ≥ 7.3 or HCO3- ≥ 18?"
+          },
+          {
+            "id": "sc",
+            "type": "end",
+            "text": "SC basal-bolus; stop IV after 1-2 h overlap"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "fl"
+          },
+          {
+            "from": "fl",
+            "to": "k"
+          },
+          {
+            "from": "k",
+            "to": "kfirst",
+            "label": "Yes"
+          },
+          {
+            "from": "kfirst",
+            "to": "ins",
+            "label": "K+ > 3.5"
+          },
+          {
+            "from": "k",
+            "to": "ins",
+            "label": "No"
+          },
+          {
+            "from": "ins",
+            "to": "g"
+          },
+          {
+            "from": "g",
+            "to": "dex",
+            "label": "Yes"
+          },
+          {
+            "from": "g",
+            "to": "ins",
+            "label": "No, continue"
+          },
+          {
+            "from": "dex",
+            "to": "res"
+          },
+          {
+            "from": "res",
+            "to": "sc",
+            "label": "Yes"
+          },
+          {
+            "from": "res",
+            "to": "dex",
+            "label": "No, continue"
+          }
+        ],
+        "refs": [
+          "ada2024"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "- Insulin deficiency plus counter-regulatory hormones drive lipolysis and ketogenesis; osmotic diuresis causes total-body K+ deficit of 3-6 mmol/kg even if serum K+ is high.",
+        "evidence": "- **ADA/EASD/JBDS/AACE/DTS 2024 consensus:** new glucose threshold (≥ 200 mg/dL or known diabetes), β-hydroxybutyrate-based diagnosis and resolution, balanced crystalloids acceptable.",
+        "controversies": "- Early SC basal insulin during IV infusion shortens time to resolution in small studies without more hypoglycaemia.",
+        "indiaNotes": "- Reported inpatient DKA mortality in India has been as high as 30% in some series, mostly due to late presentation and infection. Ketosis-prone type 2 diabetes is common."
+      },
+      "drugIds": [
+        "insulin-regular",
+        "dextrose",
+        "potassium-chloride",
+        "sodium-bicarbonate"
+      ],
+      "calculatorIds": [
+        "anion-gap",
+        "corrected-sodium-glucose",
+        "serum-osmolality"
+      ],
+      "references": [
+        "ada2024"
+      ],
+      "quiz": [
+        {
+          "id": "dka-q1",
+          "stem": "DKA, K+ 3.1 mmol/L. Next step:",
+          "options": [
+            "Start insulin 0.1 U/kg/h",
+            "KCl 10 mmol/h and delay insulin",
+            "Bicarbonate",
+            "Dextrose"
+          ],
+          "answerIndex": 1,
+          "explanation": "Insulin would drive K+ lower."
+        },
+        {
+          "id": "dka-q2",
+          "stem": "DKA resolution (ADA 2024):",
+          "options": [
+            "Glucose < 200",
+            "Ketones < 0.6 mmol/L and pH ≥ 7.3 or HCO3- ≥ 18",
+            "Normal anion gap",
+            "Negative urine ketones"
+          ],
+          "answerIndex": 1,
+          "explanation": "Anion gap and urine ketones mislead."
+        },
+        {
+          "id": "dka-q3",
+          "stem": "On empagliflozin, glucose 170 mg/dL, BHB 5.2, pH 7.12:",
+          "options": [
+            "Not DKA",
+            "Euglycaemic DKA: dextrose + insulin from the start",
+            "HHS",
+            "Lactic acidosis only"
+          ],
+          "answerIndex": 1,
+          "explanation": "SGLT2 inhibitor-associated euglycaemic DKA."
+        }
+      ]
+    },
+    {
+      "id": "hhs",
+      "title": "Hyperosmolar hyperglycaemic state (HHS)",
+      "summary": "HHS = glucose ≥ 600 mg/dL, effective osmolality > 300 mOsm/kg, minimal ketosis and no significant acidosis. Rehydrate first and slowly; fall in osmolality 3-8 mOsm/kg/h and in Na+ ≤ 10 mmol/L/24 h; low-dose insulin 0.05 units/kg/h once glucose stops falling with fluid alone.",
+      "viewKey": "topic:endocrine-metabolic-emergencies/hhs",
+      "uiHints": {
+        "icon": "syringe",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Glucose ≥ 600 mg/dL; calculated effective osmolality > 300 mOsm/kg (or total > 320); β-hydroxybutyrate < 3.0 mmol/L (urine ketones < 2+); pH ≥ 7.3 and HCO3- ≥ 15 mmol/L.",
+          "refs": [
+            "ada2024"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "0-4 h",
+            "title": "Fluids",
+            "detail": "0.9% saline or balanced crystalloid 500-1000 mL/h for 2-4 h; deficit is ~100-220 mL/kg; correct over 24-48 h.",
+            "refs": [
+              "ada2024"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Watch",
+            "title": "Sodium may rise",
+            "detail": "A rising Na+ as glucose falls is expected (1.6 mmol/L per 100 mg/dL); switch to 0.45% saline only if osmolality is not falling despite positive balance.",
+            "refs": [
+              "ada2024"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Insulin",
+            "title": "Low dose, later",
+            "detail": "0.05 units/kg/h when glucose stops falling with fluids alone (or immediately if mixed DKA/HHS with BHB ≥ 3: 0.1 units/kg/h). Glucose fall ≤ 90-120 mg/dL/h.",
+            "refs": [
+              "ada2024"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Targets",
+            "title": "Rates",
+            "detail": "Osmolality fall 3-8 mOsm/kg/h; Na+ fall ≤ 10 mmol/L/24 h; keep glucose 200-300 mg/dL in the first 24 h."
+          },
+          {
+            "n": 5,
+            "time": "Prevent",
+            "title": "Complications",
+            "detail": "Prophylactic LMWH (prothrombotic state), pressure care, look for infection, MI, stroke. Resolution: osmolality < 300, UO > 0.5 mL/kg/h, cognition improved, glucose < 250.",
+            "refs": [
+              "ada2024"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "insulin-regular",
+            "role": "HHS without significant ketosis",
+            "route": "IV infusion",
+            "dose": "0.05 units/kg/h, started when glucose no longer falls with fluids",
+            "workedExample": "80 kg: 4 units/h",
+            "refs": [
+              "ada2024"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Seizures or worsening GCS during treatment: too-rapid osmolality fall; cerebral oedema or osmotic demyelination."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Treating HHS like DKA with high-dose insulin early, causing rapid osmotic shifts and circulatory collapse."
+          },
+          {
+            "text": "Starting hypotonic fluids because Na+ rises early."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Calculate effective osmolality every 1-2 h at the start; plot glucose, Na+ and osmolality on a chart."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "HHS",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Glucose ≥ 600, osm > 300, BHB < 3"
+          },
+          {
+            "id": "fl",
+            "type": "action",
+            "text": "Isotonic fluid 500-1000 mL/h; check K+"
+          },
+          {
+            "id": "gl",
+            "type": "decision",
+            "text": "Glucose still falling with fluids?"
+          },
+          {
+            "id": "cont",
+            "type": "action",
+            "text": "Continue fluids alone; recheck hourly"
+          },
+          {
+            "id": "ins",
+            "type": "action",
+            "text": "Insulin 0.05 units/kg/h"
+          },
+          {
+            "id": "osm",
+            "type": "decision",
+            "text": "Osmolality falling 3-8 mOsm/kg/h?"
+          },
+          {
+            "id": "half",
+            "type": "action",
+            "text": "0.45% saline if osmolality not falling despite positive balance"
+          },
+          {
+            "id": "end1",
+            "type": "end",
+            "text": "Continue; LMWH; treat trigger until resolved"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "fl"
+          },
+          {
+            "from": "fl",
+            "to": "gl"
+          },
+          {
+            "from": "gl",
+            "to": "cont",
+            "label": "Yes"
+          },
+          {
+            "from": "cont",
+            "to": "gl"
+          },
+          {
+            "from": "gl",
+            "to": "ins",
+            "label": "No"
+          },
+          {
+            "from": "ins",
+            "to": "osm"
+          },
+          {
+            "from": "osm",
+            "to": "end1",
+            "label": "Yes"
+          },
+          {
+            "from": "osm",
+            "to": "half",
+            "label": "Not falling"
+          },
+          {
+            "from": "half",
+            "to": "end1"
+          }
+        ],
+        "refs": [
+          "ada2024"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **ADA 2024 consensus**, drawing on JBDS HHS guidance: delayed low-dose insulin and slow osmolar correction.",
+        "indiaNotes": "- Elderly people with untreated type 2 diabetes, infections (UTI, pneumonia) and summer dehydration are the classic Indian presentation; mortality is 5-10× that of DKA."
+      },
+      "drugIds": [
+        "insulin-regular"
+      ],
+      "calculatorIds": [
+        "serum-osmolality",
+        "corrected-sodium-glucose"
+      ],
+      "references": [
+        "ada2024"
+      ],
+      "quiz": [
+        {
+          "id": "hhs-q1",
+          "stem": "Insulin in HHS without ketosis:",
+          "options": [
+            "0.1 units/kg/h immediately",
+            "0.05 units/kg/h once glucose stops falling with fluids",
+            "No insulin ever",
+            "SC only"
+          ],
+          "answerIndex": 1,
+          "explanation": "Fluids alone lower glucose initially."
+        },
+        {
+          "id": "hhs-q2",
+          "stem": "Target fall in osmolality:",
+          "options": [
+            "3-8 mOsm/kg/h",
+            "20 mOsm/kg/h",
+            "1 mOsm/kg/day",
+            "No limit"
+          ],
+          "answerIndex": 0,
+          "explanation": "Avoid neurological complications."
+        },
+        {
+          "id": "hhs-q3",
+          "stem": "Na+ rises from 140 to 146 as glucose falls 400 mg/dL. Action:",
+          "options": [
+            "Switch to 5% dextrose",
+            "Expected; continue isotonic fluid if osmolality falling",
+            "Stop fluids",
+            "Give 3% saline"
+          ],
+          "answerIndex": 1,
+          "explanation": "Corrected Na+ rises as glucose drops."
+        }
+      ]
+    },
+    {
+      "id": "adrenal-crisis",
+      "title": "Adrenal crisis",
+      "summary": "Unexplained shock, vomiting, hyponatraemia, hyperkalaemia or hypoglycaemia in someone at risk (steroid use, Addison's, pituitary disease): give hydrocortisone 100 mg IV immediately after a random cortisol, without waiting for results, plus 1 L isotonic fluid in the first hour.",
+      "viewKey": "topic:endocrine-metabolic-emergencies/adrenal-crisis",
+      "uiHints": {
+        "icon": "syringe",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Suspect",
+            "title": "Who",
+            "detail": "Long-term or recently stopped glucocorticoids (including inhaled/topical high dose), known Addison's or hypopituitarism, post-partum haemorrhage (Sheehan's), adrenal haemorrhage on anticoagulants or in meningococcaemia, TB or HIV adrenalitis, checkpoint inhibitors, etomidate."
+          },
+          {
+            "n": 2,
+            "time": "0 min",
+            "title": "Treat now",
+            "detail": "Draw random cortisol (+ ACTH if possible), then hydrocortisone 100 mg IV/IM bolus. Do not wait for results or a stimulation test.",
+            "refs": [
+              "es-ai2016"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "0-1 h",
+            "title": "Fluids",
+            "detail": "1 L 0.9% saline (or 5% dextrose in saline if hypoglycaemic) within the first hour, then guided by haemodynamics.",
+            "refs": [
+              "es-ai2016"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "24 h",
+            "title": "Continue",
+            "detail": "Hydrocortisone 200 mg/24 h as continuous infusion or 50 mg IV every 6 h; taper to oral maintenance over 1-3 days once the trigger is controlled.",
+            "refs": [
+              "es-ai2016"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Later",
+            "title": "Prevent",
+            "detail": "Sick-day rules (double oral dose during febrile illness), steroid card, IM hydrocortisone emergency kit; treat the trigger (infection, surgery, missed doses)."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "hydrocortisone",
+            "role": "Adrenal crisis",
+            "route": "IV or IM",
+            "dose": "100 mg bolus, then 200 mg/24 h infusion or 50 mg 6-hourly",
+            "notes": "Children: 50 mg/m² (approx. 2 mg/kg, max 100 mg) bolus.",
+            "refs": [
+              "es-ai2016"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Refractory hypotension in a patient on long-term steroids: give hydrocortisone even before a cortisol level returns."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Giving dexamethasone instead (no mineralocorticoid effect) unless doing a stimulation test."
+          },
+          {
+            "text": "Starting thyroxine before steroids in combined hypopituitarism (can precipitate crisis)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Hyperkalaemia suggests primary (adrenal) failure; secondary (pituitary) failure usually has normal K+."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Suspected adrenal crisis",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Shock/vomiting/hyponatraemia in at-risk patient"
+          },
+          {
+            "id": "draw",
+            "type": "action",
+            "text": "Random cortisol ± ACTH"
+          },
+          {
+            "id": "hc",
+            "type": "action",
+            "text": "Hydrocortisone 100 mg IV now",
+            "severity": "critical"
+          },
+          {
+            "id": "fl",
+            "type": "action",
+            "text": "1 L 0.9% saline over 1 h; check glucose"
+          },
+          {
+            "id": "resp",
+            "type": "decision",
+            "text": "Haemodynamic improvement?"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Hydrocortisone 200 mg/24 h; treat trigger; taper over 1-3 days"
+          },
+          {
+            "id": "other",
+            "type": "end",
+            "text": "Continue steroid; look for other shock causes"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "draw"
+          },
+          {
+            "from": "draw",
+            "to": "hc"
+          },
+          {
+            "from": "hc",
+            "to": "fl"
+          },
+          {
+            "from": "fl",
+            "to": "resp"
+          },
+          {
+            "from": "resp",
+            "to": "cont",
+            "label": "Yes"
+          },
+          {
+            "from": "resp",
+            "to": "other",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "es-ai2016"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Endocrine Society 2016:** immediate parenteral hydrocortisone 100 mg, then 200 mg/24 h; fluid resuscitation with isotonic saline.",
+        "indiaNotes": "- Over-the-counter steroid use (including adulterated ayurvedic/herbal preparations) and tuberculous adrenalitis are important Indian causes; Sheehan's syndrome still occurs."
+      },
+      "drugIds": [
+        "hydrocortisone",
+        "dextrose"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "es-ai2016"
+      ],
+      "quiz": [
+        {
+          "id": "adrenal-crisis-q1",
+          "stem": "First drug in suspected adrenal crisis:",
+          "options": [
+            "Dexamethasone 4 mg",
+            "Hydrocortisone 100 mg IV",
+            "Fludrocortisone",
+            "Prednisolone 5 mg PO"
+          ],
+          "answerIndex": 1,
+          "explanation": "High-dose hydrocortisone has mineralocorticoid effect."
+        },
+        {
+          "id": "adrenal-crisis-q2",
+          "stem": "Maintenance in the first 24 h:",
+          "options": [
+            "200 mg/24 h",
+            "20 mg/24 h",
+            "1 g/24 h",
+            "None"
+          ],
+          "answerIndex": 0,
+          "explanation": "Continuous infusion or 50 mg 6-hourly."
+        },
+        {
+          "id": "adrenal-crisis-q3",
+          "stem": "Hyperkalaemia favours:",
+          "options": [
+            "Secondary adrenal insufficiency",
+            "Primary adrenal insufficiency",
+            "SIADH",
+            "Hypothyroidism"
+          ],
+          "answerIndex": 1,
+          "explanation": "Aldosterone deficiency."
+        }
+      ]
+    },
+    {
+      "id": "thyroid-emergencies",
+      "title": "Thyroid storm and myxoedema coma",
+      "summary": "Thyroid storm: Burch-Wartofsky score ≥ 45 → β-blocker, thionamide (PTU preferred), iodine ≥ 1 h later, hydrocortisone, cooling and treatment of the trigger. Myxoedema coma: supportive care, hydrocortisone first, then thyroxine.",
+      "viewKey": "topic:endocrine-metabolic-emergencies/thyroid-emergencies",
+      "uiHints": {
+        "icon": "syringe",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Storm",
+            "title": "Diagnose",
+            "detail": "Fever, tachycardia/AF, heart failure, agitation/delirium, GI/hepatic dysfunction with thyrotoxicosis. Burch-Wartofsky ≥ 45 highly suggestive; 25-44 impending storm.",
+            "refs": [
+              "bwps1993",
+              "ata2016"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Storm",
+            "title": "β-block",
+            "detail": "Propranolol 60-80 mg every 4 h (also reduces T4→T3); esmolol infusion if haemodynamically fragile.",
+            "refs": [
+              "ata2016"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Storm",
+            "title": "Block synthesis",
+            "detail": "PTU 500-1000 mg load then 250 mg every 4 h (or methimazole 60-80 mg/day).",
+            "refs": [
+              "ata2016"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Storm",
+            "title": "Block release",
+            "detail": "Iodine at least 1 h after the thionamide: SSKI 5 drops (0.25 mL) every 6 h or Lugol's iodine.",
+            "refs": [
+              "ata2016"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Storm",
+            "title": "Steroid + support",
+            "detail": "Hydrocortisone 300 mg IV load then 100 mg every 8 h; paracetamol and active cooling (avoid aspirin); fluids; treat infection. Plasmapheresis or urgent thyroidectomy if refractory.",
+            "refs": [
+              "ata2016"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Myxoedema",
+            "title": "Recognise",
+            "detail": "Hypothermia, coma, bradycardia, hypoventilation (hypercapnia), hyponatraemia, hypoglycaemia in long-standing hypothyroidism, often triggered by infection, cold, sedatives."
+          },
+          {
+            "n": 7,
+            "time": "Myxoedema",
+            "title": "Treat",
+            "detail": "Hydrocortisone 100 mg IV 8-hourly until adrenal insufficiency excluded, then levothyroxine IV 200-400 mcg load and 1.6 mcg/kg/day × 0.75 IV (lower doses in elderly/cardiac); ventilate for hypercapnia; passive rewarming.",
+            "refs": [
+              "ata2014"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "propylthiouracil",
+            "role": "Thyroid storm",
+            "route": "Oral/NG",
+            "dose": "500-1000 mg load, then 250 mg every 4 h",
+            "refs": [
+              "ata2016"
+            ]
+          },
+          {
+            "drugId": "hydrocortisone",
+            "role": "Thyroid storm",
+            "route": "IV",
+            "dose": "300 mg load, then 100 mg every 8 h",
+            "refs": [
+              "ata2016"
+            ]
+          },
+          {
+            "drugId": "levothyroxine",
+            "role": "Myxoedema coma",
+            "route": "IV (NG if IV unavailable)",
+            "dose": "200-400 mcg load, then 1.6 mcg/kg/day × 0.75 IV daily",
+            "workedExample": "70 kg, no cardiac disease: 300 mcg IV, then ~85 mcg IV daily",
+            "verify": "NG regimens (e.g. 300-500 mcg load) are used in India where IV is unavailable; confirm with local endocrinology.",
+            "refs": [
+              "ata2014"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "bwps",
+            "title": "Burch-Wartofsky point scale (summary)",
+            "columns": [
+              "Domain",
+              "Points"
+            ],
+            "rows": [
+              [
+                "Temperature 37.2-37.7 / 37.8-38.2 / 38.3-38.8 / 38.9-39.3 / 39.4-39.9 / ≥ 40 °C",
+                "5 / 10 / 15 / 20 / 25 / 30"
+              ],
+              [
+                "CNS: mild agitation / delirium, psychosis, lethargy / seizure or coma",
+                "10 / 20 / 30"
+              ],
+              [
+                "GI-hepatic: diarrhoea, vomiting, abdominal pain / unexplained jaundice",
+                "10 / 20"
+              ],
+              [
+                "Heart rate 99-109 / 110-119 / 120-129 / 130-139 / ≥ 140",
+                "5 / 10 / 15 / 20 / 25"
+              ],
+              [
+                "Heart failure: mild (oedema) / moderate (bibasal crackles) / severe (pulmonary oedema)",
+                "5 / 10 / 15"
+              ],
+              [
+                "Atrial fibrillation",
+                "10"
+              ],
+              [
+                "Precipitating event",
+                "10"
+              ]
+            ],
+            "caption": "Score ≥ 45 highly suggestive of storm; 25-44 impending; < 25 unlikely.",
+            "refs": [
+              "bwps1993"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Thyroid storm with low-output heart failure: β-blockers can precipitate collapse; use esmolol with echo guidance."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Giving iodine before the thionamide (fuels hormone synthesis)."
+          },
+          {
+            "text": "Full-dose thyroxine without steroid cover in myxoedema coma."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Free T4/T3 levels do not separate storm from uncomplicated thyrotoxicosis; the diagnosis is clinical."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Thyroid storm",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Thyrotoxicosis + organ dysfunction"
+          },
+          {
+            "id": "bw",
+            "type": "decision",
+            "text": "BWPS ≥ 45 (or 25-44 with clinical concern)?"
+          },
+          {
+            "id": "std",
+            "type": "end",
+            "text": "Treat thyrotoxicosis; monitor"
+          },
+          {
+            "id": "bb",
+            "type": "action",
+            "text": "Propranolol (esmolol if unstable)"
+          },
+          {
+            "id": "ptu",
+            "type": "action",
+            "text": "PTU 500-1000 mg load then 250 mg q4h"
+          },
+          {
+            "id": "iod",
+            "type": "action",
+            "text": "Iodine ≥ 1 h after PTU"
+          },
+          {
+            "id": "hc",
+            "type": "action",
+            "text": "Hydrocortisone 300 mg then 100 mg q8h; cool"
+          },
+          {
+            "id": "ref",
+            "type": "decision",
+            "text": "Improving in 24-48 h?"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Continue; treat trigger"
+          },
+          {
+            "id": "pex",
+            "type": "end",
+            "text": "Plasmapheresis / thyroidectomy"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "bw"
+          },
+          {
+            "from": "bw",
+            "to": "std",
+            "label": "No"
+          },
+          {
+            "from": "bw",
+            "to": "bb",
+            "label": "Yes"
+          },
+          {
+            "from": "bb",
+            "to": "ptu"
+          },
+          {
+            "from": "ptu",
+            "to": "iod"
+          },
+          {
+            "from": "iod",
+            "to": "hc"
+          },
+          {
+            "from": "hc",
+            "to": "ref"
+          },
+          {
+            "from": "ref",
+            "to": "cont",
+            "label": "Yes"
+          },
+          {
+            "from": "ref",
+            "to": "pex",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "ata2016"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **ATA 2016 (hyperthyroidism)** and **ATA 2014 (hypothyroidism)** guidelines; Burch & Wartofsky 1993 scoring system.",
+        "indiaNotes": "- Untreated Graves' disease and post-partum presentations are common. Lugol's iodine is cheap and available; IV levothyroxine is not widely stocked."
+      },
+      "drugIds": [
+        "propylthiouracil",
+        "propranolol",
+        "hydrocortisone",
+        "levothyroxine"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "ata2016",
+        "ata2014",
+        "bwps1993"
+      ],
+      "quiz": [
+        {
+          "id": "thyroid-emergencies-q1",
+          "stem": "Order of drugs in thyroid storm:",
+          "options": [
+            "Iodine then PTU",
+            "PTU then iodine ≥ 1 h later",
+            "Iodine alone",
+            "Thyroxine"
+          ],
+          "answerIndex": 1,
+          "explanation": "Block synthesis before giving substrate."
+        },
+        {
+          "id": "thyroid-emergencies-q2",
+          "stem": "In myxoedema coma, before thyroxine give:",
+          "options": [
+            "Propranolol",
+            "Hydrocortisone",
+            "Iodine",
+            "Insulin"
+          ],
+          "answerIndex": 1,
+          "explanation": "Co-existing adrenal insufficiency."
+        },
+        {
+          "id": "thyroid-emergencies-q3",
+          "stem": "BWPS ≥ 45 means:",
+          "options": [
+            "Storm unlikely",
+            "Impending storm",
+            "Highly suggestive of storm",
+            "Myxoedema"
+          ],
+          "answerIndex": 2,
+          "explanation": "25-44 impending."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Burch-Wartofsky table",
+          "reason": "Point bands transcribed from the 1993 scale; check against the original table before release."
+        }
+      ]
+    },
+    {
+      "id": "icu-glucose-control",
+      "title": "Glucose control in the ICU",
+      "summary": "Start an insulin protocol when glucose is persistently ≥ 180 mg/dL, titrate to 140-200 mg/dL (not 80-139), monitor at least hourly while unstable, and treat hypoglycaemia immediately.",
+      "viewKey": "topic:endocrine-metabolic-emergencies/icu-glucose-control",
+      "uiHints": {
+        "icon": "syringe",
+        "accent": "standard"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Trigger",
+            "title": "≥ 180 mg/dL twice",
+            "detail": "Two consecutive values ≥ 180 mg/dL (10 mmol/L): review glucose sources (dextrose, feeds, steroids) and start an IV insulin protocol.",
+            "refs": [
+              "sccm-glucose2024"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Target",
+            "title": "140-200 mg/dL",
+            "detail": "SCCM 2024 suggests against an 80-139 mg/dL target because of hypoglycaemia. NICE-SUGAR (81-108 mg/dL) increased 90-day mortality (27.5% vs 24.9%).",
+            "refs": [
+              "sccm-glucose2024",
+              "nicesugar"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Route",
+            "title": "IV infusion",
+            "detail": "Continuous IV insulin with an explicit decision-support protocol rather than SC sliding scales in unstable patients.",
+            "refs": [
+              "sccm-glucose2024"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Monitor",
+            "title": "≤ 1 hourly",
+            "detail": "Hourly checks during instability; arterial or venous samples on a blood-gas analyser are more accurate than capillary meters in shock or oedema.",
+            "refs": [
+              "sccm-glucose2024"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Transition",
+            "title": "When stable and eating",
+            "detail": "Basal-bolus SC insulin, ~60-80% of the stable 24-h IV requirement, basal overlapping 1-2 h before stopping infusion.",
+            "refs": [
+              "ada-hosp2025"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Glucose < 70 mg/dL on insulin: stop insulin, give dextrose, find the cause (feed interrupted, renal failure, sepsis, liver failure)."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Insulin continues at full rate when enteral feeds are stopped for procedures."
+          },
+          {
+            "text": "Capillary meter readings in shocked, oedematous patients."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "TGC-fast (no early PN): tight control 80-110 mg/dL did not change ICU length of stay or mortality."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "ICU hyperglycaemia",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Glucose ≥ 180 mg/dL"
+          },
+          {
+            "id": "rep",
+            "type": "decision",
+            "text": "Persistent on repeat?"
+          },
+          {
+            "id": "obs",
+            "type": "end",
+            "text": "Observe; review glucose sources"
+          },
+          {
+            "id": "ins",
+            "type": "action",
+            "text": "IV insulin protocol, target 140-200 mg/dL"
+          },
+          {
+            "id": "hypo",
+            "type": "decision",
+            "text": "Glucose < 70 mg/dL?"
+          },
+          {
+            "id": "treat",
+            "type": "action",
+            "text": "Stop insulin; 15-25 g IV dextrose; recheck 15 min",
+            "severity": "critical"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Continue; transition to SC when stable"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "rep"
+          },
+          {
+            "from": "rep",
+            "to": "obs",
+            "label": "No"
+          },
+          {
+            "from": "rep",
+            "to": "ins",
+            "label": "Yes"
+          },
+          {
+            "from": "ins",
+            "to": "hypo"
+          },
+          {
+            "from": "hypo",
+            "to": "treat",
+            "label": "Yes"
+          },
+          {
+            "from": "treat",
+            "to": "ins",
+            "label": "Restart at lower rate"
+          },
+          {
+            "from": "hypo",
+            "to": "cont",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "sccm-glucose2024"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **NICE-SUGAR 2009 (n = 6104):** intensive 81-108 mg/dL increased mortality and severe hypoglycaemia.\n- **TGC-fast 2023 (n = 9230):** tight control without early parenteral nutrition: no difference in ICU dependency or mortality.\n- **SCCM 2024:** suggest against 80-139 mg/dL; target 140-200 mg/dL.",
+        "controversies": "- Individualised targets based on HbA1c (higher targets in chronic poor control) are promising but unproven.",
+        "indiaNotes": "- Nursing workload and cost of strips limit hourly checks; a written nurse-driven protocol with blood-gas glucose is a practical compromise."
+      },
+      "drugIds": [
+        "insulin-regular",
+        "dextrose"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "sccm-glucose2024",
+        "nicesugar",
+        "tgcfast",
+        "ada-hosp2025"
+      ],
+      "quiz": [
+        {
+          "id": "icu-glucose-control-q1",
+          "stem": "SCCM 2024 target for insulin infusion in critically ill adults:",
+          "options": [
+            "80-110 mg/dL",
+            "80-139 mg/dL",
+            "140-200 mg/dL",
+            "200-250 mg/dL"
+          ],
+          "answerIndex": 2,
+          "explanation": "Avoids hypoglycaemia."
+        },
+        {
+          "id": "icu-glucose-control-q2",
+          "stem": "NICE-SUGAR showed intensive control:",
+          "options": [
+            "Reduced mortality",
+            "Increased mortality",
+            "No hypoglycaemia",
+            "Reduced AKI"
+          ],
+          "answerIndex": 1,
+          "explanation": "27.5% vs 24.9% at 90 days."
+        },
+        {
+          "id": "icu-glucose-control-q3",
+          "stem": "Most accurate bedside glucose in shock:",
+          "options": [
+            "Capillary meter",
+            "Blood-gas analyser sample",
+            "Urine glucose",
+            "CGM"
+          ],
+          "answerIndex": 1,
+          "explanation": "Capillary samples are unreliable with poor perfusion."
+        }
+      ]
+    },
+    {
+      "id": "hypoglycaemia",
+      "title": "Hypoglycaemia",
+      "summary": "Glucose < 70 mg/dL (level 1), < 54 mg/dL (level 2) or any value with cognitive impairment needing help (level 3). Give 15-25 g IV dextrose or IM glucagon, recheck at 15 min, then find and treat the cause; sulphonylurea overdose needs prolonged dextrose ± octreotide.",
+      "viewKey": "topic:endocrine-metabolic-emergencies/hypoglycaemia",
+      "uiHints": {
+        "icon": "syringe",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Level 1 < 70 mg/dL (3.9 mmol/L); level 2 < 54 mg/dL (3.0 mmol/L); level 3 severe event with altered mental or physical state requiring assistance.",
+          "refs": [
+            "ada-hosp2025"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Treat",
+            "detail": "Conscious and able to swallow: 15-20 g oral glucose. Otherwise IV: 15-25 g dextrose (150-200 mL 10% or 50 mL 50% via a large vein). No IV: glucagon 1 mg IM/SC.",
+            "refs": [
+              "ada-hosp2025"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "15 min",
+            "title": "Recheck",
+            "detail": "Repeat treatment until > 70 mg/dL, then give a long-acting carbohydrate or start a 10% dextrose infusion."
+          },
+          {
+            "n": 3,
+            "time": "Cause",
+            "title": "Find it",
+            "detail": "Insulin (including stopped feeds), sulphonylureas, sepsis, liver failure, AKI/CKD, adrenal insufficiency, alcohol, malaria and quinine, insulinoma, salicylates."
+          },
+          {
+            "n": 4,
+            "time": "Sulphonylurea",
+            "title": "Prolonged risk",
+            "detail": "Admit for ≥ 24 h; continuous 10% dextrose; octreotide 50-100 mcg SC every 6-8 h for recurrent hypoglycaemia."
+          },
+          {
+            "n": 5,
+            "time": "Thiamine",
+            "title": "If malnourished",
+            "detail": "Thiamine 100 mg IV with or before dextrose in alcohol use or malnutrition (do not delay glucose)."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "dextrose",
+            "role": "Severe hypoglycaemia",
+            "route": "IV",
+            "dose": "15-25 g (150-200 mL 10%, or 50 mL 50%)",
+            "workedExample": "Glucose 38 mg/dL, GCS 9: 50 mL 50% dextrose via antecubital vein, recheck 15 min → 112 mg/dL; start 10% dextrose 50 mL/h",
+            "refs": [
+              "ada-hosp2025"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Recurrent hypoglycaemia after an oral hypoglycaemic overdose: needs 24-72 h of monitoring."
+          },
+          {
+            "text": "Hypoglycaemia in septic shock or malaria: marker of severity."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Glucagon in liver failure, starvation or alcohol (no glycogen stores)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Always check glucose in anyone with altered sensorium, seizures or focal deficits."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Hypoglycaemia",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Glucose < 70 mg/dL"
+          },
+          {
+            "id": "swallow",
+            "type": "decision",
+            "text": "Alert and can swallow?"
+          },
+          {
+            "id": "oral",
+            "type": "action",
+            "text": "15-20 g oral glucose"
+          },
+          {
+            "id": "iv",
+            "type": "decision",
+            "text": "IV access?"
+          },
+          {
+            "id": "dex",
+            "type": "action",
+            "text": "15-25 g IV dextrose",
+            "severity": "critical"
+          },
+          {
+            "id": "glu",
+            "type": "action",
+            "text": "Glucagon 1 mg IM"
+          },
+          {
+            "id": "rc",
+            "type": "decision",
+            "text": "> 70 mg/dL at 15 min?"
+          },
+          {
+            "id": "find",
+            "type": "end",
+            "text": "Maintenance carbohydrate/10% dextrose; find cause"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "swallow"
+          },
+          {
+            "from": "swallow",
+            "to": "oral",
+            "label": "Yes"
+          },
+          {
+            "from": "swallow",
+            "to": "iv",
+            "label": "No"
+          },
+          {
+            "from": "iv",
+            "to": "dex",
+            "label": "Yes"
+          },
+          {
+            "from": "iv",
+            "to": "glu",
+            "label": "No"
+          },
+          {
+            "from": "oral",
+            "to": "rc"
+          },
+          {
+            "from": "dex",
+            "to": "rc"
+          },
+          {
+            "from": "glu",
+            "to": "rc"
+          },
+          {
+            "from": "rc",
+            "to": "find",
+            "label": "Yes"
+          },
+          {
+            "from": "rc",
+            "to": "iv",
+            "label": "No, repeat"
+          }
+        ],
+        "refs": [
+          "ada-hosp2025"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **ADA Standards 2025 (hospital care):** classification, protocols for prevention and treatment.",
+        "indiaNotes": "- Sulphonylurea use (glimepiride, gliclazide) is widespread; accidental or intentional overdose and elderly patients with CKD are common causes. Severe malaria and quinine cause hypoglycaemia."
+      },
+      "drugIds": [
+        "dextrose"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "ada-hosp2025"
+      ],
+      "quiz": [
+        {
+          "id": "hypoglycaemia-q1",
+          "stem": "Level 2 hypoglycaemia threshold:",
+          "options": [
+            "< 70 mg/dL",
+            "< 54 mg/dL",
+            "< 40 mg/dL",
+            "< 80 mg/dL"
+          ],
+          "answerIndex": 1,
+          "explanation": "ADA classification."
+        },
+        {
+          "id": "hypoglycaemia-q2",
+          "stem": "Unconscious, no IV access:",
+          "options": [
+            "Oral glucose",
+            "Glucagon 1 mg IM",
+            "Insulin",
+            "Wait"
+          ],
+          "answerIndex": 1,
+          "explanation": "Glucagon IM/SC."
+        },
+        {
+          "id": "hypoglycaemia-q3",
+          "stem": "Recurrent hypoglycaemia after glimepiride overdose – add:",
+          "options": [
+            "Octreotide",
+            "Glucagon infusion only",
+            "Insulin",
+            "Propranolol"
+          ],
+          "answerIndex": 0,
+          "explanation": "Suppresses insulin release."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "insulin-regular",
+      "name": "Regular (soluble) insulin infusion",
+      "class": "Insulin",
+      "indications": "DKA, HHS, ICU hyperglycaemia, hyperkalaemia.",
+      "adultDose": "DKA: fixed rate 0.1 units/kg/h (optional 0.1 units/kg bolus). HHS: 0.05 units/kg/h once glucose stops falling with fluids alone. ICU hyperglycaemia: protocol-driven to 140-180 mg/dL.",
+      "preparationIndia": "50 units in 50 mL 0.9% saline (1 unit/mL). Check vial strength: U-40 (40 units/mL) or U-100.",
+      "cautions": "Hypokalaemia (do not start if K+ < 3.5 mmol/L), hypoglycaemia, hypophosphataemia.",
+      "refs": [
+        "ada2024"
+      ]
+    },
+    {
+      "id": "hydrocortisone",
+      "name": "Hydrocortisone",
+      "class": "Glucocorticoid (with mineralocorticoid activity at high dose)",
+      "indications": "Adrenal crisis; thyroid storm; myxoedema coma (until adrenal insufficiency excluded); septic shock.",
+      "adultDose": "Adrenal crisis: 100 mg IV bolus, then 200 mg/24 h (continuous or 50 mg every 6 h); taper over 1-3 days once stable. Thyroid storm: 300 mg IV load then 100 mg every 8 h.",
+      "preparationIndia": "Hydrocortisone sodium succinate 100 mg vials.",
+      "cautions": "Hyperglycaemia, hypernatraemia; fludrocortisone not needed while hydrocortisone > 50 mg/day.",
+      "refs": [
+        "es-ai2016",
+        "ata2016"
+      ]
+    },
+    {
+      "id": "propylthiouracil",
+      "name": "Propylthiouracil (PTU)",
+      "class": "Thionamide",
+      "indications": "Thyroid storm (preferred: also blocks T4→T3 conversion); first-trimester pregnancy.",
+      "adultDose": "500-1000 mg loading dose orally/NG, then 250 mg every 4 h.",
+      "cautions": "Hepatotoxicity, agranulocytosis. Methimazole 60-80 mg/day is the alternative.",
+      "refs": [
+        "ata2016"
+      ]
+    },
+    {
+      "id": "propranolol",
+      "name": "Propranolol",
+      "class": "Non-selective β-blocker",
+      "indications": "Thyroid storm; thyrotoxic periodic paralysis.",
+      "adultDose": "60-80 mg orally/NG every 4 h; IV 1 mg slowly, repeat. Esmolol infusion if unstable or asthma.",
+      "cautions": "Thyrotoxic cardiomyopathy with low output: use esmolol cautiously with echo guidance.",
+      "refs": [
+        "ata2016"
+      ]
+    },
+    {
+      "id": "levothyroxine",
+      "name": "Levothyroxine",
+      "class": "Thyroid hormone",
+      "indications": "Myxoedema coma.",
+      "adultDose": "IV 200-400 mcg load, then 1.6 mcg/kg/day (IV dose ≈ 75% of oral); lower doses in elderly/cardiac disease.",
+      "preparationIndia": "Tablets (NG) widely available; IV vials limited.",
+      "cautions": "Precipitates myocardial ischaemia and arrhythmias; give hydrocortisone first.",
+      "verify": "Confirm NG dosing regimen used locally when IV is unavailable.",
+      "refs": [
+        "ata2014"
+      ]
+    },
+    {
+      "id": "dextrose",
+      "name": "Dextrose (glucose)",
+      "class": "Carbohydrate",
+      "indications": "Hypoglycaemia; with insulin in DKA once glucose < 250 mg/dL; hyperkalaemia.",
+      "adultDose": "Hypoglycaemia: 15-25 g IV (e.g. 150-200 mL 10% or 50 mL 25% dextrose / 50 mL 50% via large vein), recheck at 15 min.",
+      "preparationIndia": "5%, 10%, 25% (25 mL ampoules) and 50% available.",
+      "cautions": "50% is sclerosant: use a large vein and flush.",
+      "refs": [
+        "ada-hosp2025"
+      ]
+    },
+    {
+      "id": "potassium-chloride",
+      "name": "Potassium chloride",
+      "class": "Electrolyte",
+      "indications": "Potassium replacement during DKA/HHS treatment.",
+      "adultDose": "K+ < 3.5: 10 mmol/h IV before insulin. K+ 3.5-5.0: 20-30 mmol per litre of IV fluid to keep K+ 4-5 mmol/L.",
+      "preparationIndia": "15% KCl 10 mL ampoule = 20 mmol; premixed bags preferred.",
+      "cautions": "Never as an undiluted bolus; reduce in oliguria.",
+      "refs": [
+        "ada2024"
+      ]
+    },
+    {
+      "id": "sodium-bicarbonate",
+      "name": "Sodium bicarbonate",
+      "class": "Alkalinising agent",
+      "indications": "DKA with pH < 7.0 only.",
+      "adultDose": "100 mmol (100 mL 8.4%) in 400 mL sterile water over 2 h; repeat until pH > 7.0.",
+      "cautions": "Hypokalaemia, paradoxical CSF acidosis, cerebral oedema risk in children.",
+      "refs": [
+        "ada2024"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "ada2024",
+      "citation": "Umpierrez GE, Davis GM, ElSayed NA, et al. Hyperglycemic crises in adults with diabetes: a consensus report. Diabetes Care. 2024;47(8):1257-1275",
+      "url": "https://doi.org/10.2337/dci24-0032",
+      "year": 2024,
+      "doi": "10.2337/dci24-0032",
+      "type": "consensus"
+    },
+    {
+      "id": "es-ai2016",
+      "citation": "Bornstein SR, Allolio B, Arlt W, et al. Diagnosis and treatment of primary adrenal insufficiency: an Endocrine Society clinical practice guideline. J Clin Endocrinol Metab. 2016;101(2):364-389",
+      "url": "https://doi.org/10.1210/jc.2015-1710",
+      "year": 2016,
+      "doi": "10.1210/jc.2015-1710",
+      "type": "guideline"
+    },
+    {
+      "id": "ata2016",
+      "citation": "Ross DS, Burch HB, Cooper DS, et al. 2016 American Thyroid Association guidelines for diagnosis and management of hyperthyroidism and other causes of thyrotoxicosis. Thyroid. 2016;26(10):1343-1421",
+      "url": "https://doi.org/10.1089/thy.2016.0229",
+      "year": 2016,
+      "doi": "10.1089/thy.2016.0229",
+      "type": "guideline"
+    },
+    {
+      "id": "ata2014",
+      "citation": "Jonklaas J, Bianco AC, Bauer AJ, et al. Guidelines for the treatment of hypothyroidism: prepared by the American Thyroid Association task force on thyroid hormone replacement. Thyroid. 2014;24(12):1670-1751",
+      "url": "https://doi.org/10.1089/thy.2014.0028",
+      "year": 2014,
+      "doi": "10.1089/thy.2014.0028",
+      "type": "guideline"
+    },
+    {
+      "id": "bwps1993",
+      "citation": "Burch HB, Wartofsky L. Life-threatening thyrotoxicosis. Thyroid storm. Endocrinol Metab Clin North Am. 1993;22(2):263-277",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8325286/",
+      "year": 1993,
+      "type": "review"
+    },
+    {
+      "id": "nicesugar",
+      "citation": "NICE-SUGAR Study Investigators. Intensive versus conventional glucose control in critically ill patients. N Engl J Med. 2009;360(13):1283-1297",
+      "url": "https://doi.org/10.1056/NEJMoa0810625",
+      "year": 2009,
+      "doi": "10.1056/NEJMoa0810625",
+      "type": "trial"
+    },
+    {
+      "id": "tgcfast",
+      "citation": "Gunst J, Debaveye Y, Güiza F, et al. Tight blood-glucose control without early parenteral nutrition in the ICU (TGC-fast). N Engl J Med. 2023;389(13):1180-1190",
+      "url": "https://doi.org/10.1056/NEJMoa2304855",
+      "year": 2023,
+      "doi": "10.1056/NEJMoa2304855",
+      "type": "trial"
+    },
+    {
+      "id": "sccm-glucose2024",
+      "citation": "Honarmand K, Sirimaturos M, Hirshberg EL, et al. Society of Critical Care Medicine guidelines on glycemic control for critically ill children and adults 2024. Crit Care Med. 2024;52(4):e161-e181",
+      "url": "https://doi.org/10.1097/CCM.0000000000006174",
+      "year": 2024,
+      "doi": "10.1097/CCM.0000000000006174",
+      "type": "guideline"
+    },
+    {
+      "id": "ada-hosp2025",
+      "citation": "American Diabetes Association Professional Practice Committee. 16. Diabetes care in the hospital: Standards of Care in Diabetes—2025. Diabetes Care. 2025;48(Suppl 1):S321-S334",
+      "url": "https://doi.org/10.2337/dc25-S016",
+      "year": 2025,
+      "doi": "10.2337/dc25-S016",
+      "type": "guideline"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Insulin strength",
+      "reason": "Both U-40 and U-100 regular insulin are sold in India; infusion recipes must specify units, not mL."
+    },
+    {
+      "item": "IV levothyroxine",
+      "reason": "IV levothyroxine is not widely available in India; NG levothyroxine is commonly used in myxoedema coma. Confirm local availability."
+    }
+  ]
+}

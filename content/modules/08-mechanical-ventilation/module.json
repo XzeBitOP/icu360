@@ -1,0 +1,1820 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "mechanical-ventilation",
+  "number": 8,
+  "folder": "08-mechanical-ventilation",
+  "section": {
+    "id": "B",
+    "title": "Airway and respiratory"
+  },
+  "phase": 1,
+  "title": "Mechanical ventilation",
+  "summary": "Set safe initial ventilation for any intubated adult, understand volume, pressure and spontaneous modes, troubleshoot alarms and sudden deterioration with DOPES, read basic waveforms to detect asynchrony and auto-PEEP, liberate patients with daily SAT-SBT, and time tracheostomy sensibly.",
+  "tags": [
+    "mechanical ventilation",
+    "ventilator settings",
+    "tidal volume",
+    "predicted body weight",
+    "PEEP",
+    "plateau pressure",
+    "driving pressure",
+    "volume control",
+    "pressure control",
+    "pressure support",
+    "SIMV",
+    "PRVC",
+    "APRV",
+    "alarms",
+    "DOPES",
+    "auto-PEEP",
+    "waveforms",
+    "asynchrony",
+    "weaning",
+    "SBT",
+    "extubation",
+    "tracheostomy"
+  ],
+  "relatedModules": [
+    "airway-management",
+    "oxygen-hfnc-niv",
+    "ards-refractory-hypoxaemia",
+    "acid-base-abg",
+    "analgesia-sedation-delirium",
+    "procedures",
+    "icu-care-bundles-infection-prevention"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "gauge",
+    "accent": "high"
+  },
+  "viewKey": "module:mechanical-ventilation",
+  "topics": [
+    {
+      "id": "initial-settings",
+      "title": "Initial ventilator settings",
+      "summary": "Calculate predicted body weight from height, start volume control at 6-8 mL/kg PBW, PEEP 5-8, rate to match minute ventilation need, FiO2 to SpO2 92-96%, then check plateau and driving pressure and an ABG at 30 min.",
+      "viewKey": "topic:mechanical-ventilation/initial-settings",
+      "uiHints": {
+        "icon": "gauge",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Measure height",
+            "detail": "Calculate PBW: men 50 + 0.91 × (height cm − 152.4); women 45.5 + 0.91 × (height cm − 152.4). Never use actual weight for tidal volume.",
+            "refs": [
+              "armanet"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0 min",
+            "title": "Mode",
+            "detail": "Volume assist-control (VC-AC) is a safe default: set Vt, rate, PEEP, FiO2, flow or Ti."
+          },
+          {
+            "n": 3,
+            "time": "0 min",
+            "title": "Tidal volume",
+            "detail": "6-8 mL/kg PBW (6 mL/kg in ARDS). Non-ARDS patients: low (6) vs intermediate (8-10) Vt gave similar outcomes (PReVENT); avoid > 8.",
+            "refs": [
+              "armanet",
+              "prevent-vt"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "0 min",
+            "title": "Rate",
+            "detail": "14-20/min; higher (25-30) if severe metabolic acidosis to match pre-intubation compensation; low (8-12) in asthma/COPD."
+          },
+          {
+            "n": 5,
+            "time": "0 min",
+            "title": "PEEP and FiO2",
+            "detail": "PEEP 5-8 cmH2O; FiO2 1.0 initially, then titrate to SpO2 92-96% (88-92% in hypercapnic COPD)."
+          },
+          {
+            "n": 6,
+            "time": "0 min",
+            "title": "Flow and I:E",
+            "detail": "Inspiratory flow 50-60 L/min (decelerating) or Ti ~0.8-1 s; I:E 1:2; longer expiration in obstructive disease."
+          },
+          {
+            "n": 7,
+            "time": "5 min",
+            "title": "Check mechanics",
+            "detail": "Inspiratory hold: plateau pressure (Pplat) ≤ 30 cmH2O; driving pressure (Pplat − PEEP) ≤ 15 cmH2O; expiratory hold for intrinsic PEEP.",
+            "refs": [
+              "armanet"
+            ]
+          },
+          {
+            "n": 8,
+            "time": "30 min",
+            "title": "ABG",
+            "detail": "Adjust rate for pH/PaCO2 (new rate = old rate × old PaCO2 ÷ target PaCO2); adjust FiO2/PEEP for oxygenation."
+          },
+          {
+            "n": 9,
+            "time": "Ongoing",
+            "title": "Alarms and safety",
+            "detail": "Set high pressure alarm ~10 cmH2O above peak; low minute volume and apnoea alarms; head up 30-45°; sedation plan."
+          }
+        ],
+        "tables": [
+          {
+            "id": "pbw-table",
+            "title": "Predicted body weight and 6-8 mL/kg tidal volumes",
+            "columns": [
+              "Height (cm)",
+              "PBW men (kg)",
+              "Vt 6-8 mL/kg men",
+              "PBW women (kg)",
+              "Vt 6-8 mL/kg women"
+            ],
+            "rows": [
+              [
+                "150",
+                "47.8",
+                "290-380",
+                "43.3",
+                "260-350"
+              ],
+              [
+                "155",
+                "52.4",
+                "310-420",
+                "47.9",
+                "290-380"
+              ],
+              [
+                "160",
+                "57.0",
+                "340-460",
+                "52.4",
+                "310-420"
+              ],
+              [
+                "165",
+                "61.5",
+                "370-490",
+                "57.0",
+                "340-460"
+              ],
+              [
+                "170",
+                "66.0",
+                "400-530",
+                "61.5",
+                "370-490"
+              ],
+              [
+                "175",
+                "70.6",
+                "420-560",
+                "66.1",
+                "400-530"
+              ],
+              [
+                "180",
+                "75.1",
+                "450-600",
+                "70.6",
+                "420-560"
+              ]
+            ],
+            "caption": "PBW = 50 (men) or 45.5 (women) + 0.91 × (height cm − 152.4).",
+            "refs": [
+              "armanet"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Plateau > 30 or driving pressure > 15 cmH2O: reduce Vt, reassess PEEP."
+          },
+          {
+            "text": "Peak pressure high with normal plateau: airway resistance problem (tube kink, secretions, bronchospasm)."
+          },
+          {
+            "text": "Peak and plateau both high: compliance problem (ARDS, pneumothorax, abdominal distension, mainstem intubation)."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Using actual weight in an obese or short patient (tidal volume far too large)."
+          },
+          {
+            "text": "Ventilating a severe metabolic acidosis at rate 14: pH crashes after intubation."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Indian adults are often shorter; a 155 cm woman has a PBW of ~48 kg, so 6 mL/kg ≈ 290 mL."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "First 30 minutes on the ventilator",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Patient intubated"
+          },
+          {
+            "id": "pbw",
+            "type": "action",
+            "text": "Measure height → PBW → Vt 6-8 mL/kg"
+          },
+          {
+            "id": "set",
+            "type": "action",
+            "text": "VC-AC: rate 14-20 (match acidosis), PEEP 5-8, FiO2 1.0"
+          },
+          {
+            "id": "mech",
+            "type": "decision",
+            "text": "Pplat ≤ 30 and ΔP ≤ 15?"
+          },
+          {
+            "id": "lower",
+            "type": "action",
+            "text": "Reduce Vt (to 4-6 mL/kg if needed); review PEEP and cause"
+          },
+          {
+            "id": "abg",
+            "type": "action",
+            "text": "ABG at 30 min; titrate rate and FiO2/PEEP"
+          },
+          {
+            "id": "ards",
+            "type": "decision",
+            "text": "Meets ARDS criteria?"
+          },
+          {
+            "id": "ardsp",
+            "type": "end",
+            "text": "ARDS pathway (module 9)",
+            "severity": "high"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Continue; daily SAT/SBT screen"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "pbw"
+          },
+          {
+            "from": "pbw",
+            "to": "set"
+          },
+          {
+            "from": "set",
+            "to": "mech"
+          },
+          {
+            "from": "mech",
+            "to": "abg",
+            "label": "Yes"
+          },
+          {
+            "from": "mech",
+            "to": "lower",
+            "label": "No"
+          },
+          {
+            "from": "lower",
+            "to": "abg"
+          },
+          {
+            "from": "abg",
+            "to": "ards"
+          },
+          {
+            "from": "ards",
+            "to": "ardsp",
+            "label": "Yes"
+          },
+          {
+            "from": "ards",
+            "to": "cont",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "armanet"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Ventilator-induced lung injury arises from volutrauma (overdistension), barotrauma, atelectrauma (cyclic opening and closing) and biotrauma (inflammatory mediators). The aerated \"baby lung\" in ARDS can be small, so tidal volumes must be scaled to predicted, not actual, size.",
+        "evidence": "- **ARMA (2000):** 6 vs 12 mL/kg PBW with Pplat ≤ 30 reduced mortality in ARDS (31.0% vs 39.8%).\n- **PReVENT (2018):** in non-ARDS ventilated patients, low (target 6) vs intermediate (target 10) Vt did not change ventilator-free days.",
+        "controversies": "- Optimal Vt in non-ARDS patients; driving pressure as a target remains observational.",
+        "indiaNotes": "- Height is often not recorded in Indian ICUs; measure with a tape on the bed (heel to vertex) or estimate from ulna length. Write PBW on the ventilator chart."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "predicted-body-weight",
+        "tidal-volume-pbw",
+        "driving-pressure",
+        "static-compliance"
+      ],
+      "references": [
+        "armanet",
+        "prevent-vt"
+      ],
+      "quiz": [
+        {
+          "id": "initial-settings-q1",
+          "stem": "PBW of a 160 cm man:",
+          "options": [
+            "50 kg",
+            "57 kg",
+            "65 kg",
+            "70 kg"
+          ],
+          "answerIndex": 1,
+          "explanation": "50 + 0.91 × (160 − 152.4) = 56.9 kg."
+        },
+        {
+          "id": "initial-settings-q2",
+          "stem": "Peak pressure 45, plateau 18 cmH2O. Most likely cause?",
+          "options": [
+            "ARDS",
+            "Pneumothorax",
+            "Kinked tube or bronchospasm",
+            "Abdominal compartment syndrome"
+          ],
+          "answerIndex": 2,
+          "explanation": "High peak with normal plateau = resistance problem."
+        },
+        {
+          "id": "initial-settings-q3",
+          "stem": "Upper limit of plateau pressure:",
+          "options": [
+            "20 cmH2O",
+            "30 cmH2O",
+            "40 cmH2O",
+            "50 cmH2O"
+          ],
+          "answerIndex": 1,
+          "explanation": "Pplat ≤ 30 cmH2O (ARMA)."
+        }
+      ]
+    },
+    {
+      "id": "modes",
+      "title": "Ventilator modes made simple",
+      "summary": "Every mode is defined by what the machine controls (volume or pressure), what triggers a breath (time or patient) and what ends it (volume, time or flow). Use assist-control early, pressure support when the patient breathes well, and know what to monitor for each.",
+      "viewKey": "topic:mechanical-ventilation/modes",
+      "uiHints": {
+        "icon": "gauge",
+        "accent": "standard"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Know",
+            "title": "Volume control (VC-AC)",
+            "detail": "Set Vt and flow; pressure varies with compliance and resistance. Monitor peak and plateau pressures. Guaranteed minute ventilation."
+          },
+          {
+            "n": 2,
+            "time": "Know",
+            "title": "Pressure control (PC-AC)",
+            "detail": "Set inspiratory pressure and Ti; Vt varies with mechanics. Monitor exhaled Vt and minute volume. Decelerating flow, often more comfortable."
+          },
+          {
+            "n": 3,
+            "time": "Know",
+            "title": "Dual modes (PRVC / VC+ / AutoFlow)",
+            "detail": "Set target Vt; machine adjusts pressure breath to breath. Risk: if the patient pulls hard, the machine lowers support."
+          },
+          {
+            "n": 4,
+            "time": "Know",
+            "title": "Pressure support (PSV/CPAP)",
+            "detail": "Patient-triggered, flow-cycled (usually 25% of peak flow). Set PS and PEEP. No backup rate: set apnoea ventilation. Used for weaning.",
+            "refs": [
+              "boles2007"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Know",
+            "title": "SIMV",
+            "detail": "Mandatory breaths synchronised with spontaneous breaths. Slows weaning compared with PS or SBTs; avoid as a weaning mode.",
+            "refs": [
+              "boles2007"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Know",
+            "title": "APRV",
+            "detail": "Long high pressure with brief releases; rescue in some ARDS units; needs expertise."
+          }
+        ],
+        "tables": [
+          {
+            "id": "modes-table",
+            "title": "Common modes",
+            "columns": [
+              "Mode",
+              "Set",
+              "Varies",
+              "Monitor",
+              "Use"
+            ],
+            "rows": [
+              [
+                "VC-AC",
+                "Vt, rate, PEEP, FiO2, flow",
+                "Airway pressure",
+                "Peak, plateau",
+                "Default initial mode"
+              ],
+              [
+                "PC-AC",
+                "Pinsp, Ti, rate, PEEP, FiO2",
+                "Tidal volume",
+                "Exhaled Vt, MV",
+                "Asynchrony, high peak pressures"
+              ],
+              [
+                "PRVC / VC+",
+                "Target Vt, rate, PEEP",
+                "Pressure (auto-adjusted)",
+                "Vt, pressure",
+                "Convenience; caution with high drive"
+              ],
+              [
+                "PSV / CPAP",
+                "PS, PEEP, FiO2, trigger, cycle %",
+                "Vt, rate",
+                "RR, Vt, RSBI",
+                "Weaning, comfort"
+              ],
+              [
+                "SIMV (+PS)",
+                "Vt or Pinsp, rate, PS",
+                "Spontaneous breaths",
+                "Total RR",
+                "Not recommended for weaning"
+              ],
+              [
+                "APRV",
+                "P-high, P-low, T-high, T-low",
+                "Vt",
+                "Release volumes",
+                "Rescue ARDS (experienced units)"
+              ]
+            ],
+            "refs": [
+              "boles2007"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "PSV with no apnoea backup in a sedated patient."
+          },
+          {
+            "text": "Pressure-controlled mode with falling exhaled Vt: compliance has worsened (secretions, oedema, pneumothorax)."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Assuming PC is 'safer' for the lung: large Vt can still occur with strong patient effort."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Change only one variable at a time and record why."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Choosing a mode",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Ventilated patient"
+          },
+          {
+            "id": "sed",
+            "type": "decision",
+            "text": "Deeply sedated, unstable, or paralysed?"
+          },
+          {
+            "id": "ac",
+            "type": "end",
+            "text": "Assist-control (VC or PC)"
+          },
+          {
+            "id": "drive",
+            "type": "decision",
+            "text": "Spontaneous breathing with reasonable drive and stable FiO2 ≤ 0.5, PEEP ≤ 8?"
+          },
+          {
+            "id": "ps",
+            "type": "end",
+            "text": "Pressure support; daily SBT"
+          },
+          {
+            "id": "ac2",
+            "type": "end",
+            "text": "Stay on assist-control; reassess daily"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "sed"
+          },
+          {
+            "from": "sed",
+            "to": "ac",
+            "label": "Yes"
+          },
+          {
+            "from": "sed",
+            "to": "drive",
+            "label": "No"
+          },
+          {
+            "from": "drive",
+            "to": "ps",
+            "label": "Yes"
+          },
+          {
+            "from": "drive",
+            "to": "ac2",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "boles2007"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- Weaning studies in the 1990s showed SIMV prolongs weaning compared with PSV or T-piece trials; the ERS 2007 consensus endorses PS or T-piece SBTs.",
+        "indiaNotes": "- Many Indian ICUs use a mix of ventilator brands; a local \"mode names\" card next to each ventilator reduces errors."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "boles2007",
+        "ats-chest2017"
+      ],
+      "quiz": [
+        {
+          "id": "modes-q1",
+          "stem": "In volume control, what varies breath to breath?",
+          "options": [
+            "Tidal volume",
+            "Airway pressure",
+            "Rate",
+            "PEEP"
+          ],
+          "answerIndex": 1,
+          "explanation": "Pressure varies with compliance and resistance."
+        },
+        {
+          "id": "modes-q2",
+          "stem": "Which mode is not recommended for weaning?",
+          "options": [
+            "Pressure support",
+            "T-piece",
+            "SIMV",
+            "CPAP"
+          ],
+          "answerIndex": 2,
+          "explanation": "SIMV prolongs weaning."
+        },
+        {
+          "id": "modes-q3",
+          "stem": "Pressure support breaths are cycled off by:",
+          "options": [
+            "Time",
+            "Volume",
+            "Flow falling to a set % of peak",
+            "Pressure"
+          ],
+          "answerIndex": 2,
+          "explanation": "Flow cycling (often 25% of peak flow)."
+        }
+      ]
+    },
+    {
+      "id": "alarms-dopes",
+      "title": "Alarms and sudden deterioration (DOPES)",
+      "summary": "If a ventilated patient suddenly desaturates or becomes hypotensive, take them off the ventilator and hand-bag with 100% O2, then work through DOPES: Displacement, Obstruction, Pneumothorax, Equipment, Stacking.",
+      "viewKey": "topic:mechanical-ventilation/alarms-dopes",
+      "uiHints": {
+        "icon": "gauge",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 s",
+            "title": "Look at the patient, not the screen",
+            "detail": "Colour, chest movement, SpO2 trace quality, ETCO2 waveform, BP."
+          },
+          {
+            "n": 2,
+            "time": "0-30 s",
+            "title": "Hand-bag on 100% O2",
+            "detail": "Disconnect from the ventilator and bag with a PEEP valve. Easy to bag and patient improves = equipment problem; hard to bag = patient or tube problem."
+          },
+          {
+            "n": 3,
+            "time": "D",
+            "title": "Displacement",
+            "detail": "ETCO2 lost or reduced? Tube depth changed? Cuff leak, voice? Reintubate if displaced."
+          },
+          {
+            "n": 4,
+            "time": "O",
+            "title": "Obstruction",
+            "detail": "Pass a suction catheter; secretions, blood, kinked or bitten tube. Change tube if it will not pass."
+          },
+          {
+            "n": 5,
+            "time": "P",
+            "title": "Pneumothorax",
+            "detail": "Unilateral air entry, absent lung sliding, rising pressures, hypotension: needle or finger decompression, then drain."
+          },
+          {
+            "n": 6,
+            "time": "E",
+            "title": "Equipment",
+            "detail": "Ventilator, circuit disconnection, O2 supply, HME blockage, wet filters."
+          },
+          {
+            "n": 7,
+            "time": "S",
+            "title": "Stacking (auto-PEEP)",
+            "detail": "Obstructive disease, high rate: disconnect for 20-30 s, then reduce rate, increase expiratory time."
+          },
+          {
+            "n": 8,
+            "time": "Then",
+            "title": "Other causes",
+            "detail": "Bronchospasm, PE, pulmonary oedema, mucus plug with lobar collapse, abdominal distension, patient effort/asynchrony, sedation wearing off."
+          }
+        ],
+        "tables": [
+          {
+            "id": "alarm-table",
+            "title": "Common alarms",
+            "columns": [
+              "Alarm",
+              "Likely causes",
+              "Action"
+            ],
+            "rows": [
+              [
+                "High pressure",
+                "Secretions, biting, kinked tube, bronchospasm, pneumothorax, coughing, asynchrony",
+                "Suction, bite block, bronchodilator, examine chest, sedation review"
+              ],
+              [
+                "Low pressure / low Vt / disconnect",
+                "Circuit disconnection, cuff leak, tube displacement, broncho-pleural fistula",
+                "Check circuit, cuff pressure, tube depth"
+              ],
+              [
+                "High RR",
+                "Pain, agitation, acidosis, hypoxaemia, auto-triggering from leak or water",
+                "Treat cause; check trigger sensitivity"
+              ],
+              [
+                "Low minute volume / apnoea",
+                "Over-sedation on PSV, neuromuscular weakness",
+                "Switch to assist-control; reduce sedation"
+              ],
+              [
+                "High PEEP / auto-PEEP",
+                "Air trapping",
+                "Lower rate, shorter Ti, bronchodilator"
+              ]
+            ],
+            "refs": [
+              "boles2007"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Hypotension + rising pressures + unilateral silent chest: tension pneumothorax."
+          },
+          {
+            "text": "Loss of ETCO2 waveform: assume displacement until proven otherwise."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Silencing an alarm without finding the cause."
+          },
+          {
+            "text": "Increasing FiO2 while a tube is blocked."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Keep a bag-valve-mask with PEEP valve, suction and spare tube at every ventilated bed."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "DOPES",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Sudden desaturation or hypotension on ventilator"
+          },
+          {
+            "id": "bag",
+            "type": "action",
+            "text": "Disconnect; hand-bag with 100% O2",
+            "severity": "critical"
+          },
+          {
+            "id": "better",
+            "type": "decision",
+            "text": "Patient improves with bagging?"
+          },
+          {
+            "id": "equip",
+            "type": "end",
+            "text": "Equipment or ventilator problem: fix circuit, settings, O2 supply"
+          },
+          {
+            "id": "etco2",
+            "type": "decision",
+            "text": "ETCO2 present, tube depth OK?"
+          },
+          {
+            "id": "displ",
+            "type": "end",
+            "text": "Displaced: reintubate",
+            "severity": "critical"
+          },
+          {
+            "id": "suct",
+            "type": "decision",
+            "text": "Suction catheter passes?"
+          },
+          {
+            "id": "obst",
+            "type": "end",
+            "text": "Obstructed: suction, change tube"
+          },
+          {
+            "id": "ptx",
+            "type": "decision",
+            "text": "Signs of pneumothorax?"
+          },
+          {
+            "id": "dec",
+            "type": "end",
+            "text": "Decompress and drain",
+            "severity": "critical"
+          },
+          {
+            "id": "stack",
+            "type": "end",
+            "text": "Consider stacking, bronchospasm, PE, oedema, plug; CXR, POCUS"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "bag"
+          },
+          {
+            "from": "bag",
+            "to": "better"
+          },
+          {
+            "from": "better",
+            "to": "equip",
+            "label": "Yes"
+          },
+          {
+            "from": "better",
+            "to": "etco2",
+            "label": "No"
+          },
+          {
+            "from": "etco2",
+            "to": "displ",
+            "label": "No"
+          },
+          {
+            "from": "etco2",
+            "to": "suct",
+            "label": "Yes"
+          },
+          {
+            "from": "suct",
+            "to": "obst",
+            "label": "No"
+          },
+          {
+            "from": "suct",
+            "to": "ptx",
+            "label": "Yes"
+          },
+          {
+            "from": "ptx",
+            "to": "dec",
+            "label": "Yes"
+          },
+          {
+            "from": "ptx",
+            "to": "stack",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "boles2007"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- DOPES is a widely taught mnemonic (originating in paediatric airway teaching) rather than a guideline recommendation; it provides a safe, systematic approach.",
+        "indiaNotes": "- Power and oxygen supply failures are real risks in some Indian hospitals: know where the backup cylinder and self-inflating bag are, and check UPS backup for ventilators."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "boles2007"
+      ],
+      "quiz": [
+        {
+          "id": "alarms-dopes-q1",
+          "stem": "First action when a ventilated patient suddenly desaturates:",
+          "options": [
+            "Increase PEEP",
+            "Disconnect and hand-bag with 100% O2",
+            "Order a chest X-ray",
+            "Increase sedation"
+          ],
+          "answerIndex": 1,
+          "explanation": "Hand-bagging separates machine problems from patient problems."
+        },
+        {
+          "id": "alarms-dopes-q2",
+          "stem": "The 'S' in DOPES stands for:",
+          "options": [
+            "Sedation",
+            "Stacking (auto-PEEP)",
+            "Sepsis",
+            "Secretions"
+          ],
+          "answerIndex": 1,
+          "explanation": "Breath stacking causes dynamic hyperinflation."
+        },
+        {
+          "id": "alarms-dopes-q3",
+          "stem": "Suction catheter will not pass the tube. Next?",
+          "options": [
+            "Increase FiO2",
+            "Change the tube",
+            "Give salbutamol",
+            "Increase rate"
+          ],
+          "answerIndex": 1,
+          "explanation": "A blocked tube must be replaced."
+        }
+      ],
+      "verify": [
+        {
+          "item": "DOPES source",
+          "reason": "Mnemonic from paediatric resuscitation teaching; the boles2007 reference supports general ventilator care rather than DOPES specifically."
+        }
+      ]
+    },
+    {
+      "id": "graphics-asynchrony",
+      "title": "Ventilator graphics, auto-PEEP and asynchrony",
+      "summary": "Read the pressure, flow and volume waveforms to spot auto-PEEP (expiratory flow not returning to zero), ineffective triggering, double triggering, and flow starvation, and fix each with a specific setting change.",
+      "viewKey": "topic:mechanical-ventilation/graphics-asynchrony",
+      "uiHints": {
+        "icon": "gauge",
+        "accent": "standard"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Look",
+            "title": "Flow-time curve",
+            "detail": "Expiratory flow should return to zero before the next breath. If not: auto-PEEP (air trapping)."
+          },
+          {
+            "n": 2,
+            "time": "Measure",
+            "title": "Expiratory hold",
+            "detail": "Total PEEP − set PEEP = intrinsic PEEP.",
+            "refs": [
+              "thille2006"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Spot",
+            "title": "Ineffective triggering",
+            "detail": "Dips in pressure or bumps in expiratory flow without a delivered breath: patient effort not sensed (auto-PEEP, over-assistance, weak effort). Fix: reduce PS or Vt, treat auto-PEEP, set external PEEP to ~70-80% of intrinsic PEEP in COPD, improve trigger.",
+            "refs": [
+              "thille2006"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Spot",
+            "title": "Double triggering",
+            "detail": "Two breaths stacked with no full exhalation: patient demand exceeds set Ti or Vt. Fix: increase Ti or Vt carefully, or switch to PS/PC; consider sedation if Vt targets matter (ARDS).",
+            "refs": [
+              "thille2006"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Spot",
+            "title": "Flow starvation",
+            "detail": "Scooped (concave) inspiratory pressure curve in volume control: increase flow or change to pressure mode."
+          },
+          {
+            "n": 6,
+            "time": "Spot",
+            "title": "Auto-triggering",
+            "detail": "Breaths without effort: circuit leak, water in tubing, cardiac oscillations, too-sensitive trigger."
+          },
+          {
+            "n": 7,
+            "time": "Spot",
+            "title": "Reverse triggering",
+            "detail": "Diaphragm contraction triggered by the passive breath in deeply sedated patients; may cause breath stacking."
+          }
+        ],
+        "tables": [
+          {
+            "id": "asynchrony-table",
+            "title": "Asynchrony: recognition and fix",
+            "columns": [
+              "Type",
+              "Waveform clue",
+              "Fix"
+            ],
+            "rows": [
+              [
+                "Ineffective trigger",
+                "Flow bump / pressure dip without a breath",
+                "Reduce PS/Vt, treat auto-PEEP, add PEEP (COPD), adjust trigger"
+              ],
+              [
+                "Double trigger",
+                "Two breaths back-to-back",
+                "Increase Ti or Vt, change mode, review sedation"
+              ],
+              [
+                "Flow starvation",
+                "Concave inspiratory pressure",
+                "Increase flow, pressure mode"
+              ],
+              [
+                "Premature cycling",
+                "Expiratory flow spike after short breath",
+                "Lower cycle %, increase Ti"
+              ],
+              [
+                "Delayed cycling",
+                "Pressure spike at end of inspiration",
+                "Raise cycle % (e.g. 40-50% in COPD)"
+              ],
+              [
+                "Auto-trigger",
+                "Regular breaths without effort",
+                "Fix leak/water, reduce trigger sensitivity"
+              ]
+            ],
+            "refs": [
+              "thille2006"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Auto-PEEP > 10 cmH2O with hypotension: disconnect, reduce rate."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Deep sedation to 'fix' asynchrony without trying ventilator adjustments."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "An asynchrony index > 10% is associated with longer ventilation (Thille 2006)."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Patient fighting the ventilator",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Patient-ventilator asynchrony suspected"
+          },
+          {
+            "id": "safe",
+            "type": "decision",
+            "text": "Hypoxaemic, hypotensive or distressed?"
+          },
+          {
+            "id": "dopes",
+            "type": "end",
+            "text": "Hand-bag and go to DOPES",
+            "severity": "critical"
+          },
+          {
+            "id": "flow",
+            "type": "decision",
+            "text": "Expiratory flow fails to reach zero?"
+          },
+          {
+            "id": "autopeep",
+            "type": "action",
+            "text": "Auto-PEEP: lower rate, shorten Ti, bronchodilator; external PEEP in COPD"
+          },
+          {
+            "id": "type",
+            "type": "decision",
+            "text": "Main waveform pattern?"
+          },
+          {
+            "id": "fixit",
+            "type": "action",
+            "text": "Apply specific fix (see table): trigger, Ti, flow, cycle %, PS level"
+          },
+          {
+            "id": "need",
+            "type": "action",
+            "text": "Treat drivers: pain, anxiety, acidosis, fever, hypoxaemia"
+          },
+          {
+            "id": "re",
+            "type": "end",
+            "text": "Reassess waveforms; sedate only if adjustments fail"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "safe"
+          },
+          {
+            "from": "safe",
+            "to": "dopes",
+            "label": "Yes"
+          },
+          {
+            "from": "safe",
+            "to": "flow",
+            "label": "No"
+          },
+          {
+            "from": "flow",
+            "to": "autopeep",
+            "label": "Yes"
+          },
+          {
+            "from": "flow",
+            "to": "type",
+            "label": "No"
+          },
+          {
+            "from": "autopeep",
+            "to": "type"
+          },
+          {
+            "from": "type",
+            "to": "fixit",
+            "label": "Identifiable asynchrony"
+          },
+          {
+            "from": "type",
+            "to": "need",
+            "label": "High respiratory drive"
+          },
+          {
+            "from": "fixit",
+            "to": "re"
+          },
+          {
+            "from": "need",
+            "to": "re"
+          }
+        ],
+        "refs": [
+          "thille2006"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Thille 2006:** a quarter of patients had an asynchrony index > 10%; ineffective triggering was most common and linked with higher PS and longer ventilation.",
+        "indiaNotes": "- Older ventilators may lack graphics; use clinical signs (accessory muscle use, chest movement not matching breaths) and ETCO2 waveforms."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "thille2006"
+      ],
+      "quiz": [
+        {
+          "id": "graphics-asynchrony-q1",
+          "stem": "Expiratory flow not returning to baseline indicates:",
+          "options": [
+            "Leak",
+            "Auto-PEEP",
+            "Low compliance",
+            "Normal"
+          ],
+          "answerIndex": 1,
+          "explanation": "Air trapping."
+        },
+        {
+          "id": "graphics-asynchrony-q2",
+          "stem": "Commonest asynchrony in Thille 2006:",
+          "options": [
+            "Double triggering",
+            "Ineffective triggering",
+            "Auto-triggering",
+            "Flow starvation"
+          ],
+          "answerIndex": 1,
+          "explanation": "Ineffective triggering, often from over-assistance."
+        },
+        {
+          "id": "graphics-asynchrony-q3",
+          "stem": "Concave inspiratory pressure curve in volume control means:",
+          "options": [
+            "Flow starvation",
+            "Pneumothorax",
+            "Leak",
+            "Auto-trigger"
+          ],
+          "answerIndex": 0,
+          "explanation": "Increase inspiratory flow or switch to a pressure mode."
+        }
+      ]
+    },
+    {
+      "id": "weaning-sbt",
+      "title": "Liberation: daily SAT and SBT",
+      "summary": "Screen every patient every morning. Pair a spontaneous awakening trial with a spontaneous breathing trial (30-120 min, pressure support 5-8 or T-piece). Extubate those who pass and can protect the airway; support high-risk patients after extubation.",
+      "viewKey": "topic:mechanical-ventilation/weaning-sbt",
+      "uiHints": {
+        "icon": "gauge",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Every morning",
+            "title": "Readiness screen",
+            "detail": "Cause improving; FiO2 ≤ 0.4-0.5 and PEEP ≤ 8 with SpO2 ≥ 90%; haemodynamically stable (no or low-dose vasopressor); some respiratory effort; able to follow commands is helpful.",
+            "refs": [
+              "boles2007",
+              "ely1996"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Every morning",
+            "title": "SAT",
+            "detail": "Stop or reduce sedation (keep analgesia). Fail: agitation, RR > 35, SpO2 < 88%, arrhythmia, distress. Restart at half dose if failed.",
+            "refs": [
+              "abc2008"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "If SAT passed",
+            "title": "SBT",
+            "detail": "Inspiratory pressure augmentation (PS 5-8, PEEP 0-5) rather than T-piece for the first SBT; 30 min (PS) to 120 min.",
+            "refs": [
+              "ats-chest2017",
+              "subira2019"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "During SBT",
+            "title": "Failure criteria",
+            "detail": "RR > 35 for > 5 min, SpO2 < 90%, HR > 140 or ± 20%, SBP > 180 or < 90, agitation, sweating, accessory muscle use. RSBI (RR/Vt in L) > 105 suggests failure.",
+            "refs": [
+              "boles2007"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Passed",
+            "title": "Extubate",
+            "detail": "Check cough, secretions, consciousness and cuff leak (if at risk). See module 6 for extubation technique.",
+            "refs": [
+              "ats-chest2017"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "High risk",
+            "title": "Post-extubation support",
+            "detail": "Age > 65, cardiac or respiratory disease, hypercapnia, prolonged ventilation: prophylactic NIV and/or HFNC.",
+            "refs": [
+              "ats-chest2017",
+              "highwean"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Failed",
+            "title": "Find why",
+            "detail": "Load (secretions, bronchospasm, oedema), capacity (weakness, low phosphate, sedation), cardiac (weaning-induced pulmonary oedema), neuro, anxiety. Rest on full support and retry in 24 h.",
+            "refs": [
+              "boles2007"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "weaning-categories",
+            "title": "Weaning categories (ERS 2007)",
+            "columns": [
+              "Category",
+              "Definition",
+              "Typical mortality"
+            ],
+            "rows": [
+              [
+                "Simple",
+                "Extubated after first SBT",
+                "~5%"
+              ],
+              [
+                "Difficult",
+                "Up to 3 SBTs or ≤ 7 days from first SBT",
+                "Higher"
+              ],
+              [
+                "Prolonged",
+                "> 3 failed SBTs or > 7 days after first SBT",
+                "Up to ~25-30%"
+              ]
+            ],
+            "refs": [
+              "boles2007"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Desaturation, rising BP and B-lines during SBT: weaning-induced pulmonary oedema; treat with diuretics/nitrates."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Not doing the SBT because the 'patient looks tired' (screen objectively)."
+          },
+          {
+            "text": "Long SBTs (2 h T-piece) in patients likely to pass: 30-min PS trials are as good."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "ABC trial: pairing SAT and SBT reduced ventilator days and 1-year mortality."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Daily SAT-SBT",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Every morning"
+          },
+          {
+            "id": "screen",
+            "type": "decision",
+            "text": "Passes safety screen (FiO2 ≤ 0.5, PEEP ≤ 8, stable)?"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Continue current support; screen tomorrow"
+          },
+          {
+            "id": "sat",
+            "type": "decision",
+            "text": "Passes SAT (sedation off)?"
+          },
+          {
+            "id": "restart",
+            "type": "end",
+            "text": "Restart sedation at half dose; retry tomorrow"
+          },
+          {
+            "id": "sbt",
+            "type": "decision",
+            "text": "Passes SBT (PS 5-8 for 30-120 min)?"
+          },
+          {
+            "id": "fail",
+            "type": "end",
+            "text": "Rest on full support; look for cause; retry in 24 h"
+          },
+          {
+            "id": "airway",
+            "type": "decision",
+            "text": "Airway protected (cough, secretions, GCS)?"
+          },
+          {
+            "id": "ext",
+            "type": "end",
+            "text": "Extubate; HFNC/NIV if high risk",
+            "severity": "high"
+          },
+          {
+            "id": "wait",
+            "type": "end",
+            "text": "Address airway issue; consider tracheostomy if prolonged"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "screen"
+          },
+          {
+            "from": "screen",
+            "to": "cont",
+            "label": "No"
+          },
+          {
+            "from": "screen",
+            "to": "sat",
+            "label": "Yes"
+          },
+          {
+            "from": "sat",
+            "to": "restart",
+            "label": "No"
+          },
+          {
+            "from": "sat",
+            "to": "sbt",
+            "label": "Yes"
+          },
+          {
+            "from": "sbt",
+            "to": "fail",
+            "label": "No"
+          },
+          {
+            "from": "sbt",
+            "to": "airway",
+            "label": "Yes"
+          },
+          {
+            "from": "airway",
+            "to": "ext",
+            "label": "Yes"
+          },
+          {
+            "from": "airway",
+            "to": "wait",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "ats-chest2017",
+          "abc2008"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Ely 1996:** daily screening + SBT shortened ventilation.\n- **ABC (2008):** paired SAT + SBT reduced ventilation time, ICU and hospital stay, and 1-year mortality.\n- **ATS/CHEST 2017:** SBT with inspiratory pressure augmentation (5-8 cmH2O) rather than T-piece; protocolised liberation; preventive NIV after extubation in high-risk patients.\n- **Subirà 2019:** 30-min PS 8 SBT led to more successful extubation than 2-h T-piece.",
+        "indiaNotes": "- Nurse- or physiotherapist-led weaning protocols work well in Indian ICUs with high patient-to-doctor ratios.\n- Check phosphate, magnesium and potassium in difficult weaning: deficiency is common with malnutrition."
+      },
+      "drugIds": [
+        "propofol",
+        "fentanyl"
+      ],
+      "calculatorIds": [
+        "rsbi"
+      ],
+      "references": [
+        "ats-chest2017",
+        "abc2008",
+        "ely1996",
+        "subira2019",
+        "boles2007",
+        "highwean"
+      ],
+      "quiz": [
+        {
+          "id": "weaning-sbt-q1",
+          "stem": "ATS/CHEST 2017 suggests the first SBT be conducted with:",
+          "options": [
+            "T-piece 2 h",
+            "Inspiratory pressure augmentation 5-8 cmH2O",
+            "SIMV",
+            "CPAP 15"
+          ],
+          "answerIndex": 1,
+          "explanation": "Pressure-augmented SBTs had higher success rates."
+        },
+        {
+          "id": "weaning-sbt-q2",
+          "stem": "An RSBI above which SBT failure is likely:",
+          "options": [
+            "50",
+            "80",
+            "105",
+            "200"
+          ],
+          "answerIndex": 2,
+          "explanation": "RR/Vt(L) > 105 breaths/min/L."
+        },
+        {
+          "id": "weaning-sbt-q3",
+          "stem": "The ABC trial paired SBT with:",
+          "options": [
+            "Early tracheostomy",
+            "Daily spontaneous awakening trial",
+            "Prone positioning",
+            "NIV"
+          ],
+          "answerIndex": 1,
+          "explanation": "Paired SAT and SBT."
+        }
+      ]
+    },
+    {
+      "id": "tracheostomy",
+      "title": "Tracheostomy: timing and care",
+      "summary": "Consider tracheostomy when ventilation is likely to be prolonged (usually after 7-10 days or earlier in severe neurological injury). Early routine tracheostomy does not improve survival. Know emergency management of a displaced or blocked tracheostomy.",
+      "viewKey": "topic:mechanical-ventilation/tracheostomy",
+      "uiHints": {
+        "icon": "gauge",
+        "accent": "standard"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Day 5-10",
+            "title": "Decide",
+            "detail": "Expected prolonged ventilation, failed weaning, poor airway protection (neurological injury), copious secretions, upper airway obstruction. Early (≤ 4 days) routine tracheostomy did not improve 30-day survival (TracMan).",
+            "refs": [
+              "tracman"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Choose",
+            "title": "Technique",
+            "detail": "Percutaneous dilatational (bedside, bronchoscopic guidance, ultrasound to map vessels) vs surgical (difficult anatomy, coagulopathy, high PEEP needs). See module 37."
+          },
+          {
+            "n": 3,
+            "time": "Care",
+            "title": "Daily",
+            "detail": "Humidification, inner cannula cleaning, cuff pressure 20-30 cmH2O, suction, stoma care, bedhead sign with tube size and type."
+          },
+          {
+            "n": 4,
+            "time": "Wean",
+            "title": "Decannulation path",
+            "detail": "Cuff deflation trials, speaking valve, capping trials, then decannulation when secretions are managed and cough is effective."
+          },
+          {
+            "n": 5,
+            "time": "Emergency",
+            "title": "Displaced or blocked trach",
+            "detail": "Call for help; O2 to face and stoma; remove inner cannula; pass suction catheter; if not patent deflate cuff, and if still not breathing remove the tube; oxygenate via mouth or stoma; reinsert or intubate orally (if not a laryngectomy)."
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Tube displaced < 7 days after insertion (immature tract): high risk; experienced airway operator."
+          },
+          {
+            "text": "Bleeding from stoma days after insertion: think tracheo-innominate fistula (sentinel bleed) – surgical emergency."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Forcing reinsertion into a false passage (surgical emphysema, no ventilation)."
+          },
+          {
+            "text": "Confusing a laryngectomy (no upper airway) with a tracheostomy."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Keep a spare tube one size smaller, tracheal dilator and suction at the bedside."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Tracheostomy emergency (simplified)",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Tracheostomy patient in respiratory distress"
+          },
+          {
+            "id": "o2",
+            "type": "action",
+            "text": "Call for help; O2 to face and stoma; capnography",
+            "severity": "critical"
+          },
+          {
+            "id": "inner",
+            "type": "action",
+            "text": "Remove inner cannula; pass suction catheter"
+          },
+          {
+            "id": "pat",
+            "type": "decision",
+            "text": "Tube patent and patient improving?"
+          },
+          {
+            "id": "ok",
+            "type": "end",
+            "text": "Continue care; find cause"
+          },
+          {
+            "id": "cuff",
+            "type": "action",
+            "text": "Deflate cuff"
+          },
+          {
+            "id": "pat2",
+            "type": "decision",
+            "text": "Breathing now?"
+          },
+          {
+            "id": "rem",
+            "type": "action",
+            "text": "Remove tracheostomy tube"
+          },
+          {
+            "id": "ox",
+            "type": "end",
+            "text": "Oxygenate via face (cover stoma) or stoma; oral intubation or reinsertion by expert",
+            "severity": "critical"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "o2"
+          },
+          {
+            "from": "o2",
+            "to": "inner"
+          },
+          {
+            "from": "inner",
+            "to": "pat"
+          },
+          {
+            "from": "pat",
+            "to": "ok",
+            "label": "Yes"
+          },
+          {
+            "from": "pat",
+            "to": "cuff",
+            "label": "No"
+          },
+          {
+            "from": "cuff",
+            "to": "pat2"
+          },
+          {
+            "from": "pat2",
+            "to": "ok",
+            "label": "Yes"
+          },
+          {
+            "from": "pat2",
+            "to": "rem",
+            "label": "No"
+          },
+          {
+            "from": "rem",
+            "to": "ox"
+          }
+        ],
+        "refs": [
+          "tracman"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **TracMan (2013):** early (day 1-4) vs late (day ≥ 10) tracheostomy did not change 30-day mortality; nearly half of the late group never needed one.\n- The UK National Tracheostomy Safety Project emergency algorithms are widely adopted for displaced or blocked tracheostomies.",
+        "controversies": "- Earlier tracheostomy in severe stroke or brain injury may help sedation and weaning (SETPOINT2 showed no functional benefit).",
+        "indiaNotes": "- Percutaneous tracheostomy is commonly performed by intensivists in India; ensure bronchoscopy or ultrasound support where possible."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "tracman",
+        "boles2007"
+      ],
+      "quiz": [
+        {
+          "id": "tracheostomy-q1",
+          "stem": "TracMan showed that early tracheostomy (≤ 4 days):",
+          "options": [
+            "Reduced mortality",
+            "Did not reduce 30-day mortality",
+            "Increased mortality",
+            "Shortened ICU stay by 2 weeks"
+          ],
+          "answerIndex": 1,
+          "explanation": "No survival benefit; many late-group patients never needed one."
+        },
+        {
+          "id": "tracheostomy-q2",
+          "stem": "Fresh bleeding from a tracheostomy at day 7 should make you think of:",
+          "options": [
+            "Granulation tissue only",
+            "Tracheo-innominate fistula",
+            "Normal healing",
+            "Pneumonia"
+          ],
+          "answerIndex": 1,
+          "explanation": "A sentinel bleed may precede catastrophic haemorrhage."
+        },
+        {
+          "id": "tracheostomy-q3",
+          "stem": "First step for a blocked tracheostomy:",
+          "options": [
+            "Deflate cuff",
+            "Remove inner cannula and pass suction",
+            "Reintubate orally",
+            "Give nebulised saline"
+          ],
+          "answerIndex": 1,
+          "explanation": "Remove the inner cannula and test patency."
+        }
+      ],
+      "verify": [
+        {
+          "item": "NTSP algorithm",
+          "reason": "Simplified from the National Tracheostomy Safety Project; not formally referenced here."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "propofol",
+      "name": "Propofol",
+      "class": "GABA-A agonist sedative",
+      "indications": "Light sedation for ventilated patients; allows daily sedation interruption.",
+      "adultDose": "0.5-4 mg/kg/h (≈ 5-50 mcg/kg/min). Avoid > 4 mg/kg/h for > 48 h.",
+      "preparationIndia": "1% (10 mg/mL) 20 mL and 50 mL vials; run undiluted in a 50 mL syringe.",
+      "cautions": "Hypotension; hypertriglyceridaemia (check TG every 48-72 h); propofol infusion syndrome (acidosis, rhabdomyolysis, arrhythmia) with high doses.",
+      "refs": [
+        "abc2008"
+      ]
+    },
+    {
+      "id": "fentanyl",
+      "name": "Fentanyl",
+      "class": "Opioid analgesic",
+      "indications": "Analgesia-first sedation in ventilated patients.",
+      "adultDose": "Infusion 0.5-2 mcg/kg/h; bolus 25-50 mcg as needed.",
+      "preparationIndia": "50 mcg/mL; 1000 mcg in 50 mL = 20 mcg/mL (or 500 mcg in 50 mL = 10 mcg/mL).",
+      "cautions": "Accumulates with prolonged infusion; ileus; chest wall rigidity with rapid boluses.",
+      "refs": [
+        "abc2008"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "armanet",
+      "citation": "Acute Respiratory Distress Syndrome Network. Ventilation with lower tidal volumes as compared with traditional tidal volumes for acute lung injury and the acute respiratory distress syndrome. N Engl J Med. 2000;342(18):1301-1308",
+      "url": "https://doi.org/10.1056/NEJM200005043421801",
+      "year": 2000,
+      "doi": "10.1056/NEJM200005043421801",
+      "type": "trial"
+    },
+    {
+      "id": "prevent-vt",
+      "citation": "Writing Group for the PReVENT Investigators. Effect of a low vs intermediate tidal volume strategy on ventilator-free days in intensive care unit patients without ARDS. JAMA. 2018;320(18):1872-1880",
+      "url": "https://doi.org/10.1001/jama.2018.14280",
+      "year": 2018,
+      "doi": "10.1001/jama.2018.14280",
+      "type": "trial"
+    },
+    {
+      "id": "ats-chest2017",
+      "citation": "Girard TD, Alhazzani W, Kress JP, et al. An official ATS/ACCP clinical practice guideline: liberation from mechanical ventilation in critically ill adults. Am J Respir Crit Care Med. 2017;195(1):120-133",
+      "url": "https://doi.org/10.1164/rccm.201610-2076ST",
+      "year": 2017,
+      "doi": "10.1164/rccm.201610-2076ST",
+      "type": "guideline"
+    },
+    {
+      "id": "boles2007",
+      "citation": "Boles JM, Bion J, Connors A, et al. Weaning from mechanical ventilation. Eur Respir J. 2007;29(5):1033-1056",
+      "url": "https://doi.org/10.1183/09031936.00010206",
+      "year": 2007,
+      "doi": "10.1183/09031936.00010206",
+      "type": "consensus"
+    },
+    {
+      "id": "subira2019",
+      "citation": "Subirà C, Hernández G, Vázquez A, et al. Effect of pressure support vs T-piece ventilation strategies during spontaneous breathing trials on successful extubation. JAMA. 2019;321(22):2175-2182",
+      "url": "https://doi.org/10.1001/jama.2019.7234",
+      "year": 2019,
+      "doi": "10.1001/jama.2019.7234",
+      "type": "trial"
+    },
+    {
+      "id": "abc2008",
+      "citation": "Girard TD, Kress JP, Fuchs BD, et al. Efficacy and safety of a paired sedation and ventilator weaning protocol (ABC trial). Lancet. 2008;371(9607):126-134",
+      "url": "https://doi.org/10.1016/S0140-6736(08)60105-1",
+      "year": 2008,
+      "doi": "10.1016/S0140-6736(08)60105-1",
+      "type": "trial"
+    },
+    {
+      "id": "ely1996",
+      "citation": "Ely EW, Baker AM, Dunagan DP, et al. Effect on the duration of mechanical ventilation of identifying patients capable of breathing spontaneously. N Engl J Med. 1996;335(25):1864-1869",
+      "url": "https://doi.org/10.1056/NEJM199612193352502",
+      "year": 1996,
+      "doi": "10.1056/NEJM199612193352502",
+      "type": "trial"
+    },
+    {
+      "id": "thille2006",
+      "citation": "Thille AW, Rodriguez P, Cabello B, Lellouche F, Brochard L. Patient-ventilator asynchrony during assisted mechanical ventilation. Intensive Care Med. 2006;32(10):1515-1522",
+      "url": "https://doi.org/10.1007/s00134-006-0301-8",
+      "year": 2006,
+      "doi": "10.1007/s00134-006-0301-8",
+      "type": "trial"
+    },
+    {
+      "id": "tracman",
+      "citation": "Young D, Harrison DA, Cuthbertson BH, Rowan K. Effect of early vs late tracheostomy placement on survival in patients receiving mechanical ventilation (TracMan). JAMA. 2013;309(20):2121-2129",
+      "url": "https://doi.org/10.1001/jama.2013.5154",
+      "year": 2013,
+      "doi": "10.1001/jama.2013.5154",
+      "type": "trial"
+    },
+    {
+      "id": "highwean",
+      "citation": "Thille AW, Muller G, Gacouin A, et al. Effect of postextubation high-flow nasal oxygen with noninvasive ventilation vs high-flow nasal oxygen alone on reintubation among patients at high risk of extubation failure (HIGH-WEAN). JAMA. 2019;322(15):1465-1475",
+      "url": "https://doi.org/10.1001/jama.2019.14901",
+      "year": 2019,
+      "doi": "10.1001/jama.2019.14901",
+      "type": "trial"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Mode names",
+      "reason": "Mode names differ by manufacturer (e.g. PRVC, VC+, AutoFlow, APV). The app uses generic names; add a local mapping table for the ventilators in use."
+    }
+  ]
+}

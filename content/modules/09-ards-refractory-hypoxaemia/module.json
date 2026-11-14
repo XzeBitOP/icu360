@@ -1,0 +1,1771 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "ards-refractory-hypoxaemia",
+  "number": 9,
+  "folder": "09-ards-refractory-hypoxaemia",
+  "section": {
+    "id": "B",
+    "title": "Airway and respiratory"
+  },
+  "phase": 1,
+  "title": "ARDS and refractory hypoxaemia",
+  "summary": "Diagnose ARDS with the 2024 global definition (including SpO2/FiO2 and ultrasound for resource-limited settings), ventilate with 6 mL/kg PBW and plateau ≤ 30, choose PEEP sensibly, prone early for P/F < 150, use neuromuscular blockade and conservative fluids selectively, consider steroids, and refer for ECMO in time.",
+  "tags": [
+    "ARDS",
+    "Berlin definition",
+    "global definition",
+    "P/F ratio",
+    "S/F ratio",
+    "lung protective ventilation",
+    "low tidal volume",
+    "PEEP",
+    "PEEP table",
+    "driving pressure",
+    "prone position",
+    "neuromuscular blockade",
+    "cisatracurium",
+    "recruitment manoeuvre",
+    "conservative fluids",
+    "dexamethasone",
+    "corticosteroids",
+    "ECMO",
+    "refractory hypoxaemia",
+    "inhaled nitric oxide"
+  ],
+  "relatedModules": [
+    "mechanical-ventilation",
+    "oxygen-hfnc-niv",
+    "ecmo-mechanical-circulatory-support",
+    "sepsis-septic-shock",
+    "tropical-monsoon-fevers",
+    "analgesia-sedation-delirium",
+    "pocus-critical-care-echo"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "waves",
+    "accent": "critical"
+  },
+  "viewKey": "module:ards-refractory-hypoxaemia",
+  "topics": [
+    {
+      "id": "definition-diagnosis",
+      "title": "Defining and diagnosing ARDS",
+      "summary": "ARDS is acute (≤ 1 week) hypoxaemic respiratory failure with bilateral opacities not fully explained by cardiac failure or fluid overload. The 2024 global definition adds non-intubated patients on HFNC ≥ 30 L/min, SpO2/FiO2 criteria, and lung ultrasound for resource-limited settings.",
+      "viewKey": "topic:ards-refractory-hypoxaemia/definition-diagnosis",
+      "uiHints": {
+        "icon": "waves",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Global definition 2024: risk factor, onset within 1 week, bilateral opacities (CXR, CT or ultrasound), not fully explained by cardiac failure or fluid overload, and hypoxaemia: non-intubated P/F ≤ 300 or S/F ≤ 315 (SpO2 ≤ 97%) on HFNO ≥ 30 L/min or NIV/CPAP ≥ 5 cmH2O; intubated graded by P/F (or S/F) with PEEP ≥ 5.",
+          "refs": [
+            "global2024"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "Suspect",
+            "title": "Risk factor",
+            "detail": "Pneumonia (bacterial, viral, tropical such as leptospirosis, scrub typhus, malaria, dengue), sepsis, aspiration, pancreatitis, trauma, transfusion (TRALI), drowning, burns.",
+            "refs": [
+              "global2024"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Confirm",
+            "title": "Timing and imaging",
+            "detail": "Onset within 1 week of insult or new/worsening symptoms; bilateral opacities on CXR/CT, or bilateral B-lines/consolidations on ultrasound by a trained operator.",
+            "refs": [
+              "global2024"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Exclude",
+            "title": "Cardiogenic oedema",
+            "detail": "Echo (LV function, valves, filling pressures), BNP, fluid balance. ARDS can coexist with heart failure.",
+            "refs": [
+              "berlin2012"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Grade",
+            "title": "Severity (intubated)",
+            "detail": "Mild P/F 201-300 (S/F 236-315); moderate 101-200 (S/F 149-235); severe ≤ 100 (S/F ≤ 148), PEEP ≥ 5.",
+            "refs": [
+              "global2024"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Find the cause",
+            "title": "Treat it",
+            "detail": "Cultures, respiratory PCR, tropical serology (module 25), procalcitonin; CT if unclear; bronchoscopy/BAL in immunocompromised."
+          }
+        ],
+        "tables": [
+          {
+            "id": "global-def",
+            "title": "Global ARDS definition 2024: oxygenation categories",
+            "columns": [
+              "Setting",
+              "Criterion"
+            ],
+            "rows": [
+              [
+                "Non-intubated",
+                "P/F ≤ 300 or S/F ≤ 315 (SpO2 ≤ 97%) on HFNO ≥ 30 L/min or NIV/CPAP ≥ 5 cmH2O"
+              ],
+              [
+                "Intubated, mild",
+                "200 < P/F ≤ 300 or 235 < S/F ≤ 315"
+              ],
+              [
+                "Intubated, moderate",
+                "100 < P/F ≤ 200 or 148 < S/F ≤ 235"
+              ],
+              [
+                "Intubated, severe",
+                "P/F ≤ 100 or S/F ≤ 148"
+              ],
+              [
+                "Resource-limited",
+                "S/F ≤ 315 (SpO2 ≤ 97%); no PEEP or flow minimum; ultrasound acceptable for imaging"
+              ]
+            ],
+            "refs": [
+              "global2024"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "P/F < 150 on PEEP ≥ 5: prone positioning indicated (next topics)."
+          },
+          {
+            "text": "P/F < 80 for > 6 h despite optimisation: refer for ECMO now."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Calling every bilateral infiltrate ARDS without an echo."
+          },
+          {
+            "text": "Using S/F when SpO2 is 98-100% (flat part of the curve; invalid)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Leptospirosis pulmonary haemorrhage and falciparum malaria are important ARDS causes in Indian monsoon months."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Is it ARDS?",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Acute hypoxaemia with bilateral opacities"
+          },
+          {
+            "id": "time",
+            "type": "decision",
+            "text": "Within 1 week of a risk factor or new symptoms?"
+          },
+          {
+            "id": "other",
+            "type": "end",
+            "text": "Consider chronic or other diagnoses (ILD, malignancy)"
+          },
+          {
+            "id": "card",
+            "type": "decision",
+            "text": "Fully explained by cardiac failure or fluid (echo)?"
+          },
+          {
+            "id": "cpe",
+            "type": "end",
+            "text": "Treat cardiogenic oedema (module 10)"
+          },
+          {
+            "id": "hyp",
+            "type": "decision",
+            "text": "Meets oxygenation criteria (P/F ≤ 300 or S/F ≤ 315)?"
+          },
+          {
+            "id": "no",
+            "type": "end",
+            "text": "Not ARDS: treat hypoxaemia cause"
+          },
+          {
+            "id": "ards",
+            "type": "end",
+            "text": "ARDS: grade severity, lung-protective strategy, treat cause",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "time"
+          },
+          {
+            "from": "time",
+            "to": "other",
+            "label": "No"
+          },
+          {
+            "from": "time",
+            "to": "card",
+            "label": "Yes"
+          },
+          {
+            "from": "card",
+            "to": "cpe",
+            "label": "Yes"
+          },
+          {
+            "from": "card",
+            "to": "hyp",
+            "label": "No"
+          },
+          {
+            "from": "hyp",
+            "to": "ards",
+            "label": "Yes"
+          },
+          {
+            "from": "hyp",
+            "to": "no",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "global2024"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Diffuse alveolar damage: endothelial and epithelial injury, protein-rich oedema, surfactant loss, atelectasis and shunt, followed by a fibroproliferative phase. Lung compliance falls because the aerated lung is small (\"baby lung\").",
+        "evidence": "- **Berlin 2012:** timing, imaging, origin of oedema and P/F categories with PEEP ≥ 5.\n- **Global definition 2024:** extends Berlin to HFNO patients, allows S/F and ultrasound, and adds resource-limited criteria.\n- **ESICM 2023:** endorses an extended definition and recommends against using phenotypes to guide care outside trials.",
+        "controversies": "- Including HFNO patients increases ARDS incidence; trials using Berlin criteria may not apply directly.",
+        "indiaNotes": "- Many Indian ICUs, especially district hospitals, lack frequent ABG or CT; the S/F + ultrasound criteria make ARDS recognisable there.\n- Tropical infections (leptospirosis, scrub typhus, malaria, dengue, H1N1 influenza) are leading ARDS causes in India; seasonal peaks follow the monsoon."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "pf-ratio",
+        "sf-ratio",
+        "oxygenation-index"
+      ],
+      "references": [
+        "global2024",
+        "berlin2012",
+        "esicm-ards2023"
+      ],
+      "quiz": [
+        {
+          "id": "definition-diagnosis-q1",
+          "stem": "The 2024 global definition newly includes non-intubated patients on:",
+          "options": [
+            "Nasal prongs 2 L/min",
+            "HFNO ≥ 30 L/min",
+            "Venturi 40%",
+            "Room air"
+          ],
+          "answerIndex": 1,
+          "explanation": "HFNO ≥ 30 L/min or NIV/CPAP ≥ 5."
+        },
+        {
+          "id": "definition-diagnosis-q2",
+          "stem": "Severe ARDS in an intubated patient:",
+          "options": [
+            "P/F ≤ 300",
+            "P/F ≤ 200",
+            "P/F ≤ 100",
+            "P/F ≤ 50"
+          ],
+          "answerIndex": 2,
+          "explanation": "Severe = P/F ≤ 100 with PEEP ≥ 5."
+        },
+        {
+          "id": "definition-diagnosis-q3",
+          "stem": "S/F ratio is valid only when SpO2 is:",
+          "options": [
+            "≤ 97%",
+            "≥ 98%",
+            "100%",
+            "Any value"
+          ],
+          "answerIndex": 0,
+          "explanation": "At higher SpO2 the dissociation curve is flat."
+        }
+      ]
+    },
+    {
+      "id": "lung-protective-peep",
+      "title": "Lung-protective ventilation and PEEP",
+      "summary": "Tidal volume 6 mL/kg PBW (4-8), plateau ≤ 30 cmH2O, driving pressure ideally ≤ 15, PEEP by table or mechanics (higher PEEP in moderate-severe ARDS), no prolonged recruitment manoeuvres, permissive hypercapnia with pH ≥ 7.20-7.25.",
+      "viewKey": "topic:ards-refractory-hypoxaemia/lung-protective-peep",
+      "uiHints": {
+        "icon": "waves",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Start",
+            "title": "Vt 6 mL/kg PBW",
+            "detail": "Begin at 8 and reduce to 6 within 1-4 h; 4-5 if Pplat > 30.",
+            "refs": [
+              "armanet",
+              "esicm-ards2023"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Check",
+            "title": "Plateau and driving pressure",
+            "detail": "Pplat ≤ 30 cmH2O (0.5 s inspiratory hold). Driving pressure ≤ 15 cmH2O where possible.",
+            "refs": [
+              "armanet"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "PEEP",
+            "title": "Choose a strategy",
+            "detail": "Mild: lower PEEP/FiO2 table. Moderate-severe: higher PEEP (without prolonged recruitment) suggested by ATS 2024; watch Pplat, BP and compliance response.",
+            "refs": [
+              "ats-ards2024",
+              "alveoli"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Avoid",
+            "title": "Prolonged recruitment manoeuvres",
+            "detail": "Strong recommendation against prolonged/stepwise recruitment (ART trial harm).",
+            "refs": [
+              "ats-ards2024",
+              "art2017"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Rate",
+            "title": "Permissive hypercapnia",
+            "detail": "Rate up to 35/min to keep pH ≥ 7.20-7.25 (watch auto-PEEP). Avoid hypercapnia in raised ICP and severe RV failure."
+          },
+          {
+            "n": 6,
+            "time": "Oxygen",
+            "title": "Targets",
+            "detail": "SpO2 88-95% (PaO2 55-80 mmHg) per ARDSNet protocol.",
+            "refs": [
+              "armanet"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Refractory",
+            "title": "Escalate",
+            "detail": "P/F < 150: prone (next topic); consider NMB; optimise fluids; then ECMO referral."
+          }
+        ],
+        "tables": [
+          {
+            "id": "peep-low",
+            "title": "ARDSNet lower PEEP/FiO2 table",
+            "columns": [
+              "FiO2",
+              "0.3",
+              "0.4",
+              "0.5",
+              "0.6",
+              "0.7",
+              "0.8",
+              "0.9",
+              "1.0"
+            ],
+            "rows": [
+              [
+                "PEEP (cmH2O)",
+                "5",
+                "5-8",
+                "8-10",
+                "10",
+                "10-14",
+                "14",
+                "14-18",
+                "18-24"
+              ]
+            ],
+            "refs": [
+              "armanet",
+              "alveoli"
+            ]
+          },
+          {
+            "id": "peep-high",
+            "title": "ARDSNet higher PEEP/FiO2 table (ALVEOLI)",
+            "columns": [
+              "FiO2",
+              "0.3",
+              "0.4",
+              "0.5",
+              "0.5-0.8",
+              "0.8",
+              "0.9",
+              "1.0"
+            ],
+            "rows": [
+              [
+                "PEEP (cmH2O)",
+                "5-14",
+                "14-16",
+                "16-18",
+                "20",
+                "22",
+                "22",
+                "22-24"
+              ]
+            ],
+            "refs": [
+              "alveoli"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Pplat > 30 despite Vt 4 mL/kg: severe disease; prone, consider ECMO."
+          },
+          {
+            "text": "Hypotension after PEEP increase: preload, RV failure, overdistension; reduce PEEP and echo."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Using actual body weight for Vt."
+          },
+          {
+            "text": "Forgetting to measure plateau after every Vt or PEEP change."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "If compliance improves and driving pressure falls after a PEEP increase, the lung recruited; if Pplat rises with no compliance change, it overdistended."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Lung-protective ventilation loop",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Intubated ARDS"
+          },
+          {
+            "id": "vt",
+            "type": "action",
+            "text": "Vt 6 mL/kg PBW; PEEP per table; SpO2 88-95%",
+            "severity": "critical"
+          },
+          {
+            "id": "pplat",
+            "type": "decision",
+            "text": "Pplat ≤ 30 cmH2O?"
+          },
+          {
+            "id": "red",
+            "type": "action",
+            "text": "Reduce Vt by 1 mL/kg (minimum 4)"
+          },
+          {
+            "id": "ph",
+            "type": "decision",
+            "text": "pH ≥ 7.20?"
+          },
+          {
+            "id": "rate",
+            "type": "action",
+            "text": "Increase rate (max 35); check auto-PEEP"
+          },
+          {
+            "id": "pf",
+            "type": "decision",
+            "text": "P/F < 150?"
+          },
+          {
+            "id": "prone",
+            "type": "end",
+            "text": "Prone position ≥ 16 h; consider NMB",
+            "severity": "high"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Continue; daily reassessment and SAT/SBT when ready"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "vt"
+          },
+          {
+            "from": "vt",
+            "to": "pplat"
+          },
+          {
+            "from": "pplat",
+            "to": "red",
+            "label": "No"
+          },
+          {
+            "from": "pplat",
+            "to": "ph",
+            "label": "Yes"
+          },
+          {
+            "from": "red",
+            "to": "pplat"
+          },
+          {
+            "from": "ph",
+            "to": "rate",
+            "label": "No"
+          },
+          {
+            "from": "ph",
+            "to": "pf",
+            "label": "Yes"
+          },
+          {
+            "from": "rate",
+            "to": "pf"
+          },
+          {
+            "from": "pf",
+            "to": "prone",
+            "label": "Yes"
+          },
+          {
+            "from": "pf",
+            "to": "cont",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "armanet",
+          "ats-ards2024"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **ARMA (2000):** 6 vs 12 mL/kg reduced mortality.\n- **ALVEOLI (2004):** higher vs lower PEEP: no difference overall; later meta-analyses suggest benefit in moderate-severe ARDS.\n- **ART (2017):** recruitment + titrated PEEP increased mortality.\n- **ATS 2024:** higher PEEP without prolonged LRM in moderate-severe ARDS (conditional); against prolonged LRM (strong).\n- **ESICM 2023:** recommends low Vt (≤ 6 mL/kg PBW) and recommends against prolonged high-pressure recruitment manoeuvres.",
+        "controversies": "- Individualised PEEP (oesophageal pressure, EIT, recruitment-to-inflation ratio) has not consistently improved outcomes.",
+        "indiaNotes": "- Plateau measurement is possible on almost all ICU ventilators; make it a nursing chart item every 4 h."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "predicted-body-weight",
+        "tidal-volume-pbw",
+        "driving-pressure",
+        "static-compliance",
+        "pf-ratio"
+      ],
+      "references": [
+        "armanet",
+        "alveoli",
+        "art2017",
+        "ats-ards2024",
+        "esicm-ards2023"
+      ],
+      "quiz": [
+        {
+          "id": "lung-protective-peep-q1",
+          "stem": "Target tidal volume in ARDS:",
+          "options": [
+            "10 mL/kg actual weight",
+            "6 mL/kg predicted body weight",
+            "8 mL/kg actual weight",
+            "4 mL/kg actual weight"
+          ],
+          "answerIndex": 1,
+          "explanation": "6 mL/kg PBW (range 4-8)."
+        },
+        {
+          "id": "lung-protective-peep-q2",
+          "stem": "ATS 2024 strongly recommends against:",
+          "options": [
+            "Prone positioning",
+            "Prolonged lung recruitment manoeuvres",
+            "Higher PEEP",
+            "Steroids"
+          ],
+          "answerIndex": 1,
+          "explanation": "Prolonged recruitment manoeuvres were harmful (ART)."
+        },
+        {
+          "id": "lung-protective-peep-q3",
+          "stem": "On the lower PEEP table, FiO2 0.6 corresponds to PEEP:",
+          "options": [
+            "5",
+            "10",
+            "14",
+            "20"
+          ],
+          "answerIndex": 1,
+          "explanation": "FiO2 0.6 → PEEP 10."
+        }
+      ]
+    },
+    {
+      "id": "prone-position",
+      "title": "Prone positioning",
+      "summary": "Prone early (within 36 h) when P/F < 150 mmHg on FiO2 ≥ 0.6 and PEEP ≥ 5 despite optimisation, for at least 16 h per session, using a trained team and a checklist. Repeat daily until P/F ≥ 150 is sustained supine.",
+      "viewKey": "topic:ards-refractory-hypoxaemia/prone-position",
+      "uiHints": {
+        "icon": "waves",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Indication",
+            "title": "P/F < 150",
+            "detail": "On FiO2 ≥ 0.6, PEEP ≥ 5, Vt ~6 mL/kg after 12-24 h stabilisation.",
+            "refs": [
+              "proseva",
+              "esicm-ards2023"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Contraindications",
+            "title": "Check",
+            "detail": "Unstable spine, open abdomen, raised ICP, massive haemoptysis, recent sternotomy, unstable fractures, pregnancy (relative), haemodynamic instability (relative).",
+            "refs": [
+              "proseva"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Prepare",
+            "title": "Team of 5",
+            "detail": "Team leader at head (airway); pre-oxygenate FiO2 1.0; secure tube and lines; empty stomach; protect eyes; ECG leads to the back; pads for face, chest, pelvis, knees."
+          },
+          {
+            "n": 4,
+            "time": "Turn",
+            "title": "Sheet technique",
+            "detail": "Envelope with sheets, lateral, then prone; arms in swimmer's position (alternate every 2-4 h); head turned and repositioned every 2-4 h."
+          },
+          {
+            "n": 5,
+            "time": "Duration",
+            "title": "≥ 16 h",
+            "detail": "Sessions ≥ 16 h (PROSEVA mean ~17 h).",
+            "refs": [
+              "proseva",
+              "ats-ards2024"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Stop",
+            "title": "Criteria",
+            "detail": "P/F ≥ 150 with PEEP ≤ 10 and FiO2 ≤ 0.6 at least 4 h after turning supine; or complications.",
+            "refs": [
+              "proseva"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Accidental extubation or line loss during turn: airway team at head, plan in advance."
+          },
+          {
+            "text": "Facial pressure sores and ocular injury: check every 2 h."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Proning late (after days) or for short sessions (< 12 h)."
+          },
+          {
+            "text": "Stopping proning because oxygenation did not improve immediately (benefit is not only through oxygenation)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Enteral feeding can continue in prone position (reverse Trendelenburg 10-25°)."
+          },
+          {
+            "text": "CPR in prone position is possible (compress between scapulae) while preparing to turn."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Prone position cycle",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "ARDS on lung-protective ventilation"
+          },
+          {
+            "id": "pf",
+            "type": "decision",
+            "text": "P/F < 150 (FiO2 ≥ 0.6, PEEP ≥ 5)?"
+          },
+          {
+            "id": "no",
+            "type": "end",
+            "text": "Continue supine care; reassess"
+          },
+          {
+            "id": "ci",
+            "type": "decision",
+            "text": "Contraindication?"
+          },
+          {
+            "id": "alt",
+            "type": "end",
+            "text": "Other rescue: NMB, ECMO referral"
+          },
+          {
+            "id": "prone",
+            "type": "action",
+            "text": "Prone ≥ 16 h with trained team and checklist",
+            "severity": "high"
+          },
+          {
+            "id": "sup",
+            "type": "action",
+            "text": "Turn supine; reassess at 4 h"
+          },
+          {
+            "id": "pf2",
+            "type": "decision",
+            "text": "P/F ≥ 150 with PEEP ≤ 10, FiO2 ≤ 0.6?"
+          },
+          {
+            "id": "done",
+            "type": "end",
+            "text": "Stop proning"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "pf"
+          },
+          {
+            "from": "pf",
+            "to": "no",
+            "label": "No"
+          },
+          {
+            "from": "pf",
+            "to": "ci",
+            "label": "Yes"
+          },
+          {
+            "from": "ci",
+            "to": "alt",
+            "label": "Yes"
+          },
+          {
+            "from": "ci",
+            "to": "prone",
+            "label": "No"
+          },
+          {
+            "from": "prone",
+            "to": "sup"
+          },
+          {
+            "from": "sup",
+            "to": "pf2"
+          },
+          {
+            "from": "pf2",
+            "to": "done",
+            "label": "Yes"
+          },
+          {
+            "from": "pf2",
+            "to": "prone",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "proseva"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Prone positioning makes lung inflation more homogeneous (the heart and abdomen compress less lung), recruits dorsal regions, improves V/Q matching and reduces ventilator-induced lung injury. It also unloads the RV.",
+        "evidence": "- **PROSEVA (2013):** early prolonged proning (mean ~17 h/day) in P/F < 150 reduced 28-day mortality (16.0% vs 32.8%).\n- **ESICM 2023 and ATS (2017, reaffirmed):** prone ≥ 12-16 h/day in moderate-severe ARDS.",
+        "controversies": "- Awake proning in non-intubated patients helped COVID-19 (meta-trial) but is unproven in other causes.",
+        "indiaNotes": "- Proning needs no equipment beyond pillows and staff; it is the most cost-effective ARDS intervention for Indian ICUs. Train nurses with simulation."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "proseva",
+        "ats-ards2024",
+        "esicm-ards2023"
+      ],
+      "quiz": [
+        {
+          "id": "prone-position-q1",
+          "stem": "PROSEVA enrolled patients with P/F below:",
+          "options": [
+            "300",
+            "200",
+            "150",
+            "80"
+          ],
+          "answerIndex": 2,
+          "explanation": "P/F < 150 on FiO2 ≥ 0.6, PEEP ≥ 5."
+        },
+        {
+          "id": "prone-position-q2",
+          "stem": "Recommended prone session length:",
+          "options": [
+            "2 h",
+            "6 h",
+            "≥ 16 h",
+            "48 h continuously"
+          ],
+          "answerIndex": 2,
+          "explanation": "PROSEVA used ~17 h sessions."
+        },
+        {
+          "id": "prone-position-q3",
+          "stem": "Mortality in PROSEVA prone group vs supine:",
+          "options": [
+            "16% vs 33%",
+            "30% vs 32%",
+            "40% vs 45%",
+            "No difference"
+          ],
+          "answerIndex": 0,
+          "explanation": "Halved 28-day mortality."
+        }
+      ]
+    },
+    {
+      "id": "nmb-fluids",
+      "title": "Neuromuscular blockade and fluid management",
+      "summary": "Use a 24-48 h cisatracurium infusion in early severe ARDS if asynchrony or high pressures persist despite deep sedation. After shock resolves, use a conservative fluid strategy with diuretics to reduce lung water.",
+      "viewKey": "topic:ards-refractory-hypoxaemia/nmb-fluids",
+      "uiHints": {
+        "icon": "waves",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Consider NMB",
+            "title": "Early severe ARDS",
+            "detail": "P/F < 150 with persistent ventilator dyssynchrony, double triggering, or Pplat/driving pressure above target despite deep sedation. Not routine.",
+            "refs": [
+              "ats-ards2024",
+              "rose"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Start",
+            "title": "Sedate deeply first",
+            "detail": "RASS -5 before paralysis (awareness risk); then cisatracurium bolus and infusion for up to 48 h.",
+            "refs": [
+              "acurasys"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Monitor",
+            "title": "During NMB",
+            "detail": "Train-of-four, eye care, pressure areas, DVT prophylaxis, glucose; daily reassess the need. Avoid steroids + NMB for long periods (weakness)."
+          },
+          {
+            "n": 4,
+            "time": "Fluids",
+            "title": "Shock phase",
+            "detail": "Resuscitate shock appropriately; no restriction during shock.",
+            "refs": [
+              "factt"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Fluids",
+            "title": "After shock",
+            "detail": "Conservative strategy: aim even to negative balance; furosemide if CVP or clinical overload and perfusion adequate (FACTT).",
+            "refs": [
+              "factt"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Albumin",
+            "title": "Selected",
+            "detail": "Albumin + furosemide in hypoalbuminaemic patients may improve oxygenation (small trials)."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "cisatracurium",
+            "role": "NMB in early severe ARDS",
+            "route": "IV bolus then infusion",
+            "dose": "0.15-0.2 mg/kg bolus, then 1-3 mcg/kg/min (ACURASYS: 15 mg then 37.5 mg/h)",
+            "doseRange": {
+              "min": 1,
+              "max": 3,
+              "unit": "mcg/kg/min"
+            },
+            "dilution": "Undiluted 2 mg/mL",
+            "workedExample": "70 kg × 2 mcg/kg/min = 140 mcg/min = 8.4 mg/h ÷ 2 mg/mL = 4.2 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "acurasys"
+            ]
+          },
+          {
+            "drugId": "atracurium",
+            "role": "Alternative NMB",
+            "route": "IV bolus then infusion",
+            "dose": "0.5 mg/kg bolus, then 5-10 mcg/kg/min",
+            "dilution": "250 mg in 50 mL = 5 mg/mL",
+            "workedExample": "70 kg × 6 mcg/kg/min = 420 mcg/min = 25.2 mg/h ÷ 5 = 5 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "verify": "Confirm local protocol.",
+            "refs": [
+              "ats-ards2024"
+            ]
+          },
+          {
+            "drugId": "furosemide",
+            "role": "Conservative fluid strategy",
+            "route": "IV",
+            "dose": "20-40 mg bolus or 5-20 mg/h infusion",
+            "refs": [
+              "factt"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Paralysed patient with tachycardia and hypertension: inadequate sedation (awareness)."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Using NMB to mask a ventilator setting problem that could be fixed."
+          },
+          {
+            "text": "Prolonged infusions beyond 48 h without daily review."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "In ROSE (lighter sedation controls), early NMB did not reduce mortality; reserve for those who need it."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "NMB and fluids",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Moderate-severe ARDS"
+          },
+          {
+            "id": "sync",
+            "type": "decision",
+            "text": "Persistent asynchrony or high Pplat/ΔP despite deep sedation and setting changes?"
+          },
+          {
+            "id": "nmb",
+            "type": "action",
+            "text": "Cisatracurium ≤ 48 h with deep sedation; TOF monitoring"
+          },
+          {
+            "id": "shock",
+            "type": "decision",
+            "text": "Still in shock?"
+          },
+          {
+            "id": "res",
+            "type": "action",
+            "text": "Resuscitate shock; reassess daily"
+          },
+          {
+            "id": "cons",
+            "type": "end",
+            "text": "Conservative fluids: diuretics to even or negative balance"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "sync"
+          },
+          {
+            "from": "sync",
+            "to": "nmb",
+            "label": "Yes"
+          },
+          {
+            "from": "sync",
+            "to": "shock",
+            "label": "No"
+          },
+          {
+            "from": "nmb",
+            "to": "shock"
+          },
+          {
+            "from": "shock",
+            "to": "res",
+            "label": "Yes"
+          },
+          {
+            "from": "shock",
+            "to": "cons",
+            "label": "No"
+          },
+          {
+            "from": "res",
+            "to": "shock"
+          }
+        ],
+        "refs": [
+          "ats-ards2024",
+          "factt"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **ACURASYS (2010):** 48 h cisatracurium in early P/F < 150 improved adjusted 90-day survival.\n- **ROSE (2019):** early NMB with deep sedation vs usual care with lighter sedation: no mortality difference.\n- **ATS 2024:** suggests NMB in early severe ARDS (conditional).\n- **FACTT (2006):** conservative fluid strategy increased ventilator-free days without more organ failure.",
+        "indiaNotes": "- Cisatracurium supply is intermittent in some Indian hospitals; atracurium or vecuronium (with renal/hepatic caution) are pragmatic substitutes."
+      },
+      "drugIds": [
+        "cisatracurium",
+        "atracurium",
+        "furosemide"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-min"
+      ],
+      "references": [
+        "acurasys",
+        "rose",
+        "ats-ards2024",
+        "factt",
+        "esicm-ards2023"
+      ],
+      "quiz": [
+        {
+          "id": "nmb-fluids-q1",
+          "stem": "NMB in ARDS is best reserved for:",
+          "options": [
+            "All ARDS patients",
+            "Early severe ARDS with persistent asynchrony or high pressures",
+            "Mild ARDS",
+            "Weaning"
+          ],
+          "answerIndex": 1,
+          "explanation": "ROSE showed no benefit for routine early NMB."
+        },
+        {
+          "id": "nmb-fluids-q2",
+          "stem": "Before starting NMB you must:",
+          "options": [
+            "Extubate",
+            "Deeply sedate",
+            "Give steroids",
+            "Stop analgesia"
+          ],
+          "answerIndex": 1,
+          "explanation": "Avoid awareness under paralysis."
+        },
+        {
+          "id": "nmb-fluids-q3",
+          "stem": "FACTT showed conservative fluids:",
+          "options": [
+            "Increased mortality",
+            "Increased ventilator-free days",
+            "Caused more dialysis",
+            "Had no effect at all"
+          ],
+          "answerIndex": 1,
+          "explanation": "More ventilator-free days, no mortality difference."
+        }
+      ]
+    },
+    {
+      "id": "steroids-adjuncts",
+      "title": "Corticosteroids and pharmacological adjuncts",
+      "summary": "ATS 2024 suggests corticosteroids for ARDS. Use an evidence-based regimen matched to the cause (dexamethasone for COVID-19 and DEXA-ARDS; hydrocortisone for severe CAP). Avoid in influenza. Inhaled vasodilators improve oxygenation but not survival.",
+      "viewKey": "topic:ards-refractory-hypoxaemia/steroids-adjuncts",
+      "uiHints": {
+        "icon": "waves",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Decide",
+            "title": "Steroid candidate",
+            "detail": "Moderate-severe ARDS, early (< 14 days), no contraindication (uncontrolled infection, influenza, fungal infection).",
+            "refs": [
+              "ats-ards2024"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Regimen",
+            "title": "Non-COVID ARDS",
+            "detail": "Dexamethasone 20 mg IV daily days 1-5, then 10 mg days 6-10 (DEXA-ARDS).",
+            "refs": [
+              "dexa-ards"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Regimen",
+            "title": "Severe CAP",
+            "detail": "Hydrocortisone 200 mg/day for 4-8 days then taper (CAPE COD).",
+            "refs": [
+              "capecod"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Regimen",
+            "title": "COVID-19",
+            "detail": "Dexamethasone 6 mg daily up to 10 days.",
+            "refs": [
+              "recovery-dex"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Monitor",
+            "title": "Side effects",
+            "detail": "Glucose, new infection, weakness; stop if alternative diagnosis or harm."
+          },
+          {
+            "n": 6,
+            "time": "Adjuncts",
+            "title": "Inhaled pulmonary vasodilators",
+            "detail": "Inhaled nitric oxide or epoprostenol as short-term rescue for refractory hypoxaemia or RV failure; no mortality benefit."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "dexamethasone",
+            "role": "DEXA-ARDS regimen",
+            "route": "IV",
+            "dose": "20 mg daily days 1-5, then 10 mg daily days 6-10",
+            "refs": [
+              "dexa-ards"
+            ]
+          },
+          {
+            "drugId": "hydrocortisone",
+            "role": "Severe community-acquired pneumonia",
+            "route": "IV infusion",
+            "dose": "200 mg/day × 4 days (8 if not improving), then taper",
+            "dilution": "200 mg in 50 mL NS at ~2.1 mL/h",
+            "refs": [
+              "capecod"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Influenza ARDS: steroids associated with higher mortality in observational data; avoid unless another indication."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Starting steroids late (> 14 days) in fibroproliferative ARDS (older ARDSNet LaSRS trial showed harm)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Check strongyloides risk (eosinophilia, endemic areas including India) before prolonged steroids; consider empirical ivermectin."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Steroids in ARDS",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Moderate-severe ARDS"
+          },
+          {
+            "id": "flu",
+            "type": "decision",
+            "text": "Influenza, untreated fungal infection, or > 14 days?"
+          },
+          {
+            "id": "avoid",
+            "type": "end",
+            "text": "Avoid routine steroids"
+          },
+          {
+            "id": "cause",
+            "type": "decision",
+            "text": "Cause?"
+          },
+          {
+            "id": "covid",
+            "type": "end",
+            "text": "COVID-19: dexamethasone 6 mg × 10 days"
+          },
+          {
+            "id": "cap",
+            "type": "end",
+            "text": "Severe CAP: hydrocortisone 200 mg/day (CAPE COD)"
+          },
+          {
+            "id": "other",
+            "type": "end",
+            "text": "Other ARDS: dexamethasone 20 mg → 10 mg (DEXA-ARDS)"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "flu"
+          },
+          {
+            "from": "flu",
+            "to": "avoid",
+            "label": "Yes"
+          },
+          {
+            "from": "flu",
+            "to": "cause",
+            "label": "No"
+          },
+          {
+            "from": "cause",
+            "to": "covid",
+            "label": "COVID-19"
+          },
+          {
+            "from": "cause",
+            "to": "cap",
+            "label": "Severe CAP"
+          },
+          {
+            "from": "cause",
+            "to": "other",
+            "label": "Other"
+          }
+        ],
+        "refs": [
+          "ats-ards2024",
+          "dexa-ards"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **ATS 2024:** suggests corticosteroids for ARDS (conditional, moderate certainty).\n- **DEXA-ARDS (2020):** dexamethasone increased ventilator-free days and reduced 60-day mortality in moderate-severe ARDS.\n- **CAPE COD (2023):** hydrocortisone reduced 28-day mortality in severe CAP (6.2% vs 11.9%).\n- **RECOVERY (2021):** dexamethasone reduced mortality in ventilated COVID-19.",
+        "controversies": "- Optimal drug, dose and duration; heterogeneity of ARDS causes.",
+        "indiaNotes": "- Screen for strongyloidiasis and latent TB in high-prevalence settings before prolonged steroids; consider empirical ivermectin 200 mcg/kg for 1-2 days."
+      },
+      "drugIds": [
+        "dexamethasone",
+        "hydrocortisone"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "ats-ards2024",
+        "dexa-ards",
+        "recovery-dex",
+        "capecod"
+      ],
+      "quiz": [
+        {
+          "id": "steroids-adjuncts-q1",
+          "stem": "DEXA-ARDS dexamethasone regimen:",
+          "options": [
+            "6 mg × 10 days",
+            "20 mg × 5 days then 10 mg × 5 days",
+            "1 g × 3 days",
+            "100 mg every 8 h"
+          ],
+          "answerIndex": 1,
+          "explanation": "20 mg days 1-5, 10 mg days 6-10."
+        },
+        {
+          "id": "steroids-adjuncts-q2",
+          "stem": "Steroids should generally be avoided in ARDS due to:",
+          "options": [
+            "COVID-19",
+            "Influenza",
+            "Severe CAP",
+            "Pancreatitis"
+          ],
+          "answerIndex": 1,
+          "explanation": "Observational harm in influenza."
+        },
+        {
+          "id": "steroids-adjuncts-q3",
+          "stem": "Inhaled nitric oxide in ARDS:",
+          "options": [
+            "Reduces mortality",
+            "Improves oxygenation transiently without survival benefit",
+            "Is first-line",
+            "Is contraindicated"
+          ],
+          "answerIndex": 1,
+          "explanation": "Use only as short-term rescue."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Ivermectin prophylaxis",
+          "reason": "Practice recommendation from infectious disease literature; not in the ARDS guidelines cited."
+        }
+      ]
+    },
+    {
+      "id": "rescue-ecmo",
+      "title": "Refractory hypoxaemia and VV-ECMO",
+      "summary": "If P/F stays < 80 mmHg (or < 50 for 3 h) or pH < 7.25 with PaCO2 ≥ 60 despite optimised ventilation, proning and NMB, refer early to an ECMO centre (EOLIA criteria). Transfer before the patient is too unstable.",
+      "viewKey": "topic:ards-refractory-hypoxaemia/rescue-ecmo",
+      "uiHints": {
+        "icon": "waves",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Optimise",
+            "title": "Check the basics",
+            "detail": "Vt 6 mL/kg, PEEP appropriate, proned, NMB, conservative fluids, treat infection, drain effusions, exclude pneumothorax and RV failure (echo).",
+            "refs": [
+              "esicm-ards2023"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Criteria",
+            "title": "EOLIA",
+            "detail": "P/F < 50 for > 3 h, or P/F < 80 for > 6 h, or pH < 7.25 with PaCO2 ≥ 60 mmHg for > 6 h (RR 35, Pplat ≤ 32).",
+            "refs": [
+              "eolia"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Refer",
+            "title": "Early",
+            "detail": "Contact the ECMO centre early (within 7 days of ventilation preferred); discuss transfer or mobile ECMO retrieval.",
+            "refs": [
+              "cesar",
+              "ats-ards2024"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Contraindications",
+            "title": "Consider",
+            "detail": "Ventilation > 7-10 days with high pressures, irreversible disease without transplant option, severe brain injury, contraindication to anticoagulation, very poor baseline. See module 14."
+          },
+          {
+            "n": 5,
+            "time": "While waiting",
+            "title": "Rescue",
+            "detail": "Inhaled vasodilator, higher PEEP trial, sustained prone, accept SpO2 85-88%."
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Severe RV failure (acute cor pulmonale) on echo: reduce PEEP/PaCO2, prone, consider VV or VA ECMO."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Referring after 10 days of injurious ventilation."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Calculate the Murray (LIS) score and RESP score when discussing referral."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Refractory hypoxaemia",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Severe ARDS, P/F < 100 despite lung-protective ventilation"
+          },
+          {
+            "id": "basics",
+            "type": "action",
+            "text": "Check DOPES, effusions, pneumothorax, RV function; optimise PEEP",
+            "severity": "high"
+          },
+          {
+            "id": "prone",
+            "type": "action",
+            "text": "Prone ≥ 16 h; NMB; conservative fluids"
+          },
+          {
+            "id": "eolia",
+            "type": "decision",
+            "text": "EOLIA criteria met?"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Continue optimised care; daily reassessment"
+          },
+          {
+            "id": "ci",
+            "type": "decision",
+            "text": "Contraindication to ECMO?"
+          },
+          {
+            "id": "pal",
+            "type": "end",
+            "text": "Maximal conventional therapy; discuss goals of care"
+          },
+          {
+            "id": "ecmo",
+            "type": "end",
+            "text": "Refer to ECMO centre now",
+            "severity": "critical"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "basics"
+          },
+          {
+            "from": "basics",
+            "to": "prone"
+          },
+          {
+            "from": "prone",
+            "to": "eolia"
+          },
+          {
+            "from": "eolia",
+            "to": "cont",
+            "label": "No"
+          },
+          {
+            "from": "eolia",
+            "to": "ci",
+            "label": "Yes"
+          },
+          {
+            "from": "ci",
+            "to": "pal",
+            "label": "Yes"
+          },
+          {
+            "from": "ci",
+            "to": "ecmo",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "eolia",
+          "esicm-ards2023"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **CESAR (2009):** referral to an ECMO centre improved 6-month survival without disability.\n- **EOLIA (2018):** 60-day mortality 35% vs 46% (not statistically significant; 28% crossover); post-hoc Bayesian analysis favoured ECMO.\n- **ATS 2024:** VV-ECMO in selected severe ARDS (conditional).",
+        "controversies": "- Which patients benefit; transfer risks; resource allocation.",
+        "indiaNotes": "- VV-ECMO is available in a limited number of Indian tertiary and private centres; costs are a major barrier. Identify your nearest ECMO centre and its referral criteria in advance."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "eolia",
+        "cesar",
+        "ats-ards2024",
+        "esicm-ards2023"
+      ],
+      "quiz": [
+        {
+          "id": "rescue-ecmo-q1",
+          "stem": "An EOLIA entry criterion is:",
+          "options": [
+            "P/F < 200",
+            "P/F < 50 for > 3 h",
+            "PEEP > 10",
+            "Any ARDS"
+          ],
+          "answerIndex": 1,
+          "explanation": "Also P/F < 80 for > 6 h or pH < 7.25 with PaCO2 ≥ 60."
+        },
+        {
+          "id": "rescue-ecmo-q2",
+          "stem": "CESAR showed benefit from:",
+          "options": [
+            "ECMO in all patients",
+            "Referral to an ECMO centre",
+            "High-frequency oscillation",
+            "Steroids"
+          ],
+          "answerIndex": 1,
+          "explanation": "Referral strategy improved survival without disability."
+        },
+        {
+          "id": "rescue-ecmo-q3",
+          "stem": "Before ECMO referral, which is essential?",
+          "options": [
+            "Prone positioning trial unless contraindicated",
+            "Tracheostomy",
+            "Steroids for 14 days",
+            "Bronchoscopy"
+          ],
+          "answerIndex": 0,
+          "explanation": "Prone positioning is a cheap, proven therapy."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "cisatracurium",
+      "name": "Cisatracurium",
+      "class": "Benzylisoquinolinium non-depolarising neuromuscular blocker",
+      "indications": "Early severe ARDS (P/F < 150) with persistent asynchrony or high plateau pressure despite deep sedation; prone positioning.",
+      "adultDose": "Bolus 0.15-0.2 mg/kg, then 1-3 mcg/kg/min (ACURASYS used a fixed 15 mg bolus then 37.5 mg/h for 48 h).",
+      "preparationIndia": "2 mg/mL (5 mL and 10 mL vials); 100 mg in 50 mL = 2 mg/mL undiluted.",
+      "renalHepatic": "Hofmann elimination: no adjustment in renal or hepatic failure.",
+      "cautions": "Must be deeply sedated first (awareness). ICU-acquired weakness with prolonged use; eye care and pressure care.",
+      "monitoring": "Train-of-four (aim 1-2 twitches if titrating), sedation depth (BIS if available).",
+      "refs": [
+        "acurasys",
+        "rose",
+        "ats-ards2024"
+      ]
+    },
+    {
+      "id": "atracurium",
+      "name": "Atracurium",
+      "class": "Benzylisoquinolinium neuromuscular blocker",
+      "indications": "Alternative to cisatracurium where unavailable.",
+      "adultDose": "Bolus 0.5 mg/kg, then 0.3-0.6 mg/kg/h (≈ 5-10 mcg/kg/min).",
+      "preparationIndia": "10 mg/mL (2.5 mL and 5 mL ampoules).",
+      "cautions": "Histamine release (hypotension, bronchospasm) with fast boluses; laudanosine accumulation (seizure risk theoretical).",
+      "verify": "Infusion range varies between references.",
+      "refs": [
+        "ats-ards2024"
+      ]
+    },
+    {
+      "id": "dexamethasone",
+      "name": "Dexamethasone",
+      "class": "Corticosteroid",
+      "indications": "Moderate-severe ARDS (DEXA-ARDS regimen); COVID-19 requiring oxygen (6 mg daily for 10 days).",
+      "adultDose": "DEXA-ARDS: 20 mg IV daily days 1-5, then 10 mg daily days 6-10. COVID-19: 6 mg daily up to 10 days.",
+      "preparationIndia": "4 mg/mL (2 mL and 30 mL vials) and 8 mg/2 mL ampoules.",
+      "cautions": "Hyperglycaemia; secondary infections; avoid in influenza ARDS (observational harm).",
+      "refs": [
+        "dexa-ards",
+        "recovery-dex",
+        "ats-ards2024"
+      ]
+    },
+    {
+      "id": "hydrocortisone",
+      "name": "Hydrocortisone",
+      "class": "Corticosteroid",
+      "indications": "Severe community-acquired pneumonia (CAPE COD regimen).",
+      "adultDose": "200 mg/day infusion for 4 days (or 8 days if not improving), then taper over 8-14 days total.",
+      "preparationIndia": "100 mg vials.",
+      "cautions": "CAPE COD excluded influenza and septic shock patients; hyperglycaemia.",
+      "refs": [
+        "capecod"
+      ]
+    },
+    {
+      "id": "furosemide",
+      "name": "Furosemide",
+      "class": "Loop diuretic",
+      "indications": "Conservative fluid strategy once shock has resolved (FACTT).",
+      "adultDose": "20-40 mg IV boluses, or infusion 5-20 mg/h, titrated to negative fluid balance with CVP/perfusion monitoring.",
+      "preparationIndia": "10 mg/mL, 2 mL ampoules.",
+      "cautions": "Hypokalaemia, hypomagnesaemia, metabolic alkalosis, ototoxicity at high bolus doses.",
+      "refs": [
+        "factt"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "global2024",
+      "citation": "Matthay MA, Arabi Y, Arroliga AC, et al. A new global definition of acute respiratory distress syndrome. Am J Respir Crit Care Med. 2024;209(1):37-47",
+      "url": "https://doi.org/10.1164/rccm.202303-0558WS",
+      "year": 2024,
+      "doi": "10.1164/rccm.202303-0558WS",
+      "type": "consensus"
+    },
+    {
+      "id": "berlin2012",
+      "citation": "ARDS Definition Task Force. Acute respiratory distress syndrome: the Berlin definition. JAMA. 2012;307(23):2526-2533",
+      "url": "https://doi.org/10.1001/jama.2012.5669",
+      "year": 2012,
+      "doi": "10.1001/jama.2012.5669",
+      "type": "consensus"
+    },
+    {
+      "id": "esicm-ards2023",
+      "citation": "Grasselli G, Calfee CS, Camporota L, et al. ESICM guidelines on acute respiratory distress syndrome: definition, phenotyping and respiratory support strategies. Intensive Care Med. 2023;49(7):727-759",
+      "url": "https://doi.org/10.1007/s00134-023-07050-7",
+      "year": 2023,
+      "doi": "10.1007/s00134-023-07050-7",
+      "type": "guideline"
+    },
+    {
+      "id": "ats-ards2024",
+      "citation": "Qadir N, Sahetya S, Munshi L, et al. An update on management of adult patients with acute respiratory distress syndrome: an official American Thoracic Society clinical practice guideline. Am J Respir Crit Care Med. 2024;209(1):24-36",
+      "url": "https://doi.org/10.1164/rccm.202311-2011ST",
+      "year": 2024,
+      "doi": "10.1164/rccm.202311-2011ST",
+      "type": "guideline"
+    },
+    {
+      "id": "armanet",
+      "citation": "ARDS Network. Ventilation with lower tidal volumes as compared with traditional tidal volumes for acute lung injury and ARDS. N Engl J Med. 2000;342(18):1301-1308",
+      "url": "https://doi.org/10.1056/NEJM200005043421801",
+      "year": 2000,
+      "doi": "10.1056/NEJM200005043421801",
+      "type": "trial"
+    },
+    {
+      "id": "alveoli",
+      "citation": "Brower RG, Lanken PN, MacIntyre N, et al. Higher versus lower positive end-expiratory pressures in patients with the acute respiratory distress syndrome (ALVEOLI). N Engl J Med. 2004;351(4):327-336",
+      "url": "https://doi.org/10.1056/NEJMoa032193",
+      "year": 2004,
+      "doi": "10.1056/NEJMoa032193",
+      "type": "trial"
+    },
+    {
+      "id": "art2017",
+      "citation": "Writing Group for the ART Investigators. Effect of lung recruitment and titrated PEEP vs low PEEP on mortality in patients with ARDS. JAMA. 2017;318(14):1335-1345",
+      "url": "https://doi.org/10.1001/jama.2017.14171",
+      "year": 2017,
+      "doi": "10.1001/jama.2017.14171",
+      "type": "trial"
+    },
+    {
+      "id": "proseva",
+      "citation": "Guérin C, Reignier J, Richard JC, et al. Prone positioning in severe acute respiratory distress syndrome (PROSEVA). N Engl J Med. 2013;368(23):2159-2168",
+      "url": "https://doi.org/10.1056/NEJMoa1214103",
+      "year": 2013,
+      "doi": "10.1056/NEJMoa1214103",
+      "type": "trial"
+    },
+    {
+      "id": "acurasys",
+      "citation": "Papazian L, Forel JM, Gacouin A, et al. Neuromuscular blockers in early acute respiratory distress syndrome (ACURASYS). N Engl J Med. 2010;363(12):1107-1116",
+      "url": "https://doi.org/10.1056/NEJMoa1005372",
+      "year": 2010,
+      "doi": "10.1056/NEJMoa1005372",
+      "type": "trial"
+    },
+    {
+      "id": "rose",
+      "citation": "National Heart, Lung, and Blood Institute PETAL Clinical Trials Network. Early neuromuscular blockade in the acute respiratory distress syndrome (ROSE). N Engl J Med. 2019;380(21):1997-2008",
+      "url": "https://doi.org/10.1056/NEJMoa1901686",
+      "year": 2019,
+      "doi": "10.1056/NEJMoa1901686",
+      "type": "trial"
+    },
+    {
+      "id": "factt",
+      "citation": "National Heart, Lung, and Blood Institute ARDS Clinical Trials Network. Comparison of two fluid-management strategies in acute lung injury (FACTT). N Engl J Med. 2006;354(24):2564-2575",
+      "url": "https://doi.org/10.1056/NEJMoa062200",
+      "year": 2006,
+      "doi": "10.1056/NEJMoa062200",
+      "type": "trial"
+    },
+    {
+      "id": "dexa-ards",
+      "citation": "Villar J, Ferrando C, Martínez D, et al. Dexamethasone treatment for the acute respiratory distress syndrome: a multicentre, randomised controlled trial (DEXA-ARDS). Lancet Respir Med. 2020;8(3):267-276",
+      "url": "https://doi.org/10.1016/S2213-2600(19)30417-5",
+      "year": 2020,
+      "doi": "10.1016/S2213-2600(19)30417-5",
+      "type": "trial"
+    },
+    {
+      "id": "capecod",
+      "citation": "Dequin PF, Meziani F, Quenot JP, et al. Hydrocortisone in severe community-acquired pneumonia (CAPE COD). N Engl J Med. 2023;388(21):1931-1941",
+      "url": "https://doi.org/10.1056/NEJMoa2215145",
+      "year": 2023,
+      "doi": "10.1056/NEJMoa2215145",
+      "type": "trial"
+    },
+    {
+      "id": "recovery-dex",
+      "citation": "RECOVERY Collaborative Group. Dexamethasone in hospitalized patients with Covid-19. N Engl J Med. 2021;384(8):693-704",
+      "url": "https://doi.org/10.1056/NEJMoa2021436",
+      "year": 2021,
+      "doi": "10.1056/NEJMoa2021436",
+      "type": "trial"
+    },
+    {
+      "id": "cesar",
+      "citation": "Peek GJ, Mugford M, Tiruvoipati R, et al. Efficacy and economic assessment of conventional ventilatory support versus extracorporeal membrane oxygenation for severe adult respiratory failure (CESAR). Lancet. 2009;374(9698):1351-1363",
+      "url": "https://doi.org/10.1016/S0140-6736(09)61069-2",
+      "year": 2009,
+      "doi": "10.1016/S0140-6736(09)61069-2",
+      "type": "trial"
+    },
+    {
+      "id": "eolia",
+      "citation": "Combes A, Hajage D, Capellier G, et al. Extracorporeal membrane oxygenation for severe acute respiratory distress syndrome (EOLIA). N Engl J Med. 2018;378(21):1965-1975",
+      "url": "https://doi.org/10.1056/NEJMoa1800385",
+      "year": 2018,
+      "doi": "10.1056/NEJMoa1800385",
+      "type": "trial"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Cisatracurium availability",
+      "reason": "Cisatracurium 2 mg/mL is available in India but may be short-supplied; atracurium and vecuronium are common substitutes. Doses given for both."
+    },
+    {
+      "item": "Steroid regimens",
+      "reason": "Steroid regimens in ARDS vary (dexamethasone DEXA-ARDS, methylprednisolone Meduri, hydrocortisone for severe CAP). ATS 2024 suggests corticosteroids without specifying a single regimen."
+    }
+  ]
+}

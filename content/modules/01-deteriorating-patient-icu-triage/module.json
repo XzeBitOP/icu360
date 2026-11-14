@@ -1,0 +1,2015 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "deteriorating-patient-icu-triage",
+  "number": 1,
+  "folder": "01-deteriorating-patient-icu-triage",
+  "section": {
+    "id": "A",
+    "title": "Resuscitation and emergencies"
+  },
+  "phase": 2,
+  "title": "Deteriorating patient and ICU triage",
+  "summary": "Recognise and respond to the deteriorating ward patient: ABCDE assessment, NEWS2 and qSOFA, rapid response calls, ICU admission and discharge criteria from the 2023 DGHS-ISCCM guideline, and fair bed triage when beds are short.",
+  "tags": [
+    "deterioration",
+    "NEWS2",
+    "qSOFA",
+    "ABCDE",
+    "rapid response",
+    "MET",
+    "ICU admission",
+    "triage",
+    "ISCCM"
+  ],
+  "relatedModules": [
+    "cardiac-arrest-post-rosc",
+    "sepsis-septic-shock",
+    "shock-vasoactive-support",
+    "airway-management",
+    "handover-transport-icu-safety",
+    "ethics-communication-palliative-care"
+  ],
+  "version": "0.2.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "activity",
+    "accent": "high"
+  },
+  "viewKey": "module:deteriorating-patient-icu-triage",
+  "topics": [
+    {
+      "id": "abcde-approach",
+      "title": "ABCDE approach to the deteriorating patient",
+      "summary": "Structured head-to-toe assessment that treats life threats as they are found, before a diagnosis is made.",
+      "viewKey": "topic:deteriorating-patient-icu-triage/abcde-approach",
+      "uiHints": {
+        "icon": "list-checks",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "ABCDE = Airway, Breathing, Circulation, Disability, Exposure. Assess and treat each step in order; reassess after every intervention and call for help early.",
+          "refs": [
+            "rcuk-abcde",
+            "thim-abcde"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Safety, response and help",
+            "detail": "Approach safely, ask 'Are you all right?'. If no response and not breathing normally, start CPR and call the code team (go to Cardiac arrest module). If responsive but sick, call for senior help early and attach monitoring (SpO2, ECG, NIBP).",
+            "time": "0 min",
+            "refs": [
+              "rcuk-abcde"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "A - Airway",
+            "detail": "Look, listen, feel: talking = patent. Signs of obstruction: stridor, gurgling, see-saw breathing, silence with effort. Head tilt-chin lift / jaw thrust, suction, oro- or nasopharyngeal airway; give high-flow O2 15 L/min via non-rebreather. Anaphylaxis or burns: early anaesthetic help.",
+            "time": "0-1 min",
+            "refs": [
+              "rcuk-abcde"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "B - Breathing",
+            "detail": "Count RR (normal 12-20), SpO2, work of breathing, chest expansion, trachea, percussion, auscultation. Treat: target SpO2 94-98% (88-92% if hypercapnic risk), nebulise bronchospasm, decompress tension pneumothorax, sit up. Send ABG.",
+            "time": "1-3 min",
+            "refs": [
+              "rcuk-abcde"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "C - Circulation",
+            "detail": "HR, BP, CRT (> 2 s abnormal), skin colour and temperature, JVP, urine output. Two large-bore cannulae (16-18G), send bloods incl. lactate, cultures, cross-match. Hypotension: 250-500 mL crystalloid bolus and reassess; look for bleeding, sepsis, cardiac cause. 12-lead ECG.",
+            "time": "3-6 min",
+            "refs": [
+              "rcuk-abcde",
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "D - Disability",
+            "detail": "AVPU or GCS, pupils, capillary glucose (treat < 70 mg/dL), lateralising signs, seizures, drugs (opioids, sedatives). Protect the airway if GCS ≤ 8 or falling, unless rapidly reversible (e.g. hypoglycaemia, opioid).",
+            "time": "6-8 min",
+            "refs": [
+              "rcuk-abcde"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "E - Exposure",
+            "detail": "Fully expose with dignity: temperature, rashes (meningococcal, dengue petechiae), wounds, drains, bleeding, calf swelling, pressure areas, bite marks (snakebite). Check charts, drug chart and fluid balance.",
+            "time": "8-10 min",
+            "refs": [
+              "rcuk-abcde"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Reassess, escalate, document",
+            "detail": "Repeat ABCDE after every intervention. Communicate with ISBAR to the senior/ICU, decide ceiling of care and destination (ward with closer monitoring, HDU, ICU). Write a timed note with NEWS2 and plan.",
+            "time": "10-15 min",
+            "refs": [
+              "thim-abcde"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "oxygen",
+            "role": "First treatment in A/B",
+            "route": "Non-rebreather / nasal / Venturi",
+            "dose": "15 L/min non-rebreather if critically ill; then titrate to SpO2 94-98% (88-92% if hypercapnic risk)",
+            "target": "SpO2 94-98% or 88-92%",
+            "refs": [
+              "rcuk-abcde"
+            ]
+          },
+          {
+            "drugId": "ringer-lactate",
+            "role": "Fluid challenge in C",
+            "route": "IV",
+            "dose": "250-500 mL over 10-15 min, reassess",
+            "workedExample": "70 kg with SBP 82 and cold peripheries: 500 mL RL over 15 min, recheck BP, HR, CRT, chest",
+            "notes": "Stop at signs of fluid intolerance; think early vasopressor if MAP < 65 mmHg persists.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "drugId": "dextrose-25",
+            "role": "Hypoglycaemia in D",
+            "route": "IV",
+            "dose": "25 g (100 mL 25% dextrose)",
+            "target": "Glucose > 70 mg/dL, recheck at 15 min",
+            "refs": [
+              "rcuk-abcde"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "abcde-quick",
+            "title": "ABCDE quick reference",
+            "columns": [
+              "Step",
+              "Look for",
+              "Immediate actions"
+            ],
+            "rows": [
+              [
+                "A",
+                "Stridor, gurgling, snoring, paradoxical movement, silence",
+                "Airway manoeuvres, suction, OPA/NPA, O2 15 L/min, call anaesthesia"
+              ],
+              [
+                "B",
+                "RR < 8 or > 25, SpO2 < 92%, accessory muscles, unequal air entry",
+                "Titrated O2, nebulisers, sit up, needle decompression, ABG, CXR/ultrasound"
+              ],
+              [
+                "C",
+                "HR > 130 or < 40, SBP < 90, CRT > 2 s, mottling, oliguria",
+                "IV access x2, bloods + lactate, fluid bolus, ECG, stop bleeding"
+              ],
+              [
+                "D",
+                "GCS fall ≥ 2, glucose < 70 mg/dL, unequal pupils, seizure",
+                "Glucose, naloxone if opioid, benzodiazepine for seizure, protect airway"
+              ],
+              [
+                "E",
+                "Fever/hypothermia, rash, bleeding, wounds, bites",
+                "Cultures, antibiotics if sepsis, warming/cooling, source search"
+              ]
+            ],
+            "refs": [
+              "rcuk-abcde"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Airway obstruction, RR < 8 or > 30, SpO2 < 90% on oxygen, SBP < 90 mmHg, GCS drop ≥ 2 points or new seizure: call for senior/ICU help now.",
+            "refs": [
+              "merit-2005"
+            ]
+          },
+          {
+            "text": "Silent chest in asthma, stridor in anaphylaxis or burns, and gurgling in a patient with low GCS are pre-arrest airway signs.",
+            "refs": [
+              "rcuk-abcde"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Moving to C before fixing A or B. A hypoxic patient needs oxygen before a CT scan.",
+            "refs": [
+              "thim-abcde"
+            ]
+          },
+          {
+            "text": "Normal BP does not mean no shock: tachycardia, cold peripheries, rising lactate and oliguria come first, especially in young patients and those on beta-blockers.",
+            "refs": [
+              "esicm-shock-2014"
+            ]
+          },
+          {
+            "text": "Forgetting the capillary glucose in every confused or drowsy patient.",
+            "refs": [
+              "rcuk-abcde"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Say findings aloud and delegate one task per person: one on airway, one on IV and bloods, one on monitoring and documentation.",
+            "refs": [
+              "thim-abcde"
+            ]
+          },
+          {
+            "text": "Ask 'What is the ceiling of care?' early. It shapes escalation and avoids non-beneficial ICU admission.",
+            "refs": [
+              "dghs-icu-2023"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "ABCDE assessment loop",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Patient deteriorating / NEWS2 trigger"
+          },
+          {
+            "id": "resp",
+            "type": "decision",
+            "text": "Responsive and breathing normally?"
+          },
+          {
+            "id": "cpr",
+            "type": "end",
+            "text": "Start CPR, call code team",
+            "detail": "Go to Cardiac arrest and post-ROSC care",
+            "severity": "critical"
+          },
+          {
+            "id": "a",
+            "type": "decision",
+            "text": "A: airway patent?"
+          },
+          {
+            "id": "afix",
+            "type": "action",
+            "text": "Airway manoeuvres, suction, OPA/NPA, O2 15 L/min, call anaesthesia",
+            "severity": "critical"
+          },
+          {
+            "id": "b",
+            "type": "decision",
+            "text": "B: RR 12-20 and SpO2 at target?"
+          },
+          {
+            "id": "bfix",
+            "type": "action",
+            "text": "Titrate O2, nebulise, decompress, sit up, ABG"
+          },
+          {
+            "id": "c",
+            "type": "decision",
+            "text": "C: perfusing (SBP ≥ 90, CRT ≤ 2 s, no tachycardia > 120)?"
+          },
+          {
+            "id": "cfix",
+            "type": "action",
+            "text": "IV x2, bloods + lactate, 250-500 mL bolus, ECG, stop bleeding",
+            "severity": "high"
+          },
+          {
+            "id": "d",
+            "type": "decision",
+            "text": "D: GCS normal and glucose ≥ 70 mg/dL?"
+          },
+          {
+            "id": "dfix",
+            "type": "action",
+            "text": "Glucose, naloxone, treat seizure, protect airway if GCS ≤ 8"
+          },
+          {
+            "id": "e",
+            "type": "action",
+            "text": "E: expose, temperature, rash, bleeding, bites, charts"
+          },
+          {
+            "id": "re",
+            "type": "decision",
+            "text": "Improving after reassessment?"
+          },
+          {
+            "id": "ward",
+            "type": "end",
+            "text": "Continue on ward with increased NEWS2 monitoring and a written plan"
+          },
+          {
+            "id": "esc",
+            "type": "end",
+            "text": "Escalate: senior + ICU review (ISBAR), decide ceiling of care",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "resp"
+          },
+          {
+            "from": "resp",
+            "to": "cpr",
+            "label": "No"
+          },
+          {
+            "from": "resp",
+            "to": "a",
+            "label": "Yes"
+          },
+          {
+            "from": "a",
+            "to": "afix",
+            "label": "No"
+          },
+          {
+            "from": "a",
+            "to": "b",
+            "label": "Yes"
+          },
+          {
+            "from": "afix",
+            "to": "b"
+          },
+          {
+            "from": "b",
+            "to": "bfix",
+            "label": "No"
+          },
+          {
+            "from": "b",
+            "to": "c",
+            "label": "Yes"
+          },
+          {
+            "from": "bfix",
+            "to": "c"
+          },
+          {
+            "from": "c",
+            "to": "cfix",
+            "label": "No"
+          },
+          {
+            "from": "c",
+            "to": "d",
+            "label": "Yes"
+          },
+          {
+            "from": "cfix",
+            "to": "d"
+          },
+          {
+            "from": "d",
+            "to": "dfix",
+            "label": "No"
+          },
+          {
+            "from": "d",
+            "to": "e",
+            "label": "Yes"
+          },
+          {
+            "from": "dfix",
+            "to": "e"
+          },
+          {
+            "from": "e",
+            "to": "re"
+          },
+          {
+            "from": "re",
+            "to": "ward",
+            "label": "Yes"
+          },
+          {
+            "from": "re",
+            "to": "esc",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "rcuk-abcde"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Most in-hospital cardiac arrests are preceded by hours of abnormal vital signs (rising respiratory rate, falling SpO2, tachycardia, hypotension, confusion). The ABCDE sequence follows the order in which problems kill: airway obstruction kills in minutes, hypoxaemia within minutes, shock within minutes to hours, and neurological or exposure problems usually more slowly.",
+        "evidence": "- The ABCDE approach is consensus-based (Resuscitation Council UK, ERC, ATLS) and is recommended for all acutely ill patients regardless of diagnosis [Thim 2012].\n- Respiratory rate is the single most sensitive early marker of deterioration and the most frequently omitted vital sign.\n- Delayed ED-to-ICU transfer (> 6 h) was associated with higher mortality in a US cohort, supporting early escalation [Chalfin 2007].",
+        "controversies": "- How much structured assessment versus a parallel team approach: in a full team, A to E is assessed simultaneously by different members; the junior alone should still go in order.\n- Fluid bolus size is moving down (250-500 mL with reassessment) rather than fixed 30 mL/kg for every hypotensive patient; see the Shock module.",
+        "indiaNotes": "- In Indian wards one doctor may cover 60-100 patients at night; train nurses to trigger escalation on NEWS2 or 'worried' without waiting for the doctor's round.\n- Always consider India-specific causes during E: snake or scorpion bites, OP poisoning smell, dengue petechiae, eschar of scrub typhus (axilla, groin, under breasts).\n- Check oxygen supply (cylinder vs pipeline) when transferring; see the oxygen cylinder calculator."
+      },
+      "drugIds": [
+        "oxygen",
+        "ringer-lactate",
+        "dextrose-25"
+      ],
+      "calculatorIds": [
+        "news2",
+        "gcs",
+        "shock-index",
+        "mean-arterial-pressure"
+      ],
+      "references": [
+        "rcuk-abcde",
+        "thim-abcde",
+        "merit-2005",
+        "chalfin-2007"
+      ],
+      "quiz": [
+        {
+          "id": "abcde-approach-q1",
+          "stem": "A 55-year-old on the ward is drowsy with snoring respirations, RR 8/min and SpO2 84%. What is the FIRST action?",
+          "options": [
+            "Send an ABG",
+            "Jaw thrust/head tilt-chin lift, airway adjunct and high-flow oxygen",
+            "Give 500 mL fluid bolus",
+            "Order CT head"
+          ],
+          "answerIndex": 1,
+          "explanation": "Airway comes first. Open and support the airway, give oxygen, then reassess B. Investigations follow stabilisation."
+        },
+        {
+          "id": "abcde-approach-q2",
+          "stem": "Which finding during C suggests shock even if the BP is 110/70 mmHg?",
+          "options": [
+            "HR 72, CRT 1 s",
+            "HR 128, cold mottled knees, lactate 4.2 mmol/L",
+            "Warm hands, urine 1 mL/kg/h",
+            "SpO2 97% on air"
+          ],
+          "answerIndex": 1,
+          "explanation": "Tachycardia, mottling and raised lactate show hypoperfusion; BP is maintained by compensation early in shock."
+        },
+        {
+          "id": "abcde-approach-q3",
+          "stem": "In the D step, the first bedside test in every confused patient is:",
+          "options": [
+            "Serum sodium",
+            "Capillary blood glucose",
+            "CT brain",
+            "Lumbar puncture"
+          ],
+          "answerIndex": 1,
+          "explanation": "Hypoglycaemia is common, quickly fatal and immediately reversible; check glucose in every patient with altered sensorium."
+        },
+        {
+          "id": "abcde-approach-q4",
+          "stem": "After giving oxygen and a fluid bolus, the patient's NEWS2 rises from 6 to 8. What next?",
+          "options": [
+            "Repeat observations in 4 hours",
+            "Escalate to senior and ICU now using ISBAR",
+            "Start maintenance fluids",
+            "Wait for the morning round"
+          ],
+          "answerIndex": 1,
+          "explanation": "NEWS2 ≥ 7 or failure to improve after first measures needs an emergency response from a critical care-competent team."
+        }
+      ]
+    },
+    {
+      "id": "news2-qsofa",
+      "title": "NEWS2 and qSOFA",
+      "summary": "Early warning scores to detect deterioration and sepsis risk, and how to act on each score band.",
+      "viewKey": "topic:deteriorating-patient-icu-triage/news2-qsofa",
+      "uiHints": {
+        "icon": "gauge",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "NEWS2 adds points for 7 parameters (RR, SpO2 on scale 1 or 2, air/oxygen, SBP, HR, consciousness incl. new confusion, temperature). qSOFA = RR ≥ 22, altered mentation, SBP ≤ 100 mmHg (1 point each).",
+          "refs": [
+            "news2",
+            "sepsis3"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Score every set of observations",
+            "detail": "Calculate NEWS2 at every observation round. Use SpO2 Scale 2 (target 88-92%) only for patients with documented hypercapnic respiratory failure, prescribed by a doctor.",
+            "refs": [
+              "news2"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Score 0",
+            "detail": "Routine monitoring at least every 12 h.",
+            "refs": [
+              "news2"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Score 1-4",
+            "detail": "Nurse informs the registered nurse in charge, who decides on escalation; observations at least every 4-6 h.",
+            "refs": [
+              "news2"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Score 3 in any single parameter",
+            "detail": "Low-medium risk: urgent ward-based review by a doctor; observations at least hourly.",
+            "refs": [
+              "news2"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Score 5-6 (key threshold)",
+            "detail": "Medium risk: urgent review within 30 minutes by a clinician competent in acute illness; consider sepsis, start the sepsis screen; observations at least hourly.",
+            "time": "< 30 min",
+            "refs": [
+              "news2"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Score ≥ 7",
+            "detail": "High risk: emergency assessment by a critical care-competent team (rapid response/ICU outreach), continuous monitoring, consider transfer to HDU/ICU.",
+            "time": "Immediate",
+            "refs": [
+              "news2"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Apply qSOFA in suspected infection",
+            "detail": "qSOFA ≥ 2 flags higher risk of death or prolonged ICU stay. Do not use it as the only screening tool for sepsis; a negative qSOFA does not exclude sepsis. Measure SOFA and lactate.",
+            "refs": [
+              "sepsis3",
+              "ssc2026"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "news2-chart",
+            "title": "NEWS2 scoring (summary)",
+            "columns": [
+              "Parameter",
+              "3",
+              "2",
+              "1",
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "rows": [
+              [
+                "Resp rate (/min)",
+                "≤ 8",
+                "-",
+                "9-11",
+                "12-20",
+                "-",
+                "21-24",
+                "≥ 25"
+              ],
+              [
+                "SpO2 Scale 1 (%)",
+                "≤ 91",
+                "92-93",
+                "94-95",
+                "≥ 96",
+                "-",
+                "-",
+                "-"
+              ],
+              [
+                "SpO2 Scale 2 (%)",
+                "≤ 83",
+                "84-85",
+                "86-87",
+                "88-92 or ≥ 93 on air",
+                "93-94 on O2",
+                "95-96 on O2",
+                "≥ 97 on O2"
+              ],
+              [
+                "Air or oxygen",
+                "-",
+                "Oxygen",
+                "-",
+                "Air",
+                "-",
+                "-",
+                "-"
+              ],
+              [
+                "Systolic BP (mmHg)",
+                "≤ 90",
+                "91-100",
+                "101-110",
+                "111-219",
+                "-",
+                "-",
+                "≥ 220"
+              ],
+              [
+                "Pulse (/min)",
+                "≤ 40",
+                "-",
+                "41-50",
+                "51-90",
+                "91-110",
+                "111-130",
+                "≥ 131"
+              ],
+              [
+                "Consciousness",
+                "-",
+                "-",
+                "-",
+                "Alert",
+                "-",
+                "-",
+                "New confusion, V, P or U"
+              ],
+              [
+                "Temperature (C)",
+                "≤ 35.0",
+                "-",
+                "35.1-36.0",
+                "36.1-38.0",
+                "38.1-39.0",
+                "≥ 39.1",
+                "-"
+              ]
+            ],
+            "caption": "Columns: points scored for low values (left), 0 = normal, points for high values (right).",
+            "refs": [
+              "news2"
+            ]
+          },
+          {
+            "id": "news2-response",
+            "title": "NEWS2 clinical response",
+            "columns": [
+              "Score",
+              "Risk",
+              "Monitoring",
+              "Response"
+            ],
+            "rows": [
+              [
+                "0",
+                "Low",
+                "12-hourly",
+                "Routine"
+              ],
+              [
+                "1-4",
+                "Low",
+                "4-6 hourly",
+                "Nurse in charge assesses"
+              ],
+              [
+                "3 in one parameter",
+                "Low-medium",
+                "Hourly",
+                "Urgent ward doctor review"
+              ],
+              [
+                "5-6",
+                "Medium",
+                "Hourly",
+                "Urgent review < 30 min, consider sepsis"
+              ],
+              [
+                "≥ 7",
+                "High",
+                "Continuous",
+                "Emergency critical care team review"
+              ]
+            ],
+            "refs": [
+              "news2"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "NEWS2 ≥ 7, or new confusion with any infection, is an emergency: same-hour senior/ICU review.",
+            "refs": [
+              "news2"
+            ]
+          },
+          {
+            "text": "qSOFA ≥ 2 with infection: treat as sepsis until proven otherwise; measure lactate and start the hour-1 bundle.",
+            "refs": [
+              "sepsis3",
+              "ssc2026"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Using SpO2 Scale 2 for every COPD patient. Only use it if hypercapnic failure is documented and a target of 88-92% is prescribed.",
+            "refs": [
+              "news2"
+            ]
+          },
+          {
+            "text": "Waiting for qSOFA to become positive before treating sepsis. SSC 2026 recommends NEWS, NEWS2, MEWS or SIRS over qSOFA as a single screening tool (strong, moderate certainty).",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "text": "Scores miss patients on beta-blockers (blunted HR), the elderly, pregnant women (use an obstetric score such as MEOWS) and children.",
+            "refs": [
+              "news2"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Trend matters more than one number: a NEWS2 rising from 2 to 5 over 6 hours deserves review even below 7.",
+            "refs": [
+              "smith-news-2013"
+            ]
+          },
+          {
+            "text": "Respiratory rate is the best single predictor; count it for a full 30-60 seconds.",
+            "refs": [
+              "smith-news-2013"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "NEWS2 escalation pathway",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Observations recorded"
+          },
+          {
+            "id": "calc",
+            "type": "action",
+            "text": "Calculate NEWS2 (correct SpO2 scale)"
+          },
+          {
+            "id": "hi",
+            "type": "decision",
+            "text": "NEWS2 ≥ 7?"
+          },
+          {
+            "id": "emerg",
+            "type": "end",
+            "text": "Emergency response: rapid response/ICU team, continuous monitoring, consider HDU/ICU",
+            "severity": "critical"
+          },
+          {
+            "id": "med",
+            "type": "decision",
+            "text": "NEWS2 5-6?"
+          },
+          {
+            "id": "urgent",
+            "type": "action",
+            "text": "Urgent clinician review < 30 min; hourly obs",
+            "severity": "high"
+          },
+          {
+            "id": "inf",
+            "type": "decision",
+            "text": "Suspected infection?"
+          },
+          {
+            "id": "sepsis",
+            "type": "end",
+            "text": "Sepsis screen: lactate, cultures, antibiotics within 1 h if likely sepsis or shock",
+            "severity": "high"
+          },
+          {
+            "id": "plan",
+            "type": "end",
+            "text": "Treat cause, written escalation plan, repeat NEWS2 in 1 h"
+          },
+          {
+            "id": "single",
+            "type": "decision",
+            "text": "Score 3 in any single parameter?"
+          },
+          {
+            "id": "ward",
+            "type": "action",
+            "text": "Urgent ward doctor review; hourly obs"
+          },
+          {
+            "id": "low",
+            "type": "end",
+            "text": "NEWS2 1-4: nurse in charge review, 4-6 hourly obs; 0: 12-hourly"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "calc"
+          },
+          {
+            "from": "calc",
+            "to": "hi"
+          },
+          {
+            "from": "hi",
+            "to": "emerg",
+            "label": "Yes"
+          },
+          {
+            "from": "hi",
+            "to": "med",
+            "label": "No"
+          },
+          {
+            "from": "med",
+            "to": "urgent",
+            "label": "Yes"
+          },
+          {
+            "from": "med",
+            "to": "single",
+            "label": "No"
+          },
+          {
+            "from": "urgent",
+            "to": "inf"
+          },
+          {
+            "from": "inf",
+            "to": "sepsis",
+            "label": "Yes"
+          },
+          {
+            "from": "inf",
+            "to": "plan",
+            "label": "No"
+          },
+          {
+            "from": "single",
+            "to": "ward",
+            "label": "Yes"
+          },
+          {
+            "from": "single",
+            "to": "low",
+            "label": "No"
+          },
+          {
+            "from": "ward",
+            "to": "plan"
+          }
+        ],
+        "refs": [
+          "news2"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Early warning scores aggregate small deviations in several vital signs because each alone is insensitive. NEWS2 (2017) added a separate SpO2 scale for hypercapnic patients and 'new confusion' to the consciousness parameter, reflecting delirium as an early sign of sepsis.",
+        "evidence": "- NEWS discriminated patients at risk of cardiac arrest, unanticipated ICU admission or death within 24 h better than 33 other early warning scores (AUROC 0.89 for death) [Smith 2013].\n- qSOFA was derived as a bedside prompt in Sepsis-3; it predicts mortality but has poor sensitivity for sepsis [Sepsis-3 2016].\n- SSC 2026 recommends NEWS, NEWS2, MEWS or SIRS over qSOFA as a single screening tool (strong, moderate certainty); in 221,429 prehospital records NEWS2 performed best and qSOFA had the lowest sensitivity (23%) [SSC 2026]. SSC 2026 also suggests a 'code sepsis' or sepsis-huddle response after a positive screen (conditional).",
+        "controversies": "- NEWS2 Scale 2 is often misapplied, leading to under-scoring of hypoxaemia.\n- Automated scoring in electronic records improves compliance but alarm fatigue is a real risk.",
+        "indiaNotes": "- Paper-based NEWS2 charts work well in Indian wards; laminated pocket cards help nurses.\n- In high nurse-to-patient ratios, prioritise RR, SpO2, SBP and sensorium at least 4-hourly in all newly admitted febrile patients during monsoon season."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "news2",
+        "qsofa",
+        "sofa"
+      ],
+      "references": [
+        "news2",
+        "smith-news-2013",
+        "sepsis3",
+        "ssc2026"
+      ],
+      "quiz": [
+        {
+          "id": "news2-qsofa-q1",
+          "stem": "A patient with documented chronic hypercapnic COPD is on 2 L oxygen with SpO2 90%. On which NEWS2 SpO2 scale should this be scored?",
+          "options": [
+            "Scale 1",
+            "Scale 2, 0 points",
+            "Scale 2, 3 points",
+            "SpO2 is not scored in COPD"
+          ],
+          "answerIndex": 1,
+          "explanation": "Scale 2 applies only to documented hypercapnic failure with a prescribed 88-92% target; 88-92% scores 0 on Scale 2 (the oxygen itself still scores 2)."
+        },
+        {
+          "id": "news2-qsofa-q2",
+          "stem": "What NEWS2 aggregate score is the 'key threshold' for urgent review and sepsis consideration?",
+          "options": [
+            "3",
+            "5",
+            "7",
+            "9"
+          ],
+          "answerIndex": 1,
+          "explanation": "NEWS2 5-6 = medium risk, urgent response; ≥ 7 = high risk, emergency response."
+        },
+        {
+          "id": "news2-qsofa-q3",
+          "stem": "Which is TRUE about qSOFA?",
+          "options": [
+            "qSOFA ≥ 2 defines sepsis",
+            "SSC 2026 recommends NEWS, NEWS2, MEWS or SIRS over qSOFA alone for screening",
+            "qSOFA includes lactate",
+            "qSOFA uses SBP < 90 mmHg"
+          ],
+          "answerIndex": 1,
+          "explanation": "qSOFA is a prognostic prompt (RR ≥ 22, altered mentation, SBP ≤ 100). Sepsis is defined by infection plus an acute SOFA increase of ≥ 2."
+        },
+        {
+          "id": "news2-qsofa-q4",
+          "stem": "Score each: RR 26, SpO2 93% on air (Scale 1), SBP 98, HR 118, alert, temp 38.4 °C. NEWS2 = ?",
+          "options": [
+            "7",
+            "8",
+            "9",
+            "10"
+          ],
+          "answerIndex": 3,
+          "explanation": "RR 26 = 3; SpO2 93% = 2; air = 0; SBP 98 = 2; HR 118 = 2; alert = 0; temp 38.4 °C = 1. Total 10: emergency response."
+        }
+      ]
+    },
+    {
+      "id": "rapid-response-calls",
+      "title": "Rapid response calls",
+      "summary": "Calling criteria, team roles and a structured first 15 minutes when you answer or make a rapid response (MET) call.",
+      "viewKey": "topic:deteriorating-patient-icu-triage/rapid-response-calls",
+      "uiHints": {
+        "icon": "siren",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "A rapid response (medical emergency) team brings critical care skills to a deteriorating ward patient before cardiac arrest. Calls are triggered by objective criteria (vital signs, NEWS2 ≥ 7) or by staff concern.",
+          "refs": [
+            "merit-2005",
+            "news2"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Know the calling criteria",
+            "detail": "Call if: airway threatened; RR < 8 or > 30; SpO2 < 90% despite oxygen; HR < 40 or > 140; SBP < 90 mmHg; sudden fall in GCS ≥ 2 or new seizure; urine < 0.5 mL/kg/h for 4 h; NEWS2 ≥ 7; or any staff member is seriously worried.",
+            "refs": [
+              "merit-2005",
+              "news2"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Call using ISBAR",
+            "detail": "Identify yourself and patient; Situation (what has changed); Background (diagnosis, comorbidities, ceiling of care); Assessment (ABCDE findings, NEWS2); Recommendation (what you need and by when).",
+            "time": "0 min"
+          },
+          {
+            "n": 3,
+            "title": "On arrival: leader and roles",
+            "detail": "Leader stands at the foot of the bed, assigns airway, circulation/IV, drugs, recorder. Closed-loop communication: 'Give 500 mL RL now' - '500 mL RL given'.",
+            "time": "0-2 min"
+          },
+          {
+            "n": 4,
+            "title": "Rapid ABCDE and immediate treatment",
+            "detail": "Oxygen, IV access, bloods (ABG/VBG, lactate, glucose, electrolytes, cultures), 12-lead ECG, bedside ultrasound if trained. Treat the obvious: fluids, nebulisers, glucose, naloxone, antibiotics.",
+            "time": "2-10 min",
+            "refs": [
+              "rcuk-abcde"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Decide disposition and ceiling",
+            "detail": "Options: stays on ward with clear plan and NEWS2 frequency; transfer to HDU/ICU; or palliative/ceiling-of-care plan after discussion with consultant and family.",
+            "time": "10-15 min",
+            "refs": [
+              "dghs-icu-2023"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Hand over and document",
+            "detail": "Written timed note: trigger, findings, treatment, response, plan, escalation criteria ('call back if SBP < 90 or NEWS2 ≥ 7'), who was informed. Review within 1 hour.",
+            "time": "15 min"
+          }
+        ],
+        "tables": [
+          {
+            "id": "rrt-roles",
+            "title": "Rapid response team roles",
+            "columns": [
+              "Role",
+              "Tasks"
+            ],
+            "rows": [
+              [
+                "Leader",
+                "Allocates roles, summarises every 3-5 min, decides disposition"
+              ],
+              [
+                "Airway/breathing",
+                "Positioning, suction, oxygen, BVM, prepares for intubation"
+              ],
+              [
+                "Circulation",
+                "IV/IO access, bloods, fluids, monitoring, ultrasound"
+              ],
+              [
+                "Drugs",
+                "Prepares and labels drugs, checks allergies and doses aloud"
+              ],
+              [
+                "Recorder",
+                "Times, vitals, drugs given, calls made"
+              ]
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Repeated rapid response calls for the same patient within 24 h: escalate to consultant and ICU; consider ICU admission or a documented ceiling of care.",
+            "refs": [
+              "sccm-triage-2016"
+            ]
+          },
+          {
+            "text": "Peri-arrest signs (bradycardia < 40, agonal breathing, SBP < 70): prepare for cardiac arrest, defibrillator to bedside.",
+            "refs": [
+              "rcuk-abcde"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Not calling because 'it might be nothing'. 'Worried' is a valid criterion and late calls are associated with worse outcomes.",
+            "refs": [
+              "merit-2005"
+            ]
+          },
+          {
+            "text": "Leaving after the immediate fix without a written plan and escalation triggers for the ward team.",
+            "refs": [
+              "news2"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Ask the bedside nurse 'What worries you most?' first; nurses often notice deterioration before vital signs cross thresholds.",
+            "refs": [
+              "news2"
+            ]
+          },
+          {
+            "text": "A rapid response call is the best moment to clarify goals of care and resuscitation status with the treating consultant and family.",
+            "refs": [
+              "dghs-icu-2023"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Answering a rapid response call",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Rapid response call received"
+          },
+          {
+            "id": "arrest",
+            "type": "decision",
+            "text": "Pulseless or not breathing?"
+          },
+          {
+            "id": "code",
+            "type": "end",
+            "text": "Cardiac arrest protocol (ACLS)",
+            "severity": "critical"
+          },
+          {
+            "id": "lead",
+            "type": "action",
+            "text": "Assign leader and roles; ISBAR from ward nurse"
+          },
+          {
+            "id": "abcde",
+            "type": "action",
+            "text": "Rapid ABCDE; O2, IV, bloods incl. lactate, ECG, POCUS"
+          },
+          {
+            "id": "treat",
+            "type": "action",
+            "text": "Treat reversible causes (fluids, glucose, naloxone, antibiotics, nebulisers)"
+          },
+          {
+            "id": "ceiling",
+            "type": "decision",
+            "text": "Escalation appropriate (no treatment limitation)?"
+          },
+          {
+            "id": "pall",
+            "type": "end",
+            "text": "Agree ceiling of care with consultant and family; comfort-focused plan"
+          },
+          {
+            "id": "better",
+            "type": "decision",
+            "text": "Stable after 15-30 min?"
+          },
+          {
+            "id": "stay",
+            "type": "end",
+            "text": "Stay on ward: written plan, NEWS2 hourly, review in 1 h"
+          },
+          {
+            "id": "icu",
+            "type": "end",
+            "text": "Transfer to HDU/ICU with monitored transport",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "arrest"
+          },
+          {
+            "from": "arrest",
+            "to": "code",
+            "label": "Yes"
+          },
+          {
+            "from": "arrest",
+            "to": "lead",
+            "label": "No"
+          },
+          {
+            "from": "lead",
+            "to": "abcde"
+          },
+          {
+            "from": "abcde",
+            "to": "treat"
+          },
+          {
+            "from": "treat",
+            "to": "ceiling"
+          },
+          {
+            "from": "ceiling",
+            "to": "pall",
+            "label": "No"
+          },
+          {
+            "from": "ceiling",
+            "to": "better",
+            "label": "Yes"
+          },
+          {
+            "from": "better",
+            "to": "stay",
+            "label": "Yes"
+          },
+          {
+            "from": "better",
+            "to": "icu",
+            "label": "No"
+          }
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Failure to rescue on wards is usually a failure of recognition (vital signs not measured or not acted on) and of escalation (calls delayed by hierarchy, workload or uncertainty), rather than a lack of treatments.",
+        "evidence": "- MERIT (23 Australian hospitals) found no significant reduction in the composite of arrests, unplanned ICU admissions and unexpected deaths with MET introduction, but calling criteria were underused in both arms [Hillman 2005].\n- Before-after studies and meta-analyses suggest reduced ward cardiac arrests with mature rapid response systems; the afferent limb (detection and calling) is the critical component.",
+        "controversies": "- Whether rapid response teams reduce mortality remains uncertain; benefits may come mainly from earlier end-of-life decisions and fewer futile arrests.\n- Physician-led versus nurse-led teams; in India most are physician (ICU resident) led.",
+        "indiaNotes": "- Many Indian hospitals use 'Code Blue' only for arrests; propose a separate 'Code Red/Rapid Response' or ICU outreach call for pre-arrest deterioration.\n- NABH accreditation standards expect a defined emergency response system; align calling criteria with NEWS2 for audit."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "news2"
+      ],
+      "references": [
+        "merit-2005",
+        "news2",
+        "rcuk-abcde",
+        "dghs-icu-2023",
+        "sccm-triage-2016"
+      ],
+      "quiz": [
+        {
+          "id": "rapid-response-calls-q1",
+          "stem": "Which is a standard rapid response calling criterion?",
+          "options": [
+            "HR 105/min",
+            "SpO2 < 90% despite oxygen",
+            "Temperature 37.9 °C",
+            "RR 22/min"
+          ],
+          "answerIndex": 1,
+          "explanation": "Common MET criteria include SpO2 < 90% despite O2, RR < 8 or > 30, HR < 40 or > 140, SBP < 90, fall in GCS ≥ 2, and staff concern."
+        },
+        {
+          "id": "rapid-response-calls-q2",
+          "stem": "In closed-loop communication the team member should:",
+          "options": [
+            "Nod silently",
+            "Repeat back the instruction and confirm when done",
+            "Wait for written orders",
+            "Ask the recorder to do it"
+          ],
+          "answerIndex": 1,
+          "explanation": "Closed-loop communication (instruction, read-back, confirmation) reduces drug and task errors in crises."
+        },
+        {
+          "id": "rapid-response-calls-q3",
+          "stem": "The same patient triggers a rapid response for the third time today. The best action is:",
+          "options": [
+            "Increase observation frequency only",
+            "Discuss with consultant: ICU admission or a documented ceiling of care",
+            "Sedate the patient",
+            "Ignore as frequent caller"
+          ],
+          "answerIndex": 1,
+          "explanation": "Repeated calls signal ongoing deterioration and require senior decision on ICU care or treatment limitation."
+        }
+      ]
+    },
+    {
+      "id": "icu-admission-discharge",
+      "title": "ICU admission and discharge criteria (India)",
+      "summary": "Who benefits from ICU, who should not be admitted, and safe discharge criteria based on the 2023 DGHS/ISCCM guideline.",
+      "viewKey": "topic:deteriorating-patient-icu-triage/icu-admission-discharge",
+      "uiHints": {
+        "icon": "door-open",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "ICU admission is based on organ failure and need for organ support, or anticipation of deterioration, in a patient expected to benefit (Government of India DGHS-ISCCM 2023).",
+          "refs": [
+            "dghs-icu-2023"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Identify need for organ support or intensive monitoring",
+            "detail": "Admission criteria: recent-onset altered consciousness; haemodynamic instability (shock, arrhythmias); need for respiratory support (escalating oxygen, new NIV or invasive ventilation); severe acute or acute-on-chronic illness needing intensive monitoring/support; any condition with anticipated deterioration; major intraoperative complications.",
+            "refs": [
+              "dghs-icu-2023"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Check for reasons not to admit",
+            "detail": "Informed refusal by patient or next of kin; existing treatment-limitation plan; living will/advance directive against ICU care; terminal illness with medical judgement of futility; low priority during disaster or pandemic resource limitation.",
+            "refs": [
+              "dghs-icu-2023"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Prioritise if beds are limited",
+            "detail": "Use the priority model: highest priority to critically ill patients needing life support with good likelihood of recovery and no limits on therapy; lower priority for those with limited benefit. See 'Bed triage when beds are short'.",
+            "refs": [
+              "sccm-triage-2016"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Consider a time-limited trial",
+            "detail": "For uncertain prognosis, agree a defined trial of ICU care (e.g. 3-5 days) with clear goals and review points, documented and discussed with family.",
+            "refs": [
+              "sccm-triage-2016"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Discharge when stable",
+            "detail": "Physiological derangements back to near normal or baseline; acute illness reasonably resolved and stable; or agreed transition to palliative/treatment-limiting care; or lack of benefit from continued intensive care (a medical decision, not based on economic constraints).",
+            "refs": [
+              "dghs-icu-2023"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Safe step-down",
+            "detail": "Avoid night-time discharges where possible; give a written handover with pending results, lines and drains, antibiotic stop dates, and NEWS2 frequency; ICU outreach review within 24 h.",
+            "refs": [
+              "sccm-triage-2016"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "icu-levels",
+            "title": "Levels of care (practical)",
+            "columns": [
+              "Level",
+              "Typical patient",
+              "Examples"
+            ],
+            "rows": [
+              [
+                "Ward with close monitoring",
+                "Single-organ problem, stable, needs 4-hourly NEWS2",
+                "Pneumonia on 2 L O2"
+              ],
+              [
+                "HDU / step-down (Level 2)",
+                "Single organ support or close monitoring; nurse 1:2-1:3",
+                "NIV for AECOPD, DKA on insulin infusion, post-op monitoring"
+              ],
+              [
+                "ICU (Level 3)",
+                "Invasive ventilation or ≥ 2 organ supports; nurse 1:1",
+                "Septic shock on vasopressors + ventilator, CRRT"
+              ]
+            ],
+            "refs": [
+              "dghs-icu-2023"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Do not delay ICU transfer of a patient on escalating vasopressors or with impending respiratory failure while waiting for a 'formal' bed: start organ support where the patient is and keep calling.",
+            "refs": [
+              "chalfin-2007"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Admitting without discussing prognosis and goals; it is much harder to limit treatment later without an agreed plan.",
+            "refs": [
+              "sccm-triage-2016"
+            ]
+          },
+          {
+            "text": "Discharging from ICU purely for financial reasons. The DGHS guideline states discharge for lack of benefit should be a medical decision and not based on economic constraints as far as possible.",
+            "refs": [
+              "dghs-icu-2023"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Patients and families can refuse ICU. Document informed refusal with a witness and continue best ward care.",
+            "refs": [
+              "dghs-icu-2023"
+            ]
+          },
+          {
+            "text": "Readmission within 48 h of ICU discharge is a quality indicator; review discharge practice if frequent.",
+            "refs": [
+              "sccm-triage-2016"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "ICU admission decision",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Referral for ICU"
+          },
+          {
+            "id": "need",
+            "type": "decision",
+            "text": "Organ failure, organ support need, or anticipated deterioration?"
+          },
+          {
+            "id": "ward",
+            "type": "end",
+            "text": "Manage on ward/HDU with plan and review"
+          },
+          {
+            "id": "exclude",
+            "type": "decision",
+            "text": "Refusal, advance directive, futility or treatment-limitation plan?"
+          },
+          {
+            "id": "no",
+            "type": "end",
+            "text": "Do not admit; document reasons, palliative/ward plan, family discussion"
+          },
+          {
+            "id": "bed",
+            "type": "decision",
+            "text": "ICU bed available?"
+          },
+          {
+            "id": "admit",
+            "type": "end",
+            "text": "Admit to ICU; set goals (consider time-limited trial)",
+            "severity": "high"
+          },
+          {
+            "id": "prio",
+            "type": "action",
+            "text": "Prioritise using priority model / SOFA-based triage with a second senior"
+          },
+          {
+            "id": "high",
+            "type": "decision",
+            "text": "Highest priority patient?"
+          },
+          {
+            "id": "create",
+            "type": "end",
+            "text": "Create capacity: step down most stable ICU patient, or organise transfer",
+            "severity": "high"
+          },
+          {
+            "id": "wait",
+            "type": "end",
+            "text": "Organ support in ED/HDU, reassess regularly, transfer when possible"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "need"
+          },
+          {
+            "from": "need",
+            "to": "ward",
+            "label": "No"
+          },
+          {
+            "from": "need",
+            "to": "exclude",
+            "label": "Yes"
+          },
+          {
+            "from": "exclude",
+            "to": "no",
+            "label": "Yes"
+          },
+          {
+            "from": "exclude",
+            "to": "bed",
+            "label": "No"
+          },
+          {
+            "from": "bed",
+            "to": "admit",
+            "label": "Yes"
+          },
+          {
+            "from": "bed",
+            "to": "prio",
+            "label": "No"
+          },
+          {
+            "from": "prio",
+            "to": "high"
+          },
+          {
+            "from": "high",
+            "to": "create",
+            "label": "Yes"
+          },
+          {
+            "from": "high",
+            "to": "wait",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "dghs-icu-2023",
+          "sccm-triage-2016"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "ICU benefit is greatest in patients who are sick enough to need intensive support but who have a reversible condition. Patients 'too well' gain little; patients 'too sick' with irreversible disease may suffer non-beneficial treatment.",
+        "evidence": "- DGHS/MoHFW with ISCCM (2023) issued national ICU admission and discharge criteria, including who should not be admitted and when to discharge [DGHS 2023].\n- SCCM 2016 guideline recommends a priority-based model, time-limited trials and avoidance of after-hours discharge where possible [Nates 2016].",
+        "controversies": "- Media coverage in 2024 framed the Indian guideline as 'family consent needed for ICU'. In practice, informed refusal by the patient or next of kin is a reason not to admit; emergencies still require treatment in the patient's best interest.\n- Age alone should not be an admission criterion; frailty (Clinical Frailty Scale) is more informative.",
+        "indiaNotes": "- Indian ICU admission is often shaped by cost and insurance (PM-JAY, state schemes). Discuss expected cost transparently with families as part of shared decision making.\n- Level definitions for Indian ICUs are in the ISCCM 2020 ICU planning consensus; most district hospitals have Level 1 ICUs that can stabilise and transfer."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "sofa",
+        "news2"
+      ],
+      "references": [
+        "dghs-icu-2023",
+        "sccm-triage-2016",
+        "chalfin-2007"
+      ],
+      "quiz": [
+        {
+          "id": "icu-admission-discharge-q1",
+          "stem": "According to the 2023 DGHS-ISCCM guideline, which is a reason NOT to admit a critically ill patient to ICU?",
+          "options": [
+            "Age over 75",
+            "Advance directive against ICU care",
+            "Need for vasopressors",
+            "Recent-onset altered consciousness"
+          ],
+          "answerIndex": 1,
+          "explanation": "Informed refusal, advance directive, treatment-limitation plan, medical futility, and low priority during disaster are listed; age alone is not."
+        },
+        {
+          "id": "icu-admission-discharge-q2",
+          "stem": "Which is a valid ICU discharge criterion?",
+          "options": [
+            "Insurance limit reached",
+            "Physiological derangements returned to near baseline and acute illness stable",
+            "Family requests transfer for convenience",
+            "Patient on noradrenaline 0.1 mcg/kg/min"
+          ],
+          "answerIndex": 1,
+          "explanation": "Discharge should be clinical; economic constraints should not drive discharge where possible."
+        },
+        {
+          "id": "icu-admission-discharge-q3",
+          "stem": "A time-limited trial in ICU means:",
+          "options": [
+            "Admitting only for 24 h",
+            "An agreed period of full ICU care with defined goals and review points",
+            "Withholding antibiotics",
+            "Discharging at night"
+          ],
+          "answerIndex": 1,
+          "explanation": "Time-limited trials help when prognosis is uncertain; they are planned with the family and reviewed at set points."
+        }
+      ]
+    },
+    {
+      "id": "bed-triage-scarcity",
+      "title": "Bed triage when beds are short",
+      "summary": "Fair, transparent ICU triage during bed shortages, disasters and surges, using priority models and SOFA-based protocols.",
+      "viewKey": "topic:deteriorating-patient-icu-triage/bed-triage-scarcity",
+      "uiHints": {
+        "icon": "scale",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Triage allocates scarce ICU resources to maximise benefit fairly and transparently. Decisions are made by senior clinicians using objective criteria, applied equally to all, with regular reassessment.",
+          "refs": [
+            "sccm-triage-2016",
+            "christian-triage-2006"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Escalate early",
+            "detail": "Inform the ICU consultant and hospital administrator when the last 1-2 beds are occupied; activate surge plans (HDU conversion, step-down beds, transfer agreements).",
+            "refs": [
+              "sccm-triage-2016"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Assess every candidate the same way",
+            "detail": "Severity (SOFA, lactate, organ supports needed), reversibility, comorbidity and frailty, patient wishes. Do not use social worth, ability to pay, religion, caste or VIP status.",
+            "refs": [
+              "sccm-triage-2016",
+              "christian-triage-2006"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Apply priority categories",
+            "detail": "Priority 1: critically ill, needs life support, good likelihood of recovery, no limits on therapy. Priority 2: needs intensive monitoring, may need immediate intervention. Priority 3: critically ill but lower likelihood of recovery because of underlying disease; may receive therapy with limits. Priority 4: generally not appropriate (too well or irreversible/terminal).",
+            "refs": [
+              "sccm-triage-2016"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "During declared disasters use a crisis protocol",
+            "detail": "SOFA-based protocols (e.g. Ontario 2006): exclusion criteria, SOFA at 0, 48 and 120 h, colour codes (blue = palliative/ward, red = highest priority, yellow = intermediate, green = ward). Reassess at 48 h; patients failing to improve may be re-triaged.",
+            "refs": [
+              "christian-triage-2006"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Two senior clinicians and documentation",
+            "detail": "Triage decisions should involve two senior doctors where possible, be documented with reasons, and be communicated honestly to families. Offer the best possible alternative care (HDU, ward with NIV, palliative care).",
+            "refs": [
+              "sccm-triage-2016"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Review continuously",
+            "detail": "Re-triage ICU occupants daily: step down those no longer needing ICU-level care to free beds; consider inter-hospital transfer.",
+            "refs": [
+              "sccm-triage-2016"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "priority-model",
+            "title": "ICU priority model (SCCM 2016)",
+            "columns": [
+              "Priority",
+              "Description",
+              "Example"
+            ],
+            "rows": [
+              [
+                "1",
+                "Life support needed, good chance of recovery, no limits",
+                "Septic shock from pneumonia in a previously well 40-year-old"
+              ],
+              [
+                "2",
+                "Intensive monitoring, may need immediate intervention",
+                "Post-op major surgery at risk of bleeding"
+              ],
+              [
+                "3",
+                "Critically ill, reduced likelihood of recovery, may have limits",
+                "Metastatic cancer with pneumonia, accepts NIV but not intubation"
+              ],
+              [
+                "4",
+                "Generally not appropriate",
+                "Too well (stable, ambulant) or terminal/irreversible illness"
+              ]
+            ],
+            "refs": [
+              "sccm-triage-2016"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "A Priority 1 patient deteriorating in the ED with no ICU bed: start organ support immediately and escalate to administration for transfer or capacity; delays increase mortality.",
+            "refs": [
+              "chalfin-2007"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "First-come-first-served allocation without reassessment: it disadvantages sicker, later patients.",
+            "refs": [
+              "christian-triage-2006"
+            ]
+          },
+          {
+            "text": "Triage decisions made by a lone junior at night. Always involve the consultant.",
+            "refs": [
+              "sccm-triage-2016"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Write down the hospital's triage policy before a crisis (monsoon dengue, mass casualty, pandemic) so decisions at 3 am follow an agreed framework.",
+            "refs": [
+              "sccm-triage-2016"
+            ]
+          },
+          {
+            "text": "Frailty (CFS ≥ 7) predicts poor ICU outcomes better than chronological age.",
+            "refs": [
+              "sccm-triage-2016"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Bed shortage triage",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "ICU bed requested, unit full"
+          },
+          {
+            "id": "notify",
+            "type": "action",
+            "text": "Inform ICU consultant + administrator; activate surge plan"
+          },
+          {
+            "id": "assess",
+            "type": "action",
+            "text": "Assess all candidates and current ICU patients with the same criteria (SOFA, reversibility, frailty, wishes)"
+          },
+          {
+            "id": "step",
+            "type": "decision",
+            "text": "Any ICU patient ready for step-down?"
+          },
+          {
+            "id": "free",
+            "type": "action",
+            "text": "Step down with full handover; admit highest-priority candidate",
+            "severity": "high"
+          },
+          {
+            "id": "p1",
+            "type": "decision",
+            "text": "Candidate is Priority 1?"
+          },
+          {
+            "id": "transfer",
+            "type": "end",
+            "text": "Organ support where the patient is; arrange transfer to another ICU",
+            "severity": "critical"
+          },
+          {
+            "id": "alt",
+            "type": "end",
+            "text": "Best alternative care (HDU, NIV on ward, palliative care); document and inform family"
+          },
+          {
+            "id": "done",
+            "type": "end",
+            "text": "Re-triage daily; document decisions"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "notify"
+          },
+          {
+            "from": "notify",
+            "to": "assess"
+          },
+          {
+            "from": "assess",
+            "to": "step"
+          },
+          {
+            "from": "step",
+            "to": "free",
+            "label": "Yes"
+          },
+          {
+            "from": "step",
+            "to": "p1",
+            "label": "No"
+          },
+          {
+            "from": "free",
+            "to": "done"
+          },
+          {
+            "from": "p1",
+            "to": "transfer",
+            "label": "Yes"
+          },
+          {
+            "from": "p1",
+            "to": "alt",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "sccm-triage-2016",
+          "christian-triage-2006"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Triage ethics balance utility (saving the most lives or life-years) with equity (fair process, equal respect). Transparent, pre-agreed criteria protect patients from bias and clinicians from moral distress.",
+        "evidence": "- SCCM 2016 recommends a priority-based admission model and use of objective severity scores to support (not replace) clinical judgement [Nates 2016].\n- The Ontario pandemic triage protocol (Christian 2006) uses inclusion/exclusion criteria and serial SOFA scores; it informed many COVID-19 crisis standards of care.",
+        "controversies": "- SOFA-based triage can disadvantage patients with chronic disabilities or kidney disease (baseline creatinine); adjust for baseline organ dysfunction.\n- Re-allocation (withdrawing ventilation from one patient to give another) is ethically and legally contentious; in India it requires extreme caution, senior involvement and documentation.",
+        "indiaNotes": "- During COVID-19 surges Indian ICUs faced extreme scarcity; many hospitals now have written surge plans. DGHS 2023 lists 'low priority criteria in pandemic or disaster' as a reason not to admit.\n- Never base triage on ability to pay. Government schemes (PM-JAY) cover ICU care in empanelled hospitals; help families access them."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "sofa"
+      ],
+      "references": [
+        "sccm-triage-2016",
+        "christian-triage-2006",
+        "chalfin-2007",
+        "dghs-icu-2023"
+      ],
+      "quiz": [
+        {
+          "id": "bed-triage-scarcity-q1",
+          "stem": "Which factor should NOT be used in ICU triage?",
+          "options": [
+            "SOFA score",
+            "Clinical Frailty Scale",
+            "Ability to pay",
+            "Likelihood of recovery"
+          ],
+          "answerIndex": 2,
+          "explanation": "Triage must be fair; social worth and ability to pay are unethical criteria."
+        },
+        {
+          "id": "bed-triage-scarcity-q2",
+          "stem": "In the SCCM priority model, a previously healthy adult with septic shock needing ventilation is:",
+          "options": [
+            "Priority 1",
+            "Priority 2",
+            "Priority 3",
+            "Priority 4"
+          ],
+          "answerIndex": 0,
+          "explanation": "Needs life support with good chance of recovery and no limits on therapy."
+        },
+        {
+          "id": "bed-triage-scarcity-q3",
+          "stem": "In SOFA-based crisis triage (Ontario 2006), when are patients reassessed?",
+          "options": [
+            "Only at admission",
+            "At 48 h and 120 h",
+            "Every 7 days",
+            "Never"
+          ],
+          "answerIndex": 1,
+          "explanation": "Serial SOFA at 48 and 120 h identifies those not improving, allowing re-triage."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "oxygen",
+      "name": "Oxygen",
+      "class": "Medical gas",
+      "indications": "Hypoxaemia in the deteriorating patient",
+      "adultDose": "Titrate to SpO2 94-98% (88-92% if at risk of hypercapnic failure, e.g. COPD, obesity hypoventilation, neuromuscular disease). Start 15 L/min via non-rebreather in peri-arrest/shock, then titrate down.",
+      "preparationIndia": "Central pipeline or cylinders (check cylinder size and contents before transfer); non-rebreather, Venturi (24-60%), nasal cannula 1-4 L/min.",
+      "cautions": "Avoid hyperoxia once stable; hypercapnic patients need controlled oxygen and ABG within 30-60 min.",
+      "refs": [
+        "rcuk-abcde"
+      ]
+    },
+    {
+      "id": "ringer-lactate",
+      "name": "Balanced crystalloid (Ringer lactate / Plasma-Lyte)",
+      "class": "Isotonic crystalloid",
+      "indications": "Hypotension or hypoperfusion while the cause is found",
+      "adultDose": "250-500 mL bolus over 15 min, reassess after each bolus (HR, BP, CRT, urine, lung crackles); usual first 30 mL/kg only if sepsis-induced hypoperfusion.",
+      "preparationIndia": "Ringer lactate 500 mL and 1 L bags widely available in India; Plasma-Lyte A / Sterofundin in tertiary centres.",
+      "cautions": "Stop if no response, crackles, rising JVP or B-lines on ultrasound. Use smaller 250 mL boluses in heart failure, ESRD or elderly.",
+      "refs": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "dextrose-25",
+      "name": "Dextrose 25% (or 50%)",
+      "class": "Carbohydrate",
+      "indications": "Hypoglycaemia (capillary glucose < 70 mg/dL) found in the D of ABCDE",
+      "adultDose": "25 g IV = 100 mL of 25% dextrose (or 50 mL of 50%), recheck glucose in 15 min; repeat if still < 70 mg/dL, then 10% dextrose infusion.",
+      "preparationIndia": "25% dextrose 25 mL ampoules and 100 mL bottles; 50% dextrose 25 mL vials in many Indian hospitals.",
+      "cautions": "Give thiamine 100-200 mg IV first or together in malnourished or alcohol-dependent patients; 50% dextrose is a vesicant, use a large vein.",
+      "refs": [
+        "rcuk-abcde"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "sepsis3",
+      "citation": "Singer M, Deutschman CS, Seymour CW, et al. The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3). JAMA 2016;315:801-10.",
+      "url": "https://doi.org/10.1001/jama.2016.0287",
+      "year": 2016,
+      "type": "consensus",
+      "doi": "10.1001/jama.2016.0287"
+    },
+    {
+      "id": "ssc2026",
+      "citation": "Prescott HC, Antonelli M, Alhazzani W, et al. Surviving Sepsis Campaign: international guidelines for management of sepsis and septic shock 2026. Intensive Care Med. 2026;52(5):863-936. Co-published in Crit Care Med. 2026 (doi:10.1097/CCM.0000000000007075)",
+      "url": "https://doi.org/10.1007/s00134-026-08361-1",
+      "year": 2026,
+      "doi": "10.1007/s00134-026-08361-1",
+      "type": "guideline"
+    },
+    {
+      "id": "news2",
+      "citation": "Royal College of Physicians. National Early Warning Score (NEWS) 2: standardising the assessment of acute-illness severity in the NHS. London: RCP; 2017.",
+      "url": "https://www.rcp.ac.uk/improving-care/resources/national-early-warning-score-news-2/",
+      "year": 2017,
+      "type": "guideline"
+    },
+    {
+      "id": "esicm-shock-2014",
+      "citation": "Cecconi M, De Backer D, Antonelli M, et al. Consensus on circulatory shock and hemodynamic monitoring. Task force of the European Society of Intensive Care Medicine. Intensive Care Med 2014;40:1795-815.",
+      "url": "https://doi.org/10.1007/s00134-014-3525-z",
+      "year": 2014,
+      "type": "consensus",
+      "doi": "10.1007/s00134-014-3525-z"
+    },
+    {
+      "id": "dghs-icu-2023",
+      "citation": "Directorate General of Health Services (MoHFW, Government of India) with ISCCM. Guidelines for Intensive Care Unit Admission and Discharge Criteria. New Delhi: DGHS; 2023.",
+      "url": "https://dghs.mohfw.gov.in/uploads/assets/97vEqupMNx0un7XSHNaVuuynzg3YKRsj8tOQ9i3U.pdf",
+      "year": 2023,
+      "type": "guideline"
+    },
+    {
+      "id": "thim-abcde",
+      "citation": "Thim T, Krarup NH, Grove EL, Rohde CV, Lofgren B. Initial assessment and treatment with the Airway, Breathing, Circulation, Disability, Exposure (ABCDE) approach. Int J Gen Med 2012;5:117-21.",
+      "url": "https://doi.org/10.2147/IJGM.S28478",
+      "year": 2012,
+      "type": "review",
+      "doi": "10.2147/IJGM.S28478"
+    },
+    {
+      "id": "rcuk-abcde",
+      "citation": "Resuscitation Council UK. The ABCDE approach (adult). London: RCUK; current version.",
+      "url": "https://www.resus.org.uk/library/abcde-approach",
+      "year": 2021,
+      "type": "web"
+    },
+    {
+      "id": "smith-news-2013",
+      "citation": "Smith GB, Prytherch DR, Meredith P, Schmidt PE, Featherstone PI. The ability of the National Early Warning Score (NEWS) to discriminate patients at risk of early cardiac arrest, unanticipated intensive care unit admission, and death. Resuscitation 2013;84:465-70.",
+      "url": "https://doi.org/10.1016/j.resuscitation.2012.12.016",
+      "year": 2013,
+      "type": "trial",
+      "doi": "10.1016/j.resuscitation.2012.12.016"
+    },
+    {
+      "id": "merit-2005",
+      "citation": "Hillman K, Chen J, Cretikos M, et al. Introduction of the medical emergency team (MET) system: a cluster-randomised controlled trial (MERIT). Lancet 2005;365:2091-7.",
+      "url": "https://doi.org/10.1016/S0140-6736(05)66733-5",
+      "year": 2005,
+      "type": "trial",
+      "doi": "10.1016/S0140-6736(05)66733-5"
+    },
+    {
+      "id": "sccm-triage-2016",
+      "citation": "Nates JL, Nunnally M, Kleinpell R, et al. ICU Admission, Discharge, and Triage Guidelines: A Framework to Enhance Clinical Operations, Development of Institutional Policies, and Further Research. Crit Care Med 2016;44:1553-602.",
+      "url": "https://doi.org/10.1097/CCM.0000000000001856",
+      "year": 2016,
+      "type": "guideline",
+      "doi": "10.1097/CCM.0000000000001856"
+    },
+    {
+      "id": "christian-triage-2006",
+      "citation": "Christian MD, Hawryluck L, Wax RS, et al. Development of a triage protocol for critical care during an influenza pandemic. CMAJ 2006;175:1377-81.",
+      "url": "https://doi.org/10.1503/cmaj.060911",
+      "year": 2006,
+      "type": "consensus",
+      "doi": "10.1503/cmaj.060911"
+    },
+    {
+      "id": "chalfin-2007",
+      "citation": "Chalfin DB, Trzeciak S, Likourezos A, Baumann BM, Dellinger RP. Impact of delayed transfer of critically ill patients from the emergency department to the intensive care unit. Crit Care Med 2007;35:1477-83.",
+      "url": "https://doi.org/10.1097/01.CCM.0000266585.74905.5A",
+      "year": 2007,
+      "type": "trial",
+      "doi": "10.1097/01.CCM.0000266585.74905.5A"
+    }
+  ],
+  "verify": [
+    {
+      "item": "NEWS2 response thresholds and monitoring frequencies",
+      "reason": "Confirm the hospital's local escalation policy matches RCP NEWS2 bands."
+    },
+    {
+      "item": "Rapid response calling criteria (RR < 8 or > 30, HR < 40 or > 140, SBP < 90, SpO2 < 90%)",
+      "reason": "MET criteria vary between hospitals; align with local policy."
+    }
+  ]
+}

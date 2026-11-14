@@ -1,0 +1,1289 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "nutrition-metabolic-support",
+  "number": 35,
+  "folder": "35-nutrition-metabolic-support",
+  "section": {
+    "id": "J",
+    "title": "ICU care and pharmacology"
+  },
+  "phase": 2,
+  "title": "Nutrition and metabolic support",
+  "summary": "Nutrition and metabolic support in the ICU: nutritional risk and early enteral nutrition, energy and protein targets, feed intolerance, parenteral nutrition and refeeding syndrome, based on ESPEN 2019/2023 and ASPEN 2022.",
+  "tags": [
+    "nutrition",
+    "enteral nutrition",
+    "NUTRIC",
+    "ESPEN",
+    "ASPEN",
+    "protein",
+    "calories",
+    "gastric residual volume",
+    "prokinetics",
+    "parenteral nutrition",
+    "refeeding syndrome",
+    "phosphate"
+  ],
+  "relatedModules": [
+    "gi-bleeding-abdominal-emergencies",
+    "fluids-electrolytes",
+    "endocrine-metabolic-emergencies",
+    "renal-replacement-therapy",
+    "icu-care-bundles-infection-prevention",
+    "analgesia-sedation-delirium"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "utensils",
+    "accent": "standard"
+  },
+  "viewKey": "module:nutrition-metabolic-support",
+  "topics": [
+    {
+      "id": "nutrition-risk-early-en",
+      "title": "Nutritional risk and early enteral nutrition",
+      "summary": "Screen risk (mNUTRIC), start enteral feeding within 24-48 h when resuscitated, and know when to delay.",
+      "viewKey": "topic:nutrition-metabolic-support/nutrition-risk-early-en",
+      "uiHints": {
+        "icon": "utensils",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Every ICU patient staying > 48 h is at risk of malnutrition. Early EN (within 48 h) is recommended over early PN or delayed EN when oral intake is not possible.",
+          "refs": [
+            "espen-icu-2019",
+            "aspen-2022"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Assess risk",
+            "detail": "mNUTRIC ≥ 5 (age, APACHE II, SOFA, comorbidities, days in hospital before ICU) or clinical malnutrition (weight loss, low BMI, sarcopenia, reduced intake) = high risk.",
+            "refs": [
+              "mnutric-2016",
+              "espen-icu-2019"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Oral first",
+            "detail": "If able to eat, oral diet; add oral supplements if intake insufficient.",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Start EN within 48 h",
+            "detail": "Via nasogastric tube (confirm position by X-ray or pH); start low (10-20 mL/h) and advance over 3-7 days.",
+            "time": "≤ 48 h",
+            "refs": [
+              "espen-icu-2019",
+              "aspen-2022"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Delay EN when",
+            "detail": "Uncontrolled shock, escalating vasopressors, uncontrolled life-threatening hypoxaemia or acidosis, active upper GI bleeding, overt bowel ischaemia, high-output fistula without distal access, abdominal compartment syndrome, GRV > 500 mL/6 h.",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Shock",
+            "detail": "Start low-dose (trophic) EN once shock controlled on stable or decreasing vasopressor doses; NUTRIREA-2 showed more bowel ischaemia with full early EN in shock.",
+            "refs": [
+              "espen-icu-2019",
+              "nutrirea2"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Prone, ECMO, TTM, NMB",
+            "detail": "EN is not contraindicated - continue at low dose with monitoring.",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "mnutric",
+            "title": "Modified NUTRIC score (no IL-6)",
+            "columns": [
+              "Variable",
+              "Range",
+              "Points"
+            ],
+            "rows": [
+              [
+                "Age",
+                "< 50 / 50-74 / ≥ 75",
+                "0 / 1 / 2"
+              ],
+              [
+                "APACHE II",
+                "< 15 / 15-19 / 20-27 / ≥ 28",
+                "0 / 1 / 2 / 3"
+              ],
+              [
+                "SOFA",
+                "< 6 / 6-9 / ≥ 10",
+                "0 / 1 / 2"
+              ],
+              [
+                "Comorbidities",
+                "0-1 / ≥ 2",
+                "0 / 1"
+              ],
+              [
+                "Days hospital to ICU admission",
+                "0 / ≥ 1",
+                "0 / 1"
+              ]
+            ],
+            "caption": "mNUTRIC 0-9; ≥ 5 = high nutritional risk.",
+            "refs": [
+              "mnutric-2016"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Abdominal distension, rising lactate and vasopressor requirements on EN: suspect non-occlusive bowel ischaemia - stop feeds and investigate.",
+            "refs": [
+              "nutrirea2"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Keeping patients nil by mouth for days 'until stable' without a reason.",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          },
+          {
+            "text": "Blind tube placement without position confirmation.",
+            "refs": [
+              "aspen-2022"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Bowel sounds and flatus are not required to start EN.",
+            "refs": [
+              "aspen-2022"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Starting nutrition in ICU",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "ICU stay expected > 48 h"
+          },
+          {
+            "id": "oral",
+            "type": "decision",
+            "text": "Can eat safely?"
+          },
+          {
+            "id": "od",
+            "type": "end",
+            "text": "Oral diet ± supplements"
+          },
+          {
+            "id": "contra",
+            "type": "decision",
+            "text": "Contraindication to EN (uncontrolled shock, ischaemia, GI bleed)?"
+          },
+          {
+            "id": "wait",
+            "type": "action",
+            "text": "Delay EN; reassess daily; consider PN if prolonged"
+          },
+          {
+            "id": "en",
+            "type": "action",
+            "text": "Start NG EN at 10-20 mL/h within 48 h"
+          },
+          {
+            "id": "adv",
+            "type": "end",
+            "text": "Advance to 70% target by day 3-7; full later"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "oral"
+          },
+          {
+            "from": "oral",
+            "to": "od",
+            "label": "Yes"
+          },
+          {
+            "from": "oral",
+            "to": "contra",
+            "label": "No"
+          },
+          {
+            "from": "contra",
+            "to": "wait",
+            "label": "Yes"
+          },
+          {
+            "from": "contra",
+            "to": "en",
+            "label": "No"
+          },
+          {
+            "from": "wait",
+            "to": "en"
+          },
+          {
+            "from": "en",
+            "to": "adv"
+          }
+        ],
+        "refs": [
+          "espen-icu-2019"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Critical illness causes catabolism, insulin resistance and muscle wasting (up to 1 kg muscle/day in the first week). EN maintains gut barrier and immune function; early full feeding cannot suppress endogenous glucose production and may add to the energy load.",
+        "evidence": "- ESPEN 2019/2023 and ASPEN 2022 guidelines [Singer 2019; Singer 2023; Compher 2022].\n- NUTRIC/mNUTRIC risk tools [Heyland 2011; Rahman 2016].\n- NUTRIREA-2: early full EN vs PN in shock - similar mortality, more GI complications with EN [Reignier 2018].",
+        "controversies": "- Value of risk scores to select who benefits; early EN in shock.",
+        "indiaNotes": "- Many Indian ICUs use kitchen-prepared (blenderised) feeds because of cost; they have variable composition and higher contamination and tube-blockage risk - standardise recipes with dietitians.\n- IL-6 is rarely available, so mNUTRIC is used."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "espen-icu-2019",
+        "aspen-2022",
+        "mnutric-2016",
+        "nutric-2011",
+        "nutrirea2"
+      ],
+      "quiz": [
+        {
+          "id": "nutrition-risk-early-en-q1",
+          "stem": "Timing of EN in a stable ventilated patient:",
+          "options": [
+            "Within 48 h",
+            "After 7 days",
+            "Only after bowel sounds",
+            "After extubation"
+          ],
+          "answerIndex": 0,
+          "explanation": "ESPEN/ASPEN."
+        },
+        {
+          "id": "nutrition-risk-early-en-q2",
+          "stem": "mNUTRIC high risk threshold:",
+          "options": [
+            "≥ 2",
+            "≥ 5",
+            "≥ 8",
+            "≥ 9"
+          ],
+          "answerIndex": 1,
+          "explanation": "Rahman 2016."
+        },
+        {
+          "id": "nutrition-risk-early-en-q3",
+          "stem": "EN should be delayed in:",
+          "options": [
+            "Prone position",
+            "Uncontrolled shock with escalating vasopressors",
+            "Sedation",
+            "Absent bowel sounds"
+          ],
+          "answerIndex": 1,
+          "explanation": "ESPEN."
+        }
+      ]
+    },
+    {
+      "id": "energy-protein-targets",
+      "title": "Energy and protein targets",
+      "summary": "Hypocaloric start (≤ 70% of expenditure) in the first days, advance to 80-100% after day 3, protein about 1.3 g/kg/day, adjust for obesity and count non-nutritional calories.",
+      "viewKey": "topic:nutrition-metabolic-support/energy-protein-targets",
+      "uiHints": {
+        "icon": "target",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Energy target is ideally measured by indirect calorimetry; otherwise use 20-25 kcal/kg/day in the early phase and 25-30 kcal/kg/day in recovery. Protein ~1.3 g/kg/day delivered progressively (ESPEN); ASPEN 1.2-2.0 g/kg/day.",
+          "refs": [
+            "espen-icu-2019",
+            "aspen-2022"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Weight",
+            "detail": "Use actual weight if BMI < 30; for obesity use adjusted or ideal body weight (see table).",
+            "refs": [
+              "espen-icu-2019",
+              "aspen-2022"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Early phase (days 1-3)",
+            "detail": "Hypocaloric: ≤ 70% of energy expenditure; avoid overfeeding.",
+            "time": "Day 1-3",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Later phase",
+            "detail": "After day 3 advance to 80-100% of measured or estimated energy expenditure.",
+            "time": "Day 3-7",
+            "refs": [
+              "espen-icu-2019",
+              "espen-icu-2023"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Protein",
+            "detail": "Target ~1.3 g/kg/day progressively; very high protein (≥ 2.2 g/kg) early did not improve outcomes and may harm patients with AKI or high organ failure scores (EFFORT Protein).",
+            "refs": [
+              "espen-icu-2023",
+              "effort-protein"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Shock",
+            "detail": "In ventilated patients with shock, lower energy/protein in the first week (NUTRIREA-3) was associated with faster recovery and fewer complications.",
+            "refs": [
+              "nutrirea3"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Count non-nutritional calories",
+            "detail": "Propofol 1.1 kcal/mL, dextrose 5% (~170 kcal/L), citrate in CRRT; reduce feed if large.",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Micronutrients and glucose",
+            "detail": "Provide micronutrients with feeding; insulin if glucose > 180 mg/dL (target about 140-180 mg/dL).",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "targets",
+            "title": "Practical targets",
+            "columns": [
+              "Group",
+              "Energy",
+              "Protein"
+            ],
+            "rows": [
+              [
+                "BMI < 30, early phase",
+                "≤ 70% of EE (~15-20 kcal/kg)",
+                "Start low, advance"
+              ],
+              [
+                "BMI < 30, after day 3",
+                "20-25 → 25-30 kcal/kg",
+                "~1.3 g/kg (ESPEN); 1.2-2.0 (ASPEN)"
+              ],
+              [
+                "BMI 30-50 (ASPEN)",
+                "11-14 kcal/kg actual weight",
+                "2.0 g/kg IBW (BMI 30-40); 2.5 g/kg IBW (BMI ≥ 40)"
+              ],
+              [
+                "BMI > 50 (ASPEN)",
+                "22-25 kcal/kg IBW",
+                "2.5 g/kg IBW"
+              ],
+              [
+                "CRRT",
+                "As above",
+                "Add ~0.2 g/kg/day for losses (up to 1.5-1.7 g/kg)"
+              ]
+            ],
+            "refs": [
+              "espen-icu-2019",
+              "aspen-2022"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Hyperglycaemia, hypercapnia, rising urea and liver steatosis may indicate overfeeding.",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Ignoring propofol and dextrose calories (overfeeding).",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          },
+          {
+            "text": "Using actual weight for energy in morbid obesity.",
+            "refs": [
+              "aspen-2022"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "VCO2 from the ventilator × 8.19 gives a reasonable estimate of energy expenditure when calorimetry is unavailable (ESPEN).",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "In the acute phase, endogenous glucose production (up to 50-75% of needs) cannot be suppressed by feeding, so full exogenous calories cause overfeeding; autophagy may be beneficial early. Anabolic potential increases in recovery.",
+        "evidence": "- ESPEN 2019/2023: hypocaloric early, 1.3 g/kg protein progressively [Singer 2019; 2023].\n- EFFORT Protein (1,329 patients): higher protein did not improve time to discharge alive; possible harm in AKI and high SOFA [Heyland 2023].\n- NUTRIREA-3: low vs standard calories/protein in shock - similar mortality, faster readiness for discharge [Reignier 2023].\n- TARGET: energy-dense EN (1.5 kcal/mL) did not improve survival [TARGET 2018].",
+        "controversies": "- Optimal protein dose and timing; indirect calorimetry for all.",
+        "indiaNotes": "- Indian patients may have lower muscle mass ('thin-fat' phenotype) - assess muscle by ultrasound or clinical judgement; use IBW-based estimates for obesity.\n- Vegetarian diets are common; commercial high-protein formulas or whey/soy protein supplements are used to meet targets."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "predicted-body-weight",
+        "adjusted-body-weight",
+        "bmi"
+      ],
+      "references": [
+        "espen-icu-2019",
+        "espen-icu-2023",
+        "aspen-2022",
+        "effort-protein",
+        "nutrirea3",
+        "target-trial"
+      ],
+      "quiz": [
+        {
+          "id": "energy-protein-targets-q1",
+          "stem": "Energy delivery in the first 3 days (ESPEN):",
+          "options": [
+            "120% of EE",
+            "≤ 70% of EE",
+            "Zero",
+            "Exactly 100%"
+          ],
+          "answerIndex": 1,
+          "explanation": "Hypocaloric early."
+        },
+        {
+          "id": "energy-protein-targets-q2",
+          "stem": "Propofol provides:",
+          "options": [
+            "No calories",
+            "1.1 kcal/mL (lipid)",
+            "4 kcal/mL",
+            "9 kcal/mL"
+          ],
+          "answerIndex": 1,
+          "explanation": "Count as nutrition."
+        },
+        {
+          "id": "energy-protein-targets-q3",
+          "stem": "EFFORT Protein found high protein (≥ 2.2 g/kg/day):",
+          "options": [
+            "Clear benefit",
+            "No benefit, possible harm in AKI",
+            "Reduced mortality in all",
+            "Mandatory"
+          ],
+          "answerIndex": 1,
+          "explanation": "Heyland 2023."
+        }
+      ]
+    },
+    {
+      "id": "feed-intolerance",
+      "title": "Feed intolerance, gastric residuals and post-pyloric feeding",
+      "summary": "Define intolerance, use a GRV threshold of 500 mL/6 h, give prokinetics, consider post-pyloric feeding and reduce aspiration risk.",
+      "viewKey": "topic:nutrition-metabolic-support/feed-intolerance",
+      "uiHints": {
+        "icon": "alert-circle",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Feed intolerance: vomiting, GRV > 500 mL/6 h, distension, or diarrhoea preventing delivery of targets. Routine GRV monitoring is optional in ASPEN; ESPEN suggests delaying EN if GRV > 500 mL/6 h.",
+          "refs": [
+            "espen-icu-2019",
+            "aspen-2022"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Exclude serious causes",
+            "detail": "Bowel obstruction, ischaemia, ileus, raised IAP, electrolyte disturbance, opioids, hyperglycaemia.",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "GRV > 500 mL/6 h",
+            "detail": "Pause or reduce feed rate, re-infuse up to 500 mL, start prokinetic.",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Prokinetics",
+            "detail": "Erythromycin 100-250 mg IV q8h (first choice) or metoclopramide 10 mg IV q8h, or both; review after 24-72 h.",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Post-pyloric feeding",
+            "detail": "If intolerance persists despite prokinetics, or high aspiration risk: nasojejunal tube (endoscopic, fluoroscopic or bedside electromagnetic).",
+            "refs": [
+              "espen-icu-2019",
+              "aspen-2022"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Aspiration prevention",
+            "detail": "Head-up 30-45°, continuous rather than bolus feeds, oral care, minimise sedation.",
+            "refs": [
+              "aspen-2022"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Diarrhoea",
+            "detail": "Check C. difficile, laxatives, sorbitol-containing drugs, antibiotics; continue EN; consider soluble fibre or peptide formula.",
+            "refs": [
+              "aspen-2022"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "erythromycin",
+            "role": "Gastric intolerance",
+            "route": "IV",
+            "dose": "100-250 mg every 8 h for 24-72 h",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          },
+          {
+            "drugId": "metoclopramide",
+            "role": "Gastric intolerance",
+            "route": "IV",
+            "dose": "10 mg every 8 h",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "New distension with large GRVs, hypotension and lactate rise: stop EN and image the abdomen (bowel ischaemia/obstruction).",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Stopping feeds for small GRVs (< 500 mL) - leads to underfeeding.",
+            "refs": [
+              "aspen-2022"
+            ]
+          },
+          {
+            "text": "Long-term prokinetics (> 3-4 days): tachyphylaxis and side effects.",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Diarrhoea is rarely due to the feed itself - look for drugs and infection first.",
+            "refs": [
+              "aspen-2022"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Feed intolerance",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Vomiting / distension / high GRV"
+          },
+          {
+            "id": "serious",
+            "type": "decision",
+            "text": "Obstruction, ischaemia or IAH suspected?"
+          },
+          {
+            "id": "stop",
+            "type": "end",
+            "text": "Stop EN; image; surgical review",
+            "severity": "high"
+          },
+          {
+            "id": "grv",
+            "type": "decision",
+            "text": "GRV > 500 mL/6 h?"
+          },
+          {
+            "id": "pro",
+            "type": "action",
+            "text": "Reduce rate; erythromycin ± metoclopramide"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Continue EN; head-up 30-45°"
+          },
+          {
+            "id": "pers",
+            "type": "decision",
+            "text": "Persistent after 24-48 h?"
+          },
+          {
+            "id": "pp",
+            "type": "end",
+            "text": "Post-pyloric (NJ) feeding; consider supplemental PN"
+          },
+          {
+            "id": "ok",
+            "type": "end",
+            "text": "Advance feeds to target"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "serious"
+          },
+          {
+            "from": "serious",
+            "to": "stop",
+            "label": "Yes"
+          },
+          {
+            "from": "serious",
+            "to": "grv",
+            "label": "No"
+          },
+          {
+            "from": "grv",
+            "to": "pro",
+            "label": "Yes"
+          },
+          {
+            "from": "grv",
+            "to": "cont",
+            "label": "No"
+          },
+          {
+            "from": "pro",
+            "to": "pers"
+          },
+          {
+            "from": "pers",
+            "to": "pp",
+            "label": "Yes"
+          },
+          {
+            "from": "pers",
+            "to": "ok",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "espen-icu-2019"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Critical illness impairs antral motility and gastric emptying (catecholamines, opioids, hyperglycaemia, electrolyte disorders, sepsis), while small bowel absorptive function is often preserved - the basis for post-pyloric feeding.",
+        "evidence": "- ESPEN 2019: GRV 500 mL/6 h threshold; erythromycin first-line prokinetic; post-pyloric if persistent [Singer 2019].\n- ASPEN 2022 guidance [Compher 2022].",
+        "controversies": "- Measuring GRV at all; combined prokinetics.",
+        "indiaNotes": "- Bedside NJ placement techniques (blind or electromagnetic) are less available in India; endoscopic placement by gastroenterology is the usual route."
+      },
+      "drugIds": [
+        "erythromycin",
+        "metoclopramide"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "espen-icu-2019",
+        "aspen-2022"
+      ],
+      "quiz": [
+        {
+          "id": "feed-intolerance-q1",
+          "stem": "ESPEN GRV threshold to delay/reduce EN:",
+          "options": [
+            "150 mL/6 h",
+            "250 mL/4 h",
+            "500 mL/6 h",
+            "1,000 mL/24 h"
+          ],
+          "answerIndex": 2,
+          "explanation": "ESPEN 2019."
+        },
+        {
+          "id": "feed-intolerance-q2",
+          "stem": "First-choice prokinetic (ESPEN):",
+          "options": [
+            "Domperidone",
+            "Erythromycin",
+            "Neostigmine",
+            "Octreotide"
+          ],
+          "answerIndex": 1,
+          "explanation": "IV erythromycin."
+        },
+        {
+          "id": "feed-intolerance-q3",
+          "stem": "Persistent intolerance despite prokinetics:",
+          "options": [
+            "Stop all nutrition",
+            "Post-pyloric feeding",
+            "Bolus feeding",
+            "Increase rate"
+          ],
+          "answerIndex": 1,
+          "explanation": "NJ tube."
+        }
+      ]
+    },
+    {
+      "id": "parenteral-nutrition",
+      "title": "Parenteral nutrition",
+      "summary": "When to start PN (severe malnutrition early, others after day 3-7), how to prescribe and monitor, and complications.",
+      "viewKey": "topic:nutrition-metabolic-support/parenteral-nutrition",
+      "uiHints": {
+        "icon": "droplets",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "PN is indicated when EN is contraindicated or insufficient. ESPEN: in patients who cannot eat or be fed enterally, start PN within 3-7 days; in severe malnutrition start early, progressively. Supplemental PN can be considered when EN is < 60% of target after the first week.",
+          "refs": [
+            "espen-icu-2019",
+            "espen-icu-2023"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Decide timing",
+            "detail": "Well-nourished low-risk patients: delay PN (EPaNIC showed harm with early supplemental PN). Malnourished/high-risk with contraindication to EN: start PN early and advance slowly (refeeding precautions).",
+            "refs": [
+              "espen-icu-2019",
+              "epanic",
+              "aspen-2022"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Access",
+            "detail": "Dedicated lumen of a central venous catheter (or PICC) for standard PN; peripheral PN only for low-osmolarity short-term solutions (< 850-900 mOsm/L).",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Prescription",
+            "detail": "Use commercial 3-in-1 bags (glucose, amino acids, lipid) plus electrolytes, trace elements and vitamins; glucose ≤ 5 mg/kg/min; lipid ≤ 1.5 g/kg/day.",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Monitor",
+            "detail": "Glucose 4-6 hourly initially (insulin if > 180 mg/dL), electrolytes including phosphate and Mg daily at first, triglycerides (reduce lipid if > 400 mg/dL), LFT weekly.",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Complications",
+            "detail": "CLABSI (strict asepsis, dedicated lumen), hyperglycaemia, refeeding syndrome, PN-associated liver disease, overfeeding.",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Transition",
+            "detail": "Reduce PN as EN delivery reaches ~60-75% of target.",
+            "refs": [
+              "aspen-2022"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Fever with PN running through a central line: suspect CLABSI - cultures from line and periphery; consider line removal.",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Starting full-dose PN on day 1 in a well-nourished patient.",
+            "refs": [
+              "epanic"
+            ]
+          },
+          {
+            "text": "Adding lipid without accounting for propofol.",
+            "refs": [
+              "espen-icu-2019"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "CALORIES: early PN was not more harmful than early EN when calories were matched - route matters less than avoiding overfeeding.",
+            "refs": [
+              "calories"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "PN bypasses the gut, so there is no first-pass regulation of nutrient delivery; hyperglycaemia, infection and hepatic steatosis are more likely with excess dextrose and lipid.",
+        "evidence": "- EPaNIC (4,640 patients): late PN (day 8) led to fewer infections and faster recovery than early supplemental PN [Casaer 2011].\n- CALORIES (2,400): PN vs EN route - no mortality difference [Harvey 2014].",
+        "controversies": "- Supplemental PN timing in high-risk patients; lipid emulsion type (fish oil).",
+        "indiaNotes": "- Commercial 3-in-1 PN bags are available in India but expensive; compounding pharmacies are limited to large hospitals.\n- Strict CVC care bundles are essential given high CLABSI rates."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "espen-icu-2019",
+        "espen-icu-2023",
+        "aspen-2022",
+        "epanic",
+        "calories"
+      ],
+      "quiz": [
+        {
+          "id": "parenteral-nutrition-q1",
+          "stem": "EPaNIC showed early supplemental PN compared with late PN:",
+          "options": [
+            "Reduced infections",
+            "More infections and slower recovery",
+            "No difference",
+            "Lower mortality"
+          ],
+          "answerIndex": 1,
+          "explanation": "Late PN better."
+        },
+        {
+          "id": "parenteral-nutrition-q2",
+          "stem": "Maximum glucose infusion rate in PN:",
+          "options": [
+            "≤ 5 mg/kg/min",
+            "10 mg/kg/min",
+            "20 mg/kg/min",
+            "No limit"
+          ],
+          "answerIndex": 0,
+          "explanation": "ESPEN."
+        },
+        {
+          "id": "parenteral-nutrition-q3",
+          "stem": "Severely malnourished patient with contraindication to EN:",
+          "options": [
+            "Wait 7 days",
+            "Start PN early and progressively",
+            "Never use PN",
+            "Oral feeds"
+          ],
+          "answerIndex": 1,
+          "explanation": "ESPEN."
+        }
+      ]
+    },
+    {
+      "id": "refeeding-syndrome",
+      "title": "Refeeding syndrome",
+      "summary": "Identify risk, start feeds low with thiamine, monitor phosphate, potassium and magnesium, and restrict calories if phosphate falls.",
+      "viewKey": "topic:nutrition-metabolic-support/refeeding-syndrome",
+      "uiHints": {
+        "icon": "battery-low",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Refeeding syndrome: electrolyte shifts (hypophosphataemia, hypokalaemia, hypomagnesaemia) and thiamine deficiency after starting nutrition in a starved patient, causing organ dysfunction (respiratory failure, arrhythmia, heart failure, delirium) usually within 72 h (ASPEN: fall in phosphate, K or Mg by 10-20% mild, 20-30% moderate, > 30% or organ dysfunction severe).",
+          "refs": [
+            "aspen-refeeding-2020"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Identify risk",
+            "detail": "BMI < 16-18.5, weight loss > 5-15% in 1-6 months, little or no intake for > 5-10 days, low K/PO4/Mg before feeding, alcohol use disorder, chronic illness, cancer, eating disorders.",
+            "refs": [
+              "aspen-refeeding-2020"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Thiamine first",
+            "detail": "Thiamine 100 mg before feeding and daily for 5-7 days.",
+            "time": "Before feeds",
+            "refs": [
+              "aspen-refeeding-2020"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Start low",
+            "detail": "10-20 kcal/kg for first 24 h, advance by 33% of goal every 1-2 days; correct electrolytes before and during (do not delay feeding solely to correct them).",
+            "refs": [
+              "aspen-refeeding-2020"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Monitor",
+            "detail": "Phosphate, K, Mg every 12 h for 3 days in high-risk patients, then daily; fluid balance, heart rate, glucose.",
+            "refs": [
+              "aspen-refeeding-2020"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "If phosphate falls",
+            "detail": "Phosphate < 2 mg/dL (0.65 mmol/L) or falls > 30% after starting feeds: reduce energy intake (REFEED: restrict to ~20 kcal/h for 2 days, then increase gradually) and replace phosphate.",
+            "refs": [
+              "refeed",
+              "aspen-refeeding-2020"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Replace",
+            "detail": "IV phosphate 0.16-0.64 mmol/kg depending on severity; K and Mg as needed.",
+            "refs": [
+              "aspen-refeeding-2020"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "thiamine",
+            "role": "Refeeding prevention",
+            "route": "IV/oral",
+            "dose": "100 mg before feeds, then daily for 5-7 days",
+            "refs": [
+              "aspen-refeeding-2020"
+            ]
+          },
+          {
+            "drugId": "potassium-phosphate",
+            "role": "Moderate hypophosphataemia (1-1.9 mg/dL)",
+            "route": "IV",
+            "dose": "0.16-0.32 mmol/kg over 4-6 h",
+            "workedExample": "70 kg: 11-22 mmol phosphate in 250 mL NS over 6 h",
+            "verify": "Product strength (mmol/mL) and potassium content.",
+            "refs": [
+              "aspen-refeeding-2020"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "New respiratory muscle weakness, failed weaning, arrhythmia or confusion 2-3 days after starting feeds: check phosphate.",
+            "refs": [
+              "aspen-refeeding-2020"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Starting full feeds in a starved alcoholic patient without thiamine and electrolyte monitoring.",
+            "refs": [
+              "aspen-refeeding-2020"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Hypophosphataemia in ventilated patients delays weaning and impairs diaphragm function - check phosphate before SBTs.",
+            "refs": [
+              "aspen-refeeding-2020"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Feeding after starvation triggers insulin release and anabolism; phosphate, potassium and magnesium move intracellularly and are consumed in ATP and glycogen synthesis, and thiamine is used in carbohydrate metabolism - causing acute deficiency states.",
+        "evidence": "- ASPEN 2020 consensus definitions and management [da Silva 2020].\n- REFEED: caloric restriction in refeeding hypophosphataemia improved survival [Doig 2015].",
+        "controversies": "- Diagnostic criteria; the degree of initial caloric restriction needed.",
+        "indiaNotes": "- Undernutrition, tuberculosis, alcohol use and prolonged illness before referral are common in Indian ICU patients - refeeding risk is high; ensure phosphate testing is available."
+      },
+      "drugIds": [
+        "thiamine",
+        "potassium-phosphate"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "aspen-refeeding-2020",
+        "refeed"
+      ],
+      "quiz": [
+        {
+          "id": "refeeding-syndrome-q1",
+          "stem": "Starting energy in high refeeding risk (ASPEN):",
+          "options": [
+            "35 kcal/kg",
+            "10-20 kcal/kg for first 24 h",
+            "Zero for 7 days",
+            "50% above target"
+          ],
+          "answerIndex": 1,
+          "explanation": "Start low."
+        },
+        {
+          "id": "refeeding-syndrome-q2",
+          "stem": "Hallmark electrolyte disturbance of refeeding:",
+          "options": [
+            "Hypernatraemia",
+            "Hypophosphataemia",
+            "Hypercalcaemia",
+            "Hyperkalaemia"
+          ],
+          "answerIndex": 1,
+          "explanation": "Phosphate shifts intracellularly."
+        },
+        {
+          "id": "refeeding-syndrome-q3",
+          "stem": "REFEED trial intervention:",
+          "options": [
+            "Higher protein",
+            "Caloric restriction when hypophosphataemia develops",
+            "PN",
+            "Insulin infusion"
+          ],
+          "answerIndex": 1,
+          "explanation": "Doig 2015."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "erythromycin",
+      "name": "Erythromycin",
+      "class": "Prokinetic (motilin agonist)",
+      "indications": "Gastric feed intolerance (first choice in ESPEN)",
+      "adultDose": "100-250 mg IV every 8 h for 24-72 h (tachyphylaxis after ~3 days).",
+      "cautions": "QTc, interactions, antimicrobial resistance.",
+      "verify": "IV erythromycin availability in India; oral suspension sometimes substituted.",
+      "refs": [
+        "espen-icu-2019"
+      ]
+    },
+    {
+      "id": "metoclopramide",
+      "name": "Metoclopramide",
+      "class": "Prokinetic (D2 antagonist)",
+      "indications": "Gastric feed intolerance",
+      "adultDose": "10 mg IV every 8 h; review after 3 days.",
+      "renalHepatic": "Halve dose if CrCl < 40.",
+      "cautions": "Extrapyramidal effects, QTc.",
+      "refs": [
+        "espen-icu-2019"
+      ]
+    },
+    {
+      "id": "thiamine",
+      "name": "Thiamine",
+      "class": "Vitamin B1",
+      "indications": "Refeeding risk; alcohol use; prolonged starvation",
+      "adultDose": "100 mg (oral/IV) before starting feeds and daily for 5-7 days (or longer in severe starvation/alcohol use).",
+      "refs": [
+        "aspen-refeeding-2020"
+      ]
+    },
+    {
+      "id": "potassium-phosphate",
+      "name": "Phosphate replacement (potassium or sodium phosphate)",
+      "class": "Electrolyte",
+      "indications": "Hypophosphataemia (refeeding)",
+      "adultDose": "Moderate (1.0-1.9 mg/dL): 0.16-0.32 mmol/kg IV over 4-6 h; severe (< 1.0 mg/dL): 0.32-0.64 mmol/kg IV over 8-12 h (max ~50 mmol per dose); oral phosphate for mild deficits.",
+      "renalHepatic": "Reduce doses in AKI; monitor closely.",
+      "cautions": "Potassium phosphate adds potassium (check K); hypocalcaemia with rapid infusion.",
+      "verify": "Local preparation (mmol phosphate per mL) and replacement protocol.",
+      "refs": [
+        "aspen-refeeding-2020"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "espen-icu-2019",
+      "citation": "Singer P, Blaser AR, Berger MM, et al. ESPEN guideline on clinical nutrition in the intensive care unit. Clin Nutr 2019;38:48-79.",
+      "url": "https://doi.org/10.1016/j.clnu.2018.08.037",
+      "year": 2019,
+      "type": "guideline",
+      "doi": "10.1016/j.clnu.2018.08.037"
+    },
+    {
+      "id": "espen-icu-2023",
+      "citation": "Singer P, Blaser AR, Berger MM, et al. ESPEN practical and partially revised guideline: clinical nutrition in the intensive care unit. Clin Nutr 2023;42:1671-89.",
+      "url": "https://doi.org/10.1016/j.clnu.2023.07.011",
+      "year": 2023,
+      "type": "guideline",
+      "doi": "10.1016/j.clnu.2023.07.011"
+    },
+    {
+      "id": "aspen-2022",
+      "citation": "Compher C, Bingham AL, McCall M, et al. Guidelines for the provision of nutrition support therapy in the adult critically ill patient: the American Society for Parenteral and Enteral Nutrition. JPEN J Parenter Enteral Nutr 2022;46:12-41.",
+      "url": "https://doi.org/10.1002/jpen.2267",
+      "year": 2022,
+      "type": "guideline",
+      "doi": "10.1002/jpen.2267"
+    },
+    {
+      "id": "aspen-refeeding-2020",
+      "citation": "da Silva JSV, Seres DS, Sabino K, et al. ASPEN consensus recommendations for refeeding syndrome. Nutr Clin Pract 2020;35:178-95.",
+      "url": "https://doi.org/10.1002/ncp.10474",
+      "year": 2020,
+      "type": "consensus",
+      "doi": "10.1002/ncp.10474"
+    },
+    {
+      "id": "nutric-2011",
+      "citation": "Heyland DK, Dhaliwal R, Jiang X, Day AG. Identifying critically ill patients who benefit the most from nutrition therapy: the development and initial validation of a novel risk assessment tool. Crit Care 2011;15:R268.",
+      "url": "https://doi.org/10.1186/cc10546",
+      "year": 2011,
+      "type": "trial",
+      "doi": "10.1186/cc10546"
+    },
+    {
+      "id": "mnutric-2016",
+      "citation": "Rahman A, Hasan RM, Agarwala R, et al. Identifying critically-ill patients who will benefit most from nutritional therapy: further validation of the 'modified NUTRIC' nutritional risk assessment tool. Clin Nutr 2016;35:158-62.",
+      "url": "https://doi.org/10.1016/j.clnu.2015.01.015",
+      "year": 2016,
+      "type": "trial",
+      "doi": "10.1016/j.clnu.2015.01.015"
+    },
+    {
+      "id": "effort-protein",
+      "citation": "Heyland DK, Patel J, Compher C, et al. The effect of higher protein dosing in critically ill patients with high nutritional risk (EFFORT Protein). Lancet 2023;401:568-76.",
+      "url": "https://doi.org/10.1016/S0140-6736(22)02469-2",
+      "year": 2023,
+      "type": "trial",
+      "doi": "10.1016/S0140-6736(22)02469-2"
+    },
+    {
+      "id": "nutrirea3",
+      "citation": "Reignier J, Plantefeve G, Mira JP, et al. Low versus standard calorie and protein feeding in ventilated adults with shock (NUTRIREA-3). Lancet Respir Med 2023;11:602-12.",
+      "url": "https://doi.org/10.1016/S2213-2600(23)00092-9",
+      "year": 2023,
+      "type": "trial",
+      "doi": "10.1016/S2213-2600(23)00092-9"
+    },
+    {
+      "id": "nutrirea2",
+      "citation": "Reignier J, Boisrame-Helms J, Brisard L, et al. Enteral versus parenteral early nutrition in ventilated adults with shock (NUTRIREA-2). Lancet 2018;391:133-43.",
+      "url": "https://doi.org/10.1016/S0140-6736(17)32146-3",
+      "year": 2018,
+      "type": "trial",
+      "doi": "10.1016/S0140-6736(17)32146-3"
+    },
+    {
+      "id": "epanic",
+      "citation": "Casaer MP, Mesotten D, Hermans G, et al. Early versus late parenteral nutrition in critically ill adults (EPaNIC). N Engl J Med 2011;365:506-17.",
+      "url": "https://doi.org/10.1056/NEJMoa1102662",
+      "year": 2011,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1102662"
+    },
+    {
+      "id": "calories",
+      "citation": "Harvey SE, Parrott F, Harrison DA, et al. Trial of the route of early nutritional support in critically ill adults (CALORIES). N Engl J Med 2014;371:1673-84.",
+      "url": "https://doi.org/10.1056/NEJMoa1409860",
+      "year": 2014,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1409860"
+    },
+    {
+      "id": "target-trial",
+      "citation": "TARGET Investigators. Energy-dense versus routine enteral nutrition in the critically ill. N Engl J Med 2018;379:1823-34.",
+      "url": "https://doi.org/10.1056/NEJMoa1811687",
+      "year": 2018,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1811687"
+    },
+    {
+      "id": "refeed",
+      "citation": "Doig GS, Simpson F, Heighes PT, et al. Restricted versus continued standard caloric intake during the management of refeeding syndrome in critically ill adults: a randomised, parallel-group, multicentre, single-blind controlled trial. Lancet Respir Med 2015;3:943-52.",
+      "url": "https://doi.org/10.1016/S2213-2600(15)00418-X",
+      "year": 2015,
+      "type": "trial",
+      "doi": "10.1016/S2213-2600(15)00418-X"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Phosphate replacement doses",
+      "reason": "Converted from ASPEN-referenced ranges; confirm with local electrolyte protocol and product strength."
+    }
+  ]
+}

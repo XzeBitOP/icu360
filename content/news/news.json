@@ -1,0 +1,4 @@
+{
+  "description": "Critical care news shown on /news, newest first. Add items only after Kenil approves them in chat. Fields: id, date (YYYY-MM-DD), tag (Guideline | Trial | India | Drug safety | Review), source, title, summary, url, moduleId (optional, links the item to a module).",
+  "items": []
+}

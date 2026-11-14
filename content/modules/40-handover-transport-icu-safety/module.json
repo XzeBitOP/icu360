@@ -1,0 +1,2901 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "handover-transport-icu-safety",
+  "number": 40,
+  "folder": "40-handover-transport-icu-safety",
+  "section": {
+    "id": "K",
+    "title": "Skills and professional practice"
+  },
+  "phase": 3,
+  "title": "Handover, transport and ICU safety",
+  "summary": "The non-technical skills that keep ICU patients safe: structured handover and escalation (I-PASS, ISBAR), a systematic daily round, safe intra- and inter-hospital transfer, oxygen cylinder planning, incident reporting and safety culture, and mass casualty triage — adapted for Indian ICUs.",
+  "tags": [
+    "handover",
+    "I-PASS",
+    "ISBAR",
+    "SBAR",
+    "escalation",
+    "ward round",
+    "FAST HUG",
+    "daily goals",
+    "transfer",
+    "transport",
+    "intrahospital transport",
+    "oxygen cylinder",
+    "patient safety",
+    "incident reporting",
+    "NABH",
+    "Swiss cheese",
+    "mass casualty",
+    "triage",
+    "START",
+    "SALT",
+    "NDMA",
+    "disaster"
+  ],
+  "relatedModules": [
+    "deteriorating-patient-icu-triage",
+    "trauma-burns-environmental",
+    "oxygen-hfnc-niv",
+    "mechanical-ventilation",
+    "icu-care-bundles-infection-prevention",
+    "icu-pharmacology-drug-infusions",
+    "analgesia-sedation-delirium",
+    "ethics-communication-palliative-care",
+    "raised-icp-neurotrauma-brain-death",
+    "paediatric-emergencies-essentials",
+    "ecmo-mechanical-circulatory-support",
+    "agrochemical-household-poisons"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted, pending consultant review)"
+  ],
+  "uiHints": {
+    "icon": "ambulance",
+    "accent": "standard"
+  },
+  "viewKey": "module:handover-transport-icu-safety",
+  "topics": [
+    {
+      "id": "isbar-handover",
+      "title": "ISBAR and structured handover",
+      "summary": "How to give and receive a safe shift handover (I-PASS) and how to escalate a sick patient to a senior by phone (ISBAR) — with scripts a junior can use at 3 am.",
+      "viewKey": "topic:handover-transport-icu-safety/isbar-handover",
+      "uiHints": {
+        "icon": "message-square",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Handover is the transfer of professional responsibility and accountability for some or all aspects of a patient's care. Communication failures at handover are a leading contributor to adverse events; structured tools reduce omissions.",
+          "refs": [
+            "ipass-2014",
+            "who-gpsap-2021"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "Before",
+            "title": "Prepare",
+            "detail": "Update the written/electronic handover list before the meeting: diagnosis, key events, current support (ventilator, vasopressors, RRT), pending results, and an explicit to-do list with times. Protect handover time and place; minimise interruptions.",
+            "refs": [
+              "ipass-2014",
+              "who-gpsap-2021"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Shift handover",
+            "title": "Use I-PASS for each patient",
+            "detail": "**I**llness severity (stable / watcher / unstable); **P**atient summary (diagnosis, events, plan); **A**ction list (who, what, by when); **S**ituation awareness and contingency ('if MAP <65 despite noradrenaline 0.3, then…'); **S**ynthesis by receiver (the receiver summarises back and asks questions).",
+            "refs": [
+              "ipass-2014"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Shift handover",
+            "title": "Sickest first, at the bedside if possible",
+            "detail": "Hand over unstable and 'watcher' patients first and, ideally, at the bedside so lines, drains, ventilator and the patient are seen together; confirm allergies, resuscitation status and family communication.",
+            "refs": [
+              "ipass-2014",
+              "who-gpsap-2021"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Escalation",
+            "title": "Phone a senior with ISBAR",
+            "detail": "**I**dentify yourself, your role, the patient and location; **S**ituation — what is happening now and why you are worried; **B**ackground — diagnosis, key history, current treatment; **A**ssessment — vital signs, your interpretation (e.g. 'I think this is septic shock'); **R**ecommendation/request — what you need ('Please come and review within 15 minutes', 'Can I start noradrenaline?').",
+            "refs": [
+              "ihi-sbar"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Escalation",
+            "title": "Close the loop",
+            "detail": "Read back the instructions received, write them down with the time, and agree when you will call back or when the senior will arrive. If you remain worried, escalate again — or higher.",
+            "refs": [
+              "ihi-sbar",
+              "who-gpsap-2021"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "After",
+            "title": "Document",
+            "detail": "Record the handover/escalation, the plan and contingency in the notes; update the handover list.",
+            "refs": [
+              "ipass-2014"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "ipass-table",
+            "title": "I-PASS mnemonic",
+            "columns": [
+              "Letter",
+              "Element",
+              "Example"
+            ],
+            "rows": [
+              [
+                "I",
+                "Illness severity",
+                "'Unstable — rising noradrenaline'"
+              ],
+              [
+                "P",
+                "Patient summary",
+                "'54-year-old, scrub typhus with ARDS, day 3 ventilation, PEEP 12, FiO₂ 0.6'"
+              ],
+              [
+                "A",
+                "Action list",
+                "'Repeat ABG at 2 am; chase blood culture; family update at 9 am'"
+              ],
+              [
+                "S",
+                "Situation awareness & contingency",
+                "'If P/F <100 despite PEEP 14, prone and call me'"
+              ],
+              [
+                "S",
+                "Synthesis by receiver",
+                "Receiver summarises: 'So, unstable, ABG at 2, prone if P/F <100 — call you'"
+              ]
+            ],
+            "refs": [
+              "ipass-2014"
+            ]
+          },
+          {
+            "id": "isbar-script",
+            "title": "ISBAR phone script (example)",
+            "columns": [
+              "Step",
+              "Script"
+            ],
+            "rows": [
+              [
+                "Identify",
+                "'Dr Rao, ICU night resident. I'm calling about Mr S, bed 7.'"
+              ],
+              [
+                "Situation",
+                "'His BP has fallen to 78/40 over 30 minutes and he is more drowsy. I'm worried.'"
+              ],
+              [
+                "Background",
+                "'Day 2 after laparotomy for perforation, on meropenem, noradrenaline 0.1 mcg/kg/min.'"
+              ],
+              [
+                "Assessment",
+                "'HR 128, lactate 4.6 from 2.1, drain output increased. I think he may be bleeding or have worsening sepsis.'"
+              ],
+              [
+                "Recommendation",
+                "'I'd like you to see him now. Meanwhile I've sent Hb and cross-match and given 500 mL. Should I call the surgeon?'"
+              ]
+            ],
+            "refs": [
+              "ihi-sbar"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "If you are worried, call — concern alone is a valid reason to escalate (state it explicitly: 'I am worried about this patient').",
+            "refs": [
+              "ihi-sbar"
+            ]
+          },
+          {
+            "text": "Any patient flagged as 'unstable' at handover needs a face-to-face review early in the shift by the incoming doctor.",
+            "refs": [
+              "ipass-2014"
+            ]
+          },
+          {
+            "text": "Unclear resuscitation status, missing allergy information or unknown pending critical results are handover failures — resolve before the outgoing team leaves.",
+            "refs": [
+              "who-gpsap-2021"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Handing over 'everything' as an unstructured story: key actions and contingencies get lost — use a fixed structure.",
+            "refs": [
+              "ipass-2014"
+            ]
+          },
+          {
+            "text": "No synthesis/read-back by the receiver: misunderstandings are not detected.",
+            "refs": [
+              "ipass-2014"
+            ]
+          },
+          {
+            "text": "Calling a senior without a clear request: always end with what you want them to do.",
+            "refs": [
+              "ihi-sbar"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Write the contingency plans ('if X, then Y') — they are what the night team actually uses.",
+            "refs": [
+              "ipass-2014"
+            ]
+          },
+          {
+            "text": "Use the same structure for nurse-to-doctor, doctor-to-doctor and inter-hospital referral calls.",
+            "refs": [
+              "ihi-sbar"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Escalating a deteriorating patient",
+        "description": "Using ISBAR to get the right help in time.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Patient deteriorating or you are worried"
+          },
+          {
+            "id": "immed",
+            "type": "decision",
+            "text": "Peri-arrest or airway/breathing threat?"
+          },
+          {
+            "id": "code",
+            "type": "end",
+            "text": "Call the emergency/code team now; start resuscitation",
+            "severity": "critical"
+          },
+          {
+            "id": "assess",
+            "type": "action",
+            "text": "Quick ABCDE, vital signs, key results; start immediate treatment"
+          },
+          {
+            "id": "call",
+            "type": "action",
+            "text": "Call senior using ISBAR with a clear request"
+          },
+          {
+            "id": "rb",
+            "type": "action",
+            "text": "Read back instructions; agree review time"
+          },
+          {
+            "id": "better",
+            "type": "decision",
+            "text": "Improving by the agreed time?"
+          },
+          {
+            "id": "doc",
+            "type": "end",
+            "text": "Document and hand over contingencies"
+          },
+          {
+            "id": "higher",
+            "type": "action",
+            "text": "Re-escalate (consultant/higher); repeat ISBAR",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "immed"
+          },
+          {
+            "from": "immed",
+            "to": "code",
+            "label": "Yes"
+          },
+          {
+            "from": "immed",
+            "to": "assess",
+            "label": "No"
+          },
+          {
+            "from": "assess",
+            "to": "call"
+          },
+          {
+            "from": "call",
+            "to": "rb"
+          },
+          {
+            "from": "rb",
+            "to": "better"
+          },
+          {
+            "from": "better",
+            "to": "doc",
+            "label": "Yes"
+          },
+          {
+            "from": "better",
+            "to": "higher",
+            "label": "No"
+          },
+          {
+            "from": "higher",
+            "to": "rb"
+          }
+        ],
+        "refs": [
+          "ihi-sbar",
+          "ipass-2014"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Human working memory is limited; under fatigue and time pressure, unstructured verbal communication loses information. Hierarchy ('steep authority gradient') makes juniors hesitant to state concern or request action clearly; structured tools give permission and a script.",
+        "evidence": "- **I-PASS (Starmer, NEJM 2014):** handoff programme (mnemonic, training, faculty development, verbal and written handoff tool) across 9 US paediatric residency programmes. Medical errors fell by 23% (24.5 → 18.8 per 100 admissions) and preventable adverse events by 30% (4.7 → 3.3 per 100 admissions), with no increase in handoff duration.\n- **SBAR/ISBAR** originated in naval/aviation communication and was adapted to healthcare (Kaiser Permanente; promoted by IHI) to standardise escalation calls.\n- **WHO Global Patient Safety Action Plan 2021–2030** lists safe communication and transitions of care as core strategies.",
+        "controversies": "- Bedside vs meeting-room handover (patient confidentiality, time, noise).\n- Electronic vs paper handover tools — benefit depends on design and training more than medium.",
+        "indiaNotes": "- Indian ICUs often have high patient-to-doctor ratios and long shifts; a short, structured written handover sheet per bed works better than long verbal accounts.\n- Mixed-language teams: keep key terms (drug names, doses, targets) in English and read back numbers.\n- NABH accreditation standards expect documented handover processes in ICUs."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "news2"
+      ],
+      "references": [
+        "ipass-2014",
+        "ihi-sbar",
+        "who-gpsap-2021"
+      ],
+      "quiz": [
+        {
+          "id": "q40-1-1",
+          "stem": "In I-PASS, the final 'S' stands for:",
+          "options": [
+            "Summary of labs",
+            "Synthesis by receiver",
+            "Signature",
+            "Sedation plan",
+            "Safety check"
+          ],
+          "answerIndex": 1,
+          "explanation": "The receiver summarises back, closing the loop."
+        },
+        {
+          "id": "q40-1-2",
+          "stem": "In ISBAR, the 'R' element should contain:",
+          "options": [
+            "The patient's past history",
+            "A clear request or recommendation, e.g. 'please review within 15 minutes'",
+            "Your name",
+            "Vital signs",
+            "Allergies"
+          ],
+          "answerIndex": 1,
+          "explanation": "Always end with what you want."
+        },
+        {
+          "id": "q40-1-3",
+          "stem": "I-PASS implementation was associated with:",
+          "options": [
+            "No change in errors",
+            "A 23% reduction in medical errors and 30% reduction in preventable adverse events",
+            "Longer handoffs by 1 hour",
+            "Increased mortality",
+            "Reduced ICU admissions only"
+          ],
+          "answerIndex": 1,
+          "explanation": "Starmer 2014."
+        },
+        {
+          "id": "q40-1-4",
+          "stem": "At night a senior gives you orders by phone. Best practice:",
+          "options": [
+            "Remember them",
+            "Read back, write them with time, agree a review time",
+            "Ask a nurse to remember",
+            "Wait till morning to write",
+            "No documentation needed"
+          ],
+          "answerIndex": 1,
+          "explanation": "Closed-loop communication and documentation."
+        },
+        {
+          "id": "q40-1-5",
+          "stem": "Which patients should be handed over first?",
+          "options": [
+            "Alphabetical order",
+            "Unstable and 'watcher' patients",
+            "New admissions only",
+            "Those due for discharge",
+            "Bed number order always"
+          ],
+          "answerIndex": 1,
+          "explanation": "Sickest first."
+        }
+      ]
+    },
+    {
+      "id": "daily-rounds-structure",
+      "title": "Structure of the daily ICU round",
+      "summary": "A reproducible, systems-based ICU round with a FAST HUG-style checklist, daily goals, and line/catheter/antibiotic reviews — so that nothing preventable is missed and the whole team (and family) knows the plan.",
+      "viewKey": "topic:handover-transport-icu-safety/daily-rounds-structure",
+      "uiHints": {
+        "icon": "list-checks",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "A structured ICU round systematically reviews each organ system, applies a preventive checklist and sets explicit daily goals understood by the whole multidisciplinary team.",
+          "refs": [
+            "fast-hug-2005",
+            "daily-goals-2003"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "Pre-round",
+            "title": "Collect data",
+            "detail": "Overnight events, vital-sign trends, fluid balance, ventilator settings and ABGs, drug chart and infusions, lab/microbiology/imaging results, nursing concerns. Calculate SOFA or the unit's severity score if used.",
+            "refs": [
+              "fast-hug-2005"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "At bedside",
+            "title": "Examine and present by systems",
+            "detail": "Neuro (sedation/RASS, delirium/CAM-ICU, pain), respiratory (mode, settings, P/F, SBT readiness), cardiovascular (MAP, vasoactives, perfusion, lactate), renal/fluids (urine, balance, creatinine, RRT), GI/nutrition, haematology/VTE, infection (cultures, antibiotics day number), lines/tubes, skin, mobilisation, family/goals.",
+            "refs": [
+              "fast-hug-2005",
+              "daily-goals-2003"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Checklist",
+            "title": "FAST HUG every day",
+            "detail": "**F**eeding, **A**nalgesia, **S**edation, **T**hromboprophylaxis, **H**ead of bed elevation (30–45° if ventilated), stress **U**lcer prophylaxis (if indicated), **G**lucose control. Many units add: spontaneous breathing trial, bowel care, indwelling catheter/line removal, de-escalation of antibiotics.",
+            "refs": [
+              "fast-hug-2005"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Daily goals",
+            "title": "Write explicit goals",
+            "detail": "Write today's goals on a daily goals sheet/whiteboard: targets (MAP, SpO₂, RASS, fluid balance), tests, procedures, consults, what must happen before discharge, and who updates the family. Ask: 'What is needed for this patient to leave ICU?'",
+            "refs": [
+              "daily-goals-2003"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Devices",
+            "title": "Line and catheter review",
+            "detail": "Is every central line, arterial line and urinary catheter still needed? Insertion date, site condition; remove what is not needed. Use insertion and maintenance bundles for CLABSI prevention.",
+            "refs": [
+              "pronovost-clabsi-2006"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Antibiotics",
+            "title": "Stewardship time-out",
+            "detail": "Indication, culture results, day number, planned stop date; de-escalate or stop where possible.",
+            "refs": [
+              "fast-hug-2005"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Close",
+            "title": "Summarise and communicate",
+            "detail": "Read back the plan for each patient; assign tasks with names and times; family update; document. Revisit at an afternoon/evening 'board round'.",
+            "refs": [
+              "daily-goals-2003",
+              "who-gpsap-2021"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "fast-hug-table",
+            "title": "FAST HUG — what to ask",
+            "columns": [
+              "Item",
+              "Question on the round"
+            ],
+            "rows": [
+              [
+                "Feeding",
+                "Can we feed enterally today? Target calories/protein met?"
+              ],
+              [
+                "Analgesia",
+                "Pain score? Analgesia first before sedation?"
+              ],
+              [
+                "Sedation",
+                "RASS target (usually −2 to 0)? Daily sedation hold?"
+              ],
+              [
+                "Thromboprophylaxis",
+                "LMWH/UFH or mechanical? Contraindications?"
+              ],
+              [
+                "Head-of-bed",
+                "Elevated 30–45° if ventilated?"
+              ],
+              [
+                "Ulcer prophylaxis",
+                "Still indicated (ventilated >48 h, coagulopathy)? Stop when risk resolves"
+              ],
+              [
+                "Glucose",
+                "Within target (e.g. 140–180 mg/dL)? Hypoglycaemia?"
+              ],
+              [
+                "(+) SBT / Bowels / Indwelling devices / De-escalation",
+                "Ready for spontaneous breathing trial? Bowels open? Lines/catheters needed? Antibiotics narrowed/stopped?"
+              ]
+            ],
+            "refs": [
+              "fast-hug-2005"
+            ]
+          },
+          {
+            "id": "daily-goals-sheet",
+            "title": "Daily goals sheet — minimum content",
+            "columns": [
+              "Domain",
+              "Example goal"
+            ],
+            "rows": [
+              [
+                "What needs to happen to leave ICU?",
+                "'Off noradrenaline, extubated, tolerating feeds'"
+              ],
+              [
+                "Patient's greatest safety risk",
+                "'Self-extubation; bleeding from line site'"
+              ],
+              [
+                "Targets",
+                "MAP ≥65, SpO₂ 92–96%, RASS −1, balance −500 mL"
+              ],
+              [
+                "Tests/procedures",
+                "CT abdomen, change CVC (day 7)"
+              ],
+              [
+                "Consults",
+                "Surgery, nephrology"
+              ],
+              [
+                "Communication",
+                "Family meeting 5 pm — consultant"
+              ]
+            ],
+            "refs": [
+              "daily-goals-2003"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "A patient who is 'not improving' after 48–72 h needs a structured re-think: diagnosis, source control, drug levels, complications, goals of care.",
+            "refs": [
+              "fast-hug-2005"
+            ]
+          },
+          {
+            "text": "A rising SOFA score or rising vasopressor needs on the round = escalate the plan, not just 'continue'.",
+            "refs": [
+              "fast-hug-2005"
+            ]
+          },
+          {
+            "text": "Never leave the round without a clear resuscitation status and documented family communication for every critically ill patient.",
+            "refs": [
+              "who-gpsap-2021"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "'Copy-forward' notes that repeat yesterday's plan without reassessing.",
+            "refs": [
+              "daily-goals-2003"
+            ]
+          },
+          {
+            "text": "Rounds that exclude nurses, pharmacists and physiotherapists lose key information and buy-in.",
+            "refs": [
+              "daily-goals-2003"
+            ]
+          },
+          {
+            "text": "Continuing stress ulcer prophylaxis and urinary catheters long after the indication has gone.",
+            "refs": [
+              "fast-hug-2005"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "In Pronovost's daily goals study, the proportion of residents and nurses who understood the day's goals rose from about 10% to over 95%, and ICU length of stay fell.",
+            "refs": [
+              "daily-goals-2003"
+            ]
+          },
+          {
+            "text": "Simple checklists for line insertion (Keystone ICU project) cut catheter-related bloodstream infection rates dramatically and sustainably.",
+            "refs": [
+              "pronovost-clabsi-2006"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Daily round per patient",
+        "description": "A repeatable sequence for each bed.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Start review of a patient"
+          },
+          {
+            "id": "data",
+            "type": "action",
+            "text": "Overnight events, trends, results, nursing concerns"
+          },
+          {
+            "id": "exam",
+            "type": "action",
+            "text": "Bedside exam and systems presentation"
+          },
+          {
+            "id": "check",
+            "type": "action",
+            "text": "FAST HUG + SBT, bowels, devices, antibiotics"
+          },
+          {
+            "id": "improving",
+            "type": "decision",
+            "text": "Improving as expected?"
+          },
+          {
+            "id": "rethink",
+            "type": "action",
+            "text": "Structured re-think: diagnosis, source, complications, goals of care",
+            "severity": "high"
+          },
+          {
+            "id": "goals",
+            "type": "action",
+            "text": "Write daily goals, targets, tasks with owners"
+          },
+          {
+            "id": "leave",
+            "type": "decision",
+            "text": "Ready for ICU discharge?"
+          },
+          {
+            "id": "discharge",
+            "type": "end",
+            "text": "Discharge summary and handover to ward team"
+          },
+          {
+            "id": "comm",
+            "type": "end",
+            "text": "Communicate plan to team and family; document"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "data"
+          },
+          {
+            "from": "data",
+            "to": "exam"
+          },
+          {
+            "from": "exam",
+            "to": "check"
+          },
+          {
+            "from": "check",
+            "to": "improving"
+          },
+          {
+            "from": "improving",
+            "to": "goals",
+            "label": "Yes"
+          },
+          {
+            "from": "improving",
+            "to": "rethink",
+            "label": "No"
+          },
+          {
+            "from": "rethink",
+            "to": "goals"
+          },
+          {
+            "from": "goals",
+            "to": "leave"
+          },
+          {
+            "from": "leave",
+            "to": "discharge",
+            "label": "Yes"
+          },
+          {
+            "from": "leave",
+            "to": "comm",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "fast-hug-2005",
+          "daily-goals-2003"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Complex ICU care involves hundreds of daily actions; errors of omission (forgetting thromboprophylaxis, leaving unnecessary lines) are more common than errors of commission. Checklists compensate for cognitive load and variable experience.",
+        "evidence": "- **FAST HUG (Vincent 2005):** a mnemonic for key preventive aspects of ICU care; extensions (FAST HUGS BID) add spontaneous breathing trial, bowel care, indwelling catheters and de-escalation.\n- **Daily goals (Pronovost 2003):** before/after study in a surgical ICU; understanding of daily goals by residents and nurses increased from <10% to >95%; ICU length of stay decreased (from 2.2 to 1.1 days).\n- **Keystone ICU (Pronovost 2006):** in 103 Michigan ICUs, an evidence-based checklist intervention (hand hygiene, full barrier precautions, chlorhexidine, avoid femoral site, remove unnecessary catheters) reduced median CRBSI rates from 2.7 to 0 per 1,000 catheter-days, sustained at 18 months.",
+        "controversies": "- Checklist fatigue and 'tick-box' behaviour — effectiveness depends on culture and leadership.\n- Family presence on rounds — improves communication and satisfaction but needs time and privacy.",
+        "indiaNotes": "- In many Indian ICUs, rounds are consultant-led with large teams; assign one person to read the checklist aloud for each patient.\n- Antibiotic stewardship is critical given high carbapenem resistance (ICMR AMR surveillance) — include a daily antibiotic time-out.\n- Bilingual family updates at a fixed time reduce repeated queries and conflict."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "sofa",
+        "rass"
+      ],
+      "references": [
+        "fast-hug-2005",
+        "daily-goals-2003",
+        "pronovost-clabsi-2006",
+        "who-gpsap-2021"
+      ],
+      "quiz": [
+        {
+          "id": "q40-2-1",
+          "stem": "In FAST HUG, the 'H' stands for:",
+          "options": [
+            "Haemoglobin",
+            "Head-of-bed elevation",
+            "Hydration",
+            "Handover",
+            "Hypothermia"
+          ],
+          "answerIndex": 1,
+          "explanation": "Head of bed 30–45° in ventilated patients."
+        },
+        {
+          "id": "q40-2-2",
+          "stem": "Pronovost's daily goals form led to:",
+          "options": [
+            "No change",
+            "Better understanding of goals (<10% → >95%) and shorter ICU stay",
+            "Increased mortality",
+            "More catheter infections",
+            "Longer rounds without benefit"
+          ],
+          "answerIndex": 1,
+          "explanation": "Daily goals improve shared understanding."
+        },
+        {
+          "id": "q40-2-3",
+          "stem": "Which is NOT part of the Keystone CLABSI checklist?",
+          "options": [
+            "Hand hygiene",
+            "Full barrier precautions",
+            "Chlorhexidine skin preparation",
+            "Prefer femoral site",
+            "Remove unnecessary catheters"
+          ],
+          "answerIndex": 3,
+          "explanation": "Avoid the femoral site."
+        },
+        {
+          "id": "q40-2-4",
+          "stem": "Day 4: patient is not improving on antibiotics. Most appropriate round action:",
+          "options": [
+            "Continue the same plan",
+            "Structured re-think: diagnosis, source control, levels, complications, goals",
+            "Add vancomycin automatically",
+            "Discharge",
+            "Stop all treatment"
+          ],
+          "answerIndex": 1,
+          "explanation": "Non-improvement triggers re-evaluation."
+        },
+        {
+          "id": "q40-2-5",
+          "stem": "A useful daily goals question is:",
+          "options": [
+            "'What time is lunch?'",
+            "'What needs to happen for this patient to leave the ICU?'",
+            "'Who admitted the patient?'",
+            "'What was the initial lactate?'",
+            "'Is the bed clean?'"
+          ],
+          "answerIndex": 1,
+          "explanation": "Focuses the team on the path to discharge."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Daily goals study figures (<10% → >95% understanding; LOS 2.2 → 1.1 days) and Keystone CRBSI figures",
+          "reason": "Quoted from published abstracts; confirm against the original papers."
+        }
+      ]
+    },
+    {
+      "id": "transfer-checklist",
+      "title": "Intra- and inter-hospital transfer checklist",
+      "summary": "Safely moving a critically ill adult to CT, theatre, cath lab or another hospital: is the trip worth it, risk stratification, team and equipment, a pre-departure checklist, monitoring in transit, and handover on arrival.",
+      "viewKey": "topic:handover-transport-icu-safety/transfer-checklist",
+      "uiHints": {
+        "icon": "truck",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Intrahospital transport moves patients within the hospital (to CT, theatre, cath lab); interhospital transfer moves them between facilities. Adverse events (equipment failure, desaturation, hypotension, line or tube dislodgement) are frequent and largely preventable with preparation, trained staff and checklists.",
+          "refs": [
+            "fanara-iht-2010",
+            "droogh-2015"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "Decide",
+            "title": "Will the result change management?",
+            "detail": "Weigh the benefit of the test/procedure/transfer against transport risk; consider bedside alternatives (POCUS, portable X-ray). Combine trips (e.g. CT head and abdomen together). Obtain consent where possible and inform family.",
+            "refs": [
+              "isccm-iht-2025",
+              "fanara-iht-2010"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Plan",
+            "title": "Risk-stratify and choose the team",
+            "detail": "Unstable or high-support patients (vasopressors, FiO₂ >0.5 or PEEP >10, recent intubation, raised ICP) need a doctor competent in airway management and resuscitation plus a critical care nurse; stable patients may go with a trained nurse. Minimum two people for any critically ill patient.",
+            "refs": [
+              "isccm-iht-2025",
+              "warren-transport-2004"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Stabilise",
+            "title": "Secure ABCDE before moving",
+            "detail": "Airway: intubate electively if it may deteriorate; secure tube; record depth; ETCO₂. Breathing: on transport ventilator for 10–15 min before departure with acceptable ABG/SpO₂. Circulation: two working IV lines, vasopressors running steadily on charged syringe drivers, spare syringes prepared. Disability: sedation and analgesia adequate; seizures controlled; spine protection if trauma. Exposure: warm, drains clamped/secured per surgeon, catheter bag emptied.",
+            "refs": [
+              "isccm-iht-2025",
+              "fanara-iht-2010"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Equip",
+            "title": "Equipment and drugs",
+            "detail": "Transport monitor (ECG, SpO₂, invasive/non-invasive BP, ETCO₂), transport ventilator with alarms, self-inflating bag with PEEP valve and mask, suction, airway kit, defibrillator for high-risk patients, oxygen calculated for twice the expected time, emergency drugs (adrenaline, sedation, fluid), and the patient's notes/imaging.",
+            "refs": [
+              "warren-transport-2004",
+              "isccm-iht-2025"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Communicate",
+            "title": "Call ahead",
+            "detail": "Confirm the receiving area/hospital is ready (CT slot, bed, lift held); doctor-to-doctor ISBAR call for inter-hospital transfers; agree the route and who to call for help.",
+            "refs": [
+              "isccm-iht-2025",
+              "warren-transport-2004"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Check",
+            "title": "Read the checklist aloud",
+            "detail": "Run a structured pre-departure checklist (see table) as a team, just before leaving.",
+            "refs": [
+              "isccm-iht-2025",
+              "droogh-2015"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Transit",
+            "title": "Monitor and record",
+            "detail": "Continuous ECG, SpO₂, ETCO₂ and BP; observations recorded at least every 5–15 min; watch tubes and lines at every move (bed → CT table). Pre-plan responses to desaturation, hypotension and accidental extubation.",
+            "refs": [
+              "fanara-iht-2010",
+              "warren-transport-2004"
+            ]
+          },
+          {
+            "n": 8,
+            "time": "Arrive",
+            "title": "Handover and document",
+            "detail": "Structured handover to the receiving team; transfer monitoring and infusions one at a time; document events and adverse incidents and report them.",
+            "refs": [
+              "isccm-iht-2025",
+              "who-gpsap-2021"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "noradrenaline",
+            "role": "Vasopressor during transfer",
+            "route": "IV infusion (central or good peripheral)",
+            "dose": "0.05–0.5 mcg/kg/min",
+            "doseRange": {
+              "unit": "mcg/kg/min",
+              "min": 0.05,
+              "max": 0.5
+            },
+            "dilution": "4 mg in 50 mL = 80 mcg/mL; carry a second filled syringe",
+            "workedExample": "70 kg at 0.15 mcg/kg/min = 10.5 mcg/min = 7.9 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          },
+          {
+            "drugId": "propofol",
+            "role": "Sedation for ventilated transfer",
+            "route": "IV infusion",
+            "dose": "0.5–4 mg/kg/h",
+            "doseRange": {
+              "unit": "mg/kg/h",
+              "min": 0.5,
+              "max": 4
+            },
+            "dilution": "1% undiluted = 10 mg/mL",
+            "workedExample": "70 kg at 2 mg/kg/h = 140 mg/h = 14 mL/h",
+            "calculatorId": "infusion-rate-weight-hour",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          },
+          {
+            "drugId": "fentanyl",
+            "role": "Analgesia during transfer",
+            "route": "IV bolus / infusion",
+            "dose": "25–100 mcg boluses; infusion 25–200 mcg/h",
+            "doseRange": {
+              "unit": "mcg/h",
+              "min": 25,
+              "max": 200
+            },
+            "dilution": "500 mcg in 50 mL = 10 mcg/mL",
+            "workedExample": "70 kg at 1 mcg/kg/h = 70 mcg/h = 7 mL/h of 10 mcg/mL",
+            "calculatorId": "infusion-rate-fixed",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "transfer-checklist-adult",
+            "title": "Pre-departure checklist (read aloud)",
+            "columns": [
+              "Domain",
+              "Check"
+            ],
+            "rows": [
+              [
+                "Patient",
+                "Identity band, consent/family informed, notes, imaging, drug chart, referral letter"
+              ],
+              [
+                "Airway",
+                "ETT secured, depth recorded, cuff pressure, ETCO₂ waveform, suction, bag-mask, spare tube and airway kit"
+              ],
+              [
+                "Breathing",
+                "Transport ventilator settings/alarms checked; stable for 10–15 min; ABG acceptable; oxygen calculated ×2 plus reserve"
+              ],
+              [
+                "Circulation",
+                "Two working IV lines; vasopressors on charged pumps with spare syringes; fluid bolus available; arterial line zeroed"
+              ],
+              [
+                "Disability",
+                "Sedation/analgesia adequate; pupils/GCS recorded; seizure plan; spinal precautions if trauma"
+              ],
+              [
+                "Exposure",
+                "Warm; drains/catheters secured; pressure areas protected"
+              ],
+              [
+                "Equipment",
+                "Monitor and pumps charged; defibrillator for high-risk; emergency drugs; phone numbers"
+              ],
+              [
+                "Destination",
+                "Receiving team ready; lift/route clear; handover planned"
+              ]
+            ],
+            "refs": [
+              "isccm-iht-2025",
+              "warren-transport-2004",
+              "fanara-iht-2010"
+            ]
+          },
+          {
+            "id": "transfer-risk",
+            "title": "Transfer risk and escort (practical guide)",
+            "columns": [
+              "Risk level",
+              "Typical patient",
+              "Escort"
+            ],
+            "rows": [
+              [
+                "Low",
+                "Stable, no vasopressor, FiO₂ ≤0.4, not ventilated",
+                "Trained nurse ± attendant"
+              ],
+              [
+                "Moderate",
+                "Stable on low-dose vasopressor or NIV/HFNC, or stable ventilated with low support",
+                "Critical care nurse + doctor available/accompanying per local policy"
+              ],
+              [
+                "High",
+                "Unstable, rising vasopressor, ventilated with high FiO₂/PEEP, raised ICP, recent intubation",
+                "Doctor competent in airway and resuscitation + critical care nurse"
+              ]
+            ],
+            "caption": "Adapted practical categories; align with the unit's policy and the ISCCM position statement.",
+            "refs": [
+              "isccm-iht-2025",
+              "warren-transport-2004"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Desaturation, hypotension or ETCO₂ loss during transfer: stop, hand-ventilate with 100% O₂, check DOPE (Displacement, Obstruction, Pneumothorax, Equipment), check infusions and lines.",
+            "refs": [
+              "fanara-iht-2010"
+            ]
+          },
+          {
+            "text": "A patient who is unstable on the ICU ventilator will be worse on a transport ventilator — stabilise first or reconsider the trip.",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          },
+          {
+            "text": "Raised ICP patients: keep head up 30°, avoid hypoxia, hypotension and hyper/hypocapnia during transfer — secondary brain injury is common in transit.",
+            "refs": [
+              "warren-transport-2004"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Moving to the CT table without assigning one person to hold the tube and lines: accidental extubation and line loss are common at transfer points.",
+            "refs": [
+              "fanara-iht-2010"
+            ]
+          },
+          {
+            "text": "Running out of syringe-driver battery or oxygen in the CT room — check charge and supply before leaving.",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          },
+          {
+            "text": "Disconnecting PEEP in a recruited ARDS patient by switching to a bag without a PEEP valve — rapid derecruitment.",
+            "refs": [
+              "fanara-iht-2010"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Keep a dedicated, checked transfer bag/trolley in the ICU and audit it every shift.",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          },
+          {
+            "text": "Ask: 'Can this test be done at the bedside?' — POCUS and portable X-ray avoid many risky trips.",
+            "refs": [
+              "fanara-iht-2010"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Before any transfer",
+        "description": "Decision and preparation sequence.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Transfer requested (CT, theatre, other hospital)"
+          },
+          {
+            "id": "worth",
+            "type": "decision",
+            "text": "Will it change management? No bedside alternative?"
+          },
+          {
+            "id": "no",
+            "type": "end",
+            "text": "Do not transfer; document reasoning; use bedside alternative"
+          },
+          {
+            "id": "stable",
+            "type": "decision",
+            "text": "Stable enough on transport equipment?"
+          },
+          {
+            "id": "stab",
+            "type": "action",
+            "text": "Stabilise first (airway, ventilation, vasopressors, sedation)",
+            "severity": "high"
+          },
+          {
+            "id": "team",
+            "type": "action",
+            "text": "Assign team by risk; gather equipment, O₂ ×2, drugs"
+          },
+          {
+            "id": "call",
+            "type": "action",
+            "text": "Call ahead; confirm receiving area ready"
+          },
+          {
+            "id": "cl",
+            "type": "action",
+            "text": "Read checklist aloud; depart"
+          },
+          {
+            "id": "event",
+            "type": "decision",
+            "text": "Adverse event in transit?"
+          },
+          {
+            "id": "fix",
+            "type": "action",
+            "text": "Stop, hand-ventilate 100% O₂, DOPE, check lines/pumps",
+            "severity": "critical"
+          },
+          {
+            "id": "arr",
+            "type": "end",
+            "text": "Handover, transfer monitoring, document and report incidents"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "worth"
+          },
+          {
+            "from": "worth",
+            "to": "no",
+            "label": "No"
+          },
+          {
+            "from": "worth",
+            "to": "stable",
+            "label": "Yes"
+          },
+          {
+            "from": "stable",
+            "to": "stab",
+            "label": "No"
+          },
+          {
+            "from": "stab",
+            "to": "stable",
+            "label": "Reassess"
+          },
+          {
+            "from": "stable",
+            "to": "team",
+            "label": "Yes"
+          },
+          {
+            "from": "team",
+            "to": "call"
+          },
+          {
+            "from": "call",
+            "to": "cl"
+          },
+          {
+            "from": "cl",
+            "to": "event"
+          },
+          {
+            "from": "event",
+            "to": "fix",
+            "label": "Yes"
+          },
+          {
+            "from": "event",
+            "to": "arr",
+            "label": "No"
+          },
+          {
+            "from": "fix",
+            "to": "event",
+            "label": "Resolved — continue"
+          }
+        ],
+        "refs": [
+          "isccm-iht-2025",
+          "fanara-iht-2010"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Transport exposes patients to changes in ventilation (circuit disconnection, transport ventilator performance, derecruitment), haemodynamics (interrupted infusions, movement, acceleration), temperature and monitoring gaps — on top of reduced staff and equipment.",
+        "evidence": "- **ISCCM position statement (2025):** Indian recommendations on intrahospital transport — planning, risk stratification, staffing, equipment, checklists, monitoring, documentation and quality indicators.\n- **ACCM/SCCM guidelines (Warren 2004):** inter- and intrahospital transport — communication, personnel, equipment, monitoring.\n- **Fanara 2010 (French recommendations):** adverse events reported in a wide range of transports (up to about two-thirds in some series); most are minor but serious events (desaturation, hypotension, arrest) occur; risk factors include high PEEP, sedation needs and fluid resuscitation before transport; checklists reduce events.\n- **Droogh 2015 review:** inter-hospital transfers by specialised teams with standardised equipment are safer; transfers remain high-risk episodes.",
+        "controversies": "- Routine CT in unstable patients vs bedside imaging.\n- Specialist retrieval teams vs referring team escorts in low-resource settings.",
+        "indiaNotes": "- In India, ICU–CT distances can be long with shared lifts; arrange a held lift and security escort.\n- Advanced life support ambulances with transport ventilators are often private and variable in quality — inspect equipment yourself before departure.\n- NABH standards require documented transfer policies; the ISCCM 2025 position statement provides India-specific guidance."
+      },
+      "drugIds": [
+        "noradrenaline",
+        "propofol",
+        "fentanyl",
+        "midazolam"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-min",
+        "infusion-rate-weight-hour",
+        "infusion-rate-fixed",
+        "o2-cylinder-duration",
+        "gcs"
+      ],
+      "references": [
+        "isccm-iht-2025",
+        "warren-transport-2004",
+        "fanara-iht-2010",
+        "droogh-2015",
+        "who-gpsap-2021"
+      ],
+      "quiz": [
+        {
+          "id": "q40-3-1",
+          "stem": "A ventilated patient on noradrenaline 0.4 mcg/kg/min, FiO₂ 0.8, PEEP 14 needs a CT abdomen. The most appropriate first step is:",
+          "options": [
+            "Send with a nurse only",
+            "Ask whether the result will change management and whether a bedside alternative exists; if needed, stabilise and go with a doctor + nurse",
+            "Send immediately without monitoring",
+            "Disconnect PEEP to use a simple bag",
+            "Stop vasopressor for the trip"
+          ],
+          "answerIndex": 1,
+          "explanation": "High-risk transfer: justify, stabilise, appropriate team."
+        },
+        {
+          "id": "q40-3-2",
+          "stem": "Sudden desaturation on the CT table in a ventilated patient. First action:",
+          "options": [
+            "Increase sedation",
+            "Hand-ventilate with 100% O₂ and check DOPE",
+            "Finish the scan quickly",
+            "Give furosemide",
+            "Call radiology"
+          ],
+          "answerIndex": 1,
+          "explanation": "Standard response to transfer desaturation."
+        },
+        {
+          "id": "q40-3-3",
+          "stem": "Minimum oxygen supply for a transfer should be:",
+          "options": [
+            "Exactly the expected time",
+            "Twice the expected requirement plus a reserve",
+            "Half the expected time",
+            "Only one full cylinder regardless",
+            "Not needed for short trips"
+          ],
+          "answerIndex": 1,
+          "explanation": "Double the estimate plus reserve."
+        },
+        {
+          "id": "q40-3-4",
+          "stem": "Which is the safest approach to infusions during transfer?",
+          "options": [
+            "Gravity drips",
+            "Charged syringe drivers with spare filled syringes",
+            "Stop all infusions",
+            "Bolus doses only",
+            "Mix all drugs in one bag"
+          ],
+          "answerIndex": 1,
+          "explanation": "Avoid interruptions."
+        },
+        {
+          "id": "q40-3-5",
+          "stem": "The patient should be stable on the transport ventilator before departure for at least:",
+          "options": [
+            "30 seconds",
+            "10–15 minutes",
+            "2 hours",
+            "Not needed",
+            "24 hours"
+          ],
+          "answerIndex": 1,
+          "explanation": "Allows detection of instability before leaving the ICU."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Transfer risk categories and escort table",
+          "reason": "Practical adaptation; the ISCCM 2025 position statement may use different categories — align wording after reading the full text."
+        },
+        {
+          "item": "ISCCM 2025 position statement author order",
+          "reason": "PubMed lists Zirpe KG first; Crossref metadata lists Karanth S first. Confirm on the journal page."
+        }
+      ]
+    },
+    {
+      "id": "oxygen-cylinder-planning",
+      "title": "Oxygen cylinder planning",
+      "summary": "How much oxygen is in a cylinder, how long it will last at a given flow or ventilator setting, how much to take for a transfer, and how to stay safe with oxygen — using Indian cylinder sizes and gauges.",
+      "viewKey": "topic:handover-transport-icu-safety/oxygen-cylinder-planning",
+      "uiHints": {
+        "icon": "gauge",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Medical oxygen cylinders store compressed gas; contents are proportional to pressure (Boyle's law), so a half-full gauge means about half the gas remains. Contents (L) ≈ water capacity (L) × pressure (bar).",
+          "refs": [
+            "isccm-iht-2025"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "Step 1",
+            "title": "Identify the cylinder",
+            "detail": "Read the label: gas (medical oxygen — black body with white shoulder in India), size/type and water capacity (litres), and check the gauge. Indian medical cylinders commonly in use: small B-type (~10 L water capacity) and large D-type (~46.7 L water capacity, 'jumbo'), filled to ~150 bar (≈ 2,200 psi) when full.",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Step 2",
+            "title": "Calculate contents",
+            "detail": "Oxygen content (L) ≈ water capacity (L) × gauge pressure (bar). Example: B-type 10 L at 150 bar ≈ 1,500 L; at 75 bar ≈ 750 L. D-type 46.7 L at 150 bar ≈ 7,000 L. If the gauge reads psi, divide by 14.5 for bar; kg/cm² ≈ bar.",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Step 3",
+            "title": "Estimate consumption",
+            "detail": "Face mask/nasal: set flow (L/min). Non-rebreather: 10–15 L/min. HFNC or turbine ventilator blending with room/piped air: oxygen used ≈ total flow (or minute ventilation) × (FiO₂ − 0.21) ÷ 0.79; if everything comes from the oxygen cylinder, use the full flow — HFNC at 30–60 L/min drains cylinders very fast. Pneumatic ventilators: add driving-gas consumption (can be ≥1 L/min) to minute ventilation.",
+            "refs": [
+              "isccm-iht-2025",
+              "warren-transport-2004"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Step 4",
+            "title": "Duration",
+            "detail": "Duration (min) = contents (L) ÷ consumption (L/min). Use the shared calculator. Treat the last ~10–20% as unusable reserve.",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Step 5",
+            "title": "Plan the transfer",
+            "detail": "Required oxygen = consumption × expected journey time × 2 (safety factor), plus at least 30 minutes extra. Take enough cylinders, check each is full, and carry a spanner/key and a spare regulator if needed.",
+            "refs": [
+              "isccm-iht-2025",
+              "warren-transport-2004"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Safety",
+            "title": "Handle safely",
+            "detail": "Secure cylinders in holders (never loose on the bed); open valves slowly; no oil/grease on fittings; no smoking/open flames; keep away from heat; check for leaks (hissing); close valve after use and record remaining pressure.",
+            "refs": [
+              "who-gpsap-2021"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "cylinder-sizes-india",
+            "title": "Common medical oxygen cylinders in Indian hospitals (approximate)",
+            "columns": [
+              "Type",
+              "Water capacity",
+              "Gas content when full (~150 bar)",
+              "Typical use"
+            ],
+            "rows": [
+              [
+                "B-type (small)",
+                "~10 L",
+                "~1,500 L (1.5 m³)",
+                "Transport, ward bedside, ambulance"
+              ],
+              [
+                "D-type (large/'jumbo')",
+                "~46.7 L",
+                "~7,000 L (7 m³)",
+                "Manifold banks, ward/ICU backup, ambulances (some)"
+              ],
+              [
+                "Portable aluminium (various)",
+                "1–5 L",
+                "150–750 L",
+                "Short transfers"
+              ]
+            ],
+            "caption": "Naming conventions differ from UK/US letter sizes (e.g. UK 'CD' 460 L, 'D' 340 L). Always read the cylinder label and gauge.",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          },
+          {
+            "id": "o2-duration-examples",
+            "title": "Duration examples (full B-type ≈ 1,500 L)",
+            "columns": [
+              "Device and setting",
+              "Consumption",
+              "Approx. duration (full)"
+            ],
+            "rows": [
+              [
+                "Nasal cannula 2 L/min",
+                "2 L/min",
+                "~12 h"
+              ],
+              [
+                "Face mask 6 L/min",
+                "6 L/min",
+                "~4 h"
+              ],
+              [
+                "Non-rebreather 15 L/min",
+                "15 L/min",
+                "~100 min"
+              ],
+              [
+                "Ventilator, MV 8 L/min, FiO₂ 1.0 (turbine)",
+                "~8 L/min",
+                "~3 h"
+              ],
+              [
+                "Pneumatic ventilator, MV 8 L/min, FiO₂ 1.0 (+1 L/min driving gas)",
+                "~9 L/min",
+                "~2 h 45 min"
+              ],
+              [
+                "HFNC 40 L/min, FiO₂ 1.0",
+                "40 L/min",
+                "~37 min"
+              ]
+            ],
+            "caption": "Halve the duration for a half-full gauge. Apply a ×2 safety factor for transfers.",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          },
+          {
+            "id": "o2-transfer-worked",
+            "title": "Worked example — inter-hospital transfer",
+            "columns": [
+              "Step",
+              "Value"
+            ],
+            "rows": [
+              [
+                "Patient",
+                "Ventilated, MV 10 L/min, FiO₂ 0.6, turbine ventilator → 10 × (0.6 − 0.21) ÷ 0.79 ≈ 5 L/min; round up to 6 L/min"
+              ],
+              [
+                "Journey",
+                "90 min expected"
+              ],
+              [
+                "Need",
+                "6 × 90 = 540 L × 2 = 1,080 L + 30 min reserve (180 L) ≈ 1,260 L"
+              ],
+              [
+                "Cylinders",
+                "One full B-type (~1,500 L) is marginal → take two B-type cylinders"
+              ]
+            ],
+            "refs": [
+              "isccm-iht-2025",
+              "warren-transport-2004"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "A cylinder gauge falling faster than calculated suggests a leak or higher consumption (HFNC, pneumatic ventilator) — recalculate immediately.",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          },
+          {
+            "text": "Running out of oxygen during transfer is a never-event: double the estimate and carry a reserve.",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          },
+          {
+            "text": "HFNC on cylinders drains them very quickly: 40 L/min empties a 1,500 L cylinder in under 40 minutes.",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Assuming a UK 'D' cylinder (340 L) or Indian D-type (7,000 L) are the same — names differ; use water capacity and pressure.",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          },
+          {
+            "text": "Forgetting the ventilator's driving-gas consumption when using pneumatic transport ventilators.",
+            "refs": [
+              "warren-transport-2004"
+            ]
+          },
+          {
+            "text": "Laying cylinders unsecured on the patient's bed — a falling cylinder can cause serious injury and valve damage.",
+            "refs": [
+              "who-gpsap-2021"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Write the calculated duration and the time you must change cylinders on a sticker on the cylinder or bed.",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          },
+          {
+            "text": "For long transfers, a lower FiO₂ that still meets the SpO₂ target saves oxygen with turbine ventilators.",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Oxygen planning for a transfer",
+        "description": "Calculate, double, check.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Patient on oxygen needs transfer"
+          },
+          {
+            "id": "cons",
+            "type": "action",
+            "text": "Estimate consumption (flow, or MV × FiO₂ ± driving gas)"
+          },
+          {
+            "id": "need",
+            "type": "action",
+            "text": "Need = consumption × journey min × 2 + 30 min reserve"
+          },
+          {
+            "id": "have",
+            "type": "action",
+            "text": "Contents = water capacity × gauge bar for each cylinder"
+          },
+          {
+            "id": "enough",
+            "type": "decision",
+            "text": "Total contents ≥ need?"
+          },
+          {
+            "id": "more",
+            "type": "action",
+            "text": "Add cylinders or larger cylinder; reduce FiO₂ if safe; avoid HFNC on cylinders"
+          },
+          {
+            "id": "go",
+            "type": "end",
+            "text": "Secure cylinders, check valves/regulator, note change-over time"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "cons"
+          },
+          {
+            "from": "cons",
+            "to": "need"
+          },
+          {
+            "from": "need",
+            "to": "have"
+          },
+          {
+            "from": "have",
+            "to": "enough"
+          },
+          {
+            "from": "enough",
+            "to": "go",
+            "label": "Yes"
+          },
+          {
+            "from": "enough",
+            "to": "more",
+            "label": "No"
+          },
+          {
+            "from": "more",
+            "to": "have",
+            "label": "Recheck"
+          }
+        ],
+        "refs": [
+          "isccm-iht-2025",
+          "warren-transport-2004"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Compressed oxygen behaves nearly as an ideal gas at cylinder pressures: volume at atmospheric pressure ≈ water capacity × (gauge pressure + 1 atm), simplified to water capacity × gauge bar. Liquid oxygen in hospital tanks is different (1 L liquid ≈ 860 L gas).",
+        "evidence": "- Oxygen planning is part of every transport guideline (**Warren 2004**, **ISCCM 2025**): calculate requirement for the journey with a substantial safety margin (commonly twice the expected requirement plus 30 min).\n- During the COVID-19 pandemic, oxygen supply failures in India highlighted the importance of knowing cylinder contents, consumption of HFNC/NIV, and hospital oxygen audits.",
+        "controversies": "- Optimal SpO₂ targets during transfer (avoid hyperoxia vs margin for safety).\n- Use of HFNC during transfers (high consumption) vs NIV or low-flow devices.",
+        "indiaNotes": "- Indian medical oxygen cylinders are typically black with a white shoulder/neck; industrial cylinders must never be used for patients.\n- B-type and D-type nomenclature and capacities vary between suppliers — confirm with your hospital's supplier and record them on the transfer trolley.\n- Many district hospitals now have PSA oxygen plants installed after 2021; transfers still depend on cylinders.\n- Ambulance oxygen supply is frequently a single cylinder — check before accepting the transfer."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "o2-cylinder-duration"
+      ],
+      "references": [
+        "isccm-iht-2025",
+        "warren-transport-2004",
+        "who-gpsap-2021"
+      ],
+      "quiz": [
+        {
+          "id": "q40-4-1",
+          "stem": "A B-type cylinder (10 L water capacity) reads 100 bar. Approximate oxygen content:",
+          "options": [
+            "100 L",
+            "500 L",
+            "1,000 L",
+            "1,500 L",
+            "10,000 L"
+          ],
+          "answerIndex": 2,
+          "explanation": "10 × 100 = 1,000 L."
+        },
+        {
+          "id": "q40-4-2",
+          "stem": "That cylinder (1,000 L) on a non-rebreather at 15 L/min lasts about:",
+          "options": [
+            "15 min",
+            "66 min",
+            "3 h",
+            "6 h",
+            "10 h"
+          ],
+          "answerIndex": 1,
+          "explanation": "1,000 ÷ 15 ≈ 66 min."
+        },
+        {
+          "id": "q40-4-3",
+          "stem": "A ventilated patient uses ~5 L/min oxygen; journey 60 min. Minimum to carry (×2 + 30 min reserve):",
+          "options": [
+            "300 L",
+            "600 L",
+            "750 L",
+            "150 L",
+            "60 L"
+          ],
+          "answerIndex": 2,
+          "explanation": "5 × 60 × 2 = 600 + 150 (30 min) = 750 L."
+        },
+        {
+          "id": "q40-4-4",
+          "stem": "Which device consumes the most oxygen from a cylinder?",
+          "options": [
+            "Nasal cannula 2 L/min",
+            "Face mask 6 L/min",
+            "HFNC 50 L/min",
+            "Turbine ventilator MV 6 L/min FiO₂ 0.4",
+            "Venturi 28% at 4 L/min"
+          ],
+          "answerIndex": 2,
+          "explanation": "HFNC flows drain cylinders fastest."
+        },
+        {
+          "id": "q40-4-5",
+          "stem": "Safe cylinder handling includes all EXCEPT:",
+          "options": [
+            "Securing in a holder",
+            "Opening the valve slowly",
+            "Lubricating the valve with oil",
+            "Keeping away from flames",
+            "Checking for leaks"
+          ],
+          "answerIndex": 2,
+          "explanation": "Oil/grease near oxygen is a fire hazard."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Indian cylinder sizes (B-type ~10 L water capacity ≈1,500 L; D-type ~46.7 L ≈7,000 L; fill ~150 bar) and colour coding",
+          "reason": "Supplier-dependent; no single citable Indian source used — confirm with the hospital's oxygen supplier and the shared calculator note."
+        },
+        {
+          "item": "Pneumatic ventilator driving-gas consumption (≥1 L/min)",
+          "reason": "Device-specific; check the transport ventilator manual."
+        }
+      ]
+    },
+    {
+      "id": "error-reporting-safety",
+      "title": "Errors, incident reporting and ICU safety culture",
+      "summary": "What to do when something goes wrong: immediate patient care, disclosure, incident reporting, the systems (Swiss cheese) view of error, root-cause analysis, and practical safety tools — checklists, high-alert medication practices and a just culture.",
+      "viewKey": "topic:handover-transport-icu-safety/error-reporting-safety",
+      "uiHints": {
+        "icon": "shield-alert",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "A patient safety incident is an event or circumstance that could have resulted, or did result, in unnecessary harm. A near-miss did not reach the patient. Reason's 'Swiss cheese' model explains how latent conditions (system weaknesses) and active failures (individual slips) align to cause harm.",
+          "refs": [
+            "reason-2000",
+            "who-gpsap-2021"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "Immediately",
+            "title": "Make the patient safe",
+            "detail": "Treat the consequence (e.g. naloxone for opioid overdose, glucose for insulin error), call senior help, monitor closely. Preserve evidence: keep syringes, labels, bags, device settings and logs.",
+            "refs": [
+              "who-gpsap-2021"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Same shift",
+            "title": "Inform the consultant and be open",
+            "detail": "Tell the consultant in charge. Disclose to the patient/family honestly and promptly with the senior: what happened, what is being done, an apology, and what will be done to prevent recurrence. Document facts in the notes, without blame.",
+            "refs": [
+              "who-gpsap-2021",
+              "nabh"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Within 24 h",
+            "title": "Report the incident",
+            "detail": "Complete the hospital incident report (including near-misses and 'no-harm' events). Reporting is about learning, not punishment. Serious events (sentinel events) trigger urgent review as per hospital/NABH policy.",
+            "refs": [
+              "nabh",
+              "who-gpsap-2021"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Review",
+            "title": "Systems analysis",
+            "detail": "Use a structured review (root-cause analysis or similar): sequence of events, contributing factors (task, team, environment, equipment, organisation), why defences failed (Swiss cheese model), and actions with owners and deadlines. Feed back to staff.",
+            "refs": [
+              "reason-2000",
+              "who-gpsap-2021"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Prevent",
+            "title": "Use proven safety tools",
+            "detail": "Checklists (procedures, central lines, transfers, time-outs), standardised concentrations and pre-filled syringes, independent double-checks for high-alert drugs (insulin, potassium, heparin, opioids, vasopressors), tall-man lettering, separating look-alike/sound-alike ampoules, barcode/closed-loop prescribing where available.",
+            "refs": [
+              "haynes-checklist-2009",
+              "pronovost-clabsi-2006",
+              "who-gpsap-2021"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Support",
+            "title": "Care for the 'second victim'",
+            "detail": "Staff involved in errors often suffer distress; offer debriefing and peer support; a just culture separates honest error (console), at-risk behaviour (coach) and reckless behaviour (sanction).",
+            "refs": [
+              "who-gpsap-2021",
+              "reason-2000"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "error-types",
+            "title": "Types of error (Reason) and responses",
+            "columns": [
+              "Type",
+              "Example",
+              "Typical fix"
+            ],
+            "rows": [
+              [
+                "Slip/lapse (execution)",
+                "Selecting the wrong syringe; forgetting a dose",
+                "Design: labels, separation, checklists, alerts"
+              ],
+              [
+                "Mistake (planning/knowledge)",
+                "Wrong drug choice from knowledge gap",
+                "Training, decision support, senior review"
+              ],
+              [
+                "Violation (deliberate deviation)",
+                "Skipping a checklist to save time",
+                "Understand why; fix workload/culture; coach or sanction if reckless"
+              ],
+              [
+                "Latent condition",
+                "Look-alike ampoules stored together; understaffing",
+                "Organisational change"
+              ]
+            ],
+            "refs": [
+              "reason-2000"
+            ]
+          },
+          {
+            "id": "icu-high-alert",
+            "title": "High-alert ICU medicines — safeguards",
+            "columns": [
+              "Drug",
+              "Typical error",
+              "Safeguard"
+            ],
+            "rows": [
+              [
+                "Potassium chloride concentrate",
+                "Undiluted IV bolus",
+                "Remove concentrate from wards; premixed bags; infusion pumps"
+              ],
+              [
+                "Insulin",
+                "'U' read as zero; 40 vs 100 units/mL",
+                "Write 'units'; insulin syringes; standard infusion 1 unit/mL"
+              ],
+              [
+                "Heparin",
+                "Confusion between 1,000 and 5,000 units/mL vials",
+                "Standard concentrations; double-check"
+              ],
+              [
+                "Noradrenaline/adrenaline",
+                "Concentration and rate errors; interruption at syringe change",
+                "Standard dilutions; smart pumps; 'double-pumping'"
+              ],
+              [
+                "Opioids/sedatives",
+                "Over-sedation, mg/mcg confusion",
+                "Use 'mcg' not 'µg'; sedation targets; naloxone available"
+              ],
+              [
+                "Midazolam 5 mg/mL vs 1 mg/mL",
+                "5-fold overdose",
+                "Stock one strength; label clearly"
+              ]
+            ],
+            "refs": [
+              "who-gpsap-2021"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Concentrated potassium chloride, insulin, heparin, opioids and vasopressors are high-alert drugs — 10-fold or wrong-route errors can kill; double-check every preparation.",
+            "refs": [
+              "who-gpsap-2021"
+            ]
+          },
+          {
+            "text": "Any wrong-patient, wrong-site, wrong-route (e.g. intrathecal vincristine) or retained-object event is a sentinel event: escalate immediately.",
+            "refs": [
+              "who-gpsap-2021"
+            ]
+          },
+          {
+            "text": "Do not alter or back-date notes after an incident — record a dated, timed factual addendum.",
+            "refs": [
+              "nabh"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Blaming the individual and stopping there — the same latent conditions will cause the next error.",
+            "refs": [
+              "reason-2000"
+            ]
+          },
+          {
+            "text": "Not reporting near-misses: they are free lessons that reveal system weaknesses before harm occurs.",
+            "refs": [
+              "who-gpsap-2021"
+            ]
+          },
+          {
+            "text": "Treating checklists as paperwork: benefit depends on genuinely performing the checks as a team.",
+            "refs": [
+              "haynes-checklist-2009"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "The WHO Surgical Safety Checklist reduced death (1.5% → 0.8%) and inpatient complications (11.0% → 7.0%) across eight countries, including India.",
+            "refs": [
+              "haynes-checklist-2009"
+            ]
+          },
+          {
+            "text": "'Stop the line': any team member should feel able to halt a procedure if they see a safety risk.",
+            "refs": [
+              "who-gpsap-2021"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "After an error or adverse event",
+        "description": "Patient first, then disclosure, reporting and learning.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Error or adverse event recognised"
+          },
+          {
+            "id": "harm",
+            "type": "decision",
+            "text": "Is the patient harmed or at risk?"
+          },
+          {
+            "id": "treat",
+            "type": "action",
+            "text": "Treat, monitor, call senior; preserve evidence",
+            "severity": "critical"
+          },
+          {
+            "id": "inform",
+            "type": "action",
+            "text": "Inform consultant; disclose to patient/family with senior"
+          },
+          {
+            "id": "report",
+            "type": "action",
+            "text": "Incident report (also for near-miss); document facts"
+          },
+          {
+            "id": "serious",
+            "type": "decision",
+            "text": "Sentinel/serious event?"
+          },
+          {
+            "id": "rca",
+            "type": "action",
+            "text": "Formal root-cause analysis; notify per NABH/hospital policy",
+            "severity": "high"
+          },
+          {
+            "id": "learn",
+            "type": "end",
+            "text": "Implement actions, feed back to team, support staff"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "harm"
+          },
+          {
+            "from": "harm",
+            "to": "treat",
+            "label": "Yes"
+          },
+          {
+            "from": "harm",
+            "to": "report",
+            "label": "No (near-miss)"
+          },
+          {
+            "from": "treat",
+            "to": "inform"
+          },
+          {
+            "from": "inform",
+            "to": "report"
+          },
+          {
+            "from": "report",
+            "to": "serious"
+          },
+          {
+            "from": "serious",
+            "to": "rca",
+            "label": "Yes"
+          },
+          {
+            "from": "serious",
+            "to": "learn",
+            "label": "No"
+          },
+          {
+            "from": "rca",
+            "to": "learn"
+          }
+        ],
+        "refs": [
+          "who-gpsap-2021",
+          "reason-2000"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Errors arise from the interaction of human cognition (attention, memory, fatigue, cognitive biases such as anchoring) with complex systems (interruptions, look-alike products, workload, poor design). Safety improves most when systems are redesigned to make the right action easy and the wrong action hard.",
+        "evidence": "- **Reason (BMJ 2000):** person vs system approaches to human error; the Swiss cheese model; high-reliability organisations expect error and build defences.\n- **WHO Surgical Safety Checklist (Haynes, NEJM 2009):** 3,733 patients before and 3,955 after across eight cities (including New Delhi); mortality 1.5% → 0.8%, complications 11.0% → 7.0%.\n- **Keystone ICU (Pronovost 2006):** checklist-based culture change abolished most CRBSIs.\n- **WHO Global Patient Safety Action Plan 2021–2030:** seven strategic objectives including safety culture, high-reliability systems, patient engagement and learning from incidents.\n- **NABH (India):** hospital accreditation standards include incident reporting, sentinel event review and medication safety.",
+        "controversies": "- Mandatory vs voluntary reporting; fear of litigation reducing reporting.\n- Balancing a 'just culture' with accountability.\n- Checklist effectiveness outside trial settings (e.g. Ontario surgical checklist study showed no significant mortality reduction).",
+        "indiaNotes": "- Fear of blame and legal action (Consumer Protection Act cases) discourages reporting in Indian hospitals — leadership must visibly protect reporters.\n- NABH-accredited hospitals must maintain incident reporting and sentinel event systems; ICUs should review incidents monthly.\n- The Pharmacovigilance Programme of India (PvPI) accepts adverse drug reaction reports.\n- Look-alike ampoules (e.g. different drugs in identical ampoules from generic manufacturers) are a common Indian latent hazard — segregate storage."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "who-gpsap-2021",
+        "nabh",
+        "reason-2000",
+        "haynes-checklist-2009",
+        "pronovost-clabsi-2006"
+      ],
+      "quiz": [
+        {
+          "id": "q40-5-1",
+          "stem": "A nurse gives 10 units of insulin instead of 1 unit; the patient is now hypoglycaemic. The first priority is:",
+          "options": [
+            "Fill the incident form",
+            "Treat hypoglycaemia and monitor the patient",
+            "Identify who is to blame",
+            "Inform the family by phone first",
+            "Do nothing as harm is minor"
+          ],
+          "answerIndex": 1,
+          "explanation": "Patient safety first; then disclosure and reporting."
+        },
+        {
+          "id": "q40-5-2",
+          "stem": "Reason's Swiss cheese model emphasises that:",
+          "options": [
+            "Errors are due to bad individuals",
+            "Harm results when holes in multiple system defences align",
+            "Checklists are useless",
+            "Only doctors make errors",
+            "Errors cannot be prevented"
+          ],
+          "answerIndex": 1,
+          "explanation": "Latent conditions + active failures."
+        },
+        {
+          "id": "q40-5-3",
+          "stem": "A near-miss (wrong drug drawn up but caught before administration) should be:",
+          "options": [
+            "Ignored",
+            "Reported as an incident for learning",
+            "Reported only if repeated",
+            "Hidden",
+            "Reported to police"
+          ],
+          "answerIndex": 1,
+          "explanation": "Near-misses reveal system weaknesses."
+        },
+        {
+          "id": "q40-5-4",
+          "stem": "WHO Surgical Safety Checklist study (2009) showed:",
+          "options": [
+            "No change",
+            "Reduced mortality and complications",
+            "Increased infections",
+            "Longer surgery only",
+            "Higher cost without benefit"
+          ],
+          "answerIndex": 1,
+          "explanation": "Mortality 1.5% → 0.8%; complications 11% → 7%."
+        },
+        {
+          "id": "q40-5-5",
+          "stem": "In a just culture, an honest slip by a careful nurse should lead to:",
+          "options": [
+            "Dismissal",
+            "Consoling and system redesign",
+            "Public blame",
+            "Police complaint",
+            "No discussion"
+          ],
+          "answerIndex": 1,
+          "explanation": "Console honest error; coach at-risk behaviour; sanction reckless behaviour."
+        }
+      ]
+    },
+    {
+      "id": "mass-casualty-triage",
+      "title": "Mass casualty triage and ICU surge",
+      "summary": "When casualties outnumber resources: START and SALT field/ED triage, colour categories, the ICU's role in a hospital disaster plan (incident command, surge capacity, reassessment of existing patients), ethical critical-care triage and India's NDMA framework.",
+      "viewKey": "topic:handover-transport-icu-safety/mass-casualty-triage",
+      "uiHints": {
+        "icon": "siren",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "A mass casualty incident overwhelms the immediately available local resources. Triage prioritises care to do the greatest good for the greatest number; categories are typically colour-coded: red (immediate), yellow (delayed), green (minor), black/grey (dead or expectant).",
+          "refs": [
+            "salt-2008",
+            "start-1996"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "Alert",
+            "title": "Activate the hospital disaster plan",
+            "detail": "On notification of a mass casualty incident (MCI), inform the ICU consultant and hospital incident commander; follow the hospital plan (incident command system, roles, communication tree). Do not self-deploy to the scene unless part of the plan.",
+            "refs": [
+              "ndma-mcm-2007",
+              "chest-triage-2014"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Triage",
+            "title": "Sort casualties quickly (START)",
+            "detail": "Can walk → **GREEN** (minor). Not breathing after airway opening → **BLACK** (dead/expectant). Breathing: RR >30, or radial pulse absent/CRT >2 s, or cannot follow simple commands → **RED** (immediate). Otherwise → **YELLOW** (delayed). Spend <60 s per patient.",
+            "refs": [
+              "start-1996"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Triage",
+            "title": "Or SALT",
+            "detail": "**S**ort globally (walk → assess last; wave/purposeful movement → second; still/obvious life threat → first). **A**ssess individually with lifesaving interventions (control major haemorrhage, open airway, chest decompression, antidote autoinjectors), then categorise: immediate, delayed, minimal, expectant, dead. **T**reatment/**T**ransport.",
+            "refs": [
+              "salt-2008"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "ED/ICU",
+            "title": "Lifesaving interventions first",
+            "detail": "Tourniquet/pressure for major haemorrhage, airway, decompress tension pneumothorax, tranexamic acid within 3 h for bleeding trauma, damage-control resuscitation (permissive hypotension in penetrating trauma without head injury, early blood products), warmth.",
+            "refs": [
+              "salt-2008",
+              "crash2-2010"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "ICU",
+            "title": "Create surge capacity",
+            "detail": "Identify patients who can be stepped down or discharged; cancel elective admissions; open surge areas (recovery, HDU) with ventilators and oxygen; call in staff per roster; check oxygen supply and blood bank stocks.",
+            "refs": [
+              "chest-triage-2014",
+              "ndma-mcm-2007"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "ICU",
+            "title": "Critical care triage if overwhelmed",
+            "detail": "Senior triage officer applies pre-agreed, transparent criteria (likelihood of benefit), reassesses all ICU patients regularly, documents decisions, and ensures palliative care for those not receiving critical care. Bedside clinicians should not make rationing decisions alone.",
+            "refs": [
+              "chest-triage-2014"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Throughout",
+            "title": "Re-triage and records",
+            "detail": "Triage is dynamic — re-triage on arrival, after interventions and over time. Tag and register every patient (MCI number) to track location and identity; keep families informed through a designated desk.",
+            "refs": [
+              "salt-2008",
+              "ndma-mcm-2007"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "tranexamic-acid",
+            "role": "Bleeding trauma within 3 h of injury",
+            "route": "IV",
+            "dose": "1 g over 10 min, then 1 g over 8 h",
+            "workedExample": "Adult: 1 g (2 × 500 mg ampoules) in 100 mL saline over 10 min; then 1 g in 500 mL over 8 h. Do not start >3 h after injury.",
+            "refs": [
+              "crash2-2010"
+            ]
+          },
+          {
+            "drugId": "fentanyl",
+            "role": "Analgesia for injured casualties",
+            "route": "IV",
+            "dose": "25–100 mcg boluses titrated (≈1 mcg/kg)",
+            "workedExample": "70 kg: 50 mcg IV, repeat every 5 min to effect; monitor RR/SpO₂.",
+            "refs": [
+              "isccm-iht-2025"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "triage-colours",
+            "title": "Triage categories",
+            "columns": [
+              "Colour",
+              "Category",
+              "Meaning",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Red",
+                "Immediate (P1)",
+                "Life-threatening but salvageable with prompt intervention",
+                "Tension pneumothorax, airway compromise, haemorrhagic shock"
+              ],
+              [
+                "Yellow",
+                "Delayed (P2)",
+                "Serious but can wait hours",
+                "Stable long-bone fracture, moderate burns"
+              ],
+              [
+                "Green",
+                "Minimal (P3)",
+                "Walking wounded",
+                "Minor lacerations, sprains"
+              ],
+              [
+                "Grey/Black",
+                "Expectant / dead",
+                "Unlikely to survive given current resources / dead",
+                "Massive head injury with GCS 3, extensive full-thickness burns in resource crisis"
+              ]
+            ],
+            "refs": [
+              "salt-2008",
+              "start-1996"
+            ]
+          },
+          {
+            "id": "start-table",
+            "title": "START at a glance",
+            "columns": [
+              "Assessment",
+              "Finding",
+              "Category"
+            ],
+            "rows": [
+              [
+                "Walking?",
+                "Yes",
+                "Green"
+              ],
+              [
+                "Breathing?",
+                "No, even after airway opening",
+                "Black"
+              ],
+              [
+                "Respiratory rate",
+                ">30/min",
+                "Red"
+              ],
+              [
+                "Perfusion",
+                "Radial pulse absent or CRT >2 s",
+                "Red"
+              ],
+              [
+                "Mental status",
+                "Cannot follow simple commands",
+                "Red"
+              ],
+              [
+                "All of the above OK",
+                "—",
+                "Yellow"
+              ]
+            ],
+            "refs": [
+              "start-1996"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Chemical exposure (e.g. organophosphate, chlorine, ammonia): decontaminate BEFORE entering the ED/ICU and protect staff — secondary contamination can close the department.",
+            "refs": [
+              "ndma-mcm-2007"
+            ]
+          },
+          {
+            "text": "Uncontrolled external haemorrhage is the commonest preventable cause of death in MCIs: apply tourniquets/pressure during triage.",
+            "refs": [
+              "salt-2008"
+            ]
+          },
+          {
+            "text": "Children and pregnant women need adapted triage (JumpSTART for children) — do not 'under-triage' a quiet child.",
+            "refs": [
+              "salt-2008"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Over-triage (labelling too many red) overwhelms critical resources; under-triage misses salvageable patients — re-triage repeatedly.",
+            "refs": [
+              "salt-2008"
+            ]
+          },
+          {
+            "text": "Running the ICU as usual during an MCI without reviewing existing patients for step-down — surge beds are created by discharges.",
+            "refs": [
+              "chest-triage-2014"
+            ]
+          },
+          {
+            "text": "Poor patient tracking: unidentified patients and lost families — register every casualty.",
+            "refs": [
+              "ndma-mcm-2007"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Exercises and drills (tabletop and live) are the best predictors of an effective hospital response.",
+            "refs": [
+              "ndma-mcm-2007",
+              "chest-triage-2014"
+            ]
+          },
+          {
+            "text": "Expect the 'walking wounded' and self-presenters to arrive first and overwhelm the ED before the most injured arrive by ambulance.",
+            "refs": [
+              "salt-2008"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "START triage (adult)",
+        "description": "Simple Triage and Rapid Treatment.",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Casualty at triage point"
+          },
+          {
+            "id": "walk",
+            "type": "decision",
+            "text": "Able to walk?"
+          },
+          {
+            "id": "green",
+            "type": "end",
+            "text": "GREEN — minor; direct to minor-injury area"
+          },
+          {
+            "id": "breath",
+            "type": "decision",
+            "text": "Breathing?"
+          },
+          {
+            "id": "airway",
+            "type": "action",
+            "text": "Open airway (reposition)"
+          },
+          {
+            "id": "breath2",
+            "type": "decision",
+            "text": "Breathing after airway opening?"
+          },
+          {
+            "id": "black",
+            "type": "end",
+            "text": "BLACK — dead/expectant"
+          },
+          {
+            "id": "rr",
+            "type": "decision",
+            "text": "RR >30/min?"
+          },
+          {
+            "id": "perf",
+            "type": "decision",
+            "text": "Radial pulse absent or CRT >2 s?"
+          },
+          {
+            "id": "ment",
+            "type": "decision",
+            "text": "Follows simple commands?"
+          },
+          {
+            "id": "red",
+            "type": "end",
+            "text": "RED — immediate; control bleeding, airway",
+            "severity": "critical"
+          },
+          {
+            "id": "yellow",
+            "type": "end",
+            "text": "YELLOW — delayed; re-triage regularly"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "walk"
+          },
+          {
+            "from": "walk",
+            "to": "green",
+            "label": "Yes"
+          },
+          {
+            "from": "walk",
+            "to": "breath",
+            "label": "No"
+          },
+          {
+            "from": "breath",
+            "to": "rr",
+            "label": "Yes"
+          },
+          {
+            "from": "breath",
+            "to": "airway",
+            "label": "No"
+          },
+          {
+            "from": "airway",
+            "to": "breath2"
+          },
+          {
+            "from": "breath2",
+            "to": "red",
+            "label": "Yes"
+          },
+          {
+            "from": "breath2",
+            "to": "black",
+            "label": "No"
+          },
+          {
+            "from": "rr",
+            "to": "red",
+            "label": "Yes"
+          },
+          {
+            "from": "rr",
+            "to": "perf",
+            "label": "No"
+          },
+          {
+            "from": "perf",
+            "to": "red",
+            "label": "Yes"
+          },
+          {
+            "from": "perf",
+            "to": "ment",
+            "label": "No"
+          },
+          {
+            "from": "ment",
+            "to": "yellow",
+            "label": "Yes"
+          },
+          {
+            "from": "ment",
+            "to": "red",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "start-1996"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Trimodal trauma death: immediate (non-salvageable), early (hours: haemorrhage, airway, tension pneumothorax — the target of triage and lifesaving interventions) and late (days–weeks: sepsis, multi-organ failure — the ICU's long-term workload after an MCI).",
+        "evidence": "- **START (Benson 1996)** is the most widely used field triage algorithm; based on walking, respiration, perfusion and mental status. Evidence for accuracy is limited (over- and under-triage are common).\n- **SALT (Lerner 2008)** was proposed as a US national all-hazards standard after review of existing systems; adds global sorting and lifesaving interventions, and an explicit 'expectant' category.\n- **CHEST 2014 consensus (Christian et al.)** on triage for pandemics and disasters: triage only when resources are truly overwhelmed after surge measures; use a trained triage officer/team, objective criteria and reassessment, with ethical oversight and palliative care.\n- **NDMA 2007 guidelines (India):** hospital disaster plans, incident command, surge capacity, communication, CBRN preparedness, mass-casualty drills.\n- **CRASH-2 (2010):** tranexamic acid within 3 h reduced all-cause mortality in bleeding trauma patients (14.5% vs 16.0%) and death due to bleeding.",
+        "controversies": "- Use of SOFA-based scores for ICU triage (poor discrimination in some settings, e.g. COVID-19).\n- Age or comorbidity cut-offs in triage (ethically contentious).\n- Which field triage system performs best — no system is clearly superior.",
+        "indiaNotes": "- India's frequent MCIs include road and rail accidents, building collapses, stampedes, industrial chemical releases (e.g. Bhopal 1984, Vizag styrene 2020), floods, cyclones and terror attacks.\n- **NDMA guidelines** require hospital disaster management plans; NABH standards also expect disaster preparedness and drills.\n- Mass organophosphate/chemical exposures need decontamination areas and large atropine stocks.\n- Use the '108' emergency services and district control rooms for coordination; designate one hospital spokesperson."
+      },
+      "drugIds": [
+        "tranexamic-acid",
+        "fentanyl"
+      ],
+      "calculatorIds": [
+        "gcs",
+        "shock-index"
+      ],
+      "references": [
+        "start-1996",
+        "salt-2008",
+        "chest-triage-2014",
+        "ndma-mcm-2007",
+        "crash2-2010",
+        "isccm-iht-2025"
+      ],
+      "quiz": [
+        {
+          "id": "q40-6-1",
+          "stem": "START: a casualty cannot walk, is breathing at 34/min. Category:",
+          "options": [
+            "Green",
+            "Yellow",
+            "Red",
+            "Black",
+            "Blue"
+          ],
+          "answerIndex": 2,
+          "explanation": "RR >30 → red (immediate)."
+        },
+        {
+          "id": "q40-6-2",
+          "stem": "START: not breathing; after opening the airway still not breathing. Category:",
+          "options": [
+            "Red",
+            "Yellow",
+            "Green",
+            "Black (dead/expectant)",
+            "Re-triage later"
+          ],
+          "answerIndex": 3,
+          "explanation": "No breathing after airway opening → black."
+        },
+        {
+          "id": "q40-6-3",
+          "stem": "Which lifesaving intervention is part of SALT individual assessment?",
+          "options": [
+            "CT scan",
+            "Control major haemorrhage",
+            "Central line insertion",
+            "Blood cultures",
+            "Splinting all fractures"
+          ],
+          "answerIndex": 1,
+          "explanation": "SALT LSIs: haemorrhage control, airway, chest decompression, autoinjectors."
+        },
+        {
+          "id": "q40-6-4",
+          "stem": "During an MCI, the ICU's first step to create capacity is:",
+          "options": [
+            "Refuse all new patients",
+            "Review existing patients for step-down/discharge and open surge areas",
+            "Stop all ventilators",
+            "Transfer all patients to other cities",
+            "Wait for instructions"
+          ],
+          "answerIndex": 1,
+          "explanation": "Surge capacity first; triage only if overwhelmed."
+        },
+        {
+          "id": "q40-6-5",
+          "stem": "Tranexamic acid in bleeding trauma (CRASH-2) should be given:",
+          "options": [
+            "Any time within 24 h",
+            "Within 3 h of injury",
+            "Only after surgery",
+            "Only if fibrinogen <1 g/L",
+            "Never in MCIs"
+          ],
+          "answerIndex": 1,
+          "explanation": "Benefit when started within 3 h."
+        }
+      ],
+      "verify": [
+        {
+          "item": "NDMA 2007 guideline content summary",
+          "reason": "Summarised at a high level; confirm current NDMA/State disaster guidance and the hospital's own plan."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "noradrenaline",
+      "name": "Noradrenaline (norepinephrine)",
+      "class": "Alpha-1 > beta-1 agonist vasopressor",
+      "indications": "Maintaining MAP during transfer of a shocked patient",
+      "adultDose": "0.05–0.5 mcg/kg/min IV infusion titrated to MAP ≥65 mmHg (or individual target).",
+      "preparationIndia": "2 mg/2 mL ampoules (check base vs bitartrate labelling); 4 mg in 50 mL = 80 mcg/mL; 8 mg in 50 mL = 160 mcg/mL. For transfer, carry a second pre-filled syringe.",
+      "cautions": "Interruption during syringe change or line kinks causes abrupt hypotension — 'double-pump' or change syringes before departure.",
+      "monitoring": "Continuous arterial BP during transfer when on vasopressors.",
+      "refs": [
+        "isccm-iht-2025"
+      ]
+    },
+    {
+      "id": "propofol",
+      "name": "Propofol",
+      "class": "Short-acting IV sedative-hypnotic",
+      "indications": "Sedation of ventilated patients during transfer",
+      "adultDose": "Infusion 0.5–4 mg/kg/h (1% = 10 mg/mL); boluses 10–20 mg for procedures.",
+      "preparationIndia": "1% (10 mg/mL) 20 mL ampoules and 50 mL vials; use undiluted in a 50 mL syringe.",
+      "cautions": "Hypotension (especially in hypovolaemia), propofol infusion syndrome at high doses for prolonged periods; lipid load.",
+      "monitoring": "BP, sedation score (RASS), triglycerides with prolonged use.",
+      "refs": [
+        "isccm-iht-2025"
+      ]
+    },
+    {
+      "id": "fentanyl",
+      "name": "Fentanyl",
+      "class": "Synthetic opioid analgesic",
+      "indications": "Analgesia/sedation during transfer and for injured patients",
+      "adultDose": "Boluses 25–100 mcg IV; infusion 25–200 mcg/h (about 0.5–2 mcg/kg/h).",
+      "preparationIndia": "50 mcg/mL ampoules (2 mL, 10 mL); common infusion 500 mcg in 50 mL (10 mcg/mL) or undiluted 50 mcg/mL.",
+      "cautions": "Respiratory depression in non-ventilated patients, chest-wall rigidity with rapid large boluses, accumulation in hepatic failure.",
+      "monitoring": "RR, SpO₂, ETCO₂, pain and sedation scores.",
+      "refs": [
+        "isccm-iht-2025"
+      ]
+    },
+    {
+      "id": "midazolam",
+      "name": "Midazolam",
+      "class": "Benzodiazepine",
+      "indications": "Seizure control; short-term sedation when propofol unsuitable",
+      "adultDose": "Seizures: 10 mg IM or 5–10 mg IV (0.1–0.2 mg/kg). Sedation boluses 1–2 mg IV; infusion 1–5 mg/h (avoid prolonged infusion where possible).",
+      "preparationIndia": "1 mg/mL and 5 mg/mL ampoules — check concentration (10-fold error risk).",
+      "renalHepatic": "Active metabolite accumulates in renal failure; prolonged effect in hepatic failure and elderly.",
+      "cautions": "Delirium, respiratory depression, hypotension.",
+      "monitoring": "RASS, RR, SpO₂.",
+      "refs": [
+        "isccm-iht-2025"
+      ]
+    },
+    {
+      "id": "tranexamic-acid",
+      "name": "Tranexamic acid",
+      "class": "Antifibrinolytic",
+      "indications": "Trauma patients with significant haemorrhage within 3 h of injury (including mass casualty incidents)",
+      "adultDose": "1 g IV over 10 min, then 1 g over 8 h; give within 3 h of injury (CRASH-2).",
+      "preparationIndia": "500 mg/5 mL ampoules widely available and inexpensive.",
+      "renalHepatic": "Reduce dose in renal impairment.",
+      "cautions": "No benefit (possible harm) if started >3 h after injury; seizures at high doses.",
+      "monitoring": "Bleeding, neurological status.",
+      "refs": [
+        "crash2-2010"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "ipass-2014",
+      "citation": "Starmer AJ, Spector ND, Srivastava R, et al. Changes in medical errors after implementation of a handoff program (I-PASS). N Engl J Med. 2014;371(19):1803-1812.",
+      "url": "https://doi.org/10.1056/NEJMsa1405556",
+      "year": 2014,
+      "doi": "10.1056/NEJMsa1405556",
+      "type": "trial"
+    },
+    {
+      "id": "ihi-sbar",
+      "citation": "Institute for Healthcare Improvement. SBAR Tool: Situation-Background-Assessment-Recommendation. Accessed November 2026.",
+      "url": "https://www.ihi.org/resources/tools/sbar-tool-situation-background-assessment-recommendation",
+      "year": 2026,
+      "type": "web"
+    },
+    {
+      "id": "who-gpsap-2021",
+      "citation": "World Health Organization. Global Patient Safety Action Plan 2021–2030: towards eliminating avoidable harm in health care. Geneva: WHO; 2021.",
+      "url": "https://www.who.int/publications/i/item/9789240032705",
+      "year": 2021,
+      "type": "guideline"
+    },
+    {
+      "id": "fast-hug-2005",
+      "citation": "Vincent JL. Give your patient a fast hug (at least) once a day. Crit Care Med. 2005;33(6):1225-1229.",
+      "url": "https://doi.org/10.1097/01.CCM.0000165962.16682.46",
+      "year": 2005,
+      "doi": "10.1097/01.CCM.0000165962.16682.46",
+      "type": "review"
+    },
+    {
+      "id": "daily-goals-2003",
+      "citation": "Pronovost P, Berenholtz S, Dorman T, et al. Improving communication in the ICU using daily goals. J Crit Care. 2003;18(2):71-75.",
+      "url": "https://doi.org/10.1053/jcrc.2003.50008",
+      "year": 2003,
+      "doi": "10.1053/jcrc.2003.50008",
+      "type": "trial"
+    },
+    {
+      "id": "pronovost-clabsi-2006",
+      "citation": "Pronovost P, Needham D, Berenholtz S, et al. An intervention to decrease catheter-related bloodstream infections in the ICU. N Engl J Med. 2006;355(26):2725-2732.",
+      "url": "https://doi.org/10.1056/NEJMoa061115",
+      "year": 2006,
+      "doi": "10.1056/NEJMoa061115",
+      "type": "trial"
+    },
+    {
+      "id": "isccm-iht-2025",
+      "citation": "Zirpe KG, Tiwari AM, Kulkarni AP, et al. Position Statement of ISCCM on Intrahospital Transport of Critically Ill Patients. Indian J Crit Care Med. 2025;29(4):291-300.",
+      "url": "https://doi.org/10.5005/jp-journals-10071-24939",
+      "year": 2025,
+      "doi": "10.5005/jp-journals-10071-24939",
+      "type": "guideline"
+    },
+    {
+      "id": "warren-transport-2004",
+      "citation": "Warren J, Fromm RE Jr, Orr RA, Rotello LC, Horst HM. Guidelines for the inter- and intrahospital transport of critically ill patients. Crit Care Med. 2004;32(1):256-262.",
+      "url": "https://doi.org/10.1097/01.CCM.0000104917.39204.0A",
+      "year": 2004,
+      "doi": "10.1097/01.CCM.0000104917.39204.0A",
+      "type": "guideline"
+    },
+    {
+      "id": "fanara-iht-2010",
+      "citation": "Fanara B, Manzon C, Barbot O, Desmettre T, Capellier G. Recommendations for the intra-hospital transport of critically ill patients. Crit Care. 2010;14(3):R87.",
+      "url": "https://doi.org/10.1186/cc9018",
+      "year": 2010,
+      "doi": "10.1186/cc9018",
+      "type": "guideline"
+    },
+    {
+      "id": "droogh-2015",
+      "citation": "Droogh JM, Smit M, Absalom AR, Ligtenberg JJM, Zijlstra JG. Transferring the critically ill patient: are we there yet? Crit Care. 2015;19:62.",
+      "url": "https://doi.org/10.1186/s13054-015-0749-4",
+      "year": 2015,
+      "doi": "10.1186/s13054-015-0749-4",
+      "type": "review"
+    },
+    {
+      "id": "reason-2000",
+      "citation": "Reason J. Human error: models and management. BMJ. 2000;320(7237):768-770.",
+      "url": "https://doi.org/10.1136/bmj.320.7237.768",
+      "year": 2000,
+      "doi": "10.1136/bmj.320.7237.768",
+      "type": "review"
+    },
+    {
+      "id": "haynes-checklist-2009",
+      "citation": "Haynes AB, Weiser TG, Berry WR, et al. A surgical safety checklist to reduce morbidity and mortality in a global population. N Engl J Med. 2009;360(5):491-499.",
+      "url": "https://doi.org/10.1056/NEJMsa0810119",
+      "year": 2009,
+      "doi": "10.1056/NEJMsa0810119",
+      "type": "trial"
+    },
+    {
+      "id": "nabh",
+      "citation": "National Accreditation Board for Hospitals & Healthcare Providers (NABH), India. Accreditation standards for hospitals. Accessed November 2026.",
+      "url": "https://nabh.co/",
+      "year": 2026,
+      "type": "web"
+    },
+    {
+      "id": "start-1996",
+      "citation": "Benson M, Koenig KL, Schultz CH. Disaster triage: START, then SAVE — a new method of dynamic triage for victims of a catastrophic earthquake. Prehosp Disaster Med. 1996;11(2):117-124.",
+      "url": "https://doi.org/10.1017/S1049023X0004276X",
+      "year": 1996,
+      "doi": "10.1017/S1049023X0004276X",
+      "type": "review"
+    },
+    {
+      "id": "salt-2008",
+      "citation": "Lerner EB, Schwartz RB, Coule PL, et al. Mass casualty triage: an evaluation of the data and development of a proposed national guideline. Disaster Med Public Health Prep. 2008;2(Suppl 1):S25-S34.",
+      "url": "https://doi.org/10.1097/DMP.0b013e318182194e",
+      "year": 2008,
+      "doi": "10.1097/DMP.0b013e318182194e",
+      "type": "consensus"
+    },
+    {
+      "id": "chest-triage-2014",
+      "citation": "Christian MD, Sprung CL, King MA, et al. Triage: care of the critically ill and injured during pandemics and disasters: CHEST consensus statement. Chest. 2014;146(4 Suppl):e61S-e74S.",
+      "url": "https://doi.org/10.1378/chest.14-0736",
+      "year": 2014,
+      "doi": "10.1378/chest.14-0736",
+      "type": "consensus"
+    },
+    {
+      "id": "ndma-mcm-2007",
+      "citation": "National Disaster Management Authority, Government of India. National Disaster Management Guidelines: Medical Preparedness and Mass Casualty Management. New Delhi: NDMA; 2007.",
+      "url": "https://ndma.gov.in/index.php/ndma-guidelines",
+      "year": 2007,
+      "type": "guideline"
+    },
+    {
+      "id": "crash2-2010",
+      "citation": "CRASH-2 trial collaborators; Shakur H, Roberts I, Bautista R, et al. Effects of tranexamic acid on death, vascular occlusive events, and blood transfusion in trauma patients with significant haemorrhage (CRASH-2). Lancet. 2010;376(9734):23-32.",
+      "url": "https://doi.org/10.1016/S0140-6736(10)60835-5",
+      "year": 2010,
+      "doi": "10.1016/S0140-6736(10)60835-5",
+      "type": "trial"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Hospital-specific policies (handover format, transfer policy, incident reporting system, disaster plan)",
+      "reason": "This module gives generic structures; the app should link or defer to the user's hospital policies."
+    },
+    {
+      "item": "NABH requirements quoted generally",
+      "reason": "NABH standards are revised periodically; confirm the current edition before quoting specific standards."
+    },
+    {
+      "item": "Oxygen calculations rely on the shared o2-cylinder-duration calculator (default 1,360 L)",
+      "reason": "Calculator default reflects a non-Indian cylinder; consider an Indian default (e.g. 1,500 L B-type) — schema/calculator change for the shared owner."
+    }
+  ]
+}

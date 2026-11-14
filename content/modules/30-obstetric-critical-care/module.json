@@ -1,0 +1,1897 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "obstetric-critical-care",
+  "number": 30,
+  "folder": "30-obstetric-critical-care",
+  "section": {
+    "id": "I",
+    "title": "Special populations"
+  },
+  "phase": 2,
+  "title": "Obstetric critical care",
+  "summary": "Obstetric critical care: severe pre-eclampsia and eclampsia, postpartum haemorrhage (WHO 2025 MOTIVE bundle), HELLP and AFLP, maternal sepsis, peripartum cardiomyopathy, and maternal cardiac arrest with amniotic fluid embolism.",
+  "tags": [
+    "pre-eclampsia",
+    "eclampsia",
+    "magnesium sulfate",
+    "Pritchard",
+    "labetalol",
+    "PPH",
+    "tranexamic acid",
+    "MOTIVE",
+    "HELLP",
+    "AFLP",
+    "maternal sepsis",
+    "PPCM",
+    "bromocriptine",
+    "perimortem caesarean",
+    "amniotic fluid embolism"
+  ],
+  "relatedModules": [
+    "haematology-coagulation-transfusion",
+    "liver-failure",
+    "sepsis-septic-shock",
+    "cardiac-arrest-post-rosc",
+    "trauma-burns-environmental",
+    "neuro-emergencies"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "baby",
+    "accent": "critical"
+  },
+  "viewKey": "module:obstetric-critical-care",
+  "topics": [
+    {
+      "id": "pre-eclampsia-eclampsia",
+      "title": "Severe pre-eclampsia and eclampsia",
+      "summary": "Treat BP ≥ 160/110 within 30-60 min, give magnesium sulfate (Pritchard or Zuspan), restrict fluids, manage seizures and plan delivery.",
+      "viewKey": "topic:obstetric-critical-care/pre-eclampsia-eclampsia",
+      "uiHints": {
+        "icon": "activity",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Pre-eclampsia: new hypertension (≥ 140/90) after 20 weeks with proteinuria or maternal organ dysfunction (renal, liver, neurological, haematological) or uteroplacental dysfunction. Severe features include BP ≥ 160/110, platelets < 100,000, liver enzymes > 2× normal, creatinine > 1.1 mg/dL, pulmonary oedema, headache/visual symptoms. Eclampsia: new-onset seizures.",
+          "refs": [
+            "acog-pe-2020",
+            "isshp-2021"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Eclamptic seizure",
+            "detail": "Left lateral position, airway, oxygen; magnesium 4 g IV over 15-20 min (do not use diazepam first-line). Recurrent seizure: further 2 g IV.",
+            "time": "0 min",
+            "refs": [
+              "acog-pe-2020",
+              "magpie"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Treat severe hypertension",
+            "detail": "BP ≥ 160/110 confirmed over 15 min: labetalol IV, hydralazine IV or oral immediate-release nifedipine within 30-60 min; target 135/85 (NICE) and < 160/110.",
+            "time": "≤ 60 min",
+            "refs": [
+              "acog-pe-2020",
+              "nice-ng133"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Magnesium prophylaxis",
+            "detail": "All severe pre-eclampsia (during labour/delivery and 24 h after): Pritchard or Zuspan regimen; monitor reflexes, RR, urine output; check levels if oliguric.",
+            "refs": [
+              "magpie",
+              "acog-pe-2020"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Fluid restriction",
+            "detail": "Total fluids about 80 mL/h unless ongoing losses (risk of pulmonary oedema); strict input-output.",
+            "refs": [
+              "nice-ng133"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Investigations",
+            "detail": "FBC, LFT, LDH, creatinine, uric acid, coagulation, urine protein:creatinine ratio; CT/MRI brain if focal signs, seizures after 48 h postpartum or atypical (PRES, stroke, CVT).",
+            "refs": [
+              "acog-pe-2020"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Deliver",
+            "detail": "Delivery is definitive; after stabilisation (≥ 34 weeks or maternal compromise at any gestation); steroids for fetal lung maturity if < 34 weeks and time allows.",
+            "refs": [
+              "acog-pe-2020",
+              "isshp-2021"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Postpartum",
+            "detail": "Continue BP monitoring; risk of eclampsia and stroke persists for days; switch to oral agents (nifedipine/amlodipine, labetalol, enalapril postpartum).",
+            "refs": [
+              "nice-ng133"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "magnesium",
+            "role": "Eclampsia / severe pre-eclampsia (Zuspan)",
+            "route": "IV",
+            "dose": "4 g over 15-20 min, then 1 g/h for 24 h",
+            "dilution": "Load: 8 mL of 50% + 12 mL NS (20 mL of 20%); maintenance 25 g (50 mL of 50%) in 500 mL = 50 mg/mL",
+            "workedExample": "1 g/h = 20 mL/h of 50 mg/mL solution",
+            "calculatorId": "infusion-rate-fixed",
+            "refs": [
+              "acog-pe-2020"
+            ]
+          },
+          {
+            "drugId": "magnesium",
+            "role": "Pritchard regimen (India)",
+            "route": "IV + IM",
+            "dose": "4 g IV + 5 g IM each buttock, then 5 g IM 4-hourly alternate buttocks",
+            "workedExample": "5 g = 10 mL of 50% per buttock (add 1 mL 2% lidocaine)",
+            "verify": "Use local obstetric protocol.",
+            "refs": [
+              "magpie"
+            ]
+          },
+          {
+            "drugId": "labetalol",
+            "role": "Severe hypertension",
+            "route": "IV",
+            "dose": "20 mg, then 40 mg, then 80 mg every 10 min (max 300 mg)",
+            "workedExample": "20 mg = 4 mL of 5 mg/mL over 2 min",
+            "refs": [
+              "acog-pe-2020"
+            ]
+          },
+          {
+            "drugId": "hydralazine",
+            "role": "Severe hypertension",
+            "route": "IV",
+            "dose": "5-10 mg over 2 min, repeat after 20 min",
+            "refs": [
+              "acog-pe-2020"
+            ]
+          },
+          {
+            "drugId": "nifedipine",
+            "role": "Severe hypertension (no IV)",
+            "route": "Oral",
+            "dose": "10 mg, then 20 mg after 20 min, then 20 mg",
+            "refs": [
+              "acog-pe-2020"
+            ]
+          },
+          {
+            "drugId": "calcium-gluconate",
+            "role": "Magnesium toxicity",
+            "route": "IV",
+            "dose": "1 g (10 mL 10%) over 10 min",
+            "refs": [
+              "acog-pe-2020"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Loss of patellar reflexes, RR < 12/min or oliguria on magnesium: stop infusion, check level, give calcium gluconate if respiratory depression.",
+            "refs": [
+              "acog-pe-2020"
+            ]
+          },
+          {
+            "text": "Severe headache, visual disturbance, epigastric pain or SpO2 falling: imminent eclampsia, HELLP or pulmonary oedema.",
+            "refs": [
+              "acog-pe-2020"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Liberal IV fluids causing pulmonary oedema (capillary leak, low oncotic pressure).",
+            "refs": [
+              "nice-ng133"
+            ]
+          },
+          {
+            "text": "Using diazepam or phenytoin instead of magnesium for eclampsia.",
+            "refs": [
+              "magpie"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Magnesium halves the risk of eclampsia (Magpie) and is the anticonvulsant of choice even in seizures after delivery.",
+            "refs": [
+              "magpie"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Severe pre-eclampsia / eclampsia",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "BP ≥ 160/110 or eclamptic seizure"
+          },
+          {
+            "id": "seiz",
+            "type": "decision",
+            "text": "Seizure now?"
+          },
+          {
+            "id": "mgl",
+            "type": "action",
+            "text": "Left lateral, airway, MgSO4 4 g IV",
+            "severity": "critical"
+          },
+          {
+            "id": "bp",
+            "type": "action",
+            "text": "Labetalol / hydralazine / nifedipine within 60 min",
+            "severity": "critical"
+          },
+          {
+            "id": "mgm",
+            "type": "action",
+            "text": "MgSO4 maintenance 24 h; fluids ~80 mL/h"
+          },
+          {
+            "id": "tox",
+            "type": "decision",
+            "text": "Reflexes lost / RR < 12 / oliguria?"
+          },
+          {
+            "id": "ca",
+            "type": "action",
+            "text": "Stop Mg, calcium gluconate 1 g, check level",
+            "severity": "high"
+          },
+          {
+            "id": "del",
+            "type": "end",
+            "text": "Stabilise and plan delivery; monitor 24-72 h postpartum"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "seiz"
+          },
+          {
+            "from": "seiz",
+            "to": "mgl",
+            "label": "Yes"
+          },
+          {
+            "from": "seiz",
+            "to": "bp",
+            "label": "No"
+          },
+          {
+            "from": "mgl",
+            "to": "bp"
+          },
+          {
+            "from": "bp",
+            "to": "mgm"
+          },
+          {
+            "from": "mgm",
+            "to": "tox"
+          },
+          {
+            "from": "tox",
+            "to": "ca",
+            "label": "Yes"
+          },
+          {
+            "from": "tox",
+            "to": "del",
+            "label": "No"
+          },
+          {
+            "from": "ca",
+            "to": "del"
+          }
+        ],
+        "refs": [
+          "acog-pe-2020"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Abnormal placentation with impaired spiral artery remodelling causes placental ischaemia and release of anti-angiogenic factors (sFlt-1, soluble endoglin), producing systemic endothelial dysfunction, vasoconstriction, capillary leak, glomerular endotheliosis and cerebral autoregulatory failure (PRES).",
+        "evidence": "- Magpie (10,141 women): magnesium halved eclampsia risk (RR 0.42) [Magpie 2002].\n- ACOG 2020 and ISSHP 2021 guidance on BP thresholds, agents and timing of delivery [ACOG 2020; Magee 2022].\n- NICE NG133 BP target 135/85 and fluid restriction [NICE 2019].",
+        "controversies": "- 12 vs 24 h postpartum magnesium; Pritchard vs Zuspan; sFlt-1/PlGF testing.",
+        "indiaNotes": "- Hypertensive disorders are a leading direct cause of maternal death in India. The Pritchard (IM) regimen is widely used because infusion pumps may be unavailable; MoHFW and FOGSI recommend loading dose before referral from peripheral centres.\n- Late presentation with eclampsia and PRES is common in rural India."
+      },
+      "drugIds": [
+        "magnesium",
+        "labetalol",
+        "hydralazine",
+        "nifedipine",
+        "calcium-gluconate"
+      ],
+      "calculatorIds": [
+        "infusion-rate-fixed",
+        "mean-arterial-pressure"
+      ],
+      "references": [
+        "acog-pe-2020",
+        "isshp-2021",
+        "nice-ng133",
+        "magpie"
+      ],
+      "quiz": [
+        {
+          "id": "pre-eclampsia-eclampsia-q1",
+          "stem": "Anticonvulsant of choice for eclampsia:",
+          "options": [
+            "Diazepam",
+            "Magnesium sulfate",
+            "Phenytoin",
+            "Levetiracetam"
+          ],
+          "answerIndex": 1,
+          "explanation": "Magpie."
+        },
+        {
+          "id": "pre-eclampsia-eclampsia-q2",
+          "stem": "BP threshold for urgent antihypertensive treatment in pregnancy:",
+          "options": [
+            "≥ 140/90",
+            "≥ 160/110",
+            "≥ 180/120",
+            "≥ 150/100"
+          ],
+          "answerIndex": 1,
+          "explanation": "Treat within 30-60 min."
+        },
+        {
+          "id": "pre-eclampsia-eclampsia-q3",
+          "stem": "Magnesium toxicity first sign:",
+          "options": [
+            "Loss of patellar reflex",
+            "Tachycardia",
+            "Hypertension",
+            "Hyperglycaemia"
+          ],
+          "answerIndex": 0,
+          "explanation": "Reflexes lost at ~7-10 mEq/L."
+        },
+        {
+          "id": "pre-eclampsia-eclampsia-q4",
+          "stem": "Pritchard regimen IM maintenance:",
+          "options": [
+            "1 g IM hourly",
+            "5 g IM every 4 h",
+            "10 g IM daily",
+            "2 g IM every 6 h"
+          ],
+          "answerIndex": 1,
+          "explanation": "Alternate buttocks."
+        }
+      ]
+    },
+    {
+      "id": "postpartum-haemorrhage",
+      "title": "Postpartum haemorrhage",
+      "summary": "Early detection (≥ 300-500 mL), the MOTIVE bundle with tranexamic acid, second-line uterotonics, balloon tamponade, surgery and massive transfusion.",
+      "viewKey": "topic:obstetric-critical-care/postpartum-haemorrhage",
+      "uiHints": {
+        "icon": "droplet",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "PPH (WHO/FIGO/ICM 2025): blood loss ≥ 500 mL within 24 h of birth, or ≥ 300 mL with abnormal vital signs. Causes - 4 Ts: Tone (atony, ~70%), Trauma, Tissue (retained placenta), Thrombin (coagulopathy).",
+          "refs": [
+            "who-pph-2025",
+            "rcog-pph-2016"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Detect early",
+            "detail": "Measure blood loss objectively (calibrated drape, weighing); monitor vital signs and shock index (> 0.9-1 concerning).",
+            "time": "0 min",
+            "refs": [
+              "who-pph-2025",
+              "e-motive"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "MOTIVE bundle immediately",
+            "detail": "Massage of the uterus; Oxytocic (oxytocin 10 units IV/IM + infusion); Tranexamic acid 1 g IV; IV fluids (warmed crystalloid, blood); Vaginal and genital tract examination (tears, retained tissue); Escalation.",
+            "time": "≤ 15 min",
+            "refs": [
+              "who-pph-2025",
+              "e-motive",
+              "woman"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Second-line uterotonics",
+            "detail": "Carboprost 250 mcg IM every 15 min (not in asthma), methylergometrine 0.2 mg IM (not in hypertension), misoprostol 800 mcg SL.",
+            "refs": [
+              "rcog-pph-2016"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Call for help and blood",
+            "detail": "Activate obstetric haemorrhage/massive transfusion protocol; group-specific/O-negative blood; FFP, platelets; keep fibrinogen > 200 mg/dL (cryoprecipitate/fibrinogen concentrate) - fibrinogen < 200 predicts severe PPH.",
+            "refs": [
+              "rcog-pph-2016",
+              "esicm-transfusion-2021"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Mechanical and surgical",
+            "detail": "Bimanual compression, uterine balloon tamponade (Bakri or condom catheter), non-pneumatic anti-shock garment during transfer; laparotomy with compression sutures (B-Lynch), uterine/internal iliac artery ligation, interventional radiology embolisation, hysterectomy.",
+            "refs": [
+              "who-pph-2025",
+              "rcog-pph-2016"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Correct the lethal triad",
+            "detail": "Warm fluids and patient, ionised Ca > 1.1 mmol/L, avoid acidosis; viscoelastic testing where available.",
+            "refs": [
+              "rcog-pph-2016"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "After PPH",
+            "detail": "HDU/ICU monitoring for re-bleeding, DIC, AKI, Sheehan's; IV iron for anaemia; VTE prophylaxis once bleeding controlled.",
+            "refs": [
+              "who-pph-2025"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "oxytocin",
+            "role": "First-line uterotonic",
+            "route": "IV/IM",
+            "dose": "10 units slow IV/IM, then 40 units in 500 mL at 125 mL/h",
+            "workedExample": "10 units/h = 125 mL/h of 40 units/500 mL",
+            "refs": [
+              "who-pph-2025",
+              "rcog-pph-2016"
+            ]
+          },
+          {
+            "drugId": "txa",
+            "role": "All PPH",
+            "route": "IV",
+            "dose": "1 g over 10 min; repeat 1 g after 30 min if bleeding continues",
+            "workedExample": "1 g (10 mL of 100 mg/mL) in 100 mL NS over 10 min",
+            "refs": [
+              "woman"
+            ]
+          },
+          {
+            "drugId": "carboprost",
+            "role": "Refractory atony",
+            "route": "IM",
+            "dose": "250 mcg every 15 min (max 2 mg)",
+            "refs": [
+              "rcog-pph-2016"
+            ]
+          },
+          {
+            "drugId": "misoprostol",
+            "role": "Adjunct uterotonic",
+            "route": "Sublingual",
+            "dose": "800 mcg once",
+            "refs": [
+              "rcog-pph-2016"
+            ]
+          },
+          {
+            "drugId": "methylergometrine",
+            "role": "Atony without hypertension",
+            "route": "IM",
+            "dose": "0.2 mg, may repeat after 15 min",
+            "refs": [
+              "rcog-pph-2016"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Shock index > 1 or blood loss > 1,500 mL: major obstetric haemorrhage - activate MTP, senior obstetrician and anaesthetist.",
+            "refs": [
+              "rcog-pph-2016"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Visual estimation underestimates blood loss; young women compensate until late.",
+            "refs": [
+              "who-pph-2025"
+            ]
+          },
+          {
+            "text": "Giving TXA after 3 h from birth: benefit falls with delay (most effective early).",
+            "refs": [
+              "woman"
+            ]
+          },
+          {
+            "text": "Ergometrine in pre-eclampsia (stroke risk).",
+            "refs": [
+              "rcog-pph-2016"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Concealed bleeding (broad ligament haematoma, uterine rupture, abruption) - look with ultrasound if shock is out of proportion to visible loss.",
+            "refs": [
+              "rcog-pph-2016"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "PPH: first response",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Blood loss ≥ 300 mL with abnormal vitals or ≥ 500 mL"
+          },
+          {
+            "id": "motive",
+            "type": "action",
+            "text": "MOTIVE: massage, oxytocin, TXA 1 g, IV fluids, examine",
+            "severity": "critical"
+          },
+          {
+            "id": "cause",
+            "type": "decision",
+            "text": "Cause found?"
+          },
+          {
+            "id": "tone",
+            "type": "action",
+            "text": "Atony: carboprost / methylergometrine / misoprostol"
+          },
+          {
+            "id": "trauma",
+            "type": "action",
+            "text": "Repair tears; remove retained tissue"
+          },
+          {
+            "id": "stop",
+            "type": "decision",
+            "text": "Bleeding controlled?"
+          },
+          {
+            "id": "obs",
+            "type": "end",
+            "text": "HDU monitoring; iron; VTE prophylaxis"
+          },
+          {
+            "id": "esc",
+            "type": "action",
+            "text": "MTP, fibrinogen > 200, balloon tamponade",
+            "severity": "critical"
+          },
+          {
+            "id": "surg",
+            "type": "end",
+            "text": "Compression sutures / embolisation / hysterectomy",
+            "severity": "critical"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "motive"
+          },
+          {
+            "from": "motive",
+            "to": "cause"
+          },
+          {
+            "from": "cause",
+            "to": "tone",
+            "label": "Tone"
+          },
+          {
+            "from": "cause",
+            "to": "trauma",
+            "label": "Trauma/tissue"
+          },
+          {
+            "from": "tone",
+            "to": "stop"
+          },
+          {
+            "from": "trauma",
+            "to": "stop"
+          },
+          {
+            "from": "stop",
+            "to": "obs",
+            "label": "Yes"
+          },
+          {
+            "from": "stop",
+            "to": "esc",
+            "label": "No"
+          },
+          {
+            "from": "esc",
+            "to": "surg"
+          }
+        ],
+        "refs": [
+          "who-pph-2025",
+          "rcog-pph-2016"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "At term, uterine blood flow is ~700 mL/min; haemostasis depends on myometrial contraction compressing spiral arteries. Atony, trauma or coagulopathy (abruption, AFE, sepsis, dilution) cause rapid haemorrhage; hypofibrinogenaemia develops early.",
+        "evidence": "- WOMAN (20,060 women): TXA reduced death from bleeding (1.5% vs 1.9%), especially within 3 h [WOMAN 2017].\n- E-MOTIVE: calibrated drape detection plus bundle reduced severe PPH, laparotomy or death (1.6% vs 4.3%) [Gallos 2023].\n- WHO/FIGO/ICM 2025 consolidated PPH guidelines [WHO 2025].",
+        "controversies": "- Prophylactic TXA at caesarean; fibrinogen concentrate vs cryoprecipitate; REBOA.",
+        "indiaNotes": "- PPH is the leading cause of maternal death in India; anaemia in pregnancy reduces tolerance to blood loss.\n- Condom-catheter balloon tamponade is a low-cost option; carbetocin (heat-stable) and misoprostol are useful where cold chain is unreliable.\n- MoHFW programmes (LaQshya, SUMAN) promote PPH drills and blood availability at first referral units."
+      },
+      "drugIds": [
+        "oxytocin",
+        "txa",
+        "carboprost",
+        "misoprostol",
+        "methylergometrine"
+      ],
+      "calculatorIds": [
+        "shock-index"
+      ],
+      "references": [
+        "who-pph-2025",
+        "e-motive",
+        "woman",
+        "rcog-pph-2016",
+        "esicm-transfusion-2021"
+      ],
+      "quiz": [
+        {
+          "id": "postpartum-haemorrhage-q1",
+          "stem": "PPH bundle in WHO 2025 guidelines:",
+          "options": [
+            "SOFA",
+            "MOTIVE",
+            "ABCDE",
+            "FAST HUGS"
+          ],
+          "answerIndex": 1,
+          "explanation": "Massage, Oxytocic, TXA, IV fluids, Vaginal exam, Escalate."
+        },
+        {
+          "id": "postpartum-haemorrhage-q2",
+          "stem": "TXA dose in PPH:",
+          "options": [
+            "1 g IV, repeat once if needed",
+            "4 g bolus",
+            "10 mg/kg/h only",
+            "Oral 500 mg"
+          ],
+          "answerIndex": 0,
+          "explanation": "WOMAN."
+        },
+        {
+          "id": "postpartum-haemorrhage-q3",
+          "stem": "Carboprost is contraindicated in:",
+          "options": [
+            "Hypertension",
+            "Asthma",
+            "Diabetes",
+            "Anaemia"
+          ],
+          "answerIndex": 1,
+          "explanation": "Bronchospasm."
+        },
+        {
+          "id": "postpartum-haemorrhage-q4",
+          "stem": "Fibrinogen target in major PPH:",
+          "options": [
+            "> 100 mg/dL",
+            "> 200 mg/dL",
+            "> 400 mg/dL",
+            "No target"
+          ],
+          "answerIndex": 1,
+          "explanation": "Low fibrinogen predicts severe PPH."
+        }
+      ]
+    },
+    {
+      "id": "hellp-aflp",
+      "title": "HELLP syndrome and acute fatty liver of pregnancy",
+      "summary": "Distinguish HELLP from AFLP (Swansea), deliver, support coagulation and glucose, and watch for hepatic haematoma and acute liver failure.",
+      "viewKey": "topic:obstetric-critical-care/hellp-aflp",
+      "uiHints": {
+        "icon": "flask-conical",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "HELLP: Haemolysis (LDH > 600 U/L, schistocytes), Elevated Liver enzymes (AST/ALT > 2× normal, ~> 70 U/L), Low Platelets (< 100,000/mm³), usually with pre-eclampsia. AFLP: third-trimester microvesicular fatty liver with hypoglycaemia, coagulopathy, encephalopathy and AKI; diagnosed by Swansea criteria (≥ 6 of 14).",
+          "refs": [
+            "acog-pe-2020",
+            "swansea-2002"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Stabilise and treat as severe pre-eclampsia",
+            "detail": "BP control and magnesium sulfate for HELLP.",
+            "refs": [
+              "acog-pe-2020"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Work-up",
+            "detail": "FBC with smear, LDH, bilirubin, AST/ALT, glucose, coagulation including fibrinogen, ammonia, creatinine, uric acid; ultrasound liver (haematoma).",
+            "refs": [
+              "acog-pe-2020",
+              "swansea-2002"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Deliver",
+            "detail": "Both HELLP (≥ 34 weeks or deteriorating) and AFLP require prompt delivery after maternal stabilisation.",
+            "refs": [
+              "acog-pe-2020",
+              "swansea-2002"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Correct coagulation",
+            "detail": "Platelets > 50,000 before caesarean (transfuse if lower); FFP/cryoprecipitate for AFLP coagulopathy guided by fibrinogen and bleeding.",
+            "refs": [
+              "acog-pe-2020"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Glucose",
+            "detail": "AFLP: hourly glucose; dextrose infusion (10-20%) for hypoglycaemia.",
+            "refs": [
+              "swansea-2002"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Liver failure care",
+            "detail": "Encephalopathy, rising INR, lactate: manage as acute liver failure, contact transplant centre; plasma exchange in selected cases.",
+            "refs": [
+              "easl-alf-2017"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Watch for haematoma",
+            "detail": "Right upper quadrant/shoulder pain with shock: subcapsular liver haematoma/rupture - CT, interventional radiology or surgery.",
+            "refs": [
+              "acog-pe-2020"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "hellp-aflp",
+            "title": "HELLP vs AFLP vs TTP/HUS",
+            "columns": [
+              "Feature",
+              "HELLP",
+              "AFLP"
+            ],
+            "rows": [
+              [
+                "Timing",
+                "Third trimester or postpartum",
+                "Third trimester (30-38 weeks)"
+              ],
+              [
+                "Hypertension",
+                "Usually",
+                "~50%"
+              ],
+              [
+                "Hypoglycaemia",
+                "Uncommon",
+                "Common"
+              ],
+              [
+                "Coagulopathy (raised INR, low fibrinogen)",
+                "Late/with DIC",
+                "Early and marked"
+              ],
+              [
+                "Encephalopathy",
+                "Rare",
+                "Common"
+              ],
+              [
+                "Platelets",
+                "Low (defining)",
+                "Normal or mildly low"
+              ],
+              [
+                "Ammonia",
+                "Normal",
+                "Raised"
+              ]
+            ],
+            "refs": [
+              "swansea-2002",
+              "acog-pe-2020"
+            ]
+          },
+          {
+            "id": "swansea",
+            "title": "Swansea criteria for AFLP (≥ 6 without other cause)",
+            "columns": [
+              "Clinical/lab",
+              "Lab/imaging"
+            ],
+            "rows": [
+              [
+                "Vomiting",
+                "Bilirubin > 0.8 mg/dL (14 µmol/L)"
+              ],
+              [
+                "Abdominal pain",
+                "Hypoglycaemia < 72 mg/dL (4 mmol/L)"
+              ],
+              [
+                "Polydipsia/polyuria",
+                "Uric acid > 5.7 mg/dL (340 µmol/L)"
+              ],
+              [
+                "Encephalopathy",
+                "WBC > 11,000/mm³"
+              ],
+              [
+                "Ascites or bright liver on ultrasound",
+                "AST/ALT > 42 U/L"
+              ],
+              [
+                "Microvesicular steatosis on biopsy",
+                "Ammonia > 47 µmol/L; creatinine > 1.7 mg/dL (150 µmol/L); PT > 14 s or aPTT > 34 s"
+              ]
+            ],
+            "caption": "14 criteria in total.",
+            "refs": [
+              "swansea-2002"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Sudden shoulder-tip pain and hypotension in HELLP: liver haematoma rupture - surgical emergency.",
+            "refs": [
+              "acog-pe-2020"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Missing hypoglycaemia in AFLP presenting as drowsiness.",
+            "refs": [
+              "swansea-2002"
+            ]
+          },
+          {
+            "text": "Labelling AFLP as viral hepatitis and delaying delivery.",
+            "refs": [
+              "swansea-2002"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "In India, also exclude hepatitis E (very high mortality in pregnancy) and malaria/dengue when liver enzymes and platelets are abnormal.",
+            "refs": [
+              "easl-alf-2017"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "HELLP is a severe form of pre-eclampsia with microangiopathic haemolysis and periportal hepatic necrosis. AFLP is linked to fetal fatty-acid oxidation defects (LCHAD deficiency), with toxic fetal metabolites causing maternal microvesicular steatosis and mitochondrial dysfunction.",
+        "evidence": "- ACOG 2020 defines HELLP and management within pre-eclampsia [ACOG 2020].\n- Swansea criteria (prospective Welsh study) for AFLP diagnosis [Ch'ng 2002].",
+        "controversies": "- Corticosteroids to raise platelets in HELLP (not shown to improve maternal outcomes); plasma exchange in AFLP.",
+        "indiaNotes": "- Acute viral hepatitis E is a major cause of liver failure in pregnancy in India and must be distinguished from AFLP and HELLP.\n- Test newborns of AFLP mothers for LCHAD deficiency where available."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "acog-pe-2020",
+        "swansea-2002",
+        "easl-alf-2017"
+      ],
+      "quiz": [
+        {
+          "id": "hellp-aflp-q1",
+          "stem": "Feature favouring AFLP over HELLP:",
+          "options": [
+            "Low platelets",
+            "Hypoglycaemia and early coagulopathy",
+            "Hypertension",
+            "Haemolysis"
+          ],
+          "answerIndex": 1,
+          "explanation": "AFLP causes liver failure features."
+        },
+        {
+          "id": "hellp-aflp-q2",
+          "stem": "Definitive treatment of HELLP and AFLP:",
+          "options": [
+            "Steroids",
+            "Delivery",
+            "Plasma exchange",
+            "Antivirals"
+          ],
+          "answerIndex": 1,
+          "explanation": "After stabilisation."
+        },
+        {
+          "id": "hellp-aflp-q3",
+          "stem": "Platelet count to achieve before caesarean in HELLP:",
+          "options": [
+            "> 20,000",
+            "> 50,000",
+            "> 150,000",
+            "No target"
+          ],
+          "answerIndex": 1,
+          "explanation": "Transfuse if lower."
+        }
+      ]
+    },
+    {
+      "id": "sepsis-pregnancy",
+      "title": "Sepsis in pregnancy and the puerperium",
+      "summary": "Recognise sepsis despite physiological changes, give antibiotics within 1 h, find and control the source, and protect both patients.",
+      "viewKey": "topic:obstetric-critical-care/sepsis-pregnancy",
+      "uiHints": {
+        "icon": "thermometer",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Maternal sepsis: organ dysfunction from infection during pregnancy, childbirth, post-abortion or postpartum period (up to 42 days). Common sources: genital tract (chorioamnionitis, endometritis, septic abortion), urinary tract, pneumonia, wound/breast infection; in India also malaria, dengue, leptospirosis.",
+          "refs": [
+            "smfm-sepsis-2019"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Recognise",
+            "detail": "Use an obstetric early warning score; normal pregnancy raises HR and lowers BP and PaCO2, so persistent HR > 110, RR > 24, temperature > 38 °C or < 36 °C, lactate > 2 mmol/L and altered mentation are concerning. Do not use qSOFA alone.",
+            "refs": [
+              "smfm-sepsis-2019"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Antibiotics within 1 h",
+            "detail": "Blood cultures, then broad-spectrum: piperacillin-tazobactam 4.5 g q6h (or meropenem if ESBL risk); add clindamycin 900 mg q8h for suspected group A streptococcal or toxic shock; add azithromycin/doxycycline per source (doxycycline after delivery).",
+            "time": "≤ 1 h",
+            "refs": [
+              "smfm-sepsis-2019"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Resuscitate",
+            "detail": "Left uterine displacement (> 20 weeks); 1-2 L crystalloid in boluses with reassessment (pulmonary oedema risk); noradrenaline for MAP ≥ 65 mmHg.",
+            "refs": [
+              "smfm-sepsis-2019"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Source control",
+            "detail": "Evacuation of retained products, delivery for chorioamnionitis, drainage of abscess, hysterectomy for necrotising myometritis.",
+            "refs": [
+              "smfm-sepsis-2019"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Fetal considerations",
+            "detail": "Fetal monitoring when viable; maternal stabilisation is the best fetal resuscitation; delivery is not indicated for maternal sepsis alone unless intrauterine source.",
+            "refs": [
+              "smfm-sepsis-2019"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Other",
+            "detail": "VTE prophylaxis, glucose control, steroids for fetal lung maturity if preterm delivery likely; avoid ACE inhibitors and tetracyclines before delivery.",
+            "refs": [
+              "smfm-sepsis-2019"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "piperacillin-tazobactam",
+            "role": "Empirical maternal sepsis",
+            "route": "IV",
+            "dose": "4.5 g q6h",
+            "verify": "Per local antibiogram.",
+            "refs": [
+              "smfm-sepsis-2019"
+            ]
+          },
+          {
+            "drugId": "clindamycin",
+            "role": "Suspected toxic shock / GAS",
+            "route": "IV",
+            "dose": "900 mg q8h",
+            "refs": [
+              "smfm-sepsis-2019"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Severe abdominal pain, diarrhoea, rash and shock postpartum: group A streptococcal sepsis - very rapid progression; clindamycin plus beta-lactam and surgical review.",
+            "refs": [
+              "smfm-sepsis-2019"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Attributing tachycardia and low BP to normal pregnancy.",
+            "refs": [
+              "smfm-sepsis-2019"
+            ]
+          },
+          {
+            "text": "Supine positioning causing aortocaval compression and worsening hypotension.",
+            "refs": [
+              "smfm-sepsis-2019"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Lactate is not increased by normal pregnancy, but can rise during labour.",
+            "refs": [
+              "smfm-sepsis-2019"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Pregnancy alters immunity (reduced cell-mediated immunity), raises cardiac output and plasma volume, and lowers colloid osmotic pressure - increasing susceptibility to pulmonary oedema and making shock recognition harder.",
+        "evidence": "- SMFM Consult #47 (2019): recognition, antibiotics within 1 h, fluid and vasopressor strategy in pregnancy [Plante 2019].",
+        "controversies": "- Best obstetric sepsis screening tool; fluid volume in pregnancy.",
+        "indiaNotes": "- Unsafe abortion, home deliveries and prolonged labour contribute to maternal sepsis in India; also consider malaria (severe in pregnancy), dengue, scrub typhus and leptospirosis (doxycycline/azithromycin per stage).\n- Hepatitis E causes high mortality in pregnancy."
+      },
+      "drugIds": [
+        "piperacillin-tazobactam",
+        "clindamycin"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "smfm-sepsis-2019"
+      ],
+      "quiz": [
+        {
+          "id": "sepsis-pregnancy-q1",
+          "stem": "Antibiotic timing in maternal septic shock:",
+          "options": [
+            "Within 1 h",
+            "After delivery",
+            "After cultures return",
+            "Within 6 h"
+          ],
+          "answerIndex": 0,
+          "explanation": "SMFM."
+        },
+        {
+          "id": "sepsis-pregnancy-q2",
+          "stem": "Add for suspected group A streptococcal toxic shock:",
+          "options": [
+            "Clindamycin",
+            "Fluconazole",
+            "Metronidazole only",
+            "Gentamicin only"
+          ],
+          "answerIndex": 0,
+          "explanation": "Toxin suppression."
+        },
+        {
+          "id": "sepsis-pregnancy-q3",
+          "stem": "Position during resuscitation after 20 weeks:",
+          "options": [
+            "Supine",
+            "Left uterine displacement",
+            "Trendelenburg",
+            "Prone"
+          ],
+          "answerIndex": 1,
+          "explanation": "Relieve aortocaval compression."
+        }
+      ]
+    },
+    {
+      "id": "peripartum-cardiomyopathy",
+      "title": "Peripartum cardiomyopathy",
+      "summary": "Diagnose PPCM by echo, treat heart failure with pregnancy-safe drugs, consider bromocriptine with anticoagulation, and escalate early to mechanical support in shock.",
+      "viewKey": "topic:obstetric-critical-care/peripartum-cardiomyopathy",
+      "uiHints": {
+        "icon": "heart",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "PPCM: heart failure with LVEF < 45% towards the end of pregnancy or in the months following delivery (mostly in the first month), with no other identifiable cause.",
+          "refs": [
+            "hfa-ppcm-2019"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Suspect and confirm",
+            "detail": "Breathlessness, orthopnoea, oedema late pregnancy/postpartum: BNP/NT-proBNP, ECG, echocardiography; exclude pre-eclampsia, PE, AFE, myocarditis, pre-existing cardiomyopathy.",
+            "refs": [
+              "hfa-ppcm-2019"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Acute HF",
+            "detail": "Oxygen/NIV, IV furosemide, nitrates if BP allows; avoid ACEi/ARB/ARNI/MRA/SGLT2i before delivery (use hydralazine-nitrate); beta-blocker (metoprolol) once stable.",
+            "refs": [
+              "hfa-ppcm-2019",
+              "esc-pregnancy-2018"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Cardiogenic shock",
+            "detail": "Early transfer to a centre with MCS; levosimendan preferred inotrope (catecholamines, especially dobutamine, may be harmful in PPCM); IABP/Impella/VA-ECMO; urgent delivery if antepartum.",
+            "refs": [
+              "hfa-ppcm-2019"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Bromocriptine",
+            "detail": "2.5 mg BD for 2 weeks then daily for 6 weeks (severe, EF < 25% or shock), always with anticoagulation; stops breastfeeding.",
+            "refs": [
+              "hfa-ppcm-2019",
+              "bromo-2017"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Anticoagulation",
+            "detail": "Therapeutic anticoagulation for LV thrombus, AF or EF < 30-35% (high thrombosis risk peripartum); at least prophylactic with bromocriptine.",
+            "refs": [
+              "hfa-ppcm-2019"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Postpartum",
+            "detail": "Full guideline-directed HF therapy (ACEi/ARNI, MRA, beta-blocker, SGLT2i if not breastfeeding); counsel on future pregnancy risk.",
+            "refs": [
+              "hfa-ppcm-2019",
+              "esc-pregnancy-2018"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "bromocriptine",
+            "role": "PPCM (severe)",
+            "route": "Oral",
+            "dose": "2.5 mg BD × 2 weeks, then 2.5 mg daily × 6 weeks",
+            "notes": "With anticoagulation.",
+            "refs": [
+              "hfa-ppcm-2019",
+              "bromo-2017"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "PPCM with hypotension, lactate rise or LVEF < 25%: high risk - transfer early for mechanical circulatory support.",
+            "refs": [
+              "hfa-ppcm-2019"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Missing PPCM as 'postpartum anaemia' or 'chest infection'.",
+            "refs": [
+              "hfa-ppcm-2019"
+            ]
+          },
+          {
+            "text": "ACE inhibitors before delivery (fetotoxic).",
+            "refs": [
+              "esc-pregnancy-2018"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Enalapril and captopril are compatible with breastfeeding; ARNI and SGLT2 inhibitors are not recommended while breastfeeding.",
+            "refs": [
+              "esc-pregnancy-2018"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Oxidative stress cleaves prolactin into a 16-kDa fragment that is anti-angiogenic and cardiotoxic; together with sFlt-1 (high in pre-eclampsia) and genetic predisposition (titin variants), this causes cardiomyocyte and endothelial injury - the rationale for bromocriptine.",
+        "evidence": "- HFA ESC 2019 position statement [Bauersachs 2019]; ESC 2018 pregnancy guidelines [Regitz-Zagrosek 2018].\n- Bromocriptine RCT (63 patients): no difference between 1 and 8 weeks; high recovery rates in both [Hilfiker-Kleiner 2017].",
+        "controversies": "- Bromocriptine efficacy (no placebo-controlled RCT completed); levosimendan vs other inotropes.",
+        "indiaNotes": "- PPCM incidence is relatively high in parts of India; anaemia, multiparity, pre-eclampsia and malnutrition are associated.\n- Mechanical circulatory support is concentrated in metropolitan centres; early referral is crucial."
+      },
+      "drugIds": [
+        "bromocriptine"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "hfa-ppcm-2019",
+        "esc-pregnancy-2018",
+        "bromo-2017"
+      ],
+      "quiz": [
+        {
+          "id": "peripartum-cardiomyopathy-q1",
+          "stem": "PPCM LVEF threshold:",
+          "options": [
+            "< 55%",
+            "< 45%",
+            "< 25%",
+            "< 65%"
+          ],
+          "answerIndex": 1,
+          "explanation": "HFA ESC 2019."
+        },
+        {
+          "id": "peripartum-cardiomyopathy-q2",
+          "stem": "Bromocriptine should be given with:",
+          "options": [
+            "Anticoagulation",
+            "Dobutamine",
+            "Ergometrine",
+            "Tetracycline"
+          ],
+          "answerIndex": 0,
+          "explanation": "Thrombosis risk."
+        },
+        {
+          "id": "peripartum-cardiomyopathy-q3",
+          "stem": "Drug class to avoid before delivery:",
+          "options": [
+            "Beta-blockers",
+            "ACE inhibitors",
+            "Loop diuretics",
+            "Hydralazine"
+          ],
+          "answerIndex": 1,
+          "explanation": "Fetotoxic."
+        }
+      ]
+    },
+    {
+      "id": "maternal-cardiac-arrest",
+      "title": "Maternal cardiac arrest and amniotic fluid embolism",
+      "summary": "High-quality CPR with left uterine displacement, early airway, resuscitative hysterotomy by 5 minutes, and the reversible causes specific to pregnancy.",
+      "viewKey": "topic:obstetric-critical-care/maternal-cardiac-arrest",
+      "uiHints": {
+        "icon": "heart-pulse",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Maternal arrest needs two patients' teams (obstetric, anaesthetic, neonatal). After about 20 weeks (fundus at or above umbilicus) the gravid uterus compresses the aorta and IVC; delivery improves maternal resuscitation.",
+          "refs": [
+            "erc2025-special",
+            "aha-arrest-preg-2015"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Start CPR and call",
+            "detail": "Call obstetric arrest team and neonatology; CPR with standard hand position; defibrillate with standard energies (remove fetal monitors).",
+            "time": "0 min",
+            "refs": [
+              "erc2025-special",
+              "aha-arrest-preg-2015"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Manual left uterine displacement",
+            "detail": "Continuous manual displacement to the left (or 15-30° left tilt if on firm surface) when fundus is at or above the umbilicus.",
+            "time": "0 min",
+            "refs": [
+              "erc2025-special",
+              "aha-arrest-preg-2015"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Airway and access",
+            "detail": "Early airway by experienced operator (difficult airway, aspiration risk; smaller tube); IV/IO access above the diaphragm.",
+            "refs": [
+              "erc2025-special"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Resuscitative hysterotomy",
+            "detail": "If no ROSC by 4 minutes, perform perimortem caesarean delivery at the site of arrest, aiming delivery within 5 minutes of arrest.",
+            "time": "4-5 min",
+            "refs": [
+              "erc2025-special",
+              "aha-arrest-preg-2015"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Reversible causes (BEAU-CHOPS)",
+            "detail": "Bleeding/DIC, Embolism (PE, AFE), Anaesthetic complications (high block, LAST - lipid), Uterine atony, Cardiac disease (PPCM, MI, dissection), Hypertension/eclampsia/stroke, Others (Hs and Ts), Placenta, Sepsis. Magnesium toxicity: calcium gluconate.",
+            "refs": [
+              "aha-arrest-preg-2015"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Amniotic fluid embolism",
+            "detail": "Sudden hypoxia, hypotension/arrest and DIC during labour or shortly after: high-quality CPR, early delivery, aggressive correction of coagulopathy (MTP, fibrinogen), RV support (avoid fluid overload, inhaled vasodilators, noradrenaline/dobutamine/milrinone), ECMO where available.",
+            "refs": [
+              "smfm-afe-2020"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Post-arrest",
+            "detail": "ICU; targeted temperature control avoiding fever; treat cause; neonatal resuscitation team.",
+            "refs": [
+              "erc2025-special"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "calcium-gluconate",
+            "role": "Arrest on magnesium infusion",
+            "route": "IV",
+            "dose": "1 g (10 mL 10%)",
+            "refs": [
+              "aha-arrest-preg-2015"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Collapse with hypoxia and bleeding/DIC during or just after delivery: amniotic fluid embolism.",
+            "refs": [
+              "smfm-afe-2020"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Waiting to transfer to theatre for perimortem caesarean: perform it where the arrest occurs.",
+            "refs": [
+              "erc2025-special"
+            ]
+          },
+          {
+            "text": "Stopping CPR to tilt the patient: use manual uterine displacement instead.",
+            "refs": [
+              "aha-arrest-preg-2015"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Keep a perimortem caesarean kit (scalpel) on every labour ward and emergency resuscitation trolley.",
+            "refs": [
+              "aha-arrest-preg-2015"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Maternal cardiac arrest",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Pregnant patient unresponsive, not breathing normally"
+          },
+          {
+            "id": "cpr",
+            "type": "action",
+            "text": "CPR, call obstetric/neonatal team, defibrillate if shockable",
+            "severity": "critical"
+          },
+          {
+            "id": "fund",
+            "type": "decision",
+            "text": "Fundus at/above umbilicus (~≥ 20 weeks)?"
+          },
+          {
+            "id": "lud",
+            "type": "action",
+            "text": "Manual left uterine displacement; airway; IV above diaphragm"
+          },
+          {
+            "id": "std",
+            "type": "end",
+            "text": "Standard ALS"
+          },
+          {
+            "id": "rosc",
+            "type": "decision",
+            "text": "ROSC by 4 min?"
+          },
+          {
+            "id": "pmcs",
+            "type": "action",
+            "text": "Resuscitative hysterotomy - deliver by 5 min",
+            "severity": "critical"
+          },
+          {
+            "id": "cause",
+            "type": "end",
+            "text": "Treat cause (BEAU-CHOPS); post-arrest ICU"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "cpr"
+          },
+          {
+            "from": "cpr",
+            "to": "fund"
+          },
+          {
+            "from": "fund",
+            "to": "lud",
+            "label": "Yes"
+          },
+          {
+            "from": "fund",
+            "to": "std",
+            "label": "No"
+          },
+          {
+            "from": "lud",
+            "to": "rosc"
+          },
+          {
+            "from": "rosc",
+            "to": "cause",
+            "label": "Yes"
+          },
+          {
+            "from": "rosc",
+            "to": "pmcs",
+            "label": "No"
+          },
+          {
+            "from": "pmcs",
+            "to": "cause"
+          }
+        ],
+        "refs": [
+          "erc2025-special",
+          "aha-arrest-preg-2015"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Aortocaval compression reduces venous return and cardiac output during CPR by up to 30-40%; emptying the uterus restores venous return. Pregnancy increases oxygen consumption and reduces FRC, so hypoxia develops rapidly.",
+        "evidence": "- ERC 2025 Special Circumstances [Lott 2025]; AHA 2015 scientific statement [Jeejeebhoy 2015]; SMFM AFE management [Pacheco 2020].",
+        "controversies": "- Exact timing of hysterotomy; ECPR in maternal arrest.",
+        "indiaNotes": "- Most maternal arrests in India occur in labour rooms of district hospitals; regular drills, a hysterotomy kit and immediate access to blood are key quality measures (LaQshya)."
+      },
+      "drugIds": [
+        "calcium-gluconate"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "erc2025-special",
+        "aha-arrest-preg-2015",
+        "smfm-afe-2020"
+      ],
+      "quiz": [
+        {
+          "id": "maternal-cardiac-arrest-q1",
+          "stem": "Resuscitative hysterotomy should be performed if no ROSC by:",
+          "options": [
+            "1 min",
+            "4 min (delivery by 5 min)",
+            "15 min",
+            "30 min"
+          ],
+          "answerIndex": 1,
+          "explanation": "ERC/AHA."
+        },
+        {
+          "id": "maternal-cardiac-arrest-q2",
+          "stem": "Uterine displacement is needed when:",
+          "options": [
+            "Any gestation",
+            "Fundus at or above umbilicus (~20 weeks)",
+            "Only in labour",
+            "Never"
+          ],
+          "answerIndex": 1,
+          "explanation": "Aortocaval compression."
+        },
+        {
+          "id": "maternal-cardiac-arrest-q3",
+          "stem": "Arrest on magnesium infusion. Give:",
+          "options": [
+            "Calcium gluconate",
+            "Lipid emulsion",
+            "Naloxone",
+            "Insulin"
+          ],
+          "answerIndex": 0,
+          "explanation": "Magnesium toxicity."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "magnesium",
+      "name": "Magnesium sulfate",
+      "class": "Anticonvulsant",
+      "indications": "Eclampsia treatment; seizure prophylaxis in severe pre-eclampsia",
+      "adultDose": "Zuspan (IV): 4 g IV over 15-20 min, then 1 g/h for 24 h. Pritchard (IM, widely used in India): 4 g IV (20%) over 15-20 min + 10 g IM (5 g of 50% in each buttock), then 5 g IM every 4 h in alternate buttocks for 24 h. Recurrent seizure: further 2 g IV.",
+      "preparationIndia": "50% = 0.5 g/mL (1 g in 2 mL); dilute 4 g in NS to 20 mL (20%) for IV loading.",
+      "renalHepatic": "Oliguria/raised creatinine: reduce or withhold maintenance and check levels.",
+      "cautions": "Toxicity: loss of patellar reflexes (~7-10 mEq/L), respiratory depression, cardiac arrest. Antidote: calcium gluconate 1 g IV.",
+      "monitoring": "Before each dose: patellar reflex present, RR > 16/min, urine output > 100 mL/4 h.",
+      "refs": [
+        "acog-pe-2020",
+        "magpie",
+        "nice-ng133"
+      ]
+    },
+    {
+      "id": "labetalol",
+      "name": "Labetalol",
+      "class": "Alpha/beta-blocker",
+      "indications": "Acute severe hypertension in pregnancy (≥ 160/110)",
+      "adultDose": "20 mg IV over 2 min; if needed 40 mg after 10 min, then 80 mg every 10 min (max cumulative 300 mg); or infusion 1-2 mg/min.",
+      "preparationIndia": "5 mg/mL ampoules (20 mg/4 mL).",
+      "cautions": "Asthma, heart block; neonatal bradycardia/hypoglycaemia.",
+      "refs": [
+        "acog-pe-2020"
+      ]
+    },
+    {
+      "id": "hydralazine",
+      "name": "Hydralazine",
+      "class": "Arteriolar vasodilator",
+      "indications": "Acute severe hypertension in pregnancy",
+      "adultDose": "5-10 mg IV over 2 min; repeat 10 mg after 20 min if BP still ≥ 160/110 (max 20 mg bolus doses; then switch agent).",
+      "cautions": "Maternal hypotension (give with 250-500 mL crystalloid if dry), tachycardia, headache.",
+      "verify": "IV hydralazine availability in India is intermittent.",
+      "refs": [
+        "acog-pe-2020"
+      ]
+    },
+    {
+      "id": "nifedipine",
+      "name": "Nifedipine (immediate-release oral)",
+      "class": "Calcium-channel blocker",
+      "indications": "Acute severe hypertension in pregnancy (no IV access)",
+      "adultDose": "10 mg orally; if needed 20 mg after 20 min, then 20 mg after another 20 min; then switch agent.",
+      "cautions": "Do not give sublingually; caution with magnesium (theoretical hypotension).",
+      "refs": [
+        "acog-pe-2020"
+      ]
+    },
+    {
+      "id": "calcium-gluconate",
+      "name": "Calcium gluconate 10%",
+      "class": "Electrolyte / magnesium antagonist",
+      "indications": "Magnesium toxicity; hypocalcaemia with massive transfusion",
+      "adultDose": "1 g (10 mL of 10%) IV over 10 min.",
+      "refs": [
+        "acog-pe-2020"
+      ]
+    },
+    {
+      "id": "oxytocin",
+      "name": "Oxytocin",
+      "class": "Uterotonic",
+      "indications": "PPH prevention and treatment",
+      "adultDose": "Treatment: 10 units IV slowly (or IM), then infusion 40 units in 500 mL crystalloid at 125 mL/h (10 units/h).",
+      "cautions": "Rapid IV bolus causes hypotension; water intoxication with prolonged high doses.",
+      "refs": [
+        "who-pph-2025",
+        "rcog-pph-2016"
+      ]
+    },
+    {
+      "id": "txa",
+      "name": "Tranexamic acid",
+      "class": "Antifibrinolytic",
+      "indications": "PPH (all causes)",
+      "adultDose": "1 g IV over 10 min as soon as PPH is diagnosed and within 3 h of birth; second 1 g if bleeding continues after 30 min or restarts within 24 h.",
+      "renalHepatic": "Reduce repeated doses in severe AKI.",
+      "refs": [
+        "woman",
+        "who-pph-2025"
+      ]
+    },
+    {
+      "id": "carboprost",
+      "name": "Carboprost (15-methyl PGF2α)",
+      "class": "Uterotonic prostaglandin",
+      "indications": "Refractory uterine atony",
+      "adultDose": "250 mcg IM (or intramyometrial) every 15 min, max 8 doses (2 mg).",
+      "cautions": "Asthma (bronchospasm), hypertension, diarrhoea, fever.",
+      "refs": [
+        "rcog-pph-2016"
+      ]
+    },
+    {
+      "id": "misoprostol",
+      "name": "Misoprostol",
+      "class": "Uterotonic prostaglandin E1 analogue",
+      "indications": "PPH when other uterotonics unavailable/adjunct",
+      "adultDose": "800 mcg sublingual (single dose).",
+      "cautions": "Shivering, pyrexia.",
+      "refs": [
+        "who-pph-2025",
+        "rcog-pph-2016"
+      ]
+    },
+    {
+      "id": "methylergometrine",
+      "name": "Methylergometrine (ergometrine)",
+      "class": "Ergot uterotonic",
+      "indications": "Uterine atony",
+      "adultDose": "Methylergometrine 0.2 mg IM, may repeat after 15 min (ergometrine 0.5 mg IM per RCOG).",
+      "cautions": "Contraindicated in hypertension/pre-eclampsia, heart disease.",
+      "refs": [
+        "rcog-pph-2016"
+      ]
+    },
+    {
+      "id": "piperacillin-tazobactam",
+      "name": "Piperacillin-tazobactam",
+      "class": "Broad-spectrum beta-lactam",
+      "indications": "Maternal sepsis (genital tract, unknown source)",
+      "adultDose": "4.5 g IV q6h (± clindamycin for toxin suppression if GAS/toxic shock suspected).",
+      "renalHepatic": "Adjust for CrCl < 40.",
+      "refs": [
+        "smfm-sepsis-2019"
+      ]
+    },
+    {
+      "id": "clindamycin",
+      "name": "Clindamycin",
+      "class": "Lincosamide",
+      "indications": "Toxin suppression in group A streptococcal/staphylococcal toxic shock",
+      "adultDose": "900 mg IV q8h with a beta-lactam.",
+      "refs": [
+        "smfm-sepsis-2019"
+      ]
+    },
+    {
+      "id": "bromocriptine",
+      "name": "Bromocriptine",
+      "class": "Dopamine agonist (prolactin inhibitor)",
+      "indications": "Peripartum cardiomyopathy (with anticoagulation)",
+      "adultDose": "2.5 mg orally twice daily for 2 weeks, then 2.5 mg daily for 6 weeks (severe LVEF < 25%/shock); 2.5 mg daily for 1 week in uncomplicated cases.",
+      "cautions": "Thrombosis risk: give with at least prophylactic anticoagulation; stops lactation.",
+      "refs": [
+        "hfa-ppcm-2019",
+        "bromo-2017",
+        "esc-pregnancy-2018"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "esicm-transfusion-2021",
+      "citation": "Vlaar APJ, Dionne JC, de Bruin S, et al. Transfusion strategies in bleeding critically ill adults: a clinical practice guideline from the European Society of Intensive Care Medicine. Intensive Care Med 2021;47:1368-92.",
+      "url": "https://doi.org/10.1007/s00134-021-06531-x",
+      "year": 2021,
+      "type": "guideline",
+      "doi": "10.1007/s00134-021-06531-x"
+    },
+    {
+      "id": "easl-alf-2017",
+      "citation": "European Association for the Study of the Liver. EASL Clinical Practical Guidelines on the management of acute (fulminant) liver failure. J Hepatol 2017;66:1047-81.",
+      "url": "https://doi.org/10.1016/j.jhep.2016.12.003",
+      "year": 2017,
+      "type": "guideline",
+      "doi": "10.1016/j.jhep.2016.12.003"
+    },
+    {
+      "id": "acog-pe-2020",
+      "citation": "American College of Obstetricians and Gynecologists. Gestational hypertension and preeclampsia: ACOG Practice Bulletin No. 222. Obstet Gynecol 2020;135:e237-60.",
+      "url": "https://doi.org/10.1097/AOG.0000000000003891",
+      "year": 2020,
+      "type": "guideline",
+      "doi": "10.1097/AOG.0000000000003891"
+    },
+    {
+      "id": "isshp-2021",
+      "citation": "Magee LA, Brown MA, Hall DR, et al. The 2021 International Society for the Study of Hypertension in Pregnancy classification, diagnosis and management recommendations for international practice. Pregnancy Hypertens 2022;27:148-69.",
+      "url": "https://doi.org/10.1016/j.preghy.2021.09.008",
+      "year": 2022,
+      "type": "guideline",
+      "doi": "10.1016/j.preghy.2021.09.008"
+    },
+    {
+      "id": "nice-ng133",
+      "citation": "National Institute for Health and Care Excellence. Hypertension in pregnancy: diagnosis and management (NG133). London: NICE; 2019 (updated 2023).",
+      "url": "https://www.nice.org.uk/guidance/ng133",
+      "year": 2019,
+      "type": "guideline"
+    },
+    {
+      "id": "magpie",
+      "citation": "Magpie Trial Collaborative Group. Do women with pre-eclampsia, and their babies, benefit from magnesium sulphate? The Magpie Trial: a randomised placebo-controlled trial. Lancet 2002;359:1877-90.",
+      "url": "https://doi.org/10.1016/S0140-6736(02)08778-0",
+      "year": 2002,
+      "type": "trial",
+      "doi": "10.1016/S0140-6736(02)08778-0"
+    },
+    {
+      "id": "who-pph-2025",
+      "citation": "World Health Organization, FIGO, ICM. Consolidated guidelines for the prevention, diagnosis and treatment of postpartum haemorrhage. Geneva: WHO; 2025.",
+      "url": "https://www.who.int/publications/i/item/9789240115637",
+      "year": 2025,
+      "type": "guideline"
+    },
+    {
+      "id": "e-motive",
+      "citation": "Gallos I, Devall A, Martin J, et al. Randomized trial of early detection and treatment of postpartum hemorrhage (E-MOTIVE). N Engl J Med 2023;389:11-21.",
+      "url": "https://doi.org/10.1056/NEJMoa2303966",
+      "year": 2023,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa2303966"
+    },
+    {
+      "id": "woman",
+      "citation": "WOMAN Trial Collaborators. Effect of early tranexamic acid administration on mortality, hysterectomy, and other morbidities in women with post-partum haemorrhage (WOMAN). Lancet 2017;389:2105-16.",
+      "url": "https://doi.org/10.1016/S0140-6736(17)30638-4",
+      "year": 2017,
+      "type": "trial",
+      "doi": "10.1016/S0140-6736(17)30638-4"
+    },
+    {
+      "id": "rcog-pph-2016",
+      "citation": "Mavrides E, Allard S, Chandraharan E, et al.; Royal College of Obstetricians and Gynaecologists. Prevention and management of postpartum haemorrhage: Green-top Guideline No. 52. BJOG 2017;124:e106-49.",
+      "url": "https://doi.org/10.1111/1471-0528.14178",
+      "year": 2016,
+      "type": "guideline",
+      "doi": "10.1111/1471-0528.14178"
+    },
+    {
+      "id": "swansea-2002",
+      "citation": "Ch'ng CL, Morgan M, Hainsworth I, Kingham JG. Prospective study of liver dysfunction in pregnancy in Southwest Wales. Gut 2002;51:876-80.",
+      "url": "https://doi.org/10.1136/gut.51.6.876",
+      "year": 2002,
+      "type": "trial",
+      "doi": "10.1136/gut.51.6.876"
+    },
+    {
+      "id": "smfm-sepsis-2019",
+      "citation": "Society for Maternal-Fetal Medicine; Plante LA, Pacheco LD, Louis JM. SMFM Consult Series #47: Sepsis during pregnancy and the puerperium. Am J Obstet Gynecol 2019;220:B2-10.",
+      "url": "https://doi.org/10.1016/j.ajog.2019.01.216",
+      "year": 2019,
+      "type": "guideline",
+      "doi": "10.1016/j.ajog.2019.01.216"
+    },
+    {
+      "id": "hfa-ppcm-2019",
+      "citation": "Bauersachs J, Konig T, van der Meer P, et al. Pathophysiology, diagnosis and management of peripartum cardiomyopathy: a position statement from the Heart Failure Association of the ESC Study Group on peripartum cardiomyopathy. Eur J Heart Fail 2019;21:827-43.",
+      "url": "https://doi.org/10.1002/ejhf.1493",
+      "year": 2019,
+      "type": "consensus",
+      "doi": "10.1002/ejhf.1493"
+    },
+    {
+      "id": "esc-pregnancy-2018",
+      "citation": "Regitz-Zagrosek V, Roos-Hesselink JW, Bauersachs J, et al. 2018 ESC Guidelines for the management of cardiovascular diseases during pregnancy. Eur Heart J 2018;39:3165-241.",
+      "url": "https://doi.org/10.1093/eurheartj/ehy340",
+      "year": 2018,
+      "type": "guideline",
+      "doi": "10.1093/eurheartj/ehy340"
+    },
+    {
+      "id": "bromo-2017",
+      "citation": "Hilfiker-Kleiner D, Haghikia A, Berliner D, et al. Bromocriptine for the treatment of peripartum cardiomyopathy: a multicentre randomized study. Eur Heart J 2017;38:2671-9.",
+      "url": "https://doi.org/10.1093/eurheartj/ehx355",
+      "year": 2017,
+      "type": "trial",
+      "doi": "10.1093/eurheartj/ehx355"
+    },
+    {
+      "id": "aha-arrest-preg-2015",
+      "citation": "Jeejeebhoy FM, Zelop CM, Lipman S, et al. Cardiac arrest in pregnancy: a scientific statement from the American Heart Association. Circulation 2015;132:1747-73.",
+      "url": "https://doi.org/10.1161/CIR.0000000000000300",
+      "year": 2015,
+      "type": "consensus",
+      "doi": "10.1161/CIR.0000000000000300"
+    },
+    {
+      "id": "erc2025-special",
+      "citation": "Lott C, et al. European Resuscitation Council Guidelines 2025: Special Circumstances in Resuscitation. Resuscitation 2025;215:110753.",
+      "url": "https://doi.org/10.1016/j.resuscitation.2025.110753",
+      "year": 2025,
+      "type": "guideline",
+      "doi": "10.1016/j.resuscitation.2025.110753"
+    },
+    {
+      "id": "smfm-afe-2020",
+      "citation": "Society for Maternal-Fetal Medicine; Pacheco LD, Clark SL, Klassen M, Hankins GDV. Amniotic fluid embolism: principles of early clinical management. Am J Obstet Gynecol 2020;222:48-52.",
+      "url": "https://doi.org/10.1016/j.ajog.2019.07.036",
+      "year": 2020,
+      "type": "guideline",
+      "doi": "10.1016/j.ajog.2019.07.036"
+    }
+  ]
+}

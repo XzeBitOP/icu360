@@ -1,0 +1,2184 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "shock-vasoactive-support",
+  "number": 3,
+  "folder": "03-shock-vasoactive-support",
+  "section": {
+    "id": "A",
+    "title": "Resuscitation and emergencies"
+  },
+  "phase": 1,
+  "title": "Shock and vasoactive support",
+  "summary": "Recognise shock early from perfusion, not just blood pressure; classify it with bedside tools and POCUS; give fluids only to responders; choose and titrate vasopressors and inotropes correctly; manage cardiogenic shock; and use lactate and capillary refill as resuscitation targets.",
+  "tags": [
+    "shock",
+    "hypotension",
+    "hypoperfusion",
+    "MAP",
+    "lactate",
+    "capillary refill",
+    "fluid responsiveness",
+    "passive leg raise",
+    "vasopressor",
+    "noradrenaline",
+    "vasopressin",
+    "adrenaline",
+    "inotrope",
+    "dobutamine",
+    "milrinone",
+    "levosimendan",
+    "cardiogenic shock",
+    "SCAI",
+    "Impella",
+    "ECMO",
+    "obstructive shock",
+    "distributive shock",
+    "hypovolaemic shock"
+  ],
+  "relatedModules": [
+    "sepsis-septic-shock",
+    "haemodynamic-monitoring",
+    "pocus-critical-care-echo",
+    "cardiac-emergencies-arrhythmias",
+    "pe-tamponade-aortic-emergencies",
+    "ecmo-mechanical-circulatory-support",
+    "icu-pharmacology-drug-infusions",
+    "fluids-electrolytes"
+  ],
+  "version": "0.2.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "droplets",
+    "accent": "critical"
+  },
+  "viewKey": "module:shock-vasoactive-support",
+  "topics": [
+    {
+      "id": "recognition-classification",
+      "title": "Recognising and classifying shock",
+      "summary": "Shock is inadequate tissue perfusion, often but not always with hypotension. Look at the three windows (skin, kidney, brain) and lactate, then use history, examination and POCUS to sort it into hypovolaemic, distributive, cardiogenic or obstructive.",
+      "viewKey": "topic:shock-vasoactive-support/recognition-classification",
+      "uiHints": {
+        "icon": "droplets",
+        "accent": "critical"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Circulatory shock is a life-threatening, generalised failure of oxygen delivery to meet cellular demand. Hypotension (SBP < 90 mmHg or MAP < 65 mmHg) is common but not required; signs of hypoperfusion and a raised lactate (> 2 mmol/L) define it.",
+          "refs": [
+            "cecconi2014"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "time": "0-5 min",
+            "title": "Look at the three windows",
+            "detail": "Skin: cold, mottled, capillary refill > 3 s. Kidney: urine < 0.5 mL/kg/h. Brain: confusion, agitation, drowsiness.",
+            "refs": [
+              "vincent2013"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0-5 min",
+            "title": "Measure",
+            "detail": "MAP (not just SBP), heart rate, shock index (HR/SBP > 0.9-1 is abnormal), SpO2, temperature, lactate (VBG is fine).",
+            "refs": [
+              "cecconi2014"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "0-10 min",
+            "title": "Start resuscitation while you think",
+            "detail": "O2, two large-bore cannulae, monitor, 500 mL crystalloid bolus unless overt pulmonary oedema, vasopressor early if MAP < 65 with diastolic < 40-50 mmHg."
+          },
+          {
+            "n": 4,
+            "time": "0-15 min",
+            "title": "Classify with VIP + POCUS",
+            "detail": "History and exam (bleeding, infection, chest pain, anaphylaxis, trauma). RUSH-style POCUS: pump (LV, RV, pericardium), tank (IVC, lungs, FAST, aorta), pipes (aorta, DVT).",
+            "refs": [
+              "vincent2013"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "15-60 min",
+            "title": "Treat the cause",
+            "detail": "Source control and antibiotics (septic); haemorrhage control (hypovolaemic); PCI or MCS (cardiogenic); thrombolysis, pericardiocentesis, decompression (obstructive); adrenaline IM (anaphylaxis)."
+          },
+          {
+            "n": 6,
+            "time": "Ongoing",
+            "title": "Arterial line and reassess",
+            "detail": "Arterial line once on vasopressors; reassess perfusion, lactate every 2 h, and fluid responsiveness before each further bolus.",
+            "refs": [
+              "cecconi2014"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "shock-types",
+            "title": "Four types of shock: bedside pattern",
+            "columns": [
+              "Type",
+              "Common causes",
+              "Skin / JVP",
+              "POCUS clue",
+              "Haemodynamics (CO / SVR / filling)"
+            ],
+            "rows": [
+              [
+                "Hypovolaemic",
+                "Haemorrhage, GI loss, burns, DKA",
+                "Cold / flat",
+                "Small hyperdynamic LV, collapsing IVC",
+                "↓ / ↑ / ↓"
+              ],
+              [
+                "Distributive",
+                "Sepsis, anaphylaxis, spinal cord injury, adrenal crisis, liver failure",
+                "Warm early / flat or normal",
+                "Hyperdynamic LV, normal or small IVC",
+                "↑ or normal / ↓ / ↓ or normal"
+              ],
+              [
+                "Cardiogenic",
+                "MI, myocarditis, cardiomyopathy, valve failure, arrhythmia",
+                "Cold / raised",
+                "Poor LV, B-lines, plethoric IVC",
+                "↓ / ↑ / ↑"
+              ],
+              [
+                "Obstructive",
+                "PE, tamponade, tension pneumothorax, severe LVOT obstruction",
+                "Cold / raised",
+                "Dilated RV (PE), effusion with RA/RV collapse, absent lung sliding",
+                "↓ / ↑ / ↑ (right)"
+              ]
+            ],
+            "caption": "Mixed shock is common (for example septic shock with septic cardiomyopathy).",
+            "refs": [
+              "vincent2013"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Lactate > 4 mmol/L or rising despite treatment."
+          },
+          {
+            "text": "Diastolic BP < 40 mmHg: severe vasoplegia; start noradrenaline now rather than more fluid."
+          },
+          {
+            "text": "Shock with raised JVP: think tamponade, tension pneumothorax, PE, RV infarct or LV failure before giving more fluid."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Normal BP does not exclude shock (young patients, chronic hypertension, beta-blockers)."
+          },
+          {
+            "text": "Treating the number: MAP 65 with mottling and rising lactate is still shock."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Mottling score and capillary refill time on the index finger are fast, repeatable perfusion markers (see ANDROMEDA topic)."
+          },
+          {
+            "text": "Shock index > 1 in trauma or GI bleed predicts need for transfusion."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Undifferentiated shock",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Hypotension or signs of hypoperfusion"
+          },
+          {
+            "id": "res",
+            "type": "action",
+            "text": "ABC, O2, IV access, lactate, ECG, monitor",
+            "severity": "critical"
+          },
+          {
+            "id": "pocus",
+            "type": "decision",
+            "text": "POCUS: what does the heart look like?"
+          },
+          {
+            "id": "pe",
+            "type": "action",
+            "text": "Large RV, small LV: think PE (or RV infarct) → module 11"
+          },
+          {
+            "id": "tamp",
+            "type": "action",
+            "text": "Pericardial effusion with RA/RV collapse: pericardiocentesis → module 11"
+          },
+          {
+            "id": "poorlv",
+            "type": "action",
+            "text": "Poor LV, B-lines: cardiogenic shock pathway",
+            "severity": "high"
+          },
+          {
+            "id": "hyper",
+            "type": "decision",
+            "text": "Hyperdynamic or normal LV: IVC small or fluid responsive?"
+          },
+          {
+            "id": "fluid",
+            "type": "action",
+            "text": "Fluid bolus 250-500 mL, look for bleeding or losses; reassess"
+          },
+          {
+            "id": "vaso",
+            "type": "action",
+            "text": "Distributive: noradrenaline to MAP ≥ 65, treat cause (sepsis, anaphylaxis, adrenal)"
+          },
+          {
+            "id": "reass",
+            "type": "end",
+            "text": "Reassess perfusion targets; arterial line; repeat lactate in 2 h"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "res"
+          },
+          {
+            "from": "res",
+            "to": "pocus"
+          },
+          {
+            "from": "pocus",
+            "to": "pe",
+            "label": "Dilated RV"
+          },
+          {
+            "from": "pocus",
+            "to": "tamp",
+            "label": "Effusion with tamponade"
+          },
+          {
+            "from": "pocus",
+            "to": "poorlv",
+            "label": "Poor LV"
+          },
+          {
+            "from": "pocus",
+            "to": "hyper",
+            "label": "Normal or hyperdynamic"
+          },
+          {
+            "from": "hyper",
+            "to": "fluid",
+            "label": "Yes"
+          },
+          {
+            "from": "hyper",
+            "to": "vaso",
+            "label": "No"
+          },
+          {
+            "from": "fluid",
+            "to": "reass"
+          },
+          {
+            "from": "vaso",
+            "to": "reass"
+          },
+          {
+            "from": "pe",
+            "to": "reass"
+          },
+          {
+            "from": "tamp",
+            "to": "reass"
+          },
+          {
+            "from": "poorlv",
+            "to": "reass"
+          }
+        ],
+        "refs": [
+          "vincent2013",
+          "cecconi2014"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Oxygen delivery DO2 = CO × CaO2 (CaO2 ≈ 1.34 × Hb × SaO2). Shock is a mismatch between DO2 and VO2. Early on, the tissues extract more oxygen (ScvO2 falls). When extraction is maximal, anaerobic metabolism and lactate rise. In distributive shock, microcirculatory shunting can cause tissue hypoxia even with a normal or high cardiac output.",
+        "evidence": "- The ESICM 2014 consensus defines shock clinically with lactate > 2 mmol/L, recommends a MAP of ≥ 65 mmHg initially, does not require hypotension, and recommends echocardiography to identify the type of shock.",
+        "controversies": "- Individualised MAP targets in chronic hypertension (SEPSISPAM subgroup had less renal replacement therapy with a higher MAP).",
+        "indiaNotes": "- Many patients present late to Indian tertiary centres after transfer, already on dopamine started at a referring hospital; switch to noradrenaline.\n- Tropical infections (dengue, leptospirosis, scrub typhus, malaria) cause mixed distributive and capillary-leak shock; see module 25."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "mean-arterial-pressure",
+        "shock-index"
+      ],
+      "references": [
+        "vincent2013",
+        "cecconi2014"
+      ],
+      "quiz": [
+        {
+          "id": "recognition-classification-q1",
+          "stem": "A patient with BP 104/62 mmHg is confused, mottled, with lactate 5.1 mmol/L. Is this shock?",
+          "options": [
+            "No, BP is normal",
+            "Yes: hypoperfusion with raised lactate defines shock",
+            "Only if MAP < 65",
+            "Only if urine output is zero"
+          ],
+          "answerIndex": 1,
+          "explanation": "Shock is defined by hypoperfusion; hypotension is not required."
+        },
+        {
+          "id": "recognition-classification-q2",
+          "stem": "Shock with raised JVP, clear lungs, and a large RV on echo suggests:",
+          "options": [
+            "Hypovolaemia",
+            "Pulmonary embolism",
+            "Septic shock",
+            "Anaphylaxis"
+          ],
+          "answerIndex": 1,
+          "explanation": "Obstructive shock from PE: RV dilatation with a small, underfilled LV."
+        },
+        {
+          "id": "recognition-classification-q3",
+          "stem": "A diastolic BP of 35 mmHg in septic shock most strongly suggests:",
+          "options": [
+            "Need for more fluid",
+            "Severe vasoplegia; start noradrenaline",
+            "Cardiac tamponade",
+            "Aortic stenosis"
+          ],
+          "answerIndex": 1,
+          "explanation": "Low diastolic pressure reflects low vascular tone: early vasopressor."
+        }
+      ]
+    },
+    {
+      "id": "fluid-responsiveness",
+      "title": "Fluid challenge and fluid responsiveness",
+      "summary": "Give fluid only if the patient is likely to respond and needs more cardiac output. Use passive leg raise or a mini fluid challenge with a cardiac output surrogate, and stop when the response is lost or harm appears.",
+      "viewKey": "topic:shock-vasoactive-support/fluid-responsiveness",
+      "uiHints": {
+        "icon": "droplets",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Before each bolus",
+            "title": "Ask three questions",
+            "detail": "Does the patient need more cardiac output (hypoperfusion)? Will they respond (preload responsive)? Is it safe (lungs, abdomen, RV)?",
+            "refs": [
+              "cecconi2014"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Test",
+            "title": "Passive leg raise (PLR)",
+            "detail": "Start semi-recumbent 45°, then lower trunk flat and raise legs 45° for 60-90 s. A rise in cardiac output or VTI ≥ 10% predicts response (pulse pressure change is less reliable).",
+            "refs": [
+              "monnet2016"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Alternative",
+            "title": "Mini fluid challenge",
+            "detail": "100-250 mL over 1-2 min with LVOT VTI measured on echo; ≥ 10% rise suggests responsiveness."
+          },
+          {
+            "n": 4,
+            "time": "Alternative (controlled ventilation)",
+            "title": "Dynamic indices",
+            "detail": "Pulse pressure variation > 12-13% on Vt ≥ 8 mL/kg in sinus rhythm with no spontaneous effort; end-expiratory occlusion test (15 s) ≥ 5% rise in CO."
+          },
+          {
+            "n": 5,
+            "time": "Give",
+            "title": "Fluid challenge",
+            "detail": "250-500 mL balanced crystalloid over 10-15 min. Reassess perfusion and the targets after each bolus.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Stop",
+            "title": "Stop when",
+            "detail": "No longer responsive, perfusion normalised, or signs of harm (rising O2 need, B-lines, IVC plethoric, intra-abdominal hypertension, venous congestion on VExUS)."
+          }
+        ],
+        "tables": [
+          {
+            "id": "fr-tests",
+            "title": "Tests of fluid responsiveness and their limits",
+            "columns": [
+              "Test",
+              "Positive if",
+              "Does not work when"
+            ],
+            "rows": [
+              [
+                "Passive leg raise (with CO measure)",
+                "CO or VTI rises ≥ 10%",
+                "Intra-abdominal hypertension, leg amputation, raised ICP (relative)"
+              ],
+              [
+                "Pulse pressure variation",
+                "> 12-13%",
+                "Spontaneous breathing, arrhythmia, Vt < 8 mL/kg, low compliance, open chest"
+              ],
+              [
+                "End-expiratory occlusion",
+                "CO rises ≥ 5% with 15 s hold",
+                "Patient cannot tolerate 15 s pause"
+              ],
+              [
+                "Mini fluid challenge (100 mL)",
+                "VTI rises ≥ 10%",
+                "Poor echo windows; measurement error close to threshold"
+              ],
+              [
+                "CVP alone",
+                "Not recommended",
+                "Static CVP poorly predicts response"
+              ]
+            ],
+            "refs": [
+              "monnet2016",
+              "cecconi2014"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Rising FiO2 or new B-lines after fluid: stop fluids."
+          },
+          {
+            "text": "Large RV with septal flattening: more fluid may worsen RV failure."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Using a single CVP value or IVC diameter to decide on fluids in a ventilated patient."
+          },
+          {
+            "text": "Repeating 'just one more bolus' without measuring the response."
+          },
+          {
+            "text": "Measuring PLR response with BP alone: use VTI, cardiac output or ETCO2 change."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "A ≥ 2 mmHg (≥ 5%) rise in ETCO2 during PLR in a ventilated patient at fixed minute ventilation suggests fluid responsiveness."
+          },
+          {
+            "text": "Fluid responsiveness is normal physiology; it is not an indication by itself."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Should I give more fluid?",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Hypoperfusion persists"
+          },
+          {
+            "id": "need",
+            "type": "decision",
+            "text": "Signs of hypoperfusion still present?"
+          },
+          {
+            "id": "stop1",
+            "type": "end",
+            "text": "No need for fluid: maintenance only, de-resuscitate when possible"
+          },
+          {
+            "id": "safe",
+            "type": "decision",
+            "text": "Signs of fluid intolerance (B-lines, rising FiO2, RV dilatation, venous congestion)?"
+          },
+          {
+            "id": "stop2",
+            "type": "end",
+            "text": "Avoid fluid; vasopressor or inotrope per cause",
+            "severity": "high"
+          },
+          {
+            "id": "test",
+            "type": "decision",
+            "text": "Responsive on PLR, mini fluid challenge or PPV?"
+          },
+          {
+            "id": "give",
+            "type": "action",
+            "text": "Give 250-500 mL balanced crystalloid over 10-15 min; reassess"
+          },
+          {
+            "id": "nofluid",
+            "type": "end",
+            "text": "Not responsive: no further fluid; reconsider vasopressor or inotrope"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "need"
+          },
+          {
+            "from": "need",
+            "to": "stop1",
+            "label": "No"
+          },
+          {
+            "from": "need",
+            "to": "safe",
+            "label": "Yes"
+          },
+          {
+            "from": "safe",
+            "to": "stop2",
+            "label": "Yes"
+          },
+          {
+            "from": "safe",
+            "to": "test",
+            "label": "No"
+          },
+          {
+            "from": "test",
+            "to": "give",
+            "label": "Yes"
+          },
+          {
+            "from": "test",
+            "to": "nofluid",
+            "label": "No"
+          },
+          {
+            "from": "give",
+            "to": "need"
+          }
+        ],
+        "refs": [
+          "cecconi2014",
+          "monnet2016"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "On the steep part of the Frank-Starling curve, preload increases stroke volume; on the flat part it only raises venous pressure and causes oedema. Only about half of haemodynamically unstable ICU patients are fluid responsive.",
+        "evidence": "- **Monnet 2016 meta-analysis:** PLR-induced CO change had pooled sensitivity 85% and specificity 91% (threshold ~10%); PLR-induced pulse pressure change was less accurate.\n- **SSC 2026:** suggests dynamic measures (passive leg raise or a fluid bolus with stroke volume, SVV, pulse pressure or PPV) over physical examination or static measures alone (conditional, low certainty). After 30 mL/kg in septic shock, either a liberal or a restrictive strategy is acceptable.",
+        "controversies": "- Whether fluid restriction after initial resuscitation improves outcome (CLOVERS and CLASSIC showed no difference; see module 4).",
+        "indiaNotes": "- Without cardiac output monitors, use LVOT VTI on echo, or ETCO2 during PLR in ventilated patients; both are cheap."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "monnet2016",
+        "cecconi2014",
+        "ssc2026"
+      ],
+      "quiz": [
+        {
+          "id": "fluid-responsiveness-q1",
+          "stem": "A positive passive leg raise test is best defined by:",
+          "options": [
+            "SBP rise of 5 mmHg",
+            "Cardiac output or VTI rise ≥ 10%",
+            "Heart rate fall of 10/min",
+            "CVP rise of 2 mmHg"
+          ],
+          "answerIndex": 1,
+          "explanation": "Measure flow, not pressure: a ≥ 10% rise in CO or VTI."
+        },
+        {
+          "id": "fluid-responsiveness-q2",
+          "stem": "Pulse pressure variation is unreliable in all EXCEPT:",
+          "options": [
+            "AF",
+            "Spontaneously breathing patient",
+            "Fully ventilated patient with Vt 8 mL/kg in sinus rhythm",
+            "Open chest"
+          ],
+          "answerIndex": 2,
+          "explanation": "PPV needs controlled ventilation, sinus rhythm and adequate tidal volume."
+        },
+        {
+          "id": "fluid-responsiveness-q3",
+          "stem": "Static CVP of 4 mmHg means:",
+          "options": [
+            "The patient is certainly fluid responsive",
+            "A poor predictor; test responsiveness dynamically",
+            "Give 2 L",
+            "Start dobutamine"
+          ],
+          "answerIndex": 1,
+          "explanation": "Static CVP poorly predicts fluid response."
+        }
+      ]
+    },
+    {
+      "id": "vasopressors",
+      "title": "Vasopressors: choice, titration and escalation",
+      "summary": "Noradrenaline is first-line. Target MAP 65 mmHg (60-65 in septic patients aged ≥ 65). Add vasopressin as noradrenaline doses escalate (commonly 0.25-0.5 mcg/kg/min), then adrenaline; consider steroids and look for a missed cause in refractory shock.",
+      "viewKey": "topic:shock-vasoactive-support/vasopressors",
+      "uiHints": {
+        "icon": "droplets",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Start",
+            "title": "Noradrenaline first",
+            "detail": "0.05-0.1 mcg/kg/min. Start through a good proximal peripheral cannula rather than delay while central access is placed (SSC 2026).",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Target",
+            "title": "MAP 65 mmHg",
+            "detail": "Initial target MAP 65, kept within ~5 mmHg (SSC 2026, strong). Higher (75-80) only if chronic hypertension with AKI is a concern. Septic shock aged ≥ 65: SSC 2026 suggests 60-65 (65 trial).",
+            "refs": [
+              "ssc2026",
+              "sepsispam",
+              "sixtyfive"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Titrate",
+            "title": "Every 5-10 min",
+            "detail": "Increase in steps of 0.02-0.05 mcg/kg/min. Arterial line as soon as practical."
+          },
+          {
+            "n": 4,
+            "time": "Escalate",
+            "title": "Add vasopressin",
+            "detail": "As noradrenaline doses escalate (commonly 0.25-0.5 mcg/kg/min), add vasopressin 0.03 units/min (SSC 2026). VASSPR (2026): starting at 0.1 vs 0.4 made no mortality difference.",
+            "refs": [
+              "ssc2026",
+              "vasspr"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Escalate",
+            "title": "Add adrenaline",
+            "detail": "If MAP is still inadequate, or LV dysfunction: adrenaline 0.05-0.3 mcg/kg/min (can be added to noradrenaline alone if vasopressin is unavailable). Septic shock: hydrocortisone 200 mg/day for ongoing vasopressor need (module 4).",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Refractory",
+            "title": "Rethink",
+            "detail": "> 0.5-1 mcg/kg/min total: echo (LV, RV, tamponade, LVOT obstruction), bleeding, adrenal insufficiency, hypocalcaemia, acidosis, uncontrolled source, drug error (wrong dilution). Methylene blue or angiotensin II only as specialist rescue.",
+            "refs": [
+              "athos3"
+            ]
+          },
+          {
+            "n": 7,
+            "time": "Wean",
+            "title": "Order",
+            "detail": "Wean noradrenaline (or adrenaline) first; stop vasopressin when noradrenaline is low (e.g. < 0.1 mcg/kg/min)."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "noradrenaline",
+            "role": "First-line vasopressor",
+            "route": "IV infusion (central preferred)",
+            "dose": "0.05-0.5 mcg/kg/min",
+            "doseRange": {
+              "min": 0.01,
+              "max": 1,
+              "unit": "mcg/kg/min"
+            },
+            "dilution": "4 mg in 50 mL NS/D5 = 80 mcg/mL",
+            "target": "MAP 65 mmHg (60-65 if septic and aged ≥ 65)",
+            "workedExample": "70 kg × 0.1 mcg/kg/min = 7 mcg/min × 60 = 420 mcg/h ÷ 80 mcg/mL = 5.25 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "drugId": "vasopressin",
+            "role": "Second vasopressor",
+            "route": "IV infusion",
+            "dose": "0.03 units/min fixed",
+            "dilution": "20 units in 50 mL = 0.4 units/mL",
+            "workedExample": "0.03 units/min × 60 = 1.8 units/h ÷ 0.4 = 4.5 mL/h",
+            "calculatorId": "infusion-rate-fixed",
+            "refs": [
+              "ssc2026",
+              "vasst"
+            ]
+          },
+          {
+            "drugId": "adrenaline",
+            "role": "Third agent or with cardiac dysfunction",
+            "route": "IV infusion",
+            "dose": "0.05-0.3 mcg/kg/min",
+            "dilution": "4 mg in 50 mL = 80 mcg/mL",
+            "workedExample": "70 kg × 0.05 = 3.5 mcg/min = 210 mcg/h ÷ 80 = 2.6 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "drugId": "phenylephrine",
+            "role": "Bolus for transient vasodilatation or LVOT obstruction",
+            "route": "IV bolus",
+            "dose": "50-100 mcg",
+            "dilution": "10 mg in 100 mL NS = 100 mcg/mL; 0.5-1 mL per bolus",
+            "refs": [
+              "vincent2013"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "vasopressor-receptors",
+            "title": "Vasoactive drugs at a glance",
+            "columns": [
+              "Drug",
+              "Receptors",
+              "Main effect",
+              "Best use",
+              "Watch for"
+            ],
+            "rows": [
+              [
+                "Noradrenaline",
+                "α1 +++, β1 +",
+                "Vasoconstriction, modest inotropy",
+                "First-line in most shock",
+                "Ischaemia, extravasation"
+              ],
+              [
+                "Vasopressin",
+                "V1",
+                "Vasoconstriction, catecholamine-sparing",
+                "Second agent in vasodilatory shock; RV failure",
+                "Digital/mesenteric ischaemia"
+              ],
+              [
+                "Adrenaline",
+                "β1 +++, β2 ++, α1 ++",
+                "Inotropy + vasoconstriction",
+                "Refractory shock, anaphylaxis",
+                "Lactate rise, tachyarrhythmia"
+              ],
+              [
+                "Phenylephrine",
+                "α1",
+                "Pure vasoconstriction",
+                "Anaesthesia, LVOT obstruction, AF with hypotension",
+                "Reflex bradycardia, ↓ CO"
+              ],
+              [
+                "Dopamine",
+                "DA, β1, α1 (dose-dependent)",
+                "Inotropy, chronotropy",
+                "Rarely: bradycardia without pacing",
+                "Arrhythmias; worse in cardiogenic shock"
+              ],
+              [
+                "Dobutamine",
+                "β1 ++, β2 +",
+                "Inotropy, vasodilatation",
+                "Low output with adequate MAP",
+                "Hypotension, tachycardia"
+              ],
+              [
+                "Milrinone",
+                "PDE-3 inhibitor",
+                "Inotropy, pulmonary and systemic vasodilatation",
+                "RV failure, high PVR, beta-blocked",
+                "Hypotension; accumulates in AKI"
+              ]
+            ],
+            "refs": [
+              "vincent2013",
+              "ssc2026"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Extravasation of a vasopressor: stop the infusion at that site, aspirate, infiltrate phentolamine if available, elevate."
+          },
+          {
+            "text": "Needing noradrenaline > 0.5 mcg/kg/min: senior review and echo now."
+          },
+          {
+            "text": "Cold, blue fingers or rising lactate on high-dose vasopressor: consider ischaemia and reduce MAP target if possible."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Wrong syringe concentration after a nurse change (8 mg vs 4 mg in 50 mL): standardise and label."
+          },
+          {
+            "text": "Flushing the vasopressor line: causes a bolus and a hypertensive spike."
+          },
+          {
+            "text": "Starting dopamine first because it is 'safer peripherally' (it is not)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Run vasopressors through a dedicated lumen and change syringes using a 'double-pump' technique to avoid gaps."
+          },
+          {
+            "text": "In SOAP II, dopamine caused more arrhythmias than noradrenaline and higher mortality in the cardiogenic shock subgroup."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Vasopressor escalation",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "MAP < 65 despite appropriate fluid"
+          },
+          {
+            "id": "na",
+            "type": "action",
+            "text": "Noradrenaline 0.05-0.1 mcg/kg/min, titrate",
+            "severity": "critical"
+          },
+          {
+            "id": "ok1",
+            "type": "decision",
+            "text": "MAP ≥ 65 at noradrenaline < 0.25 mcg/kg/min?"
+          },
+          {
+            "id": "vp",
+            "type": "action",
+            "text": "Add vasopressin 0.03 units/min; septic shock: hydrocortisone"
+          },
+          {
+            "id": "ok2",
+            "type": "decision",
+            "text": "MAP ≥ 65 now?"
+          },
+          {
+            "id": "adr",
+            "type": "action",
+            "text": "Add adrenaline 0.05-0.3 mcg/kg/min; echo; search for missed causes",
+            "severity": "high"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Maintain; wean noradrenaline first when stable"
+          },
+          {
+            "id": "rescue",
+            "type": "end",
+            "text": "Refractory: specialist rescue (methylene blue, angiotensin II, MCS for cardiogenic)"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "na"
+          },
+          {
+            "from": "na",
+            "to": "ok1"
+          },
+          {
+            "from": "ok1",
+            "to": "cont",
+            "label": "Yes"
+          },
+          {
+            "from": "ok1",
+            "to": "vp",
+            "label": "No"
+          },
+          {
+            "from": "vp",
+            "to": "ok2"
+          },
+          {
+            "from": "ok2",
+            "to": "cont",
+            "label": "Yes"
+          },
+          {
+            "from": "ok2",
+            "to": "adr",
+            "label": "No"
+          },
+          {
+            "from": "adr",
+            "to": "rescue"
+          }
+        ],
+        "refs": [
+          "ssc2026"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **SSC 2026:** noradrenaline first line over dopamine, adrenaline or selepressin (strong) and over vasopressin or angiotensin II (now conditional); add vasopressin on escalating noradrenaline doses (conditional, moderate certainty); add adrenaline if MAP stays low on both (conditional); start vasopressors peripherally rather than delay (conditional); MAP 65 mmHg kept within ~5 mmHg (strong), 60-65 mmHg if aged ≥ 65 (new, conditional). New: suggests against terlipressin and against beta-blockers to treat septic shock; insufficient evidence for methylene blue.\n- **VASSPR (2026):** in ~3,960 septic shock patients, starting vasopressin at 0.1 vs 0.4 mcg/kg/min noradrenaline-equivalent did not change 28-day mortality (31.8% vs 33.0%).\n- **SOAP II (2010):** dopamine vs noradrenaline had similar overall mortality but more arrhythmias, and worse outcome in cardiogenic shock.\n- **VASST (2008):** vasopressin added to noradrenaline did not reduce mortality overall; possible benefit in less severe shock.\n- **SEPSISPAM (2014):** MAP 80-85 vs 65-70 had no mortality difference; less RRT in chronic hypertensives, more AF.\n- **65 trial (2020):** permissive MAP 60-65 in ≥ 65-year-olds was non-inferior.\n- **ATHOS-3 (2017):** angiotensin II raised MAP in catecholamine-refractory vasodilatory shock; no proven mortality benefit.",
+        "controversies": "- Timing of vasopressin and \"early multimodal vasopressors\".\n- Methylene blue in refractory vasoplegia: small trials only.",
+        "indiaNotes": "- Angiotensin II is not marketed in India; methylene blue is cheap and available but evidence is limited (verify local protocol).\n- Terlipressin is sometimes used instead of vasopressin; it is longer acting and not interchangeable, and SSC 2026 suggests against it in septic shock."
+      },
+      "drugIds": [
+        "noradrenaline",
+        "vasopressin",
+        "adrenaline",
+        "phenylephrine",
+        "dopamine"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-min",
+        "infusion-dose-from-rate",
+        "mean-arterial-pressure"
+      ],
+      "references": [
+        "ssc2026",
+        "soap2",
+        "vasst",
+        "sepsispam",
+        "sixtyfive",
+        "athos3",
+        "vasspr"
+      ],
+      "quiz": [
+        {
+          "id": "vasopressors-q1",
+          "stem": "First-line vasopressor in septic shock?",
+          "options": [
+            "Dopamine",
+            "Noradrenaline",
+            "Phenylephrine",
+            "Vasopressin"
+          ],
+          "answerIndex": 1,
+          "explanation": "SSC 2026 recommends noradrenaline first line over dopamine or adrenaline (strong)."
+        },
+        {
+          "id": "vasopressors-q2",
+          "stem": "In septic shock, when do SSC 2026 and common practice suggest adding vasopressin?",
+          "options": [
+            "At the first sign of hypotension, before noradrenaline",
+            "When noradrenaline doses are escalating (commonly 0.25-0.5 mcg/kg/min)",
+            "Only above 1 mcg/kg/min",
+            "Never"
+          ],
+          "answerIndex": 1,
+          "explanation": "SSC 2026 suggests adding vasopressin to noradrenaline on escalating doses; it sets no exact threshold, and 0.25-0.5 mcg/kg/min is common practice."
+        },
+        {
+          "id": "vasopressors-q3",
+          "stem": "70 kg patient, noradrenaline 4 mg/50 mL, desired 0.2 mcg/kg/min. Rate?",
+          "options": [
+            "5.25 mL/h",
+            "10.5 mL/h",
+            "21 mL/h",
+            "2.6 mL/h"
+          ],
+          "answerIndex": 1,
+          "explanation": "70 × 0.2 = 14 mcg/min × 60 = 840 mcg/h ÷ 80 = 10.5 mL/h."
+        },
+        {
+          "id": "vasopressors-q4",
+          "stem": "The 65 trial showed that in patients aged ≥ 65 with vasodilatory shock, MAP 60-65 mmHg:",
+          "options": [
+            "Increased mortality",
+            "Was non-inferior and reduced vasopressor exposure",
+            "Caused more AKI",
+            "Required more fluid"
+          ],
+          "answerIndex": 1,
+          "explanation": "Permissive hypotension reduced vasopressor exposure without harm."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Methylene blue dose",
+          "reason": "Commonly 1-2 mg/kg IV over 15-30 min in vasoplegia; not given a dose card because guideline support is weak."
+        }
+      ]
+    },
+    {
+      "id": "inotropes",
+      "title": "Inotropes and inodilators",
+      "summary": "Use an inotrope only when low cardiac output causes hypoperfusion despite adequate filling and MAP. Dobutamine is the usual first choice; milrinone or levosimendan suit beta-blocked or RV-failure patients.",
+      "viewKey": "topic:shock-vasoactive-support/inotropes",
+      "uiHints": {
+        "icon": "droplets",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Confirm",
+            "title": "Low output is the problem",
+            "detail": "Echo: poor LV or RV function, low LVOT VTI (< 15 cm suggests low stroke volume), cold periphery, low ScvO2 (< 65-70%), raised lactate with adequate MAP and filling.",
+            "refs": [
+              "esc-hf2021"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Prepare",
+            "title": "MAP first",
+            "detail": "Inotropes vasodilate: secure MAP ≥ 65 with noradrenaline before or with the inotrope."
+          },
+          {
+            "n": 3,
+            "time": "Start",
+            "title": "Dobutamine",
+            "detail": "2.5 mcg/kg/min, increase every 10-15 min by 2.5 to 5-10 mcg/kg/min.",
+            "refs": [
+              "esc-hf2021",
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Alternatives",
+            "title": "Milrinone or levosimendan",
+            "detail": "Beta-blocked patient, pulmonary hypertension or RV failure: milrinone 0.125-0.5 mcg/kg/min (no bolus); levosimendan 0.05-0.2 mcg/kg/min for 24 h.",
+            "refs": [
+              "doremi",
+              "esc-hf2021"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Monitor",
+            "title": "Response",
+            "detail": "Lactate, ScvO2, urine output, VTI/CO, arrhythmias. Stop if tachyarrhythmia or no improvement in 1-2 h."
+          },
+          {
+            "n": 6,
+            "time": "Wean",
+            "title": "Early",
+            "detail": "Inotropes increase myocardial O2 use and arrhythmias: use the lowest effective dose for the shortest time."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "dobutamine",
+            "role": "First-line inotrope",
+            "route": "IV infusion",
+            "dose": "2.5-10 mcg/kg/min (max 20)",
+            "doseRange": {
+              "min": 2.5,
+              "max": 20,
+              "unit": "mcg/kg/min"
+            },
+            "dilution": "250 mg in 50 mL = 5000 mcg/mL",
+            "workedExample": "60 kg × 5 mcg/kg/min = 300 mcg/min × 60 = 18 000 mcg/h ÷ 5000 = 3.6 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "refs": [
+              "esc-hf2021"
+            ]
+          },
+          {
+            "drugId": "milrinone",
+            "role": "Inodilator (RV failure, high PVR, beta-blocked)",
+            "route": "IV infusion",
+            "dose": "0.125-0.5 mcg/kg/min (max 0.75); omit bolus",
+            "doseRange": {
+              "min": 0.125,
+              "max": 0.75,
+              "unit": "mcg/kg/min"
+            },
+            "dilution": "10 mg in 50 mL = 200 mcg/mL",
+            "workedExample": "70 kg × 0.25 = 17.5 mcg/min × 60 = 1050 mcg/h ÷ 200 = 5.25 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "notes": "Halve or reduce dose in AKI.",
+            "refs": [
+              "doremi",
+              "esc-hf2021"
+            ]
+          },
+          {
+            "drugId": "levosimendan",
+            "role": "Inodilator (beta-blocked, decompensated HF)",
+            "route": "IV infusion over 24 h",
+            "dose": "0.05-0.2 mcg/kg/min; no bolus if SBP < 100",
+            "dilution": "12.5 mg in 500 mL D5 = 25 mcg/mL",
+            "workedExample": "70 kg × 0.1 = 7 mcg/min × 60 = 420 mcg/h ÷ 25 = 16.8 mL/h",
+            "calculatorId": "infusion-rate-weight-min",
+            "verify": "Confirm dilution with pharmacy.",
+            "refs": [
+              "esc-hf2021"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "New tachyarrhythmia on dobutamine: reduce or stop."
+          },
+          {
+            "text": "Hypotension after starting milrinone: increase noradrenaline, reconsider."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Starting an inotrope in hypovolaemic or vasodilatory shock with a hyperdynamic heart."
+          },
+          {
+            "text": "Inotropes in LVOT obstruction (SAM, HOCM) worsen obstruction: give fluid, beta-blocker and phenylephrine instead."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Septic cardiomyopathy: SSC 2026 suggests adding dobutamine to noradrenaline, or using adrenaline alone, if hypoperfusion persists despite adequate volume and MAP. It suggests against levosimendan in septic shock."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Choosing an inotrope",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Hypoperfusion with low cardiac output on echo"
+          },
+          {
+            "id": "map",
+            "type": "decision",
+            "text": "MAP ≥ 65 mmHg?"
+          },
+          {
+            "id": "na",
+            "type": "action",
+            "text": "Noradrenaline first to MAP ≥ 65"
+          },
+          {
+            "id": "lvot",
+            "type": "decision",
+            "text": "LVOT obstruction (SAM) on echo?"
+          },
+          {
+            "id": "avoid",
+            "type": "end",
+            "text": "Avoid inotropes: fluid, phenylephrine, beta-blocker",
+            "severity": "high"
+          },
+          {
+            "id": "bb",
+            "type": "decision",
+            "text": "On beta-blocker, RV failure or high PVR?"
+          },
+          {
+            "id": "mil",
+            "type": "action",
+            "text": "Milrinone or levosimendan"
+          },
+          {
+            "id": "dob",
+            "type": "action",
+            "text": "Dobutamine 2.5-10 mcg/kg/min"
+          },
+          {
+            "id": "re",
+            "type": "end",
+            "text": "Reassess in 1-2 h: lactate, ScvO2, VTI; escalate to MCS discussion if failing"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "map"
+          },
+          {
+            "from": "map",
+            "to": "na",
+            "label": "No"
+          },
+          {
+            "from": "map",
+            "to": "lvot",
+            "label": "Yes"
+          },
+          {
+            "from": "na",
+            "to": "lvot"
+          },
+          {
+            "from": "lvot",
+            "to": "avoid",
+            "label": "Yes"
+          },
+          {
+            "from": "lvot",
+            "to": "bb",
+            "label": "No"
+          },
+          {
+            "from": "bb",
+            "to": "mil",
+            "label": "Yes"
+          },
+          {
+            "from": "bb",
+            "to": "dob",
+            "label": "No"
+          },
+          {
+            "from": "mil",
+            "to": "re"
+          },
+          {
+            "from": "dob",
+            "to": "re"
+          }
+        ],
+        "refs": [
+          "esc-hf2021"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **ESC HF 2021:** inotropes may be considered in patients with hypotension (SBP < 90) and hypoperfusion despite adequate filling; not recommended routinely because of safety concerns.\n- **DOREMI (2021):** milrinone vs dobutamine in cardiogenic shock had no difference in the composite outcome.",
+        "controversies": "- No inotrope has shown a mortality benefit. Levosimendan did not help septic shock (LeoPARDS) or cardiac surgery outcomes.",
+        "indiaNotes": "- Dobutamine is cheap and widely available; milrinone and levosimendan are more expensive and sometimes stocked only in cardiac centres."
+      },
+      "drugIds": [
+        "dobutamine",
+        "milrinone",
+        "levosimendan",
+        "noradrenaline"
+      ],
+      "calculatorIds": [
+        "infusion-rate-weight-min"
+      ],
+      "references": [
+        "esc-hf2021",
+        "doremi",
+        "ssc2026"
+      ],
+      "quiz": [
+        {
+          "id": "inotropes-q1",
+          "stem": "Before starting dobutamine in a hypotensive cardiogenic shock patient, you should:",
+          "options": [
+            "Give 2 L fluid",
+            "Ensure MAP with noradrenaline",
+            "Start a beta-blocker",
+            "Nothing"
+          ],
+          "answerIndex": 1,
+          "explanation": "Dobutamine vasodilates; support MAP first."
+        },
+        {
+          "id": "inotropes-q2",
+          "stem": "Which inotrope is preferred in a patient on long-term beta-blockers?",
+          "options": [
+            "Dobutamine",
+            "Milrinone or levosimendan",
+            "Phenylephrine",
+            "Dopamine"
+          ],
+          "answerIndex": 1,
+          "explanation": "These act independently of beta-receptors."
+        },
+        {
+          "id": "inotropes-q3",
+          "stem": "Inotropes are harmful in:",
+          "options": [
+            "Septic cardiomyopathy",
+            "Dynamic LVOT obstruction",
+            "Post-MI LV failure",
+            "Myocarditis"
+          ],
+          "answerIndex": 1,
+          "explanation": "Inotropes increase LVOT obstruction."
+        }
+      ]
+    },
+    {
+      "id": "cardiogenic-shock",
+      "title": "Cardiogenic shock",
+      "summary": "Stage it (SCAI A-E), find the cause (usually acute MI), revascularise the culprit lesion early, support with noradrenaline ± inotrope, and involve a shock team early for mechanical support in selected patients.",
+      "viewKey": "topic:shock-vasoactive-support/cardiogenic-shock",
+      "uiHints": {
+        "icon": "droplets",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0-10 min",
+            "title": "Recognise",
+            "detail": "SBP < 90 mmHg (or vasopressor needed) with hypoperfusion (cold, oliguria, confusion, lactate > 2) and a cardiac cause.",
+            "refs": [
+              "esc-hf2021",
+              "scai2022"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0-10 min",
+            "title": "ECG, echo, troponin",
+            "detail": "STEMI or equivalent? Mechanical complication (VSR, papillary muscle rupture, free wall rupture)? RV infarct? Tamponade? Arrhythmia?",
+            "refs": [
+              "esc-acs2023"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "0-30 min",
+            "title": "Stage",
+            "detail": "SCAI A (at risk) → B (beginning: hypotension or tachycardia without hypoperfusion) → C (classic) → D (deteriorating) → E (extremis, CPR or ECMO).",
+            "refs": [
+              "scai2022"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "0-90 min",
+            "title": "Revascularise",
+            "detail": "Immediate coronary angiography and culprit-only PCI in MI with shock (CULPRIT-SHOCK). If PCI cannot be done promptly, thrombolysis for STEMI and transfer.",
+            "refs": [
+              "culprit",
+              "esc-acs2023"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Support",
+            "title": "Pressors and inotropes",
+            "detail": "Noradrenaline to MAP ≥ 65; add dobutamine if low output persists. Avoid dopamine. Cautious fluid only if no congestion (RV infarct may need preload).",
+            "refs": [
+              "soap2",
+              "esc-hf2021"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Ventilation",
+            "title": "Oxygen and PEEP",
+            "detail": "NIV or intubation for pulmonary oedema; PEEP reduces LV afterload but can drop BP during induction (use low-dose drugs, pressor ready)."
+          },
+          {
+            "n": 7,
+            "time": "Escalate",
+            "title": "Mechanical circulatory support",
+            "detail": "Shock team discussion for SCAI C-D despite therapy. Routine IABP is not recommended (IABP-SHOCK II); routine VA-ECMO did not help (ECLS-SHOCK); microaxial pump reduced mortality in selected STEMI-CS (DanGer Shock) with more complications. See module 14.",
+            "refs": [
+              "iabpshock2",
+              "eclsshock",
+              "danger"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "scai-stages",
+            "title": "SCAI SHOCK stages (simplified)",
+            "columns": [
+              "Stage",
+              "Description",
+              "Typical findings"
+            ],
+            "rows": [
+              [
+                "A: At risk",
+                "Large MI, decompensated HF, no shock",
+                "Normal BP and perfusion"
+              ],
+              [
+                "B: Beginning",
+                "Relative hypotension or tachycardia without hypoperfusion",
+                "SBP < 90 or MAP < 60, lactate < 2"
+              ],
+              [
+                "C: Classic",
+                "Hypoperfusion needing one vasoactive or MCS",
+                "Lactate ≥ 2, cold, oliguria"
+              ],
+              [
+                "D: Deteriorating",
+                "Failing to respond to initial support",
+                "Escalating drugs or adding MCS; rising lactate"
+              ],
+              [
+                "E: Extremis",
+                "Refractory shock, CPR, or ECMO",
+                "Multiple high-dose drugs, pH < 7.2, lactate > 8"
+              ]
+            ],
+            "refs": [
+              "scai2022"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "New murmur after MI: echo now for VSR or papillary muscle rupture (surgical emergency)."
+          },
+          {
+            "text": "Inferior STEMI with hypotension and clear lungs: RV infarct, avoid nitrates and diuretics; give careful fluid."
+          },
+          {
+            "text": "Lactate rising despite two vasoactive drugs: SCAI D, call the shock team."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Giving IV nitrates or furosemide to a hypotensive cardiogenic shock patient."
+          },
+          {
+            "text": "Delaying angiography to 'stabilise' in MI-related shock."
+          },
+          {
+            "text": "Full-dose propofol for intubation: cardiovascular collapse."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Cardiac power output (MAP × CO / 451) < 0.6 W predicts mortality."
+          },
+          {
+            "text": "Treat arrhythmias aggressively; AF with RVR can be the trigger or a consequence."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Cardiogenic shock pathway",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Hypotension + hypoperfusion with cardiac cause"
+          },
+          {
+            "id": "ecg",
+            "type": "action",
+            "text": "ECG, echo, troponin, lactate; O2; arterial line",
+            "severity": "critical"
+          },
+          {
+            "id": "mi",
+            "type": "decision",
+            "text": "Acute MI (STEMI or high-risk NSTE)?"
+          },
+          {
+            "id": "pci",
+            "type": "action",
+            "text": "Immediate angiography, culprit-only PCI (or lysis if PCI unavailable)"
+          },
+          {
+            "id": "mech",
+            "type": "decision",
+            "text": "Mechanical complication, tamponade or valve cause?"
+          },
+          {
+            "id": "surg",
+            "type": "action",
+            "text": "Urgent cardiac surgery or pericardiocentesis"
+          },
+          {
+            "id": "drugs",
+            "type": "action",
+            "text": "Noradrenaline to MAP ≥ 65 ± dobutamine; diuretic or NIV if congested"
+          },
+          {
+            "id": "resp",
+            "type": "decision",
+            "text": "Improving (lactate falling, urine flowing) within hours?"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Continue, wean support, guideline HF therapy later"
+          },
+          {
+            "id": "mcs",
+            "type": "end",
+            "text": "Shock team: consider MCS (Impella, VA-ECMO) in selected patients → module 14",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "ecg"
+          },
+          {
+            "from": "ecg",
+            "to": "mi"
+          },
+          {
+            "from": "mi",
+            "to": "pci",
+            "label": "Yes"
+          },
+          {
+            "from": "mi",
+            "to": "mech",
+            "label": "No"
+          },
+          {
+            "from": "pci",
+            "to": "drugs"
+          },
+          {
+            "from": "mech",
+            "to": "surg",
+            "label": "Yes"
+          },
+          {
+            "from": "mech",
+            "to": "drugs",
+            "label": "No"
+          },
+          {
+            "from": "surg",
+            "to": "drugs"
+          },
+          {
+            "from": "drugs",
+            "to": "resp"
+          },
+          {
+            "from": "resp",
+            "to": "cont",
+            "label": "Yes"
+          },
+          {
+            "from": "resp",
+            "to": "mcs",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "esc-acs2023",
+          "scai2022"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Reduced contractility lowers stroke volume and coronary perfusion, causing more ischaemia (a downward spiral). Systemic inflammation after large MI adds vasodilatation in up to a fifth of patients (mixed shock).",
+        "evidence": "- **CULPRIT-SHOCK (2017):** culprit-only PCI reduced 30-day death or RRT compared with immediate multivessel PCI.\n- **IABP-SHOCK II (2012):** IABP did not reduce 30-day mortality.\n- **ECLS-SHOCK (2023):** early VA-ECMO did not reduce 30-day mortality and increased bleeding.\n- **DanGer Shock (2024):** microaxial flow pump reduced 180-day mortality in STEMI with cardiogenic shock (excluding comatose OHCA), with more bleeding, limb ischaemia and RRT.\n- **ESC ACS 2023:** immediate angiography and PCI of the IRA for cardiogenic shock; routine IABP not recommended.",
+        "controversies": "- Choice of first vasoactive agent beyond noradrenaline and timing of MCS.",
+        "indiaNotes": "- Primary PCI is concentrated in urban centres; pharmaco-invasive strategy (tenecteplase then transfer) is common. Many districts lack cath labs.\n- Impella and VA-ECMO are available in few Indian centres and cost is high; IABP remains common but is not supported for routine use."
+      },
+      "drugIds": [
+        "noradrenaline",
+        "dobutamine",
+        "milrinone",
+        "levosimendan"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "scai2022",
+        "esc-acs2023",
+        "esc-hf2021",
+        "culprit",
+        "iabpshock2",
+        "eclsshock",
+        "danger",
+        "soap2"
+      ],
+      "quiz": [
+        {
+          "id": "cardiogenic-shock-q1",
+          "stem": "In MI-related cardiogenic shock with multivessel disease, the recommended PCI strategy is:",
+          "options": [
+            "Immediate multivessel PCI",
+            "Culprit-lesion-only PCI",
+            "No PCI",
+            "Delayed PCI after 48 h"
+          ],
+          "answerIndex": 1,
+          "explanation": "CULPRIT-SHOCK favoured culprit-only PCI."
+        },
+        {
+          "id": "cardiogenic-shock-q2",
+          "stem": "Routine IABP in MI-related cardiogenic shock:",
+          "options": [
+            "Reduces mortality",
+            "Is not recommended",
+            "Is mandatory before PCI",
+            "Doubles survival"
+          ],
+          "answerIndex": 1,
+          "explanation": "IABP-SHOCK II showed no mortality benefit."
+        },
+        {
+          "id": "cardiogenic-shock-q3",
+          "stem": "Inferior STEMI with hypotension, raised JVP and clear lungs. Best initial step?",
+          "options": [
+            "IV furosemide",
+            "GTN infusion",
+            "Careful fluid and urgent reperfusion",
+            "High-dose dobutamine only"
+          ],
+          "answerIndex": 2,
+          "explanation": "RV infarct is preload-dependent; avoid nitrates and diuretics."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Cardiac power output threshold",
+          "reason": "0.6 W from the SHOCK trial registry; widely cited, not taken from the guidelines listed."
+        }
+      ]
+    },
+    {
+      "id": "lactate-perfusion-targets",
+      "title": "Lactate, capillary refill and resuscitation targets",
+      "summary": "Lactate is a marker of severity and response, not only of tissue hypoxia. Re-measure every 2 h during resuscitation; capillary refill time is a fast, non-inferior target. Know the non-hypoxic causes of raised lactate.",
+      "viewKey": "topic:shock-vasoactive-support/lactate-perfusion-targets",
+      "uiHints": {
+        "icon": "droplets",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 h",
+            "title": "Measure lactate",
+            "detail": "Arterial or venous; > 2 mmol/L is abnormal, > 4 mmol/L is high-risk.",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Every 2 h",
+            "title": "Re-measure",
+            "detail": "Aim for a falling lactate (≥ 10-20% drop in 2 h) while resuscitating. Do not keep giving fluid just to normalise lactate (SSC 2026).",
+            "refs": [
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Every 30 min",
+            "title": "Capillary refill time",
+            "detail": "Press the distal phalanx of the index finger with a glass slide for 10 s; normal ≤ 3 s. Normalising CRT was non-inferior to lactate-guided resuscitation (ANDROMEDA-SHOCK).",
+            "refs": [
+              "andromeda",
+              "ssc2026"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "If lactate stays high",
+            "title": "Look for non-hypoxic causes",
+            "detail": "Adrenaline or salbutamol (beta-2), liver failure, metformin, thiamine deficiency, seizures, malignancy, linezolid, propofol infusion syndrome, mesenteric ischaemia."
+          },
+          {
+            "n": 5,
+            "time": "Integrate",
+            "title": "Use more than one target",
+            "detail": "MAP, CRT, mental state, urine output, ScvO2 > 70%, venous-arterial CO2 gap < 6 mmHg, and lactate trend.",
+            "refs": [
+              "cecconi2014"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "lactate-causes",
+            "title": "Causes of raised lactate",
+            "columns": [
+              "Type",
+              "Examples"
+            ],
+            "rows": [
+              [
+                "Type A (hypoperfusion/hypoxia)",
+                "Shock of any type, severe hypoxaemia, severe anaemia, CO poisoning, regional ischaemia (mesenteric, limb)"
+              ],
+              [
+                "Type B1 (disease)",
+                "Liver failure, malignancy, sepsis-related aerobic glycolysis, DKA, seizures, thiamine deficiency"
+              ],
+              [
+                "Type B2 (drugs/toxins)",
+                "Adrenaline, salbutamol, metformin, propofol, linezolid, NRTIs, cyanide, methanol, ethylene glycol"
+              ],
+              [
+                "D-lactate",
+                "Short bowel, jejuno-ileal bypass (not measured by usual analysers)"
+              ]
+            ],
+            "refs": [
+              "cecconi2014"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Lactate rising despite normal MAP and CRT: look for mesenteric ischaemia, uncontrolled source or hidden bleeding."
+          },
+          {
+            "text": "Lactate > 10 mmol/L: mortality very high; senior review and cause search."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Chasing lactate with more fluid when it is raised by adrenaline or liver failure."
+          },
+          {
+            "text": "Ringer's lactate does not meaningfully raise blood lactate in normal liver function."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "ScvO2 can be normal or high in sepsis despite tissue hypoxia (impaired extraction); a P(v-a)CO2 gap > 6 mmHg suggests inadequate flow."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Persistently raised lactate",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Lactate > 2 mmol/L"
+          },
+          {
+            "id": "perf",
+            "type": "decision",
+            "text": "Signs of hypoperfusion (CRT > 3 s, mottling, oliguria)?"
+          },
+          {
+            "id": "resus",
+            "type": "action",
+            "text": "Resuscitate: fluid if responsive, vasopressor to MAP 65, treat cause; repeat in 2 h"
+          },
+          {
+            "id": "nonhyp",
+            "type": "action",
+            "text": "Check non-hypoxic causes: adrenaline, salbutamol, metformin, liver, thiamine, seizures"
+          },
+          {
+            "id": "fall",
+            "type": "decision",
+            "text": "Lactate falling and perfusion improving?"
+          },
+          {
+            "id": "ok",
+            "type": "end",
+            "text": "Continue; reduce intensity; de-resuscitate later"
+          },
+          {
+            "id": "hunt",
+            "type": "end",
+            "text": "Hunt for hidden cause: bleeding, mesenteric ischaemia, source, cardiac failure",
+            "severity": "high"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "perf"
+          },
+          {
+            "from": "perf",
+            "to": "resus",
+            "label": "Yes"
+          },
+          {
+            "from": "perf",
+            "to": "nonhyp",
+            "label": "No"
+          },
+          {
+            "from": "resus",
+            "to": "fall"
+          },
+          {
+            "from": "nonhyp",
+            "to": "fall"
+          },
+          {
+            "from": "fall",
+            "to": "ok",
+            "label": "Yes"
+          },
+          {
+            "from": "fall",
+            "to": "hunt",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "andromeda",
+          "ssc2026"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **SSC 2026:** suggests serial lactate to guide resuscitation in sepsis with raised lactate or septic shock (conditional), individualising fluid after the first bolus rather than giving fluid until lactate normalises; suggests capillary refill time as an adjunct (conditional).\n- **ANDROMEDA-SHOCK (2019):** CRT-targeted resuscitation vs lactate-targeted had a non-significant 28-day mortality difference (34.9% vs 43.4%), less organ dysfunction at 72 h, and less fluid.",
+        "controversies": "- Lactate clearance thresholds (10% vs 20%) are arbitrary.",
+        "indiaNotes": "- Point-of-care lactate is widely available on blood gas analysers in Indian ICUs; capillary refill needs only a stopwatch, ideal for wards and transfers.\n- Thiamine deficiency (beriberi, alcohol use, malnutrition) is an important reversible cause of lactic acidosis in India: give thiamine 200-500 mg IV."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "andromeda",
+        "ssc2026",
+        "cecconi2014"
+      ],
+      "quiz": [
+        {
+          "id": "lactate-perfusion-targets-q1",
+          "stem": "ANDROMEDA-SHOCK compared lactate-guided resuscitation with:",
+          "options": [
+            "ScvO2",
+            "Capillary refill time",
+            "Cardiac index",
+            "Urine output"
+          ],
+          "answerIndex": 1,
+          "explanation": "Peripheral perfusion (CRT)-targeted resuscitation."
+        },
+        {
+          "id": "lactate-perfusion-targets-q2",
+          "stem": "Which can raise lactate without hypoperfusion?",
+          "options": [
+            "Adrenaline infusion",
+            "Hypovolaemia",
+            "Septic shock",
+            "Mesenteric ischaemia"
+          ],
+          "answerIndex": 0,
+          "explanation": "Adrenaline drives beta-2 mediated aerobic glycolysis (type B lactate)."
+        },
+        {
+          "id": "lactate-perfusion-targets-q3",
+          "stem": "Normal capillary refill time is:",
+          "options": [
+            "≤ 1 s",
+            "≤ 3 s",
+            "≤ 5 s",
+            "≤ 8 s"
+          ],
+          "answerIndex": 1,
+          "explanation": "≤ 3 s in the ANDROMEDA protocol."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Thiamine dose",
+          "reason": "Doses for suspected deficiency-related lactic acidosis range 100-500 mg IV; not standardised."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "noradrenaline",
+      "name": "Noradrenaline (norepinephrine)",
+      "class": "Catecholamine vasopressor (alpha-1 > beta-1)",
+      "indications": "First-line vasopressor for septic, vasodilatory and most cardiogenic shock with hypotension.",
+      "adultDose": "Start 0.05-0.1 mcg/kg/min; titrate every 5-10 min to MAP 65 mmHg (60-65 if septic and aged ≥ 65). Usual 0.05-0.5 mcg/kg/min. Add vasopressin as doses escalate (commonly 0.25-0.5 mcg/kg/min). > 0.5-1 mcg/kg/min = refractory shock.",
+      "preparationIndia": "2 mg/2 mL ampoules. Standard syringe 4 mg in 50 mL NS or D5 (80 mcg/mL); 8 mg in 50 mL (160 mcg/mL) if fluid-restricted.",
+      "cautions": "Extravasation necrosis (phentolamine 5-10 mg in 10 mL NS infiltrated if available). Digital and mesenteric ischaemia at high dose. May start via a good proximal peripheral cannula while central access is placed.",
+      "monitoring": "Arterial line, MAP, lactate, capillary refill, urine output; hourly peripheral site checks.",
+      "verify": "Confirm base vs bitartrate labelling of local ampoules.",
+      "refs": [
+        "ssc2026",
+        "soap2"
+      ]
+    },
+    {
+      "id": "vasopressin",
+      "name": "Vasopressin",
+      "class": "V1 agonist (non-catecholamine vasopressor)",
+      "indications": "Second vasopressor in vasodilatory/septic shock; may help in RV failure and pulmonary hypertension because it does not raise pulmonary vascular resistance much.",
+      "adultDose": "Fixed 0.03 units/min (0.01-0.04). Not titrated like noradrenaline.",
+      "preparationIndia": "20 units/mL ampoules. 20 units in 50 mL NS = 0.4 units/mL; 0.03 units/min = 4.5 mL/h.",
+      "cautions": "Digital, mesenteric and myocardial ischaemia; hyponatraemia. Avoid as sole agent in low cardiac output.",
+      "refs": [
+        "ssc2026",
+        "vasst"
+      ]
+    },
+    {
+      "id": "adrenaline",
+      "name": "Adrenaline (epinephrine)",
+      "class": "Catecholamine (beta-1, beta-2, alpha-1)",
+      "indications": "Second or third agent in refractory vasodilatory shock; cardiogenic shock with hypotension (short term); anaphylaxis.",
+      "adultDose": "Infusion 0.05-0.5 mcg/kg/min. Anaphylaxis: 0.5 mg IM (0.5 mL of 1 mg/mL) every 5 min as needed.",
+      "preparationIndia": "1 mg/mL ampoules. 4 mg in 50 mL = 80 mcg/mL.",
+      "cautions": "Raises lactate via beta-2 glycolysis; tachyarrhythmia; hyperglycaemia; more refractory shock than noradrenaline in infarct-related cardiogenic shock (OptimaCC).",
+      "refs": [
+        "ssc2026",
+        "esc-hf2021"
+      ]
+    },
+    {
+      "id": "phenylephrine",
+      "name": "Phenylephrine",
+      "class": "Pure alpha-1 agonist",
+      "indications": "Short-term bolus for anaesthesia-related vasodilatation; hypotension with tachyarrhythmia; LVOT obstruction (HOCM, SAM).",
+      "adultDose": "Bolus 50-100 mcg IV; infusion 0.5-2 mcg/kg/min (or 20-200 mcg/min).",
+      "preparationIndia": "10 mg/mL ampoules. Bolus syringe: 10 mg in 100 mL (100 mcg/mL).",
+      "cautions": "Reflex bradycardia; reduces cardiac output if LV function is poor. Not a first-line agent in septic shock.",
+      "verify": "Infusion range varies between sources; confirm with local protocol.",
+      "refs": [
+        "vincent2013"
+      ]
+    },
+    {
+      "id": "dopamine",
+      "name": "Dopamine",
+      "class": "Catecholamine (dose-dependent DA, beta-1, alpha-1)",
+      "indications": "Rarely: bradycardic hypotension where pacing is unavailable. Not recommended as first-line in shock.",
+      "adultDose": "5-20 mcg/kg/min.",
+      "preparationIndia": "200 mg/5 mL ampoules. 200 mg in 50 mL = 4000 mcg/mL.",
+      "cautions": "More arrhythmias than noradrenaline, and higher mortality in cardiogenic shock (SOAP II subgroup). 'Renal-dose' dopamine has no benefit.",
+      "refs": [
+        "soap2",
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "dobutamine",
+      "name": "Dobutamine",
+      "class": "Inotrope (beta-1 > beta-2)",
+      "indications": "Low cardiac output with hypoperfusion despite adequate filling and MAP (cardiogenic shock, septic cardiomyopathy).",
+      "adultDose": "2.5-10 mcg/kg/min (max 20).",
+      "preparationIndia": "250 mg/20 mL vials. 250 mg in 50 mL = 5000 mcg/mL.",
+      "cautions": "Vasodilatation and hypotension (support MAP with noradrenaline first); tachyarrhythmia; increases myocardial O2 demand.",
+      "refs": [
+        "ssc2026",
+        "doremi",
+        "esc-hf2021"
+      ]
+    },
+    {
+      "id": "milrinone",
+      "name": "Milrinone",
+      "class": "Phosphodiesterase-3 inhibitor (inodilator)",
+      "indications": "Low-output states, especially with high pulmonary vascular resistance, RV failure, or beta-blocker therapy.",
+      "adultDose": "0.125-0.75 mcg/kg/min infusion; usually omit the loading dose (50 mcg/kg over 10 min) because of hypotension.",
+      "preparationIndia": "10 mg/10 mL ampoules. 10 mg in 50 mL = 200 mcg/mL.",
+      "renalHepatic": "Renally cleared: reduce dose in AKI (e.g. max 0.2-0.4 mcg/kg/min when eGFR < 30) and expect a long half-life.",
+      "cautions": "Hypotension, arrhythmia; accumulates in renal failure.",
+      "verify": "Renal dose reduction varies by source.",
+      "refs": [
+        "doremi",
+        "esc-hf2021"
+      ]
+    },
+    {
+      "id": "levosimendan",
+      "name": "Levosimendan",
+      "class": "Calcium sensitiser and K-ATP opener (inodilator)",
+      "indications": "Low-output heart failure, especially in patients on beta-blockers; weaning from inotropes (specialist use).",
+      "adultDose": "0.05-0.2 mcg/kg/min for 24 h; omit the 6-12 mcg/kg bolus if hypotensive.",
+      "preparationIndia": "12.5 mg/5 mL vials. 12.5 mg in 500 mL D5 = 25 mcg/mL.",
+      "cautions": "Hypotension; active metabolite lasts about 1 week. Not recommended for septic shock (LeoPARDS). Not for septic shock: SSC 2026 suggests against levosimendan there.",
+      "verify": "Confirm dilution and availability locally.",
+      "refs": [
+        "esc-hf2021"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "vincent2013",
+      "citation": "Vincent JL, De Backer D. Circulatory shock. N Engl J Med. 2013;369(18):1726-1734",
+      "url": "https://doi.org/10.1056/NEJMra1208943",
+      "year": 2013,
+      "doi": "10.1056/NEJMra1208943",
+      "type": "review"
+    },
+    {
+      "id": "cecconi2014",
+      "citation": "Cecconi M, De Backer D, Antonelli M, et al. Consensus on circulatory shock and hemodynamic monitoring. Task force of the European Society of Intensive Care Medicine. Intensive Care Med. 2014;40(12):1795-1815",
+      "url": "https://doi.org/10.1007/s00134-014-3525-z",
+      "year": 2014,
+      "doi": "10.1007/s00134-014-3525-z",
+      "type": "guideline"
+    },
+    {
+      "id": "ssc2026",
+      "citation": "Prescott HC, Antonelli M, Alhazzani W, et al. Surviving Sepsis Campaign: international guidelines for management of sepsis and septic shock 2026. Intensive Care Med. 2026;52(5):863-936. Co-published in Crit Care Med. 2026 (doi:10.1097/CCM.0000000000007075)",
+      "url": "https://doi.org/10.1007/s00134-026-08361-1",
+      "year": 2026,
+      "doi": "10.1007/s00134-026-08361-1",
+      "type": "guideline"
+    },
+    {
+      "id": "monnet2016",
+      "citation": "Monnet X, Marik P, Teboul JL. Passive leg raising for predicting fluid responsiveness: a systematic review and meta-analysis. Intensive Care Med. 2016;42(12):1935-1947",
+      "url": "https://doi.org/10.1007/s00134-015-4134-1",
+      "year": 2016,
+      "doi": "10.1007/s00134-015-4134-1",
+      "type": "review"
+    },
+    {
+      "id": "soap2",
+      "citation": "De Backer D, Biston P, Devriendt J, et al. Comparison of dopamine and norepinephrine in the treatment of shock (SOAP II). N Engl J Med. 2010;362(9):779-789",
+      "url": "https://doi.org/10.1056/NEJMoa0907118",
+      "year": 2010,
+      "doi": "10.1056/NEJMoa0907118",
+      "type": "trial"
+    },
+    {
+      "id": "vasst",
+      "citation": "Russell JA, Walley KR, Singer J, et al. Vasopressin versus norepinephrine infusion in patients with septic shock (VASST). N Engl J Med. 2008;358(9):877-887",
+      "url": "https://doi.org/10.1056/NEJMoa067373",
+      "year": 2008,
+      "doi": "10.1056/NEJMoa067373",
+      "type": "trial"
+    },
+    {
+      "id": "sepsispam",
+      "citation": "Asfar P, Meziani F, Hamel JF, et al. High versus low blood-pressure target in patients with septic shock (SEPSISPAM). N Engl J Med. 2014;370(17):1583-1593",
+      "url": "https://doi.org/10.1056/NEJMoa1312173",
+      "year": 2014,
+      "doi": "10.1056/NEJMoa1312173",
+      "type": "trial"
+    },
+    {
+      "id": "sixtyfive",
+      "citation": "Lamontagne F, Richards-Belle A, Thomas K, et al. Effect of reduced exposure to vasopressors on 90-day mortality in older critically ill patients with vasodilatory hypotension (65 trial). JAMA. 2020;323(10):938-949",
+      "url": "https://doi.org/10.1001/jama.2020.0930",
+      "year": 2020,
+      "doi": "10.1001/jama.2020.0930",
+      "type": "trial"
+    },
+    {
+      "id": "athos3",
+      "citation": "Khanna A, English SW, Wang XS, et al. Angiotensin II for the treatment of vasodilatory shock (ATHOS-3). N Engl J Med. 2017;377(5):419-430",
+      "url": "https://doi.org/10.1056/NEJMoa1704154",
+      "year": 2017,
+      "doi": "10.1056/NEJMoa1704154",
+      "type": "trial"
+    },
+    {
+      "id": "andromeda",
+      "citation": "Hernández G, Ospina-Tascón GA, Damiani LP, et al. Effect of a resuscitation strategy targeting peripheral perfusion status vs serum lactate levels on 28-day mortality among patients with septic shock (ANDROMEDA-SHOCK). JAMA. 2019;321(7):654-664",
+      "url": "https://doi.org/10.1001/jama.2019.0071",
+      "year": 2019,
+      "doi": "10.1001/jama.2019.0071",
+      "type": "trial"
+    },
+    {
+      "id": "doremi",
+      "citation": "Mathew R, Di Santo P, Jung RG, et al. Milrinone as compared with dobutamine in the treatment of cardiogenic shock (DOREMI). N Engl J Med. 2021;385(6):516-525",
+      "url": "https://doi.org/10.1056/NEJMoa2026845",
+      "year": 2021,
+      "doi": "10.1056/NEJMoa2026845",
+      "type": "trial"
+    },
+    {
+      "id": "scai2022",
+      "citation": "Naidu SS, Baran DA, Jentzer JC, et al. SCAI SHOCK stage classification expert consensus update: a review and incorporation of validation studies. J Am Coll Cardiol. 2022;79(9):933-946",
+      "url": "https://doi.org/10.1016/j.jacc.2022.01.018",
+      "year": 2022,
+      "doi": "10.1016/j.jacc.2022.01.018",
+      "type": "guideline"
+    },
+    {
+      "id": "iabpshock2",
+      "citation": "Thiele H, Zeymer U, Neumann FJ, et al. Intraaortic balloon support for myocardial infarction with cardiogenic shock (IABP-SHOCK II). N Engl J Med. 2012;367(14):1287-1296",
+      "url": "https://doi.org/10.1056/NEJMoa1208410",
+      "year": 2012,
+      "doi": "10.1056/NEJMoa1208410",
+      "type": "trial"
+    },
+    {
+      "id": "culprit",
+      "citation": "Thiele H, Akin I, Sandri M, et al. PCI strategies in patients with acute myocardial infarction and cardiogenic shock (CULPRIT-SHOCK). N Engl J Med. 2017;377(25):2419-2432",
+      "url": "https://doi.org/10.1056/NEJMoa1710261",
+      "year": 2017,
+      "doi": "10.1056/NEJMoa1710261",
+      "type": "trial"
+    },
+    {
+      "id": "eclsshock",
+      "citation": "Thiele H, Zeymer U, Akin I, et al. Extracorporeal life support in infarct-related cardiogenic shock (ECLS-SHOCK). N Engl J Med. 2023;389(14):1286-1297",
+      "url": "https://doi.org/10.1056/NEJMoa2307227",
+      "year": 2023,
+      "doi": "10.1056/NEJMoa2307227",
+      "type": "trial"
+    },
+    {
+      "id": "danger",
+      "citation": "Møller JE, Engstrøm T, Jensen LO, et al. Microaxial flow pump or standard care in infarct-related cardiogenic shock (DanGer Shock). N Engl J Med. 2024;390(15):1382-1393",
+      "url": "https://doi.org/10.1056/NEJMoa2312572",
+      "year": 2024,
+      "doi": "10.1056/NEJMoa2312572",
+      "type": "trial"
+    },
+    {
+      "id": "esc-hf2021",
+      "citation": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726",
+      "url": "https://doi.org/10.1093/eurheartj/ehab368",
+      "year": 2021,
+      "doi": "10.1093/eurheartj/ehab368",
+      "type": "guideline"
+    },
+    {
+      "id": "esc-acs2023",
+      "citation": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826",
+      "url": "https://doi.org/10.1093/eurheartj/ehad191",
+      "year": 2023,
+      "doi": "10.1093/eurheartj/ehad191",
+      "type": "guideline"
+    },
+    {
+      "id": "vasspr",
+      "citation": "Peltan ID, Groat D, Jacobs JR, et al. Effect of vasopressin initiation threshold on septic shock mortality (VASSPR). JAMA. 2026 (published online 14 Oct 2026)",
+      "url": "https://doi.org/10.1001/jama.2026.21333",
+      "year": 2026,
+      "doi": "10.1001/jama.2026.21333",
+      "type": "trial"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Noradrenaline base vs salt",
+      "reason": "Indian ampoules are labelled variously as noradrenaline bitartrate or noradrenaline base. Doses in this module are noradrenaline base. Confirm the local label convention before publishing infusion volumes."
+    },
+    {
+      "item": "Levosimendan and milrinone availability",
+      "reason": "Both are available in India but stocking varies by hospital; doses taken from product information and ESC heart failure guidance."
+    }
+  ]
+}

@@ -1,0 +1,1610 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "agrochemical-household-poisons",
+  "number": 28,
+  "folder": "28-agrochemical-household-poisons",
+  "section": {
+    "id": "H",
+    "title": "Toxicology and envenomation"
+  },
+  "phase": 1,
+  "title": "Agrochemical and household poisons",
+  "summary": "The poisons that dominate Indian ICUs: organophosphate and carbamate insecticides (atropine titration, oximes, POP scale), aluminium phosphide, paraquat, yellow phosphorus rat paste, oleander and datura, and corrosive and hydrocarbon ingestion.",
+  "tags": [
+    "organophosphate",
+    "carbamate",
+    "cholinergic crisis",
+    "atropine",
+    "pralidoxime",
+    "POP scale",
+    "intermediate syndrome",
+    "aluminium phosphide",
+    "celphos",
+    "phosphine",
+    "magnesium",
+    "paraquat",
+    "oxygen toxicity",
+    "yellow phosphorus",
+    "ratol",
+    "acute liver failure",
+    "plasma exchange",
+    "yellow oleander",
+    "digoxin Fab",
+    "datura",
+    "anticholinergic",
+    "corrosive",
+    "acid",
+    "alkali",
+    "Zargar",
+    "kerosene",
+    "hydrocarbon aspiration"
+  ],
+  "relatedModules": [
+    "poisoning-approach-drug-overdoses",
+    "airway-management",
+    "mechanical-ventilation",
+    "liver-failure",
+    "cardiac-emergencies-arrhythmias",
+    "shock-vasoactive-support"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "skull",
+    "accent": "critical"
+  },
+  "viewKey": "module:agrochemical-household-poisons",
+  "topics": [
+    {
+      "id": "organophosphate-carbamate",
+      "title": "Organophosphate and carbamate poisoning",
+      "summary": "Cholinergic crisis: secure the airway, then atropinise fast by doubling boluses every 5 min until the chest is clear, HR > 80, SBP > 80 mmHg, axillae dry and pupils no longer pinpoint; then infuse 10-20% of the loading dose per hour. Watch for the intermediate syndrome on days 1-4.",
+      "viewKey": "topic:agrochemical-household-poisons/organophosphate-carbamate",
+      "uiHints": {
+        "icon": "skull",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Recognise",
+            "detail": "Miosis, salivation, bronchorrhoea, bronchospasm, bradycardia, vomiting, diarrhoea, fasciculations, weakness, coma; kerosene-like smell. Plasma (butyryl) cholinesterase supports diagnosis.",
+            "refs": [
+              "eddleston2008"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "0 min",
+            "title": "Airway",
+            "detail": "Left-lateral position, suction, oxygen; intubate if GCS low, respiratory failure or copious secretions. Avoid succinylcholine (prolonged block); use rocuronium.",
+            "refs": [
+              "eddleston2008"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "0-30 min",
+            "title": "Atropine",
+            "detail": "1.8-3 mg IV bolus; if not atropinised in 5 min, double the dose; repeat doubling until the five targets are met.",
+            "refs": [
+              "eddleston2008",
+              "abedin2012"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Then",
+            "title": "Infusion",
+            "detail": "10-20% of the total loading dose per hour; review every 15 min initially; if toxic (confusion, hyperthermia, ileus), stop for 30-60 min then restart at 70-80%.",
+            "refs": [
+              "eddleston2008"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Oxime",
+            "title": "Consider",
+            "detail": "Pralidoxime 2 g IV over 30 min then 1 g/h for 48 h (Pawar regimen) in moderate-severe OP; benefit is uncertain (Eddleston 2009, Cochrane). Not for carbamates.",
+            "refs": [
+              "pawar2006",
+              "eddleston2009",
+              "buckley2011"
+            ]
+          },
+          {
+            "n": 6,
+            "time": "Decontaminate",
+            "title": "Safely",
+            "detail": "Remove clothes and wash skin (staff wear gloves). Gastric lavage only if early (< 1 h), airway protected; no forced emesis."
+          },
+          {
+            "n": 7,
+            "time": "Days 1-4",
+            "title": "Intermediate syndrome",
+            "detail": "Proximal limb, neck flexor and cranial nerve weakness with respiratory failure despite atropinisation; check neck flexion power and single breath count every 4-6 h; ventilate.",
+            "refs": [
+              "eddleston2008"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "atropine",
+            "role": "Atropinisation",
+            "route": "IV bolus",
+            "dose": "1.8-3 mg, double every 5 min until atropinised",
+            "workedExample": "2 mg → 4 mg → 8 mg → 16 mg (cumulative 30 mg) achieves targets; infusion 3-6 mg/h",
+            "notes": "Targets: clear chest on auscultation, HR > 80/min, SBP > 80 mmHg, dry axillae, pupils no longer pinpoint. Tachycardia is not a reason to withhold atropine if the chest is wet.",
+            "refs": [
+              "eddleston2008",
+              "abedin2012"
+            ]
+          },
+          {
+            "drugId": "pralidoxime",
+            "role": "Moderate-severe OP poisoning",
+            "route": "IV",
+            "dose": "2 g over 30 min, then 1 g/h for 48 h, then 1 g every 4 h until weaned",
+            "verify": "Pawar regimen from a single Indian RCT; larger trial and meta-analysis show no clear benefit.",
+            "refs": [
+              "pawar2006"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Neck flexion weakness or falling single breath count on day 1-4: intermediate syndrome; prepare to ventilate."
+          },
+          {
+            "text": "Wet chest after apparent atropinisation: under-atropinisation, aspiration or pulmonary oedema."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Small fixed atropine doses (0.6 mg every 15 min) for hours: patients die under-atropinised."
+          },
+          {
+            "text": "Using pupil size or heart rate alone as the endpoint."
+          },
+          {
+            "text": "Succinylcholine for intubation."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Atropine requirements in the first 24 h can exceed 100 mg; stock accordingly."
+          },
+          {
+            "text": "Many 'OP' bottles in India are mixtures with pyrethroids or solvent; aspiration of solvent causes ARDS."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "OP poisoning: atropine titration",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Cholinergic features"
+          },
+          {
+            "id": "air",
+            "type": "decision",
+            "text": "Airway or ventilation compromised?"
+          },
+          {
+            "id": "int",
+            "type": "action",
+            "text": "Intubate (rocuronium); ventilate",
+            "severity": "critical"
+          },
+          {
+            "id": "bol",
+            "type": "action",
+            "text": "Atropine 1.8-3 mg IV"
+          },
+          {
+            "id": "chk",
+            "type": "decision",
+            "text": "Atropinised at 5 min (chest clear, HR > 80, SBP > 80, dry axillae, pupils not pinpoint)?"
+          },
+          {
+            "id": "dbl",
+            "type": "action",
+            "text": "Double the previous dose"
+          },
+          {
+            "id": "inf",
+            "type": "action",
+            "text": "Infusion 10-20% of loading dose/h; ± pralidoxime"
+          },
+          {
+            "id": "ims",
+            "type": "end",
+            "text": "Monitor 4-6-hourly for intermediate syndrome and atropine toxicity"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "air"
+          },
+          {
+            "from": "air",
+            "to": "int",
+            "label": "Yes"
+          },
+          {
+            "from": "air",
+            "to": "bol",
+            "label": "No"
+          },
+          {
+            "from": "int",
+            "to": "bol"
+          },
+          {
+            "from": "bol",
+            "to": "chk"
+          },
+          {
+            "from": "chk",
+            "to": "dbl",
+            "label": "No"
+          },
+          {
+            "from": "dbl",
+            "to": "chk"
+          },
+          {
+            "from": "chk",
+            "to": "inf",
+            "label": "Yes"
+          },
+          {
+            "from": "inf",
+            "to": "ims"
+          }
+        ],
+        "refs": [
+          "eddleston2008"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "- OPs phosphorylate acetylcholinesterase; \"ageing\" makes inhibition irreversible (hours for dimethyl, days for diethyl compounds), which is why oximes work early, if at all. Carbamates inhibit reversibly.",
+        "evidence": "- **Eddleston 2008:** practical atropine titration protocol.\n- **Abedin 2012:** incremental doubling boluses plus infusion reduced mortality vs conventional bolus dosing (8% vs 22.5%).\n- **Pawar 2006 vs Eddleston 2009:** conflicting oxime results.",
+        "controversies": "- Oximes: Cochrane 2011 found insufficient evidence; many Indian units continue them. Fresh frozen plasma, magnesium and lipid emulsion remain experimental.",
+        "indiaNotes": "- OP poisoning is one of the commonest causes of ICU admission and death from self-harm in rural India; monocrotophos, chlorpyrifos, quinalphos and profenofos are common agents."
+      },
+      "drugIds": [
+        "atropine",
+        "pralidoxime"
+      ],
+      "calculatorIds": [
+        "pop-scale"
+      ],
+      "references": [
+        "eddleston2008",
+        "abedin2012",
+        "pawar2006",
+        "eddleston2009",
+        "buckley2011"
+      ],
+      "quiz": [
+        {
+          "id": "organophosphate-carbamate-q1",
+          "stem": "Atropine not atropinised after 2 mg at 5 min. Next dose:",
+          "options": [
+            "2 mg",
+            "4 mg",
+            "0.6 mg",
+            "Stop atropine"
+          ],
+          "answerIndex": 1,
+          "explanation": "Double every 5 min."
+        },
+        {
+          "id": "organophosphate-carbamate-q2",
+          "stem": "Which is NOT an atropinisation target?",
+          "options": [
+            "Clear chest",
+            "HR > 80",
+            "Dilated pupils fully",
+            "SBP > 80"
+          ],
+          "answerIndex": 2,
+          "explanation": "Pupils no longer pinpoint is enough; aim is not mydriasis."
+        },
+        {
+          "id": "organophosphate-carbamate-q3",
+          "stem": "Drug to avoid for intubation in OP poisoning:",
+          "options": [
+            "Rocuronium",
+            "Succinylcholine",
+            "Ketamine",
+            "Propofol"
+          ],
+          "answerIndex": 1,
+          "explanation": "Prolonged paralysis (cholinesterase inhibited)."
+        }
+      ]
+    },
+    {
+      "id": "aluminium-phosphide",
+      "title": "Aluminium phosphide (celphos) poisoning",
+      "summary": "Phosphine gas causes refractory shock from myocardial toxicity, severe metabolic acidosis and arrhythmias within hours. There is no antidote: early ICU care, gastric decontamination, magnesium, vasopressors, inotropes, bicarbonate and, where available, VA-ECMO as a bridge.",
+      "viewKey": "topic:agrochemical-household-poisons/aluminium-phosphide",
+      "uiHints": {
+        "icon": "skull",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Suspect",
+            "detail": "Grain fumigant tablets (3 g, releasing phosphine) ingestion; garlic/rotten fish odour; vomiting, shock, acidosis. Silver nitrate paper test on gastric aspirate/breath turns black.",
+            "refs": [
+              "gurjar2011"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Decontaminate",
+            "title": "Early",
+            "detail": "Gastric lavage with potassium permanganate (1:10,000) or coconut/paraffin oil to limit phosphine release is practised in India (evidence weak); activated charcoal; staff should avoid inhaling vomitus gases.",
+            "refs": [
+              "gurjar2011"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Shock",
+            "title": "Support",
+            "detail": "Echo-guided fluids (beware LV dysfunction and pulmonary oedema), noradrenaline, dobutamine/adrenaline for myocardial depression; correct acidosis with bicarbonate; early intubation.",
+            "refs": [
+              "gurjar2011"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Adjuncts",
+            "title": "Unproven",
+            "detail": "Magnesium sulphate, N-acetylcysteine, trimetazidine and others are used in Indian centres; none proven in large RCTs."
+          },
+          {
+            "n": 5,
+            "time": "Rescue",
+            "title": "VA-ECMO",
+            "detail": "Myocardial toxicity is reversible over 48-72 h; VA-ECMO has been used successfully as a bridge where available."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "magnesium-sulphate",
+            "role": "Aluminium phosphide arrhythmias/hypomagnesaemia",
+            "route": "IV",
+            "dose": "2-3 g over 20 min, then 1 g/h (guided by levels)",
+            "verify": "No trial-proven regimen; follow local protocol.",
+            "refs": [
+              "gurjar2011"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "SBP < 90 with pH < 7.2 within hours of ingestion: very high mortality; involve ECMO centre early if available."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Aggressive fluid loading in cardiogenic shock."
+          },
+          {
+            "text": "Water lavage without precautions (phosphine release)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Arrhythmias and myocardial dysfunction typically resolve by day 3 if the patient survives."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Aluminium phosphide",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Celphos ingestion"
+          },
+          {
+            "id": "dec",
+            "type": "action",
+            "text": "Early lavage (KMnO4 or oil) + charcoal; protect staff"
+          },
+          {
+            "id": "sh",
+            "type": "decision",
+            "text": "Shock or acidosis?"
+          },
+          {
+            "id": "echo",
+            "type": "action",
+            "text": "Echo-guided fluids, noradrenaline + inotrope, bicarbonate, Mg",
+            "severity": "critical"
+          },
+          {
+            "id": "ref",
+            "type": "decision",
+            "text": "Refractory despite maximal therapy?"
+          },
+          {
+            "id": "ecmo",
+            "type": "end",
+            "text": "VA-ECMO bridge (if available)"
+          },
+          {
+            "id": "sup",
+            "type": "end",
+            "text": "Continue support 48-72 h"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "dec"
+          },
+          {
+            "from": "dec",
+            "to": "sh"
+          },
+          {
+            "from": "sh",
+            "to": "echo",
+            "label": "Yes"
+          },
+          {
+            "from": "sh",
+            "to": "sup",
+            "label": "No"
+          },
+          {
+            "from": "echo",
+            "to": "ref"
+          },
+          {
+            "from": "ref",
+            "to": "ecmo",
+            "label": "Yes"
+          },
+          {
+            "from": "ref",
+            "to": "sup",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "gurjar2011"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Gurjar 2011 (Indian ICU review):** pathophysiology and supportive care; no specific antidote.",
+        "controversies": "- Oil-based lavage, magnesium and other adjuncts are widely used despite weak evidence.",
+        "indiaNotes": "- Aluminium phosphide is a leading poison in north India (Punjab, Haryana, UP, MP) with mortality of 40-80%; sale restrictions are poorly enforced."
+      },
+      "drugIds": [
+        "magnesium-sulphate",
+        "acetylcysteine"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "gurjar2011"
+      ],
+      "quiz": [
+        {
+          "id": "aluminium-phosphide-q1",
+          "stem": "Main cause of death in aluminium phosphide poisoning:",
+          "options": [
+            "Liver failure",
+            "Refractory cardiogenic shock and arrhythmias",
+            "Seizures",
+            "Bleeding"
+          ],
+          "answerIndex": 1,
+          "explanation": "Phosphine myocardial toxicity."
+        },
+        {
+          "id": "aluminium-phosphide-q2",
+          "stem": "Bedside test for phosphine:",
+          "options": [
+            "Silver nitrate paper turns black",
+            "Dithionite test",
+            "Ferric chloride",
+            "Urine dipstick"
+          ],
+          "answerIndex": 0,
+          "explanation": "Dithionite is for paraquat."
+        },
+        {
+          "id": "aluminium-phosphide-q3",
+          "stem": "Rescue for refractory shock where available:",
+          "options": [
+            "VA-ECMO",
+            "VV-ECMO",
+            "Haemodialysis",
+            "Plasma exchange"
+          ],
+          "answerIndex": 0,
+          "explanation": "Cardiac support until myocardium recovers."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Lavage solutions",
+          "reason": "KMnO4 and oil lavage are Indian practice with weak evidence; confirm the local protocol."
+        }
+      ]
+    },
+    {
+      "id": "paraquat",
+      "title": "Paraquat poisoning",
+      "summary": "A mouthful of 20% paraquat can kill. Confirm with the urine dithionite test, give activated charcoal early, avoid supplemental oxygen unless SpO2 is very low, support the kidneys, and discuss prognosis honestly; immunosuppression and haemoperfusion are unproven.",
+      "viewKey": "topic:agrochemical-household-poisons/paraquat",
+      "uiHints": {
+        "icon": "skull",
+        "accent": "critical"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "0 min",
+            "title": "Recognise",
+            "detail": "Burning mouth/throat ulcers (paraquat tongue), vomiting; then AKI and hepatitis (days 1-3) and progressive pulmonary fibrosis (days 3-14).",
+            "refs": [
+              "gawarammana2011"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Test",
+            "title": "Dithionite",
+            "detail": "Urine + sodium dithionite in alkali turns blue (dark blue/navy = high risk). Plasma level against time predicts survival where available.",
+            "refs": [
+              "gawarammana2011"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Decontaminate",
+            "title": "Early",
+            "detail": "Activated charcoal 50 g (or Fuller's earth/bentonite) if within 1-2 h; skin/eye decontamination.",
+            "refs": [
+              "gawarammana2011"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Oxygen",
+            "title": "Restrict",
+            "detail": "Avoid supplemental O2 unless SpO2 < ~90% or for palliation; oxygen fuels free-radical lung injury.",
+            "refs": [
+              "gawarammana2011"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Support",
+            "title": "Kidneys and comfort",
+            "detail": "IV fluids for losses, dialysis for AKI (does not remove significant paraquat once distributed), analgesia for mucosal burns, early palliative care conversation if dithionite strongly positive."
+          },
+          {
+            "n": 6,
+            "time": "Unproven",
+            "title": "Discuss",
+            "detail": "Cyclophosphamide + methylprednisolone, NAC, haemoperfusion: no convincing RCT benefit; consider only within trials or local protocols.",
+            "refs": [
+              "gawarammana2011"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Dark blue urine dithionite test within 24 h: very high mortality."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Routine high-flow oxygen for mild desaturation."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Paraquat is not detected by routine toxicology screens; ask specifically."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Paraquat",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Suspected paraquat ingestion"
+          },
+          {
+            "id": "ch",
+            "type": "action",
+            "text": "Activated charcoal/Fuller's earth if early"
+          },
+          {
+            "id": "dt",
+            "type": "decision",
+            "text": "Urine dithionite positive?"
+          },
+          {
+            "id": "neg",
+            "type": "end",
+            "text": "Repeat at 6 h; observe 24 h"
+          },
+          {
+            "id": "sup",
+            "type": "action",
+            "text": "Fluids, renal support, analgesia; restrict O2"
+          },
+          {
+            "id": "prog",
+            "type": "end",
+            "text": "Prognosis discussion; palliative care if severe"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "ch"
+          },
+          {
+            "from": "ch",
+            "to": "dt"
+          },
+          {
+            "from": "dt",
+            "to": "neg",
+            "label": "No"
+          },
+          {
+            "from": "dt",
+            "to": "sup",
+            "label": "Yes"
+          },
+          {
+            "from": "sup",
+            "to": "prog"
+          }
+        ],
+        "refs": [
+          "gawarammana2011"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Gawarammana & Buckley 2011:** systematic review of management; no intervention proven to reduce mortality.",
+        "indiaNotes": "- Paraquat (e.g. 24% SL formulations) is widely available in south and east India; some states (e.g. Kerala) have restricted it."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "gawarammana2011"
+      ],
+      "quiz": [
+        {
+          "id": "paraquat-q1",
+          "stem": "Bedside test for paraquat:",
+          "options": [
+            "Silver nitrate",
+            "Urine sodium dithionite",
+            "Ferric chloride",
+            "Litmus"
+          ],
+          "answerIndex": 1,
+          "explanation": "Blue colour."
+        },
+        {
+          "id": "paraquat-q2",
+          "stem": "Oxygen therapy in paraquat poisoning:",
+          "options": [
+            "High-flow for all",
+            "Restrict unless significantly hypoxaemic",
+            "Hyperbaric",
+            "Not relevant"
+          ],
+          "answerIndex": 1,
+          "explanation": "Oxygen worsens lung injury."
+        },
+        {
+          "id": "paraquat-q3",
+          "stem": "Late cause of death:",
+          "options": [
+            "Pulmonary fibrosis",
+            "Seizures",
+            "Hypoglycaemia",
+            "Bradycardia"
+          ],
+          "answerIndex": 0,
+          "explanation": "Progressive fibrosis over 1-3 weeks."
+        }
+      ]
+    },
+    {
+      "id": "yellow-phosphorus",
+      "title": "Yellow phosphorus (rat paste) poisoning",
+      "summary": "Rat-killer paste (3% yellow phosphorus) causes a deceptive latent phase followed by acute liver failure on days 3-5. Admit every ingestion, monitor INR and liver tests daily, refer early to a liver unit, and consider plasma exchange as a bridge; transplantation for King's criteria.",
+      "viewKey": "topic:agrochemical-household-poisons/yellow-phosphorus",
+      "uiHints": {
+        "icon": "skull",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Day 0-1",
+            "title": "GI phase",
+            "detail": "Vomiting, garlic odour, abdominal pain; may be minimal. Do not discharge.",
+            "refs": [
+              "eapen2021"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Day 1-3",
+            "title": "Latent phase",
+            "detail": "Apparent recovery; monitor INR, bilirubin, ALT, glucose, creatinine at least daily.",
+            "refs": [
+              "eapen2021"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Day 3-5",
+            "title": "Hepatic phase",
+            "detail": "Jaundice, rising INR, encephalopathy, hypoglycaemia, cardiotoxicity (arrhythmias, shock), AKI."
+          },
+          {
+            "n": 4,
+            "time": "Treat",
+            "title": "Support",
+            "detail": "ALF care (liver failure module): glucose, lactulose, ICP precautions; NAC is used empirically.",
+            "refs": [
+              "eapen2021"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Bridge",
+            "title": "Plasma exchange",
+            "detail": "TPE improved survival in an Indian series (overall 79%; all 23 patients not meeting King's criteria survived). Refer early for liver transplant assessment.",
+            "refs": [
+              "varghese2020"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "acetylcysteine",
+            "role": "Yellow phosphorus ALF (empirical)",
+            "route": "IV",
+            "dose": "150 mg/kg over 1 h, then 50 mg/kg over 4 h, then 100 mg/kg over 16 h; often continued",
+            "verify": "No RCT evidence in yellow phosphorus; dose borrowed from paracetamol regimens.",
+            "refs": [
+              "eapen2021"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "INR > 1.5 or any encephalopathy: transfer to a liver unit now."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Discharging an asymptomatic patient on day 1."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Ask about 'Ratol' or similar paste by brand name; it is often mistaken as harmless."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Rat paste ingestion",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Yellow phosphorus ingestion"
+          },
+          {
+            "id": "adm",
+            "type": "action",
+            "text": "Admit; daily INR, LFT, glucose, creatinine"
+          },
+          {
+            "id": "alf",
+            "type": "decision",
+            "text": "INR rising, jaundice or encephalopathy?"
+          },
+          {
+            "id": "obs",
+            "type": "end",
+            "text": "Observe ≥ 5 days; discharge if normal"
+          },
+          {
+            "id": "lu",
+            "type": "action",
+            "text": "Liver unit: ALF care, NAC, plasma exchange"
+          },
+          {
+            "id": "kc",
+            "type": "decision",
+            "text": "Meets King's College criteria?"
+          },
+          {
+            "id": "lt",
+            "type": "end",
+            "text": "Liver transplant evaluation"
+          },
+          {
+            "id": "tpe",
+            "type": "end",
+            "text": "Continue TPE/support"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "adm"
+          },
+          {
+            "from": "adm",
+            "to": "alf"
+          },
+          {
+            "from": "alf",
+            "to": "obs",
+            "label": "No"
+          },
+          {
+            "from": "alf",
+            "to": "lu",
+            "label": "Yes"
+          },
+          {
+            "from": "lu",
+            "to": "kc"
+          },
+          {
+            "from": "kc",
+            "to": "lt",
+            "label": "Yes"
+          },
+          {
+            "from": "kc",
+            "to": "tpe",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "eapen2021"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Varghese 2020:** observational TPE series in yellow phosphorus ALF.\n- **Eapen 2021:** Indian management constraints and recommendations.",
+        "indiaNotes": "- A leading cause of drug/toxin ALF in south and west India (Tamil Nadu, Kerala, Maharashtra); several states have moved to restrict sale."
+      },
+      "drugIds": [
+        "acetylcysteine"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "eapen2021",
+        "varghese2020"
+      ],
+      "quiz": [
+        {
+          "id": "yellow-phosphorus-q1",
+          "stem": "Liver failure after rat paste usually manifests on:",
+          "options": [
+            "Day 0",
+            "Days 3-5",
+            "Day 30",
+            "Never"
+          ],
+          "answerIndex": 1,
+          "explanation": "After a latent phase."
+        },
+        {
+          "id": "yellow-phosphorus-q2",
+          "stem": "Asymptomatic on day 1 after ingestion:",
+          "options": [
+            "Discharge",
+            "Admit and monitor INR daily",
+            "Outpatient follow-up",
+            "Give charcoal and discharge"
+          ],
+          "answerIndex": 1,
+          "explanation": "Latent phase is deceptive."
+        },
+        {
+          "id": "yellow-phosphorus-q3",
+          "stem": "Bridge therapy with evidence from Indian series:",
+          "options": [
+            "Plasma exchange",
+            "Haemoperfusion",
+            "Steroids",
+            "Hyperbaric oxygen"
+          ],
+          "answerIndex": 0,
+          "explanation": "Varghese 2020."
+        }
+      ]
+    },
+    {
+      "id": "oleander-datura",
+      "title": "Plant poisons: oleander and datura",
+      "summary": "Yellow/common oleander seeds act like digoxin: vomiting, bradyarrhythmias, heart block and hyperkalaemia; treat with atropine, temporary pacing, potassium control and digoxin Fab if available. Datura causes an anticholinergic toxidrome: sedate with benzodiazepines, cool, and catheterise.",
+      "viewKey": "topic:agrochemical-household-poisons/oleander-datura",
+      "uiHints": {
+        "icon": "skull",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Oleander",
+            "title": "Recognise",
+            "detail": "Seeds/leaves (Thevetia peruviana, Nerium oleander) ingestion; vomiting, sinus bradycardia, AV block, ventricular ectopy/tachycardia, hyperkalaemia. Serum digoxin assay may cross-react (qualitative only).",
+            "refs": [
+              "eddleston2000"
+            ]
+          },
+          {
+            "n": 2,
+            "time": "Oleander",
+            "title": "Treat",
+            "detail": "Continuous ECG; activated charcoal; atropine for bradycardia; temporary transvenous pacing for high-grade block; treat hyperkalaemia with insulin-glucose (avoid calcium); correct Mg2+ and K+.",
+            "refs": [
+              "eddleston2000"
+            ]
+          },
+          {
+            "n": 3,
+            "time": "Oleander",
+            "title": "Antidote",
+            "detail": "Digoxin Fab 1200 mg reversed arrhythmias within hours in the Sri Lankan RCT; cost limits use.",
+            "refs": [
+              "eddleston2000"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Datura",
+            "title": "Recognise",
+            "detail": "'Dry as a bone, red as a beet, hot as a hare, blind as a bat, mad as a hatter': mydriasis, tachycardia, hyperthermia, urinary retention, ileus, delirium; often in food or drink (robbery/spiking) or seeds mistaken for chilli."
+          },
+          {
+            "n": 5,
+            "time": "Datura",
+            "title": "Treat",
+            "detail": "Benzodiazepines for agitation, external cooling, catheterise, fluids; avoid antipsychotics with anticholinergic action; physostigmine (rarely available) for severe delirium if no QRS widening."
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "atropine",
+            "role": "Oleander bradycardia",
+            "route": "IV",
+            "dose": "0.6-1.2 mg, repeat to effect",
+            "refs": [
+              "eddleston2000"
+            ]
+          },
+          {
+            "drugId": "digoxin-fab",
+            "role": "Life-threatening oleander cardiotoxicity",
+            "route": "IV over 30 min",
+            "dose": "1200 mg (30 vials) as in the RCT",
+            "verify": "Very costly and often unavailable in India; confirm supply.",
+            "refs": [
+              "eddleston2000"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Ventricular arrhythmia or complete heart block in oleander poisoning."
+          },
+          {
+            "text": "Hyperthermia > 40 °C with agitation in datura: active cooling, sedation."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Giving IV calcium for hyperkalaemia in cardiac glycoside toxicity (historically feared; avoid if alternatives exist)."
+          },
+          {
+            "text": "Restraining an anticholinergic patient without sedation (hyperthermia, rhabdomyolysis)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Yellow oleander self-poisoning is common in Tamil Nadu and Sri Lanka."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Oleander cardiotoxicity",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Oleander ingestion"
+          },
+          {
+            "id": "ecg",
+            "type": "action",
+            "text": "Continuous ECG, K+, Mg2+; charcoal"
+          },
+          {
+            "id": "brady",
+            "type": "decision",
+            "text": "Symptomatic bradycardia or AV block?"
+          },
+          {
+            "id": "atr",
+            "type": "action",
+            "text": "Atropine; pacing if refractory",
+            "severity": "high"
+          },
+          {
+            "id": "va",
+            "type": "decision",
+            "text": "Ventricular arrhythmia or refractory block?"
+          },
+          {
+            "id": "fab",
+            "type": "end",
+            "text": "Digoxin Fab if available; correct K+/Mg2+"
+          },
+          {
+            "id": "obs",
+            "type": "end",
+            "text": "Monitor ≥ 24-72 h"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "ecg"
+          },
+          {
+            "from": "ecg",
+            "to": "brady"
+          },
+          {
+            "from": "brady",
+            "to": "atr",
+            "label": "Yes"
+          },
+          {
+            "from": "brady",
+            "to": "va",
+            "label": "No"
+          },
+          {
+            "from": "atr",
+            "to": "va"
+          },
+          {
+            "from": "va",
+            "to": "fab",
+            "label": "Yes"
+          },
+          {
+            "from": "va",
+            "to": "obs",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "eddleston2000"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Eddleston 2000 (Lancet RCT, n = 66):** digoxin Fab rapidly reversed oleander-induced arrhythmias.",
+        "indiaNotes": "- Oleander and datura poisonings are frequent in southern India; datura spiking of food/drinks is reported on trains and highways."
+      },
+      "drugIds": [
+        "atropine",
+        "digoxin-fab"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "eddleston2000"
+      ],
+      "quiz": [
+        {
+          "id": "oleander-datura-q1",
+          "stem": "Oleander toxicity resembles:",
+          "options": [
+            "Digoxin toxicity",
+            "OP poisoning",
+            "Opioid toxicity",
+            "Paracetamol"
+          ],
+          "answerIndex": 0,
+          "explanation": "Cardiac glycosides."
+        },
+        {
+          "id": "oleander-datura-q2",
+          "stem": "First-line for datura agitation:",
+          "options": [
+            "Haloperidol",
+            "Benzodiazepine",
+            "Atropine",
+            "Physical restraint only"
+          ],
+          "answerIndex": 1,
+          "explanation": "Antipsychotics may worsen anticholinergic effects."
+        },
+        {
+          "id": "oleander-datura-q3",
+          "stem": "Datura toxidrome includes:",
+          "options": [
+            "Miosis and sweating",
+            "Mydriasis, dry skin, retention",
+            "Bradycardia",
+            "Bronchorrhoea"
+          ],
+          "answerIndex": 1,
+          "explanation": "Anticholinergic."
+        }
+      ]
+    },
+    {
+      "id": "corrosives-hydrocarbons",
+      "title": "Corrosive and hydrocarbon (kerosene) ingestion",
+      "summary": "Corrosives: protect the airway, no emesis, neutralisation or blind NG tube; early endoscopy (within 12-48 h) or CT to grade injury and identify perforation needing surgery. Hydrocarbons: the danger is aspiration pneumonitis; no lavage or emesis; supportive respiratory care.",
+      "viewKey": "topic:agrochemical-household-poisons/corrosives-hydrocarbons",
+      "uiHints": {
+        "icon": "skull",
+        "accent": "high"
+      },
+      "bedside": {
+        "steps": [
+          {
+            "n": 1,
+            "time": "Corrosive",
+            "title": "Airway first",
+            "detail": "Stridor, drooling, hoarseness: early senior airway management (fibreoptic/surgical airway ready); avoid blind intubation attempts."
+          },
+          {
+            "n": 2,
+            "time": "Corrosive",
+            "title": "Do not",
+            "detail": "Induce vomiting, give neutralising agents or activated charcoal, or insert a blind NG tube."
+          },
+          {
+            "n": 3,
+            "time": "Corrosive",
+            "title": "Assess",
+            "detail": "Erect CXR/CT for perforation (mediastinitis, peritonitis); endoscopy within 12-48 h (avoid days 5-15) with Zargar grading.",
+            "refs": [
+              "zargar1991"
+            ]
+          },
+          {
+            "n": 4,
+            "time": "Corrosive",
+            "title": "Manage by grade",
+            "detail": "Grade 0-1: early oral intake. 2a: liquids, PPI. 2b-3a: nil by mouth, feeding jejunostomy/NJ, monitor for strictures. 3b (extensive necrosis) or perforation: emergency surgery.",
+            "refs": [
+              "zargar1991"
+            ]
+          },
+          {
+            "n": 5,
+            "time": "Hydrocarbon",
+            "title": "Aspiration",
+            "detail": "Cough, choking, tachypnoea within hours: CXR changes may lag 6 h; oxygen, HFNC/NIV or lung-protective ventilation; no prophylactic antibiotics or steroids. Observe 6 h; asymptomatic with normal CXR can go home."
+          }
+        ],
+        "tables": [
+          {
+            "id": "zargar",
+            "title": "Zargar endoscopic classification of corrosive injury",
+            "columns": [
+              "Grade",
+              "Finding",
+              "Implication"
+            ],
+            "rows": [
+              [
+                "0",
+                "Normal",
+                "Discharge"
+              ],
+              [
+                "1",
+                "Oedema, hyperaemia",
+                "Low risk"
+              ],
+              [
+                "2a",
+                "Friability, erosions, superficial ulcers, exudate",
+                "Low stricture risk"
+              ],
+              [
+                "2b",
+                "As 2a plus deep discrete or circumferential ulcers",
+                "High stricture risk"
+              ],
+              [
+                "3a",
+                "Small scattered necrosis",
+                "High stricture risk"
+              ],
+              [
+                "3b",
+                "Extensive necrosis",
+                "High mortality; surgery"
+              ]
+            ],
+            "caption": "Grades 2b and above predict stricture; 3b predicts perforation and death.",
+            "refs": [
+              "zargar1991"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Chest or abdominal pain, subcutaneous emphysema, fever or shock after corrosive ingestion: perforation."
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Blind NG tube in corrosive injury (perforation)."
+          },
+          {
+            "text": "Gastric lavage after kerosene ingestion (increases aspiration)."
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Acids (toilet cleaner, battery acid) injure the stomach more; alkalis injure the oesophagus more."
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Corrosive ingestion",
+        "nodes": [
+          {
+            "id": "s",
+            "type": "start",
+            "text": "Corrosive ingestion"
+          },
+          {
+            "id": "air",
+            "type": "decision",
+            "text": "Airway compromise?"
+          },
+          {
+            "id": "ai",
+            "type": "action",
+            "text": "Senior airway; fibreoptic/surgical ready",
+            "severity": "critical"
+          },
+          {
+            "id": "perf",
+            "type": "decision",
+            "text": "Perforation on CXR/CT?"
+          },
+          {
+            "id": "surg",
+            "type": "end",
+            "text": "Emergency surgery"
+          },
+          {
+            "id": "endo",
+            "type": "action",
+            "text": "Endoscopy 12-48 h; Zargar grade"
+          },
+          {
+            "id": "low",
+            "type": "end",
+            "text": "Grade 0-2a: early feeding, PPI"
+          },
+          {
+            "id": "high",
+            "type": "end",
+            "text": "Grade 2b-3: NPO, enteral access, stricture surveillance"
+          },
+          {
+            "id": "g",
+            "type": "decision",
+            "text": "Grade ≥ 2b?"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s",
+            "to": "air"
+          },
+          {
+            "from": "air",
+            "to": "ai",
+            "label": "Yes"
+          },
+          {
+            "from": "air",
+            "to": "perf",
+            "label": "No"
+          },
+          {
+            "from": "ai",
+            "to": "perf"
+          },
+          {
+            "from": "perf",
+            "to": "surg",
+            "label": "Yes"
+          },
+          {
+            "from": "perf",
+            "to": "endo",
+            "label": "No"
+          },
+          {
+            "from": "endo",
+            "to": "g"
+          },
+          {
+            "from": "g",
+            "to": "high",
+            "label": "Yes"
+          },
+          {
+            "from": "g",
+            "to": "low",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "zargar1991"
+        ]
+      },
+      "consultantNotes": {
+        "evidence": "- **Zargar 1991 (Chandigarh):** modified endoscopic grading predicting stricture and mortality.",
+        "controversies": "- CT is increasingly used instead of endoscopy to decide surgery; steroids to prevent strictures are not recommended.",
+        "indiaNotes": "- Toilet cleaners (hydrochloric acid) and battery acid are the commonest corrosives in India; kerosene ingestion in children remains common in rural homes."
+      },
+      "drugIds": [],
+      "calculatorIds": [],
+      "references": [
+        "zargar1991"
+      ],
+      "quiz": [
+        {
+          "id": "corrosives-hydrocarbons-q1",
+          "stem": "Contraindicated after corrosive ingestion:",
+          "options": [
+            "Induced vomiting",
+            "Early endoscopy",
+            "PPI",
+            "CT"
+          ],
+          "answerIndex": 0,
+          "explanation": "Re-exposes the oesophagus."
+        },
+        {
+          "id": "corrosives-hydrocarbons-q2",
+          "stem": "Zargar grade predicting perforation and death:",
+          "options": [
+            "1",
+            "2a",
+            "3b",
+            "0"
+          ],
+          "answerIndex": 2,
+          "explanation": "Extensive necrosis."
+        },
+        {
+          "id": "corrosives-hydrocarbons-q3",
+          "stem": "Main danger of kerosene ingestion:",
+          "options": [
+            "Liver failure",
+            "Aspiration pneumonitis",
+            "Hyperkalaemia",
+            "Seizures"
+          ],
+          "answerIndex": 1,
+          "explanation": "Low viscosity hydrocarbons aspirate easily."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "atropine",
+      "name": "Atropine",
+      "class": "Antimuscarinic",
+      "indications": "Muscarinic features of OP/carbamate poisoning (bronchorrhoea, bronchospasm, bradycardia, hypotension); symptomatic bradycardia in oleander toxicity.",
+      "adultDose": "OP: 1.8-3 mg IV bolus, doubling every 5 min until atropinised; then infusion of 10-20% of the total loading dose per hour, titrated. Oleander bradycardia: 0.6-1.2 mg IV, repeat.",
+      "preparationIndia": "0.6 mg/mL 1 mL ampoules (multiple ampoules needed); some hospitals stock 1 mg/mL.",
+      "cautions": "Atropine toxicity: agitation, hyperthermia, absent bowel sounds, urinary retention – pause and restart at 70-80% of the rate.",
+      "refs": [
+        "eddleston2008",
+        "abedin2012"
+      ]
+    },
+    {
+      "id": "pralidoxime",
+      "name": "Pralidoxime (PAM)",
+      "class": "Oxime (acetylcholinesterase reactivator)",
+      "indications": "Moderate-severe OP poisoning (benefit uncertain); not for carbamates.",
+      "adultDose": "Pawar regimen: 2 g IV over 30 min, then 1 g/h for 48 h, then 1 g every 4 h until weaned. WHO regimen: 30 mg/kg load then 8 mg/kg/h.",
+      "preparationIndia": "1 g vials (pralidoxime chloride/iodide) widely stocked.",
+      "cautions": "Evidence conflicting (Pawar 2006 benefit; Eddleston 2009 and Cochrane: no clear benefit). Rapid injection causes vomiting, tachycardia, muscle weakness.",
+      "verify": "Unit protocols vary; document which regimen your ICU uses.",
+      "refs": [
+        "pawar2006",
+        "eddleston2009",
+        "buckley2011"
+      ]
+    },
+    {
+      "id": "magnesium-sulphate",
+      "name": "Magnesium sulphate",
+      "class": "Electrolyte / membrane stabiliser",
+      "indications": "Aluminium phosphide poisoning (arrhythmias, hypomagnesaemia) – supportive, unproven mortality benefit.",
+      "adultDose": "2-3 g IV over 20 min, then 1 g/h guided by Mg2+ levels and reflexes.",
+      "cautions": "Hypermagnesaemia; renal failure.",
+      "verify": "Regimens for phosphide poisoning vary between Indian centres; confirm local protocol.",
+      "refs": [
+        "gurjar2011"
+      ]
+    },
+    {
+      "id": "acetylcysteine",
+      "name": "N-acetylcysteine",
+      "class": "Antioxidant / glutathione precursor",
+      "indications": "Yellow phosphorus and aluminium phosphide poisoning (adjunct, unproven); paracetamol overdose.",
+      "adultDose": "Paracetamol-style regimen (150 mg/kg over 1 h, then 50 mg/kg over 4 h, then 100 mg/kg over 16 h) or the SNAP 12-h regimen.",
+      "cautions": "Anaphylactoid reactions.",
+      "refs": [
+        "eapen2021"
+      ]
+    },
+    {
+      "id": "digoxin-fab",
+      "name": "Digoxin-specific antibody fragments",
+      "class": "Antidote",
+      "indications": "Life-threatening arrhythmia from cardiac glycosides (digoxin, yellow oleander).",
+      "adultDose": "Yellow oleander trial: 1200 mg (30 vials of 40 mg) IV; digoxin: by body load or 2-10 vials empirically.",
+      "preparationIndia": "Very expensive and rarely stocked in India.",
+      "refs": [
+        "eddleston2000"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "eddleston2008",
+      "citation": "Eddleston M, Buckley NA, Eyer P, Dawson AH. Management of acute organophosphorus pesticide poisoning. Lancet. 2008;371(9612):597-607",
+      "url": "https://doi.org/10.1016/S0140-6736(07)61202-1",
+      "year": 2008,
+      "doi": "10.1016/S0140-6736(07)61202-1",
+      "type": "review"
+    },
+    {
+      "id": "abedin2012",
+      "citation": "Abedin MJ, Sayeed AA, Basher A, et al. Open-label randomized clinical trial of atropine bolus injection versus incremental boluses plus infusion for organophosphate poisoning in Bangladesh. J Med Toxicol. 2012;8(2):108-117",
+      "url": "https://doi.org/10.1007/s13181-012-0214-6",
+      "year": 2012,
+      "doi": "10.1007/s13181-012-0214-6",
+      "type": "trial"
+    },
+    {
+      "id": "pawar2006",
+      "citation": "Pawar KS, Bhoite RR, Pillay CP, Chavan SC, Malshikare DS, Garad SG. Continuous pralidoxime infusion versus repeated bolus injection to treat organophosphorus pesticide poisoning: a randomised controlled trial. Lancet. 2006;368(9553):2136-2141",
+      "url": "https://doi.org/10.1016/S0140-6736(06)69862-0",
+      "year": 2006,
+      "doi": "10.1016/S0140-6736(06)69862-0",
+      "type": "trial"
+    },
+    {
+      "id": "eddleston2009",
+      "citation": "Eddleston M, Eyer P, Worek F, et al. Pralidoxime in acute organophosphorus insecticide poisoning: a randomised controlled trial. PLoS Med. 2009;6(6):e1000104",
+      "url": "https://doi.org/10.1371/journal.pmed.1000104",
+      "year": 2009,
+      "doi": "10.1371/journal.pmed.1000104",
+      "type": "trial"
+    },
+    {
+      "id": "buckley2011",
+      "citation": "Buckley NA, Eddleston M, Li Y, Bevan M, Robertson J. Oximes for acute organophosphate pesticide poisoning. Cochrane Database Syst Rev. 2011;(2):CD005085",
+      "url": "https://doi.org/10.1002/14651858.CD005085.pub2",
+      "year": 2011,
+      "doi": "10.1002/14651858.CD005085.pub2",
+      "type": "review"
+    },
+    {
+      "id": "gurjar2011",
+      "citation": "Gurjar M, Baronia AK, Azim A, Sharma K. Managing aluminum phosphide poisonings. J Emerg Trauma Shock. 2011;4(3):378-384",
+      "url": "https://doi.org/10.4103/0974-2700.83868",
+      "year": 2011,
+      "doi": "10.4103/0974-2700.83868",
+      "type": "review"
+    },
+    {
+      "id": "gawarammana2011",
+      "citation": "Gawarammana IB, Buckley NA. Medical management of paraquat ingestion. Br J Clin Pharmacol. 2011;72(5):745-757",
+      "url": "https://doi.org/10.1111/j.1365-2125.2011.04026.x",
+      "year": 2011,
+      "doi": "10.1111/j.1365-2125.2011.04026.x",
+      "type": "review"
+    },
+    {
+      "id": "eapen2021",
+      "citation": "Eapen CE, Venkataraman J. Rodenticide (yellow phosphorus poison)-induced hepatotoxicity in India: constraints during management. J Clin Exp Hepatol. 2021;11(4):414-417",
+      "url": "https://doi.org/10.1016/j.jceh.2021.04.011",
+      "year": 2021,
+      "doi": "10.1016/j.jceh.2021.04.011",
+      "type": "review"
+    },
+    {
+      "id": "varghese2020",
+      "citation": "Varghese J, Joshi V, Bollipalli MK, et al. Role of therapeutic plasma exchange in acute liver failure due to yellow phosphorus poisoning. Indian J Gastroenterol. 2020;39(6):544-549",
+      "url": "https://doi.org/10.1007/s12664-020-01095-y",
+      "year": 2020,
+      "doi": "10.1007/s12664-020-01095-y",
+      "type": "trial"
+    },
+    {
+      "id": "eddleston2000",
+      "citation": "Eddleston M, Rajapakse S, Rajakanthan, et al. Anti-digoxin Fab fragments in cardiotoxicity induced by ingestion of yellow oleander: a randomised controlled trial. Lancet. 2000;355(9208):967-972",
+      "url": "https://doi.org/10.1016/S0140-6736(00)90014-X",
+      "year": 2000,
+      "doi": "10.1016/S0140-6736(00)90014-X",
+      "type": "trial"
+    },
+    {
+      "id": "zargar1991",
+      "citation": "Zargar SA, Kochhar R, Mehta S, Mehta SK. The role of fiberoptic endoscopy in the management of corrosive ingestion and modified endoscopic classification of burns. Gastrointest Endosc. 1991;37(2):165-169",
+      "url": "https://doi.org/10.1016/S0016-5107(91)70678-0",
+      "year": 1991,
+      "doi": "10.1016/S0016-5107(91)70678-0",
+      "type": "trial"
+    }
+  ],
+  "verify": [
+    {
+      "item": "Poison information",
+      "reason": "Contact a poison centre (e.g. AIIMS National Poisons Information Centre, New Delhi: 1800-116-117) for unusual agents; confirm the current number."
+    },
+    {
+      "item": "Pesticide bans",
+      "reason": "India has banned or restricted several highly hazardous pesticides (state-wise bans on paraquat and some OPs); local product mix changes over time."
+    }
+  ]
+}

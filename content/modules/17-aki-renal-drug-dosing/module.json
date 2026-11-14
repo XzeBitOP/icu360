@@ -1,0 +1,1797 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "aki-renal-drug-dosing",
+  "number": 17,
+  "folder": "17-aki-renal-drug-dosing",
+  "section": {
+    "id": "D",
+    "title": "Renal, fluids and metabolic"
+  },
+  "phase": 2,
+  "title": "AKI and renal drug dosing",
+  "summary": "Acute kidney injury in the ICU: KDIGO staging, a structured work-up, rhabdomyolysis, contrast-associated AKI, practical renal drug dosing, and hepatorenal and cardiorenal syndromes, with Indian causes (tropical infections, snakebite, indigenous medicines).",
+  "tags": [
+    "AKI",
+    "KDIGO",
+    "creatinine",
+    "oliguria",
+    "rhabdomyolysis",
+    "contrast nephropathy",
+    "renal dosing",
+    "hepatorenal",
+    "terlipressin",
+    "cardiorenal",
+    "furosemide stress test"
+  ],
+  "relatedModules": [
+    "renal-replacement-therapy",
+    "fluids-electrolytes",
+    "liver-failure",
+    "icu-pharmacology-drug-infusions",
+    "sepsis-septic-shock",
+    "snakebite-scorpion-envenomation",
+    "tropical-monsoon-fevers"
+  ],
+  "version": "0.1.0",
+  "lastReviewed": "2026-11-15",
+  "reviewStatus": "consultant-reviewed",
+  "authors": [
+    "ICU 360 content team (AI-drafted)"
+  ],
+  "uiHints": {
+    "icon": "filter",
+    "accent": "high"
+  },
+  "viewKey": "module:aki-renal-drug-dosing",
+  "topics": [
+    {
+      "id": "kdigo-staging",
+      "title": "KDIGO definition and staging",
+      "summary": "Define and stage AKI with creatinine and urine output, and recognise who needs urgent nephrology/ICU input.",
+      "viewKey": "topic:aki-renal-drug-dosing/kdigo-staging",
+      "uiHints": {
+        "icon": "layers",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "AKI (KDIGO 2012) = creatinine rise ≥ 0.3 mg/dL within 48 h, OR rise to ≥ 1.5x baseline within the prior 7 days, OR urine output < 0.5 mL/kg/h for 6 h.",
+          "refs": [
+            "kdigo-aki"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Find a baseline creatinine",
+            "detail": "Lowest value in the last 3 months (or up to 1 year). If unknown, use the lowest value during admission; avoid back-calculating from eGFR in Indian patients with low muscle mass.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Stage by the worse of creatinine or urine output",
+            "detail": "Stage 1: 1.5-1.9x baseline or ≥ 0.3 mg/dL rise; UO < 0.5 mL/kg/h for 6-12 h. Stage 2: 2.0-2.9x; UO < 0.5 mL/kg/h ≥ 12 h. Stage 3: ≥ 3x or creatinine ≥ 4.0 mg/dL or RRT started; UO < 0.3 mL/kg/h ≥ 24 h or anuria ≥ 12 h.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Measure urine output hourly",
+            "detail": "Urinary catheter in critically ill/oliguric patients; use actual body weight (consider ideal weight in obesity).",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Apply the KDIGO bundle at any stage",
+            "detail": "Stop nephrotoxins (NSAIDs, aminoglycosides, contrast if avoidable), review drug doses, ensure volume status and perfusion pressure (MAP ≥ 65), monitor creatinine and UO, avoid hyperglycaemia, consider alternatives to radiocontrast.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Escalate stage 2-3",
+            "detail": "Nephrology/ICU review, search for cause (see AKI work-up), assess RRT needs (hyperkalaemia, acidosis, overload, uraemic complications).",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "kdigo-stages",
+            "title": "KDIGO AKI staging",
+            "columns": [
+              "Stage",
+              "Serum creatinine",
+              "Urine output"
+            ],
+            "rows": [
+              [
+                "1",
+                "1.5-1.9x baseline OR ≥ 0.3 mg/dL rise in 48 h",
+                "< 0.5 mL/kg/h for 6-12 h"
+              ],
+              [
+                "2",
+                "2.0-2.9x baseline",
+                "< 0.5 mL/kg/h for ≥ 12 h"
+              ],
+              [
+                "3",
+                "≥ 3x baseline OR ≥ 4.0 mg/dL OR RRT initiated",
+                "< 0.3 mL/kg/h for ≥ 24 h OR anuria ≥ 12 h"
+              ]
+            ],
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "AKI with K ≥ 6.5 mmol/L, pH < 7.15, pulmonary oedema not responding to diuretics, or uraemic encephalopathy/pericarditis: emergency RRT assessment.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Creatinine lags 24-48 h behind injury, and fluid overload dilutes it; urine output falls earlier.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "text": "Using eGFR equations in unstable AKI: they assume steady state.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "A small creatinine rise (0.3 mg/dL) independently predicts mortality; treat it seriously.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "AKI recognition and first steps",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Creatinine rise or low urine output"
+          },
+          {
+            "id": "aki",
+            "type": "decision",
+            "text": "Meets KDIGO AKI criteria?"
+          },
+          {
+            "id": "mon",
+            "type": "end",
+            "text": "Monitor creatinine and UO; avoid nephrotoxins"
+          },
+          {
+            "id": "stage",
+            "type": "action",
+            "text": "Stage (worst of creatinine or UO); start KDIGO bundle"
+          },
+          {
+            "id": "emerg",
+            "type": "decision",
+            "text": "Life-threatening complication (K ≥ 6.5, pH < 7.15, overload, uraemia)?"
+          },
+          {
+            "id": "rrt",
+            "type": "end",
+            "text": "Emergency treatment + RRT assessment",
+            "severity": "critical"
+          },
+          {
+            "id": "work",
+            "type": "action",
+            "text": "AKI work-up: volume, obstruction (USG), urine, drugs, sepsis"
+          },
+          {
+            "id": "s23",
+            "type": "decision",
+            "text": "Stage 2-3?"
+          },
+          {
+            "id": "neph",
+            "type": "end",
+            "text": "Nephrology/ICU review; daily RRT need assessment",
+            "severity": "high"
+          },
+          {
+            "id": "ward",
+            "type": "end",
+            "text": "Treat cause, daily review, repeat creatinine in 24 h"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "aki"
+          },
+          {
+            "from": "aki",
+            "to": "mon",
+            "label": "No"
+          },
+          {
+            "from": "aki",
+            "to": "stage",
+            "label": "Yes"
+          },
+          {
+            "from": "stage",
+            "to": "emerg"
+          },
+          {
+            "from": "emerg",
+            "to": "rrt",
+            "label": "Yes"
+          },
+          {
+            "from": "emerg",
+            "to": "work",
+            "label": "No"
+          },
+          {
+            "from": "work",
+            "to": "s23"
+          },
+          {
+            "from": "s23",
+            "to": "neph",
+            "label": "Yes"
+          },
+          {
+            "from": "s23",
+            "to": "ward",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "kdigo-aki"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "AKI reflects an abrupt fall in GFR from haemodynamic (pre-renal), intrinsic (ATN, interstitial nephritis, glomerulonephritis, vascular) or post-renal causes. In ICU, sepsis-associated AKI is the commonest and involves inflammation and microvascular dysfunction rather than simple hypoperfusion.",
+        "evidence": "- KDIGO 2012 unified RIFLE and AKIN criteria; even stage 1 AKI is associated with increased mortality [KDIGO 2012].\n- KDIGO care bundles in high-risk patients (PrevAKI trials) reduced AKI after cardiac surgery.",
+        "controversies": "- Biomarkers (NGAL, TIMP-2·IGFBP7) for early detection are not widely used in India due to cost.\n- Urine output criterion with actual vs ideal body weight in obesity.",
+        "indiaNotes": "- Community-acquired AKI in India is often due to tropical infections (leptospirosis, malaria, scrub typhus, dengue), snakebite (Russell's viper), diarrhoeal illness, and nephrotoxic indigenous medicines; it affects younger patients.\n- Creatinine is reported in mg/dL in India (1 mg/dL = 88.4 µmol/L)."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "creatinine-clearance-cg"
+      ],
+      "references": [
+        "kdigo-aki"
+      ],
+      "quiz": [
+        {
+          "id": "kdigo-staging-q1",
+          "stem": "Creatinine rises from 0.9 to 1.3 mg/dL in 36 h. KDIGO stage?",
+          "options": [
+            "No AKI",
+            "Stage 1",
+            "Stage 2",
+            "Stage 3"
+          ],
+          "answerIndex": 1,
+          "explanation": "Rise ≥ 0.3 mg/dL within 48 h = stage 1."
+        },
+        {
+          "id": "kdigo-staging-q2",
+          "stem": "Urine output 0.25 mL/kg/h for 26 h = stage:",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "Not AKI"
+          ],
+          "answerIndex": 2,
+          "explanation": "< 0.3 mL/kg/h for ≥ 24 h = stage 3."
+        },
+        {
+          "id": "kdigo-staging-q3",
+          "stem": "Which is part of the KDIGO bundle?",
+          "options": [
+            "Routine furosemide for oliguria",
+            "Stop nephrotoxins and adjust drug doses",
+            "Low-dose dopamine",
+            "Restrict all fluids"
+          ],
+          "answerIndex": 1,
+          "explanation": "KDIGO recommends against diuretics and dopamine to prevent/treat AKI."
+        }
+      ]
+    },
+    {
+      "id": "aki-workup",
+      "title": "AKI work-up",
+      "summary": "A structured bedside approach to the cause: pre-renal, intrinsic, post-renal, with urine tests, ultrasound and the furosemide stress test.",
+      "viewKey": "topic:aki-renal-drug-dosing/aki-workup",
+      "uiHints": {
+        "icon": "search",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Look for the cause of every AKI: volume/perfusion, sepsis, nephrotoxins, obstruction, and intrinsic renal disease (glomerulonephritis, interstitial nephritis, vascular). Most ICU AKI is multifactorial.",
+          "refs": [
+            "kdigo-aki"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "History and drug chart",
+            "detail": "Hypotension, sepsis, vomiting/diarrhoea, contrast, NSAIDs, ACEi/ARB, diuretics, aminoglycosides, vancomycin + piperacillin-tazobactam, colistin, amphotericin, herbal/indigenous medicines, snakebite, rhabdomyolysis risk.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Assess volume and perfusion",
+            "detail": "MAP, CRT, lactate, JVP/CVP, lung B-lines, IVC, fluid balance; venous congestion (high CVP) also reduces GFR.",
+            "refs": [
+              "kdigo-aki",
+              "aha-cardiorenal-2019"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Exclude obstruction",
+            "detail": "Bladder scan / catheter flush; renal ultrasound for hydronephrosis, kidney size (small = CKD), stones.",
+            "time": "< 24 h",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Urine tests",
+            "detail": "Dipstick (blood/protein), microscopy (muddy brown casts = ATN; RBC casts = GN; WBC casts/eosinophils = AIN), urine Na/FeNa (< 1% suggests pre-renal if not on diuretics), FeUrea < 35% if on diuretics, urine protein:creatinine.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Bloods",
+            "detail": "Creatinine, urea, K, bicarbonate/ABG, Ca, PO4, CK (rhabdo), LDH and smear (haemolysis, TMA), platelets, LFT, cultures. Serology if GN suspected: ANA, ANCA, anti-GBM, C3/C4, hepatitis B/C, HIV.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Furosemide stress test (optional)",
+            "detail": "Euvolaemic, stage 1-2 AKI: furosemide 1 mg/kg IV (1.5 mg/kg if exposed); urine < 200 mL in 2 h predicts progression to stage 3/RRT.",
+            "time": "2 h",
+            "refs": [
+              "fst-2013"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Refer for biopsy/nephrology",
+            "detail": "Active sediment, nephrotic-range proteinuria, unexplained AKI, suspected vasculitis/TMA or AIN.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "furosemide",
+            "role": "Furosemide stress test",
+            "route": "IV",
+            "dose": "1 mg/kg (1.5 mg/kg if on loop diuretics)",
+            "workedExample": "70 kg diuretic-naive: 70 mg IV; replace urine output mL-for-mL with crystalloid if needed; < 200 mL in 2 h = high risk",
+            "notes": "Only in euvolaemic patients.",
+            "refs": [
+              "fst-2013"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "aki-causes",
+            "title": "Causes of AKI in Indian ICUs",
+            "columns": [
+              "Category",
+              "Common causes"
+            ],
+            "rows": [
+              [
+                "Pre-renal / haemodynamic",
+                "Sepsis, hypovolaemia (diarrhoea, vomiting, bleeding), cardiorenal, hepatorenal, ACEi/NSAIDs"
+              ],
+              [
+                "Intrinsic - tubular",
+                "Ischaemic/septic ATN, contrast, aminoglycosides, colistin, rhabdomyolysis, haemolysis (G6PD, malaria), snakebite"
+              ],
+              [
+                "Intrinsic - interstitial",
+                "Drug-induced AIN (PPIs, beta-lactams), leptospirosis, pyelonephritis"
+              ],
+              [
+                "Intrinsic - glomerular/vascular",
+                "Post-infectious GN, lupus, vasculitis, HUS/TTP, malignant hypertension"
+              ],
+              [
+                "Post-renal",
+                "BPH, stones, cervical/prostate cancer, blocked catheter"
+              ]
+            ],
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "AKI with haemoptysis (pulmonary-renal syndrome), active urine sediment or rapidly rising creatinine: urgent nephrology, consider vasculitis/anti-GBM.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "text": "AKI + thrombocytopenia + haemolysis (schistocytes, high LDH): think TMA (HUS/TTP), malaria, snakebite, DIC.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Interpreting FeNa after diuretics; use FeUrea instead.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "text": "Giving more fluid to every oliguric patient: fluid overload worsens AKI outcome.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Always flush or replace the urinary catheter before calling it anuria.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Finding the cause of AKI",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "AKI confirmed"
+          },
+          {
+            "id": "obs",
+            "type": "decision",
+            "text": "Obstruction on bladder scan/ultrasound?"
+          },
+          {
+            "id": "relieve",
+            "type": "end",
+            "text": "Relieve obstruction (catheter, nephrostomy, urology)",
+            "severity": "high"
+          },
+          {
+            "id": "vol",
+            "type": "decision",
+            "text": "Hypovolaemic or hypoperfused?"
+          },
+          {
+            "id": "res",
+            "type": "action",
+            "text": "Resuscitate (fluid if responsive), MAP ≥ 65"
+          },
+          {
+            "id": "tox",
+            "type": "action",
+            "text": "Stop nephrotoxins; adjust doses"
+          },
+          {
+            "id": "sed",
+            "type": "decision",
+            "text": "Active sediment (RBC casts, proteinuria) or systemic features?"
+          },
+          {
+            "id": "gn",
+            "type": "end",
+            "text": "Urgent nephrology: GN/vasculitis/TMA serology, biopsy",
+            "severity": "high"
+          },
+          {
+            "id": "atn",
+            "type": "end",
+            "text": "Probable ATN/septic AKI: supportive care, monitor, RRT if needed"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "obs"
+          },
+          {
+            "from": "obs",
+            "to": "relieve",
+            "label": "Yes"
+          },
+          {
+            "from": "obs",
+            "to": "vol",
+            "label": "No"
+          },
+          {
+            "from": "vol",
+            "to": "res",
+            "label": "Yes"
+          },
+          {
+            "from": "vol",
+            "to": "tox",
+            "label": "No"
+          },
+          {
+            "from": "res",
+            "to": "tox"
+          },
+          {
+            "from": "tox",
+            "to": "sed"
+          },
+          {
+            "from": "sed",
+            "to": "gn",
+            "label": "Yes"
+          },
+          {
+            "from": "sed",
+            "to": "atn",
+            "label": "No"
+          }
+        ],
+        "refs": [
+          "kdigo-aki"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Pre-renal states cause avid sodium and water retention (low urine Na, FeNa < 1%), which reverses quickly with restored perfusion. Prolonged insult leads to tubular injury with loss of concentrating ability (urine Na > 40, FeNa > 2%, muddy brown casts).",
+        "evidence": "- Chawla 2013: furosemide stress test urine < 200 mL in 2 h had AUC 0.87 for progression to stage 3 [Chawla 2013].\n- KDIGO 2012 recommends evaluating cause in all AKI and avoiding diuretics to prevent or treat AKI except for fluid overload [KDIGO 2012].",
+        "controversies": "- FeNa is unreliable in sepsis, contrast nephropathy and CKD.",
+        "indiaNotes": "- Ask specifically about indigenous medicines (some contain heavy metals or aristolochic acid), hair dye (paraphenylenediamine) ingestion, and snakebite.\n- Leptospirosis AKI is typically non-oliguric with hypokalaemia; Russell's viper AKI often needs RRT."
+      },
+      "drugIds": [
+        "furosemide"
+      ],
+      "calculatorIds": [
+        "fena",
+        "creatinine-clearance-cg"
+      ],
+      "references": [
+        "kdigo-aki",
+        "fst-2013",
+        "aha-cardiorenal-2019"
+      ],
+      "quiz": [
+        {
+          "id": "aki-workup-q1",
+          "stem": "FeNa 0.4% in a patient not on diuretics suggests:",
+          "options": [
+            "ATN",
+            "Pre-renal physiology",
+            "Obstruction always",
+            "AIN"
+          ],
+          "answerIndex": 1,
+          "explanation": "Avid sodium retention indicates pre-renal state (with exceptions)."
+        },
+        {
+          "id": "aki-workup-q2",
+          "stem": "Furosemide stress test predicting progression to stage 3:",
+          "options": [
+            "< 200 mL urine in 2 h after 1 mg/kg",
+            "> 500 mL in 6 h",
+            "Any urine",
+            "< 50 mL in 24 h"
+          ],
+          "answerIndex": 0,
+          "explanation": "Chawla 2013 threshold."
+        },
+        {
+          "id": "aki-workup-q3",
+          "stem": "RBC casts on urine microscopy indicate:",
+          "options": [
+            "ATN",
+            "Glomerulonephritis",
+            "Pre-renal",
+            "Obstruction"
+          ],
+          "answerIndex": 1,
+          "explanation": "RBC casts are glomerular in origin."
+        }
+      ]
+    },
+    {
+      "id": "rhabdomyolysis",
+      "title": "Rhabdomyolysis",
+      "summary": "Recognise rhabdomyolysis, give early aggressive fluids, manage hyperkalaemia and compartment syndrome, and know when to start RRT.",
+      "viewKey": "topic:aki-renal-drug-dosing/rhabdomyolysis",
+      "uiHints": {
+        "icon": "dumbbell",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Rhabdomyolysis = skeletal muscle breakdown releasing myoglobin, K, phosphate and urate; CK typically > 5x upper limit (often > 5,000-10,000 U/L). AKI risk rises with CK > 15,000-20,000 U/L, dehydration, acidosis and sepsis.",
+          "refs": [
+            "bosch-rhabdo-2009"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Suspect",
+            "detail": "Crush injury, prolonged immobilisation (stroke, intoxication), seizures, heat stroke, extreme exertion, electrical injury, snakebite (sea snake, Russell's viper), drugs (statins, colchicine), hypokalaemia/hypophosphataemia, infections (leptospirosis, dengue, influenza).",
+            "refs": [
+              "bosch-rhabdo-2009"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Confirm and grade",
+            "detail": "CK (peaks 24-72 h), dark urine with dipstick positive for blood but no RBCs on microscopy, K, Ca (low), PO4 (high), urate, creatinine, ABG, ECG.",
+            "refs": [
+              "bosch-rhabdo-2009"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Fluids early",
+            "detail": "Start isotonic crystalloid early (ideally before extrication in crush): 1-2 L/h initially if not overloaded, then titrate to urine output 200-300 mL/h; continue until CK < 5,000 U/L and urine clears.",
+            "time": "ASAP",
+            "refs": [
+              "bosch-rhabdo-2009"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Treat hyperkalaemia",
+            "detail": "ECG; calcium gluconate for ECG changes, insulin-dextrose, salbutamol; avoid calcium for asymptomatic hypocalcaemia (Ca deposits in muscle, rebound hypercalcaemia later).",
+            "refs": [
+              "bosch-rhabdo-2009"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Watch compartments",
+            "detail": "Pain on passive stretch, tense limb, rising CK: measure compartment pressure (> 30 mmHg or delta pressure < 30 mmHg) → fasciotomy.",
+            "refs": [
+              "bosch-rhabdo-2009"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Bicarbonate and mannitol: not routine",
+            "detail": "No proven benefit; bicarbonate only for severe acidosis; mannitol not recommended.",
+            "refs": [
+              "bosch-rhabdo-2009"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "RRT when indicated",
+            "detail": "Refractory hyperkalaemia, acidosis, overload or oliguric AKI. Conventional dialysis does not remove myoglobin significantly; RRT treats complications.",
+            "refs": [
+              "bosch-rhabdo-2009",
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "normal-saline",
+            "role": "Prevent myoglobin AKI",
+            "route": "IV",
+            "dose": "1-2 L/h initially, then titrate to UO 200-300 mL/h",
+            "target": "Urine 200-300 mL/h (~3 mL/kg/h); CK falling",
+            "workedExample": "70 kg crush victim: 1 L/h for first 2 h, then adjust to keep 200-300 mL/h; reassess lungs 2-hourly",
+            "notes": "Reduce if oliguric despite fluids (established AKI) or overloaded.",
+            "refs": [
+              "bosch-rhabdo-2009"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "K > 6.5 mmol/L or ECG changes in rhabdomyolysis can rise rapidly: treat and arrange RRT early.",
+            "refs": [
+              "bosch-rhabdo-2009"
+            ]
+          },
+          {
+            "text": "Oliguria despite adequate fluid resuscitation = established AKI: stop pushing fluids, plan RRT.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Correcting early hypocalcaemia with calcium in asymptomatic patients.",
+            "refs": [
+              "bosch-rhabdo-2009"
+            ]
+          },
+          {
+            "text": "Missing compartment syndrome in a sedated patient.",
+            "refs": [
+              "bosch-rhabdo-2009"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Dipstick positive for blood but no RBCs on microscopy = myoglobin or haemoglobin.",
+            "refs": [
+              "bosch-rhabdo-2009"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "Rhabdomyolysis",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Suspected rhabdomyolysis"
+          },
+          {
+            "id": "labs",
+            "type": "action",
+            "text": "CK, K, Ca, PO4, creatinine, ABG, ECG, urine dipstick"
+          },
+          {
+            "id": "k",
+            "type": "decision",
+            "text": "K ≥ 6.5 or ECG changes?"
+          },
+          {
+            "id": "hyperk",
+            "type": "action",
+            "text": "Calcium gluconate, insulin-dextrose, salbutamol",
+            "severity": "critical"
+          },
+          {
+            "id": "over",
+            "type": "decision",
+            "text": "Fluid overloaded or anuric?"
+          },
+          {
+            "id": "rrt",
+            "type": "end",
+            "text": "RRT for complications",
+            "severity": "high"
+          },
+          {
+            "id": "fluid",
+            "type": "action",
+            "text": "Crystalloid 1-2 L/h → UO 200-300 mL/h"
+          },
+          {
+            "id": "comp",
+            "type": "decision",
+            "text": "Compartment syndrome signs?"
+          },
+          {
+            "id": "fasc",
+            "type": "action",
+            "text": "Measure pressure; urgent fasciotomy",
+            "severity": "critical"
+          },
+          {
+            "id": "cont",
+            "type": "end",
+            "text": "Continue until CK < 5,000 and urine clear; daily CK, creatinine"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "labs"
+          },
+          {
+            "from": "labs",
+            "to": "k"
+          },
+          {
+            "from": "k",
+            "to": "hyperk",
+            "label": "Yes"
+          },
+          {
+            "from": "k",
+            "to": "over",
+            "label": "No"
+          },
+          {
+            "from": "hyperk",
+            "to": "over"
+          },
+          {
+            "from": "over",
+            "to": "rrt",
+            "label": "Yes"
+          },
+          {
+            "from": "over",
+            "to": "fluid",
+            "label": "No"
+          },
+          {
+            "from": "fluid",
+            "to": "comp"
+          },
+          {
+            "from": "comp",
+            "to": "fasc",
+            "label": "Yes"
+          },
+          {
+            "from": "comp",
+            "to": "cont",
+            "label": "No"
+          },
+          {
+            "from": "fasc",
+            "to": "cont"
+          }
+        ],
+        "refs": [
+          "bosch-rhabdo-2009"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "Myoglobin is filtered and, in acidic concentrated urine, precipitates with Tamm-Horsfall protein forming obstructive casts; its haem iron causes oxidative tubular injury, and it scavenges nitric oxide causing renal vasoconstriction. Volume sequestration in injured muscle adds hypovolaemia.",
+        "evidence": "- Bosch 2009 review: early aggressive volume expansion is the mainstay; bicarbonate and mannitol lack evidence [Bosch 2009].",
+        "controversies": "- Choice of fluid (saline vs balanced): no clear difference; balanced may cause less hyperchloraemic acidosis.",
+        "indiaNotes": "- Common Indian causes: heat stroke in labourers, snakebite, leptospirosis, exertion (army training, marathons), crush in building collapses and earthquakes, OP poisoning-related seizures."
+      },
+      "drugIds": [
+        "normal-saline"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "bosch-rhabdo-2009",
+        "kdigo-aki"
+      ],
+      "quiz": [
+        {
+          "id": "rhabdomyolysis-q1",
+          "stem": "Target urine output in early rhabdomyolysis:",
+          "options": [
+            "0.5 mL/kg/h",
+            "200-300 mL/h",
+            "50 mL/h",
+            "1 L/h"
+          ],
+          "answerIndex": 1,
+          "explanation": "High urine flow reduces cast formation."
+        },
+        {
+          "id": "rhabdomyolysis-q2",
+          "stem": "Which is NOT routinely recommended in rhabdomyolysis?",
+          "options": [
+            "Isotonic fluids",
+            "Mannitol",
+            "Treating hyperkalaemia",
+            "Monitoring compartments"
+          ],
+          "answerIndex": 1,
+          "explanation": "Mannitol has no proven benefit."
+        },
+        {
+          "id": "rhabdomyolysis-q3",
+          "stem": "Urine dipstick strongly positive for blood, microscopy no RBCs. Interpretation:",
+          "options": [
+            "Glomerulonephritis",
+            "Myoglobinuria or haemoglobinuria",
+            "UTI",
+            "Normal"
+          ],
+          "answerIndex": 1,
+          "explanation": "Dipstick detects haem pigment."
+        }
+      ]
+    },
+    {
+      "id": "contrast-associated-aki",
+      "title": "Contrast-associated AKI",
+      "summary": "Assess risk, avoid unnecessary withholding of contrast, and use isotonic fluids for high-risk patients.",
+      "viewKey": "topic:aki-renal-drug-dosing/contrast-associated-aki",
+      "uiHints": {
+        "icon": "scan",
+        "accent": "standard"
+      },
+      "bedside": {
+        "definition": {
+          "text": "Contrast-associated AKI (CA-AKI) = AKI within 48-72 h after contrast; contrast-induced AKI (CI-AKI) implies causation. True risk with modern IV contrast is much lower than previously thought, mainly in eGFR < 30 mL/min/1.73 m².",
+          "refs": [
+            "acr-nkf-2020"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Do not delay life-saving imaging",
+            "detail": "In emergencies (stroke, PE, trauma, dissection, sepsis source) give contrast regardless of creatinine.",
+            "refs": [
+              "acr-nkf-2020"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Assess risk",
+            "detail": "eGFR < 30 mL/min/1.73 m² (non-dialysis) or AKI = high risk. eGFR 30-44: intermediate (individual decision). eGFR ≥ 45: very low risk.",
+            "refs": [
+              "acr-nkf-2020"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Prophylaxis for high risk",
+            "detail": "Isotonic crystalloid if not contraindicated (heart failure, overload): e.g. 1 mL/kg/h for 6-12 h before and after (or 3 mL/kg over 1 h before and 1 mL/kg/h for 6 h after for urgent procedures).",
+            "refs": [
+              "acr-nkf-2020",
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Use lowest dose of iso- or low-osmolar contrast",
+            "detail": "Avoid repeated studies within 48-72 h if possible.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "No N-acetylcysteine or bicarbonate",
+            "detail": "PRESERVE (2018): neither IV bicarbonate nor oral NAC reduced death, dialysis or persistent kidney decline.",
+            "refs": [
+              "preserve-2018"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Metformin and dialysis",
+            "detail": "Hold metformin if eGFR < 30 or AKI (lactic acidosis risk). Dialysis patients do not need urgent post-contrast dialysis unless volume overloaded.",
+            "refs": [
+              "acr-nkf-2020"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Check creatinine at 48-72 h",
+            "detail": "In high-risk patients.",
+            "time": "48-72 h",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "normal-saline",
+            "role": "Prophylaxis in high-risk patients",
+            "route": "IV",
+            "dose": "1 mL/kg/h for 6-12 h before and after contrast",
+            "workedExample": "70 kg, eGFR 25: 70 mL/h from 6 h before to 6-12 h after CT",
+            "notes": "Not in heart failure or overload.",
+            "refs": [
+              "acr-nkf-2020",
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "Withholding contrast CT from a patient with suspected PE, stroke or abdominal sepsis because of 'high creatinine' is more dangerous than CA-AKI.",
+            "refs": [
+              "acr-nkf-2020"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Blaming contrast for AKI caused by sepsis, hypotension or nephrotoxins given at the same time.",
+            "refs": [
+              "acr-nkf-2020"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Most creatinine rises after CT in ICU patients are coincidental; propensity-matched studies show similar AKI rates with and without contrast at eGFR ≥ 30.",
+            "refs": [
+              "acr-nkf-2020"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "Iodinated contrast causes renal medullary vasoconstriction and direct tubular toxicity; risk is greatest with high doses, intra-arterial injection (first-pass renal exposure), volume depletion and severe CKD.",
+        "evidence": "- ACR-NKF 2020 consensus: prophylaxis indicated for eGFR < 30 not on dialysis and AKI; consider for 30-44 with other risk factors [Davenport 2020].\n- PRESERVE (5,177 patients undergoing angiography): no benefit of bicarbonate vs saline or NAC vs placebo [Weisbord 2018].",
+        "controversies": "- Whether CI-AKI after IV contrast exists at all in eGFR ≥ 30 is debated.",
+        "indiaNotes": "- Iso-osmolar contrast (iodixanol) is costlier; low-osmolar agents (iohexol, iopamidol) are standard in India.\n- Many Indian centres still give NAC by habit; it is not harmful but not effective."
+      },
+      "drugIds": [
+        "normal-saline"
+      ],
+      "calculatorIds": [],
+      "references": [
+        "acr-nkf-2020",
+        "preserve-2018",
+        "kdigo-aki"
+      ],
+      "quiz": [
+        {
+          "id": "contrast-associated-aki-q1",
+          "stem": "Patient with suspected PE has creatinine 2.4 mg/dL. Best action:",
+          "options": [
+            "Avoid CT",
+            "Proceed with CTPA; IV fluids if not overloaded",
+            "Give NAC and wait 24 h",
+            "Dialysis after CT"
+          ],
+          "answerIndex": 1,
+          "explanation": "Do not delay life-saving imaging."
+        },
+        {
+          "id": "contrast-associated-aki-q2",
+          "stem": "PRESERVE trial showed:",
+          "options": [
+            "Bicarbonate superior",
+            "NAC superior",
+            "No benefit of either bicarbonate or NAC",
+            "Saline harmful"
+          ],
+          "answerIndex": 2,
+          "explanation": "Neither prevented adverse outcomes."
+        },
+        {
+          "id": "contrast-associated-aki-q3",
+          "stem": "Highest-risk group for CA-AKI:",
+          "options": [
+            "eGFR 60",
+            "eGFR < 30 not on dialysis",
+            "Normal kidneys",
+            "Dialysis-dependent anuric patient"
+          ],
+          "answerIndex": 1,
+          "explanation": "ACR-NKF 2020."
+        }
+      ]
+    },
+    {
+      "id": "drug-dosing-aki",
+      "title": "Drug dosing in AKI",
+      "summary": "Estimate kidney function correctly in unstable AKI and adjust common ICU drugs, with loading doses unchanged.",
+      "viewKey": "topic:aki-renal-drug-dosing/drug-dosing-aki",
+      "uiHints": {
+        "icon": "pill",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "In unstable AKI, creatinine-based equations overestimate GFR when creatinine is rising and underestimate it during recovery. Give full loading doses (volume of distribution is unchanged or increased), then adjust maintenance doses and use therapeutic drug monitoring where available.",
+          "refs": [
+            "kdigo-aki"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Estimate clearance sensibly",
+            "detail": "Use Cockcroft-Gault for drug dosing (most labels); in unstable AKI assume GFR < 10-25 mL/min if creatinine rising rapidly or anuric. Measured 4-6 h urinary creatinine clearance is better in ICU.",
+            "refs": [
+              "cg-1976",
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Never reduce the loading dose",
+            "detail": "Antibiotics, antiepileptics, digoxin load: full dose. Underdosing antibiotics in early sepsis is a bigger risk than toxicity.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Adjust maintenance",
+            "detail": "Extend interval (aminoglycosides, vancomycin) or reduce dose (beta-lactams per CrCl). Reassess daily as AKI evolves; augment as kidneys recover.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Use TDM",
+            "detail": "Vancomycin trough or AUC (target AUC 400-600 mg.h/L), aminoglycoside levels, (beta-lactam TDM where available).",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Avoid or replace nephrotoxins",
+            "detail": "NSAIDs, aminoglycosides (unless essential), IV contrast where possible, amphotericin deoxycholate (use liposomal), colistin with TDM/limit duration. Hold ACEi/ARB, metformin, SGLT2i during AKI.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Watch accumulating drugs",
+            "detail": "Morphine (active metabolites → use fentanyl), midazolam (active metabolite), pethidine (avoid), enoxaparin (CrCl < 30: 1 mg/kg once daily or UFH), gabapentin, pregabalin, digoxin, LMWH, meropenem/cefepime (neurotoxicity), sotalol.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "tables": [
+          {
+            "id": "renal-dosing",
+            "title": "Common ICU drugs: adjustment in AKI (CrCl < 30 mL/min, not on RRT)",
+            "columns": [
+              "Drug",
+              "Usual adult dose",
+              "CrCl < 30 mL/min"
+            ],
+            "rows": [
+              [
+                "Meropenem",
+                "1 g q8h",
+                "CrCl 26-50: 1 g q12h; 10-25: 500 mg q12h; < 10: 500 mg q24h"
+              ],
+              [
+                "Piperacillin-tazobactam",
+                "4.5 g q6-8h",
+                "CrCl 20-40: 4.5 g q8h (or 3.375 g q6h); < 20: 4.5 g q12h (or 2.25 g q6h)"
+              ],
+              [
+                "Cefepime",
+                "2 g q8h",
+                "CrCl 30-60: 2 g q12h; 11-29: 2 g q24h; risk of neurotoxicity"
+              ],
+              [
+                "Vancomycin",
+                "Load 25-30 mg/kg",
+                "Same load; maintenance by levels (often q24-48h)"
+              ],
+              [
+                "Amikacin",
+                "15-20 mg/kg q24h",
+                "Extend interval by levels (q36-48h) or avoid"
+              ],
+              [
+                "Colistin (CBA)",
+                "Load 300 mg CBA (9 million units)",
+                "Same load; maintenance reduced per CrCl"
+              ],
+              [
+                "Enoxaparin (treatment)",
+                "1 mg/kg q12h",
+                "1 mg/kg q24h; anti-Xa monitoring"
+              ],
+              [
+                "Morphine",
+                "2-5 mg IV",
+                "Avoid/caution; prefer fentanyl"
+              ],
+              [
+                "Levetiracetam",
+                "500-1,500 mg q12h",
+                "CrCl < 30: 250-500 mg q12h (load unchanged)"
+              ],
+              [
+                "Fluconazole",
+                "Load 800 mg then 400 mg/day",
+                "Load unchanged; then 50% maintenance if CrCl < 50"
+              ]
+            ],
+            "caption": "Adapted from product labels and standard references; always cross-check with a current drug reference or ICU pharmacist.",
+            "refs": [
+              "kdigo-aki",
+              "ibcc"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "New confusion, myoclonus or seizures on cefepime, meropenem, or high-dose penicillins in AKI: suspect drug neurotoxicity.",
+            "refs": [
+              "ibcc"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Halving the first dose of antibiotics in septic AKI.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          },
+          {
+            "text": "Forgetting to increase doses again when kidney function recovers or augmented renal clearance develops.",
+            "refs": [
+              "kdigo-aki"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Use the calculator for Cockcroft-Gault, but remember it overestimates GFR in elderly, cachectic Indian patients with low muscle mass.",
+            "refs": [
+              "cg-1976"
+            ]
+          }
+        ]
+      },
+      "algorithm": null,
+      "consultantNotes": {
+        "pathophysiology": "AKI reduces renal elimination but often coincides with increased volume of distribution (capillary leak, fluid resuscitation), hypoalbuminaemia (more free drug) and altered hepatic metabolism. Net effect: full loads, careful maintenance, frequent reassessment.",
+        "evidence": "- KDIGO 2012 recommends drug dose adjustment in AKI and TDM for aminoglycosides and vancomycin [KDIGO 2012].\n- 2020 ASHP/IDSA vancomycin guideline recommends AUC-guided dosing (400-600 mg.h/L).",
+        "controversies": "- Optimal estimation of GFR in non-steady state (kinetic eGFR equations).",
+        "indiaNotes": "- Colistin and aminoglycosides are frequently needed for CRE in Indian ICUs; nephrotoxicity is common: limit duration, ensure hydration and monitor creatinine daily.\n- Vancomycin level testing is not available in all hospitals; use conservative dosing and creatinine monitoring."
+      },
+      "drugIds": [],
+      "calculatorIds": [
+        "creatinine-clearance-cg",
+        "adjusted-body-weight"
+      ],
+      "references": [
+        "kdigo-aki",
+        "cg-1976",
+        "ibcc"
+      ],
+      "quiz": [
+        {
+          "id": "drug-dosing-aki-q1",
+          "stem": "A septic patient with AKI needs meropenem. First dose:",
+          "options": [
+            "Halve it",
+            "Full 1 g (or 2 g) dose",
+            "Skip until creatinine known",
+            "250 mg"
+          ],
+          "answerIndex": 1,
+          "explanation": "Loading doses are not reduced in AKI."
+        },
+        {
+          "id": "drug-dosing-aki-q2",
+          "stem": "Opioid preferred in severe AKI:",
+          "options": [
+            "Morphine",
+            "Fentanyl",
+            "Pethidine",
+            "Codeine"
+          ],
+          "answerIndex": 1,
+          "explanation": "Morphine and pethidine metabolites accumulate."
+        },
+        {
+          "id": "drug-dosing-aki-q3",
+          "stem": "Creatinine is rising quickly over 24 h. Cockcroft-Gault will:",
+          "options": [
+            "Underestimate GFR",
+            "Overestimate GFR",
+            "Be accurate",
+            "Not apply"
+          ],
+          "answerIndex": 1,
+          "explanation": "Creatinine lags; true GFR is lower than estimated."
+        }
+      ],
+      "verify": [
+        {
+          "item": "Renal dose table values",
+          "reason": "Adapted from label/standard references; cross-check with local formulary and ICU pharmacist before publishing."
+        }
+      ]
+    },
+    {
+      "id": "hepatorenal-cardiorenal",
+      "title": "Hepatorenal and cardiorenal syndromes",
+      "summary": "Diagnose HRS-AKI by ICA-ADQI 2024 criteria and treat with terlipressin and albumin; manage cardiorenal syndrome by decongestion.",
+      "viewKey": "topic:aki-renal-drug-dosing/hepatorenal-cardiorenal",
+      "uiHints": {
+        "icon": "link",
+        "accent": "high"
+      },
+      "bedside": {
+        "definition": {
+          "text": "HRS-AKI = AKI in cirrhosis with ascites, no response after 48 h of diuretic withdrawal and albumin 1 g/kg, no shock, no current nephrotoxins, no signs of structural kidney injury. Cardiorenal syndrome = bidirectional heart-kidney dysfunction; type 1 = acute heart failure causing AKI, often driven by venous congestion.",
+          "refs": [
+            "adqi-ica-2024",
+            "aha-cardiorenal-2019"
+          ]
+        },
+        "steps": [
+          {
+            "n": 1,
+            "title": "Cirrhosis with AKI: first steps",
+            "detail": "Stop diuretics, NSAIDs, beta-blockers if hypotensive, nephrotoxins; treat infection (SBP: diagnostic tap), bleeding, hypovolaemia (albumin 1 g/kg/day, max 100 g, for 2 days).",
+            "time": "Day 0-2",
+            "refs": [
+              "adqi-ica-2024",
+              "aasld-ascites-2021"
+            ]
+          },
+          {
+            "n": 2,
+            "title": "Diagnose HRS-AKI",
+            "detail": "If AKI persists (stage ≥ 1B or progressing) without shock and urine sediment is bland (protein < 500 mg/day, < 50 RBC/hpf, normal ultrasound): HRS-AKI.",
+            "refs": [
+              "adqi-ica-2024"
+            ]
+          },
+          {
+            "n": 3,
+            "title": "Treat HRS-AKI",
+            "detail": "Terlipressin (bolus 0.5-1 mg q4-6h or infusion 2 mg/day, up-titrate to max 12 mg/day) + albumin 20-40 g/day. Noradrenaline infusion is an alternative in ICU (central line). Midodrine + octreotide is less effective.",
+            "refs": [
+              "confirm-2021",
+              "adqi-ica-2024"
+            ]
+          },
+          {
+            "n": 4,
+            "title": "Monitor for harm",
+            "detail": "Daily SpO2, chest exam, fluid status: terlipressin + albumin can cause pulmonary oedema and respiratory failure. Stop if SpO2 < 90%; avoid in ACLF grade 3 or creatinine ≥ 5 mg/dL.",
+            "refs": [
+              "confirm-2021"
+            ]
+          },
+          {
+            "n": 5,
+            "title": "Response and transplant",
+            "detail": "Response = creatinine fall to < 0.3 mg/dL above baseline. Refer all HRS for liver transplant assessment; RRT as bridge if transplant candidate.",
+            "refs": [
+              "adqi-ica-2024"
+            ]
+          },
+          {
+            "n": 6,
+            "title": "Cardiorenal: decongest",
+            "detail": "Loop diuretic IV at 1-2.5x oral dose; check spot urine Na at 2 h (< 50-70 mmol/L = inadequate) and UO at 6 h (< 100-150 mL/h): double dose, add thiazide/acetazolamide. A modest creatinine rise during effective decongestion is acceptable.",
+            "refs": [
+              "hfa-diuretics-2019",
+              "aha-cardiorenal-2019"
+            ]
+          },
+          {
+            "n": 7,
+            "title": "Refractory cardiorenal",
+            "detail": "Inotrope if low output; ultrafiltration/RRT for diuretic-resistant congestion.",
+            "refs": [
+              "aha-cardiorenal-2019"
+            ]
+          }
+        ],
+        "doseCards": [
+          {
+            "drugId": "terlipressin",
+            "role": "HRS-AKI vasoconstrictor",
+            "route": "IV bolus or infusion",
+            "dose": "0.5-1 mg q4-6h, or 2 mg/24 h infusion; max 12 mg/day",
+            "doseRange": {
+              "min": 2,
+              "max": 12,
+              "unit": "mg/day"
+            },
+            "dilution": "2 mg in 50 mL NS over 24 h = ~2 mL/h",
+            "workedExample": "Start 2 mg/24 h infusion; creatinine fall < 25% at 48 h → increase to 4 mg/24 h",
+            "notes": "Infusion has fewer ischaemic side effects than boluses.",
+            "refs": [
+              "confirm-2021",
+              "adqi-ica-2024"
+            ]
+          },
+          {
+            "drugId": "albumin-20",
+            "role": "Volume expansion / HRS treatment",
+            "route": "IV",
+            "dose": "Day 1-2: 1 g/kg/day (max 100 g); with terlipressin 20-40 g/day",
+            "workedExample": "70 kg: 70 g = 350 mL of 20% albumin on day 1",
+            "refs": [
+              "adqi-ica-2024"
+            ]
+          },
+          {
+            "drugId": "furosemide",
+            "role": "Decongestion in cardiorenal",
+            "route": "IV",
+            "dose": "1-2.5x total daily oral dose as bolus; repeat/double at 6 h if poor response",
+            "workedExample": "On oral furosemide 40 mg BD (80 mg/day): give 80-200 mg IV; urine Na at 2 h < 50 mmol/L → double dose",
+            "refs": [
+              "hfa-diuretics-2019"
+            ]
+          }
+        ],
+        "redFlags": [
+          {
+            "text": "New hypoxaemia or crackles on terlipressin + albumin: stop albumin, consider stopping terlipressin, diurese.",
+            "refs": [
+              "confirm-2021"
+            ]
+          },
+          {
+            "text": "AKI in cirrhosis with fever or abdominal pain: diagnostic paracentesis for SBP immediately.",
+            "refs": [
+              "aasld-ascites-2021"
+            ]
+          }
+        ],
+        "pitfalls": [
+          {
+            "text": "Continuing diuretics and lactulose-induced diarrhoea while creatinine rises in cirrhosis.",
+            "refs": [
+              "adqi-ica-2024"
+            ]
+          },
+          {
+            "text": "Stopping diuretics in cardiorenal syndrome because creatinine rises while the patient is still congested.",
+            "refs": [
+              "hfa-diuretics-2019"
+            ]
+          }
+        ],
+        "pearls": [
+          {
+            "text": "Creatinine overestimates GFR in cirrhosis (low muscle mass); a 'normal' creatinine of 1.0 mg/dL may be significant kidney dysfunction.",
+            "refs": [
+              "adqi-ica-2024"
+            ]
+          }
+        ]
+      },
+      "algorithm": {
+        "title": "AKI in cirrhosis",
+        "nodes": [
+          {
+            "id": "start",
+            "type": "start",
+            "text": "Cirrhosis + ascites + AKI"
+          },
+          {
+            "id": "stop",
+            "type": "action",
+            "text": "Stop diuretics/nephrotoxins; treat infection, bleeding; tap ascites (SBP)"
+          },
+          {
+            "id": "alb",
+            "type": "action",
+            "text": "Albumin 1 g/kg/day × 2 days if no overload"
+          },
+          {
+            "id": "resp",
+            "type": "decision",
+            "text": "Creatinine back near baseline?"
+          },
+          {
+            "id": "pre",
+            "type": "end",
+            "text": "Pre-renal AKI resolved; cautious diuretic reintroduction"
+          },
+          {
+            "id": "shock",
+            "type": "decision",
+            "text": "Shock or structural kidney injury (proteinuria, haematuria, abnormal USG)?"
+          },
+          {
+            "id": "other",
+            "type": "end",
+            "text": "Treat as ATN/other AKI"
+          },
+          {
+            "id": "hrs",
+            "type": "action",
+            "text": "HRS-AKI: terlipressin + albumin 20-40 g/day (or noradrenaline in ICU)",
+            "severity": "high"
+          },
+          {
+            "id": "tx",
+            "type": "end",
+            "text": "Monitor SpO2/fluids; transplant referral; RRT as bridge"
+          }
+        ],
+        "edges": [
+          {
+            "from": "start",
+            "to": "stop"
+          },
+          {
+            "from": "stop",
+            "to": "alb"
+          },
+          {
+            "from": "alb",
+            "to": "resp"
+          },
+          {
+            "from": "resp",
+            "to": "pre",
+            "label": "Yes"
+          },
+          {
+            "from": "resp",
+            "to": "shock",
+            "label": "No"
+          },
+          {
+            "from": "shock",
+            "to": "other",
+            "label": "Yes"
+          },
+          {
+            "from": "shock",
+            "to": "hrs",
+            "label": "No"
+          },
+          {
+            "from": "hrs",
+            "to": "tx"
+          }
+        ],
+        "refs": [
+          "adqi-ica-2024",
+          "confirm-2021"
+        ]
+      },
+      "consultantNotes": {
+        "pathophysiology": "In cirrhosis, splanchnic vasodilation reduces effective arterial volume, activating RAAS, sympathetic system and vasopressin, causing intense renal vasoconstriction (HRS). Systemic inflammation from infection is a frequent trigger. In cardiorenal syndrome, raised venous pressure transmitted to the kidney (renal congestion) reduces GFR more than low forward flow.",
+        "evidence": "- CONFIRM (300 patients): terlipressin + albumin increased HRS reversal (32% vs 17%) but caused more respiratory failure deaths [Wong 2021].\n- ICA-ADQI 2024 consensus updated definitions of AKI and HRS-AKI in cirrhosis [Nadim 2024].\n- HFA 2019 position statement: natriuresis-guided diuretic titration in congestion [Mullens 2019].",
+        "controversies": "- Terlipressin infusion vs bolus; noradrenaline vs terlipressin in ICU (similar efficacy in small trials, including Indian RCTs).\n- Acceptable creatinine rise during decongestion ('permissive worsening renal function').",
+        "indiaNotes": "- Terlipressin is affordable and widely used in India; many Indian RCTs (e.g. from ILBS Delhi) compared terlipressin and noradrenaline in HRS.\n- Alcohol-related and hepatitis B/C cirrhosis predominate; consider ACLF triggers (alcoholic hepatitis, hepatitis E/A superinfection)."
+      },
+      "drugIds": [
+        "terlipressin",
+        "albumin-20",
+        "furosemide"
+      ],
+      "calculatorIds": [
+        "creatinine-clearance-cg"
+      ],
+      "references": [
+        "adqi-ica-2024",
+        "confirm-2021",
+        "aasld-ascites-2021",
+        "aha-cardiorenal-2019",
+        "hfa-diuretics-2019"
+      ],
+      "quiz": [
+        {
+          "id": "hepatorenal-cardiorenal-q1",
+          "stem": "Initial step for AKI in decompensated cirrhosis:",
+          "options": [
+            "Start terlipressin immediately",
+            "Stop diuretics/nephrotoxins and give albumin 1 g/kg for 2 days",
+            "Dialysis",
+            "IV contrast CT"
+          ],
+          "answerIndex": 1,
+          "explanation": "Exclude volume-responsive AKI before diagnosing HRS."
+        },
+        {
+          "id": "hepatorenal-cardiorenal-q2",
+          "stem": "Major adverse effect of terlipressin + albumin in CONFIRM:",
+          "options": [
+            "Hyperkalaemia",
+            "Respiratory failure",
+            "Hypertension crisis",
+            "Thrombocytopenia"
+          ],
+          "answerIndex": 1,
+          "explanation": "Respiratory failure was more common and caused deaths."
+        },
+        {
+          "id": "hepatorenal-cardiorenal-q3",
+          "stem": "Inadequate natriuretic response 2 h after IV loop diuretic:",
+          "options": [
+            "Urine Na < 50-70 mmol/L",
+            "Urine Na > 100 mmol/L",
+            "Urine output > 150 mL/h",
+            "Weight loss"
+          ],
+          "answerIndex": 0,
+          "explanation": "HFA 2019: double the dose if spot urine Na < 50-70 mmol/L."
+        }
+      ]
+    }
+  ],
+  "drugs": [
+    {
+      "id": "furosemide",
+      "name": "Furosemide",
+      "class": "Loop diuretic",
+      "indications": "Fluid overload in AKI; furosemide stress test; cardiorenal congestion",
+      "adultDose": "Stress test: 1 mg/kg IV (1.5 mg/kg if already on loop diuretics). Congestion: IV dose = 1-2.5x the total daily oral dose (start 20-40 mg IV if diuretic-naive), repeat/double at 6 h if natriuresis inadequate; infusion 5-20 mg/h.",
+      "preparationIndia": "20 mg/2 mL ampoules; infusion 100 mg in 50 mL NS (2 mg/mL) or undiluted 10 mg/mL.",
+      "renalHepatic": "Higher doses needed in AKI/CKD; ototoxicity with rapid high-dose bolus (> 4 mg/min).",
+      "cautions": "Do not use to 'treat' oliguric AKI without fluid overload (KDIGO).",
+      "monitoring": "Urine output at 2 and 6 h, spot urine sodium (> 50-70 mmol/L at 2 h = adequate response), K, Mg, creatinine.",
+      "refs": [
+        "fst-2013",
+        "hfa-diuretics-2019"
+      ]
+    },
+    {
+      "id": "normal-saline",
+      "name": "Crystalloid (0.9% saline or balanced)",
+      "class": "Isotonic crystalloid",
+      "indications": "Rhabdomyolysis; prevention of contrast AKI in high-risk patients",
+      "adultDose": "Rhabdomyolysis: 1-2 L/h initially (if not overloaded), then titrate to urine output 200-300 mL/h until CK < 5,000 U/L and urine clear. Contrast prophylaxis (high risk, not overloaded): 1 mL/kg/h for 6-12 h before and after.",
+      "preparationIndia": "500 mL/1 L bags; RL also acceptable.",
+      "cautions": "Stop if oliguric/anuric with overload; RRT instead.",
+      "refs": [
+        "bosch-rhabdo-2009",
+        "acr-nkf-2020"
+      ]
+    },
+    {
+      "id": "terlipressin",
+      "name": "Terlipressin",
+      "class": "Vasopressin V1 analogue",
+      "indications": "Hepatorenal syndrome-AKI; variceal bleeding",
+      "adultDose": "HRS-AKI: 0.5-1 mg IV every 4-6 h, or continuous infusion 2 mg/24 h (fewer side effects); if creatinine falls < 25% after 48-72 h, increase stepwise to max 12 mg/day. Continue until creatinine < 1.5 mg/dL or 14 days.",
+      "preparationIndia": "1 mg vials (Indian generics widely available); infusion 2 mg in 50 mL NS over 24 h.",
+      "cautions": "Avoid if SpO2 < 90%, volume overload, ischaemic heart/peripheral vascular disease, ACLF grade 3, or creatinine ≥ 5 mg/dL. Watch for respiratory failure (CONFIRM), abdominal pain, digital ischaemia, hyponatraemia.",
+      "monitoring": "SpO2 and fluid status daily, creatinine, ECG.",
+      "refs": [
+        "confirm-2021",
+        "adqi-ica-2024"
+      ]
+    },
+    {
+      "id": "albumin-20",
+      "name": "Human albumin 20%",
+      "class": "Colloid",
+      "indications": "HRS-AKI diagnosis and treatment; large-volume paracentesis; SBP",
+      "adultDose": "AKI in cirrhosis (diagnostic challenge): 1 g/kg (max 100 g) on day 1 after stopping diuretics. HRS-AKI with terlipressin: 20-40 g/day.",
+      "preparationIndia": "20% 100 mL (20 g) vials; 5% also available.",
+      "cautions": "Pulmonary oedema: reduce/stop if overload (CONFIRM deaths from respiratory failure).",
+      "verify": "Cost is substantial for Indian families; confirm institutional dosing.",
+      "refs": [
+        "adqi-ica-2024",
+        "aasld-ascites-2021"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "kdigo-aki",
+      "citation": "Kidney Disease: Improving Global Outcomes (KDIGO) AKI Work Group. KDIGO Clinical Practice Guideline for Acute Kidney Injury. Kidney Int Suppl 2012;2:1-138 (summary: Nephron Clin Pract 2012;120:c179-84).",
+      "url": "https://doi.org/10.1159/000339789",
+      "year": 2012,
+      "type": "guideline",
+      "doi": "10.1159/000339789"
+    },
+    {
+      "id": "aasld-ascites-2021",
+      "citation": "Biggins SW, Angeli P, Garcia-Tsao G, et al. Diagnosis, evaluation, and management of ascites, spontaneous bacterial peritonitis and hepatorenal syndrome: 2021 practice guidance by the AASLD. Hepatology 2021;74:1014-48.",
+      "url": "https://doi.org/10.1002/hep.31884",
+      "year": 2021,
+      "type": "guideline",
+      "doi": "10.1002/hep.31884"
+    },
+    {
+      "id": "ibcc",
+      "citation": "Farkas J. The Internet Book of Critical Care (IBCC). EMCrit Project; continuously updated.",
+      "url": "https://emcrit.org/ibcc/toc/",
+      "year": 2024,
+      "type": "textbook"
+    },
+    {
+      "id": "preserve-2018",
+      "citation": "Weisbord SD, Gallagher M, Jneid H, et al. Outcomes after angiography with sodium bicarbonate and acetylcysteine (PRESERVE). N Engl J Med 2018;378:603-14.",
+      "url": "https://doi.org/10.1056/NEJMoa1710933",
+      "year": 2018,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa1710933"
+    },
+    {
+      "id": "acr-nkf-2020",
+      "citation": "Davenport MS, Perazella MA, Yee J, et al. Use of intravenous iodinated contrast media in patients with kidney disease: consensus statements from the American College of Radiology and the National Kidney Foundation. Radiology 2020;294:660-8.",
+      "url": "https://doi.org/10.1148/radiol.2019192094",
+      "year": 2020,
+      "type": "consensus",
+      "doi": "10.1148/radiol.2019192094"
+    },
+    {
+      "id": "bosch-rhabdo-2009",
+      "citation": "Bosch X, Poch E, Grau JM. Rhabdomyolysis and acute kidney injury. N Engl J Med 2009;361:62-72.",
+      "url": "https://doi.org/10.1056/NEJMra0801327",
+      "year": 2009,
+      "type": "review",
+      "doi": "10.1056/NEJMra0801327"
+    },
+    {
+      "id": "confirm-2021",
+      "citation": "Wong F, Pappas SC, Curry MP, et al. Terlipressin plus albumin for the treatment of type 1 hepatorenal syndrome (CONFIRM). N Engl J Med 2021;384:818-28.",
+      "url": "https://doi.org/10.1056/NEJMoa2008290",
+      "year": 2021,
+      "type": "trial",
+      "doi": "10.1056/NEJMoa2008290"
+    },
+    {
+      "id": "adqi-ica-2024",
+      "citation": "Nadim MK, Kellum JA, Forni L, et al. Acute kidney injury in patients with cirrhosis: Acute Disease Quality Initiative (ADQI) and International Club of Ascites (ICA) joint multidisciplinary consensus meeting. J Hepatol 2024;81:163-83.",
+      "url": "https://doi.org/10.1016/j.jhep.2024.03.031",
+      "year": 2024,
+      "type": "consensus",
+      "doi": "10.1016/j.jhep.2024.03.031"
+    },
+    {
+      "id": "aha-cardiorenal-2019",
+      "citation": "Rangaswami J, Bhalla V, Blair JEA, et al. Cardiorenal syndrome: classification, pathophysiology, diagnosis, and treatment strategies: a scientific statement from the American Heart Association. Circulation 2019;139:e840-78.",
+      "url": "https://doi.org/10.1161/CIR.0000000000000664",
+      "year": 2019,
+      "type": "consensus",
+      "doi": "10.1161/CIR.0000000000000664"
+    },
+    {
+      "id": "fst-2013",
+      "citation": "Chawla LS, Davison DL, Brasha-Mitchell E, et al. Development and standardization of a furosemide stress test to predict the severity of acute kidney injury. Crit Care 2013;17:R207.",
+      "url": "https://doi.org/10.1186/cc13015",
+      "year": 2013,
+      "type": "trial",
+      "doi": "10.1186/cc13015"
+    },
+    {
+      "id": "hfa-diuretics-2019",
+      "citation": "Mullens W, Damman K, Harjola VP, et al. The use of diuretics in heart failure with congestion - a position statement from the Heart Failure Association of the European Society of Cardiology. Eur J Heart Fail 2019;21:137-55.",
+      "url": "https://doi.org/10.1002/ejhf.1369",
+      "year": 2019,
+      "type": "consensus",
+      "doi": "10.1002/ejhf.1369"
+    },
+    {
+      "id": "cg-1976",
+      "citation": "Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron 1976;16:31-41.",
+      "url": "https://doi.org/10.1159/000180580",
+      "year": 1976,
+      "type": "trial",
+      "doi": "10.1159/000180580"
+    }
+  ]
+}
