@@ -1,6 +1,7 @@
 import QRCode from "qrcode";
 import { SITE, UPI_LINK } from "@/lib/site";
 import { DonateButton } from "./client/Donate";
+import { Books } from "./client/Books";
 
 export async function Footer() {
   const qr = await QRCode.toString(UPI_LINK, { type: "svg", margin: 1, errorCorrectionLevel: "M", color: { dark: "#0B1726", light: "#FFFFFF" } });
@@ -18,6 +19,8 @@ export async function Footer() {
         </div>
         <DonateButton upiLink={UPI_LINK} upiId={SITE.upiId} qrSvg={qr} />
       </section>
+
+      <Books />
 
       <div className="px-1 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
         <p className="text-[11.5px] uppercase tracking-[.1em] font-semibold text-ink-400 dark:text-night-faint">From the makers of</p>

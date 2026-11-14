@@ -3,6 +3,102 @@
   "sets": [
     {
       "date": "2026-11-15",
+      "title": "Daily Quiz: 15 November 2026",
+      "questions": [
+        {
+          "id": "2026-11-15-d1",
+          "stem": "A 45-year-old with septic shock from aspiration pneumonia also has a traumatic brain injury from a fall. Which resuscitation fluid does SSC 2026 suggest?",
+          "options": [
+            "Ringer's lactate",
+            "0.9% saline",
+            "4% albumin",
+            "Hydroxyethyl starch"
+          ],
+          "answerIndex": 1,
+          "explanation": "SSC 2026 suggests balanced crystalloids over saline in sepsis, but with a remark to use 0.9% saline when sepsis coexists with traumatic brain injury; starches are recommended against.",
+          "reference": {
+            "label": "Prescott HC, et al. Executive summary: Surviving Sepsis Campaign 2026. Crit Care Med. 2026 (statement 44 and remark)",
+            "url": "https://doi.org/10.1097/CCM.0000000000007089"
+          },
+          "moduleId": "sepsis-septic-shock",
+          "topicId": "hour-1-bundle"
+        },
+        {
+          "id": "2026-11-15-d2",
+          "stem": "A farmer with fever, an eschar, hypotension and PaO2/FiO2 of 180 is diagnosed with severe scrub typhus. Best antimicrobial regimen?",
+          "options": [
+            "Oral doxycycline alone for 7 days",
+            "IV doxycycline plus IV azithromycin for 7 days",
+            "IV ceftriaxone plus doxycycline",
+            "IV azithromycin alone for 5 days"
+          ],
+          "answerIndex": 1,
+          "explanation": "In INTREST, combination IV doxycycline plus azithromycin reduced the composite of death, persistent complications or fever at day 7 compared with either drug alone; beta-lactams have no activity against Orientia.",
+          "reference": {
+            "label": "Varghese GM, et al. Intravenous doxycycline, azithromycin, or both for severe scrub typhus (INTREST). N Engl J Med. 2023;388(9):792-803",
+            "url": "https://doi.org/10.1056/NEJMoa2208449"
+          },
+          "moduleId": "tropical-monsoon-fevers",
+          "topicId": "scrub-typhus"
+        },
+        {
+          "id": "2026-11-15-d3",
+          "stem": "You perform a 20-minute whole blood clotting test (20WBCT) after a suspected viper bite. Which detail is essential for a valid result?",
+          "options": [
+            "Use an EDTA (purple-top) tube",
+            "Shake the tube every 5 minutes",
+            "Use a new, clean, dry glass tube left undisturbed for 20 minutes",
+            "Use a plastic tube kept on ice"
+          ],
+          "answerIndex": 2,
+          "explanation": "Glass activates clotting; plastic, washed or wet tubes and disturbing the sample give false results. Blood that is still liquid when tilted at 20 minutes means venom-induced coagulopathy and is an indication for ASV.",
+          "reference": {
+            "label": "Lamb T, et al. The 20-minute whole blood clotting test (20WBCT) for snakebite coagulopathy: systematic review and meta-analysis. PLoS Negl Trop Dis. 2021;15(8):e0009657",
+            "url": "https://doi.org/10.1371/journal.pntd.0009657"
+          },
+          "moduleId": "snakebite-scorpion-envenomation",
+          "topicId": "wbct-coagulopathy"
+        },
+        {
+          "id": "2026-11-15-d4",
+          "stem": "A ventilated ARDS patient has PaO2/FiO2 of 110 on FiO2 0.7 and PEEP 12 despite lung-protective ventilation for 12 hours. Next best step?",
+          "options": [
+            "Increase tidal volume to 8-10 mL/kg PBW",
+            "Prone positioning for at least 16 hours per session",
+            "Routine high-frequency oscillatory ventilation",
+            "Inhaled nitric oxide as a mortality-reducing therapy"
+          ],
+          "answerIndex": 1,
+          "explanation": "PROSEVA showed lower mortality with early prone positioning (≥16 h sessions) when P/F is below 150 mmHg on FiO2 ≥0.6 and PEEP ≥5; HFOV and iNO have not improved survival.",
+          "reference": {
+            "label": "Guérin C, et al. Prone positioning in severe acute respiratory distress syndrome (PROSEVA). N Engl J Med. 2013;368(23):2159-2168",
+            "url": "https://doi.org/10.1056/NEJMoa1214103"
+          },
+          "moduleId": "ards-refractory-hypoxaemia",
+          "topicId": "prone-position"
+        },
+        {
+          "id": "2026-11-15-d5",
+          "stem": "In septic shock with lactic acidosis, which patient fits the Surviving Sepsis Campaign suggestion to give IV sodium bicarbonate?",
+          "options": [
+            "pH 7.28, lactate 5, normal creatinine",
+            "pH 7.22, AKI stage 1",
+            "pH 7.15 with AKI stage 3",
+            "Any patient with lactate above 4 mmol/L, to improve vasopressor response"
+          ],
+          "answerIndex": 2,
+          "explanation": "SSC suggests against bicarbonate for hypoperfusion-related lactic acidaemia, except in severe acidaemia (pH ≤7.2) with AKI stage 2-3. A Nov 2026 meta-analysis found fewer patients needed RRT with bicarbonate but no clear survival benefit.",
+          "reference": {
+            "label": "Prescott HC, Antonelli M, Alhazzani W, et al. Surviving Sepsis Campaign: international guidelines for management of sepsis and septic shock 2026. Intensive Care Med. 2026;52(5):863-936",
+            "url": "https://doi.org/10.1007/s00134-026-08361-1"
+          },
+          "moduleId": "acid-base-abg",
+          "topicId": "hagma"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-14",
       "title": "Starter set: drawn from the module quizzes",
       "questions": [
         {

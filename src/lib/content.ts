@@ -121,6 +121,7 @@ export interface NewsItem {
   summary: string;
   url: string;
   moduleId?: string;
+  catchUp?: boolean;
 }
 export function getNews(): NewsItem[] {
   try {

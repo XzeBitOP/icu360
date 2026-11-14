@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Search, Mic, Siren, Timer, ChevronRight, Trophy } from "lucide-react";
+import { Search, Mic, Siren, Timer, ChevronRight, Trophy, ExternalLink } from "lucide-react";
 import { getModules, getNews, getSections, getViews, getTopic, sectionViews, viewsByHref, getDailyQuiz } from "@/lib/content";
 import { Logo } from "@/components/Logo";
 import { ThemeToggle } from "@/components/client/ThemeToggle";
@@ -17,7 +17,7 @@ const DEFAULT_FAVS: FavDefault[] = [
   { href: "/m/fluids-electrolytes/hyperkalaemia", title: "Hyperkalaemia", sub: "Algorithm", icon: "zap" },
 ];
 
-const tagCls: Record<string, string> = { Guideline: "text-brand-700 dark:text-glow-teal", Trial: "text-info dark:text-info-bright", India: "text-warn dark:text-warn-bright", "Drug safety": "text-crit dark:text-crit-bright", Definition: "text-pearl dark:text-pearl-bright" };
+const tagCls: Record<string, string> = { Guideline: "text-brand-700 dark:text-glow-teal", Trial: "text-info dark:text-info-bright", India: "text-warn dark:text-warn-bright", "Drug safety": "text-crit dark:text-crit-bright", Definition: "text-pearl dark:text-pearl-bright", Review: "text-pearl dark:text-pearl-bright" };
 
 function TopTopicCard() {
   const v = getViews();
@@ -51,15 +51,21 @@ function NewsList({ limit, compact = false }: { limit: number; compact?: boolean
   return (
     <div className="glass rounded-[24px] divide-y divide-ink-200/60 dark:divide-white/10">
       {news.map((n) => (
-        <a key={n.id} href={n.url} target="_blank" rel="noopener noreferrer" className="block p-4">
+        <article key={n.id} className="p-4">
           <div className={`flex items-center gap-2 text-[12px] ${muted}`}>
             <Chip className={tagCls[n.tag] ?? "text-ink-700 dark:text-night-muted"}>{n.tag}</Chip>
+            {n.catchUp ? <Chip className="text-ink-500 dark:text-night-muted">Catch-up</Chip> : null}
             {!compact && <span className="truncate">{n.source}</span>}
             {!compact && <span>·</span>}
             <span className="whitespace-nowrap">{prettyDate(n.date)}</span>
           </div>
-          <h3 className={`font-semibold ${compact ? "text-[13.5px]" : "text-[15px]"} leading-snug mt-2`}>{n.title}</h3>
-        </a>
+          <h3 className={`font-semibold ${compact ? "text-[13.5px]" : "text-[15px]"} leading-snug mt-2`}>
+            <a href={n.url} target="_blank" rel="noopener noreferrer">{n.title}</a>
+          </h3>
+          <a href={n.url} target="_blank" rel="noopener noreferrer" className={`mt-2 inline-flex items-center gap-1 text-[12px] ${muted}`}>
+            Source<ExternalLink className="w-3.5 h-3.5" strokeWidth={2} aria-hidden="true" />
+          </a>
+        </article>
       ))}
     </div>
   );

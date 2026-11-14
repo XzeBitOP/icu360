@@ -1,4 +1,76 @@
 {
-  "description": "Critical care news shown on /news, newest first. Add items only after Kenil approves them in chat. Fields: id, date (YYYY-MM-DD), tag (Guideline | Trial | India | Drug safety | Review), source, title, summary, url, moduleId (optional, links the item to a module).",
-  "items": []
+  "description": "Critical care news shown on /news, newest first. Add items only after Kenil approves them in chat. Fields: id, date (YYYY-MM-DD), tag (Guideline | Trial | India | Drug safety | Review), source, title, summary, url, moduleId (optional, links the item to a module), catchUp (optional, true for older items published as catch-up).",
+  "items": [
+    {
+      "id": "2026-11-15-onscene-ecpr",
+      "date": "2026-11-07",
+      "tag": "Trial",
+      "source": "NEJM (OnScene, presented at AHA Scientific Sessions 2026)",
+      "title": "ECPR started at the scene doubles survival in young adults with refractory arrest",
+      "summary": "Dutch helicopter teams able to start VA-ECMO at the scene had 40% survival to discharge vs 20% with conventional care in adults aged 50 or under with refractory out-of-hospital arrest (good neurological outcome at 6 months: 36% vs 13%). The study was non-randomised and the patients were highly selected, so it supports fast ECPR referral pathways, not routine ECPR for every arrest.",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2602919",
+      "moduleId": "cardiac-arrest-post-rosc"
+    },
+    {
+      "id": "2026-11-15-cefazolin-mssa",
+      "date": "2026-11-12",
+      "tag": "Review",
+      "source": "JAMA Network Open",
+      "title": "Cefazolin backed over cloxacillin for MSSA bacteraemia",
+      "summary": "A Bayesian meta-analysis of the SNAP and CloCeBa trials (1,579 patients) gave a 95.5% probability that cefazolin is non-inferior for 90-day mortality (OR 0.84), with fewer treatment stops for adverse events (OR 0.25) and less AKI (OR 0.54). The authors conclude cefazolin should be preferred for adults with MSSA bacteraemia.",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2856577",
+      "moduleId": "icu-infections-stewardship-immunocompromised"
+    },
+    {
+      "id": "2026-11-15-bicarbonate-ma",
+      "date": "2026-11-02",
+      "tag": "Review",
+      "source": "Intensive Care Medicine (highlighted by ESICM, 13 Nov)",
+      "title": "Sodium bicarbonate: no clear survival benefit, but fewer patients need dialysis",
+      "summary": "Pooling 4 RCTs (1,544 patients, including SODa-BIC and BICARICU-2), bicarbonate did not clearly reduce mortality (RR 0.94) but had a 97% probability of reducing RRT initiation (RR 0.74). This supports selective use in severe acidaemia with AKI, in line with SSC 2026, while watching for high sodium, low calcium and alkalosis.",
+      "url": "https://link.springer.com/article/10.1007/s00134-026-08602-3",
+      "moduleId": "acid-base-abg"
+    },
+    {
+      "id": "2026-11-15-race-cars",
+      "date": "2026-11-08",
+      "tag": "Trial",
+      "source": "NEJM (RACE-CARS, AHA Scientific Sessions 2026)",
+      "title": "Community CPR and AED programme did not improve arrest survival",
+      "summary": "In a cluster-randomised trial across North Carolina counties (22,459 patients), dispatcher training, community CPR training and wider AED use did not improve survival to discharge with good neurological outcome (9.0% vs 9.4%). Bystander CPR and early defibrillation remain standard; the lesson is that rolling these out widely needs better implementation strategies.",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2612757",
+      "moduleId": "cardiac-arrest-post-rosc"
+    },
+    {
+      "id": "2026-11-15-india-nsq-licence",
+      "date": "2026-11-05",
+      "tag": "India",
+      "source": "The Telegraph (India)",
+      "title": "Centre proposes instant licence suspension for substandard drugs",
+      "summary": "The Union health ministry has notified a proposal to immediately suspend a manufacturer's licence for a drug found 'not of standard quality' on assay, dissolution, impurities or sterility, removing the current show-cause delay. CDSCO's September 2026 alert listed 330 such samples, including a ciprofloxacin product that failed its assay test. This is still a proposal, so keep checking CDSCO's monthly alerts against your ICU pharmacy stock.",
+      "url": "https://www.telegraphindia.com/india/india-drug-quality-rules-centre-proposes-instant-licence-suspension-for-failed-medicines-prnt/cid/2187899"
+    },
+    {
+      "id": "2026-11-15-vasspr",
+      "date": "2026-10-14",
+      "tag": "Trial",
+      "source": "JAMA (VASSPR)",
+      "title": "Starting vasopressin earlier did not reduce septic shock mortality",
+      "summary": "Across 13 hospitals (3,959 patients), a strategy of starting vasopressin at noradrenaline-equivalent 0.1 µg/kg/min did not lower 28-day mortality compared with 0.4 µg/kg/min (31.8% vs 33.0%), and kidney replacement-free days were the same. This adds data to the vasopressin trigger dose that SSC 2026 leaves open.",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2855462",
+      "moduleId": "sepsis-septic-shock",
+      "catchUp": true
+    },
+    {
+      "id": "2026-11-15-icraki",
+      "date": "2026-10-14",
+      "tag": "Trial",
+      "source": "NEJM (ICRAKI)",
+      "title": "Intermittent haemodialysis first linked to higher mortality than CRRT in ICU AKI",
+      "summary": "In 535 critically ill patients with AKI needing RRT, starting with intermittent haemodialysis was not non-inferior to CRRT for major adverse kidney events. It was also associated with higher 90-day mortality (63.1% vs 53.5%; HR 1.30). The trial was stopped early, so treat the size of the effect with caution, but it supports CRRT as the first modality in unstable patients.",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2608397",
+      "moduleId": "renal-replacement-therapy",
+      "catchUp": true
+    }
+  ]
 }

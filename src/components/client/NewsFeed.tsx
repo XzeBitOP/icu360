@@ -32,6 +32,7 @@ export function NewsFeed({ items }: { items: (NewsItem & { moduleTitle?: string 
         <article key={n.id} className={`${i === 0 ? "glass-strong" : "glass"} rounded-[24px] p-4`}>
           <div className={`flex items-center gap-2 text-[12px] ${muted}`}>
             <span className={`glass-chip inline-flex items-center rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${tagCls[n.tag] ?? "text-ink-700 dark:text-night-muted"}`}>{n.tag}</span>
+            {n.catchUp ? <span className="glass-chip inline-flex items-center rounded-full px-2.5 py-0.5 text-[11px] font-semibold text-ink-500 dark:text-night-muted">Catch-up</span> : null}
             <span className="truncate">{n.source}</span>
             <span className="ml-auto font-mono whitespace-nowrap">{prettyDate(n.date)}</span>
           </div>
