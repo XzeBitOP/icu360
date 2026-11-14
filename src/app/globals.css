@@ -191,7 +191,30 @@ input[type="number"] { -moz-appearance: textfield; }
 /* Mobile tab bar: always pinned to the viewport; slides down + fades after idle, back on any interaction */
 .tabbar { transition: transform .25s ease, opacity .25s ease; will-change: transform, opacity; }
 .tabbar[data-hidden="true"] { transform: translateY(calc(100% + 2.5rem)); opacity: 0; pointer-events: none; }
+/* Strong frosted backing so page text behind the bar is unreadable and icons stay crisp.
+   Unlayered + two classes, so nothing (layer order or .glass) can override it. */
+.tabbar.glass { background: linear-gradient(180deg, rgba(248,251,253,.86), rgba(236,242,247,.82));
+  -webkit-backdrop-filter: blur(24px) saturate(180%); backdrop-filter: blur(24px) saturate(180%); }
+.dark .tabbar.glass { background: linear-gradient(180deg, rgba(24,33,52,.86), rgba(11,17,29,.84)); }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .tabbar.glass { background: rgba(246,249,252,.98); }
+  .dark .tabbar.glass { background: rgba(14,20,33,.98); }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .tabbar.glass { -webkit-backdrop-filter: none; backdrop-filter: none; background: #f6f9fc; }
+  .dark .tabbar.glass { background: #111a2b; }
+}
+html.lowfx .tabbar.glass { -webkit-backdrop-filter: none; backdrop-filter: none; background: rgba(246,249,252,.98); }
+html.lowfx.dark .tabbar.glass { background: rgba(14,20,33,.98); }
+/* Soft scrim above/behind the bar: content fades into the page colour before it reaches the bar */
+.tabbar-scrim { position: fixed; left: 0; right: 0; bottom: 0; z-index: 29; pointer-events: none;
+  height: calc(max(1.25rem, env(safe-area-inset-bottom)) + 7.5rem);
+  background: linear-gradient(180deg, rgba(234,240,245,0) 0%, rgba(234,240,245,.72) 45%, rgba(234,240,245,.92) 100%);
+  transition: opacity .25s ease; }
+.dark .tabbar-scrim { background: linear-gradient(180deg, rgba(5,8,15,0) 0%, rgba(5,8,15,.72) 45%, rgba(5,8,15,.92) 100%); }
+.tabbar-scrim[data-hidden="true"] { opacity: 0; }
+@media (min-width: 64rem) { .tabbar-scrim { display: none; } }
 @media (prefers-reduced-motion: reduce) {
-  .tabbar { transition: opacity .25s ease !important; transition-duration: .25s !important; }
+  .tabbar, .tabbar-scrim { transition: opacity .25s ease !important; transition-duration: .25s !important; }
   .tabbar[data-hidden="true"] { transform: none; }
 }

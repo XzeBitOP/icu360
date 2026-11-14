@@ -61,6 +61,8 @@ export function TabBar() {
   const p = usePathname() || "/";
   const hidden = useIdleHide(p);
   return (
+    <>
+    <div aria-hidden="true" className="tabbar-scrim" data-hidden={hidden ? "true" : "false"} />
     <nav aria-label="Main" data-tabbar="" data-hidden={hidden ? "true" : "false"} className="tabbar lg:hidden fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] inset-x-3 z-30 glass blur-glass rounded-[30px] px-1.5 py-1.5 max-w-[560px] mx-auto">
       <ul className="grid grid-cols-5">
         {ITEMS.map(({ href, label, Icon, match }) => {
@@ -77,6 +79,7 @@ export function TabBar() {
         })}
       </ul>
     </nav>
+    </>
   );
 }
 
