@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ICU360 Antimicrobial",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "name",
+      "category",
+      "drugClass",
+      "subclass",
+      "route",
+      "spectrum",
+      "indications",
+      "dose",
+      "contraindications",
+      "cautions",
+      "brandsIndia",
+      "aliases",
+      "keywords",
+      "searchText",
+      "indiaAvailability",
+      "availabilityNote",
+      "approvalStatus",
+      "references",
+      "verify",
+      "verifyNote"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$"
+      },
+      "name": {
+        "type": "string"
+      },
+      "category": {
+        "enum": [
+          "Antibacterial",
+          "Antiviral",
+          "Antifungal",
+          "Antiparasitic"
+        ]
+      },
+      "drugClass": {
+        "type": "string"
+      },
+      "subclass": {
+        "type": "string"
+      },
+      "route": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "spectrum": {
+        "type": "string"
+      },
+      "indications": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 1
+      },
+      "dose": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "adult",
+          "severeICU",
+          "renal",
+          "hepatic"
+        ],
+        "properties": {
+          "adult": {
+            "type": "string"
+          },
+          "severeICU": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "renal": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "hepatic": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "contraindications": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "cautions": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "brandsIndia": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "aliases": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "keywords": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "searchText": {
+        "type": "string"
+      },
+      "indiaAvailability": {
+        "type": "string"
+      },
+      "availabilityNote": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "approvalStatus": {
+        "type": "string"
+      },
+      "references": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "required": [
+            "code",
+            "source"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "code": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "verify": {
+        "type": "boolean"
+      },
+      "verifyNote": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  }
+}
