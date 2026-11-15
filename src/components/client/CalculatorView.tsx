@@ -96,7 +96,7 @@ export function CalculatorView({ calc }: { calc: Calculator }) {
         );
       })}
       {allSelect ? <div className="h-[110px]" aria-hidden="true" /> : hero}
-      {allSelect ? <div className="fixed inset-x-3 bottom-[104px] lg:bottom-6 lg:left-auto lg:right-8 lg:w-[420px] z-20 max-w-[560px] mx-auto lg:mx-0">{hero}</div> : null}
+      {allSelect ? <div className="fixed inset-x-3 bottom-[104px] calc-hero-safe lg:bottom-6 lg:left-auto lg:right-8 lg:w-[420px] z-20 max-w-[560px] mx-auto lg:mx-0">{hero}</div> : null}
       {calc.interpretation.length ? (
         <section className="glass-strong rounded-[22px] overflow-hidden">
           {calc.interpretation.map((b, k) => (

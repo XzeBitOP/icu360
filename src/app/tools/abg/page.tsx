@@ -15,7 +15,7 @@ export default function AbgPage() {
       <ViewTracker keys={["tool:abg"]} />
       <PageHeader backHref="/tools" eyebrow="Interactive tool" title="ABG interpreter" right={<SavedButton item={{ href: "/tools/abg", title: "ABG interpreter", sub: "Interactive tool", icon: "droplets" }} />} meta={<div className="mt-3"><Views n={getViews().tools["abg"]} /></div>} />
       <Main className="space-y-5 max-w-[720px]">
-        <AbgInterpreter />
+        <div data-no-swipe-back=""><AbgInterpreter /></div>
         <section className="glass rounded-[22px] p-4 text-[13px] leading-relaxed">
           <h2 className="display text-[15px] font-semibold mb-1.5">Rules used</h2>
           <ul className={`${muted} space-y-1 list-disc pl-4`}>

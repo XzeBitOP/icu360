@@ -81,7 +81,7 @@ export default async function AntimicrobialPage({ params }: { params: Promise<Pa
                 <Syringe className="w-5 h-5" strokeWidth={2} aria-hidden="true" />
               </span>
               <h2 className="display text-[18px] font-semibold">Dosing</h2>
-              {a.approvalStatus !== "Approved" ? <Chip className="ml-auto text-warn dark:text-warn-bright">{a.approvalStatus}</Chip> : null}
+              {a.approvalStatus.startsWith("Approved") ? null : <Chip className="ml-auto text-warn dark:text-warn-bright">{a.approvalStatus}</Chip>}
             </div>
             <dl>
               <DoseRow first label="Adult dose" value={a.dose.adult} strong />
@@ -97,6 +97,7 @@ export default async function AntimicrobialPage({ params }: { params: Promise<Pa
         <Card title="Cautions"><Bullets items={a.cautions} /></Card>
         <Card title="Availability in India">
           <p className="text-[14px] font-medium leading-snug">{a.indiaAvailability}</p>
+          {a.approvalStatus !== "Approved" ? <p className={`text-[13px] ${muted} mt-1 leading-relaxed`}>Regulatory status: {a.approvalStatus}</p> : null}
           {a.availabilityNote ? <p className={`text-[13px] ${muted} mt-1 leading-relaxed`}>{a.availabilityNote}</p> : null}
           {a.brandsIndia.length ? (
             <div className="mt-3">

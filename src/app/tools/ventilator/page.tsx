@@ -15,7 +15,7 @@ export default function VentPage() {
       <ViewTracker keys={["tool:ventilator"]} />
       <PageHeader backHref="/tools" eyebrow="Interactive tool" title="Ventilator playground" right={<SavedButton item={{ href: "/tools/ventilator", title: "Ventilator playground", sub: "Interactive tool", icon: "gauge" }} />} meta={<div className="mt-3"><Views n={getViews().tools["ventilator"]} /></div>} />
       <Main className="space-y-5 max-w-[760px]">
-        <VentPlayground />
+        <div data-no-swipe-back=""><VentPlayground /></div>
         <Callout kind="info" title="For learning, not for setting a real ventilator">
           A single-compartment lung (one compliance, one resistance, passive expiration, no patient effort). Real patients have uneven lungs, leaks and their own breathing. Plateau and driving pressure assume an end-inspiratory pause. Use it to understand the curves, then go to <Link href="/m/mechanical-ventilation/initial-settings" className="underline">Mechanical ventilation: initial settings</Link>.
         </Callout>

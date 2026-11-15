@@ -218,3 +218,19 @@ html.lowfx.dark .tabbar.glass { background: rgba(14,20,33,.98); }
   .tabbar, .tabbar-scrim { transition: opacity .25s ease !important; transition-duration: .25s !important; }
   .tabbar[data-hidden="true"] { transform: none; }
 }
+
+/* ---------- Safe areas (installed iOS PWA, status bar "black-translucent") ----------
+   env() insets are 0 in normal browser tabs, so nothing moves there. Exposed as custom
+   properties so they can be overridden in tests/screenshots. */
+:root { --sat: env(safe-area-inset-top, 0px); --sab: env(safe-area-inset-bottom, 0px); --sal: env(safe-area-inset-left, 0px); --sar: env(safe-area-inset-right, 0px); }
+.app { padding-top: var(--sat); padding-left: var(--sal); padding-right: var(--sar); }
+.tabbar { bottom: max(1.25rem, var(--sab)); }
+.tabbar-scrim { height: calc(max(1.25rem, var(--sab)) + 7.5rem); }
+.sticky-safe { top: calc(var(--sat) + 1rem); }
+
+/* Left-edge swipe-back cue: a small glass chevron that follows the finger (transform/opacity only) */
+.edge-swipe-cue { position: fixed; left: 0; top: 0; z-index: 40; opacity: 0; pointer-events: none;
+  transform: translate3d(-44px, 0, 0); will-change: transform, opacity; transition: opacity .15s ease; }
+.edge-swipe-cue[data-ready="true"] { box-shadow: 0 0 0 2px rgba(15,107,122,.35), 0 0 22px rgba(94,234,212,.45); }
+/* Calculator result card that floats above the tab bar: lift it by the same extra inset the bar gets */
+@media (max-width: 63.99rem) { .calc-hero-safe { bottom: calc(104px + max(0px, var(--sab) - 1.25rem)); } }

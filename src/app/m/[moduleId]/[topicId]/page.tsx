@@ -124,7 +124,7 @@ export default async function TopicPage({ params }: { params: Promise<Params> })
       <ViewTracker keys={[topic.viewKey, module.viewKey]} />
       <TopicOpened moduleId={module.id} topicId={topic.id} />
       <div className="min-[1400px]:grid min-[1400px]:grid-cols-[230px_minmax(0,1fr)] min-[1400px]:gap-6 lg:pt-3">
-        <nav className="hidden min-[1400px]:block glass rounded-[24px] p-3 self-start sticky top-4 mt-2" aria-label="Topics in this module">
+        <nav className="hidden min-[1400px]:block glass rounded-[24px] p-3 self-start sticky top-4 sticky-safe mt-2" aria-label="Topics in this module">
           <Link href={`/m/${module.id}`} className="block px-2 pt-1 pb-2 text-[11px] uppercase tracking-[.1em] font-semibold text-ink-400 dark:text-night-faint">{module.title}</Link>
           <ul className="space-y-0.5">
             {module.topics.map((t) => (

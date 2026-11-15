@@ -4,6 +4,7 @@ import "./globals.css";
 import { Aurora, Sidebar, TopBar } from "@/components/Shell";
 import { TabBar } from "@/components/client/Nav";
 import { PwaSetup } from "@/components/client/Pwa";
+import { EdgeSwipeBack } from "@/components/client/EdgeSwipeBack";
 import { SITE } from "@/lib/site";
 import { Footer } from "@/components/Footer";
 
@@ -70,6 +71,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </div>
         </div>
         <TabBar />
+        <EdgeSwipeBack />
         <PwaSetup />
       </body>
     </html>

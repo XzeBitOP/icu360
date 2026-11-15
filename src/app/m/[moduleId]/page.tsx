@@ -97,7 +97,7 @@ export default async function ModulePage({ params }: { params: Promise<Params> }
               </section>
             ) : null}
           </div>
-          <aside className="space-y-4 lg:sticky lg:top-4">
+          <aside className="space-y-4 lg:sticky lg:top-4 sticky-safe">
             <ModuleProgress moduleId={m.id} total={m.topics.length} />
             <Link href={`/m/${m.id}/quiz`} className="glass-hero rounded-[26px] p-4 flex items-center gap-3.5">
               <span className="w-12 h-12 rounded-[16px] grid place-items-center" style={{ background: "rgba(255,255,255,.16)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.4)" }}><GraduationCap className="w-6 h-6" strokeWidth={2} aria-hidden="true" /></span>
