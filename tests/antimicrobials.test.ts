@@ -22,6 +22,12 @@ describe("antimicrobial data", () => {
     for (const c of CATEGORIES) expect(data.filter((a) => a.category === c).length).toBeGreaterThan(0);
   });
 
+  it("ships only reviewed rows (no open verify flags or inline verify markers)", () => {
+    expect(data.filter((a) => a.verify).map((a) => a.name)).toEqual([]);
+    const text = (a: Antimicrobial) => JSON.stringify([a.dose, a.indications, a.contraindications, a.cautions]);
+    expect(data.filter((a) => /\(verify|verify\)/i.test(text(a))).map((a) => a.name)).toEqual([]);
+  });
+
   it("gives no dose for investigational agents", () => {
     const inv = data.filter(isInvestigational);
     expect(inv.length).toBeGreaterThan(0);

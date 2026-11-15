@@ -239,7 +239,7 @@
     "dose": {
       "adult": "500 mg–1 g PO q6h (empty stomach); IV 1–2 g q4–6h",
       "severeICU": "MSSA bacteraemia/endocarditis: 2 g IV q4h (12 g/day)",
-      "renal": "No adjustment usually; max 4 g/day if CrCl <10 (verify)",
+      "renal": "No adjustment usually (max 4 g/day in severe renal failure)",
       "hepatic": null
     },
     "contraindications": [
@@ -263,7 +263,7 @@
       "resistant"
     ],
     "searchText": "cloxacillin penicillins antistaphylococcal (penicillinase-resistant) penicillin mssa skin/soft tissue infection mssa bacteraemia (iv) osteomyelitis",
-    "indiaAvailability": "Yes",
+    "indiaAvailability": "Yes (oral); IV limited/unavailable",
     "availabilityNote": null,
     "approvalStatus": "Approved",
     "references": [
@@ -280,8 +280,8 @@
         "source": "ICMR Treatment Guidelines for Antimicrobial Use in Common Syndromes (2019; AMSP 2022 update)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Renal cap and IV availability in India — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "flucloxacillin",
@@ -761,7 +761,7 @@
     "dose": {
       "adult": "1.5–3 g IV q6h",
       "severeICU": "CRAB: high-dose 9 g IV q8h over 4 h (or 27 g/day continuous infusion) = sulbactam 9 g/day, in combination (IDSA 2024)",
-      "renal": "CrCl 15–29: q12h; 5–14: q24h; high-dose CRAB regimen — adjust per IDSA table",
+      "renal": "Standard dose: CrCl 15–29: q12h; 5–14: q24h. High-dose CRAB regimen (Jaruatanasirikul/IDSA-referenced): CrCl 30–59: 6 g q8h (or 9 g q12h); CrCl 15–29: 6 g q12h; CrCl <15 / HD: 3–6 g q24h (after HD)",
       "hepatic": null
     },
     "contraindications": [
@@ -820,8 +820,8 @@
         "source": "US FDA prescribing information (label)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Confirm high-dose CRAB regimen and renal table against IDSA 2024 Table"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "piperacillin-tazobactam",
@@ -993,7 +993,7 @@
       "Biliary sepsis (biliary excretion)"
     ],
     "dose": {
-      "adult": "2–4 g/day IV (1:1 combination) divided q12h",
+      "adult": "2–4 g/day IV (1:1) or 3–6 g/day (2:1) divided q12h (max sulbactam 4 g/day)",
       "severeICU": "Severe: up to 8 g/day (1:1) divided q12h; max sulbactam 4 g/day",
       "renal": "Sulbactam: CrCl 15–30 max 1 g sulbactam q12h; <15 max 500 mg q12h; cefoperazone needs adjustment in hepatic/biliary disease",
       "hepatic": null
@@ -1004,7 +1004,8 @@
     "cautions": [
       "Hypoprothrombinaemia/bleeding (NMTT side chain) — give vitamin K, monitor INR",
       "Disulfiram-like reaction with alcohol",
-      "Not FDA-approved; limited high-quality evidence"
+      "Not FDA-approved; limited high-quality evidence",
+      "ICMR AMSP: restricted 'Watch/Reserve' hospital agent for susceptible MDR Gram-negatives"
     ],
     "brandsIndia": [
       "Magnex"
@@ -1054,8 +1055,8 @@
         "source": "Sanford Guide to Antimicrobial Therapy (2025 edition / web)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Dose per Indian label; confirm ICMR AMSP position"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "ceftazidime-avibactam",
@@ -1534,7 +1535,7 @@
     "dose": {
       "adult": "2.5 g (cefepime 2 g/enmetazobactam 0.5 g) IV q8h infused over 2 h",
       "severeICU": null,
-      "renal": "Reduce if CrCl <60 per label (e.g., 30–59: 1.25 g q8h); augmented clearance ≥130: q6h (verify)",
+      "renal": "eGFR ≥130: 2.5 g q8h over 4 h; eGFR 60–129: 2.5 g q8h over 2 h; eGFR 30–59: 1.25 g q8h over 2 h; eGFR 15–29: 1.25 g q12h over 2 h; eGFR <15 or IHD: 1.25 g loading dose on day 1, then 0.625 g q24h (after HD). (EMA SmPC: 1.25 g q24h for eGFR <15 not on HD; 1.25 g LD then 0.625 g q24h for HD)",
       "hepatic": null
     },
     "contraindications": [
@@ -1576,7 +1577,7 @@
       "sulfone"
     ],
     "searchText": "cefepime-enmetazobactam fep-emt cefepime enmetazobactam orblicef exblifep beta-lactam / beta-lactamase inhibitor combinations 4th-gen cephalosporin + penicillanic sulfone bli cuti incl. pyelonephritis esbl infections (carbapenem-sparing option) eu: hap/vap",
-    "indiaAvailability": "Yes (CDSCO 2024; Orblicef, Orchid Pharma/Cipla)",
+    "indiaAvailability": "Yes (launched in India by Orchid Pharma/Cipla as Orblicef)",
     "availabilityNote": null,
     "approvalStatus": "Approved",
     "references": [
@@ -1589,8 +1590,8 @@
         "source": "EMA Summary of Product Characteristics"
       }
     ],
-    "verify": true,
-    "verifyNote": "Renal table — verify against label"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "cefepime-zidebactam",
@@ -1603,13 +1604,13 @@
     ],
     "spectrum": "MDR/XDR Gram-negatives incl. MBL (NDM)-producing Enterobacterales and Pseudomonas, KPC, OXA-48; Acinetobacter activity variable.",
     "indications": [
-      "cUTI incl. pyelonephritis with or without concurrent Gram-negative bacteraemia (CDSCO-approved May 2026)",
+      "cUTI incl. pyelonephritis (US FDA May 2026; CDSCO May 2026 — the CDSCO indication also includes concurrent Gram-negative bacteraemia, the FDA label does not)",
       "Off-label: other MDR Gram-negative infections per ID advice"
     ],
     "dose": {
       "adult": "3 g (cefepime 2 g/zidebactam 1 g) IV q8h over 1 h for 7–10 days (eGFR ≥60)",
       "severeICU": null,
-      "renal": "Dose reduction for eGFR <60 per label",
+      "renal": "eGFR 30–59: 1.5 g q8h; eGFR 15–29: 1.5 g q12h; eGFR 8–14 or IHD: 1.5 g q24h (after HD on dialysis days); eGFR <8 (not on HD): insufficient data",
       "hepatic": null
     },
     "contraindications": [
@@ -1653,10 +1654,10 @@
       "zid",
       "zidebactam"
     ],
-    "searchText": "cefepime-zidebactam wck 5222 fep-zid cefepime zidebactam zaynich beta-lactam / beta-lactamase inhibitor combinations 4th-gen cephalosporin + beta-lactam enhancer (pbp2 binder) cuti incl. pyelonephritis with or without concurrent gram-negative bacteraemia (cdsco-approved may 2026) off-label: other mdr gram-negative infections per id advice",
+    "searchText": "cefepime-zidebactam wck 5222 fep-zid cefepime zidebactam zaynich beta-lactam / beta-lactamase inhibitor combinations 4th-gen cephalosporin + beta-lactam enhancer (pbp2 binder) cuti incl. pyelonephritis (us fda may 2026; cdsco may 2026 — the cdsco indication also includes concurrent gram-negative bacteraemia, the fda label does not) off-label: other mdr gram-negative infections per id advice",
     "indiaAvailability": "Yes (approved May 2026)",
     "availabilityNote": null,
-    "approvalStatus": "Approved",
+    "approvalStatus": "Approved (US FDA May 2026; CDSCO May 2026)",
     "references": [
       {
         "code": "FDA",
@@ -1667,8 +1668,8 @@
         "source": "ICMR Treatment Guidelines for Antimicrobial Use in Common Syndromes (2019; AMSP 2022 update)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Indian launch/availability and renal table — verify against Indian package insert"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "cefepime-tazobactam",
@@ -1684,8 +1685,8 @@
       "Hospital-acquired Gram-negative infection (per antibiogram)"
     ],
     "dose": {
-      "adult": "Per Indian label (e.g., cefepime 1 g/tazobactam 125 mg IV q12h; higher doses q8h for severe)",
-      "severeICU": null,
+      "adult": "1.125 g (cefepime 1 g/tazobactam 125 mg) IV q12h (Indian label)",
+      "severeICU": "Severe/Pseudomonas: up to 2.25 g (cefepime 2 g/tazobactam 250 mg) IV q8h (Indian label)",
       "renal": "Adjust as cefepime",
       "hepatic": null
     },
@@ -1694,7 +1695,8 @@
     ],
     "cautions": [
       "India-only FDC; limited outcome data",
-      "Cefepime neurotoxicity"
+      "Cefepime neurotoxicity",
+      "Not FDA/EMA-approved; no CLSI/EUCAST breakpoints"
     ],
     "brandsIndia": [],
     "aliases": [
@@ -1729,8 +1731,8 @@
         "source": "ICMR Treatment Guidelines for Antimicrobial Use in Common Syndromes (2019; AMSP 2022 update)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Dose regimen from Indian label — verify; not in international guidelines"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "ceftriaxone-sulbactam",
@@ -1743,7 +1745,7 @@
     ],
     "spectrum": "As ceftriaxone with some beta-lactamase coverage.",
     "indications": [
-      "Not guideline-endorsed; Indian FDC"
+      "Not recommended — irrational FDC (ICMR/CDSCO stewardship concern; sulbactam does not inhibit ESBLs/AmpC reliably)"
     ],
     "dose": {
       "adult": "Per Indian label (commonly 1.5 g [1 g/0.5 g] IV q12h)",
@@ -1780,7 +1782,7 @@
       "lactamase",
       "sulbactam"
     ],
-    "searchText": "ceftriaxone-sulbactam ceftriaxone sulbactam beta-lactam / beta-lactamase inhibitor combinations 3rd-gen cephalosporin + bli (india fdc) not guideline-endorsed; indian fdc",
+    "searchText": "ceftriaxone-sulbactam ceftriaxone sulbactam beta-lactam / beta-lactamase inhibitor combinations 3rd-gen cephalosporin + bli (india fdc) not recommended — irrational fdc (icmr/cdsco stewardship concern; sulbactam does not inhibit esbls/ampc reliably)",
     "indiaAvailability": "Yes",
     "availabilityNote": null,
     "approvalStatus": "Approved",
@@ -1790,8 +1792,8 @@
         "source": "ICMR Treatment Guidelines for Antimicrobial Use in Common Syndromes (2019; AMSP 2022 update)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Verify dose and stewardship status"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "cefepime-taniborbactam",
@@ -1816,7 +1818,7 @@
       "—"
     ],
     "cautions": [
-      "FDA CRL Feb 2024; NDA re-accepted Oct 2026 — not yet approved"
+      "Investigational (FDA CRL Feb 2024; NDA resubmission pending) — not approved"
     ],
     "brandsIndia": [],
     "aliases": [
@@ -1845,7 +1847,7 @@
     "searchText": "cefepime-taniborbactam cefepime taniborbactam beta-lactam / beta-lactamase inhibitor combinations 4th-gen cephalosporin + boronate bli (incl. mbl) investigational — cuti (certain-1)",
     "indiaAvailability": "No",
     "availabilityNote": null,
-    "approvalStatus": "Investigational (NDA under review, Nov 2026)",
+    "approvalStatus": "Investigational (FDA CRL Feb 2024; NDA resubmission pending)",
     "references": [
       {
         "code": "FDA",
@@ -1874,7 +1876,7 @@
     "dose": {
       "adult": "1–2 g IV q8h",
       "severeICU": "MSSA bacteraemia: 2 g IV q8h; surgical prophylaxis 2 g (3 g if ≥120 kg), redose q4h intra-op",
-      "renal": "CrCl 11–34: 50% dose q12h (or 1 g q12h); ≤10: 50% dose q24h; HD: 2 g after each HD (verify)",
+      "renal": "CrCl 11–34: 50% dose q12h (or 1 g q12h); ≤10: 50% dose q24h; HD: 1–2 g after each HD session (or 2 g/2 g/3 g Mon/Wed/Fri post-HD protocol)",
       "hepatic": null
     },
     "contraindications": [
@@ -1925,8 +1927,8 @@
         "source": "ICMR Treatment Guidelines for Antimicrobial Use in Common Syndromes (2019; AMSP 2022 update)"
       }
     ],
-    "verify": true,
-    "verifyNote": "HD dosing regimens vary — verify local protocol"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "cephalexin",
@@ -2139,7 +2141,7 @@
     ],
     "dose": {
       "adult": "1–2 g IV q6–8h",
-      "severeICU": "Severe: up to 12 g/day (2 g q4h); M. abscessus: 2–4 g q6–8h (max 12 g/day) (verify)",
+      "severeICU": "Severe: up to 12 g/day (2 g q4h); M. abscessus (ATS/IDSA NTM): 2–4 g IV q8h (or 200 mg/kg/day divided q6–8h; max 12 g/day)",
       "renal": "CrCl 30–50: 1–2 g q8–12h; 10–29: q12–24h; <10: 0.5–1 g q12–48h",
       "hepatic": null
     },
@@ -2163,7 +2165,7 @@
       "mefoxin"
     ],
     "searchText": "cefoxitin mefoxin cephalosporins 2nd generation (cephamycin) surgical prophylaxis (colorectal) pelvic inflammatory disease mycobacterium abscessus (induction, with amikacin + macrolide)",
-    "indiaAvailability": "Limited",
+    "indiaAvailability": "No / Import only",
     "availabilityNote": null,
     "approvalStatus": "Approved",
     "references": [
@@ -2176,8 +2178,8 @@
         "source": "US FDA prescribing information (label)"
       }
     ],
-    "verify": true,
-    "verifyNote": "NTM dosing and India availability — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "cefaclor",
@@ -2467,7 +2469,7 @@
     ],
     "dose": {
       "adult": "1–2 g IV q12h",
-      "severeICU": "Severe: up to 12 g/day divided (verify)",
+      "severeICU": "Severe: 6–12 g/day IV divided q6–12h (max 4 g/day in hepatic impairment/biliary obstruction)",
       "renal": "No renal adjustment; reduce in hepatic/biliary obstruction (max 4 g/day)",
       "hepatic": null
     },
@@ -2504,8 +2506,8 @@
         "source": "ICMR Treatment Guidelines for Antimicrobial Use in Common Syndromes (2019; AMSP 2022 update)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Max dose — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "cefixime",
@@ -2524,7 +2526,7 @@
     ],
     "dose": {
       "adult": "200 mg PO q12h or 400 mg q24h",
-      "severeICU": "Enteric fever: 20 mg/kg/day PO in 2 divided doses ×14 days (ICMR; verify adult cap)",
+      "severeICU": "Enteric fever: 20 mg/kg/day PO in 2 divided doses (typical adult max 400 mg q12h [800 mg/day]) ×14 days",
       "renal": "CrCl 21–60: 300 mg/day (75%); ≤20: 200 mg/day",
       "hepatic": null
     },
@@ -2567,8 +2569,8 @@
         "source": "Sanford Guide to Antimicrobial Therapy (2025 edition / web)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Enteric fever adult dose cap — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "cefpodoxime",
@@ -2769,7 +2771,7 @@
     "dose": {
       "adult": "1–2 g IV q12h",
       "severeICU": null,
-      "renal": "Reduce if CrCl <50",
+      "renal": "CrCl 20–50: 1–2 g LD then 0.5–1 g q12h; <20: 1–2 g LD then 0.5–1 g q24h",
       "hepatic": null
     },
     "contraindications": [
@@ -2791,7 +2793,7 @@
       "cephalosporins"
     ],
     "searchText": "cefpirome cefrom cephalosporins 4th generation gram-negative infections incl. pseudomonas (limited use)",
-    "indiaAvailability": "Limited",
+    "indiaAvailability": "No / Discontinued in most markets",
     "availabilityNote": null,
     "approvalStatus": "Approved",
     "references": [
@@ -2804,8 +2806,8 @@
         "source": "EMA Summary of Product Characteristics"
       }
     ],
-    "verify": true,
-    "verifyNote": "Availability and renal regimen — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "ceftaroline-fosamil",
@@ -2988,7 +2990,7 @@
       "siderophore cephalosporin"
     ],
     "searchText": "cefiderocol fdc cefiderocol fetroja fetcroja cephalosporins siderophore cephalosporin mbl-producing cre (alternative) crab (in combination, idsa) dtr pseudomonas hap/vap, cuti with limited options",
-    "indiaAvailability": "Verify",
+    "indiaAvailability": "No",
     "availabilityNote": null,
     "approvalStatus": "Approved",
     "references": [
@@ -3101,7 +3103,7 @@
     "dose": {
       "adult": "500 mg IV q6h or 1 g q8h",
       "severeICU": "Severe/less susceptible: 1 g q6h (max 4 g/day)",
-      "renal": "CrCl 60–89: 400–750 mg q6h; 30–59: 300–500 mg q6h; 15–29: 200–500 mg q6h; <15: avoid unless HD (label-based, verify)",
+      "renal": "FDA label (for 500 mg q6h / 1 g q8h baseline): CrCl 60–89: 400 mg q6h (or 500 mg q6h); CrCl 30–59: 300 mg q6h (or 500 mg q8h); CrCl 15–29: 200 mg q6h (or 500 mg q12h); CrCl ≤15: avoid unless HD within 48 h (give post-HD)",
       "hepatic": null
     },
     "contraindications": [
@@ -3146,8 +3148,8 @@
         "source": "US FDA prescribing information (label)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Renal table varies by label edition — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "ertapenem",
@@ -3283,7 +3285,7 @@
       "Not recommended — stewardship concern (India-marketed oral penem)"
     ],
     "dose": {
-      "adult": "200–300 mg PO q12h (Indian label)",
+      "adult": "200–300 mg PO q8h (Indian label; 300 mg ER q12h)",
       "severeICU": null,
       "renal": "Reduce in severe renal impairment",
       "hepatic": null
@@ -3294,16 +3296,21 @@
     "cautions": [
       "ICMR/AMSP strongly discourage: drives carbapenem cross-resistance; not FDA/EMA approved"
     ],
-    "brandsIndia": [],
+    "brandsIndia": [
+      "Faronem",
+      "Farozet"
+    ],
     "aliases": [],
     "keywords": [
       "antibacterial",
       "carbapenems",
+      "faronem",
       "faropenem",
+      "farozet",
       "penem",
       "penem (oral)"
     ],
-    "searchText": "faropenem carbapenems penem (oral) not recommended — stewardship concern (india-marketed oral penem)",
+    "searchText": "faropenem faronem farozet carbapenems penem (oral) not recommended — stewardship concern (india-marketed oral penem)",
     "indiaAvailability": "Yes",
     "availabilityNote": null,
     "approvalStatus": "Approved",
@@ -3313,8 +3320,8 @@
         "source": "ICMR Treatment Guidelines for Antimicrobial Use in Common Syndromes (2019; AMSP 2022 update)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Dose per Indian label; brands — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "tebipenem-pivoxil",
@@ -3332,11 +3339,12 @@
     "dose": {
       "adult": "600 mg (two 300 mg tablets) PO q6h for 7–10 days (eGFR 60–150)",
       "severeICU": null,
-      "renal": "Dose reduction for eGFR <60 per label",
+      "renal": "eGFR 30–59: 300 mg q6h; eGFR 15–29: 300 mg q12h; eGFR <15 / HD: insufficient data (not recommended); eGFR >150: not recommended (reduced exposure)",
       "hepatic": null
     },
     "contraindications": [
-      "Serious hypersensitivity to carbapenems or anaphylaxis to other beta-lactams"
+      "Serious hypersensitivity to carbapenems or anaphylaxis to other beta-lactams",
+      "Primary or secondary carnitine deficiency or inborn errors of metabolism causing carnitine deficiency"
     ],
     "cautions": [
       "Pivalate-related carnitine depletion with prolonged use",
@@ -3374,8 +3382,8 @@
         "source": "US FDA prescribing information (label)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Renal table — verify against label"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "sulopenem-etzadroxil-probenecid",
@@ -3393,13 +3401,14 @@
     "dose": {
       "adult": "500 mg/500 mg PO twice daily with food ×5 days",
       "severeICU": null,
-      "renal": "Not recommended for CrCl <15 (verify)",
+      "renal": "No adjustment for CrCl ≥15; not recommended if CrCl <15 or on hemodialysis",
       "hepatic": null
     },
     "contraindications": [
       "Serious hypersensitivity to carbapenems or anaphylaxis to other beta-lactams",
       "History of probenecid hypersensitivity",
-      "Blood dyscrasias or uric acid kidney stones (probenecid)"
+      "Blood dyscrasias or uric acid kidney stones (probenecid)",
+      "Concomitant ketorolac tromethamine"
     ],
     "cautions": [
       "Diarrhoea",
@@ -3431,8 +3440,8 @@
         "source": "US FDA prescribing information (label)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Renal guidance — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "aztreonam",
@@ -3642,8 +3651,8 @@
         "source": "British National Formulary (current)"
       }
     ],
-    "verify": true,
-    "verifyNote": "ICU high-dose (25–30 mg/kg) and target levels are expert/consensus-based — verify against unit protocol"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "tobramycin",
@@ -3717,7 +3726,7 @@
       "Gram-negative infections (combination)"
     ],
     "dose": {
-      "adult": "4–6 mg/kg/day IV/IM as single daily dose (Indian label)",
+      "adult": "4–6 mg/kg/day IV/IM q24h or divided q8–12h (Indian label)",
       "severeICU": null,
       "renal": "Interval extension guided by levels",
       "hepatic": null
@@ -3751,8 +3760,8 @@
         "source": "British National Formulary (current)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Indian-label dose — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "streptomycin",
@@ -3883,7 +3892,7 @@
       "Hepatic encephalopathy (second-line; rifaximin preferred)"
     ],
     "dose": {
-      "adult": "Bowel prep: 1 g PO at 19, 18 and 9 h before surgery; HE: 1 g PO q6h (short term) (verify)",
+      "adult": "Bowel prep: 1 g PO at 19 h, 18 h and 9 h before surgery (with erythromycin); hepatic encephalopathy: 1–2 g PO q6h for max 5–6 days (avoid where possible — nephro/ototoxicity)",
       "severeICU": null,
       "renal": "Avoid in renal impairment (absorption → toxicity)",
       "hepatic": null
@@ -3925,8 +3934,8 @@
         "source": "Sanford Guide to Antimicrobial Therapy (2025 edition / web)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Dosing regimen — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "nalidixic-acid",
@@ -4302,7 +4311,7 @@
     ],
     "dose": {
       "adult": "400 mg PO/IV q24h",
-      "severeICU": "TB: 400 mg daily (high dose 600–800 mg in specific WHO regimens; verify)",
+      "severeICU": "TB: 400 mg daily; high dose 600–800 mg daily (weight bands) in WHO shorter DR-TB regimens when low-level fluoroquinolone resistance is suspected",
       "renal": "No renal adjustment",
       "hepatic": null
     },
@@ -4364,8 +4373,8 @@
         "source": "US FDA prescribing information (label)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Inline \"(verify)\" values in dose/indication text"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "gemifloxacin",
@@ -4509,7 +4518,7 @@
     ],
     "dose": {
       "adult": "250–500 mg PO q6h; IV 500 mg–1 g q6h",
-      "severeICU": "Prokinetic: 250 mg IV (or 3 mg/kg) single dose 30–120 min before endoscopy; feed intolerance 100–250 mg IV q8–12h ×≤3 days (verify)",
+      "severeICU": "Prokinetic: 250 mg IV (or 3 mg/kg) single dose 30–120 min before endoscopy; feed intolerance 100–250 mg IV q8–12h ×≤72 h (ACG/ESPEN)",
       "renal": "CrCl <10: max 50–75% dose",
       "hepatic": null
     },
@@ -4556,8 +4565,8 @@
         "source": "British National Formulary (current)"
       }
     ],
-    "verify": true,
-    "verifyNote": "ICU prokinetic dosing — verify local protocol"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "azithromycin",
@@ -4580,7 +4589,7 @@
     ],
     "dose": {
       "adult": "500 mg PO/IV q24h (CAP: 3–5 days)",
-      "severeICU": "Severe scrub typhus: IV doxycycline + IV azithromycin 500 mg daily ×7 days (INTREST); enteric fever 1 g PO daily (or 20 mg/kg/day) ×7 days (verify)",
+      "severeICU": "Severe scrub typhus: IV doxycycline + IV azithromycin 500 mg daily ×7 days (INTREST); enteric fever (ICMR): 1 g PO day 1, then 500 mg PO daily ×6 days, or 500 mg–1 g PO daily ×7 days (20 mg/kg/day, max 1 g/day)",
       "renal": "No adjustment (caution CrCl <10)",
       "hepatic": null
     },
@@ -4642,8 +4651,8 @@
         "source": "CDC STI Treatment Guidelines (2021)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Enteric fever adult dose — verify against ICMR"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "clarithromycin",
@@ -4935,7 +4944,7 @@
     "dose": {
       "adult": "200 mg loading, then 100 mg PO/IV q12h",
       "severeICU": "CRAB/Stenotrophomonas: 200 mg PO/IV q12h (IDSA 2024)",
-      "renal": "No adjustment (avoid IV formulation in severe renal impairment due to magnesium content — verify)",
+      "renal": "No adjustment (avoid IV formulation [Minocin, magnesium sulfate vehicle] in severe renal impairment)",
       "hepatic": null
     },
     "contraindications": [
@@ -4974,7 +4983,7 @@
       "tetracyclines & glycylcyclines"
     ],
     "searchText": "minocycline mino minocin minoz cynomycin tetracyclines & glycylcyclines tetracycline (2nd gen) crab (combination, high dose) stenotrophomonas (combination) mrsa skin infection leprosy (alternative)",
-    "indiaAvailability": "Yes (oral); IV limited",
+    "indiaAvailability": "Yes (oral); IV not available in India",
     "availabilityNote": null,
     "approvalStatus": "Approved",
     "references": [
@@ -4991,8 +5000,8 @@
         "source": "US FDA prescribing information (label)"
       }
     ],
-    "verify": true,
-    "verifyNote": "IV availability in India; renal note — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "tetracycline",
@@ -5170,8 +5179,8 @@
       "xerava"
     ],
     "searchText": "eravacycline xerava tetracyclines & glycylcyclines fluorocycline ciai crab/cre (off-label, limited data)",
-    "indiaAvailability": "Verify",
-    "availabilityNote": "India availability — verify",
+    "indiaAvailability": "No",
+    "availabilityNote": null,
     "approvalStatus": "Approved",
     "references": [
       {
@@ -5462,7 +5471,7 @@
     ],
     "dose": {
       "adult": "1500 mg IV single dose over 30 min, or 1000 mg then 500 mg 1 week later",
-      "severeICU": "Off-label osteomyelitis/endocarditis: 1500 mg on days 1 and 8 (verify)",
+      "severeICU": "Off-label osteomyelitis/endocarditis: 1500 mg IV on day 1 and day 8",
       "renal": "CrCl <30 not on HD: 1125 mg single dose (or 750 mg then 375 mg)",
       "hepatic": null
     },
@@ -5493,7 +5502,7 @@
       "xydalba"
     ],
     "searchText": "dalbavancin dalvance xydalba glycopeptides & lipoglycopeptides lipoglycopeptide (long-acting) absssi off-label: osteomyelitis, bacteraemia/endocarditis consolidation (opat)",
-    "indiaAvailability": "Verify",
+    "indiaAvailability": "No",
     "availabilityNote": null,
     "approvalStatus": "Approved",
     "references": [
@@ -5506,8 +5515,8 @@
         "source": "EMA Summary of Product Characteristics"
       }
     ],
-    "verify": true,
-    "verifyNote": "India availability and off-label regimens — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "oritavancin",
@@ -5565,8 +5574,8 @@
         "source": "US FDA prescribing information (label)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Heparin contraindication window — verify current label"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "linezolid",
@@ -5692,8 +5701,8 @@
       "tedizolid"
     ],
     "searchText": "tedizolid sivextro oxazolidinones oxazolidinone absssi",
-    "indiaAvailability": "Verify",
-    "availabilityNote": "India availability — verify",
+    "indiaAvailability": "No",
+    "availabilityNote": null,
     "approvalStatus": "Approved",
     "references": [
       {
@@ -6257,7 +6266,7 @@
     ],
     "dose": {
       "adult": "500 mg PO q12h; IV 500 mg–1 g q12h (Indian label)",
-      "severeICU": "Amoebic liver abscess: per Indian label (verify)",
+      "severeICU": "Amoebic liver abscess: 500 mg–1 g IV q12h or 500 mg PO q12h ×5–10 days; intestinal amoebiasis: 1.5 g PO once daily ×3 days (Indian label)",
       "renal": "No adjustment usually",
       "hepatic": null
     },
@@ -6288,8 +6297,8 @@
         "source": "British National Formulary (current)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Not FDA-approved; doses per Indian label — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "secnidazole",
@@ -6322,7 +6331,8 @@
       "Warfarin potentiation"
     ],
     "brandsIndia": [
-      "Solosec"
+      "Secnil",
+      "Tagera"
     ],
     "aliases": [],
     "keywords": [
@@ -6330,11 +6340,12 @@
       "nitroimidazole",
       "nitroimidazoles",
       "secnidazole",
-      "solosec"
+      "secnil",
+      "tagera"
     ],
-    "searchText": "secnidazole solosec nitroimidazoles nitroimidazole bacterial vaginosis trichomoniasis amoebiasis/giardiasis",
+    "searchText": "secnidazole secnil tagera nitroimidazoles nitroimidazole bacterial vaginosis trichomoniasis amoebiasis/giardiasis",
     "indiaAvailability": "Yes",
-    "availabilityNote": "Indian brand — verify",
+    "availabilityNote": null,
     "approvalStatus": "Approved",
     "references": [
       {
@@ -6711,7 +6722,7 @@
     ],
     "dose": {
       "adult": "3 g sachet PO single dose",
-      "severeICU": "Complicated/ESBL lower UTI (off-label): 3 g q48–72h for 3 doses (verify)",
+      "severeICU": "Complicated/recurrent ESBL lower UTI (off-label): 3 g PO q48–72h ×3 doses (IDSA 2024 AMR guidance)",
       "renal": "No adjustment for single dose; avoid repeat doses if CrCl <10",
       "hepatic": null
     },
@@ -6765,8 +6776,8 @@
         "source": "IDSA Guidance on Treatment of Antimicrobial-Resistant Gram-Negative Infections (2024)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Multi-dose regimen off-label — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "fosfomycin-iv-disodium",
@@ -6857,7 +6868,7 @@
       "Resource-limited/alternative for meningitis, rickettsial infection, enteric fever when others unavailable"
     ],
     "dose": {
-      "adult": "12.5–25 mg/kg IV/PO q6h (50–100 mg/kg/day; max 4 g/day) (verify)",
+      "adult": "50 mg/kg/day IV/PO divided q6h; up to 100 mg/kg/day (max 4 g/day) for meningitis/brain abscess",
       "severeICU": null,
       "renal": "No adjustment (caution in hepatic failure; monitor levels)",
       "hepatic": null
@@ -6904,8 +6915,8 @@
         "source": "Sanford Guide to Antimicrobial Therapy (2025 edition / web)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Weight-based dose — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "fidaxomicin",
@@ -7109,7 +7120,7 @@
       "Bone/joint staphylococcal infection (oral, combination)"
     ],
     "dose": {
-      "adult": "Oral: 500 mg q8h (sodium fusidate tablets) (verify)",
+      "adult": "Oral: 500 mg sodium fusidate PO q8h; up to 1 g q8h in severe staphylococcal bone/joint infection — always in combination",
       "severeICU": null,
       "renal": "No adjustment",
       "hepatic": null
@@ -7139,7 +7150,7 @@
       "other antibacterials"
     ],
     "searchText": "fusidic acid fucidin other antibacterials fusidane skin infection (topical) bone/joint staphylococcal infection (oral, combination)",
-    "indiaAvailability": "Topical: Yes; oral: Limited",
+    "indiaAvailability": "Topical: Yes; oral tablets: limited availability",
     "availabilityNote": null,
     "approvalStatus": "Approved",
     "references": [
@@ -7148,8 +7159,8 @@
         "source": "British National Formulary (current)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Oral dose/availability — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "lefamulin",
@@ -7224,15 +7235,16 @@
     "dose": {
       "adult": "uUTI: 1500 mg PO q12h ×5 days",
       "severeICU": "Gonorrhoea: 3000 mg PO, repeated once 10–12 h later",
-      "renal": "Avoid if eGFR <30 (verify)",
-      "hepatic": null
+      "renal": "No adjustment for eGFR ≥30; avoid if eGFR <30 (including dialysis) due to QTc prolongation risk",
+      "hepatic": "Avoid in severe hepatic impairment (Child-Pugh C)"
     },
     "contraindications": [
       "Hypersensitivity"
     ],
     "cautions": [
       "Acetylcholinesterase inhibition: GI effects, caution in myasthenia, bradycardia",
-      "QT prolongation"
+      "QT prolongation",
+      "Concomitant strong CYP3A4 inhibitors — avoid (increased exposure/QTc risk)"
     ],
     "brandsIndia": [
       "Blujepa"
@@ -7260,8 +7272,8 @@
         "source": "US FDA prescribing information (label)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Renal guidance — verify against label"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "zoliflodacin",
@@ -7336,7 +7348,7 @@
     ],
     "dose": {
       "adult": "TB: 10 mg/kg PO daily (max 600 mg; India NTEP weight-band FDC)",
-      "severeICU": "Staph prosthetic infection: 300–450 mg PO q12h with another active agent; meningococcal prophylaxis: 600 mg q12h ×2 days; high-dose regimens (e.g., TB meningitis) under study (verify)",
+      "severeICU": "Staph prosthetic infection: 300–450 mg PO q12h with another active agent; meningococcal prophylaxis: 600 mg q12h ×2 days; TB meningitis: high-dose rifampicin (15–35 mg/kg/day) investigated in TBM trials; standard WHO/NTEP dose remains 10 mg/kg/day (max 600 mg) pending guideline adoption",
       "renal": "No adjustment",
       "hepatic": null
     },
@@ -7390,8 +7402,8 @@
         "source": "Sanford Guide to Antimicrobial Therapy (2025 edition / web)"
       }
     ],
-    "verify": true,
-    "verifyNote": "High-dose TBM regimen — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "rifabutin",
@@ -7947,7 +7959,7 @@
     ],
     "dose": {
       "adult": "100 mg PO daily",
-      "severeICU": "TB: some regimens use 200–300 mg loading for 2 weeks (verify)",
+      "severeICU": "TB: current WHO/NTEP regimens use 100 mg PO daily without loading (some older DR-TB protocols used 200 mg PO daily for the first 2 months)",
       "renal": "No adjustment",
       "hepatic": null
     },
@@ -7994,8 +8006,8 @@
         "source": "India NTEP Guidelines for Programmatic Management of TB / DR-TB (2021+)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Loading regimen — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "cycloserine",
@@ -8080,7 +8092,7 @@
       "MDR/RR-TB (alternative to cycloserine)"
     ],
     "dose": {
-      "adult": "10–15 mg/kg/day PO (usually 750 mg/day in divided doses; max 1 g)",
+      "adult": "10–15 mg/kg/day PO (WHO weight bands: 500 mg/day for 30–45 kg, 750 mg/day for >45 kg; max 1000 mg/day)",
       "severeICU": null,
       "renal": "As cycloserine",
       "hepatic": null
@@ -8126,8 +8138,8 @@
         "source": "India NTEP Guidelines for Programmatic Management of TB / DR-TB (2021+)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Dose per WHO weight band — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "ethionamide",
@@ -8618,7 +8630,7 @@
     ],
     "dose": {
       "adult": "CMV induction: 90 mg/kg IV q12h (or 60 mg/kg q8h) ×14–21 days; maintenance 90–120 mg/kg q24h",
-      "severeICU": "Acyclovir-resistant HSV: 40 mg/kg q8–12h (verify)",
+      "severeICU": "Acyclovir-resistant HSV: 40 mg/kg IV q8h or q12h ×14–21 days (FDA label/CDC OI)",
       "renal": "Mandatory adjustment by CrCl per mL/min/kg label table; avoid if CrCl <0.4 mL/min/kg",
       "hepatic": null
     },
@@ -8649,7 +8661,7 @@
       "pyrophosphate analogue"
     ],
     "searchText": "foscarnet foscavir pfa anti-cmv pyrophosphate analogue ganciclovir-resistant cmv acyclovir-resistant hsv/vzv cmv disease when ganciclovir myelotoxicity unacceptable",
-    "indiaAvailability": "Limited (import)",
+    "indiaAvailability": "No (import only)",
     "availabilityNote": null,
     "approvalStatus": "Approved",
     "references": [
@@ -8662,8 +8674,8 @@
         "source": "US FDA prescribing information (label)"
       }
     ],
-    "verify": true,
-    "verifyNote": "India availability; HSV dose — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "cidofovir",
@@ -8682,7 +8694,7 @@
     ],
     "dose": {
       "adult": "5 mg/kg IV once weekly ×2, then 5 mg/kg every 2 weeks, with probenecid and IV saline",
-      "severeICU": "Adenovirus: 1 mg/kg three times weekly or 5 mg/kg weekly (off-label; verify)",
+      "severeICU": "Adenovirus (off-label): 5 mg/kg IV once weekly ×2 weeks, then every 2 weeks with probenecid/hydration; OR 1 mg/kg IV 3×/week (renal-sparing)",
       "renal": "Contraindicated if serum creatinine >1.5 mg/dL, CrCl ≤55 mL/min or urine protein ≥100 mg/dL (2+)",
       "hepatic": null
     },
@@ -8728,8 +8740,8 @@
         "source": "CDC/NIH/IDSA Guidelines for Opportunistic Infections in Adults with HIV (current)"
       }
     ],
-    "verify": true,
-    "verifyNote": "India availability; adenovirus regimen — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "letermovir",
@@ -8864,7 +8876,7 @@
     "dose": {
       "adult": "75 mg PO/NG q12h ×5 days",
       "severeICU": "Critically ill: standard 75 mg q12h; consider longer course (≥10 days) in immunocompromised/persistent viral shedding; double dose not superior",
-      "renal": "Treatment — CrCl 30–60: 30 mg q12h; 10–30: 30 mg q24h; HD: 30 mg after each session; CRRT: 30–75 mg q12h (verify)",
+      "renal": "Treatment — CrCl 30–60: 30 mg q12h; 10–30: 30 mg q24h; HD: 30 mg after each session; CRRT: 30 mg PO/NG q12h for standard effluent rates (2–3 L/h); 75 mg q12h if high-volume CRRT",
       "hepatic": null
     },
     "contraindications": [
@@ -8911,8 +8923,8 @@
         "source": "US FDA prescribing information (label)"
       }
     ],
-    "verify": true,
-    "verifyNote": "CRRT dosing — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "zanamivir",
@@ -8996,7 +9008,7 @@
     ],
     "dose": {
       "adult": "600 mg IV single dose over 15–30 min",
-      "severeICU": "Hospitalised (off-label): 600 mg IV daily ×5–10 days (verify)",
+      "severeICU": "Hospitalised (off-label): 600 mg IV q24h ×5–10 days (CDC/IDSA guidance)",
       "renal": "CrCl 30–49: 200 mg; 10–29: 100 mg; HD: 100 mg after HD",
       "hepatic": null
     },
@@ -9035,8 +9047,8 @@
         "source": "IDSA Seasonal Influenza Guideline (2018) / CDC antiviral guidance"
       }
     ],
-    "verify": true,
-    "verifyNote": "Severe-influenza multi-day regimen — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "baloxavir-marboxil",
@@ -9687,9 +9699,9 @@
       "Chronic HCV (NVHCP regimen)"
     ],
     "dose": {
-      "adult": "Sofosbuvir 400 mg + daclatasvir 60 mg PO q24h ×12 weeks (24 weeks in decompensated cirrhosis per NVHCP)",
+      "adult": "Sofosbuvir 400 mg + daclatasvir 60 mg PO q24h: 12 weeks (non-cirrhotic and compensated cirrhosis); 24 weeks in decompensated cirrhosis (Child B/C), or 12 weeks with ribavirin (NVHCP)",
       "severeICU": "Daclatasvir 30 mg with strong CYP3A inhibitors; 90 mg with moderate inducers",
-      "renal": "No adjustment incl. dialysis (verify)",
+      "renal": "No adjustment including ESRD/dialysis (AASLD/EASL)",
       "hepatic": null
     },
     "contraindications": [
@@ -9739,8 +9751,8 @@
         "source": "WHO Model List of Essential Medicines / AWaRe antibiotic book (2022)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Regimen durations per NVHCP — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "ledipasvir-sofosbuvir",
@@ -9974,7 +9986,7 @@
     ],
     "dose": {
       "adult": "HCV: weight-based 1000 mg/day (<75 kg) or 1200 mg/day (≥75 kg) PO in 2 divided doses",
-      "severeICU": "CCHF/Lassa: WHO IV regimen — 30 mg/kg loading then 15 mg/kg q6h ×4 days then 7.5 mg/kg q8h ×6 days (verify)",
+      "severeICU": "CCHF/Lassa (WHO IV): 30 mg/kg loading, then 15 mg/kg (or 16 mg/kg) q6h ×4 days, then 7.5 mg/kg (or 8 mg/kg) q8h ×6 days. RSV (oral, off-label in HSCT): 600–800 mg PO q8–12h, or 10 mg/kg loading then 20 mg/kg/day divided q8h",
       "renal": "CrCl <50: reduce (e.g., 200 mg alternating with 400 mg daily) — monitor Hb",
       "hepatic": null
     },
@@ -10021,8 +10033,8 @@
         "source": "WHO Model List of Essential Medicines / AWaRe antibiotic book (2022)"
       }
     ],
-    "verify": true,
-    "verifyNote": "CCHF/Lassa regimen and RSV use — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "tenofovir-lamivudine-dolutegravir-tld",
@@ -11260,7 +11272,7 @@
       "HIV PrEP (twice-yearly; FDA June 2025)"
     ],
     "dose": {
-      "adult": "Initiation: oral 600 mg days 1–2, 300 mg day 8 (regimen-specific) + SC 927 mg; then 927 mg SC every 6 months",
+      "adult": "HIV treatment (Sunlenca): Option 1 — 927 mg SC + 600 mg PO on day 1, 600 mg PO on day 2, 300 mg PO on day 8; Option 2 — 600 mg PO days 1–2, 300 mg PO day 8, 927 mg SC day 15. HIV PrEP (Yeztugo): 927 mg SC + 600 mg PO on day 1, then 600 mg PO on day 2 (no day-8 dose). Both: then 927 mg SC every 6 months (26 weeks ±2 weeks)",
       "severeICU": null,
       "renal": "No adjustment (limited data CrCl <15)",
       "hepatic": null
@@ -11309,8 +11321,8 @@
         "source": "US FDA prescribing information (label)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Initiation schedule differs between treatment and PrEP labels — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "nirsevimab",
@@ -11354,8 +11366,8 @@
       "rsv & other"
     ],
     "searchText": "nirsevimab beyfortus rsv & other monoclonal antibody (rsv f protein) rsv prevention in neonates/infants (first season) and high-risk children (second season)",
-    "indiaAvailability": "Verify",
-    "availabilityNote": "Paediatric-only; India approval status — verify",
+    "indiaAvailability": "No",
+    "availabilityNote": null,
     "approvalStatus": "Approved",
     "references": [
       {
@@ -11382,12 +11394,12 @@
     ],
     "spectrum": "Smallpox, mpox (orthopoxviruses).",
     "indications": [
-      "Severe mpox in immunocompromised (under protocol)",
+      "Mpox — restrict strictly to severe immunocompromise (e.g., advanced HIV CD4 <200, haematologic malignancy, transplant) or severe/sight-threatening/CNS manifestations, under compassionate/EA-IND protocols",
       "Smallpox (stockpile)"
     ],
     "dose": {
       "adult": "600 mg PO q12h ×14 days within 30 min of a fatty meal (IV formulation available)",
-      "severeICU": "STOMP/PALM007 trials: no benefit in clade I/II mpox in general population",
+      "severeICU": "PALM007 (clade I) and STOMP (clade II, NEJM Feb 2026) showed no clinical benefit in immunocompetent adults; use only in severe immunocompromise or severe/sight-threatening/CNS mpox under compassionate/EA-IND protocols (2025/2026 WHO & CDC guidance)",
       "renal": "IV: contraindicated CrCl <30 (hydroxypropyl-β-cyclodextrin)",
       "hepatic": null
     },
@@ -11414,7 +11426,7 @@
       "tpoxx",
       "vp37"
     ],
-    "searchText": "tecovirimat tpoxx rsv & other orthopoxvirus vp37 inhibitor severe mpox in immunocompromised (under protocol) smallpox (stockpile)",
+    "searchText": "tecovirimat tpoxx rsv & other orthopoxvirus vp37 inhibitor mpox — restrict strictly to severe immunocompromise (e.g., advanced hiv cd4 <200, haematologic malignancy, transplant) or severe/sight-threatening/cns manifestations, under compassionate/ea-ind protocols smallpox (stockpile)",
     "indiaAvailability": "No",
     "availabilityNote": null,
     "approvalStatus": "Approved",
@@ -11428,8 +11440,8 @@
         "source": "CDC/NIH/IDSA Guidelines for Opportunistic Infections in Adults with HIV (current)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Use per current WHO/CDC mpox guidance — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "amphotericin-b-deoxycholate",
@@ -11543,7 +11555,7 @@
       "Nephrotoxicity (less than conventional)",
       "Hypokalaemia, hypomagnesaemia",
       "Infusion reactions incl. back/chest pain",
-      "Distinct products not interchangeable mg-for-mg"
+      "Brands are not interchangeable: AmBisome = standard L-AmB (3–5 mg/kg/day, up to 10 mg/kg/day for CNS mucormycosis); Fungisome = indigenous Indian sonicated liposomal formulation (1–3 mg/kg/day per Indian label) — not mg-for-mg interchangeable with AmBisome"
     ],
     "brandsIndia": [
       "AmBisome",
@@ -11574,7 +11586,7 @@
     ],
     "searchText": "liposomal amphotericin b l-amb lamb liposomal amphotericin ambisome fungisome polyenes polyene (lipid formulation) mucormycosis (first-line) invasive aspergillosis (alternative/salvage) candidaemia (alternative) cryptococcal meningitis (single high dose or daily, with flucytosine) febrile neutropenia (empirical) visceral leishmaniasis (kala-azar)",
     "indiaAvailability": "Yes",
-    "availabilityNote": null,
+    "availabilityNote": "AmBisome (standard L-AmB) and Fungisome (Indian sonicated liposomal product, 1–3 mg/kg/day) are different products — check which one the pharmacy supplies",
     "approvalStatus": "Approved",
     "references": [
       {
@@ -11598,8 +11610,8 @@
         "source": "US FDA prescribing information (label)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Indian brands (Fungisome is a distinct Indian liposomal product with different dosing) — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "amphotericin-b-lipid-complex",
@@ -11678,7 +11690,7 @@
       "Invasive fungal infections (Indian practice)"
     ],
     "dose": {
-      "adult": "Dose per manufacturer's label — product-specific; not interchangeable with liposomal or deoxycholate (verify)",
+      "adult": "1–2 mg/kg/day IV, up to 3–5 mg/kg/day in severe mycoses (Indian label); follow lipid-emulsion-specific administration instructions; not interchangeable with liposomal or deoxycholate",
       "severeICU": null,
       "renal": "No adjustment",
       "hepatic": null
@@ -11689,7 +11701,9 @@
     "cautions": [
       "Limited comparative evidence; check product-specific dosing"
     ],
-    "brandsIndia": [],
+    "brandsIndia": [
+      "Amphomul"
+    ],
     "aliases": [
       "amphotericin emulsion",
       "AmB emulsion"
@@ -11697,6 +11711,7 @@
     "keywords": [
       "amb",
       "amb emulsion",
+      "amphomul",
       "amphotericin",
       "amphotericin b lipid emulsion (indian product)",
       "amphotericin emulsion",
@@ -11713,7 +11728,7 @@
       "product",
       "specific"
     ],
-    "searchText": "amphotericin b lipid emulsion (indian product) amphotericin emulsion amb emulsion polyenes polyene (lipid emulsion; india-specific) invasive fungal infections (indian practice)",
+    "searchText": "amphotericin b lipid emulsion (indian product) amphotericin emulsion amb emulsion amphomul polyenes polyene (lipid emulsion; india-specific) invasive fungal infections (indian practice)",
     "indiaAvailability": "Yes",
     "availabilityNote": null,
     "approvalStatus": "Approved",
@@ -11723,8 +11738,8 @@
         "source": "ICMR Treatment Guidelines for Antimicrobial Use in Common Syndromes (2019; AMSP 2022 update)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Dose not standardised in international references — Kenil to confirm Indian label"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "nystatin",
@@ -11881,7 +11896,7 @@
     ],
     "dose": {
       "adult": "Conventional capsules: loading 200 mg PO q8h ×3 days, then 200 mg q12h (TDM trough >0.5–1 mg/L)",
-      "severeICU": "SUBA-itraconazole: different dose (e.g., 130 mg ≈ 200 mg conventional; India markets 50–200 mg SUBA) — verify product",
+      "severeICU": "SUBA-itraconazole: 130 mg SUBA ≈ 200 mg conventional itraconazole (Indian SUBA brands: Itaspor SB, Canditral SB, Subitral; 50/65/100/130 mg)",
       "renal": "No adjustment for oral (IV contains cyclodextrin — avoid if CrCl <30)",
       "hepatic": null
     },
@@ -11900,7 +11915,10 @@
     "brandsIndia": [
       "Itaspor",
       "Canditral",
-      "Sporanox"
+      "Sporanox",
+      "Itaspor SB",
+      "Canditral SB",
+      "Subitral"
     ],
     "aliases": [
       "ITZ",
@@ -11912,18 +11930,21 @@
       "azoles",
       "azoles — triazoles (1st generation) & imidazoles",
       "canditral",
+      "canditral sb",
       "imidazoles",
       "itaspor",
+      "itaspor sb",
       "itraconazole",
       "itz",
       "sporanox",
       "suba",
       "suba-itraconazole",
+      "subitral",
       "triazole",
       "triazole (1st generation)",
       "triazoles"
     ],
-    "searchText": "itraconazole itz suba-itraconazole itaspor canditral sporanox azoles — triazoles (1st generation) & imidazoles triazole (1st generation) histoplasmosis, talaromycosis (step-down) chronic pulmonary aspergillosis, abpa sporotrichosis dermatophytosis",
+    "searchText": "itraconazole itz suba-itraconazole itaspor canditral sporanox itaspor sb canditral sb subitral azoles — triazoles (1st generation) & imidazoles triazole (1st generation) histoplasmosis, talaromycosis (step-down) chronic pulmonary aspergillosis, abpa sporotrichosis dermatophytosis",
     "indiaAvailability": "Yes",
     "availabilityNote": null,
     "approvalStatus": "Approved",
@@ -11941,8 +11962,8 @@
         "source": "US FDA prescribing information (label)"
       }
     ],
-    "verify": true,
-    "verifyNote": "SUBA equivalence and Indian brands — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "ketoconazole-oral",
@@ -12260,7 +12281,7 @@
     ],
     "dose": {
       "adult": "70 mg IV loading, then 50 mg IV q24h",
-      "severeICU": "Weight >80 kg: 70 mg q24h (label/expert); consider higher doses in critically ill/ECMO (TDM limited)",
+      "severeICU": "Weight >80 kg: 70 mg IV loading, then 70 mg IV q24h (FDA/EMA label); consider higher doses in critically ill/ECMO (TDM limited)",
       "renal": "No adjustment",
       "hepatic": "Child-Pugh B: 70 mg loading, then 35 mg q24h"
     },
@@ -12276,7 +12297,8 @@
       "Cyclosporine raises levels; caspofungin lowers tacrolimus"
     ],
     "brandsIndia": [
-      "Cancidas"
+      "Cancidas",
+      "Caspogin"
     ],
     "aliases": [
       "CAS",
@@ -12288,10 +12310,11 @@
       "cas",
       "caspo",
       "caspofungin",
+      "caspogin",
       "echinocandin",
       "echinocandins"
     ],
-    "searchText": "caspofungin cas caspo cancidas echinocandins echinocandin candidaemia/invasive candidiasis (first-line, esp. critically ill) c. auris infection (first-line) empirical therapy in febrile neutropenia salvage aspergillosis",
+    "searchText": "caspofungin cas caspo cancidas caspogin echinocandins echinocandin candidaemia/invasive candidiasis (first-line, esp. critically ill) c. auris infection (first-line) empirical therapy in febrile neutropenia salvage aspergillosis",
     "indiaAvailability": "Yes",
     "availabilityNote": null,
     "approvalStatus": "Approved",
@@ -12309,8 +12332,8 @@
         "source": "Sanford Guide to Antimicrobial Therapy (2025 edition / web)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Weight >80 kg regimen; Indian brand — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "micafungin",
@@ -12835,14 +12858,15 @@
       "Severe malaria (India, where artesunate unavailable) — WHO prefers artesunate"
     ],
     "dose": {
-      "adult": "150 mg IM daily ×3 days (adult) (Indian label)",
+      "adult": "150 mg IM once daily ×3 consecutive days (adults only; NCVBDC)",
       "severeICU": null,
       "renal": "No adjustment",
       "hepatic": null
     },
     "contraindications": [
       "Hypersensitivity",
-      "First trimester (relative)"
+      "Children (not recommended)",
+      "First trimester of pregnancy"
     ],
     "cautions": [
       "Erratic absorption from IM oily depot",
@@ -12883,8 +12907,8 @@
         "source": "India NCVBDC National Drug Policy / Guidelines for Diagnosis & Treatment of Malaria (2023)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Dose per Indian label/NCVBDC — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "artemether-lumefantrine",
@@ -12970,15 +12994,15 @@
       "Uncomplicated falciparum malaria — NCVBDC first-line (outside North-Eastern states)"
     ],
     "dose": {
-      "adult": "Artesunate 4 mg/kg PO daily ×3 days + sulfadoxine-pyrimethamine 25/1.25 mg/kg single dose on day 1 (adult blister: AS 200 mg/day ×3 + SP 1500/75 mg day 1); + primaquine 0.75 mg/kg single dose on day 2 (gametocytocidal)",
+      "adult": "Artesunate 4 mg/kg PO daily ×3 days + sulfadoxine-pyrimethamine 25/1.25 mg/kg single dose on day 1. Adult blister pack (>14 years): AS 200 mg daily ×3 days + SP 1500/75 mg single dose on day 1 + primaquine 45 mg (0.75 mg/kg) single dose on day 2",
       "severeICU": null,
-      "renal": "Avoid SP in severe renal impairment (verify)",
+      "renal": "Avoid SP in severe renal impairment",
       "hepatic": null
     },
     "contraindications": [
       "Sulfonamide allergy",
-      "First trimester (SP)",
-      "Young infants (SP; check NCVBDC age limits)"
+      "Infants <5 months (SP) — use age-appropriate ACT-AL instead",
+      "First trimester of pregnancy (SP)"
     ],
     "cautions": [
       "SJS/TEN (sulfadoxine)",
@@ -13017,8 +13041,8 @@
         "source": "WHO Guidelines for Malaria (2025)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Weight bands, primaquine dose and SP contraindications per NCVBDC 2023 — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "chloroquine",
@@ -13109,8 +13133,8 @@
     "contraindications": [
       "G6PD deficiency (severe) — test before 14-day course",
       "Pregnancy",
-      "Infants (NCVBDC age cut-off; WHO <6 months)",
-      "Breastfeeding infants with G6PD deficiency"
+      "Infants <1 year (NCVBDC; WHO cut-off is <6 months)",
+      "Lactating women (unless infant G6PD status is known normal)"
     ],
     "cautions": [
       "Haemolysis in G6PD deficiency — test G6PD; weekly regimen (0.75 mg/kg ×8 weeks) for mild deficiency",
@@ -13147,8 +13171,8 @@
         "source": "CDC/NIH/IDSA Guidelines for Opportunistic Infections in Adults with HIV (current)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Age cut-offs per NCVBDC — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "tafenoquine",
@@ -13689,7 +13713,7 @@
     ],
     "dose": {
       "adult": "500 mg PO q12h ×3 days with food",
-      "severeICU": "Immunocompromised cryptosporidiosis: longer courses (≥14 days) (verify)",
+      "severeICU": "Immunocompromised/HIV cryptosporidiosis: 500 mg–1 g PO q12h for 14 days or until clinical/microbiological resolution (CDC OI)",
       "renal": "No adjustment",
       "hepatic": null
     },
@@ -13730,8 +13754,8 @@
         "source": "US FDA prescribing information (label)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Immunocompromised duration — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "pyrimethamine",
@@ -13870,7 +13894,7 @@
     "dose": {
       "adult": "PCP: 4 mg/kg IV q24h over ≥60 min ×21 days",
       "severeICU": "Inhaled prophylaxis: 300 mg nebulised monthly",
-      "renal": "CrCl <10: 4 mg/kg q24–36h (verify)",
+      "renal": "CrCl 10–50: 4 mg/kg IV q24–36h; CrCl <10: 4 mg/kg IV q48h (not removed by HD)",
       "hepatic": null
     },
     "contraindications": [
@@ -13901,7 +13925,7 @@
       "pentamidine"
     ],
     "searchText": "pentamidine pentam anthelmintics & other antiparasitics aromatic diamidine severe pcp when tmp-smx contraindicated inhaled pcp prophylaxis",
-    "indiaAvailability": "Limited",
+    "indiaAvailability": "No / Import only",
     "availabilityNote": null,
     "approvalStatus": "Approved",
     "references": [
@@ -13914,8 +13938,8 @@
         "source": "US FDA prescribing information (label)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Renal adjustment and India availability — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "miltefosine",
@@ -13933,7 +13957,7 @@
     ],
     "dose": {
       "adult": "VL: 50 mg PO q12h (>25 kg) ×28 days (2.5 mg/kg/day; max 150 mg/day)",
-      "severeICU": "PAM/GAE: 50 mg PO q8h (≥45 kg) as part of multidrug regimen (CDC; verify)",
+      "severeICU": "Kala-azar (NCVBDC combination): single-dose L-AmB 5 mg/kg IV on day 1 + miltefosine 50 mg PO q12h (≥25 kg) ×7 days; or paromomycin 11 mg/kg IM + miltefosine PO ×10 days. PAM/GAE (CDC): 50 mg PO q8h if ≥45 kg; 50 mg PO q12h if <45 kg, as part of multidrug therapy",
       "renal": "Avoid in severe renal impairment",
       "hepatic": null
     },
@@ -13979,8 +14003,8 @@
         "source": "US FDA prescribing information (label)"
       }
     ],
-    "verify": true,
-    "verifyNote": "Indian programme regimen (combination with L-AmB/paromomycin) and PAM dosing — verify"
+    "verify": false,
+    "verifyNote": null
   },
   {
     "id": "diethylcarbamazine",
