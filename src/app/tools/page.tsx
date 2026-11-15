@@ -22,6 +22,7 @@ export default function Tools() {
     { href: "/tools/abg", icon: "droplets", t: "ABG interpreter", s: "Stepwise: compensation, anion gap, delta ratio", id: "abg" },
     { href: "/tools/ventilator", icon: "gauge", t: "Ventilator playground", s: "Move the dials, watch the waveforms", id: "ventilator" },
     { href: "/tools/code-timer", icon: "timer", t: "Code timer", s: "CPR cycles, adrenaline and shock log", id: "code-timer" },
+    { href: "/antimicrobials", icon: "pill", t: "Antimicrobials", s: "Search by drug, brand or class · doses and renal adjustment", id: "antimicrobials" },
     { href: "/tools/gcs", icon: "brain", t: "Glasgow Coma Scale", s: "E · V · M", id: "gcs" },
   ];
   const cats = [...new Set(calcs.map((c) => c.category))];

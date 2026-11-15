@@ -6,6 +6,7 @@
  *   public/search-index.json     client-side search index (no review flags)
  *   public/precache.json         every static route, for "download for offline"
  *   public/sw.js                 service worker with a fresh cache version
+ * Also indexes src/data/antimicrobials.json (search entries + offline routes for /antimicrobials).
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -67,6 +68,12 @@ for (const m of modules) {
 for (const c of calcs) search.push({ type: "calculator", title: c.name, sub: `Calculator · ${c.category}`, href: `/tools/${c.id}`, k: strip(c.description) });
 search.push({ type: "tool", title: "ABG interpreter", sub: "Interactive tool", href: "/tools/abg", k: "blood gas acid base anion gap delta ratio winters compensation" });
 search.push({ type: "tool", title: "Ventilator playground", sub: "Interactive tool", href: "/tools/ventilator", k: "ventilator waveforms peep tidal volume plateau driving pressure auto-peep compliance resistance" });
+const AM_FILE = path.join(ROOT, "src/data/antimicrobials.json");
+const antimicrobials = read(AM_FILE);
+search.push({ type: "tool", title: "Antimicrobials", sub: "Reference · antibacterial, antiviral, antifungal, antiparasitic", href: "/antimicrobials", k: "antibiotics antimicrobial antiviral antifungal antiparasitic antibacterial dose renal brands" });
+for (const a of antimicrobials) {
+  search.push({ type: "drug", title: a.name, sub: `${a.drugClass} · Antimicrobials`, href: `/antimicrobials/${a.id}`, k: strip([...a.aliases, ...a.brandsIndia, a.subclass, a.category, ...a.indications].join(" ")).slice(0, 300) });
+}
 search.push({ type: "tool", title: "Code timer", sub: "Interactive tool", href: "/tools/code-timer", k: "cardiac arrest cpr acls adrenaline rhythm check timer" });
 
 const routes = [
@@ -74,6 +81,8 @@ const routes = [
   ...index.sections.map((s) => `/section/${s.id.toLowerCase()}`),
   ...modules.flatMap((m) => [`/m/${m.id}`, `/m/${m.id}/quiz`, ...m.topics.map((t) => `/m/${m.id}/${t.id}`)]),
   ...calcs.map((c) => `/tools/${c.id}`),
+  "/antimicrobials",
+  ...antimicrobials.map((a) => `/antimicrobials/${a.id}`),
 ];
 
 fs.mkdirSync(path.join(ROOT, "src/generated"), { recursive: true });
@@ -84,6 +93,7 @@ fs.writeFileSync(path.join(ROOT, "public/search-index.json"), JSON.stringify(sea
 const contentHash = crypto.createHash("sha1");
 for (const f of ["views.json", "news/news.json", "quiz/daily.json", "shared/calculators.json"]) if (fs.existsSync(C(f))) contentHash.update(fs.readFileSync(C(f)));
 for (const m of modules) contentHash.update(JSON.stringify(m));
+contentHash.update(fs.readFileSync(AM_FILE));
 const version = `${new Date().toISOString().slice(0, 10)}-${contentHash.digest("hex").slice(0, 8)}-${(process.env.VERCEL_GIT_COMMIT_SHA || "local").slice(0, 7)}`;
 fs.writeFileSync(path.join(ROOT, "public/precache.json"), JSON.stringify({ version, routes }));
 
