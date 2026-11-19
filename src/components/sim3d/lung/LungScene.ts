@@ -339,7 +339,7 @@ export class LungScene {
   }
 
   setLabels(on: boolean) { this.labelsOn = on; this.refreshPins(); }
-  private refreshPins() { for (const p of this.pins) p.element.style.display = this.labelsOn ? "" : "none"; }
+  private refreshPins() { for (const p of this.pins) p.visible = this.labelsOn; } // CSS2DRenderer owns element.style.display
 
   // ------------------------------------------------------------------ interaction
   private pick(clientX: number, clientY: number): PartInfo | null {

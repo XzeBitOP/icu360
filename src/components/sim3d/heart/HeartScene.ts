@@ -409,7 +409,7 @@ export class HeartScene {
   private refreshPins() {
     for (const p of this.pins) {
       const kind = p.element.className;
-      p.element.style.display = this.labelsOn && (!kind.includes("cond") || this.conductionOn) ? "" : "none";
+      p.visible = this.labelsOn && (!kind.includes("cond") || this.conductionOn); // CSS2DRenderer owns element.style.display
     }
   }
   /** Manual override of chamber contraction (HeartSim.setChamberState). `null` returns control to the simulation. */
