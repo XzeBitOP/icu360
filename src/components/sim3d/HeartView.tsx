@@ -44,6 +44,8 @@ export default function HeartView(p: HeartViewProps) {
         s.setLabels(props.current.labels);
         props.current.onScene?.(s);
         await s.ready;
+        s.setConduction(props.current.conduction);
+        s.setLabels(props.current.labels);
         if (!dead) setState("ready");
       } catch (e) {
         console.error("3D heart unavailable", e);

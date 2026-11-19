@@ -90,6 +90,7 @@ export class LungScene {
     this.buildDiaphragm();
     this.buildParticles();
     this.buildPins();
+    this.refreshPins();
   }
 
   private buildAirway() {

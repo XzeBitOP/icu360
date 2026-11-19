@@ -42,6 +42,7 @@ export default function LungView3D(p: LungViewProps) {
         s.setLabels(props.current.labels);
         props.current.onScene?.(s);
         await s.ready;
+        s.setLabels(props.current.labels);
         if (!dead) setState("ready");
       } catch (e) {
         console.error("3D lungs unavailable", e);
