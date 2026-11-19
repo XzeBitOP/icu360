@@ -22,7 +22,7 @@ test("ECG OS: loads, 3D heart ready, rhythm + HeartSim API", async ({ page }) =>
   });
   expect(r.keys).toEqual(expect.arrayContaining(["setBPM", "setRhythm", "setChamberState"]));
   expect(r.af.ok).toBe(false); // AF is phase 2: never faked
-  expect(r.bpm.ok).toBe(true);
+  expect(r.bpm).toBe(100);
 
   // rhythm dropdown disables AF/VT
   const opts = await page.getByTestId("heart-rhythm").locator("option").evaluateAll((os) => os.map((o) => ({ t: o.textContent, d: (o as HTMLOptionElement).disabled })));

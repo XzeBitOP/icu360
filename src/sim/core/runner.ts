@@ -71,7 +71,7 @@ export class SimulationRunner<Snap, Input> {
     this.acc = 0;
   }
   toggle(): void {
-    this.clock.isPlaying ? this.pause() : this.play();
+    if (this.clock.isPlaying) this.pause(); else this.play();
   }
   setSpeed(s: SimulationSpeed): void {
     this.clock.speed = s;

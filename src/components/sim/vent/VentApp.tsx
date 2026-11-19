@@ -65,7 +65,7 @@ const PHASE_TEXT: Record<BreathPhase, string> = {
 function Live() {
   const t = useVentStore((s) => s.uiTimeMs);
   const { settings } = useVentStore();
-  const last = getEngine().samples.last(); // eslint-disable-line react-hooks/exhaustive-deps -- re-read on every UI tick (t)
+  const last = getEngine().samples.last(); // re-read on every UI tick (t)
   void t;
   const phase = last?.phase ?? "baseline";
   return (

@@ -7,7 +7,7 @@ export const ECG_STEP_MS = 5;
 
 /** Per-lead, per-dipole response coefficients (mV per unit ΔVm). Pure function of geometry; computed once. */
 const COEFF: Float64Array[] = ECG_LEADS.map((lead) =>
-  Float64Array.from(DIPOLE_PAIRS.map((d) => leadVoltageFromDipole(lead, vscale(d.dir, d.mass), d.source))),
+  Float64Array.from(DIPOLE_PAIRS.map((d) => leadVoltageFromDipole(lead, vscale(d.dir, d.mass)))),
 );
 export const DIPOLE_COEFFICIENTS = COEFF;
 

@@ -22,15 +22,6 @@ async function focusFrame(p, tid, key) {
   await p.waitForTimeout(600);
 }
 const shot = (p, name) => p.screenshot({ path: `${OUT}/${name}.png` });
-async function pauseAt(p, test, timeout = 20000) {
-  // pause when the engine phase satisfies test
-  await p.evaluate(({ src, timeout }) => new Promise((res) => {
-    const f = eval(src); const t0 = performance.now(); let prev = "";
-    const tick = () => { const s = window.LungSim.getState(); if (f(s, prev) || performance.now() - t0 > timeout) { document.querySelector("[data-testid=lung-play]")?.click(); res(); return; } prev = s.phase; requestAnimationFrame(tick); };
-    tick();
-  }), { src: test, timeout });
-  await p.waitForTimeout(500);
-}
 async function seek(p, ms) { await p.evaluate((ms) => { const el = document.querySelector("[data-testid=scrub]"); Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value").set.call(el, String(ms)); el.dispatchEvent(new Event("input", { bubbles: true })); }, ms); await p.waitForTimeout(60); }
 const chip = (p, text) => p.getByRole("button", { name: text, exact: true });
 

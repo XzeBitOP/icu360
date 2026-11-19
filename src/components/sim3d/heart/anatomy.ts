@@ -68,7 +68,7 @@ export function outerParts(p: V3): Record<PartId, number> {
   };
 }
 
-const extend = (t: TubePath, pad: number): TubePath => t; // lumen runs the full path; open ends come from lumen being longer than outer (see below)
+const extend = (t: TubePath): TubePath => t; // lumen runs the full path; open ends come from lumen being longer than outer (see below)
 void extend;
 
 export function solidOuter(p: V3): number {

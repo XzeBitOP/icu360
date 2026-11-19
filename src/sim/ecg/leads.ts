@@ -81,7 +81,7 @@ export function precordialPotential(p: Vector3, lead: keyof typeof PRECORDIAL_AX
 }
 
 /** Lead voltage from a dipole moment p (the `source` position is accepted for a future near-field model and is unused here). */
-export function leadVoltageFromDipole(lead: ECGLeadName, p: Vector3, _source?: Vector3): number {
+export function leadVoltageFromDipole(lead: ECGLeadName, p: Vector3): number {
   const pot = (w: keyof typeof LIMB_ELECTRODES) => limbElectrodePotential(p, w);
   switch (lead) {
     case "I": return pot("LA") - pot("RA");
