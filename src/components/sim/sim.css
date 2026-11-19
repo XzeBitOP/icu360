@@ -1,0 +1,157 @@
+/* ECG OS + Ventilator OS UI. Everything is scoped under .simos so it cannot collide with ICU 360 styles. Generated from the Simulation Lab design system. */
+.simos { --bg: #05080f; --text: #eef2f8; --muted: #9aa8bf; --faint: #6b7890; --teal: #5eead4; --cyan: #7dd3fc; --violet: #c4b5fd; --crit: #ff6b5e; --warn: #fdb022; --ok: #47cd89; --info: #7db5ff; --ecg: #5eead4; --paw: #fbbf24; --flow: #7dd3fc; --vol: #c4b5fd; --pmus: #f472b6; --radius: 20px; --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  position: relative; border-radius: 28px; padding: 12px; color: var(--text); color-scheme: dark; box-sizing: border-box;
+  background: radial-gradient(120% 60% at 50% 0%, #0d1a2e 0%, #070b14 55%, #04060b 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 24px 60px -30px rgba(0,0,0,.8); }
+.simos .layout-wrap { max-width: 1480px; margin: 0 auto; }
+.simos {
+  --bg: #05080f; --text: #eef2f8; --muted: #9aa8bf; --faint: #6b7890;
+  --teal: #5eead4; --cyan: #7dd3fc; --violet: #c4b5fd; --crit: #ff6b5e; --warn: #fdb022; --ok: #47cd89; --info: #7db5ff;
+  --ecg: #5eead4; --paw: #fbbf24; --flow: #7dd3fc; --vol: #c4b5fd; --pmus: #f472b6;
+  --radius: 20px;
+  --font: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.simos, .simos * { box-sizing: border-box; }
+.simos button { font: inherit; color: inherit; }
+.simos .tnum { font-variant-numeric: tabular-nums; }
+.simos .mono { font-family: var(--mono); }
+.simos .sim-glass { position: relative; isolation: isolate; border-radius: var(--radius); background: linear-gradient(180deg, rgba(255,255,255,.085), rgba(255,255,255,.03)); box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 18px 40px -22px rgba(0,0,0,.7); }
+.simos .sim-glass::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none; background: linear-gradient(160deg, rgba(255,255,255,.38), rgba(255,255,255,.06) 35%, rgba(255,255,255,.02) 62%, rgba(255,255,255,.18)); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+.simos .sim-glass.sim-blur { -webkit-backdrop-filter: blur(22px) saturate(160%); backdrop-filter: blur(22px) saturate(160%); }
+.simos .card { padding: 14px; }
+.simos .card h2 { margin: 0 0 8px; font-size: 12px; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.simos .card h3 { margin: 0 0 4px; font-size: 15px; font-weight: 650; letter-spacing: -.01em; }
+.simos .card p { margin: 0 0 8px; font-size: 13.5px; line-height: 1.5; color: #cdd7e6; }
+.simos .muted { color: var(--muted); }
+.simos .faint { color: var(--faint); }
+.simos .spacer { flex: 1; }
+.simos .chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 11px; border-radius: 999px; font-size: 12px; font-weight: 550; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); color: var(--text); cursor: default; white-space: nowrap; }
+.simos .chip.warn { color: var(--warn); border-color: rgba(253,176,34,.35); background: rgba(253,176,34,.08); }
+.simos .chip.ok { color: var(--ok); border-color: rgba(71,205,137,.35); background: rgba(71,205,137,.08); }
+.simos .chip.crit { color: var(--crit); border-color: rgba(255,107,94,.4); background: rgba(255,107,94,.1); }
+.simos button.chip { cursor: pointer; min-height: 36px; }
+.simos button.chip[aria-pressed="true"], .simos button.chip.active { background: rgba(94,234,212,.16); border-color: rgba(94,234,212,.55); color: var(--teal); box-shadow: 0 0 18px -6px rgba(94,234,212,.7); }
+.simos .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.simos .chips.scroll { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.simos .chips.scroll::-webkit-scrollbar { display: none; }
+.simos .btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 40px; min-width: 40px; padding: 0 14px; border-radius: 14px; border: 1px solid rgba(255,255,255,.14); background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.05)); font-weight: 600; font-size: 13.5px; cursor: pointer; }
+.simos .btn:hover { background: linear-gradient(180deg, rgba(255,255,255,.17), rgba(255,255,255,.07)); }
+.simos .btn.primary { background: linear-gradient(180deg, rgba(94,234,212,.35), rgba(14,140,156,.35)); border-color: rgba(94,234,212,.55); color: #eafffb; }
+.simos .btn:disabled { opacity: .45; cursor: not-allowed; }
+.simos :focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; border-radius: 12px; }
+.simos .seg { display: inline-flex; padding: 3px; border-radius: 14px; background: rgba(0,0,0,.3); border: 1px solid rgba(255,255,255,.1); }
+.simos .seg button { border: 0; background: transparent; padding: 8px 14px; border-radius: 11px; font-weight: 600; font-size: 13px; color: var(--muted); cursor: pointer; min-height: 38px; }
+.simos .seg button[aria-pressed="true"] { background: rgba(94,234,212,.18); color: var(--teal); box-shadow: inset 0 0 0 1px rgba(94,234,212,.45); }
+.simos .transport { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 10px 12px; }
+.simos .transport .time { font-family: var(--mono); font-size: 13px; color: var(--muted); min-width: 70px; text-align: right; }
+.simos .scrub { flex: 1 1 160px; min-width: 120px; }
+.simos input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 28px; background: transparent; cursor: pointer; }
+.simos input[type="range"]::-webkit-slider-runnable-track { height: 5px; border-radius: 99px; background: rgba(255,255,255,.14); }
+.simos input[type="range"]::-moz-range-track { height: 5px; border-radius: 99px; background: rgba(255,255,255,.14); }
+.simos input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; margin-top: -7.5px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 14px rgba(94,234,212,.7); border: 2px solid #06222a; }
+.simos input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: var(--teal); border: 2px solid #06222a; }
+.simos .field { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 0 8px; margin-bottom: 4px; }
+.simos .field label { font-size: 12.5px; color: var(--muted); }
+.simos .field output { font-family: var(--mono); font-size: 13px; color: var(--text); }
+.simos .field input { grid-column: 1 / -1; }
+.simos .field .hint { grid-column: 1 / -1; font-size: 11px; color: var(--faint); margin-top: -4px; }
+.simos .stat { display: flex; flex-direction: column; gap: 1px; padding: 8px 10px; border-radius: 14px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); min-width: 0; }
+.simos .stat .k { font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.simos .stat .v { font-family: var(--mono); font-size: 18px; font-weight: 600; letter-spacing: -.02em; }
+.simos .stat .u { font-size: 11px; color: var(--muted); margin-left: 3px; font-weight: 400; }
+.simos .stat .n { font-size: 10.5px; color: var(--faint); line-height: 1.25; }
+.simos .stat.invalid .v { color: var(--faint); }
+.simos .stat.flag .v { color: var(--warn); }
+.simos .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+@media (min-width: 560px) {
+.simos .stats { grid-template-columns: repeat(3, 1fr); }
+}
+.simos .disclaimer { padding: 9px 12px; font-size: 12px; line-height: 1.4; color: #e9dcae; border-radius: 14px; background: rgba(253,176,34,.07); border: 1px solid rgba(253,176,34,.28); }
+.simos .disclaimer b { color: var(--warn); }
+.simos .wave { position: relative; border-radius: 16px; overflow: hidden; background: #03060b; border: 1px solid rgba(255,255,255,.08); }
+.simos .wave canvas { display: block; width: 100%; height: 100%; }
+.simos .wave .tag { position: absolute; left: 8px; top: 6px; font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: .04em; pointer-events: none; text-shadow: 0 1px 2px #000; }
+.simos .wave .tag.r { left: auto; right: 8px; color: var(--muted); font-weight: 500; }
+.simos .explain { font-size: 13.5px; line-height: 1.5; }
+.simos .explain .seg-title { display: inline-block; padding: 3px 9px; border-radius: 8px; font-size: 12px; font-weight: 700; margin-bottom: 6px; }
+.simos .table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.simos .table th, .simos .table td { text-align: left; padding: 5px 6px; border-bottom: 1px solid rgba(255,255,255,.06); vertical-align: top; }
+.simos .table th { color: var(--faint); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; }
+.simos details > summary { cursor: pointer; font-size: 13px; font-weight: 600; padding: 4px 0; min-height: 32px; display: flex; align-items: center; }
+.simos .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) {
+.simos, .simos * { animation: none !important; transition: none !important; }
+}
+@media (max-width: 520px) {
+.simos .transport .hide-sm { display: none; }
+.simos .transport { gap: 6px; padding: 8px; }
+.simos .btn { padding: 0 10px; }
+}
+.simos .layout { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
+.simos .layout > *, .simos .col > * { min-width: 0; }
+.simos .sim-glass { min-width: 0; max-width: 100%; }
+@media (min-width: 1024px) {
+.simos .layout { grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); align-items: start; }
+}
+.simos .col { display: contents; }
+@media (min-width: 1024px) {
+.simos .col { display: grid; gap: 12px; min-width: 0; align-content: start; }
+}
+.simos .leads { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+@media (min-width: 640px) {
+.simos .leads { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.simos .heart2d { width: 100%; max-height: 520px; height: auto; display: block; margin: 0 auto; touch-action: manipulation; }
+.simos .heart2d .node { cursor: pointer; }
+.simos .heart2d .node, .simos .heart2d .node:focus, .simos .heart2d .node:focus-visible { outline: none; }
+.simos .heart2d g.node:focus-visible > circle:last-of-type { stroke: #5eead4; stroke-width: 0.06; }
+.simos .heart2d path.node:focus-visible, .simos .heart2d ellipse.node:focus-visible { stroke: #5eead4; stroke-width: 0.05; }
+.simos .heart-wrap { position: relative; }
+.simos .legend { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.simos .wavechip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.05); font-size: 12px; font-weight: 600; cursor: pointer; min-height: 34px; }
+.simos .wavechip i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+.simos .wavechip[aria-pressed="true"] { background: rgba(255,255,255,.14); box-shadow: 0 0 0 1px rgba(255,255,255,.4); }
+.simos .sel { border-radius: 14px; padding: 10px 12px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); font-size: 13px; line-height: 1.45; }
+.simos .cond-desc { font-size: 13px; line-height: 1.5; color: #cdd7e6; }
+.simos .kv { display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; font-size: 12.5px; }
+.simos .kv dt { color: var(--faint); }
+.simos .kv dd { margin: 0; }
+.simos .view-toggle { margin-left: auto; }
+.simos .three { width: 100%; aspect-ratio: 1 / 1.05; border-radius: 16px; overflow: hidden; background: radial-gradient(80% 70% at 50% 40%, #0b1626, #04070d); }
+.simos .layout { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
+.simos .layout > *, .simos .col > * { min-width: 0; }
+.simos .sim-glass { min-width: 0; max-width: 100%; }
+.simos .col { display: contents; }
+@media (min-width: 1024px) {
+.simos .layout { grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); align-items: start; }
+.simos .col { display: grid; gap: 12px; min-width: 0; align-content: start; }
+}
+.simos .waves { display: grid; gap: 6px; }
+.simos .loops { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 6px; }
+.simos .lung { width: 100%; max-height: 430px; display: block; margin: 0 auto; }
+.simos .lung .lobe { cursor: pointer; }
+.simos .lung .lobe, .simos .lung .lobe:focus { outline: none; }
+.simos .lung .lobe:focus-visible { stroke: #5eead4; stroke-width: 4; }
+.simos .ctrl-grid { display: grid; grid-template-columns: 1fr; gap: 2px 18px; }
+@media (min-width: 560px) {
+.simos .ctrl-grid { grid-template-columns: 1fr 1fr; }
+}
+.simos .holds { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+.simos .alarm { margin-top: 8px; padding: 8px 10px; border-radius: 12px; font-size: 12.5px; background: rgba(255,107,94,.1); border: 1px solid rgba(255,107,94,.4); color: #ffb4ac; }
+.simos .info { margin-top: 8px; padding: 8px 10px; border-radius: 12px; font-size: 12.5px; background: rgba(125,181,255,.08); border: 1px solid rgba(125,181,255,.3); color: #bcd7ff; }
+.simos .live { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.simos .live div { text-align: center; padding: 6px 4px; border-radius: 12px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); }
+.simos .live b { display: block; font-family: var(--mono); font-size: 16px; }
+.simos .live span { font-size: 10px; color: var(--faint); text-transform: uppercase; letter-spacing: .06em; }
+.simos .sub { font-size: 11.5px; color: var(--faint); margin: 6px 0 0; }
+.simos .osbar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.simos .heart-controls { margin-top: 10px; display: grid; gap: 6px; }
+.simos .hc-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.simos .hc-select { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
+.simos .info { padding: 8px 10px; border-radius: 12px; font-size: 12.5px; line-height: 1.4; background: rgba(125,181,255,.08); border: 1px solid rgba(125,181,255,.3); color: #cfe0ff; margin: 6px 0; }
+.simos .alarm { padding: 8px 10px; border-radius: 12px; font-size: 12.5px; background: rgba(255,107,94,.1); border: 1px solid rgba(255,107,94,.4); color: #ffb1a9; margin: 6px 0; }
+.simos .hc-select { max-width: 100%; min-width: 0; }
+.simos .hc-select select { min-width: 0; max-width: 100%; text-overflow: ellipsis; }
+.simos .hc-select.wide { flex: 1 1 100%; }
+.simos .hc-select.wide select { flex: 1 1 auto; }
+@media (min-width: 1024px) { .simos .hc-select.wide { flex: 1 1 auto; } }

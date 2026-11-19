@@ -27,7 +27,8 @@ const calcs = read(C("shared/calculators.json")).calculators;
 
 const TOOLS = [
   { id: "abg", name: "ABG interpreter", category: "interactive" },
-  { id: "ventilator", name: "Ventilator playground", category: "interactive" },
+  { id: "ecg-os", name: "ECG OS", category: "interactive" },
+  { id: "ventilator-os", name: "Ventilator OS", category: "interactive" },
   { id: "code-timer", name: "Code timer", category: "interactive" },
 ];
 
@@ -67,7 +68,8 @@ for (const m of modules) {
 }
 for (const c of calcs) search.push({ type: "calculator", title: c.name, sub: `Calculator · ${c.category}`, href: `/tools/${c.id}`, k: strip(c.description) });
 search.push({ type: "tool", title: "ABG interpreter", sub: "Interactive tool", href: "/tools/abg", k: "blood gas acid base anion gap delta ratio winters compensation" });
-search.push({ type: "tool", title: "Ventilator playground", sub: "Interactive tool", href: "/tools/ventilator", k: "ventilator waveforms peep tidal volume plateau driving pressure auto-peep compliance resistance" });
+search.push({ type: "tool", title: "Ventilator OS", sub: "Interactive simulator", href: "/tools/ventilator-os", k: "ventilator playground waveforms peep tidal volume plateau driving pressure auto-peep compliance resistance lung 3d ards copd pneumothorax one-lung mechanical ventilation simulator" });
+search.push({ type: "tool", title: "ECG OS", sub: "Interactive simulator", href: "/tools/ecg-os", k: "ecg ekg electrocardiogram 12 lead rhythm strip conduction sa node av node bundle branch block lbbb rbbb av block heart 3d simulator qrs pr qt axis" });
 const AM_FILE = path.join(ROOT, "src/data/antimicrobials.json");
 const antimicrobials = read(AM_FILE);
 search.push({ type: "tool", title: "Antimicrobials", sub: "Reference · antibacterial, antiviral, antifungal, antiparasitic", href: "/antimicrobials", k: "antibiotics antimicrobial antiviral antifungal antiparasitic antibacterial dose renal brands" });
@@ -77,10 +79,11 @@ for (const a of antimicrobials) {
 search.push({ type: "tool", title: "Code timer", sub: "Interactive tool", href: "/tools/code-timer", k: "cardiac arrest cpr acls adrenaline rhythm check timer" });
 
 const routes = [
-  "/", "/browse", "/tools", "/tools/abg", "/tools/ventilator", "/tools/code-timer", "/news", "/quiz", "/saved", "/progress", "/search", "/offline", "/search-index.json",
+  "/", "/browse", "/tools", "/tools/abg", "/tools/ecg-os", "/tools/ventilator-os", "/tools/code-timer", "/news", "/quiz", "/saved", "/progress", "/search", "/offline", "/search-index.json",
   ...index.sections.map((s) => `/section/${s.id.toLowerCase()}`),
   ...modules.flatMap((m) => [`/m/${m.id}`, `/m/${m.id}/quiz`, ...m.topics.map((t) => `/m/${m.id}/${t.id}`)]),
   ...calcs.map((c) => `/tools/${c.id}`),
+  "/sim/heart.bin", "/sim/heart-hit.bin", "/sim/lung.bin", "/sim/lung-hit.bin",
   "/antimicrobials",
   ...antimicrobials.map((a) => `/antimicrobials/${a.id}`),
 ];

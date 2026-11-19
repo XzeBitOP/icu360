@@ -29,6 +29,24 @@ export default function Browse() {
           </div>
           <ChevronRight className="w-5 h-5 text-ink-400 shrink-0" aria-hidden="true" />
         </Link>
+        <div className="grid sm:grid-cols-2 gap-3">
+          <Link href="/tools/ecg-os" className="glass rounded-[24px] p-4 flex items-center gap-3.5">
+            <IconTile name="heart-pulse" size="w-12 h-12" isz="w-6 h-6" />
+            <div className="flex-1 min-w-0">
+              <p className="display font-semibold text-[17px] leading-snug">ECG OS</p>
+              <p className={`text-[12.5px] ${muted} leading-snug`}>Simulator · 12-lead, 3D heart, conduction</p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-ink-400 shrink-0" aria-hidden="true" />
+          </Link>
+          <Link href="/tools/ventilator-os" className="glass rounded-[24px] p-4 flex items-center gap-3.5">
+            <IconTile name="gauge" size="w-12 h-12" isz="w-6 h-6" />
+            <div className="flex-1 min-w-0">
+              <p className="display font-semibold text-[17px] leading-snug">Ventilator OS</p>
+              <p className={`text-[12.5px] ${muted} leading-snug`}>Simulator · waveforms, 3D lungs, scenarios</p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-ink-400 shrink-0" aria-hidden="true" />
+          </Link>
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3">
           {sections.map((s) => (
             <Link key={s.id} href={`/section/${s.slug}`} className="glass rounded-[24px] p-4 min-h-[128px] flex flex-col">

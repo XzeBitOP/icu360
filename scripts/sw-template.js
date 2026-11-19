@@ -54,8 +54,8 @@ async function staleWhileRevalidate(req, cacheName) {
       if (res && res.ok && res.type === "basic") cache.put(req, res.clone());
       return res;
     })
-    .catch(() => hit);
-  return hit || net;
+    .catch(() => hit || caches.match(req, { ignoreSearch: true }));
+  return hit || (await caches.match(req, { ignoreSearch: true })) || net;
 }
 
 self.addEventListener("fetch", (event) => {

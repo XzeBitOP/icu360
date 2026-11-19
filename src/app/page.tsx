@@ -90,7 +90,8 @@ export default function Home() {
   const hasQuizToday = getDailyQuiz().some((s) => s.date === istDate());
   const tools = [
     { href: "/tools/infusion-rate-weight-min", icon: "calculator", t: "Infusion calculator", s: "mcg/kg/min ↔ mL/h" },
-    { href: "/tools/ventilator", icon: "gauge", t: "Ventilator playground", s: "Live waveforms" },
+    { href: "/tools/ventilator-os", icon: "gauge", t: "Ventilator OS", s: "Live waveforms, 3D lungs" },
+    { href: "/tools/ecg-os", icon: "heart-pulse", t: "ECG OS", s: "12-lead, 3D heart, conduction" },
     { href: "/tools/abg", icon: "droplets", t: "ABG interpreter", s: "Stepwise, with AG and delta" },
     { href: "/tools/gcs", icon: "brain", t: "GCS", s: "E · V · M" },
   ];

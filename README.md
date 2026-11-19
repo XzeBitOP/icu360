@@ -1,6 +1,6 @@
 # ICU 360
 
-Bedside critical care reference for Indian ICUs: 40 modules, clickable algorithms, 50 calculators, an ABG interpreter, a ventilator playground, a code timer, critical care news and a daily quiz. Installable as an app (PWA) and usable offline.
+Bedside critical care reference for Indian ICUs: 40 modules, clickable algorithms, 50 calculators, an ABG interpreter, ECG OS and Ventilator OS (interactive simulators with 3D heart and lungs; the former ventilator playground), a code timer, critical care news and a daily quiz. Installable as an app (PWA) and usable offline.
 
 Built with Next.js 16 (App Router, static generation), React 19, Tailwind CSS 4 and Framer Motion. Personal data (progress, saved items, quiz streak, theme) stays in the browser's localStorage. There are no accounts.
 

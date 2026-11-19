@@ -9,7 +9,7 @@ import { Icon } from "@/components/Icon";
 
 export const metadata: Metadata = pageMeta({
   title: "Tools and calculators",
-  description: "ICU calculators and interactive tools: infusion rates, ABG interpreter, ventilator playground, code timer and 50 bedside calculators.",
+  description: "ICU calculators and interactive tools: infusion rates, ABG interpreter, Ventilator OS, ECG OS, code timer and 50 bedside calculators.",
   path: "/tools",
 });
 
@@ -25,7 +25,8 @@ export default function Tools() {
   const featured = [
     { href: "/tools/infusion-rate-weight-min", icon: "calculator", t: "Infusion calculator", s: "Noradrenaline, adrenaline, dobutamine… mcg/kg/min ↔ mL/h", id: "infusion-rate-weight-min" },
     { href: "/tools/abg", icon: "droplets", t: "ABG interpreter", s: "Stepwise: compensation, anion gap, delta ratio", id: "abg" },
-    { href: "/tools/ventilator", icon: "gauge", t: "Ventilator playground", s: "Move the dials, watch the waveforms", id: "ventilator" },
+    { href: "/tools/ventilator-os", icon: "gauge", t: "Ventilator OS", s: "Waveforms, 3D lungs, ARDS, COPD and one-lung scenarios", id: "ventilator-os" },
+    { href: "/tools/ecg-os", icon: "heart-pulse", t: "ECG OS", s: "12-lead ECG, 3D heart and the conduction system", id: "ecg-os" },
     { href: "/tools/code-timer", icon: "timer", t: "Code timer", s: "CPR cycles, adrenaline and shock log", id: "code-timer" },
     { href: "/antimicrobials", icon: "pill", t: "Antimicrobials", s: "Search by drug, brand or class · doses and renal adjustment", id: "antimicrobials" },
     { href: "/tools/gcs", icon: "brain", t: "Glasgow Coma Scale", s: "E · V · M", id: "gcs" },
@@ -33,7 +34,7 @@ export default function Tools() {
   const cats = [...new Set(calcs.map((c) => c.category))];
   return (
     <>
-      <PageHeader back={false} eyebrow={`${calcs.length} calculators · 3 interactive tools`} title="Tools" />
+      <PageHeader back={false} eyebrow={`${calcs.length} calculators · 5 interactive tools`} title="Tools" />
       <Main className="space-y-7">
         <section className="grid sm:grid-cols-2 xl:grid-cols-3 gap-3">
           {featured.map((f, i) => (
@@ -47,7 +48,7 @@ export default function Tools() {
                 <p className="display font-semibold text-[17px] leading-snug">{f.t}</p>
                 <p className={`text-[12.5px] ${i === 0 ? "text-white/75" : muted} leading-snug`}>{f.s}</p>
               </div>
-              {i === 0 ? <ChevronRight className="w-5 h-5" aria-hidden="true" /> : <Views n={views.tools[f.id]} />}
+              {i === 0 ? <ChevronRight className="w-5 h-5" aria-hidden="true" /> : <Views n={views.tools[f.id] ?? (f.id === "ventilator-os" ? views.tools["ventilator"] : undefined)} />}
             </Link>
           ))}
         </section>

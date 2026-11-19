@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  async redirects() {
+    // "Ventilator playground" became Ventilator OS (/tools/ventilator-os).
+    return [{ source: "/tools/ventilator", destination: "/tools/ventilator-os", permanent: true }];
+  },
   async headers() {
     return [
       {

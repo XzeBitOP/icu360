@@ -1,0 +1,28 @@
+/* 3D scene overlays: tooltip + CSS2D leader-line pins. Namespaced (.sim3d-*) so it cannot collide with ICU 360 globals. */
+.sim3d-host { position: relative; overflow: hidden; touch-action: none; }
+.sim3d-tip {
+  position: absolute; z-index: 5; max-width: min(280px, 78%); pointer-events: none;
+  padding: 9px 11px; border-radius: 12px; font-size: 12px; line-height: 1.4; color: #e8eefc;
+  background: rgba(14, 20, 36, 0.86); border: 1px solid rgba(160, 190, 255, 0.28);
+  backdrop-filter: blur(14px) saturate(1.4); -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+.sim3d-tip b { display: block; font-size: 13px; margin-bottom: 3px; color: #fff; }
+.sim3d-tip span { display: block; color: #c4d0ee; }
+.sim3d-pin { position: relative; width: 0; height: 0; pointer-events: none; }
+.sim3d-pin i { position: absolute; left: -3px; top: -3px; width: 6px; height: 6px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25); }
+.sim3d-pin b { position: absolute; left: 0; top: 0; height: 1px; transform-origin: 0 50%; background: rgba(255, 255, 255, 0.55); }
+.sim3d-pin span {
+  position: absolute; left: 0; top: 0; white-space: nowrap; font-size: 10.5px; font-weight: 600; letter-spacing: 0.01em;
+  padding: 2px 7px; border-radius: 999px; color: #f4f7ff; background: rgba(12, 18, 34, 0.78); border: 1px solid rgba(255, 255, 255, 0.22);
+}
+.sim3d-pin.k-cond i { background: #facc15; box-shadow: 0 0 8px #facc15; }
+.sim3d-pin.k-cond b { background: rgba(250, 204, 21, 0.7); }
+.sim3d-pin.k-cond span { color: #fde68a; border-color: rgba(250, 204, 21, 0.45); }
+.sim3d-pin.k-valve span { color: #e9d5ff; border-color: rgba(192, 160, 255, 0.45); }
+.sim3d-pin.k-lung span { color: #bfe8ff; border-color: rgba(120, 200, 255, 0.45); }
+@media (max-width: 520px) { .sim3d-pin span { font-size: 9.5px; padding: 1px 5px; } }
+.sim3d-frame { width: 100%; aspect-ratio: 1 / 1.08; max-height: 600px; border-radius: 18px; background: radial-gradient(80% 70% at 50% 38%, #12203a, #050911); border: 1px solid rgba(255, 255, 255, 0.08); cursor: grab; }
+.sim3d-frame:active { cursor: grabbing; }
+.sim3d-loading { position: absolute; inset: 0; display: grid; place-items: center; color: #9aa8bf; font-size: 13px; }
+@media (min-width: 1024px) { .sim3d-frame { aspect-ratio: 1 / 1; } }

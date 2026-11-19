@@ -108,6 +108,30 @@ export function homeJsonLd() {
   };
 }
 
+/** Interactive educational simulator (ECG OS, Ventilator OS). */
+export function simulatorJsonLd(o: { name: string; description: string; path: string }) {
+  const url = `${SITE_ORIGIN}${o.path}`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        name: o.name,
+        description: o.description,
+        url,
+        applicationCategory: "EducationalApplication",
+        operatingSystem: "Any (web browser)",
+        isAccessibleForFree: true,
+        inLanguage: "en",
+        audience: { "@type": "MedicalAudience", audienceType: "Clinician" },
+        author: { "@id": `${SITE_ORIGIN}/#kenil-shah` },
+        publisher: { "@id": `${SITE_ORIGIN}/#organization` },
+        isPartOf: { "@id": `${SITE_ORIGIN}/#website` },
+      },
+    ],
+  };
+}
+
 export function topicJsonLd(module: Module, topic: Topic) {
   const url = `${SITE_ORIGIN}/m/${module.id}/${topic.id}`;
   const page: Record<string, unknown> = {
@@ -187,7 +211,8 @@ export function getSitemapEntries(): SitemapEntry[] {
     { url: `${SITE_ORIGIN}/quiz`, lastModified: newsDate, changeFrequency: "daily", priority: 0.7 },
     { url: `${SITE_ORIGIN}/tools`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${SITE_ORIGIN}/tools/abg`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${SITE_ORIGIN}/tools/ventilator`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${SITE_ORIGIN}/tools/ecg-os`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${SITE_ORIGIN}/tools/ventilator-os`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_ORIGIN}/tools/code-timer`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_ORIGIN}/antimicrobials`, changeFrequency: "weekly", priority: 0.8 },
   ];

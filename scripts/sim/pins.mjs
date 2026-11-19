@@ -1,0 +1,10 @@
+import { chromium } from "@playwright/test";
+const [w = "1440", h = "1000"] = process.argv.slice(2);
+const b = await chromium.launch({ executablePath: "/usr/bin/google-chrome", args: ["--no-sandbox", "--use-gl=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist"] });
+const p = await (await b.newContext({ viewport: { width: +w, height: +h } })).newPage();
+await p.goto("http://localhost:3200/tools/ventilator-os", { waitUntil: "load" });
+await p.waitForSelector("[data-testid=lung-3d][data-state=ready]", { timeout: 60000 });
+await p.waitForTimeout(2500);
+const r = await p.evaluate(() => { const f = document.querySelector("[data-testid=lung-3d]"); const fr = f.getBoundingClientRect(); const lab = f.children[1]; const c = f.querySelector("canvas").getBoundingClientRect(); const pin = f.querySelector('[data-testid=pin-carina]'); const pr = pin.getBoundingClientRect(); return { frame: [fr.x, fr.y, fr.width, fr.height], canvas: [c.x, c.y, c.width, c.height], labelsDom: [lab.className, lab.style.cssText, JSON.stringify(lab.getBoundingClientRect())], carinaTransform: pin.style.transform, carinaPos: [pr.x, pr.y], pinStyle: [getComputedStyle(pin).position, getComputedStyle(pin).transform, getComputedStyle(pin).width, getComputedStyle(pin).left, getComputedStyle(pin).translate, getComputedStyle(pin).display, pin.className] }; });
+console.log(JSON.stringify(r));
+await b.close();

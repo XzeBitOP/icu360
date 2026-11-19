@@ -59,6 +59,6 @@ describe("safe-area wiring", () => {
     expect(css).toMatch(/\.tabbar\s*\{\s*bottom:\s*max\(1\.25rem,\s*var\(--sab\)\)/);
   });
   it("keeps the interactive tools out of the gesture", () => {
-    for (const p of ["src/app/tools/ventilator/page.tsx", "src/app/tools/abg/page.tsx"]) expect(readFileSync(p, "utf8")).toContain("data-no-swipe-back");
+    for (const p of ["src/app/tools/ventilator-os/page.tsx", "src/app/tools/ecg-os/page.tsx", "src/app/tools/abg/page.tsx"]) expect(readFileSync(p, "utf8")).toContain("data-no-swipe-back");
   });
 });
