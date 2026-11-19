@@ -6,7 +6,9 @@ import { TabBar } from "@/components/client/Nav";
 import { PwaSetup } from "@/components/client/Pwa";
 import { EdgeSwipeBack } from "@/components/client/EdgeSwipeBack";
 import { SITE } from "@/lib/site";
+import { AUTHOR, DEFAULT_TITLE, TITLE_TEMPLATE, googleVerification } from "@/lib/seo";
 import { Footer } from "@/components/Footer";
+import { StartupSplash } from "@/components/StartupSplash";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const interTight = Inter_Tight({ subsets: ["latin"], weight: ["500", "600", "700"], variable: "--font-inter-tight", display: "swap" });
@@ -14,9 +16,12 @@ const mono = JetBrains_Mono({ subsets: ["latin"], weight: ["500", "600"], variab
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: { default: `${SITE.name} · ${SITE.tagline}`, template: `%s · ${SITE.name}` },
+  title: { default: DEFAULT_TITLE, template: TITLE_TEMPLATE },
   description: SITE.description,
   applicationName: SITE.name,
+  authors: [{ name: AUTHOR.name, url: SITE.url }],
+  creator: AUTHOR.name,
+  publisher: SITE.name,
   appleWebApp: { capable: true, title: SITE.name, statusBarStyle: "black-translucent" },
   formatDetection: { telephone: false },
   icons: {
@@ -28,7 +33,22 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
-  openGraph: { title: SITE.name, description: SITE.description, siteName: SITE.name, images: [{ url: "/brand/logo-dark-512.png", width: 512, height: 512 }], type: "website" },
+  openGraph: {
+    title: DEFAULT_TITLE,
+    description: SITE.description,
+    siteName: SITE.name,
+    url: SITE.url,
+    locale: "en_IN",
+    type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: DEFAULT_TITLE }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: DEFAULT_TITLE,
+    description: SITE.description,
+    images: ["/opengraph-image"],
+  },
+  verification: googleVerification(),
 };
 
 export const viewport: Viewport = {
@@ -41,22 +61,18 @@ export const viewport: Viewport = {
   ],
 };
 
-// Runs before paint: pick dark/light from the saved choice or the device setting, so there is no flash.
-const themeScript = `(function(){try{var p=localStorage.getItem('icu360:theme');var d=p==='dark'||(p!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(d)document.documentElement.classList.add('dark');}catch(e){}})();`;
+// Runs before paint: theme (no flash) and whether to skip the first-load startup mark.
+// A persistent <style> is used for the skip so a later React hydration cannot uncover the overlay.
+const themeScript = `(function(){try{var p=localStorage.getItem('icu360:theme');var d=p==='dark'||(p!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(d)document.documentElement.classList.add('dark');}catch(e){}try{var skip=window.matchMedia('(prefers-reduced-motion: reduce)').matches||!!sessionStorage.getItem('icu360:splash');if(skip){document.documentElement.classList.add('splash-skip');var s=document.createElement('style');s.id='startup-splash-skip';s.textContent='.startup-splash{display:none!important}';document.documentElement.appendChild(s);}else{sessionStorage.setItem('icu360:splash','1');}}catch(e){document.documentElement.classList.add('splash-skip');}})();`;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-IN" className={`${inter.variable} ${interTight.variable} ${mono.variable}`} suppressHydrationWarning>
+    <html lang="en-IN" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className="font-sans min-h-screen">
-        <div className="splash" aria-hidden="true">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/brand/logo-light-256.png" alt="" width={128} height={128} className="block dark:hidden" />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/brand/logo-dark-256.png" alt="" width={128} height={128} className="hidden dark:block" />
-        </div>
+      <body className={`font-sans min-h-screen ${inter.variable} ${interTight.variable} ${mono.variable}`}>
+        <StartupSplash />
         <Aurora />
         <div className="app lg:flex">
           <Sidebar />

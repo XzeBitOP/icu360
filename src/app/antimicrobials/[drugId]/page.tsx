@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { drugJsonLd, pageMeta } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { Syringe } from "lucide-react";
 import type { ReactNode } from "react";
 import { PageHeader, Main } from "@/components/Shell";
@@ -17,7 +19,12 @@ export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const a = getAntimicrobial((await params).drugId);
-  return a ? { title: `${a.name} · Antimicrobials`, description: `${a.name} (${a.drugClass}): spectrum, indications, adult and ICU dose, renal and hepatic adjustment, Indian brands.` } : {};
+  if (!a) return {};
+  return pageMeta({
+    title: a.name,
+    description: `${a.name} (${a.drugClass}): spectrum, indications, adult and ICU dose, renal and hepatic adjustment, Indian brands.`,
+    path: `/antimicrobials/${a.id}`,
+  });
 }
 
 function Card({ title, children }: { title: string; children: ReactNode }) {
@@ -56,6 +63,7 @@ export default async function AntimicrobialPage({ params }: { params: Promise<Pa
   const gen = generationOf(a.subclass);
   return (
     <>
+      <JsonLd data={drugJsonLd(a)} />
       <PageHeader
         backHref="/antimicrobials"
         eyebrow={<Link href="/antimicrobials">{a.category} · {a.drugClass}</Link>}

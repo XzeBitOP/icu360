@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { PageHeader, Main } from "@/components/Shell";
 import { Views, muted } from "@/components/ui";
@@ -7,7 +8,11 @@ import { SavedButton } from "@/components/client/SavedButton";
 import { ViewTracker } from "@/components/client/Tracking";
 import { getViews } from "@/lib/content";
 
-export const metadata: Metadata = { title: "ABG interpreter", description: "Stepwise arterial blood gas interpretation: primary disorder, compensation (Winter's), anion gap, albumin correction and delta ratio." };
+export const metadata: Metadata = pageMeta({
+  title: "ABG interpreter",
+  description: "Stepwise arterial blood gas interpretation: primary disorder, compensation (Winter's), anion gap, albumin correction and delta ratio.",
+  path: "/tools/abg",
+});
 
 export default function AbgPage() {
   return (

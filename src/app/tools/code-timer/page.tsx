@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { PageHeader, Main } from "@/components/Shell";
 import { Callout, Views, muted } from "@/components/ui";
@@ -6,7 +7,11 @@ import { CodeTimer } from "@/components/client/CodeTimer";
 import { ViewTracker } from "@/components/client/Tracking";
 import { getViews } from "@/lib/content";
 
-export const metadata: Metadata = { title: "Code timer", description: "Cardiac arrest timer: 2-minute CPR cycles, adrenaline and shock log, 4 Hs and 4 Ts." };
+export const metadata: Metadata = pageMeta({
+  title: "Code timer",
+  description: "Cardiac arrest timer: 2-minute CPR cycles, adrenaline and shock log, 4 Hs and 4 Ts.",
+  path: "/tools/code-timer",
+});
 
 export default function CodeTimerPage() {
   return (

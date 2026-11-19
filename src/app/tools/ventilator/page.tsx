@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { PageHeader, Main } from "@/components/Shell";
 import { Callout, Views, muted } from "@/components/ui";
@@ -7,7 +8,11 @@ import { SavedButton } from "@/components/client/SavedButton";
 import { ViewTracker } from "@/components/client/Tracking";
 import { getViews } from "@/lib/content";
 
-export const metadata: Metadata = { title: "Ventilator playground", description: "Move the dials and watch pressure, flow and volume waveforms, plateau, driving pressure and auto-PEEP change live." };
+export const metadata: Metadata = pageMeta({
+  title: "Ventilator playground",
+  description: "Move the dials and watch pressure, flow and volume waveforms, plateau, driving pressure and auto-PEEP change live.",
+  path: "/tools/ventilator",
+});
 
 export default function VentPage() {
   return (

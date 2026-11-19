@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { PageHeader, Main } from "@/components/Shell";
 import { SavedView } from "@/components/client/SavedView";
 
-export const metadata: Metadata = { title: "Saved and progress" };
+export const metadata: Metadata = pageMeta({
+  title: "Saved and progress",
+  description: "Topics and tools you have saved on this device.",
+  path: "/saved",
+  index: false,
+  follow: false,
+});
 
 export default function SavedPage() {
   return (

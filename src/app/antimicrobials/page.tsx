@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { PageHeader, Main } from "@/components/Shell";
 import { Callout } from "@/components/ui";
 import { AntimicrobialList } from "@/components/client/AntimicrobialList";
 import { ROWS } from "@/lib/antimicrobials";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Antimicrobials",
   description: "Searchable ICU antimicrobial reference: antibacterials, antivirals, antifungals and antiparasitics with adult, ICU, renal and hepatic doses and Indian brands.",
-};
+  path: "/antimicrobials",
+});
 
 export default function AntimicrobialsPage() {
   return (

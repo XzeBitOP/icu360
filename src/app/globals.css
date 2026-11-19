@@ -176,15 +176,46 @@ input[type="number"] { -moz-appearance: textfield; }
 .dark .prose-icu a, .dark .md-inline a { color: var(--color-glow-teal); }
 .md-inline code, .prose-icu code { font-family: var(--font-mono); font-size: .92em; padding: 0 .25em; border-radius: 6px; background: rgba(120,140,170,.15); }
 
-/* Splash screen: only when launched as an installed app (standalone); logo follows the device theme */
-.splash { display: none; }
-@media (display-mode: standalone) {
-  .splash { display: grid; position: fixed; inset: 0; z-index: 100; place-items: center; background: #eaf0f5; animation: splash-out .45s ease .75s forwards; }
-  .dark .splash { background: #05080f; }
+/* First-load startup mark: an ECG stroke draws, closes a 360° ring, then fades (~0.5 s).
+   Painted with inline SVG + CSS so the first frame needs no JS. html.splash-skip (set in
+   an inline head script from sessionStorage or prefers-reduced-motion) hides it instantly. */
+.startup-splash {
+  position: fixed; inset: 0; z-index: 100; display: grid; place-items: center;
+  pointer-events: none;
+  background: #eaf0f5;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  animation: startup-fade 140ms ease 420ms forwards;
 }
-@keyframes splash-out { to { opacity: 0; visibility: hidden; } }
+.dark .startup-splash { background: #05080f; }
+.startup-mark { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.startup-trace, .startup-glow {
+  fill: none;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: startup-draw 340ms cubic-bezier(.4, 0, .15, 1) forwards;
+}
+.startup-trace { stroke: #13697b; stroke-width: 5.5; }
+.startup-glow { stroke: #13697b; stroke-width: 14; opacity: .22; }
+.dark .startup-trace { stroke: #5eead4; }
+.dark .startup-glow { stroke: #5eead4; opacity: .35; }
+.startup-word {
+  margin: 0;
+  font-family: var(--font-display), Inter, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.03em;
+  color: #0b1726;
+  opacity: 0;
+  animation: startup-word 160ms ease 260ms forwards;
+}
+.dark .startup-word { color: #eef2f8; }
+@keyframes startup-draw { to { stroke-dashoffset: 0; } }
+@keyframes startup-word { to { opacity: 1; } }
+@keyframes startup-fade { to { opacity: 0; visibility: hidden; } }
+html.splash-skip .startup-splash { display: none !important; }
 
 @media (prefers-reduced-motion: reduce) {
+  .startup-splash { display: none !important; animation: none !important; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
 

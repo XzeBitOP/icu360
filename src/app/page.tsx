@@ -7,8 +7,20 @@ import { Greeting } from "@/components/client/Greeting";
 import { HomeFavourites, QuizAndProgress, type FavDefault } from "@/components/client/HomeWidgets";
 import { Chip, H2, IconTile, Views, muted } from "@/components/ui";
 import { Icon } from "@/components/Icon";
-import { QUICK } from "@/lib/site";
+import { QUICK, SITE } from "@/lib/site";
 import { istDate, prettyDate } from "@/lib/format";
+import { DEFAULT_TITLE, homeJsonLd, pageMeta } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  ...pageMeta({
+    title: DEFAULT_TITLE,
+    description: SITE.description,
+    path: "/",
+  }),
+  title: { absolute: DEFAULT_TITLE },
+};
 
 const DEFAULT_FAVS: FavDefault[] = [
   { href: "/m/sepsis-septic-shock/hour-1-bundle", title: "Septic shock", sub: "Bedside card", icon: "heart-pulse" },
@@ -86,6 +98,7 @@ export default function Home() {
 
   return (
     <>
+      <JsonLd data={homeJsonLd()} />
       {/* ---------------- Mobile / tablet ---------------- */}
       <div className="lg:hidden">
         <header className="px-5 pt-5 flex items-center gap-3">
@@ -98,12 +111,12 @@ export default function Home() {
         </header>
         <main className="px-4 pt-5 pb-4 space-y-7">
           <div>
-            <h1 className="display text-[34px] font-bold leading-[1.05] px-1">
+            <p className="display text-[34px] font-bold leading-[1.05] px-1">
               <Greeting />
               <br />
               <span className="bg-clip-text text-transparent dark:hidden" style={{ backgroundImage: "linear-gradient(90deg,#0F7C8C,#2554C7 55%,#6B3FCB)" }}>What&apos;s on the shift?</span>
               <span className="hidden dark:inline bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(90deg,#5EEAD4,#7DD3FC 50%,#C4B5FD)" }}>What&apos;s on the shift?</span>
-            </h1>
+            </p>
             <Link href="/search" className="mt-5 glass blur-glass flex items-center gap-3 h-[52px] px-4 rounded-full text-ink-400 dark:text-night-muted">
               <Search className="w-5 h-5" strokeWidth={2.1} aria-hidden="true" />
               <span className="text-[15px] flex-1">Search modules, drugs, calculators</span>
@@ -172,7 +185,7 @@ export default function Home() {
           <section className="glass-hero rounded-[32px] p-8 flex items-center gap-8">
             <div className="flex-1">
               <p className="text-[12px] uppercase tracking-[.14em] font-semibold text-white/70">{modules.length} modules · {sections.length} sections · {topics} topics</p>
-              <h1 className="display text-[44px] font-bold leading-[1.02] mt-2">Critical care,<br />at the bedside.</h1>
+              <h1 className="display text-[44px] font-bold leading-[1.02] mt-2">Critical care, <br />at the bedside.</h1>
               <p className="text-white/80 text-[15px] mt-3 max-w-[480px]">Bedside cards, step-by-step algorithms and consultant notes, built for juniors and interns on a night shift.</p>
               <div className="flex flex-wrap gap-2 mt-5">
                 {QUICK.map((q) => (

@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { getNews, getModule } from "@/lib/content";
 import { PageHeader, Main } from "@/components/Shell";
 import { NewsFeed } from "@/components/client/NewsFeed";
 import Link from "next/link";
 import { Flame, ChevronRight } from "lucide-react";
 
-export const metadata: Metadata = { title: "Critical care news", description: "Guideline updates, landmark trials and Indian ICU news, picked by a critical care consultant." };
+export const metadata: Metadata = pageMeta({
+  title: "Critical care news",
+  description: "Guideline updates, landmark trials and Indian ICU news, picked by a critical care consultant and linked to the original source.",
+  path: "/news",
+});
 
 export default function NewsPage() {
   const items = getNews().map((n) => ({ ...n, moduleTitle: n.moduleId ? getModule(n.moduleId)?.title : undefined }));

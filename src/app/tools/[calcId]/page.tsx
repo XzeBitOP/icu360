@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { getCalculators, getCalculator, getViews, getModules } from "@/lib/content";
 import { PageHeader, Main } from "@/components/Shell";
 import { Views, muted } from "@/components/ui";
@@ -17,7 +18,12 @@ export function generateStaticParams(): Params[] {
 export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const c = getCalculator((await params).calcId);
-  return c ? { title: c.name, description: c.description } : {};
+  if (!c) return {};
+  return pageMeta({
+    title: c.name,
+    description: c.description,
+    path: `/tools/${c.id}`,
+  });
 }
 
 export default async function CalcPage({ params }: { params: Promise<Params> }) {

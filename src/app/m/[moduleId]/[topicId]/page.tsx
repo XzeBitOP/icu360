@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { pageMeta, topicJsonLd } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { ShieldCheck, ChevronLeft, ChevronRight, GraduationCap } from "lucide-react";
 import { getModules, getTopic, refsById, getViews, getCalculator, getSections } from "@/lib/content";
 import { PageHeader, Main } from "@/components/Shell";
@@ -24,7 +26,12 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { moduleId, topicId } = await params;
   const r = getTopic(moduleId, topicId);
-  return r ? { title: `${r.topic.title} · ${r.module.title}`, description: r.topic.summary } : {};
+  if (!r) return {};
+  return pageMeta({
+    title: r.topic.title,
+    description: r.topic.summary,
+    path: `/m/${r.module.id}/${r.topic.id}`,
+  });
 }
 
 export default async function TopicPage({ params }: { params: Promise<Params> }) {
@@ -121,6 +128,7 @@ export default async function TopicPage({ params }: { params: Promise<Params> })
 
   return (
     <>
+      <JsonLd data={topicJsonLd(module, topic)} />
       <ViewTracker keys={[topic.viewKey, module.viewKey]} />
       <TopicOpened moduleId={module.id} topicId={topic.id} />
       <div className="min-[1400px]:grid min-[1400px]:grid-cols-[230px_minmax(0,1fr)] min-[1400px]:gap-6 lg:pt-3">

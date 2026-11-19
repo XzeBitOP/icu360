@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { ChevronRight, GitBranch, GraduationCap, Pill } from "lucide-react";
 import { getModules, getModule, getViews, getSections } from "@/lib/content";
 import { PageHeader, Main } from "@/components/Shell";
@@ -21,7 +22,12 @@ export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const m = getModule((await params).moduleId);
-  return m ? { title: m.title, description: m.summary } : {};
+  if (!m) return {};
+  return pageMeta({
+    title: m.title,
+    description: m.summary,
+    path: `/m/${m.id}`,
+  });
 }
 
 export default async function ModulePage({ params }: { params: Promise<Params> }) {

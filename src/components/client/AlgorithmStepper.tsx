@@ -154,23 +154,20 @@ export function AlgorithmStepper({ algo }: { algo: Algorithm }) {
       <button type="button" onClick={() => setChart((c) => !c)} className={`flex items-center gap-1.5 text-[13px] font-semibold text-brand-600 dark:text-glow-teal px-1`} aria-expanded={chart}>
         <ListTree className="w-4 h-4" strokeWidth={2} aria-hidden="true" />{chart ? "Hide" : "Show"} the whole flowchart
       </button>
-      <AnimatePresence>
-        {chart && (
-          <motion.ol initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} className="glass rounded-[22px] p-4 space-y-3 overflow-hidden">
-            {algo.nodes.map((n) => (
-              <li key={n.id} className="text-[13.5px] leading-snug">
-                <p className="font-semibold">
-                  <span className={`text-[10.5px] uppercase tracking-[.08em] mr-2 ${n.type === "decision" ? "text-warn dark:text-warn-bright" : n.type === "end" ? "text-ok dark:text-ok-bright" : n.severity === "critical" ? "text-crit dark:text-crit-bright" : muted}`}>{n.type}</span>
-                  {md(n.text)}
-                </p>
-                {(out.get(n.id) ?? []).map((e, i) => (
-                  <p key={i} className={`${muted} text-[12.5px] pl-3`}>→ {e.label ? <b className="text-brand-700 dark:text-glow-teal">{e.label}: </b> : null}{nodes.get(e.to)?.text}</p>
-                ))}
-              </li>
+      {/* Always in the HTML so crawlers and assistive tech can read every step; hidden until opened. */}
+      <ol hidden={!chart} className="glass rounded-[22px] p-4 space-y-3">
+        {algo.nodes.map((n) => (
+          <li key={n.id} className="text-[13.5px] leading-snug">
+            <p className="font-semibold">
+              <span className={`text-[10.5px] uppercase tracking-[.08em] mr-2 ${n.type === "decision" ? "text-warn dark:text-warn-bright" : n.type === "end" ? "text-ok dark:text-ok-bright" : n.severity === "critical" ? "text-crit dark:text-crit-bright" : muted}`}>{n.type}</span>
+              {md(n.text)}
+            </p>
+            {(out.get(n.id) ?? []).map((e, i) => (
+              <p key={i} className={`${muted} text-[12.5px] pl-3`}>→ {e.label ? <b className="text-brand-700 dark:text-glow-teal">{e.label}: </b> : null}{nodes.get(e.to)?.text}</p>
             ))}
-          </motion.ol>
-        )}
-      </AnimatePresence>
+          </li>
+        ))}
+      </ol>
     </div>
   );
 }

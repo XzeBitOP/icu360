@@ -1,12 +1,17 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { ChevronRight, Search } from "lucide-react";
 import { getSections, sectionViews, getViews } from "@/lib/content";
 import { ROWS as ANTIMICROBIALS } from "@/lib/antimicrobials";
 import { PageHeader, Main } from "@/components/Shell";
 import { CircleLink, IconTile, Views, muted } from "@/components/ui";
 
-export const metadata: Metadata = { title: "Browse all modules" };
+export const metadata: Metadata = pageMeta({
+  title: "Browse all modules",
+  description: "Browse all 40 ICU modules across 11 sections — resuscitation, airway, cardiovascular, renal, neuro, infections, toxicology and more.",
+  path: "/browse",
+});
 
 export default function Browse() {
   const sections = getSections();

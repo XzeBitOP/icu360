@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { Eye, Search } from "lucide-react";
 import { getSections, getViews, sectionViews } from "@/lib/content";
 import { PageHeader, Main } from "@/components/Shell";
@@ -16,7 +17,12 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { slug } = await params;
   const s = getSections().find((x) => x.slug === slug);
-  return s ? { title: s.title, description: s.tagline } : {};
+  if (!s) return {};
+  return pageMeta({
+    title: s.title,
+    description: s.tagline,
+    path: `/section/${s.slug}`,
+  });
 }
 
 export default async function SectionPage({ params }: { params: Promise<Params> }) {

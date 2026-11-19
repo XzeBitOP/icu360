@@ -1,12 +1,17 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { ChevronRight } from "lucide-react";
 import { getCalculators, getViews } from "@/lib/content";
 import { PageHeader, Main } from "@/components/Shell";
 import { IconTile, Views, muted } from "@/components/ui";
 import { Icon } from "@/components/Icon";
 
-export const metadata: Metadata = { title: "Tools and calculators" };
+export const metadata: Metadata = pageMeta({
+  title: "Tools and calculators",
+  description: "ICU calculators and interactive tools: infusion rates, ABG interpreter, ventilator playground, code timer and 50 bedside calculators.",
+  path: "/tools",
+});
 
 const CAT: Record<string, [string, string]> = {
   infusion: ["Infusions", "syringe"], "body-size": ["Body size", "ruler"], ventilation: ["Ventilation & oxygen", "wind"], "acid-base": ["Acid–base", "flask-conical"],

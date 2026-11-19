@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { getModules, getModule } from "@/lib/content";
 import { PageHeader, Main } from "@/components/Shell";
 import { QuizRunner, type QuizQ } from "@/components/client/QuizRunner";
@@ -12,7 +13,12 @@ export function generateStaticParams(): Params[] {
 export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const m = getModule((await params).moduleId);
-  return m ? { title: `Quiz · ${m.title}` } : {};
+  if (!m) return {};
+  return pageMeta({
+    title: `Quiz: ${m.title}`,
+    description: `Module quiz for ${m.title}: questions from every topic, with explanations.`,
+    path: `/m/${m.id}/quiz`,
+  });
 }
 
 export default async function ModuleQuiz({ params }: { params: Promise<Params> }) {
