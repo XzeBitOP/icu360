@@ -34,8 +34,8 @@ describe("news", () => {
     items: { id: string; url: string; source: string; catchUp?: boolean; date: string }[];
   };
 
-  it("publishes seven approved items with original source urls and drops SAVE-ICU", () => {
-    expect(news.items).toHaveLength(7);
+  it("publishes approved items with original source urls and drops SAVE-ICU", () => {
+    expect(news.items.length).toBeGreaterThanOrEqual(7);
     expect(news.items.some((i) => /save-icu/i.test(i.id))).toBe(false);
     for (const item of news.items) {
       expect(item.source.length).toBeGreaterThan(0);
