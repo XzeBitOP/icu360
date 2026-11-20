@@ -12,7 +12,8 @@ describe("lung anatomy and airway tree", () => {
     for (const id of LOBES) {
       const a = generateAirways(id), b = generateAirways(id);
       expect(a.segments).toEqual(b.segments);
-      expect(a.segments.length).toBeGreaterThan(60);
+      expect(a.segments.length).toBeGreaterThanOrEqual(7); // clean 3-4 generation tree, not a tangle
+      expect(a.segments.length).toBeLessThanOrEqual(15);
       expect(a.terminals.length).toBeGreaterThan(20);
       for (const s of a.segments) {
         expect(lobeField[id](s.b)).toBeLessThan(0);

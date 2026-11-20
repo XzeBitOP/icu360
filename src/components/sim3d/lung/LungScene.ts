@@ -1,8 +1,9 @@
 import * as THREE from "three";
+import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 import { CSS2DObject } from "three/examples/jsm/renderers/CSS2DRenderer.js";
 import { BAKE_VERSION, loadBake } from "../bakeLoader";
 import { createStage, type Stage } from "../stage";
-import { makePin, makeTooltip, mergedTubes, tubeGeometry, type PartInfo } from "../shared";
+import { makePin, makeTooltip, tubeGeometry, type PartInfo } from "../shared";
 import { LOBES, LOBE_HILUM, LOBE_NAMES, LOBE_TITLES, type LobeId } from "./anatomy";
 import { ETT_PATH, LOBAR_ORIGIN, MAIN_BRONCHI, MAX_GEN, TRACHEA, airwayRadius, generateAirways } from "./airways";
 import { LUNG_INFO } from "./info";
@@ -17,6 +18,25 @@ export type LungSceneOptions = {
   low?: boolean;
   onSelect?: (info: PartInfo | null) => void;
 };
+
+/** One tapering cone per segment (wide end at the parent) plus a small ball at each joint, merged into a single geometry. */
+function taperedBranches(segs: { a: number[]; b: number[] }[], r0: number, r1: number, radial: number): THREE.BufferGeometry {
+  const parts: THREE.BufferGeometry[] = [];
+  const up = new THREE.Vector3(0, 1, 0);
+  for (const s of segs) {
+    const a = new THREE.Vector3(s.a[0], s.a[1], s.a[2]), b = new THREE.Vector3(s.b[0], s.b[1], s.b[2]);
+    const dir = b.clone().sub(a), len = dir.length();
+    const cyl = new THREE.CylinderGeometry(r1, r0, len, radial, 1, false); // top = child end, bottom = parent end
+    cyl.applyMatrix4(new THREE.Matrix4().compose(a.clone().add(b).multiplyScalar(0.5), new THREE.Quaternion().setFromUnitVectors(up, dir.normalize()), new THREE.Vector3(1, 1, 1)));
+    parts.push(cyl);
+    const ball = new THREE.SphereGeometry(r1 * 1.02, radial, Math.max(4, radial / 2));
+    ball.translate(b.x, b.y, b.z);
+    parts.push(ball);
+  }
+  const out = mergeGeometries(parts, false);
+  parts.forEach((p) => p.dispose());
+  return out;
+}
 
 const V3 = (a: number[]) => new THREE.Vector3(a[0], a[1], a[2]);
 const lobeIdByName = Object.fromEntries(LOBES.map((l) => [LOBE_NAMES[l], l])) as Record<string, LobeId>;
@@ -47,7 +67,7 @@ export class LungScene {
   private ptr = { x: 0, y: 0, down: false, sx: 0, sy: 0 };
   private o: LungSceneOptions;
   private lastFlowSign = 0;
-  private diaY = -3.3;
+  private diaY = -3.05;
 
   constructor(o: LungSceneOptions) {
     this.o = o;
@@ -229,9 +249,9 @@ export class LungScene {
       const air = generateAirways(id);
       const tree: THREE.Mesh[] = [];
       for (let gen = 0; gen <= MAX_GEN; gen++) {
-        const segs = air.segments.filter((s) => s.gen === gen).map((s) => ({ pts: [s.a, s.b] as [number, number, number][], s: [0, 1] }));
+        const segs = air.segments.filter((s) => s.gen === gen);
         if (!segs.length) continue;
-        const m = new THREE.Mesh(mergedTubes(segs, airwayRadius(gen), gen < 3 ? 8 : 5), treeMat);
+        const m = new THREE.Mesh(taperedBranches(segs, airwayRadius(gen), airwayRadius(gen + 1), gen < 2 ? 12 : 8), treeMat);
         m.name = `${id}Bronchi${gen}`; m.userData = LUNG_INFO.BronchialTree; m.renderOrder = 1;
         group.add(m); tree.push(m);
       }
@@ -274,11 +294,46 @@ export class LungScene {
     }
   }
 
+  /** Bilobed muscular dome: a pale central tendon, radial muscle fibres towards the costal rim, a short skirt on the chest wall. Unit footprint (x,z ∈ [-1,1], apex y = 1), scaled in buildDiaphragm. */
+  private diaphragmGeometry() {
+    const NT = 96, NR = 26, SKIRT = 3;
+    const pos: number[] = [], col: number[] = [], idx: number[] = [];
+    const muscle = new THREE.Color("#a63446"), tendon = new THREE.Color("#ecc9ad"), dark = new THREE.Color("#7a2230"), c = new THREE.Color();
+    const dome = (x: number, rho: number) => {
+      const lobes = 1 - 0.2 * Math.exp(-Math.pow(x / 0.28, 2)); // central dip between the two hemidiaphragms
+      const right = 1 + 0.07 * Math.max(0, -x); // the right hemidiaphragm sits a little higher
+      return Math.pow(Math.max(0, 1 - Math.pow(rho, 2.3)), 0.75) * lobes * right;
+    };
+    for (let j = 0; j <= NR + SKIRT; j++) {
+      for (let i = 0; i <= NT; i++) {
+        const th = (i / NT) * Math.PI * 2;
+        const rho = j <= NR ? j / NR : 1;
+        const x = rho * Math.cos(th), z = rho * Math.sin(th);
+        const y = j <= NR ? dome(x, rho) : -((j - NR) / SKIRT) * 0.34;
+        pos.push(x, y, z);
+        const fibre = 0.5 + 0.5 * Math.sin(th * 34 + rho * 3);
+        const tend = Math.max(0, 1 - rho / 0.38); // pale central tendon
+        c.copy(muscle).lerp(dark, 0.25 * fibre + (j > NR ? 0.5 : 0)).lerp(tendon, tend * tend * 0.9);
+        col.push(c.r, c.g, c.b);
+      }
+    }
+    for (let j = 0; j < NR + SKIRT; j++) for (let i = 0; i < NT; i++) {
+      const a = j * (NT + 1) + i, b = a + 1, d = a + NT + 1, e = d + 1;
+      idx.push(a, d, b, b, d, e);
+    }
+    const g = new THREE.BufferGeometry();
+    g.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
+    g.setAttribute("color", new THREE.Float32BufferAttribute(col, 3));
+    g.setIndex(idx);
+    g.computeVertexNormals();
+    return g;
+  }
+
   private buildDiaphragm() {
-    const geo = new THREE.SphereGeometry(1, 48, 16, 0, Math.PI * 2, 0, Math.PI / 2);
-    const m = new THREE.Mesh(geo, new THREE.MeshPhysicalMaterial({ color: "#8c2f3c", roughness: 0.6, clearcoat: 0.3, side: THREE.DoubleSide, transparent: true, opacity: 0.8, emissive: new THREE.Color("#000000") }));
-    m.scale.set(3.3, 1.25, 1.95);
-    m.position.set(0, -3.3, 0);
+    const geo = this.diaphragmGeometry();
+    const m = new THREE.Mesh(geo, new THREE.MeshPhysicalMaterial({ vertexColors: true, roughness: 0.5, clearcoat: 0.55, clearcoatRoughness: 0.3, sheen: 0.5, sheenColor: new THREE.Color("#ffb0b8"), side: THREE.DoubleSide, transparent: true, opacity: 0.9, emissive: new THREE.Color("#000000") }));
+    m.scale.set(3.5, 0.85, 2.1);
+    m.position.set(0, -3.05, 0);
     m.name = "Diaphragm"; m.userData = LUNG_INFO.Diaphragm;
     this.diaphragm = m;
     this.root.add(m);
@@ -434,7 +489,7 @@ export class LungScene {
       vtRef = Math.max(vtRef, v.volumeL);
     }
     // diaphragm descends with inspired volume
-    const dTarget = -3.3 - 0.34 * Math.min(1.4, v.volumeL / Math.max(0.35, this.vtGuess(v)));
+    const dTarget = -3.05 - 0.34 * Math.min(1.4, v.volumeL / Math.max(0.35, this.vtGuess(v)));
     this.diaY += (dTarget - this.diaY) * Math.min(1, dt * 14);
     this.diaphragm.position.y = this.diaY;
     this.hitDia.position.y = this.diaY;

@@ -12,8 +12,10 @@ const cross = (a: V3, b: V3): V3 => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[
 export type Segment = { a: V3; b: V3; gen: number };
 export type LobeAirways = { segments: Segment[]; terminals: V3[]; maxGen: number };
 
-export const MAX_GEN = 6;
-const INSIDE = -0.12; // keep segment ends this far inside the lobe surface
+/** Lobar bronchus = gen 0, then three clean dichotomous splits (segmental → subsegmental → terminal): 15 tapering segments per lobe. */
+export const MAX_GEN = 3;
+const INSIDE = -0.07; // keep segment ends this far inside the lobe surface
+const SPREAD = 0.55; // half-angle of each split (radians-ish, applied as a blend)
 
 export function generateAirways(lobe: LobeId, seed = 7): LobeAirways {
   const field = lobeField[lobe];
@@ -21,36 +23,48 @@ export function generateAirways(lobe: LobeId, seed = 7): LobeAirways {
   const centre = LOBE_CENTRE[lobe];
   const hilum = LOBE_HILUM[lobe];
   const segments: Segment[] = [];
-  const terminals: V3[] = [];
-  const first = norm(sub(centre, hilum));
+  const ends: { p: V3; d: V3 }[] = [];
   const grow = (pos: V3, dir: V3, len: number, gen: number) => {
+    // shorten until the branch end sits inside the lobe; give up on that branch only if it never fits
     let end: V3 | null = null;
-    let d = dir;
-    for (let attempt = 0; attempt < 8 && !end; attempt++) {
-      const cand = add(pos, d, len * (1 - attempt * 0.08));
-      if (field(cand) < INSIDE && field(add(pos, d, len * 0.5)) < INSIDE) end = cand;
-      else d = norm(add(norm(sub(centre, pos)), [rand() - 0.5, rand() - 0.5, rand() - 0.5], 0.9));
+    const toCentre = norm(sub(centre, pos));
+    for (let k = 0; k < 14 && !end; k++) {
+      const d2 = k === 0 ? dir : norm(add(dir, toCentre, k * 0.12)); // re-aim towards the lobe centre as it shortens
+      const cand = add(pos, d2, len * (1 - k * 0.045));
+      if (field(cand) < INSIDE && field(add(pos, d2, len * 0.5)) < INSIDE) { end = cand; dir = d2; }
     }
-    if (!end) { if (gen > 1) terminals.push(pos); return; }
+    if (!end && gen === 0) { end = add(pos, sub(centre, pos), 0.55); dir = norm(sub(centre, pos)); } // small lobes (RML): always seed the tree
+    if (!end) return;
     segments.push({ a: pos, b: end, gen });
-    if (gen >= MAX_GEN) { terminals.push(end); return; }
-    // two children, splayed about a random axis perpendicular to the parent, biased toward the lobe centre so the tree fills the volume
-    const ref: V3 = Math.abs(d[1]) < 0.9 ? [0, 1, 0] : [1, 0, 0];
-    const axis = norm(cross(d, add(ref, [rand() - 0.5, rand() - 0.5, rand() - 0.5], 0.8)));
-    const side = norm(cross(axis, d));
-    const spread = 0.42 + rand() * 0.2;
+    if (gen >= MAX_GEN) { ends.push({ p: end, d: dir }); return; }
+    // alternate the splitting plane every generation so the tree fills the lobe in 3D but stays tidy
+    const ref: V3 = gen % 2 === 0 ? [0, 0, 1] : [1, 0, 0];
+    const ref2: V3 = Math.abs(dir[0] * ref[0] + dir[1] * ref[1] + dir[2] * ref[2]) > 0.92 ? [0, 1, 0] : ref;
+    const side = norm(cross(dir, ref2));
     const toC = norm(sub(centre, end));
+    const spread = SPREAD * (1 - gen * 0.08);
     for (const sgn of [1, -1]) {
-      const cd = norm(add(add(d, side, sgn * spread), toC, 0.28));
-      grow(end, cd, len * (0.78 + rand() * 0.08), gen + 1);
+      const cd = norm(add(add(dir, side, sgn * spread), toC, 0.22 + (rand() - 0.5) * 0.06));
+      grow(end, cd, len * 0.82, gen + 1);
     }
   };
-  grow(hilum, first, 0.85, 0);
+  grow(hilum, norm(sub(centre, hilum)), 0.7, 0);
+  // alveolar clusters sit around each terminal bronchiole (fan of 4 about the branch axis)
+  const terminals: V3[] = [];
+  for (const { p, d } of ends) {
+    const ref: V3 = Math.abs(d[1]) < 0.9 ? [0, 1, 0] : [1, 0, 0];
+    const u = norm(cross(d, ref)), v = cross(d, u);
+    for (let k = 0; k < 4; k++) {
+      const ang = (k / 4) * Math.PI * 2 + rand() * 0.4;
+      const q = add(add(add(p, d, 0.16), u, Math.cos(ang) * 0.17), v, Math.sin(ang) * 0.17);
+      terminals.push(field(q) < -0.04 ? q : add(p, d, 0.05));
+    }
+  }
   return { segments, terminals, maxGen: MAX_GEN };
 }
 
-/** Radius by generation (lobar ≈ 0.1 → terminal ≈ 0.02). */
-export const airwayRadius = (gen: number) => 0.12 * Math.pow(0.77, gen);
+/** Radius by generation (lobar ≈ 0.11 → terminal ≈ 0.05); each segment tapers into the next generation. */
+export const airwayRadius = (gen: number) => 0.115 * Math.pow(0.72, gen);
 
 // ---- extrapulmonary airway (world space, not scaled with the lobes) ------------------------------------------------------------
 export const TRACHEA = { top: [0, 3.15, -0.08] as V3, carina: [0, 0.95, -0.08] as V3, radius: 0.27 };

@@ -61,8 +61,8 @@ for (const key of ["m", "d"]) {
     await p.locator("[data-testid=lung-play]").click(); // pause
     await p.waitForTimeout(300);
     const cand = [];
-    for (let t = t0 + 4000; t <= t0 + 13000; t += 100) { await seek(p, t); const s = await p.evaluate(() => window.LungSim.getState()); cand.push([t, s.volumeL]); }
-    const hi = cand.reduce((m, c) => (c[1] > m[1] ? c : m)); const lo = cand.filter(c => c[0] >= hi[0] - 4000 && c[0] <= hi[0] + 4000).reduce((m, c) => (c[1] < m[1] ? c : m));
+    for (let t = t0 + 4000; t <= t0 + 13000; t += 100) { await seek(p, t); const s = await p.evaluate(() => window.LungSim.getState()); cand.push([t, s.volumeL, s.phase]); }
+    const insp = cand.filter((c) => /insp/.test(c[2])); const hi = (insp.length ? insp : cand).reduce((m, c) => (c[1] > m[1] ? c : m)); const lo = cand.filter((c) => c[2] === "expiration" && Math.abs(c[0] - hi[0]) <= 4000).reduce((m, c) => (c[1] < m[1] ? c : m));
     console.log(key, mode, "t0", t0, "insp t", hi, "exp t", lo);
     for (const n of names) { await seek(p, n === "end-expiration" ? lo[0] : hi[0]); await p.waitForTimeout(500); await shot(p, `lung-${n}-${key}`); }
     await p.locator("[data-testid=lung-play]").click(); // resume
