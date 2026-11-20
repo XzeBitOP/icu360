@@ -2,6 +2,97 @@
   "description": "Daily Quiz sets shown on /quiz, keyed by date (YYYY-MM-DD, India time). Each set has 5 MCQs. New sets are added only after Kenil approves them in chat. The first set below is a sample drawn from existing module quiz items.",
   "sets": [
     {
+      "date": "2026-11-20",
+      "title": "Daily Quiz: 20 November 2026",
+      "questions": [
+        {
+          "id": "2026-11-20-1",
+          "stem": "A woman at 34 weeks has an eclamptic seizure. Best first drug?",
+          "options": [
+            "Diazepam 10 mg IV",
+            "Magnesium sulphate 4 g IV over 15-20 min",
+            "Phenytoin 20 mg/kg IV",
+            "Levetiracetam 60 mg/kg IV"
+          ],
+          "answerIndex": 1,
+          "explanation": "Magnesium is first-line for eclampsia (4 g IV load, then 1 g/h for 24 h) and beats diazepam and phenytoin at preventing further seizures.",
+          "reference": {
+            "label": "ACOG Practice Bulletin No. 222: Gestational hypertension and preeclampsia. Obstet Gynecol 2020; Magpie Trial, Lancet 2002",
+            "url": "https://doi.org/10.1097/AOG.0000000000003891"
+          },
+          "moduleId": "obstetric-critical-care"
+        },
+        {
+          "id": "2026-11-20-2",
+          "stem": "Chronic hyponatraemia, Na+ 112, in a malnourished man with alcohol use disorder and no severe symptoms. Maximum safe rise in Na+ in the first 24 h?",
+          "options": [
+            "6 mmol/L",
+            "8 mmol/L",
+            "12 mmol/L",
+            "18 mmol/L"
+          ],
+          "answerIndex": 1,
+          "explanation": "High osmotic-demyelination risk (alcohol, malnutrition, hypokalaemia): aim for 4-8 and never exceed 8 mmol/L in 24 h; the limit is 10 for others.",
+          "reference": {
+            "label": "Verbalis JG et al. Diagnosis, evaluation, and treatment of hyponatremia: expert panel recommendations. Am J Med 2013",
+            "url": "https://doi.org/10.1016/j.amjmed.2013.07.006"
+          },
+          "moduleId": "fluids-electrolytes"
+        },
+        {
+          "id": "2026-11-20-3",
+          "stem": "Seizures continue after two adequate doses of lorazepam. Correct next step?",
+          "options": [
+            "Levetiracetam 60 mg/kg IV (max 4.5 g)",
+            "Levetiracetam 500 mg IV",
+            "Phenytoin 5 mg/kg IV",
+            "Three more doses of lorazepam"
+          ],
+          "answerIndex": 0,
+          "explanation": "Second-line drugs must be given at full loading dose. In ESETT, levetiracetam 60 mg/kg, valproate 40 mg/kg and fosphenytoin 20 mg PE/kg each stopped seizures in about half of patients.",
+          "reference": {
+            "label": "Kapur J et al. Randomized trial of three anticonvulsant medications for status epilepticus (ESETT). N Engl J Med 2019",
+            "url": "https://doi.org/10.1056/NEJMoa1905795"
+          },
+          "moduleId": "neuro-emergencies"
+        },
+        {
+          "id": "2026-11-20-4",
+          "stem": "Cirrhosis with a variceal bleed, stable after resuscitation (Hb 7.8 g/dL, HR 102, BP 108/70). Best transfusion plan?",
+          "options": [
+            "Transfuse to Hb 10",
+            "Transfuse now to keep Hb > 9",
+            "Hold blood; transfuse at Hb ≤ 7, target 7-8",
+            "Give FFP to correct INR 1.9"
+          ],
+          "answerIndex": 2,
+          "explanation": "Restrictive transfusion: over-transfusion raises portal pressure and rebleeding. FFP isn't used to correct INR in cirrhosis.",
+          "reference": {
+            "label": "de Franchis R et al. Baveno VII: Renewing consensus in portal hypertension. J Hepatol 2022",
+            "url": "https://doi.org/10.1016/j.jhep.2021.12.022"
+          },
+          "moduleId": "gi-bleeding-abdominal-emergencies"
+        },
+        {
+          "id": "2026-11-20-5",
+          "stem": "A ventilated patient is CAM-ICU positive but calm and not distressed. Best approach?",
+          "options": [
+            "Scheduled haloperidol 5 mg IV 8-hourly",
+            "Find and treat causes, ABCDEF bundle, re-screen every shift",
+            "Deepen sedation with midazolam",
+            "Pre-emptive physical restraints"
+          ],
+          "answerIndex": 1,
+          "explanation": "Haloperidol and ziprasidone did not shorten delirium (MIND-USA) and PADIS 2025 does not recommend routine antipsychotics; benzodiazepines and restraints worsen it.",
+          "reference": {
+            "label": "PADIS 2025 guideline update. Crit Care Med 2025; Girard TD et al. MIND-USA, N Engl J Med 2018",
+            "url": "https://doi.org/10.1097/CCM.0000000000006574"
+          },
+          "moduleId": "analgesia-sedation-delirium"
+        }
+      ]
+    },
+    {
       "date": "2026-11-15",
       "title": "Daily Quiz: 15 November 2026",
       "questions": [
