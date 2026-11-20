@@ -32,7 +32,8 @@ test("ECG OS: loads, 3D heart ready, rhythm + HeartSim API", async ({ page }) =>
   // manual override is a labelled override
   await page.evaluate(() => window.HeartSim!.setChamberState({ lv: 0.9 }));
   await expect(page.getByText("Manual override").first()).toBeVisible();
-  await page.getByTestId("override-clear").click();
+  await page.getByTestId("override-clear").dispatchEvent("click"); // the control re-renders on every sim tick, so skip the actionability "stable" wait
+  await expect(page.getByTestId("override-clear")).toHaveCount(0);
   expect(errs).toEqual([]);
 });
 
