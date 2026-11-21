@@ -15,6 +15,8 @@ import { SavedButton } from "@/components/client/SavedButton";
 import { ShareButton } from "@/components/client/ShareButton";
 import { ViewTracker, TopicOpened } from "@/components/client/Tracking";
 import { prettyDate } from "@/lib/format";
+import { practiceLinks } from "@/lib/learn";
+import { LinkGrid } from "@/components/LearnBlocks";
 
 type Params = { moduleId: string; topicId: string };
 
@@ -91,6 +93,7 @@ export default async function TopicPage({ params }: { params: Promise<Params> })
         <Callouts b={b} which={["warn"]} />
         <div className="space-y-4 xl:hidden"><Callouts b={b} which={["pearl"]} /></div>
         {calcLinks}
+        <LinkGrid title="Practise interactively" links={practiceLinks(module.id)} />
         <div className="xl:hidden"><RefsCard refs={refs} /></div>
       </div>
       <aside className="hidden xl:block space-y-4">

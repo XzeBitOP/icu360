@@ -8,8 +8,8 @@ import { IconTile, Views, muted } from "@/components/ui";
 import { Icon } from "@/components/Icon";
 
 export const metadata: Metadata = pageMeta({
-  title: "Tools and calculators",
-  description: "ICU calculators and interactive tools: infusion rates, ABG interpreter, Ventilator OS, ECG OS, code timer and 50 bedside calculators.",
+  title: "ICU calculators online: P/F ratio, driving pressure, SOFA, GCS and more",
+  description: "Free ICU calculators for interns and junior doctors: infusion rates, P/F ratio, driving pressure, tidal volume, anion gap, SOFA, GCS, NEWS2 and more, plus an ABG interpreter and ventilator and ECG simulators.",
   path: "/tools",
 });
 

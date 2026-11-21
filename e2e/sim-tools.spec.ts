@@ -10,7 +10,7 @@ const noHorizontalScroll = (page: Page) => page.evaluate(() => document.document
 test("ECG OS: loads, 3D heart ready, rhythm + HeartSim API", async ({ page }) => {
   const errs = errors(page);
   await page.goto("/tools/ecg-os");
-  await expect(page.getByRole("heading", { name: "ECG OS" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: "ECG OS", exact: true })).toBeVisible();
   await expect(page.getByText("not clinically validated").first()).toBeVisible();
   await expect(page.getByTestId("heart-3d")).toHaveAttribute("data-state", "ready", { timeout: 60_000 });
   expect(await noHorizontalScroll(page)).toBe(true);
@@ -42,7 +42,7 @@ test("Ventilator OS: loads, 3D lungs ready, LungSim API, old route redirects", a
   const res = await page.goto("/tools/ventilator");
   expect(page.url()).toContain("/tools/ventilator-os");
   expect(res?.ok()).toBe(true);
-  await expect(page.getByRole("heading", { name: "Ventilator OS" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: "Ventilator OS", exact: true })).toBeVisible();
   await expect(page.getByText("not clinically validated").first()).toBeVisible();
   await expect(page.getByTestId("lung-3d")).toHaveAttribute("data-state", "ready", { timeout: 60_000 });
   expect(await noHorizontalScroll(page)).toBe(true);
@@ -67,4 +67,25 @@ test("old Ventilator playground name is gone from Tools and search", async ({ pa
   await expect(page.getByText("Ventilator OS").first()).toBeVisible();
   await expect(page.getByText("ECG OS").first()).toBeVisible();
   await expect(page.getByText("Ventilator playground")).toHaveCount(0);
+});
+
+test("learn guides and simulator FAQs are server-rendered and crawlable", async ({ page, request }) => {
+  for (const [path, h1, text] of [
+    ["/learn", "Learn critical care", "ICU learning"],
+    ["/learn/ventilator", "Learn mechanical ventilation", "Driving pressure"],
+    ["/learn/ecg", "Learn ECG interpretation", "PR interval"],
+    ["/learn/abg", "ABG interpretation, step by step", "Winter's formula"],
+  ] as const) {
+    const res = await request.get(path);
+    expect(res.ok()).toBe(true);
+    const html = await res.text();
+    expect(html).toContain(text);
+    expect(html).not.toContain("noindex");
+    await page.goto(path);
+    await expect(page.getByRole("heading", { level: 1, name: h1, exact: true })).toBeVisible();
+    expect(await noHorizontalScroll(page)).toBe(true);
+  }
+  const vent = await (await request.get("/tools/ventilator-os")).text();
+  expect(vent).toContain("Is there a free ventilator simulator online?");
+  expect(vent).toContain('"FAQPage"');
 });

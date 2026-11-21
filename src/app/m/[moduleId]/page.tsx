@@ -13,6 +13,7 @@ import { ShareButton } from "@/components/client/ShareButton";
 import { ViewTracker } from "@/components/client/Tracking";
 import { ModuleProgress, TopicTick } from "@/components/client/ModuleProgress";
 import { Icon } from "@/components/Icon";
+import { practiceLinks } from "@/lib/learn";
 
 type Params = { moduleId: string };
 export function generateStaticParams(): Params[] {
@@ -37,6 +38,7 @@ export default async function ModulePage({ params }: { params: Promise<Params> }
   const section = getSections().find((s) => s.id === m.section.id)!;
   const related = m.relatedModules.map((id) => getModule(id)).filter((x) => !!x);
   const quizCount = m.topics.reduce((n, t) => n + t.quiz.length, 0);
+  const practice = practiceLinks(m.id);
 
   return (
     <>
@@ -110,6 +112,16 @@ export default async function ModulePage({ params }: { params: Promise<Params> }
               <div className="flex-1"><p className="display font-semibold text-[17px]">Module quiz</p><p className="text-[13px] text-white/75">{quizCount} questions · pass mark 70%</p></div>
               <ChevronRight className="w-5 h-5" strokeWidth={2.2} aria-hidden="true" />
             </Link>
+            {practice.length ? (
+              <section className="glass rounded-[24px] p-4">
+                <h2 className="display text-[16px] font-semibold mb-2">Practise interactively</h2>
+                <ul>
+                  {practice.map((l) => (
+                    <li key={l.href}><Link href={l.href} className="flex items-center gap-2.5 py-2 text-[13.5px] font-medium"><Icon name={l.icon} className="w-4 h-4 text-brand-600 dark:text-glow-teal" /><span className="flex-1 min-w-0"><span className="block">{l.title.replace(/^Open /, "")}</span><span className={`block text-[12px] font-normal ${muted}`}>{l.sub}</span></span></Link></li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
             {related.length ? (
               <section className="glass rounded-[24px] p-4">
                 <h2 className="display text-[16px] font-semibold mb-2">Related modules</h2>

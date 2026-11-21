@@ -7,20 +7,47 @@ import { Greeting } from "@/components/client/Greeting";
 import { HomeFavourites, QuizAndProgress, type FavDefault } from "@/components/client/HomeWidgets";
 import { Chip, H2, IconTile, Views, muted } from "@/components/ui";
 import { Icon } from "@/components/Icon";
-import { QUICK, SITE } from "@/lib/site";
+import { QUICK } from "@/lib/site";
 import { istDate, prettyDate } from "@/lib/format";
-import { DEFAULT_TITLE, homeJsonLd, pageMeta } from "@/lib/seo";
+import { HOME_DESCRIPTION, HOME_TITLE, homeJsonLd, pageMeta } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   ...pageMeta({
-    title: DEFAULT_TITLE,
-    description: SITE.description,
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
     path: "/",
   }),
-  title: { absolute: DEFAULT_TITLE },
+  title: { absolute: HOME_TITLE },
 };
+
+const LEARN = [
+  { href: "/learn/ventilator", icon: "gauge", t: "Learn ventilation", s: "Modes, settings, waveforms" },
+  { href: "/learn/ecg", icon: "heart-pulse", t: "Learn ECG", s: "Waves, intervals, blocks" },
+  { href: "/learn/abg", icon: "droplets", t: "Learn ABG", s: "Five steps, with formulas" },
+  { href: "/learn", icon: "graduation-cap", t: "All ICU learning", s: "Guides and simulators" },
+];
+
+function LearnSection({ cols }: { cols: string }) {
+  return (
+    <section>
+      <H2 link="All guides" href="/learn">Learn by doing</H2>
+      <p className={`text-[13px] ${muted} px-1 -mt-1.5 mb-3 leading-relaxed`}>Free beginner guides to mechanical ventilation, ECG and ABG, each linked to an interactive simulator or calculator.</p>
+      <div className={`grid ${cols} gap-3`}>
+        {LEARN.map((t) => (
+          <Link key={t.href} href={t.href} className="glass rounded-[22px] p-4 flex items-center gap-3">
+            <IconTile name={t.icon} isz="w-[18px] h-[18px]" />
+            <div className="min-w-0 flex-1">
+              <p className="font-semibold text-[13.5px] leading-snug">{t.t}</p>
+              <p className={`text-[12px] ${muted} leading-snug`}>{t.s}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
 
 const DEFAULT_FAVS: FavDefault[] = [
   { href: "/m/sepsis-septic-shock/hour-1-bundle", title: "Septic shock", sub: "Bedside card", icon: "heart-pulse" },
@@ -171,6 +198,8 @@ export default function Home() {
             </Link>
           </section>
 
+          <LearnSection cols="grid-cols-1 min-[380px]:grid-cols-2" />
+
           <QuizAndProgress hasQuizToday={hasQuizToday} />
 
           <section>
@@ -242,6 +271,7 @@ export default function Home() {
               ))}
             </div>
           </section>
+          <LearnSection cols="grid-cols-2" />
           <QuizAndProgress hasQuizToday={hasQuizToday} />
         </div>
         <aside className="space-y-5">
