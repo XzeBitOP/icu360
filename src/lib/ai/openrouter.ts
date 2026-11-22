@@ -29,7 +29,7 @@ export function requestBody(messages: ChatMessage[], models: string[]) {
     messages,
     stream: true,
     max_tokens: 1200,
-    temperature: 0.2,
+    temperature: 0.1,
     reasoning: { effort: "low", exclude: true },
   };
 }
