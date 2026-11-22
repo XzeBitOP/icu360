@@ -1,6 +1,7 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
-import { Sparkles, X, Send, ShieldAlert, RotateCcw } from "lucide-react";
+import { X, Send, ShieldAlert, RotateCcw } from "lucide-react";
+import { AiMascot } from "../AiMascot";
 import { useEffect } from "react";
 import { create } from "zustand";
 import { Block } from "@/components/Markdown";
@@ -89,12 +90,13 @@ export function AiButton({ context, getContext, action, label = "Ask AI", varian
     const c = getContext ? getContext() : context;
     if (c) useAiTutor.getState().show(c, action);
   };
+  const mascotLabel = /\bAI\b/.test(label) ? null : "Ask AI";
   if (variant === "sim")
-    return <button type="button" className={`btn ${className}`} onClick={onClick} data-testid={testId ?? "ai-button"} aria-haspopup="dialog"><Sparkles style={{ width: 14, height: 14, display: "inline", verticalAlign: "-2px", marginRight: 4 }} aria-hidden="true" />{label}</button>;
+    return <button type="button" className={`btn ${className}`} onClick={onClick} data-testid={testId ?? "ai-button"} aria-haspopup="dialog"><AiMascot size={15} label={mascotLabel} className="inline-block align-[-3px] mr-1" />{label}</button>;
   return (
     <button type="button" onClick={onClick} data-testid={testId ?? "ai-button"} aria-haspopup="dialog"
       className={`glass-chip inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12.5px] font-semibold text-brand-700 dark:text-glow-teal shrink-0 ${className}`}>
-      <Sparkles className="w-3.5 h-3.5" strokeWidth={2.2} aria-hidden="true" />{label}
+      <AiMascot size={16} label={mascotLabel} />{label}
     </button>
   );
 }
@@ -120,7 +122,7 @@ export function AiSheet() {
           <motion.div className="glass-strong w-full sm:max-w-[560px] rounded-t-[28px] sm:rounded-[28px] flex flex-col max-h-[88vh]" style={{ paddingBottom: "max(16px, env(safe-area-inset-bottom))" }}
             initial={{ y: 40, opacity: 0.6 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 40, opacity: 0 }} transition={{ type: "spring", stiffness: 420, damping: 36 }} onClick={(e) => e.stopPropagation()}>
             <div className="flex items-start gap-3 px-5 pt-5">
-              <span className="w-10 h-10 rounded-[14px] grid place-items-center text-white shrink-0" style={grad}><Sparkles className="w-5 h-5" strokeWidth={2} aria-hidden="true" /></span>
+              <AiMascot size={40} active={busy} label="Ask AI" />
               <div className="min-w-0 flex-1">
                 <p className={`text-[11.5px] uppercase tracking-[.1em] font-semibold ${muted}`}>AI tutor</p>
                 <p className="display font-semibold text-[16.5px] leading-snug line-clamp-2">{ctx.title}</p>
@@ -140,7 +142,7 @@ export function AiSheet() {
                 {status === "loading" ? (
                   <div className="space-y-2 animate-pulse" aria-label="Thinking">
                     <div className="h-3 rounded-full bg-ink-300/60 dark:bg-white/10 w-11/12" /><div className="h-3 rounded-full bg-ink-300/60 dark:bg-white/10 w-9/12" /><div className="h-3 rounded-full bg-ink-300/60 dark:bg-white/10 w-10/12" />
-                    <p className={`text-[12.5px] ${muted} pt-1`}>Reading only this section…</p>
+                    <p className={`text-[12.5px] ${muted} pt-1 flex items-center gap-1.5`}><AiMascot size={16} active label={null} />Reading only this section…</p>
                   </div>
                 ) : (
                   <Block text={answer} className="text-[14px] leading-[1.55]" />
