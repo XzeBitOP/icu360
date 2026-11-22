@@ -45,7 +45,7 @@ function SeoBlock() {
   const practise = g.sections.filter((s) => s.id === "practise").map((s) => ({ ...s, h: "What you can learn in Ventilator OS" }));
   return (
     <div className="space-y-5 max-w-[860px]">
-      <GuideSections sections={practise} />
+      <GuideSections sections={practise} guideTitle="Ventilator OS: how to practise" />
       <LinkGrid title="Learn ventilation step by step" links={[{ href: g.path, title: "Learn mechanical ventilation", sub: "Free guide: modes, settings, pressures, waveforms", icon: "book-open" }, ...g.links.slice(0, 3)]} />
       <FaqList faqs={VENTILATOR_FAQS} />
     </div>

@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import type { Calculator } from "@/lib/content-types";
 import { evaluate } from "@/lib/formula";
 import { Stepper, stepFor } from "./Stepper";
+import { AiButton } from "./ai/AiTutor";
+import { calculatorText, ctx } from "@/lib/ai/context";
 
 const muted = "text-ink-500 dark:text-night-muted";
 export const BAND: Record<string, { bg: string; fg: string }> = {
@@ -96,6 +98,7 @@ export function CalculatorView({ calc }: { calc: Calculator }) {
         );
       })}
       {allSelect ? <div className="h-[110px]" aria-hidden="true" /> : hero}
+      <div className="flex justify-end -mt-2"><AiButton getContext={() => ctx("calculator", calc.name, calculatorText(calc, vals, result, band?.label))} label="Explain this result" testId="ai-calculator" /></div>
       {allSelect ? <div className="fixed inset-x-3 bottom-[104px] calc-hero-safe lg:bottom-6 lg:left-auto lg:right-8 lg:w-[420px] z-20 max-w-[560px] mx-auto lg:mx-0">{hero}</div> : null}
       {calc.interpretation.length ? (
         <section className="glass-strong rounded-[22px] overflow-hidden">

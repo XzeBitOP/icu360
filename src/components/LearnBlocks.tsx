@@ -4,6 +4,8 @@ import type { Faq, GuideLink, GuideSection } from "@/lib/learn";
 import { IconTile, muted } from "./ui";
 import { Icon } from "./Icon";
 import { Block } from "./Markdown";
+import { AiButton } from "@/components/client/ai/AiTutor";
+import { ctx, guideSectionText } from "@/lib/ai/context";
 
 /** Hero-style call to action (same look as the Tools page's lead card). */
 export function CtaCard({ link }: { link: GuideLink }) {
@@ -42,12 +44,15 @@ export function LinkGrid({ title, links }: { title: string; links: GuideLink[] }
   );
 }
 
-export function GuideSections({ sections }: { sections: GuideSection[] }) {
+export function GuideSections({ sections, guideTitle }: { sections: GuideSection[]; guideTitle?: string }) {
   return (
     <>
       {sections.map((s) => (
         <section key={s.id} id={s.id} className="glass rounded-[24px] p-4 lg:p-5 scroll-mt-24">
-          <h2 className="display text-[18px] font-semibold mb-1">{s.h}</h2>
+          <div className="flex items-start gap-3 mb-1">
+            <h2 className="display text-[18px] font-semibold flex-1">{s.h}</h2>
+            <AiButton context={ctx("guide", s.h, guideSectionText(guideTitle ?? s.h, s))} testId="ai-guide" />
+          </div>
           <Block text={s.body} className="text-[14.5px] leading-[1.6]" />
         </section>
       ))}

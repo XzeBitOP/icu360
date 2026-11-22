@@ -36,6 +36,19 @@ Copy `.env.example` to `.env.local`. Everything is optional; the site builds and
 | `KV_REST_API_URL` / `KV_REST_API_TOKEN` | same (fallback) | Added automatically by the Vercel Marketplace "Upstash for Redis" integration. Used when the `UPSTASH_*` names are not set |
 | `STATS_PASSWORD` | `/stats` | Long random string. `/stats` is disabled if unset |
 | `NEXT_PUBLIC_SITE_URL` | metadata, share links | Defaults to `https://icu360.in` |
+| `OPENROUTER_API_KEY` | `/api/ai` | Server-only. The AI tutor is off (friendly message) when unset |
+| `OPENROUTER_MODEL` | `/api/ai` | Primary model. Default `nvidia/nemotron-3-ultra-550b-a55b:free` |
+| `OPENROUTER_FALLBACK_MODELS` | `/api/ai` | Comma list, sent as OpenRouter `models` fallback (max 3 total) |
+| `AI_DAILY_LIMIT` | `/api/ai` | Answers per IP per IST day. Default 20 |
+
+## AI tutor
+
+Every learning block has a small **Ask AI** button (algorithms, topic Bedside and Notes tabs, module overviews, `/learn` guide sections, news items, calculators, the infusion calculator, ABG, antimicrobial cards, quiz answers, and "Explain this" in ECG OS and Ventilator OS). One panel (`AiSheet`, mounted in the root layout) serves them all.
+
+- **Context text only.** Each page builds the plain text of its own block with the providers in `src/lib/ai/context.ts` (e.g. `algorithmText`, `quizText`, ECG/ventilator state snapshots). The model never sees images or other pages.
+- **Server:** `POST /api/ai` validates `{ action, kind, title, context, question? }` (zod, strict, max lengths), applies a per-IP daily limit, and streams plain text from OpenRouter with a 45 s timeout and the `models` fallback list. The key never reaches the browser.
+- **Safety prompt** (`src/lib/ai/prompt.ts`): answer only from the supplied text, say "That isn't covered in this section" otherwise, no new doses, no patient-specific advice, concise bullets.
+- **Rate limit:** uses Upstash Redis when configured (shared across instances); otherwise an in-memory counter per serverless instance, which resets on cold starts and is only a soft limit.
 
 ## Content
 

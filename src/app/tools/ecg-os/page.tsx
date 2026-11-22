@@ -42,7 +42,7 @@ function SeoBlock() {
   const practise = g.sections.filter((s) => s.id === "practise").map((s) => ({ ...s, h: "What you can learn in ECG OS" }));
   return (
     <div className="space-y-5 max-w-[860px]">
-      <GuideSections sections={practise} />
+      <GuideSections sections={practise} guideTitle="ECG OS: how to practise" />
       <LinkGrid title="Learn ECG step by step" links={[{ href: g.path, title: "Learn ECG interpretation", sub: "Free guide: waves, intervals, a systematic read", icon: "book-open" }, ...g.links.slice(0, 3)]} />
       <FaqList faqs={ECG_FAQS} />
     </div>

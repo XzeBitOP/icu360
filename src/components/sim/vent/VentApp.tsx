@@ -15,6 +15,8 @@ import { LUNG_MODES, apiSettingsPatch, lungVisual } from "@/sim/vent";
 import { LOBE_KEYS } from "@/sim/resp";
 import { Loops, Waveforms } from "./Waves";
 import { AlveolusView, LungView } from "./LungView";
+import { AiButton } from "@/components/client/ai/AiTutor";
+import { ctx, ventText } from "@/lib/ai/context";
 
 const LungView3D = dynamic(() => import("@/components/sim3d/LungView3D"), { ssr: false, loading: () => <div className="sim3d-frame" data-testid="lung-3d" data-state="loading" /> });
 
@@ -62,6 +64,42 @@ const PHASE_TEXT: Record<BreathPhase, string> = {
   apnea_backup: "Apnoea backup breath.",
 };
 
+/** Text snapshot of the ventilator simulator for the AI tutor (the model cannot see the waveforms). */
+function ventAiContext() {
+  const st = useVentStore.getState();
+  const e = getEngine();
+  const s = st.settings;
+  const p = st.patient;
+  const phase = e.samples.last()?.phase ?? "baseline";
+  const vc = s.mode === "VC-A/C";
+  const phaseText = phase === "inspiration"
+    ? (vc ? `Volume control: set flow (${s.flowPattern === "square" ? "constant" : "decelerating"}, ${s.inspFlowLpm} L/min) until ${s.vtMl} mL is delivered; pressure is the consequence.` : `Pressure control: airway pressure held at PEEP + ${s.pInspCmH2O} cmH₂O for ${s.tiSec.toFixed(1)} s; volume depends on compliance and resistance.`)
+    : PHASE_TEXT[phase];
+  const b = e.breaths[e.breaths.length - 1];
+  const pv = lastValidPlateau(e.breaths, mechanicsEpoch())?.b;
+  const g = (v: number | null | undefined, d = 0, u = "") => (v === null || v === undefined || !Number.isFinite(v) ? "n/a" : `${v.toFixed(d)}${u}`);
+  const flags: string[] = [];
+  if (pv?.pplat.value && pv.pplat.value > 30) flags.push(`Pplat ${pv.pplat.value.toFixed(0)} cmH₂O is above the commonly taught 30 cmH₂O limit.`);
+  if (pv?.drivingPressure.value && pv.drivingPressure.value > 15) flags.push(`Driving pressure ${pv.drivingPressure.value.toFixed(0)} cmH₂O is above the commonly taught 15 cmH₂O.`);
+  if (b && b.vtPerPbwMlPerKg > 8) flags.push(`VT ${b.vtPerPbwMlPerKg.toFixed(1)} mL/kg PBW is above the commonly taught 6–8 mL/kg.`);
+  if (b?.incompleteExpiration) flags.push("Expiratory flow had not returned to zero before the next breath (gas trapping).");
+  const caseName = VENTILATOR_PRESETS[st.caseId]?.case.name ?? st.caseId;
+  return ctx("ventilator", `Ventilator OS: ${s.mode}, ${caseName}`, ventText({
+    caseName, mode: s.mode,
+    settings: vc
+      ? { "VT (mL)": s.vtMl, "RR (/min)": s.rr, "PEEP (cmH₂O)": s.peepCmH2O, FiO2: s.fio2, "Insp flow (L/min)": s.inspFlowLpm, "Flow pattern": s.flowPattern, "Trigger": s.triggerType }
+      : { "Pinsp above PEEP (cmH₂O)": s.pInspCmH2O, "Ti (s)": s.tiSec, "RR (/min)": s.rr, "PEEP (cmH₂O)": s.peepCmH2O, FiO2: s.fio2, "Trigger": s.triggerType },
+    patient: { "Lung compliance (mL/cmH₂O)": Math.round(p.complianceLPerCmH2O * 1000), "Airway resistance (cmH₂O/L/s)": p.airwayResistanceCmH2OPerLPerSec, "PBW (kg)": Math.round(p.predictedBodyWeightKg), "Patient effort (cmH₂O)": p.musclePressureAmplitudeCmH2O },
+    phase: phase.replace("_", " "), phaseText,
+    measured: b ? {
+      Ppeak: g(b.ppeak, 1, " cmH₂O"), Pplat: pv ? g(pv.pplat.value, 1, " cmH₂O") : "not measured (needs an inspiratory hold)",
+      "Driving pressure": pv ? g(pv.drivingPressure.value, 1, " cmH₂O") : "needs Pplat", "VTe": g(b.vteL * 1000, 0, " mL"), "VT/PBW": g(b.vtPerPbwMlPerKg, 1, " mL/kg"),
+      "Minute ventilation": g(b.mvLPerMin, 1, " L/min"), "I:E": `1:${g(b.ieRatio, 1)}`, "Mean Paw": g(b.meanPaw, 1, " cmH₂O"), "Breath trigger": b.triggeredBy,
+    } : undefined,
+    flags, alarm: e.alarm,
+  }), ["explain_state", "summarise"]);
+}
+
 function Live() {
   const t = useVentStore((s) => s.uiTimeMs);
   const { settings } = useVentStore();
@@ -103,6 +141,7 @@ function Explain() {
         <dt className="faint">Limit</dt><dd style={{ margin: 0 }}>{m.limit.description}</dd>
         <dt className="faint">Cycle</dt><dd style={{ margin: 0 }}>{m.cycle.description}</dd>
       </dl>
+      <div style={{ marginTop: 10 }}><AiButton variant="sim" getContext={ventAiContext} action="explain_state" label="Explain this" testId="ai-vent" /></div>
     </GlassCard>
   );
 }

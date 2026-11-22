@@ -4,6 +4,8 @@ import { BookOpen, ExternalLink, Newspaper } from "lucide-react";
 import { useState } from "react";
 import type { NewsItem } from "@/lib/content";
 import { prettyDate } from "@/lib/format";
+import { AiButton } from "./ai/AiTutor";
+import { ctx, newsText } from "@/lib/ai/context";
 
 const muted = "text-ink-500 dark:text-night-muted";
 const tagCls: Record<string, string> = { Guideline: "text-brand-700 dark:text-glow-teal", Trial: "text-info dark:text-info-bright", India: "text-warn dark:text-warn-bright", "Drug safety": "text-crit dark:text-crit-bright", Definition: "text-pearl dark:text-pearl-bright", Review: "text-pearl dark:text-pearl-bright" };
@@ -42,7 +44,10 @@ export function NewsFeed({ items }: { items: (NewsItem & { moduleTitle?: string 
             {n.moduleId && n.moduleTitle ? (
               <Link href={`/m/${n.moduleId}`} className="flex items-center gap-1.5 text-brand-700 dark:text-glow-teal font-semibold min-w-0"><BookOpen className="w-3.5 h-3.5 shrink-0" strokeWidth={2} aria-hidden="true" /><span className="truncate">{n.moduleTitle}</span></Link>
             ) : <span />}
-            <a href={n.url} target="_blank" rel="noopener noreferrer" className={`flex items-center gap-1 ${muted} shrink-0 ml-3`}>Source<ExternalLink className="w-3.5 h-3.5" strokeWidth={2} aria-hidden="true" /></a>
+            <div className="flex items-center gap-3 shrink-0 ml-3">
+              <AiButton context={ctx("news", n.title, newsText(n))} label="AI" testId="ai-news" />
+              <a href={n.url} target="_blank" rel="noopener noreferrer" className={`flex items-center gap-1 ${muted}`}>Source<ExternalLink className="w-3.5 h-3.5" strokeWidth={2} aria-hidden="true" /></a>
+            </div>
           </div>
         </article>
       ))}

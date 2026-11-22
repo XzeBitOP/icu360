@@ -37,7 +37,7 @@ export default async function GuidePage({ params }: { params: Promise<Params> })
             {g.sections.map((s) => <li key={s.id}><a href={`#${s.id}`} className="text-brand-700 dark:text-glow-teal">{s.h}</a></li>)}
           </ul>
         </nav>
-        <GuideSections sections={g.sections} />
+        <GuideSections sections={g.sections} guideTitle={g.h1} />
         {g.cta ? <CtaCard link={g.cta} /> : null}
         <LinkGrid title="Go deeper on ICU 360" links={g.links} />
         <FaqList faqs={g.faqs} />

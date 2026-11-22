@@ -9,6 +9,7 @@ import { SITE } from "@/lib/site";
 import { AUTHOR, DEFAULT_TITLE, TITLE_TEMPLATE, googleVerification } from "@/lib/seo";
 import { Footer } from "@/components/Footer";
 import { StartupSplash } from "@/components/StartupSplash";
+import { AiSheet } from "@/components/client/ai/AiTutor";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const interTight = Inter_Tight({ subsets: ["latin"], weight: ["500", "600", "700"], variable: "--font-inter-tight", display: "swap" });
@@ -89,6 +90,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <TabBar />
         <EdgeSwipeBack />
         <PwaSetup />
+        <AiSheet />
       </body>
     </html>
   );

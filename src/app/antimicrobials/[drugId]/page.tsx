@@ -6,6 +6,8 @@ import { JsonLd } from "@/components/JsonLd";
 import { Syringe } from "lucide-react";
 import type { ReactNode } from "react";
 import { PageHeader, Main } from "@/components/Shell";
+import { AiButton } from "@/components/client/ai/AiTutor";
+import { ctx, drugText } from "@/lib/ai/context";
 import { Callout, Chip, muted } from "@/components/ui";
 import { SavedButton } from "@/components/client/SavedButton";
 import { ShareButton } from "@/components/client/ShareButton";
@@ -80,6 +82,7 @@ export default async function AntimicrobialPage({ params }: { params: Promise<Pa
       />
       <Main className="space-y-4 max-w-[760px]">
         <Callout kind="warn" title="Verify before prescribing" text="Verify doses against local formulary and current labels." />
+        <div className="flex justify-end -my-1"><AiButton context={ctx("drug", a.name, drugText(a))} label="Ask AI about this drug" testId="ai-drug" /></div>
         {inv ? (
           <Callout kind="info" title="Investigational" text={`${a.approvalStatus}. Not approved for clinical use, so no dose is given.`} />
         ) : (

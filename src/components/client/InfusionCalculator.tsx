@@ -3,6 +3,8 @@ import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { TriangleAlert } from "lucide-react";
 import { Stepper } from "./Stepper";
+import { AiButton } from "./ai/AiTutor";
+import { ctx } from "@/lib/ai/context";
 
 const muted = "text-ink-500 dark:text-night-muted";
 
@@ -94,6 +96,21 @@ export function InfusionCalculator({ initialDrug = "noradrenaline" }: { initialD
           <div><p className="text-white/65">50 mL syringe lasts</p><p className="mt-0.5"><span className="font-mono font-semibold text-[16px]">{Number.isFinite(lasts) ? `≈ ${lasts.toFixed(1)}` : "–"}</span><span className="text-white/80"> h</span></p></div>
         </div>
       </motion.section>
+
+      <div className="flex justify-end -mt-2">
+        <AiButton testId="ai-calculator" label="Explain this result" getContext={() => ctx("calculator", `${drug.name} infusion calculator`, [
+          `Infusion calculator: ${drug.name} (50 mL syringe)`,
+          `Direction: ${mode === "dose" ? "dose to pump rate" : "pump rate to dose"}`,
+          `Concentration: ${conc} mcg/mL${custom ? " (custom)" : ""}`,
+          `Weight: ${weight} kg`,
+          mode === "dose" ? `Dose entered: ${dose} mcg/kg/min` : `Pump rate entered: ${rate} mL/h`,
+          `Result: pump rate ${curRate.toFixed(1)} mL/h; dose ${curDose.toFixed(dec)} mcg/kg/min; total ${(curDose * weight).toFixed(1)} mcg/min; 50 mL syringe lasts ${Number.isFinite(lasts) ? lasts.toFixed(1) + " h" : "n/a"}`,
+          `Formula: ${mode === "dose" ? "mL/h = dose × weight × 60 ÷ concentration" : "dose = mL/h × concentration ÷ (weight × 60)"}`,
+          `Usual range shown in the app: ${drug.range[0]}–${drug.range[1]} mcg/kg/min${outOfRange && curDose > 0 ? " (current dose is OUTSIDE this range: re-check and discuss with senior)" : ""}`,
+          `App hint: ${drug.hint}`,
+          "Reminder shown: confirm the concentration matches the syringe label in your unit before starting the pump.",
+        ].join("\n"), ["explain_state", "summarise"])} />
+      </div>
 
       {outOfRange && curDose > 0 ? (
         <div className="callout warn rounded-[20px] pl-5 pr-4 py-3 flex items-start gap-2"><span className="bar bg-warn-bright" /><TriangleAlert className="w-4 h-4 mt-0.5 text-warn dark:text-warn-bright shrink-0" aria-hidden="true" /><p className="text-[13.5px] font-medium">Outside the usual range for {drug.name} ({drug.range[0]}–{drug.range[1]} mcg/kg/min). Re-check the numbers and discuss with your senior.</p></div>

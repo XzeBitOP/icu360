@@ -4,6 +4,8 @@ import { Check, X, ChevronRight, RotateCcw, Trophy, ExternalLink } from "lucide-
 import Link from "next/link";
 import { useState } from "react";
 import { recordDaily, recordQuiz, PASS_MARK, useStore } from "@/lib/store";
+import { AiButton } from "./ai/AiTutor";
+import { ctx, quizText } from "@/lib/ai/context";
 
 export interface QuizQ { id: string; stem: string; options: string[]; answerIndex: number; explanation: string; source?: { label: string; href: string; external?: boolean } }
 
@@ -100,6 +102,13 @@ export function QuizRunner({ questions, moduleId, dailyDate, doneHref, doneLabel
                     <Link href={q.source.href} className="mt-2 inline-flex items-center gap-1 text-[12.5px] font-semibold text-brand-600 dark:text-glow-teal">{q.source.label}<ChevronRight className="w-3.5 h-3.5" aria-hidden="true" /></Link>
                   )
                 ) : null}
+                <div className="mt-2.5">
+                  {picked === q.answerIndex ? (
+                    <AiButton getContext={() => ctx("quiz", `Question ${i + 1}`, quizText({ ...q, sourceLabel: q.source?.label }, picked), ["explain"])} action="explain" label="Explain more" testId="ai-quiz-explain" />
+                  ) : (
+                    <AiButton getContext={() => ctx("quiz", `Question ${i + 1}`, quizText({ ...q, sourceLabel: q.source?.label }, picked), ["why_wrong", "explain"])} action="why_wrong" label="Why was I wrong?" testId="ai-why-wrong" />
+                  )}
+                </div>
               </motion.div>
             )}
           </AnimatePresence>

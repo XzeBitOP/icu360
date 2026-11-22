@@ -2,6 +2,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useMemo, useState } from "react";
 import { interpretAbg, validateAbg, type AbgInput, type Tone } from "@/lib/abg";
+import { AiButton } from "./ai/AiTutor";
+import { abgText, ctx } from "@/lib/ai/context";
 
 const muted = "text-ink-500 dark:text-night-muted";
 const EXAMPLES: { name: string; v: Record<string, string> }[] = [
@@ -78,6 +80,7 @@ export function AbgInterpreter() {
               <div><p className="text-white/65">Delta ratio</p><p className="font-mono font-semibold text-[16px] mt-0.5">{res.deltaRatio !== undefined ? res.deltaRatio.toFixed(2) : "–"}</p></div>
             </div>
           </motion.section>
+          <div className="flex justify-end -mt-2"><AiButton getContext={() => ctx("abg", `ABG: ${res.diagnoses[0] ?? "interpretation"}`, abgText(clean!, res))} label="Explain this ABG" testId="ai-abg" /></div>
           <ol className="space-y-3">
             <AnimatePresence initial={false}>
               {res.steps.map((s, i) => {

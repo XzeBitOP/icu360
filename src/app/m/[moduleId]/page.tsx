@@ -5,6 +5,8 @@ import { pageMeta } from "@/lib/seo";
 import { ChevronRight, GitBranch, GraduationCap, Pill } from "lucide-react";
 import { getModules, getModule, getViews, getSections } from "@/lib/content";
 import { PageHeader, Main } from "@/components/Shell";
+import { AiButton } from "@/components/client/ai/AiTutor";
+import { ctx, moduleText } from "@/lib/ai/context";
 import { Views, muted, Chip } from "@/components/ui";
 import { Inline } from "@/components/Markdown";
 import { RefsCard } from "@/components/content";
@@ -51,7 +53,10 @@ export default async function ModulePage({ params }: { params: Promise<Params> }
         meta={<div className="mt-3 flex items-center gap-2"><Views n={views.modules[m.id]} /><Chip>Phase {m.phase}</Chip></div>}
       />
       <Main className="space-y-6">
-        <p className={`text-[14.5px] leading-relaxed ${muted} px-1 max-w-[760px]`}>{m.summary}</p>
+        <div className="flex items-start gap-3 px-1 max-w-[760px]">
+          <p className={`text-[14.5px] leading-relaxed ${muted} flex-1`}>{m.summary}</p>
+          <AiButton context={ctx("module", m.title, moduleText(m))} testId="ai-module" />
+        </div>
         <div className="grid lg:grid-cols-[minmax(0,1fr)_320px] gap-6 items-start">
           <div className="space-y-6 min-w-0">
             <section>

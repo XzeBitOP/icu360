@@ -17,6 +17,8 @@ import { ViewTracker, TopicOpened } from "@/components/client/Tracking";
 import { prettyDate } from "@/lib/format";
 import { practiceLinks } from "@/lib/learn";
 import { LinkGrid } from "@/components/LearnBlocks";
+import { AiButton } from "@/components/client/ai/AiTutor";
+import { bedsideText, ctx, notesText } from "@/lib/ai/context";
 
 type Params = { moduleId: string; topicId: string };
 
@@ -85,6 +87,7 @@ export default async function TopicPage({ params }: { params: Promise<Params> })
   const bedside = (
     <div className="grid xl:grid-cols-[minmax(0,1fr)_320px] gap-5 xl:gap-6 items-start">
       <div className="space-y-5 min-w-0">
+        <div className="flex justify-end -mb-2"><AiButton context={ctx("topic", topic.title, bedsideText(topic))} label="Ask AI about this topic" testId="ai-bedside" /></div>
         {b.definition ? <Callout kind="info" title="Definition" text={b.definition.text} /> : null}
         <StepsCard steps={b.steps} title="At the bedside" />
         <div className="space-y-4 xl:hidden">{doseCards}</div>
@@ -118,6 +121,7 @@ export default async function TopicPage({ params }: { params: Promise<Params> })
   const noteSections: [string, string | undefined][] = [["Pathophysiology", cn.pathophysiology], ["Evidence", cn.evidence], ["Controversies", cn.controversies], ["India notes", cn.indiaNotes]];
   const notes = (
     <div className="space-y-4 max-w-[760px]">
+      <div className="flex justify-end -mb-1"><AiButton context={ctx("notes", `${topic.title}: consultant notes`, notesText(topic))} label="Ask AI about these notes" testId="ai-notes" /></div>
       {noteSections.filter(([, v]) => v).map(([t, v]) => (
         <section key={t} className={`${t === "India notes" ? "callout warn pl-5" : "glass"} rounded-[24px] p-4 lg:p-5`}>
           {t === "India notes" ? <span className="bar bg-warn-bright" /> : null}

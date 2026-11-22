@@ -3,6 +3,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Check, ChevronLeft, ChevronRight, RotateCcw, ListTree, Flag, OctagonAlert } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Algorithm, AlgoNode } from "@/lib/content-types";
+import { AiButton } from "./ai/AiTutor";
+import { algorithmText, ctx } from "@/lib/ai/context";
 
 const muted = "text-ink-500 dark:text-night-muted";
 const grad = { background: "linear-gradient(135deg,#0F6B7A,#1B4FA0)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.3),0 10px 24px -10px rgba(27,79,160,.7)" };
@@ -32,6 +34,7 @@ export function AlgorithmStepper({ algo }: { algo: Algorithm }) {
   const [dir, setDir] = useState(1);
   const [chart, setChart] = useState(false);
   const curRef = useRef<HTMLDivElement>(null);
+  const aiCtx = useMemo(() => ctx("algorithm", algo.title, algorithmText(algo), ["summarise", "explain"]), [algo]);
   const first = useRef(true);
 
   const cur = nodes.get(path[path.length - 1].id)!;
@@ -80,7 +83,10 @@ export function AlgorithmStepper({ algo }: { algo: Algorithm }) {
         </div>
       </div>
 
-      {algo.description ? <p className={`text-[13px] ${muted} px-1 leading-relaxed`}>{algo.description}</p> : null}
+      <div className="flex items-start gap-3 px-1">
+        {algo.description ? <p className={`text-[13px] ${muted} leading-relaxed flex-1`}>{algo.description}</p> : <span className="flex-1" />}
+        <AiButton context={aiCtx} label="Ask AI" testId="ai-algorithm" />
+      </div>
 
       <div>
         {/* trail */}

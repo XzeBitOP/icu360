@@ -16,6 +16,33 @@ import { heartVisual } from "@/sim/ecg";
 import { RhythmStrip, TwelveLead } from "./Strips";
 import { Heart2D } from "./Heart2D";
 import { WAVE_COLORS } from "./waves";
+import { AiButton } from "@/components/client/ai/AiTutor";
+import { ctx, ecgText } from "@/lib/ai/context";
+
+/** Text snapshot of the simulator for the AI tutor (the model cannot see the strips). */
+function ecgAiContext() {
+  const st = useEcgStore.getState();
+  const eng = getEngine();
+  const t = st.uiTimeMs;
+  const cond = ECG_CONDITIONS.find((c) => c.id === st.conditionId)!;
+  const rhythm = st.rhythmId ? HEART_RHYTHMS.find((r) => r.id === st.rhythmId) : null;
+  const mm = measurementsAt(eng, t);
+  const axis = mm ? frontalQrsAxisDeg(eng, eng.beats[mm.beatIndex].ep) : null;
+  const d = describeAt(eng, t);
+  const ov = eng.config.edgeOverrides ?? {};
+  const blocked = Object.entries(STRUCTURE_EDGES).filter(([, es]) => es.length && es.every((e) => ov[e]?.enabled === false)).map(([id]) => HEART_STRUCTURES.find((s) => s.id === id)?.label ?? id);
+  const name = rhythm ? rhythm.label : cond.name;
+  return ctx("ecg", `ECG OS: ${name}`, ecgText({
+    rhythm: name,
+    rhythmNote: rhythm ? rhythm.note : cond.abnormalPhysiology === "None: this is the reference rhythm." ? cond.normalPhysiology : cond.abnormalPhysiology,
+    rateSetting: st.rate, avDelayMs: st.avDelay, modified: st.custom,
+    blocked,
+    measurements: mm ? { hr: mm.heartRateBpm, pr: mm.prMs, qrs: mm.qrsMs, qt: mm.qtMs, qtc: mm.qtcBazettMs, axis } : null,
+    now: { title: d.title, electrical: d.electrical, mechanical: d.mechanical },
+    expected: rhythm ? null : cond.expectedWaveChanges,
+    criteria: rhythm ? [] : cond.diagnosticCriteria,
+  }), ["explain_state", "summarise"]);
+}
 
 const HeartView = dynamic(() => import("@/components/sim3d/HeartView"), { ssr: false, loading: () => <div className="sim3d-frame" data-testid="heart-3d" data-state="loading" /> });
 
@@ -117,6 +144,7 @@ function Explain() {
         <p><b>Electrical:</b> {d.electrical}</p>
         <p style={{ marginBottom: 0 }}><b>Mechanical:</b> {d.mechanical}</p>
       </div>
+      <div style={{ marginTop: 10 }}><AiButton variant="sim" getContext={ecgAiContext} action="explain_state" label="Explain this" testId="ai-ecg" /></div>
     </GlassCard>
   );
 }
