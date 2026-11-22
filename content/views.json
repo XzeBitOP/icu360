@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-15T23:18:35.698Z",
-  "week": "2026-W46",
+  "updatedAt": "2026-11-22T23:58:25.618Z",
+  "week": "2026-W47",
   "note": "Generated weekly by scripts/update-views.mjs. Counts are rounded down to the nearest 1,000; under 1,000 shows as New.",
   "modules": {},
   "topics": {},
@@ -8,6 +8,6 @@
   "topTopic": {
     "moduleId": "sepsis-septic-shock",
     "topicId": "hour-1-bundle",
-    "week": "2026-W46"
+    "week": "2026-W47"
   }
 }
