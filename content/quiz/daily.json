@@ -2,6 +2,188 @@
   "description": "Daily Quiz sets shown on /quiz, keyed by date (YYYY-MM-DD, India time). Each set has 5 MCQs. New sets are added only after Kenil approves them in chat. The first set below is a sample drawn from existing module quiz items.",
   "sets": [
     {
+      "date": "2026-11-23",
+      "title": "Daily Quiz: 23 November 2026",
+      "questions": [
+        {
+          "id": "2026-11-23-1",
+          "stem": "A patient with DKA has K⁺ 3.0 mmol/L and is about to start insulin. There is no other emergency. What's the best next step?",
+          "options": [
+            "Start insulin now and replace potassium later",
+            "Hold insulin and replace potassium first, until K⁺ is at least 3.3 mmol/L",
+            "Give 50 mL of 8.4% sodium bicarbonate, then start insulin",
+            "Give a 50% dextrose bolus, then start insulin"
+          ],
+          "answerIndex": 1,
+          "explanation": "Starting insulin when K⁺ is below 3.3 mmol/L can cause dangerous hypokalaemia. Replace potassium first, then start insulin.",
+          "reference": {
+            "label": "Umpierrez GE, et al. Hyperglycemic crises in adults with diabetes: a consensus report. Diabetes Care 2024",
+            "url": "https://doi.org/10.2337/dci24-0032"
+          },
+          "moduleId": "endocrine-metabolic-emergencies"
+        },
+        {
+          "id": "2026-11-23-2",
+          "stem": "A man's baseline creatinine is 1.0 mg/dL. After a day in ICU it is 2.2 mg/dL, and urine output has been 0.4 mL/kg/h for 14 hours. What is the KDIGO AKI stage?",
+          "options": [
+            "Stage 1",
+            "Stage 2",
+            "Stage 3",
+            "No AKI"
+          ],
+          "answerIndex": 1,
+          "explanation": "KDIGO stage 2 is a 2.0–2.9-fold rise in creatinine or urine output below 0.5 mL/kg/h for 12 hours or more. Stage 3 needs a 3-fold rise, creatinine ≥ 4.0 mg/dL, RRT, or more severe oliguria.",
+          "reference": {
+            "label": "KDIGO Clinical Practice Guideline for Acute Kidney Injury. Kidney Int Suppl 2012",
+            "url": "https://doi.org/10.1038/kisup.2012.1"
+          },
+          "moduleId": "aki-renal-drug-dosing"
+        },
+        {
+          "id": "2026-11-23-3",
+          "stem": "A woman with septic shock has been resuscitated. She is not bleeding and has no acute coronary syndrome. Her Hb is 7.4 g/dL. Best transfusion plan?",
+          "options": [
+            "Transfuse now to keep Hb ≥ 10",
+            "Transfuse to a target of 9–10 g/dL",
+            "Hold blood; transfuse at Hb < 7, target 7–9",
+            "Give 2 units now because she is on noradrenaline"
+          ],
+          "answerIndex": 2,
+          "explanation": "TRISS and SSC support a restrictive threshold of 7 g/dL in septic shock without active bleeding or acute coronary syndrome.",
+          "reference": {
+            "label": "Holst LB, et al. Lower versus higher hemoglobin threshold for transfusion in septic shock (TRISS). N Engl J Med 2014; SSC 2026",
+            "url": "https://doi.org/10.1056/NEJMoa1406617"
+          },
+          "moduleId": "sepsis-septic-shock"
+        },
+        {
+          "id": "2026-11-23-4",
+          "stem": "A comatose adult has ROSC after cardiac arrest. There is no separate indication for hypothermia to 33°C. What should you do about temperature?",
+          "options": [
+            "Cool routinely to 33°C for 24 hours",
+            "Allow fever up to 39°C if the patient is otherwise stable",
+            "Prevent fever, keeping temperature at 37.5°C or below",
+            "Warm to 38.5°C to improve neurological recovery"
+          ],
+          "answerIndex": 2,
+          "explanation": "TTM2 and current ILCOR, ERC and AHA guidance favour preventing fever over routine cooling to 33°C after ROSC.",
+          "reference": {
+            "label": "Dankiewicz J, et al. Hypothermia versus normothermia after out-of-hospital cardiac arrest (TTM2). N Engl J Med 2021",
+            "url": "https://doi.org/10.1056/NEJMoa2100591"
+          },
+          "moduleId": "cardiac-arrest-post-rosc"
+        },
+        {
+          "id": "2026-11-23-5",
+          "stem": "A patient develops anaphylaxis (wheeze, low BP, urticaria) after a drug. What is the first-line treatment?",
+          "options": [
+            "IV adrenaline 1 mg, as in cardiac arrest",
+            "IM adrenaline 0.5 mg (1:1000) into the anterolateral mid-thigh",
+            "IV hydrocortisone 200 mg as the first drug",
+            "Subcutaneous adrenaline 0.3 mg into the arm"
+          ],
+          "answerIndex": 1,
+          "explanation": "First-line treatment is IM adrenaline 0.5 mg of 1:1000 in the anterolateral mid-thigh. IV adrenaline is reserved for peri-arrest or a titrated infusion by experienced staff. Steroids are only adjuncts.",
+          "reference": {
+            "label": "Resuscitation Council UK. Emergency treatment of anaphylaxis: guidelines 2021",
+            "url": "https://www.resus.org.uk/library/additional-guidance/guidance-anaphylaxis/emergency-treatment"
+          },
+          "moduleId": "shock-vasoactive-support"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "title": "Daily Quiz: 22 November 2026",
+      "questions": [
+        {
+          "id": "2026-11-22-1",
+          "stem": "A patient with a confirmed PE has BP 80/50 that has stayed low for 20 minutes and a dilated RV on echo. There's no contraindication to bleeding. What's the best next step?",
+          "options": [
+            "LMWH alone",
+            "Systemic thrombolysis (e.g. alteplase)",
+            "IVC filter",
+            "Start a DOAC and watch"
+          ],
+          "answerIndex": 1,
+          "explanation": "High-risk (haemodynamically unstable) PE needs reperfusion, and systemic thrombolysis is first-line.",
+          "reference": {
+            "label": "ESC Guidelines for the diagnosis and management of acute pulmonary embolism. Eur Heart J 2019",
+            "url": "https://doi.org/10.1093/eurheartj/ehz405"
+          },
+          "moduleId": "pe-tamponade-aortic-emergencies"
+        },
+        {
+          "id": "2026-11-22-2",
+          "stem": "A man with Guillain-Barré syndrome has worsening weakness. Which finding most strongly points to elective intubation?",
+          "options": [
+            "SpO₂ 95% on room air",
+            "FVC below 20 mL/kg",
+            "Loss of ankle reflexes",
+            "PaCO₂ of 38 mmHg"
+          ],
+          "answerIndex": 1,
+          "explanation": "The \"20/30/40\" rule is FVC below 20 mL/kg, MIP weaker than −30 cmH₂O and MEP below 40 cmH₂O. SpO₂ and PaCO₂ worsen late.",
+          "reference": {
+            "label": "Lawn ND, et al. Anticipating mechanical ventilation in Guillain-Barré syndrome. Arch Neurol 2001",
+            "url": "https://doi.org/10.1001/archneur.58.6.893"
+          },
+          "moduleId": "neuro-emergencies"
+        },
+        {
+          "id": "2026-11-22-3",
+          "stem": "A woman took paracetamol tablets repeatedly over about 12 hours (a staggered overdose). She feels well, and her ALT is normal. What's the right approach?",
+          "options": [
+            "Plot the level on the nomogram and treat only if it's above the line",
+            "Give activated charcoal and discharge",
+            "Start IV acetylcysteine without waiting for the level",
+            "Repeat the level in 4 hours, then decide"
+          ],
+          "answerIndex": 2,
+          "explanation": "The nomogram can't be read after a staggered overdose or when the time is unknown, so start acetylcysteine.",
+          "reference": {
+            "label": "MHRA Drug Safety Update. Treating paracetamol overdose with intravenous acetylcysteine: new guidance. 2012",
+            "url": "https://www.gov.uk/drug-safety-update/treating-paracetamol-overdose-with-intravenous-acetylcysteine-new-guidance"
+          },
+          "moduleId": "poisoning-approach-drug-overdoses"
+        },
+        {
+          "id": "2026-11-22-4",
+          "stem": "A trauma patient arrives 1 hour after injury with bleeding and haemorrhagic shock. What does the evidence say about tranexamic acid?",
+          "options": [
+            "Give it only after 3 hours",
+            "Give 1 g IV over 10 minutes within 3 hours, then 1 g over 8 hours",
+            "Avoid it because of clot risk",
+            "Give it only if fibrinogen is low"
+          ],
+          "answerIndex": 1,
+          "explanation": "CRASH-2 showed lower mortality when TXA was given early. Starting it after 3 hours didn't help and may cause harm.",
+          "reference": {
+            "label": "CRASH-2 trial collaborators. Effects of tranexamic acid on death, vascular occlusive events, and transfusion in trauma patients. Lancet 2010",
+            "url": "https://doi.org/10.1016/S0140-6736(10)60835-5"
+          },
+          "moduleId": "trauma-burns-environmental"
+        },
+        {
+          "id": "2026-11-22-5",
+          "stem": "On day 7 of UFH, a patient's platelets fall from 250 to 95 ×10⁹/L and a new DVT appears. The 4Ts score is high. What's the best step?",
+          "options": [
+            "Switch to LMWH",
+            "Transfuse platelets",
+            "Stop all heparin and start a non-heparin anticoagulant (e.g. argatroban or fondaparinux)",
+            "Stop heparin and give no anticoagulant"
+          ],
+          "answerIndex": 2,
+          "explanation": "Suspected HIT with thrombosis needs every form of heparin stopped, LMWH included, and a non-heparin anticoagulant started. Platelets are avoided.",
+          "reference": {
+            "label": "Cuker A, et al. American Society of Hematology 2018 guidelines for HIT. Blood Adv 2018",
+            "url": "https://doi.org/10.1182/bloodadvances.2018024489"
+          },
+          "moduleId": "haematology-coagulation-transfusion"
+        }
+      ]
+    },
+    {
       "date": "2026-11-20",
       "title": "Daily Quiz: 20 November 2026",
       "questions": [

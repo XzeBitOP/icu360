@@ -2,6 +2,46 @@
   "description": "Critical care news shown on /news, newest first. Add items only after Kenil approves them in chat. Fields: id, date (YYYY-MM-DD), tag (Guideline | Trial | India | Drug safety | Review), source, title, summary, url, moduleId (optional, links the item to a module), catchUp (optional, true for older items published as catch-up).",
   "items": [
     {
+      "id": "2026-11-22-kerala-lepto-dengue",
+      "date": "2026-11-21",
+      "tag": "India",
+      "source": "The Hindu",
+      "title": "Kerala: leptospirosis deaths and dengue are rising as flu eases",
+      "summary": "Ernakulam has had 3 leptospirosis deaths and 21 confirmed cases in November so far, plus 481 dengue cases (114 confirmed). For fever with jaundice, AKI or lung haemorrhage, think lepto and start antibiotics early.",
+      "url": "https://www.thehindu.com/news/national/kerala/three-leptospirosis-deaths-reported-in-ernakulam-in-november/article71724726.ece",
+      "moduleId": "tropical-monsoon-fevers"
+    },
+    {
+      "id": "2026-11-22-fda-heraeus-guidewires",
+      "date": "2026-11-20",
+      "tag": "Drug safety",
+      "source": "FDA",
+      "title": "FDA early alert: some vascular guidewires pulled because the coating can flake",
+      "summary": "Heraeus Medevio is recalling certain lots of the Navilyst and Spectrum vascular guidewires (H965457461, H965457471) and the Arrow Marked Guidewire (PW-18080-HN, PW-16130-HN). The hydrophilic coating can clump and shed particles into the bloodstream, which could cause emboli. No injuries or deaths have been reported. If your central line or access kits use these, check the lot numbers and quarantine affected stock. It is not confirmed whether these lots reached India.",
+      "url": "https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/early-alert-heraeus-medical-components-removes-vascular-guidewires",
+      "moduleId": "procedures"
+    },
+    {
+      "id": "2026-11-22-icu-noise-delirium",
+      "date": "2026-11-20",
+      "tag": "Trial",
+      "source": "Critical Care",
+      "title": "ICU noise peaks were linked to next-day delirium, but light wasn't",
+      "summary": "In 300 patients, with sound recorded every 5 seconds, each extra dBA the day before raised the risk of next-day delirium (aHR 1.11), and so did each extra 10 min/day above 70 dBA (aHR 1.18). Light showed no link, and the primary analysis was neutral, so the result only generates hypotheses. Still, it supports cutting night-time alarms and noise.",
+      "url": "https://link.springer.com/article/10.1186/s13054-026-06477-w",
+      "moduleId": "analgesia-sedation-delirium"
+    },
+    {
+      "id": "2026-11-22-center-tbi-icp",
+      "date": "2026-11-20",
+      "tag": "Trial",
+      "source": "Critical Care",
+      "title": "ICP-guided care was linked to lower ICU mortality in severe TBI",
+      "summary": "A CENTER-TBI target-trial analysis of 773 patients with GCS < 9 and a CT abnormality compared ICP-guided care with care guided by imaging and examination. Centres that used ICP monitoring more often had lower ICU mortality (OR 0.7), including in patients with one or two unreactive pupils (OR 0.6). This is observational, so it may reflect a more aggressive overall approach, but it argues against writing these patients off early.",
+      "url": "https://link.springer.com/article/10.1186/s13054-026-06390-2",
+      "moduleId": "raised-icp-neurotrauma-brain-death"
+    },
+    {
       "id": "2026-11-20-prehospital-sepsis-bundle",
       "date": "2026-11-20",
       "tag": "Trial",
@@ -32,24 +72,24 @@
       "moduleId": "ards-refractory-hypoxaemia"
     },
     {
-      "id": "2026-11-20-panther-ards",
-      "date": "2026-11-16",
+      "id": "2026-11-22-discharge-creatinine-gfr",
+      "date": "2026-11-18",
       "tag": "Trial",
-      "source": "UCSF News",
-      "title": "PANTHER: precision-medicine ARDS trial begins",
-      "summary": "A blood test sorts patients into hyper- or hypo-inflammatory ARDS, who then get usual care, or usual care plus simvastatin or baricitinib, in an adaptive platform trial. It is the first big test of treating ARDS by biological subtype.",
-      "url": "https://www.ucsf.edu/news/2026/11/432986/could-these-drugs-improve-survival-lethal-breathing-disorder",
-      "moduleId": "ards-refractory-hypoxaemia"
+      "source": "Critical Care",
+      "title": "A normal creatinine at ICU discharge can hide kidneys that haven't recovered",
+      "summary": "In 137 patients after KDIGO stage 2 or 3 AKI who left ICU with a \"normal\" creatinine, iohexol clearance was still below 60 mL/min/1.73 m² in 51%. CKD-EPI eGFR caught this in only 19% of those patients. The group with hidden low GFR had a lower eGFR at 6 months. Don't assume recovery from a normal discharge creatinine alone.",
+      "url": "https://link.springer.com/article/10.1186/s13054-026-06465-0",
+      "moduleId": "aki-renal-drug-dosing"
     },
     {
-      "id": "2026-11-20-obstetric-icu-meta",
-      "date": "2026-11-17",
-      "tag": "Review",
-      "source": "Critical Care Medicine",
-      "title": "About 1 in 100 pregnant or postpartum women need ICU care",
-      "summary": "A meta-analysis of 50 studies (20 countries, 49,299 ICU admissions) found 1.0% need ICU care: 4.1% in low-income vs 0.5% in high-income countries. 72% had direct obstetric causes, mainly hypertension (26.9%) and haemorrhage (23.3%); ICU mortality was 8.5%. For Indian ICUs: catch pre-eclampsia and PPH early. Highlighted by ICMR-NIRWoH.",
-      "url": "https://doi.org/10.1097/CCM.0000000000007417",
-      "moduleId": "obstetric-critical-care"
+      "id": "2026-11-22-icmr-amrsn-2025",
+      "date": "2026-11-18",
+      "tag": "India",
+      "source": "The Indian Express (ICMR AMRSN Annual Report 2025)",
+      "title": "ICMR AMRSN 2025: resistance is now the norm in ICU gram-negatives",
+      "summary": "The report reviewed 1,13,008 isolates from 30 tertiary hospitals, plus 20,529 from 34 secondary-care hospitals for the first time. Only 36.5–40.4% of Klebsiella pneumoniae were susceptible to carbapenems (lower still in ICU), and 91.1% of Acinetobacter baumannii were carbapenem-resistant. E. coli susceptibility was 18.4% to cefotaxime and 9% to ciprofloxacin. Culture first, and save last-line drugs. The primary ICMR report page was still unavailable after the 21–22 Nov site maintenance, so this links to the Indian Express coverage.",
+      "url": "https://indianexpress.com/article/health-wellness/antibiotics-power-against-infections-icmr-10967644/",
+      "moduleId": "icu-infections-stewardship-immunocompromised"
     },
     {
       "id": "2026-11-20-sepsis-immune-score",
@@ -62,14 +102,24 @@
       "moduleId": "sepsis-septic-shock"
     },
     {
-      "id": "2026-11-15-onscene-ecpr",
-      "date": "2026-11-07",
+      "id": "2026-11-20-obstetric-icu-meta",
+      "date": "2026-11-17",
+      "tag": "Review",
+      "source": "Critical Care Medicine",
+      "title": "About 1 in 100 pregnant or postpartum women need ICU care",
+      "summary": "A meta-analysis of 50 studies (20 countries, 49,299 ICU admissions) found 1.0% need ICU care: 4.1% in low-income vs 0.5% in high-income countries. 72% had direct obstetric causes, mainly hypertension (26.9%) and haemorrhage (23.3%); ICU mortality was 8.5%. For Indian ICUs: catch pre-eclampsia and PPH early. Highlighted by ICMR-NIRWoH.",
+      "url": "https://doi.org/10.1097/CCM.0000000000007417",
+      "moduleId": "obstetric-critical-care"
+    },
+    {
+      "id": "2026-11-20-panther-ards",
+      "date": "2026-11-16",
       "tag": "Trial",
-      "source": "NEJM (OnScene, presented at AHA Scientific Sessions 2026)",
-      "title": "ECPR started at the scene doubles survival in young adults with refractory arrest",
-      "summary": "Dutch helicopter teams able to start VA-ECMO at the scene had 40% survival to discharge vs 20% with conventional care in adults aged 50 or under with refractory out-of-hospital arrest (good neurological outcome at 6 months: 36% vs 13%). The study was non-randomised and the patients were highly selected, so it supports fast ECPR referral pathways, not routine ECPR for every arrest.",
-      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2602919",
-      "moduleId": "cardiac-arrest-post-rosc"
+      "source": "UCSF News",
+      "title": "PANTHER: precision-medicine ARDS trial begins",
+      "summary": "A blood test sorts patients into hyper- or hypo-inflammatory ARDS, who then get usual care, or usual care plus simvastatin or baricitinib, in an adaptive platform trial. It is the first big test of treating ARDS by biological subtype.",
+      "url": "https://www.ucsf.edu/news/2026/11/432986/could-these-drugs-improve-survival-lethal-breathing-disorder",
+      "moduleId": "ards-refractory-hypoxaemia"
     },
     {
       "id": "2026-11-15-cefazolin-mssa",
@@ -82,14 +132,24 @@
       "moduleId": "icu-infections-stewardship-immunocompromised"
     },
     {
-      "id": "2026-11-15-bicarbonate-ma",
-      "date": "2026-11-02",
-      "tag": "Review",
-      "source": "Intensive Care Medicine (highlighted by ESICM, 13 Nov)",
-      "title": "Sodium bicarbonate: no clear survival benefit, but fewer patients need dialysis",
-      "summary": "Pooling 4 RCTs (1,544 patients, including SODa-BIC and BICARICU-2), bicarbonate did not clearly reduce mortality (RR 0.94) but had a 97% probability of reducing RRT initiation (RR 0.74). This supports selective use in severe acidaemia with AKI, in line with SSC 2026, while watching for high sodium, low calcium and alkalosis.",
-      "url": "https://link.springer.com/article/10.1007/s00134-026-08602-3",
-      "moduleId": "acid-base-abg"
+      "id": "2026-11-22-oliceridine-coroam",
+      "date": "2026-11-10",
+      "tag": "Trial",
+      "source": "Intensive Care Medicine",
+      "title": "Oliceridine matched remifentanil for analgesia in ventilated patients, with less respiratory depression",
+      "summary": "In CO-ROAM (304 ventilated adults in 19 Chinese ICUs), time in the target analgesic range was 96.0% vs 92.3% (non-inferior). Respiratory depression was 0% vs 4.6% during the study and 0% vs 7.9% after extubation. Ventilator days, ICU stay and 28-day mortality were the same. A useful option where it is available; it does not change usual care where it is not.",
+      "url": "https://link.springer.com/article/10.1007/s00134-026-08643-8",
+      "moduleId": "analgesia-sedation-delirium"
+    },
+    {
+      "id": "2026-11-22-cefepime-neurotoxicity",
+      "date": "2026-11-09",
+      "tag": "Trial",
+      "source": "Critical Care",
+      "title": "Cefepime didn't cause more delirium or neurotoxicity than pip-taz or meropenem",
+      "summary": "This emulated-trial analysis matched 4,447 pairs (cefepime vs piperacillin-tazobactam) and 1,262 pairs (cefepime vs meropenem). Delirium or neurotoxicity rates were the same (RR 0.99 and 1.09), and so were 30-day mortality and length of stay. Neurotoxicity fear alone shouldn't drive the empirical choice, though dosing in renal failure still matters. The study is observational and from the US.",
+      "url": "https://link.springer.com/article/10.1186/s13054-026-06438-3",
+      "moduleId": "icu-infections-stewardship-immunocompromised"
     },
     {
       "id": "2026-11-15-race-cars",
@@ -102,6 +162,26 @@
       "moduleId": "cardiac-arrest-post-rosc"
     },
     {
+      "id": "2026-11-15-onscene-ecpr",
+      "date": "2026-11-07",
+      "tag": "Trial",
+      "source": "NEJM (OnScene, presented at AHA Scientific Sessions 2026)",
+      "title": "ECPR started at the scene doubles survival in young adults with refractory arrest",
+      "summary": "Dutch helicopter teams able to start VA-ECMO at the scene had 40% survival to discharge vs 20% with conventional care in adults aged 50 or under with refractory out-of-hospital arrest (good neurological outcome at 6 months: 36% vs 13%). The study was non-randomised and the patients were highly selected, so it supports fast ECPR referral pathways, not routine ECPR for every arrest.",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2602919",
+      "moduleId": "cardiac-arrest-post-rosc"
+    },
+    {
+      "id": "2026-11-22-ulinastatin-adjust",
+      "date": "2026-11-06",
+      "tag": "Trial",
+      "source": "CHEST",
+      "title": "Ulinastatin gave no survival benefit in sepsis (ADJUST)",
+      "summary": "In the ADJUST RCT, 335 ICU adults with sepsis received IV ulinastatin 400,000 IU every 8 hours or placebo for up to 10 days. 28-day mortality was 23.6% vs 22.9% (HR 1.03). Secondary outcomes were the same, and adverse events were more common with ulinastatin (56.8% vs 42.7%). Routine ulinastatin for sepsis is not supported.",
+      "url": "https://journal.chestnet.org/article/S0012-3692(26)06945-X/abstract",
+      "moduleId": "sepsis-septic-shock"
+    },
+    {
       "id": "2026-11-15-india-nsq-licence",
       "date": "2026-11-05",
       "tag": "India",
@@ -109,6 +189,16 @@
       "title": "Centre proposes instant licence suspension for substandard drugs",
       "summary": "The Union health ministry has notified a proposal to immediately suspend a manufacturer's licence for a drug found 'not of standard quality' on assay, dissolution, impurities or sterility, removing the current show-cause delay. CDSCO's September 2026 alert listed 330 such samples, including a ciprofloxacin product that failed its assay test. This is still a proposal, so keep checking CDSCO's monthly alerts against your ICU pharmacy stock.",
       "url": "https://www.telegraphindia.com/india/india-drug-quality-rules-centre-proposes-instant-licence-suspension-for-failed-medicines-prnt/cid/2187899"
+    },
+    {
+      "id": "2026-11-15-bicarbonate-ma",
+      "date": "2026-11-02",
+      "tag": "Review",
+      "source": "Intensive Care Medicine (highlighted by ESICM, 13 Nov)",
+      "title": "Sodium bicarbonate: no clear survival benefit, but fewer patients need dialysis",
+      "summary": "Pooling 4 RCTs (1,544 patients, including SODa-BIC and BICARICU-2), bicarbonate did not clearly reduce mortality (RR 0.94) but had a 97% probability of reducing RRT initiation (RR 0.74). This supports selective use in severe acidaemia with AKI, in line with SSC 2026, while watching for high sodium, low calcium and alkalosis.",
+      "url": "https://link.springer.com/article/10.1007/s00134-026-08602-3",
+      "moduleId": "acid-base-abg"
     },
     {
       "id": "2026-11-15-vasspr",

@@ -35,8 +35,23 @@ describe("news", () => {
   };
 
   it("publishes approved items with original source urls and drops SAVE-ICU", () => {
-    expect(news.items.length).toBeGreaterThanOrEqual(7);
+    expect(news.items.length).toBeGreaterThanOrEqual(13);
     expect(news.items.some((i) => /save-icu/i.test(i.id))).toBe(false);
+    const ids = news.items.map((i) => i.id);
+    expect(new Set(ids).size).toBe(ids.length);
+    expect(ids).toEqual(expect.arrayContaining([
+      "2026-11-22-kerala-lepto-dengue",
+      "2026-11-22-fda-heraeus-guidewires",
+      "2026-11-22-icu-noise-delirium",
+      "2026-11-22-center-tbi-icp",
+      "2026-11-22-discharge-creatinine-gfr",
+      "2026-11-22-icmr-amrsn-2025",
+      "2026-11-22-oliceridine-coroam",
+      "2026-11-22-cefepime-neurotoxicity",
+      "2026-11-22-ulinastatin-adjust",
+    ]));
+    const dates = news.items.map((i) => i.date);
+    expect(dates).toEqual([...dates].sort((a, b) => (a < b ? 1 : a > b ? -1 : 0)));
     for (const item of news.items) {
       expect(item.source.length).toBeGreaterThan(0);
       expect(item.url).toMatch(/^https:\/\//);
@@ -55,14 +70,25 @@ describe("daily quiz", () => {
     sets: { date: string; title?: string; questions: unknown[] }[];
   };
 
-  it("shows the 15 Nov 2026 set as today's quiz and keeps the starter on 14 Nov", () => {
+  it("keeps unique dated sets of 5 questions, including 22 and 23 Nov 2026", () => {
     const dates = daily.sets.map((s) => s.date);
     expect(new Set(dates).size).toBe(dates.length);
-    const today = daily.sets.find((s) => s.date === "2026-11-15");
+    expect(dates.length).toBeGreaterThanOrEqual(5);
+    for (const set of daily.sets) {
+      expect(set.questions).toHaveLength(5);
+    }
+    const d22 = daily.sets.find((s) => s.date === "2026-11-22");
+    const d23 = daily.sets.find((s) => s.date === "2026-11-23");
     const starter = daily.sets.find((s) => s.date === "2026-11-14");
-    expect(today?.questions).toHaveLength(5);
-    expect(today?.title).toMatch(/15 November 2026/);
+    expect(d22?.title).toMatch(/22 November 2026/);
+    expect(d23?.title).toMatch(/23 November 2026/);
     expect(starter?.title).toMatch(/Starter set/);
-    expect(starter?.questions).toHaveLength(5);
+  });
+
+  it("would hide a future-dated set until that IST day (same rule as DailyQuiz)", () => {
+    const available = (today: string) => daily.sets.filter((s) => s.date <= today).sort((a, b) => (a.date < b.date ? 1 : -1));
+    expect(available("2026-11-22").map((s) => s.date)[0]).toBe("2026-11-22");
+    expect(available("2026-11-22").some((s) => s.date === "2026-11-23")).toBe(false);
+    expect(available("2026-11-23").map((s) => s.date)[0]).toBe("2026-11-23");
   });
 });
