@@ -2,7 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
-import { ChevronRight, GitBranch, GraduationCap, Pill } from "lucide-react";
+import { ChevronRight, Clapperboard, GitBranch, GraduationCap, Pill } from "lucide-react";
+import { topicsWithVisuals } from "@/lib/partners";
 import { getModules, getModule, getViews, getSections } from "@/lib/content";
 import { PageHeader, Main } from "@/components/Shell";
 import { AiButton } from "@/components/client/ai/AiTutor";
@@ -37,6 +38,7 @@ export default async function ModulePage({ params }: { params: Promise<Params> }
   const m = getModule((await params).moduleId);
   if (!m) notFound();
   const views = getViews();
+  const withVideo = topicsWithVisuals(m.id);
   const section = getSections().find((s) => s.id === m.section.id)!;
   const related = m.relatedModules.map((id) => getModule(id)).filter((x) => !!x);
   const quizCount = m.topics.reduce((n, t) => n + t.quiz.length, 0);
@@ -76,6 +78,7 @@ export default async function ModulePage({ params }: { params: Promise<Params> }
                           <span>{t.bedside.steps.length} steps</span>
                           {t.algorithm ? <span className="flex items-center gap-1"><GitBranch className="w-3.5 h-3.5" strokeWidth={2} aria-hidden="true" />Algorithm</span> : null}
                           {t.bedside.doseCards?.length ? <span className="flex items-center gap-1"><Pill className="w-3.5 h-3.5" strokeWidth={2} aria-hidden="true" />{t.bedside.doseCards.length} doses</span> : null}
+                          {withVideo.has(t.id) ? <span className="flex items-center gap-1" title="Visual explanation by Armando Hasudungan"><Clapperboard className="w-3.5 h-3.5" strokeWidth={2} aria-hidden="true" />Video</span> : null}
                           <span className="ml-auto"><Views n={views.topics[`${m.id}/${t.id}`]} /></span>
                         </div>
                       </div>

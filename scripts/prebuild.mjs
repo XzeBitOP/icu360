@@ -79,7 +79,7 @@ for (const a of antimicrobials) {
 search.push({ type: "tool", title: "Code timer", sub: "Interactive tool", href: "/tools/code-timer", k: "cardiac arrest cpr acls adrenaline rhythm check timer" });
 
 const routes = [
-  "/", "/browse", "/tools", "/tools/abg", "/tools/ecg-os", "/tools/ventilator-os", "/tools/code-timer", "/news", "/quiz", "/saved", "/progress", "/search", "/offline", "/search-index.json",
+  "/", "/browse", "/tools", "/tools/abg", "/tools/ecg-os", "/tools/ventilator-os", "/tools/code-timer", "/news", "/quiz", "/saved", "/progress", "/search", "/offline", "/credits", "/search-index.json",
   ...index.sections.map((s) => `/section/${s.id.toLowerCase()}`),
   ...modules.flatMap((m) => [`/m/${m.id}`, `/m/${m.id}/quiz`, ...m.topics.map((t) => `/m/${m.id}/${t.id}`)]),
   ...calcs.map((c) => `/tools/${c.id}`),
