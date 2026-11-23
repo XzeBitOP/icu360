@@ -29,7 +29,7 @@ export default function Browse() {
           </div>
           <ChevronRight className="w-5 h-5 text-ink-400 shrink-0" aria-hidden="true" />
         </Link>
-        <div className="grid sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link href="/tools/ecg-os" className="glass rounded-[24px] p-4 flex items-center gap-3.5">
             <IconTile name="heart-pulse" size="w-12 h-12" isz="w-6 h-6" />
             <div className="flex-1 min-w-0">

@@ -45,7 +45,7 @@ export default function LearnHub() {
         <p className={`text-[15px] leading-relaxed ${muted} px-1`}>
           ICU 360 is a free ICU guide for interns, junior doctors, residents and ICU nurses, written by Dr. Kenil Shah, a critical care consultant. Start with a short guide, then practise it in a simulator: {modules.length} ICU modules, {topics} bedside topics, {calcs} ICU calculators, and interactive ventilator and ECG simulators, all free with no sign-up.
         </p>
-        <div className="grid sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <CtaCard link={{ href: "/tools/ventilator-os", title: "Ventilator OS", sub: "Free mechanical ventilation simulator", icon: "gauge" }} />
           <CtaCard link={{ href: "/tools/ecg-os", title: "ECG OS", sub: "Free interactive ECG simulator", icon: "heart-pulse" }} />
         </div>

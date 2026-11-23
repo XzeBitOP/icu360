@@ -33,7 +33,7 @@ export default async function GuidePage({ params }: { params: Promise<Params> })
         {g.cta ? <CtaCard link={g.cta} /> : null}
         <nav aria-label="On this page" className="glass rounded-[24px] p-4">
           <p className={`text-[12px] uppercase tracking-[.1em] font-semibold ${muted} mb-1.5`}>On this page</p>
-          <ul className="grid sm:grid-cols-2 gap-x-4 gap-y-1 text-[14px] font-medium">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 text-[14px] font-medium">
             {g.sections.map((s) => <li key={s.id}><a href={`#${s.id}`} className="text-brand-700 dark:text-glow-teal">{s.h}</a></li>)}
           </ul>
         </nav>

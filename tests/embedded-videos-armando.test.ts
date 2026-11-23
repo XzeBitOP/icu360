@@ -2,7 +2,7 @@ import { readFileSync, readdirSync, existsSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import type { Module } from "../src/lib/content-types";
-import { getArmando, visualsFor, topicsWithVisuals, YT_ID, ytEmbed, ytThumb } from "../src/lib/partners";
+import { getArmando, visualsFor, topicsWithVisuals, YT_ID, ytEmbed, ytThumb } from "../src/lib/embedded-videos";
 import { bedsideText, notesText, moduleText } from "../src/lib/ai/context";
 
 const MOD_DIR = path.join(process.cwd(), "content", "modules");
@@ -11,13 +11,17 @@ const modules: Module[] = readdirSync(MOD_DIR)
   .map((d) => JSON.parse(readFileSync(path.join(MOD_DIR, d, "module.json"), "utf8")) as Module);
 const topicIds = new Map(modules.map((m) => [m.id, new Map(m.topics.map((t) => [t.id, t.title]))]));
 
-describe("Armando Hasudungan partner map (content/partners/armando.json)", () => {
-  const { partner, videos } = getArmando();
+describe("Armando Hasudungan embedded videos (content/embedded-videos/armando.json)", () => {
+  const { creator, videos } = getArmando();
 
-  it("names the partner and his site", () => {
-    expect(partner.name).toBe("Armando Hasudungan");
-    expect(partner.site).toBe("https://armandoh.org");
-    expect(partner.youtube).toMatch(/^https:\/\/www\.youtube\.com\//);
+  it("names the creator, his site, rights and free resources; never calls him a partner", () => {
+    expect(creator.name).toBe("Armando Hasudungan");
+    expect(creator.site).toBe("https://armandoh.org");
+    expect(creator.youtube).toMatch(/^https:\/\/www\.youtube\.com\//);
+    expect(creator.rights).toMatch(/does not own these videos; all rights belong to Armando Hasudungan/);
+    expect(creator.freeResources).toMatch(/free-to-use videos, diagrams and PDFs/);
+    const raw = readFileSync(path.join(process.cwd(), "content", "embedded-videos", "armando.json"), "utf8");
+    expect(raw.replace(creator.creditRules, "")).not.toMatch(/partner|permission/i);
     expect(videos.length).toBeGreaterThan(20);
   });
 
@@ -81,5 +85,22 @@ describe("Armando Hasudungan partner map (content/partners/armando.json)", () =>
         expect(notesText(t)).not.toMatch(/armando|armandoh\.org|youtube/i);
       }
     }
+  });
+});
+
+describe("embedded-video wording in user-facing files", () => {
+  const files = ["src/components/VisualExplanation.tsx", "src/app/credits/page.tsx", "src/components/Footer.tsx", "src/app/m/[moduleId]/[topicId]/page.tsx", "src/app/m/[moduleId]/page.tsx"];
+  it("never says partner, permission or thank-you", () => {
+    for (const f of files) {
+      const s = readFileSync(path.join(process.cwd(), f), "utf8");
+      expect(s, f).not.toMatch(/partner|permission|thank you|kind permission/i);
+    }
+  });
+  it("states we do not own the videos and points to armandoh.org's free videos, diagrams and PDFs", () => {
+    const card = readFileSync(path.join(process.cwd(), "src/components/VisualExplanation.tsx"), "utf8");
+    expect(card).toContain("ICU 360 does not own this video; all rights belong to Armando Hasudungan.");
+    expect(card).toContain("Free videos, diagrams and PDFs at");
+    const footer = readFileSync(path.join(process.cwd(), "src/components/Footer.tsx"), "utf8");
+    expect(footer).toContain("We do not own these videos; all rights belong to Armando Hasudungan.");
   });
 });

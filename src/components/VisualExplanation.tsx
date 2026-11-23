@@ -2,14 +2,14 @@ import Link from "next/link";
 import { ExternalLink, Clapperboard } from "lucide-react";
 import { Chip, muted } from "./ui";
 import { LiteYouTube } from "./client/LiteYouTube";
-import { type PartnerVideo, getArmando, ytEmbed, ytThumb } from "@/lib/partners";
+import { type EmbeddedVideo, getArmando, ytEmbed, ytThumb } from "@/lib/embedded-videos";
 
-/** Credit line shown under every partner video: his name, his exact topic page and his site. */
-export function ArmandoCredit({ v }: { v: PartnerVideo }) {
-  const site = getArmando().partner.site;
+/** Credit line shown under every embedded video: his name, his exact topic page and his site. */
+export function ArmandoCredit({ v }: { v: EmbeddedVideo }) {
+  const site = getArmando().creator.site;
   return (
     <p className={`text-[12.5px] leading-snug ${muted}`} data-testid="armando-credit">
-      Video by{" "}
+      Embedded video by{" "}
       <a href={v.armandoUrl} target="_blank" rel="noopener" className="font-semibold text-ink-900 dark:text-night-text underline decoration-ink-300 dark:decoration-night-faint underline-offset-2" data-testid="armando-credit-link">
         Armando Hasudungan
       </a>{" "}
@@ -21,8 +21,8 @@ export function ArmandoCredit({ v }: { v: PartnerVideo }) {
   );
 }
 
-/** "Visual explanation" glass card: lite YouTube embed(s) of Armando Hasudungan's videos, with clear credit. */
-export function VisualExplanation({ videos }: { videos: PartnerVideo[] }) {
+/** "Visual explanation" glass card: lite YouTube embed(s) of Armando Hasudungan's videos (we do not own them), with clear credit. */
+export function VisualExplanation({ videos }: { videos: EmbeddedVideo[] }) {
   if (!videos.length) return null;
   return (
     <section id="visual" className="glass rounded-[26px] p-4 lg:p-5 scroll-mt-24" aria-labelledby="visual-h" data-testid="visual-explanation">
@@ -58,8 +58,9 @@ export function VisualExplanation({ videos }: { videos: PartnerVideo[] }) {
         ))}
       </div>
       <p className={`mt-4 pt-3 border-t border-ink-200/70 dark:border-white/10 text-[11.5px] leading-relaxed ${muted}`}>
-        Shared with permission. Illustrations and video © Armando Hasudungan. The video loads from YouTube only when you tap play.{" "}
-        <Link href="/credits" className="font-semibold text-brand-600 dark:text-glow-teal">Partners &amp; credits</Link>
+        Embedded video by Armando Hasudungan. ICU 360 does not own this video; all rights belong to Armando Hasudungan. Free videos, diagrams and PDFs at{" "}
+        <a href="https://armandoh.org" target="_blank" rel="noopener" className="font-semibold text-brand-600 dark:text-glow-teal">armandoh.org</a>. The video loads from YouTube only when you tap play.{" "}
+        <Link href="/credits" className="font-semibold text-brand-600 dark:text-glow-teal">Video credits</Link>
       </p>
     </section>
   );

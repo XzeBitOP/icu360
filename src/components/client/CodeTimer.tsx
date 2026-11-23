@@ -122,7 +122,7 @@ function Timer() {
 
       <section className="glass rounded-[24px] p-4">
         <h2 className="display text-[16px] font-semibold mb-2">Reversible causes · 4 Hs and 4 Ts</h2>
-        <div className="grid sm:grid-cols-2 gap-1.5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
           {HSTS.map((h) => {
             const on = s.hsts.includes(h);
             return (

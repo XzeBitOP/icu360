@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
 import { ChevronRight, Clapperboard, GitBranch, GraduationCap, Pill } from "lucide-react";
-import { topicsWithVisuals } from "@/lib/partners";
+import { topicsWithVisuals } from "@/lib/embedded-videos";
 import { getModules, getModule, getViews, getSections } from "@/lib/content";
 import { PageHeader, Main } from "@/components/Shell";
 import { AiButton } from "@/components/client/ai/AiTutor";
@@ -59,7 +59,7 @@ export default async function ModulePage({ params }: { params: Promise<Params> }
           <p className={`text-[14.5px] leading-relaxed ${muted} flex-1`}>{m.summary}</p>
           <AiButton context={ctx("module", m.title, moduleText(m))} testId="ai-module" />
         </div>
-        <div className="grid lg:grid-cols-[minmax(0,1fr)_320px] gap-6 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-6 items-start">
           <div className="space-y-6 min-w-0">
             <section>
               <h2 className="display text-[20px] font-semibold mb-3 px-1">{m.topics.length} topics</h2>
@@ -74,11 +74,11 @@ export default async function ModulePage({ params }: { params: Promise<Params> }
                           <TopicTick moduleId={m.id} topicId={t.id} />
                         </div>
                         <p className={`text-[13px] ${muted} mt-1 leading-snug line-clamp-2`}>{t.summary}</p>
-                        <div className={`flex items-center gap-3 mt-3 text-[12px] ${muted}`}>
+                        <div className={`flex flex-wrap items-center gap-x-3 gap-y-1 mt-3 text-[12px] ${muted}`}>
                           <span>{t.bedside.steps.length} steps</span>
                           {t.algorithm ? <span className="flex items-center gap-1"><GitBranch className="w-3.5 h-3.5" strokeWidth={2} aria-hidden="true" />Algorithm</span> : null}
                           {t.bedside.doseCards?.length ? <span className="flex items-center gap-1"><Pill className="w-3.5 h-3.5" strokeWidth={2} aria-hidden="true" />{t.bedside.doseCards.length} doses</span> : null}
-                          {withVideo.has(t.id) ? <span className="flex items-center gap-1" title="Visual explanation by Armando Hasudungan"><Clapperboard className="w-3.5 h-3.5" strokeWidth={2} aria-hidden="true" />Video</span> : null}
+                          {withVideo.has(t.id) ? <span className="flex items-center gap-1" title="Embedded video by Armando Hasudungan"><Clapperboard className="w-3.5 h-3.5" strokeWidth={2} aria-hidden="true" />Video</span> : null}
                           <span className="ml-auto"><Views n={views.topics[`${m.id}/${t.id}`]} /></span>
                         </div>
                       </div>

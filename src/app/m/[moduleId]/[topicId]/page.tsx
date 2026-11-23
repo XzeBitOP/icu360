@@ -19,7 +19,7 @@ import { practiceLinks } from "@/lib/learn";
 import { LinkGrid } from "@/components/LearnBlocks";
 import { AiButton } from "@/components/client/ai/AiTutor";
 import { bedsideText, ctx, notesText } from "@/lib/ai/context";
-import { visualsFor } from "@/lib/partners";
+import { visualsFor } from "@/lib/embedded-videos";
 import { VisualExplanation } from "@/components/VisualExplanation";
 
 type Params = { moduleId: string; topicId: string };
@@ -70,7 +70,7 @@ export default async function TopicPage({ params }: { params: Promise<Params> })
       {visuals.length ? (
         <a href="#visual" className={`mt-2 inline-flex items-center gap-1.5 text-[12.5px] ${muted}`} data-testid="visual-meta">
           <Clapperboard className="w-4 h-4 text-brand-600 dark:text-glow-teal" strokeWidth={2} aria-hidden="true" />
-          Visual explanation by <span className="font-semibold text-ink-700 dark:text-night-text">Armando Hasudungan</span>
+          Embedded video by <span className="font-semibold text-ink-700 dark:text-night-text">Armando Hasudungan</span>
         </a>
       ) : null}
     </>
@@ -81,7 +81,7 @@ export default async function TopicPage({ params }: { params: Promise<Params> })
   const calcLinks = calcs.length ? (
     <section>
       <h2 className="display text-[18px] font-semibold mb-2.5 px-1">Calculators for this topic</h2>
-      <div className="grid sm:grid-cols-2 gap-2.5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
         {calcs.map((c) => (
           <Link key={c!.id} href={`/tools/${c!.id}`} className="glass rounded-[20px] p-3.5 flex items-center gap-3">
             <IconTile name="calculator" size="w-9 h-9" isz="w-4 h-4" />
@@ -94,7 +94,7 @@ export default async function TopicPage({ params }: { params: Promise<Params> })
   ) : null;
 
   const bedside = (
-    <div className="grid xl:grid-cols-[minmax(0,1fr)_320px] gap-5 xl:gap-6 items-start">
+    <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_320px] gap-5 xl:gap-6 items-start">
       <div className="space-y-5 min-w-0">
         <div className="flex justify-end -mb-2"><AiButton context={ctx("topic", topic.title, bedsideText(topic))} label="Ask AI about this topic" testId="ai-bedside" /></div>
         {b.definition ? <Callout kind="info" title="Definition" text={b.definition.text} /> : null}

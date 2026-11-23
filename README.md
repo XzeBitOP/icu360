@@ -50,6 +50,15 @@ Every learning block has a small **Ask AI** button (algorithms, topic Bedside an
 - **Safety prompt** (`src/lib/ai/prompt.ts`): answer only from the supplied text, say "That isn't covered in this section" otherwise, no new doses, no patient-specific advice, concise bullets.
 - **Rate limit:** uses Upstash Redis when configured (shared across instances); otherwise an in-memory counter per serverless instance, which resets on cold starts and is only a soft limit.
 
+## Embedded videos (Armando Hasudungan)
+
+ICU 360 embeds Armando Hasudungan's YouTube videos on matching topics ("Visual explanation" card). **We do not own these videos; all rights belong to Armando Hasudungan.** His website [armandoh.org](https://armandoh.org) has complete free-to-use videos, diagrams and PDFs.
+
+- Data: `content/embedded-videos/armando.json` (`{armandoTopic, armandoUrl, notesUrl?, youtubeId, videoTitle, author, icuModuleId, icuTopicId, matchStrength, blurb}`). Every YouTube ID is checked with YouTube oEmbed and must have author "Armando Hasudungan".
+- Wording rules: never call him a partner; every embed shows "Embedded video by Armando Hasudungan · armandoh.org" with a link to his exact page, plus "ICU 360 does not own this video". Blurbs are one line in our own words; do not copy his notes or diagrams.
+- The embed is a lite youtube-nocookie player that loads only after a tap. His material is never sent to the AI tutor.
+- Credits page: `/credits` ("Video credits"); footer line links to it.
+
 ## Content
 
 All clinical content lives in `content/` as JSON. The app reads it at build time, so **any change goes live on the next deploy** (push to `main` and Vercel rebuilds).

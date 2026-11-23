@@ -84,6 +84,9 @@ test("news, calculator and ABG have AI buttons with their own text", async ({ pa
 test("ECG OS and Ventilator OS: 'Explain this' sends the live sim state as text", async ({ page }) => {
   const sent = await mockAi(page);
   await page.goto("/tools/ecg-os");
+  // The measured values exist only once the simulator has run (racy on slow CI otherwise).
+  await expect(page.getByTestId("heart-3d")).toHaveAttribute("data-state", "ready", { timeout: 60_000 });
+  await page.waitForTimeout(500);
   await page.getByTestId("ai-ecg").dispatchEvent("click");
   await expect.poll(() => sent.length).toBe(1);
   expect(sent[0]).toMatchObject({ kind: "ecg", action: "explain_state" });

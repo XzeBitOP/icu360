@@ -70,7 +70,7 @@ export function PageHeader({ back = true, backHref = "/", eyebrow, title, right,
       </div>
       <div className="mt-4 lg:mt-1 px-1">
         {eyebrow ? <p className="text-[12px] uppercase tracking-[.1em] font-semibold text-brand-600 dark:text-glow-teal">{eyebrow}</p> : null}
-        <h1 className="display text-[32px] lg:text-[40px] font-bold leading-[1.08] mt-1">{title}</h1>
+        <h1 className="display text-[32px] lg:text-[40px] font-bold leading-[1.08] mt-1 break-words">{title}</h1>
         {meta}
       </div>
     </header>

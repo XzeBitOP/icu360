@@ -36,7 +36,7 @@ export default function Tools() {
     <>
       <PageHeader back={false} eyebrow={`${calcs.length} calculators · 5 interactive tools`} title="Tools" />
       <Main className="space-y-7">
-        <section className="grid sm:grid-cols-2 xl:grid-cols-3 gap-3">
+        <section className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
           {featured.map((f, i) => (
             <Link key={f.href} href={f.href} className={`${i === 0 ? "glass-hero sm:col-span-2 xl:col-span-1" : "glass"} rounded-[24px] p-4 flex items-center gap-3.5`}>
               {i === 0 ? (

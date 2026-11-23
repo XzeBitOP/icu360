@@ -1,11 +1,13 @@
 {
-  "partner": {
+  "creator": {
     "id": "armando-hasudungan",
     "name": "Armando Hasudungan",
     "site": "https://armandoh.org",
     "youtube": "https://www.youtube.com/@armandohasudungan",
-    "permission": "Permission given to Kenil Shah to embed and link with credit (name + website), Nov 2026.",
-    "verifiedAt": "2026-11-23"
+    "verifiedAt": "2026-11-23",
+    "rights": "ICU 360 embeds Armando Hasudungan's YouTube videos. ICU 360 does not own these videos; all rights belong to Armando Hasudungan.",
+    "freeResources": "armandoh.org has complete free-to-use videos, diagrams and PDFs.",
+    "creditRules": "Do not describe him as a partner. Credit his name and armandoh.org on every embed. Do not copy his notes or diagrams; do not send his material to the AI tutor."
   },
   "videos": [
     {

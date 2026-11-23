@@ -28,7 +28,7 @@ export function LinkGrid({ title, links }: { title: string; links: GuideLink[] }
   return (
     <section>
       <h2 className="display text-[20px] font-semibold mb-2.5 px-1">{title}</h2>
-      <div className="grid sm:grid-cols-2 gap-2.5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
         {links.map((l) => (
           <Link key={l.href} href={l.href} className="glass rounded-[20px] p-3.5 flex items-center gap-3">
             <IconTile name={l.icon} size="w-9 h-9" isz="w-4 h-4" />

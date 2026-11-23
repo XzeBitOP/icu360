@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-/** Armando Hasudungan "Visual explanation" card: credit visible, iframe only after tap, /credits page. */
+/** Embedded Armando Hasudungan videos: credit + rights wording visible, iframe only after tap, /credits page. */
 test("topic with a match shows the card, credit link and a lite embed that loads only after tap", async ({ page }) => {
   const ytRequests: string[] = [];
   page.on("request", (r) => {
@@ -16,7 +16,10 @@ test("topic with a match shows the card, credit link and a lite embed that loads
   await expect(page.getByTestId("visual-meta")).toContainText("Armando Hasudungan");
 
   const credit = card.getByTestId("armando-credit").first();
-  await expect(credit).toContainText("Video by Armando Hasudungan");
+  await expect(credit).toContainText("Embedded video by Armando Hasudungan");
+  await expect(card).toContainText("ICU 360 does not own this video; all rights belong to Armando Hasudungan.");
+  await expect(card).toContainText("Free videos, diagrams and PDFs at armandoh.org");
+  await expect(card).not.toContainText(/partner|permission/i);
   await expect(credit).toContainText("armandoh.org");
   const link = credit.getByTestId("armando-credit-link");
   await expect(link).toHaveAttribute("href", "https://armandoh.org/video/septic-sepsis-pathway/");
@@ -41,7 +44,7 @@ test("topic without a match has no card", async ({ page }) => {
   await expect(page.getByTestId("visual-explanation")).toHaveCount(0);
 });
 
-test("AI tutor context excludes the partner video card", async ({ page }) => {
+test("AI tutor context excludes the embedded video card", async ({ page }) => {
   const sent: { context: string }[] = [];
   await page.route("**/api/ai", async (route) => {
     sent.push(JSON.parse(route.request().postData() ?? "{}"));
@@ -53,11 +56,18 @@ test("AI tutor context excludes the partner video card", async ({ page }) => {
   expect(sent[0].context).not.toMatch(/armando|youtube|Visual explanation/i);
 });
 
-test("/credits lists Armando Hasudungan with a link to armandoh.org, and the footer links to it", async ({ page }) => {
+test("/credits is 'Video credits': we embed, do not own, rights belong to him, free resources on armandoh.org; footer wording", async ({ page }) => {
   await page.goto("/credits");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Video credits");
   const card = page.getByTestId("credit-armando");
   await expect(card).toContainText("Armando Hasudungan");
-  await expect(card).toContainText("Thank you");
+  await expect(page.getByTestId("credit-rights")).toContainText("We do not own these videos; all rights belong to Armando Hasudungan.");
+  await expect(page.getByTestId("credit-free")).toContainText("has complete free-to-use videos, diagrams and PDFs");
   await expect(page.getByTestId("credit-site")).toHaveAttribute("href", "https://armandoh.org");
-  await expect(page.locator("footer").getByRole("link", { name: "Partners & credits" })).toHaveAttribute("href", "/credits");
+  await expect(page.getByRole("link", { name: "YouTube channel" })).toBeVisible();
+  await expect(page.locator("main")).not.toContainText(/partner|permission|thank you/i);
+  const footer = page.locator("footer");
+  await expect(footer).toContainText("Embedded videos by Armando Hasudungan (armandoh.org). We do not own these videos");
+  await expect(footer).not.toContainText(/partner/i);
+  await expect(footer.getByRole("link", { name: "All video credits" })).toHaveAttribute("href", "/credits");
 });

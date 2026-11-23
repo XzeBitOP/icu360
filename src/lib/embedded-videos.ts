@@ -2,13 +2,14 @@ import fs from "node:fs";
 import path from "node:path";
 
 /**
- * Partner content (server-only, build time). Armando Hasudungan (armandoh.org) gave permission to embed his
- * videos on ICU 360 with clear credit: his name and a link to his site/topic page on every embed.
+ * Embedded YouTube videos by Armando Hasudungan (server-only, build time). ICU 360 embeds his videos; it does not
+ * own them and all rights belong to him. Every embed credits his name and links to his page on armandoh.org,
+ * which has complete free-to-use videos, diagrams and PDFs. Never describe him as a partner.
  * His material is never sent to the AI tutor (see src/lib/ai/context.ts, which only reads module content).
  */
 export type MatchStrength = "strong" | "partial";
 
-export type PartnerVideo = {
+export type EmbeddedVideo = {
   armandoTopic: string;
   /** His exact topic page on armandoh.org (credit link). */
   armandoUrl: string;
@@ -27,26 +28,26 @@ export type PartnerVideo = {
   blurb: string;
 };
 
-export type Partner = { id: string; name: string; site: string; youtube: string; permission: string; verifiedAt: string };
-export type PartnerFile = { partner: Partner; videos: PartnerVideo[] };
+export type VideoCreator = { id: string; name: string; site: string; youtube: string; verifiedAt: string; rights: string; freeResources: string; creditRules: string };
+export type EmbeddedVideosFile = { creator: VideoCreator; videos: EmbeddedVideo[] };
 
-export const ARMANDO_FILE = path.join(process.cwd(), "content", "partners", "armando.json");
+export const ARMANDO_FILE = path.join(process.cwd(), "content", "embedded-videos", "armando.json");
 
-let _data: PartnerFile | null = null;
-export function getArmando(): PartnerFile {
-  if (!_data) _data = JSON.parse(fs.readFileSync(ARMANDO_FILE, "utf8")) as PartnerFile;
+let _data: EmbeddedVideosFile | null = null;
+export function getArmando(): EmbeddedVideosFile {
+  if (!_data) _data = JSON.parse(fs.readFileSync(ARMANDO_FILE, "utf8")) as EmbeddedVideosFile;
   return _data;
 }
 
 /** Videos for one topic: strong matches first, at most `max`. */
-export function visualsFor(moduleId: string, topicId: string, max = 3): PartnerVideo[] {
+export function visualsFor(moduleId: string, topicId: string, max = 3): EmbeddedVideo[] {
   return getArmando()
     .videos.filter((v) => v.icuModuleId === moduleId && v.icuTopicId === topicId)
     .sort((a, b) => Number(a.matchStrength !== "strong") - Number(b.matchStrength !== "strong"))
     .slice(0, max);
 }
 
-/** Topic ids in a module that have at least one partner video. */
+/** Topic ids in a module that have at least one embedded video. */
 export function topicsWithVisuals(moduleId: string): Set<string> {
   return new Set(getArmando().videos.filter((v) => v.icuModuleId === moduleId).map((v) => v.icuTopicId));
 }
