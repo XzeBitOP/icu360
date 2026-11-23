@@ -14,6 +14,7 @@ const PAGES = [
   "/news",
   "/quiz",
   "/credits",
+  "/videos/armando",
   "/antimicrobials",
   "/antimicrobials/tenofovir-lamivudine-dolutegravir-tld",
   "/antimicrobials/bictegravir-emtricitabine-tenofovir-alafenamide",

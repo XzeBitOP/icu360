@@ -76,6 +76,22 @@ search.push({ type: "tool", title: "Antimicrobials", sub: "Reference · antibact
 for (const a of antimicrobials) {
   search.push({ type: "drug", title: a.name, sub: `${a.drugClass} · Antimicrobials`, href: `/antimicrobials/${a.id}`, k: strip([...a.aliases, ...a.brandsIndia, a.subclass, a.category, ...a.indications].join(" ")).slice(0, 300) });
 }
+// Armando Hasudungan embedded videos: one entry for the "Video resource by Armandoh" page and one per unique video
+// (anchor on that page). Labelled "Video · Armando Hasudungan" so results say whose video it is.
+const ARMANDO_FILE = C("embedded-videos/armando.json");
+const armando = read(ARMANDO_FILE);
+const modTitle = new Map(modules.map((m) => [m.id, m.title]));
+const armandoVideos = new Map();
+for (const v of [...armando.videos].sort((a, b) => Number(a.matchStrength !== "strong") - Number(b.matchStrength !== "strong"))) {
+  const e = armandoVideos.get(v.youtubeId) ?? { v, topics: [], mods: [] };
+  e.topics.push(v.icuTopicTitle, v.armandoTopic);
+  e.mods.push(modTitle.get(v.icuModuleId) ?? "");
+  armandoVideos.set(v.youtubeId, e);
+}
+search.push({ type: "video", title: "Video resource by Armandoh", sub: `Video · Armando Hasudungan · ${armandoVideos.size} embedded videos`, href: "/videos/armando", k: "armando hasudungan armandoh armandoh.org videos video resource youtube visual explanation animation drawing pathophysiology" });
+for (const { v, topics, mods } of armandoVideos.values()) {
+  search.push({ type: "video", title: v.videoTitle, sub: `Video · Armando Hasudungan · ${v.icuTopicTitle}`, href: `/videos/armando#v-${v.youtubeId}`, k: strip([...new Set([...topics, ...mods])].join(" ") + " " + v.blurb + " armando hasudungan video").slice(0, 400) });
+}
 search.push({ type: "tool", title: "Code timer", sub: "Interactive tool", href: "/tools/code-timer", k: "cardiac arrest cpr acls adrenaline rhythm check timer" });
 
 const routes = [
@@ -84,7 +100,7 @@ const routes = [
   ...modules.flatMap((m) => [`/m/${m.id}`, `/m/${m.id}/quiz`, ...m.topics.map((t) => `/m/${m.id}/${t.id}`)]),
   ...calcs.map((c) => `/tools/${c.id}`),
   "/sim/heart.bin", "/sim/heart-hit.bin", "/sim/lung.bin", "/sim/lung-hit.bin",
-  "/antimicrobials",
+  "/antimicrobials", "/videos/armando",
   ...antimicrobials.map((a) => `/antimicrobials/${a.id}`),
 ];
 
@@ -97,6 +113,7 @@ const contentHash = crypto.createHash("sha1");
 for (const f of ["views.json", "news/news.json", "quiz/daily.json", "shared/calculators.json"]) if (fs.existsSync(C(f))) contentHash.update(fs.readFileSync(C(f)));
 for (const m of modules) contentHash.update(JSON.stringify(m));
 contentHash.update(fs.readFileSync(AM_FILE));
+contentHash.update(fs.readFileSync(ARMANDO_FILE));
 const version = `${new Date().toISOString().slice(0, 10)}-${contentHash.digest("hex").slice(0, 8)}-${(process.env.VERCEL_GIT_COMMIT_SHA || "local").slice(0, 7)}`;
 fs.writeFileSync(path.join(ROOT, "public/precache.json"), JSON.stringify({ version, routes }));
 

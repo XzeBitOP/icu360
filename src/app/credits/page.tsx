@@ -48,6 +48,9 @@ export default function CreditsPage() {
             <a href={creator.site} target="_blank" rel="noopener" className="inline-flex items-center gap-2 h-11 px-5 rounded-full text-white font-semibold text-[14px]" style={gradBtn} data-testid="credit-site">
               Visit armandoh.org<ExternalLink className="w-4 h-4" strokeWidth={2.2} aria-hidden="true" />
             </a>
+            <Link href="/videos/armando" className="glass-btn inline-flex items-center gap-2 h-11 px-5 rounded-full font-semibold text-[14px] text-ink-900 dark:text-night-text" data-testid="credit-resource">
+              Video resource by Armandoh<ChevronRight className="w-4 h-4" strokeWidth={2.2} aria-hidden="true" />
+            </Link>
             <a href={creator.youtube} target="_blank" rel="noopener" className="glass-btn inline-flex items-center gap-2 h-11 px-5 rounded-full font-semibold text-[14px] text-ink-900 dark:text-night-text">
               YouTube channel<ExternalLink className="w-4 h-4" strokeWidth={2.2} aria-hidden="true" />
             </a>

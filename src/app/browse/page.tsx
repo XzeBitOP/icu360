@@ -5,6 +5,7 @@ import { ChevronRight, Search } from "lucide-react";
 import { getSections, sectionViews, getViews } from "@/lib/content";
 import { ROWS as ANTIMICROBIALS } from "@/lib/antimicrobials";
 import { PageHeader, Main } from "@/components/Shell";
+import { ArmandoResourceLink } from "@/components/ArmandoResourceLink";
 import { CircleLink, IconTile, Views, muted } from "@/components/ui";
 
 export const metadata: Metadata = pageMeta({
@@ -29,6 +30,7 @@ export default function Browse() {
           </div>
           <ChevronRight className="w-5 h-5 text-ink-400 shrink-0" aria-hidden="true" />
         </Link>
+        <ArmandoResourceLink />
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link href="/tools/ecg-os" className="glass rounded-[24px] p-4 flex items-center gap-3.5">
             <IconTile name="heart-pulse" size="w-12 h-12" isz="w-6 h-6" />

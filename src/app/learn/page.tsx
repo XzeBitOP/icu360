@@ -59,6 +59,7 @@ export default function LearnHub() {
             { href: "/quiz", title: "Daily ICU quiz", sub: "Five questions a day, with explanations", icon: "graduation-cap" },
             { href: "/tools/code-timer", title: "Code timer", sub: "CPR cycles, adrenaline and rhythm checks", icon: "timer" },
             { href: "/antimicrobials", title: "Antimicrobials guide", sub: "ICU doses, renal adjustment, Indian brands", icon: "pill" },
+            { href: "/videos/armando", title: "Video resource by Armandoh", sub: "Embedded videos by Armando Hasudungan, by topic", icon: "clapperboard" },
             { href: "/news", title: "Critical care news", sub: "New trials and guidelines, with sources", icon: "newspaper" },
           ]}
         />

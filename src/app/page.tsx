@@ -11,6 +11,7 @@ import { QUICK } from "@/lib/site";
 import { istDate, prettyDate } from "@/lib/format";
 import { HOME_DESCRIPTION, HOME_TITLE, homeJsonLd, pageMeta } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
+import { ArmandoResourceLink } from "@/components/ArmandoResourceLink";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -200,6 +201,8 @@ export default function Home() {
 
           <LearnSection cols="grid-cols-1 min-[380px]:grid-cols-2" />
 
+          <ArmandoResourceLink />
+
           <QuizAndProgress hasQuizToday={hasQuizToday} />
 
           <section>
@@ -272,6 +275,7 @@ export default function Home() {
             </div>
           </section>
           <LearnSection cols="grid-cols-2" />
+          <ArmandoResourceLink />
           <QuizAndProgress hasQuizToday={hasQuizToday} />
         </div>
         <aside className="space-y-5">

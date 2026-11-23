@@ -60,6 +60,7 @@ export function VisualExplanation({ videos }: { videos: EmbeddedVideo[] }) {
       <p className={`mt-4 pt-3 border-t border-ink-200/70 dark:border-white/10 text-[11.5px] leading-relaxed ${muted}`}>
         Embedded video by Armando Hasudungan. ICU 360 does not own this video; all rights belong to Armando Hasudungan. Free videos, diagrams and PDFs at{" "}
         <a href="https://armandoh.org" target="_blank" rel="noopener" className="font-semibold text-brand-600 dark:text-glow-teal">armandoh.org</a>. The video loads from YouTube only when you tap play.{" "}
+<Link href="/videos/armando" className="font-semibold text-brand-600 dark:text-glow-teal">Video resource by Armandoh</Link> ·{" "}
         <Link href="/credits" className="font-semibold text-brand-600 dark:text-glow-teal">Video credits</Link>
       </p>
     </section>

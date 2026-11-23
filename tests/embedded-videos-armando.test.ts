@@ -2,7 +2,7 @@ import { readFileSync, readdirSync, existsSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import type { Module } from "../src/lib/content-types";
-import { getArmando, visualsFor, topicsWithVisuals, YT_ID, ytEmbed, ytThumb } from "../src/lib/embedded-videos";
+import { getArmando, visualsFor, topicsWithVisuals, YT_ID, ytEmbed, ytThumb, armandoResourceItems, armandoResourceGroups, ARMANDO_RESOURCE_LABEL, ARMANDO_RESOURCE_PATH } from "../src/lib/embedded-videos";
 import { bedsideText, notesText, moduleText } from "../src/lib/ai/context";
 
 const MOD_DIR = path.join(process.cwd(), "content", "modules");
@@ -89,7 +89,7 @@ describe("Armando Hasudungan embedded videos (content/embedded-videos/armando.js
 });
 
 describe("embedded-video wording in user-facing files", () => {
-  const files = ["src/components/VisualExplanation.tsx", "src/app/credits/page.tsx", "src/components/Footer.tsx", "src/app/m/[moduleId]/[topicId]/page.tsx", "src/app/m/[moduleId]/page.tsx"];
+  const files = ["src/app/videos/armando/page.tsx", "src/components/ArmandoResourceLink.tsx", "src/components/VisualExplanation.tsx", "src/app/credits/page.tsx", "src/components/Footer.tsx", "src/app/m/[moduleId]/[topicId]/page.tsx", "src/app/m/[moduleId]/page.tsx"];
   it("never says partner, permission or thank-you", () => {
     for (const f of files) {
       const s = readFileSync(path.join(process.cwd(), f), "utf8");
@@ -102,5 +102,53 @@ describe("embedded-video wording in user-facing files", () => {
     expect(card).toContain("Free videos, diagrams and PDFs at");
     const footer = readFileSync(path.join(process.cwd(), "src/components/Footer.tsx"), "utf8");
     expect(footer).toContain("We do not own these videos; all rights belong to Armando Hasudungan.");
+  });
+});
+
+describe("Video resource by Armandoh (/videos/armando) and global search", () => {
+  const { videos } = getArmando();
+  const unique = new Set(videos.map((v) => v.youtubeId));
+
+  it("lists every unique video exactly once, with all its ICU 360 topics", () => {
+    const items = armandoResourceItems();
+    expect(ARMANDO_RESOURCE_LABEL).toBe("Video resource by Armandoh");
+    expect(ARMANDO_RESOURCE_PATH).toBe("/videos/armando");
+    expect(items).toHaveLength(unique.size);
+    expect(unique.size).toBeGreaterThanOrEqual(69);
+    for (const v of videos) {
+      const it = items.find((i) => i.youtubeId === v.youtubeId)!;
+      expect(it.videoTitle).toBe(v.videoTitle);
+      expect(it.topics.some((t) => t.moduleId === v.icuModuleId && t.topicId === v.icuTopicId && t.title === v.icuTopicTitle)).toBe(true);
+    }
+  });
+
+  it("groups by module in module order and covers every video", () => {
+    const order = [...new Set(modules.sort((a, b) => a.number - b.number).map((m) => m.id))];
+    const groups = armandoResourceGroups(order);
+    expect(groups.reduce((n, g) => n + g.items.length, 0)).toBe(unique.size);
+    const idx = groups.map((g) => order.indexOf(g.moduleId));
+    expect([...idx].sort((a, b) => a - b)).toEqual(idx);
+    for (const g of groups) for (const i of g.items) expect(i.primary.icuModuleId).toBe(g.moduleId);
+  });
+
+  it("search index has the page and one 'Video · Armando Hasudungan' entry per video, anchored on the page", () => {
+    const idx = JSON.parse(readFileSync(path.join(process.cwd(), "public", "search-index.json"), "utf8")) as { type: string; title: string; sub: string; href: string; k: string }[];
+    const vids = idx.filter((e) => e.type === "video");
+    expect(vids.find((e) => e.href === "/videos/armando")?.title).toBe("Video resource by Armandoh");
+    for (const id of unique) {
+      const e = vids.find((x) => x.href === `/videos/armando#v-${id}`);
+      expect(e, id).toBeDefined();
+      expect(e!.title).toBe(videos.find((v) => v.youtubeId === id)!.videoTitle);
+      expect(e!.sub).toMatch(/^Video · Armando Hasudungan · /);
+    }
+    const precache = JSON.parse(readFileSync(path.join(process.cwd(), "public", "precache.json"), "utf8")) as { routes: string[] };
+    expect(precache.routes).toContain("/videos/armando");
+  });
+
+  it("the page states we embed, do not own, rights belong to him, and armandoh.org's free videos, diagrams and PDFs", () => {
+    const s = readFileSync(path.join(process.cwd(), "src/app/videos/armando/page.tsx"), "utf8");
+    expect(s).toContain("We do not own these videos; all rights belong to {creator.name}.");
+    expect(s).toContain("has complete free-to-use videos, diagrams and PDFs.");
+    expect(s).toContain("LiteYouTube");
   });
 });

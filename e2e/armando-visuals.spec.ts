@@ -71,3 +71,50 @@ test("/credits is 'Video credits': we embed, do not own, rights belong to him, f
   await expect(footer).not.toContainText(/partner/i);
   await expect(footer.getByRole("link", { name: "All video credits" })).toHaveAttribute("href", "/credits");
 });
+
+test("'Video resource by Armandoh' page lists every video, grouped by module, with credit and lite embeds", async ({ page }) => {
+  await page.route(/youtube-nocookie\.com\/embed\//, (route) => route.fulfill({ status: 200, contentType: "text/html", body: "<html><body>stub player</body></html>" }));
+  await page.goto("/videos/armando");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Video resource by Armandoh");
+  await expect(page.getByTestId("armando-video")).toHaveCount(69);
+  expect(await page.getByTestId("armando-module-group").count()).toBeGreaterThan(20);
+  await expect(page.getByTestId("armando-resource-rights")).toContainText("We do not own these videos; all rights belong to Armando Hasudungan.");
+  await expect(page.getByTestId("armando-resource-free")).toContainText("has complete free-to-use videos, diagrams and PDFs");
+  await expect(page.locator("main")).not.toContainText(/partner|permission|thank you/i);
+  await expect(page.getByTestId("lite-yt-iframe")).toHaveCount(0);
+
+  const card = page.locator("#v-OgQ6avlpBRY");
+  await expect(card.getByTestId("armando-video-title")).toHaveText("Septic (Sepsis) Pathway");
+  await expect(card.getByTestId("armando-credit")).toContainText("Embedded video by Armando Hasudungan");
+  const topic = card.getByTestId("armando-video-topic").first();
+  await expect(topic).toHaveAttribute("href", "/m/sepsis-septic-shock/recognition-sepsis-3#visual");
+  await card.getByTestId("lite-yt-play").click();
+  await expect(card.getByTestId("lite-yt-iframe")).toHaveAttribute("src", /youtube-nocookie\.com\/embed\/OgQ6avlpBRY/);
+});
+
+test("Browse and Home show the 'Video resource by Armandoh' button", async ({ page }) => {
+  for (const p of ["/browse", "/"]) {
+    await page.goto(p);
+    const link = page.getByTestId("armando-resource-link").filter({ visible: true }).first();
+    await expect(link).toContainText("Video resource by Armandoh");
+    await expect(link).toHaveAttribute("href", "/videos/armando");
+  }
+  await page.getByTestId("armando-resource-link").filter({ visible: true }).first().click();
+  await expect(page).toHaveURL(/\/videos\/armando$/);
+});
+
+test("global search finds Armando videos, labelled 'Video · Armando Hasudungan', and opens the video on the resource page", async ({ page }) => {
+  await page.goto("/search");
+  await page.getByLabel("Search ICU 360").fill("takotsubo");
+  const hit = page.getByRole("option").filter({ hasText: "Takotsubo Cardiomyopathy" }).first();
+  await expect(hit).toBeVisible();
+  await expect(hit).toContainText("Video · Armando Hasudungan");
+  await hit.getByRole("link").click();
+  await expect(page).toHaveURL(/\/videos\/armando#v-d15kbYySnoY$/);
+  await expect(page.locator("#v-d15kbYySnoY")).toBeInViewport();
+
+  await page.goto("/search");
+  await page.getByLabel("Search ICU 360").fill("armando");
+  await page.getByRole("button", { name: "Videos", exact: true }).click();
+  await expect(page.getByRole("option").filter({ hasText: "Video resource by Armandoh" })).toBeVisible();
+});

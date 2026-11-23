@@ -1,15 +1,15 @@
 "use client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { BookOpen, Calculator, FileText, Mic, Pill, Search, Wrench, X } from "lucide-react";
+import { BookOpen, Calculator, Clapperboard, FileText, Mic, Pill, Search, Wrench, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useMounted } from "./useMounted";
 
-interface Entry { type: "module" | "topic" | "drug" | "calculator" | "tool"; title: string; sub: string; href: string; k: string }
+interface Entry { type: "module" | "topic" | "drug" | "calculator" | "tool" | "video"; title: string; sub: string; href: string; k: string }
 const muted = "text-ink-500 dark:text-night-muted";
-const TYPE_ICON = { module: BookOpen, topic: FileText, drug: Pill, calculator: Calculator, tool: Wrench };
-const TYPE_W = { tool: 1.3, calculator: 1.2, module: 1.15, topic: 1.1, drug: 1 };
-const FILTERS: [string, string][] = [["all", "All"], ["topic", "Topics"], ["drug", "Drugs"], ["calculator", "Calculators"], ["module", "Modules"]];
+const TYPE_ICON = { module: BookOpen, topic: FileText, drug: Pill, calculator: Calculator, tool: Wrench, video: Clapperboard };
+const TYPE_W = { tool: 1.3, calculator: 1.2, module: 1.15, topic: 1.1, drug: 1, video: 1.05 };
+const FILTERS: [string, string][] = [["all", "All"], ["topic", "Topics"], ["drug", "Drugs"], ["calculator", "Calculators"], ["module", "Modules"], ["video", "Videos"]];
 
 /** Lower-case, strip accents, and fold British spellings (haem/hem, oedema/edema) so both spellings match. */
 const norm = (s: string) => s.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9.+\- ]/g, " ").replace(/ae/g, "e").replace(/oe/g, "e");
