@@ -2,6 +2,76 @@
   "description": "Critical care news shown on /news, newest first. Add items only after Kenil approves them in chat. Fields: id, date (YYYY-MM-DD), tag (Guideline | Trial | India | Drug safety | Review), source, title, summary, url, moduleId (optional, links the item to a module), catchUp (optional, true for older items published as catch-up).",
   "items": [
     {
+      "id": "2026-11-24-vneri-andromeda",
+      "date": "2026-11-23",
+      "tag": "Trial",
+      "source": "Critical Care",
+      "title": "A simple bedside index may flag patients who won't respond to more noradrenaline",
+      "summary": "VNERi = diastolic BP ÷ (noradrenaline dose × heart rate). In a secondary analysis of 391 patients in ANDROMEDA-SHOCK, a baseline VNERi below 2.6 went with 28-day mortality of 50% vs 28.8%. In that group, raising the noradrenaline dose barely moved the MAP (−0.17 vs +4.43 mmHg per 0.1 µg/kg/min). It's a prompt to think early about adding a second agent, but it still needs prospective testing.",
+      "url": "https://link.springer.com/article/10.1186/s13054-026-06458-z",
+      "moduleId": "shock-vasoactive-support"
+    },
+    {
+      "id": "2026-11-24-chip-sepsis",
+      "date": "2026-11-23",
+      "tag": "Trial",
+      "source": "Critical Care",
+      "title": "Pre-existing clonal haematopoiesis (CHIP) was linked to worse sepsis outcomes",
+      "summary": "In a retrospective biobank study of 3,230 ICU sepsis patients, CHIP found on DNA taken before the illness went with higher ICU mortality (OR 1.54), fewer days free of vasopressors, ventilation and dialysis, and higher long-term mortality among survivors (HR 1.40). It's background reading for now, not a bedside change.",
+      "url": "https://link.springer.com/article/10.1186/s13054-026-06482-z",
+      "moduleId": "sepsis-septic-shock"
+    },
+    {
+      "id": "2026-11-24-scrub-typhus",
+      "date": "2026-11-23",
+      "tag": "India",
+      "source": "Dainik Bhaskar; India Today NE",
+      "title": "Scrub typhus is still active in November, in Uttar Pradesh and Assam",
+      "summary": "Sonbhadra (UP) has had 14 cases this year and has put PHCs and CHCs on alert. A 68-year-old man in Bongaigaon, Assam, has also died after being referred to a private hospital. Keep scrub typhus on the list for undifferentiated fever with organ dysfunction, look for an eschar, and start doxycycline early.",
+      "url": "https://www.bhaskar.com/local/uttar-pradesh/sonbhadra/news/sonbhadra-scrub-typhus-alert-health-department-symptoms-update-139776976.html",
+      "moduleId": "tropical-monsoon-fevers"
+    },
+    {
+      "id": "2026-11-24-puducherry-dengue",
+      "date": "2026-11-23",
+      "tag": "India",
+      "source": "The Hindu",
+      "title": "Puducherry: two recent dengue deaths and a rise in cases this year",
+      "summary": "A 19-year-old and a 23-year-old have died of dengue in Puducherry in the last few days. The UT has had 1,362 cases this year (1,232 in the Puducherry region), including 46 in the first 19 days of November, with October and November accounting for 721 cases. Watch for warning signs and resuscitate dengue shock with cautious fluids.",
+      "url": "https://www.thehindu.com/news/cities/puducherry/puducherry-records-two-dengue-deaths-in-the-last-few-days/article71735011.ece",
+      "moduleId": "tropical-monsoon-fevers"
+    },
+    {
+      "id": "2026-11-24-ecpr-anticoagulation",
+      "date": "2026-11-22",
+      "tag": "Trial",
+      "source": "Critical Care",
+      "title": "ECPR anticoagulation varies widely between centres",
+      "summary": "A EuroELSO/ESICM survey (186 responses, 41 countries) found 62% routinely give a ~5,000 IU UFH bolus at cannulation, and 17% omit it. UFH is used after cannulation in 89%. aPTT and anti-Xa targets vary widely, and many centres use lower targets in the first 24 h than general ECMO guidance. There's no standard yet, so follow your unit protocol.",
+      "url": "https://link.springer.com/article/10.1186/s13054-026-06470-3",
+      "moduleId": "ecmo-mechanical-circulatory-support"
+    },
+    {
+      "id": "2026-11-24-manipur-toxic-liquor",
+      "date": "2026-11-22",
+      "tag": "India",
+      "source": "The Hindu",
+      "title": "Manipur: suspected toxic liquor deaths, with many patients in ICU and on dialysis",
+      "summary": "The death toll in Manipur's suspected spurious liquor tragedy reached 17 (16 from Chandel, 1 from Kakching), with 228 of about 1,130 people screened still in hospital and 38 on dialysis. Samples have gone to labs in Imphal and Kolkata, so the cause is not yet confirmed, but think methanol if there is visual change, a high anion-gap acidosis or coma. Fomepizole (or ethanol) and early dialysis can be lifesaving.",
+      "url": "https://www.thehindu.com/news/national/manipur/manipur-hooch-tragedy-toll-rises-to-17-sample-sent-to-kolkata-lab/article71731475.ece",
+      "moduleId": "poisoning-approach-drug-overdoses"
+    },
+    {
+      "id": "2026-11-24-uk-antibiotic-review",
+      "date": "2026-11-21",
+      "tag": "Review",
+      "source": "Anaesthesia",
+      "title": "Writing a review date on an ICU antibiotic prescription made a timely review much more likely",
+      "summary": "A UK and Isle of Man audit of 2,626 patients in 154 ICUs found 60.6% were on antimicrobials. 92.7% of eligible orders were reviewed within 72 h, and a pre-specified stop or review date was strongly associated with that review (adjusted OR 9.3). A review date was written on only 66% of orders. The authors recommend putting a review date on every prescription.",
+      "url": "https://doi.org/10.1111/anae.70460",
+      "moduleId": "icu-infections-stewardship-immunocompromised"
+    },
+    {
       "id": "2026-11-22-kerala-lepto-dengue",
       "date": "2026-11-21",
       "tag": "India",
@@ -49,6 +119,16 @@
       "title": "Prehospital 1-hour septic shock bundle did not lower mortality",
       "summary": "In a French cluster-randomised trial (381 patients), ambulance ICU teams gave antibiotics, saline up to 35 mL/kg, norepinephrine and hydrocortisone if needed. 28-day mortality was 22% vs 27% (RR 0.81, p = 0.16), not significant. Start the bundle early, but don't expect the ambulance phase alone to save lives.",
       "url": "https://pubmed.ncbi.nlm.nih.gov/42573415/",
+      "moduleId": "sepsis-septic-shock"
+    },
+    {
+      "id": "2026-11-24-sepsis-steroid-discordance",
+      "date": "2026-11-19",
+      "tag": "Review",
+      "source": "Critical Care",
+      "title": "Sepsis steroid systematic reviews often disagree, because they pool different trials",
+      "summary": "A meta-research study of 42 systematic reviews (121 RCTs) found that more than half of review pairs shared no RCTs. Of 38 reviews that meta-analysed short-term mortality, 15 (39%) reported benefit and 23 (61%) found no effect. Discordance was limited to broad, non-specific steroid strategies; reviews of hydrocortisone plus fludrocortisone consistently found benefit, and reviews of HAT (hydrocortisone, ascorbic acid and thiamine) consistently found none. When you read a review, check which trials it included.",
+      "url": "https://link.springer.com/article/10.1186/s13054-026-06471-2",
       "moduleId": "sepsis-septic-shock"
     },
     {
@@ -201,6 +281,17 @@
       "moduleId": "acid-base-abg"
     },
     {
+      "id": "2026-11-24-dobutamine-aki",
+      "date": "2026-10-14",
+      "tag": "Trial",
+      "source": "JAMA",
+      "title": "Adding dobutamine during septic-shock source-control surgery cut AKI",
+      "summary": "A multicentre RCT of 584 patients in 39 hospitals in China found intraoperative dobutamine plus norepinephrine lowered new or worsening AKI within 7 days from 34.7% to 22.8% (aRR 0.64), compared with norepinephrine alone. There was more tachycardia, but no rise in cardiac events, mortality or dialysis. The authors call it hypothesis-generating, so it isn't a practice change yet.",
+      "url": "https://doi.org/10.1001/jama.2026.21322",
+      "moduleId": "sepsis-septic-shock",
+      "catchUp": true
+    },
+    {
       "id": "2026-11-15-vasspr",
       "date": "2026-10-14",
       "tag": "Trial",
@@ -220,6 +311,17 @@
       "summary": "In 535 critically ill patients with AKI needing RRT, starting with intermittent haemodialysis was not non-inferior to CRRT for major adverse kidney events. It was also associated with higher 90-day mortality (63.1% vs 53.5%; HR 1.30). The trial was stopped early, so treat the size of the effect with caution, but it supports CRRT as the first modality in unstable patients.",
       "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2608397",
       "moduleId": "renal-replacement-therapy",
+      "catchUp": true
+    },
+    {
+      "id": "2026-11-24-icmr-fungal-ifi",
+      "date": "2026-10-08",
+      "tag": "India",
+      "source": "Lancet Regional Health – Southeast Asia (ICMR)",
+      "title": "ICMR fungal registry: invasive fungal infection in Indian ICUs carries >50% mortality",
+      "summary": "Among 178,417 admissions to 63 ICUs at eight ICMR Advanced Mycology centres (2023–25), 2,500 invasive fungal infections were found (14 per 1,000 admissions). All-cause mortality was 53.6%. Invasive candidiasis was most common (57.1%), then aspergillosis (37%) and mucormycosis (3.4%). The findings support rapid diagnostics, infection control and antifungal stewardship.",
+      "url": "https://doi.org/10.1016/j.lansea.2026.100877",
+      "moduleId": "icu-infections-stewardship-immunocompromised",
       "catchUp": true
     }
   ]

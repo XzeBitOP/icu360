@@ -2,6 +2,279 @@
   "description": "Daily Quiz sets shown on /quiz, keyed by date (YYYY-MM-DD, India time). Each set has 5 MCQs. New sets are added only after Kenil approves them in chat. The first set below is a sample drawn from existing module quiz items.",
   "sets": [
     {
+      "date": "2026-11-26",
+      "title": "Daily Quiz: 26 November 2026",
+      "questions": [
+        {
+          "id": "2026-11-26-1",
+          "stem": "A patient with aneurysmal SAH has had the aneurysm secured. Which drug, given for 21 days, improves neurological outcome?",
+          "options": [
+            "IV nicardipine infusion",
+            "Oral nimodipine 60 mg every 4 hours",
+            "Prophylactic hypervolaemia with albumin",
+            "Tranexamic acid"
+          ],
+          "answerIndex": 1,
+          "explanation": "Oral nimodipine 60 mg every 4 hours for 21 days improves outcome in aSAH. Prophylactic hypervolaemia isn't recommended.",
+          "reference": {
+            "label": "Hoh BL, et al. 2023 Guideline for the management of patients with aneurysmal subarachnoid hemorrhage. Stroke 2023",
+            "url": "https://doi.org/10.1161/STR.0000000000000436"
+          },
+          "moduleId": "neuro-emergencies"
+        },
+        {
+          "id": "2026-11-26-2",
+          "stem": "A monitored patient with a long QT goes into polymorphic VT that looks like torsades de pointes. It is self-terminating and they still have a pulse. What is the best first drug?",
+          "options": [
+            "Amiodarone 300 mg IV",
+            "Magnesium sulphate 2 g IV",
+            "Procainamide",
+            "Adenosine 6 mg IV"
+          ],
+          "answerIndex": 1,
+          "explanation": "IV magnesium is the treatment for torsades with a long QT. Amiodarone can prolong the QT further.",
+          "reference": {
+            "label": "Panchal AR, et al. Part 3: Adult basic and advanced life support: 2020 AHA guidelines. Circulation 2020",
+            "url": "https://doi.org/10.1161/CIR.0000000000000916"
+          },
+          "moduleId": "cardiac-emergencies-arrhythmias"
+        },
+        {
+          "id": "2026-11-26-3",
+          "stem": "A ventilated patient with severe asthma becomes hypotensive. Expiratory flow doesn't return to zero before the next breath. What is the best immediate step?",
+          "options": [
+            "Raise the respiratory rate to clear CO₂",
+            "Briefly disconnect from the ventilator, then reduce the rate and tidal volume to lengthen expiratory time",
+            "Increase the tidal volume",
+            "Give a fluid bolus and leave the settings alone"
+          ],
+          "answerIndex": 1,
+          "explanation": "This is dynamic hyperinflation (auto-PEEP). Let the patient exhale, then reduce minute ventilation and accept permissive hypercapnia.",
+          "reference": {
+            "label": "Leatherman J. Mechanical ventilation for severe asthma. Chest 2015",
+            "url": "https://doi.org/10.1378/chest.14-1733"
+          },
+          "moduleId": "mechanical-ventilation"
+        },
+        {
+          "id": "2026-11-26-4",
+          "stem": "During apnoea testing for brain death, the patient is apnoeic. Which arterial result completes a positive test?",
+          "options": [
+            "PaCO₂ ≥ 45 mmHg",
+            "PaCO₂ ≥ 60 mmHg and ≥ 20 mmHg above baseline, with pH ≤ 7.30",
+            "PaO₂ < 60 mmHg",
+            "pH ≤ 7.35 alone"
+          ],
+          "answerIndex": 1,
+          "explanation": "Those are the thresholds in the 2023 brain death consensus guideline. Follow the THOA/state protocol for the legal steps in India.",
+          "reference": {
+            "label": "Greer DM, et al. Pediatric and adult brain death/death by neurologic criteria consensus guideline. Neurology 2023",
+            "url": "https://doi.org/10.1212/WNL.0000000000207740"
+          },
+          "moduleId": "raised-icp-neurotrauma-brain-death"
+        },
+        {
+          "id": "2026-11-26-5",
+          "stem": "A ventilated ICU patient is started on an insulin infusion. Which glucose target is supported by the NICE-SUGAR trial?",
+          "options": [
+            "81–108 mg/dL (tight control), which lowered mortality",
+            "A conventional target of about 140–180 mg/dL (insulin if glucose exceeds 180)",
+            "200–250 mg/dL, to avoid hypoglycaemia",
+            "Keep glucose below 110 mg/dL in every ICU patient"
+          ],
+          "answerIndex": 1,
+          "explanation": "Tight control to 81–108 mg/dL increased 90-day mortality compared with a conventional target (insulin if glucose exceeds 180, then 144–180 mg/dL).",
+          "reference": {
+            "label": "NICE-SUGAR Study Investigators. Intensive versus conventional glucose control in critically ill patients. N Engl J Med 2009",
+            "url": "https://doi.org/10.1056/NEJMoa0810625"
+          },
+          "moduleId": "endocrine-metabolic-emergencies"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "title": "Daily Quiz: 25 November 2026",
+      "questions": [
+        {
+          "id": "2026-11-25-1",
+          "stem": "A patient with ARDS is ventilated at 6 mL/kg predicted body weight. The plateau pressure is 34 cmH₂O. What's the best adjustment?",
+          "options": [
+            "Accept this plateau and raise the tidal volume to 10 mL/kg",
+            "Lower the tidal volume (toward 4 mL/kg PBW) to keep plateau pressure ≤ 30 cmH₂O",
+            "Raise PEEP until the plateau is 40 cmH₂O",
+            "Switch to high-frequency oscillation"
+          ],
+          "answerIndex": 1,
+          "explanation": "ARDSNet lung-protective ventilation targets 6 mL/kg PBW (range 4–8) and keeps plateau pressure ≤ 30 cmH₂O.",
+          "reference": {
+            "label": "Acute Respiratory Distress Syndrome Network. Ventilation with lower tidal volumes for acute lung injury and the acute respiratory distress syndrome. N Engl J Med 2000",
+            "url": "https://doi.org/10.1056/NEJM200005043421801"
+          },
+          "moduleId": "ards-refractory-hypoxaemia"
+        },
+        {
+          "id": "2026-11-25-2",
+          "stem": "A patient with decompensated cirrhosis has AKI. Diuretics and nephrotoxins have been stopped, and albumin 1 g/kg has been given for 2 days, but creatinine is still rising. There is no shock. What's the usual next drug for HRS-AKI, and which adverse effect should you watch for?",
+          "options": [
+            "Terlipressin (with albumin); watch for respiratory failure",
+            "Dopamine infusion; watch for arrhythmias",
+            "Immediate CRRT as first-line therapy",
+            "High-dose furosemide; watch for ototoxicity"
+          ],
+          "answerIndex": 0,
+          "explanation": "After a volume challenge, terlipressin plus albumin is used for HRS-AKI. In CONFIRM, respiratory failure was more common with terlipressin.",
+          "reference": {
+            "label": "Wong F, et al. Terlipressin plus albumin for the treatment of type 1 hepatorenal syndrome (CONFIRM). N Engl J Med 2021",
+            "url": "https://doi.org/10.1056/NEJMoa2008290"
+          },
+          "moduleId": "liver-failure"
+        },
+        {
+          "id": "2026-11-25-3",
+          "stem": "A severely malnourished patient is starting enteral nutrition. Which electrolyte change is the hallmark of refeeding syndrome, and how should you start calories?",
+          "options": [
+            "Hypernatraemia; start at 35 kcal/kg from day 1",
+            "Hypophosphataemia; start low, about 10–20 kcal/kg in the first 24 hours",
+            "Hypercalcaemia; start parenteral nutrition at full target",
+            "Hyperkalaemia; give no phosphate"
+          ],
+          "answerIndex": 1,
+          "explanation": "Refeeding drives phosphate (and potassium and magnesium) intracellularly. ASPEN advises starting at 10–20 kcal/kg for the first 24 hours in high-risk patients, with close electrolyte replacement.",
+          "reference": {
+            "label": "da Silva JSV, et al. ASPEN consensus recommendations for refeeding syndrome. Nutr Clin Pract 2020",
+            "url": "https://doi.org/10.1002/ncp.10474"
+          },
+          "moduleId": "nutrition-metabolic-support"
+        },
+        {
+          "id": "2026-11-25-4",
+          "stem": "You are treating thyroid storm. What's the correct order of antithyroid drugs and iodine?",
+          "options": [
+            "Give iodine first, then PTU 30 minutes later",
+            "Start a thionamide (PTU or methimazole) first, then give iodine at least 1 hour later",
+            "Give iodine alone",
+            "Give thyroxine, then iodine"
+          ],
+          "answerIndex": 1,
+          "explanation": "Block hormone synthesis first, then give iodine, so iodine is not used as substrate for more hormone. Also give a beta-blocker and a steroid.",
+          "reference": {
+            "label": "Ross DS, et al. 2016 American Thyroid Association guidelines for diagnosis and management of hyperthyroidism and other causes of thyrotoxicosis. Thyroid 2016",
+            "url": "https://doi.org/10.1089/thy.2016.0229"
+          },
+          "moduleId": "endocrine-metabolic-emergencies"
+        },
+        {
+          "id": "2026-11-25-5",
+          "stem": "You are inserting a central line. Which skin antiseptic is recommended to reduce CLABSI?",
+          "options": [
+            "Aqueous povidone-iodine alone",
+            "Alcoholic chlorhexidine > 0.5%",
+            "Soap and water",
+            "70% alcohol alone"
+          ],
+          "answerIndex": 1,
+          "explanation": "SHEA 2022 recommends alcoholic chlorhexidine > 0.5% for CVC skin preparation (then allow it to dry).",
+          "reference": {
+            "label": "Buetti N, et al. Strategies to prevent central line-associated bloodstream infections in acute-care hospitals: 2022 update. Infect Control Hosp Epidemiol 2022",
+            "url": "https://doi.org/10.1017/ice.2022.87"
+          },
+          "moduleId": "icu-care-bundles-infection-prevention"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "title": "Daily Quiz: 24 November 2026",
+      "questions": [
+        {
+          "id": "2026-11-24-1",
+          "stem": "A 74-year-old with septic shock is on noradrenaline. Which initial MAP range does SSC 2026 suggest for patients aged 65 or older?",
+          "options": [
+            "55–60 mmHg",
+            "60–65 mmHg",
+            "70–75 mmHg",
+            "80–85 mmHg"
+          ],
+          "answerIndex": 1,
+          "explanation": "For adults aged 65 or older, SSC 2026 suggests an initial MAP of 60–65 mmHg over higher ranges (conditional, low certainty). For other adults, an initial target of 65 mmHg is recommended.",
+          "reference": {
+            "label": "Prescott HC, et al. Executive summary: Surviving Sepsis Campaign: international guidelines for management of sepsis and septic shock 2026. Crit Care Med 2026",
+            "url": "https://doi.org/10.1097/CCM.0000000000007089"
+          },
+          "moduleId": "sepsis-septic-shock"
+        },
+        {
+          "id": "2026-11-24-2",
+          "stem": "A patient with methanol poisoning is already on fomepizole. They develop new visual loss. The pH is 7.28. What's the best next step?",
+          "options": [
+            "Observe, because fomepizole is already running",
+            "Give folinic acid only and repeat the pH in 6 hours",
+            "Arrange urgent haemodialysis",
+            "Give a bicarbonate bolus and discharge to the ward"
+          ],
+          "answerIndex": 2,
+          "explanation": "EXTRIP recommends extracorporeal treatment for new visual loss (also coma, seizures, pH ≤ 7.15, a persistent high anion gap, or a high methanol level). Intermittent haemodialysis is preferred.",
+          "reference": {
+            "label": "Roberts DM, et al. Recommendations for the role of extracorporeal treatments in acute methanol poisoning (EXTRIP). Crit Care Med 2015",
+            "url": "https://doi.org/10.1097/CCM.0000000000000708"
+          },
+          "moduleId": "poisoning-approach-drug-overdoses"
+        },
+        {
+          "id": "2026-11-24-3",
+          "stem": "A patient with a COPD exacerbation is still acidotic after nebulisers and steroids. The ABG is pH 7.28, PaCO₂ 68 mmHg, PaO₂ 62 mmHg on 28% oxygen. They are alert and protecting their airway. What's the best next step?",
+          "options": [
+            "Immediate intubation",
+            "Start NIV (BiPAP) for hypercapnic respiratory failure",
+            "Give a 28% Venturi mask only and repeat the ABG tomorrow",
+            "Start HFNC at FiO₂ 1.0"
+          ],
+          "answerIndex": 1,
+          "explanation": "After medical therapy, pH < 7.35 with PaCO₂ > 45 mmHg is the usual trigger for NIV in COPD. ERS/ATS gives this a strong recommendation if the airway is protected.",
+          "reference": {
+            "label": "Rochwerg B, et al. Official ERS/ATS clinical practice guidelines: noninvasive ventilation for acute respiratory failure. Eur Respir J 2017",
+            "url": "https://doi.org/10.1183/13993003.02426-2016"
+          },
+          "moduleId": "oxygen-hfnc-niv"
+        },
+        {
+          "id": "2026-11-24-4",
+          "stem": "A patient with new atrial fibrillation has a BP of 78/50, cold skin and a lactate of 4.2 mmol/L. There is no known pre-excitation. What's the best immediate treatment?",
+          "options": [
+            "IV metoprolol for rate control",
+            "Load digoxin and observe",
+            "Immediate synchronised cardioversion",
+            "IV diltiazem"
+          ],
+          "answerIndex": 2,
+          "explanation": "Haemodynamically unstable AF needs immediate synchronised cardioversion, not rate-control drugs first.",
+          "reference": {
+            "label": "Van Gelder IC, et al. 2024 ESC Guidelines for the management of atrial fibrillation. Eur Heart J 2024",
+            "url": "https://doi.org/10.1093/eurheartj/ehae176"
+          },
+          "moduleId": "cardiac-emergencies-arrhythmias"
+        },
+        {
+          "id": "2026-11-24-5",
+          "stem": "A patient expected to stay ventilated for at least 48 h has no GI bleeding. What did the REVISE trial show for IV pantoprazole 40 mg daily compared with placebo?",
+          "options": [
+            "Lower 90-day mortality",
+            "Fewer clinically important upper GI bleeds (about 1% vs 3.5%), with no clear change in mortality",
+            "More VAP",
+            "No effect on bleeding"
+          ],
+          "answerIndex": 1,
+          "explanation": "Pantoprazole cut clinically important upper GI bleeding without a clear difference in 90-day mortality or pneumonia.",
+          "reference": {
+            "label": "Cook D, et al. Stress ulcer prophylaxis during invasive mechanical ventilation (REVISE). N Engl J Med 2024",
+            "url": "https://doi.org/10.1056/NEJMoa2404245"
+          },
+          "moduleId": "icu-care-bundles-infection-prevention"
+        }
+      ]
+    },
+    {
       "date": "2026-11-23",
       "title": "Daily Quiz: 23 November 2026",
       "questions": [

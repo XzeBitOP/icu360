@@ -60,8 +60,15 @@ describe("news", () => {
 
   it("labels the 14 Oct catch-up items", () => {
     const catchUps = news.items.filter((i) => i.catchUp);
-    expect(catchUps.map((i) => i.id).sort()).toEqual(["2026-11-15-icraki", "2026-11-15-vasspr"]);
-    expect(catchUps.every((i) => i.date === "2026-10-14")).toBe(true);
+    expect(catchUps.map((i) => i.id).sort()).toEqual([
+      "2026-11-15-icraki",
+      "2026-11-15-vasspr",
+      "2026-11-24-dobutamine-aki",
+      "2026-11-24-icmr-fungal-ifi",
+    ]);
+    expect(catchUps.find((i) => i.id === "2026-11-24-dobutamine-aki")?.date).toBe("2026-10-14");
+    expect(catchUps.find((i) => i.id === "2026-11-24-icmr-fungal-ifi")?.date).toBe("2026-10-08");
+    expect(catchUps.filter((i) => i.id.startsWith("2026-11-15")).every((i) => i.date === "2026-10-14")).toBe(true);
   });
 });
 
@@ -70,18 +77,24 @@ describe("daily quiz", () => {
     sets: { date: string; title?: string; questions: unknown[] }[];
   };
 
-  it("keeps unique dated sets of 5 questions, including 22 and 23 Nov 2026", () => {
+  it("keeps unique dated sets of 5 questions, including 22–26 Nov 2026", () => {
     const dates = daily.sets.map((s) => s.date);
     expect(new Set(dates).size).toBe(dates.length);
-    expect(dates.length).toBeGreaterThanOrEqual(5);
+    expect(dates.length).toBeGreaterThanOrEqual(8);
     for (const set of daily.sets) {
       expect(set.questions).toHaveLength(5);
     }
     const d22 = daily.sets.find((s) => s.date === "2026-11-22");
     const d23 = daily.sets.find((s) => s.date === "2026-11-23");
+    const d24 = daily.sets.find((s) => s.date === "2026-11-24");
+    const d25 = daily.sets.find((s) => s.date === "2026-11-25");
+    const d26 = daily.sets.find((s) => s.date === "2026-11-26");
     const starter = daily.sets.find((s) => s.date === "2026-11-14");
     expect(d22?.title).toMatch(/22 November 2026/);
     expect(d23?.title).toMatch(/23 November 2026/);
+    expect(d24?.title).toMatch(/24 November 2026/);
+    expect(d25?.title).toMatch(/25 November 2026/);
+    expect(d26?.title).toMatch(/26 November 2026/);
     expect(starter?.title).toMatch(/Starter set/);
   });
 
@@ -90,5 +103,9 @@ describe("daily quiz", () => {
     expect(available("2026-11-22").map((s) => s.date)[0]).toBe("2026-11-22");
     expect(available("2026-11-22").some((s) => s.date === "2026-11-23")).toBe(false);
     expect(available("2026-11-23").map((s) => s.date)[0]).toBe("2026-11-23");
+    expect(available("2026-11-24").map((s) => s.date)[0]).toBe("2026-11-24");
+    expect(available("2026-11-24").some((s) => s.date === "2026-11-25")).toBe(false);
+    expect(available("2026-11-25").map((s) => s.date)[0]).toBe("2026-11-25");
+    expect(available("2026-11-26").map((s) => s.date)[0]).toBe("2026-11-26");
   });
 });
