@@ -4,7 +4,8 @@ import { getModules, getNews, getSections, getViews, getTopic, sectionViews, vie
 import { Logo } from "@/components/Logo";
 import { ThemeToggle } from "@/components/client/ThemeToggle";
 import { Greeting } from "@/components/client/Greeting";
-import { HomeFavourites, QuizAndProgress, type FavDefault } from "@/components/client/HomeWidgets";
+import { HomeFavourites, ProgressCard, type FavDefault } from "@/components/client/HomeWidgets";
+import { QuizSpotlight } from "@/components/client/QuizSpotlight";
 import { Chip, H2, IconTile, Views, muted } from "@/components/ui";
 import { Icon } from "@/components/Icon";
 import { QUICK } from "@/lib/site";
@@ -139,6 +140,8 @@ export default function Home() {
           <ThemeToggle />
         </header>
         <main className="px-4 pt-5 pb-4 space-y-7">
+          <QuizSpotlight hasQuizToday={hasQuizToday} topic={<TopTopicCard />} />
+
           <div>
             <p className="display text-[34px] font-bold leading-[1.05] px-1">
               <Greeting />
@@ -176,8 +179,6 @@ export default function Home() {
             </div>
           </Link>
 
-          <TopTopicCard />
-
           <HomeFavourites defaults={DEFAULT_FAVS} views={views} variant="scroll" />
 
           <section>
@@ -203,7 +204,7 @@ export default function Home() {
 
           <ArmandoResourceLink />
 
-          <QuizAndProgress hasQuizToday={hasQuizToday} />
+          <ProgressCard />
 
           <section>
             <H2 link="All news" href="/news">Latest in critical care</H2>
@@ -214,6 +215,9 @@ export default function Home() {
 
       {/* ---------------- Desktop ---------------- */}
       <main className="hidden lg:grid py-5 grid-cols-[minmax(0,1fr)_340px] gap-6">
+        <div className="col-span-full">
+          <QuizSpotlight hasQuizToday={hasQuizToday} topic={<TopTopicCard />} />
+        </div>
         <div className="space-y-6 min-w-0">
           <section className="glass-hero rounded-[32px] p-8 flex items-center gap-8">
             <div className="flex-1">
@@ -276,10 +280,9 @@ export default function Home() {
           </section>
           <LearnSection cols="grid-cols-2" />
           <ArmandoResourceLink />
-          <QuizAndProgress hasQuizToday={hasQuizToday} />
+          <ProgressCard />
         </div>
         <aside className="space-y-5">
-          <TopTopicCard />
           <HomeFavourites defaults={DEFAULT_FAVS} views={views} variant="list" />
           <section className="glass rounded-[26px] p-5">
             <div className="flex items-center justify-between mb-2">

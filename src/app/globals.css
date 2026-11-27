@@ -272,3 +272,18 @@ html.lowfx.dark .tabbar.glass { background: rgba(14,20,33,.98); }
 @keyframes ai-blink { 0%, 91%, 97%, 100% { transform: scaleY(1); } 94% { transform: scaleY(.12); } }
 @keyframes ai-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-22px); } }
 @media (prefers-reduced-motion: reduce) { .ai-mascot .ai-mascot-eye, .ai-mascot.is-active .ai-mascot-body { animation: none; } }
+
+/* Home: highlighted Daily Quiz spotlight (accent ring + glow), CTA and flickering streak flame */
+.quiz-spotlight { background: linear-gradient(180deg, rgba(255,250,235,.82), rgba(255,255,255,.55));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 0 0 1.5px rgba(249,115,22,.45), 0 0 34px -8px rgba(249,115,22,.45), 0 14px 34px -16px rgba(20,45,80,.30); }
+.dark .quiz-spotlight { background: linear-gradient(180deg, rgba(253,176,34,.12), rgba(255,255,255,.04));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.14), 0 0 0 1.5px rgba(253,176,34,.4), 0 0 40px -8px rgba(249,115,22,.45), 0 20px 44px -18px rgba(0,0,0,.75); }
+.quiz-cta { background: linear-gradient(160deg, #FDB022, #F97316); box-shadow: inset 0 1px 0 rgba(255,255,255,.45), 0 8px 18px -8px rgba(249,115,22,.7); }
+.streak-flame { display: inline-block; transform-origin: 50% 90%; animation: streak-flicker 1.6s ease-in-out infinite; }
+@keyframes streak-flicker {
+  0%, 100% { transform: scale(1) rotate(0deg); filter: drop-shadow(0 0 2px rgba(249,115,22,.5)); }
+  25% { transform: scale(1.08, 1.12) rotate(-4deg); filter: drop-shadow(0 0 6px rgba(253,176,34,.85)); }
+  50% { transform: scale(.96, 1.02) rotate(3deg); filter: drop-shadow(0 0 3px rgba(249,115,22,.6)); }
+  75% { transform: scale(1.05, 1.1) rotate(-2deg); filter: drop-shadow(0 0 7px rgba(253,176,34,.9)); }
+}
+@media (prefers-reduced-motion: reduce) { .streak-flame { animation: none; } }

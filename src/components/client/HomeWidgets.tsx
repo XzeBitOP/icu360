@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
-import { Star, Eye, Sparkles, Flame, Medal, ChevronRight } from "lucide-react";
+import { Star, Eye, Sparkles, Medal, ChevronRight } from "lucide-react";
 import { useMemo } from "react";
-import { useStore, currentStreak } from "@/lib/store";
+import { useStore } from "@/lib/store";
 import { badges } from "@/lib/progress";
-import { fmtViews, istDate } from "@/lib/format";
+import { fmtViews } from "@/lib/format";
 import { clientIcon } from "./icons";
 
 function ViewsC({ n }: { n?: number }) {
@@ -77,29 +77,21 @@ export function HomeFavourites({ defaults, views, variant }: { defaults: FavDefa
   );
 }
 
-export function QuizAndProgress({ hasQuizToday }: { hasQuizToday: boolean }) {
+/** "Your progress" card. The Daily Quiz itself now lives in the highlighted spotlight at the top of Home. */
+export function ProgressCard() {
   const s = useStore();
   const { completed, total, badges: b } = useMemo(() => badges(s), [s]);
-  const today = istDate();
-  const streak = currentStreak(s, today);
-  const doneToday = !!s.daily.history[today];
   const earned = b.filter((x) => x.earned).length;
   return (
-    <div className="grid grid-cols-2 gap-3">
-      <Link href="/quiz" className="glass rounded-[24px] p-4 min-h-[128px] flex flex-col">
-        <span className="w-10 h-10 rounded-[14px] grid place-items-center text-white" style={{ background: "linear-gradient(160deg,#FDB022,#F97316)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.45)" }}>
-          <Flame className="w-5 h-5" strokeWidth={2} aria-hidden="true" />
-        </span>
-        <p className="font-semibold text-[14px] leading-snug mt-3">Daily quiz</p>
-        <p className="text-[12px] text-ink-500 dark:text-night-muted mt-auto pt-1">{doneToday ? "Done today ✓" : hasQuizToday ? "5 questions waiting" : "Practice set"} · <span className="tnum font-semibold text-warn dark:text-warn-bright">{streak}🔥</span></p>
-      </Link>
-      <Link href="/progress" className="glass rounded-[24px] p-4 min-h-[128px] flex flex-col">
-        <span className="w-10 h-10 rounded-[14px] grid place-items-center text-white" style={{ background: "linear-gradient(160deg,#1A8A9A,#1B4FA0)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.4)" }}>
-          <Medal className="w-5 h-5" strokeWidth={2} aria-hidden="true" />
-        </span>
-        <p className="font-semibold text-[14px] leading-snug mt-3">Your progress</p>
-        <p className="text-[12px] text-ink-500 dark:text-night-muted mt-auto pt-1 flex items-center gap-1"><span className="tnum">{completed}/{total} modules · {earned} badge{earned === 1 ? "" : "s"}</span><ChevronRight className="w-3.5 h-3.5" aria-hidden="true" /></p>
-      </Link>
-    </div>
+    <Link href="/progress" className="glass rounded-[24px] p-4 flex items-center gap-3">
+      <span className="w-10 h-10 rounded-[14px] grid place-items-center text-white shrink-0" style={{ background: "linear-gradient(160deg,#1A8A9A,#1B4FA0)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.4)" }}>
+        <Medal className="w-5 h-5" strokeWidth={2} aria-hidden="true" />
+      </span>
+      <div className="flex-1 min-w-0">
+        <p className="font-semibold text-[14px] leading-snug">Your progress</p>
+        <p className="text-[12px] text-ink-500 dark:text-night-muted tnum">{completed}/{total} modules · {earned} badge{earned === 1 ? "" : "s"}</p>
+      </div>
+      <ChevronRight className="w-4 h-4 text-ink-400 dark:text-night-muted" aria-hidden="true" />
+    </Link>
   );
 }
