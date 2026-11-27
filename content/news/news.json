@@ -2,6 +2,76 @@
   "description": "Critical care news shown on /news, newest first. Add items only after Kenil approves them in chat. Fields: id, date (YYYY-MM-DD), tag (Guideline | Trial | India | Drug safety | Review), source, title, summary, url, moduleId (optional, links the item to a module), catchUp (optional, true for older items published as catch-up).",
   "items": [
     {
+      "id": "2026-11-27-prague-26",
+      "date": "2026-11-26",
+      "tag": "Trial",
+      "source": "NEJM (PRAGUE-26, 26 Nov 2026 issue)",
+      "title": "PRAGUE-26: catheter-directed lysis cut early collapse in intermediate-high-risk PE",
+      "summary": "558 normotensive PE patients with RV dysfunction plus a raised troponin or BNP got catheter-directed alteplase plus anticoagulation or anticoagulation alone. Death, recurrent PE or haemodynamic collapse by day 7 fell from 6.8% to 0.7% (RR 0.10), mainly from less collapse. Major bleeding was similar (1.4% vs 2.2%), but there were 2 intracranial bleeds with lysis vs none. It is a single-country trial with low mortality. It was first published online on 31 Aug (ESC 2026) and is now in the 26 Nov print issue. For an intermediate-high-risk patient who is getting worse, call the PE or cath team early.",
+      "url": "https://doi.org/10.1056/NEJMoa2608012",
+      "moduleId": "pe-tamponade-aortic-emergencies"
+    },
+    {
+      "id": "2026-11-27-hydrocortisone-dsi",
+      "date": "2026-11-26",
+      "tag": "Trial",
+      "source": "Critical Care",
+      "title": "Hydrocortisone in septic shock: the diastolic shock index may mark who does worse",
+      "summary": "Diastolic shock index (DSI) = heart rate ÷ diastolic BP. In a Korean registry of 6,562 patients with septic shock from the ED, starting hydrocortisone was linked to higher day-28 death overall (adjusted HR 1.25). The excess was seen only when the first DSI was below 2.0 (HR 1.67), with no difference at 2.0 or above (HR 1.05). This is observational, and sicker patients may simply have got steroids later, so it doesn't change practice. It is an idea to test in a trial.",
+      "url": "https://link.springer.com/article/10.1186/s13054-026-06481-0",
+      "moduleId": "sepsis-septic-shock"
+    },
+    {
+      "id": "2026-11-27-teach-sat-sbt",
+      "date": "2026-11-25",
+      "tag": "Trial",
+      "source": "JAMA",
+      "title": "Tele-ICU nudges doubled coordinated wake-up and breathing trials (TEACH)",
+      "summary": "In 12 US hospitals (12,771 ventilated patients), tele-ICU nurses and respiratory therapists spotted eligible patients and prompted bedside teams in real time. Paired spontaneous awakening and breathing trials were done 90.3% of the time with that support vs 77.6% with audit and feedback alone, up from 43.9% at baseline. This gave about one extra ventilator-free day, with similar reintubation rates (4.0% vs 4.3%). The bedside lesson is simple: daily paired SAT + SBT is worth building a system around.",
+      "url": "https://doi.org/10.1001/jama.2026.25197",
+      "moduleId": "mechanical-ventilation"
+    },
+    {
+      "id": "2026-11-27-kolkata-respiratory",
+      "date": "2026-11-25",
+      "tag": "India",
+      "source": "The Times of India",
+      "title": "Kolkata: cold snap brings a surge of respiratory ICU admissions",
+      "summary": "After a sudden drop in temperature, Kolkata hospitals reported a rush of respiratory admissions. One hospital's pulmonology ITU was at 100% occupancy, and others set aside extra ICU beds. Influenza A, metapneumovirus and rhinovirus are driving severe COPD exacerbations. Expect more viral COPD and pneumonia admissions as winter sets in.",
+      "url": "https://timesofindia.indiatimes.com/city/kolkata/mercury-dip-leaves-kol-gasping-hospitals-add-beds/articleshow/136140136.cms",
+      "moduleId": "oxygen-hfnc-niv"
+    },
+    {
+      "id": "2026-11-27-fissh",
+      "date": "2026-11-24",
+      "tag": "Trial",
+      "source": "Lancet Respiratory Medicine",
+      "title": "FISSH: Ringer's lactate didn't beat saline for survival in septic shock",
+      "summary": "In this blinded trial at 30 hospitals in Canada and Saudi Arabia, 1,113 patients with septic shock got Ringer's lactate or 0.9% saline for all boluses and maintenance fluid (about 5.8 L each). 30-day in-hospital mortality was 33.6% vs 33.0% (RR 1.02), and AKI rates were similar. Ringer's caused less hyperchloraemia and metabolic acidosis. Balanced fluid is still reasonable, but saline isn't harmful at these volumes.",
+      "url": "https://doi.org/10.1016/S2213-2600(26)00347-4",
+      "moduleId": "sepsis-septic-shock"
+    },
+    {
+      "id": "2026-11-27-pitstop-antibiotics",
+      "date": "2026-11-24",
+      "tag": "Trial",
+      "source": "JAMA",
+      "title": "PITSTOP: ceftriaxone in the ambulance did not lower sepsis deaths",
+      "summary": "Paramedics in Ontario gave 1 g IM ceftriaxone or placebo to 2,048 patients with fever, suspected infection and systolic BP below 100. Antibiotics were given about 3 hours earlier than hospital care, but hospital mortality was the same (18.0% vs 18.4%), and so were the 17 secondary outcomes. Fast antibiotics in septic shock after arrival remain standard. This trial doesn't support routine pre-hospital antibiotics.",
+      "url": "https://doi.org/10.1001/jama.2026.25627",
+      "moduleId": "sepsis-septic-shock"
+    },
+    {
+      "id": "2026-11-27-pitstop-fluids",
+      "date": "2026-11-24",
+      "tag": "Trial",
+      "source": "JAMA",
+      "title": "PITSTOP: more IV fluid in the ambulance did not lower sepsis deaths",
+      "summary": "In 1,646 hypotensive patients with suspected sepsis, liberal pre-hospital saline (median 1.5 L, up to 2 L) was compared with fluid only for systolic BP below 90 (median 0.5 L). Hospital mortality was 18.0% vs 18.3%. AKI was a little less common with liberal fluid (31.4% vs 39.1%), and pulmonary oedema was rare in both groups. Early fluid volume should follow perfusion and response, not a fixed target.",
+      "url": "https://doi.org/10.1001/jama.2026.25614",
+      "moduleId": "sepsis-septic-shock"
+    },
+    {
       "id": "2026-11-24-vneri-andromeda",
       "date": "2026-11-23",
       "tag": "Trial",
@@ -80,6 +150,16 @@
       "summary": "Ernakulam has had 3 leptospirosis deaths and 21 confirmed cases in November so far, plus 481 dengue cases (114 confirmed). For fever with jaundice, AKI or lung haemorrhage, think lepto and start antibiotics early.",
       "url": "https://www.thehindu.com/news/national/kerala/three-leptospirosis-deaths-reported-in-ernakulam-in-november/article71724726.ece",
       "moduleId": "tropical-monsoon-fevers"
+    },
+    {
+      "id": "2026-11-27-aid-icu-cognition",
+      "date": "2026-11-20",
+      "tag": "Trial",
+      "source": "Critical Care Medicine",
+      "title": "AID-ICU at 1 year: haloperidol for ICU delirium didn't change later cognition",
+      "summary": "This was the planned 1-year follow-up of the Danish AID-ICU trial (haloperidol vs placebo for ICU delirium). Global cognitive scores were similar (median 40 in both groups). Only 134 of 343 survivors were tested, so the result is imprecise. There's still no evidence that treating delirium with haloperidol protects the brain long term.",
+      "url": "https://doi.org/10.1097/CCM.0000000000007418",
+      "moduleId": "analgesia-sedation-delirium"
     },
     {
       "id": "2026-11-22-fda-heraeus-guidewires",

@@ -2,6 +2,188 @@
   "description": "Daily Quiz sets shown on /quiz, keyed by date (YYYY-MM-DD, India time). Each set has 5 MCQs. New sets are added only after Kenil approves them in chat. The first set below is a sample drawn from existing module quiz items.",
   "sets": [
     {
+      "date": "2026-11-28",
+      "title": "Daily Quiz: 28 November 2026",
+      "questions": [
+        {
+          "id": "2026-11-28-1",
+          "stem": "A 4-year-old has septic shock in a hospital with a PICU. How should the first-hour fluid be given?",
+          "options": [
+            "10–20 mL/kg boluses, reassessing after each, up to 40–60 mL/kg in the first hour",
+            "One 60 mL/kg bolus over 10 minutes",
+            "No fluid; start adrenaline straight away",
+            "Maintenance fluid only"
+          ],
+          "answerIndex": 0,
+          "explanation": "Where intensive care is available, the 2020 SSC paediatric guideline suggests up to 40–60 mL/kg as 10–20 mL/kg boluses. Titrate to perfusion and stop if there are signs of fluid overload. Where intensive care isn't available and the child isn't hypotensive, no bolus is suggested.",
+          "reference": {
+            "label": "Weiss SL, et al. Surviving Sepsis Campaign international guidelines for septic shock and sepsis-associated organ dysfunction in children. Intensive Care Med 2020;46(Suppl 1):10-67",
+            "url": "https://doi.org/10.1007/s00134-019-05878-6"
+          },
+          "moduleId": "paediatric-emergencies-essentials"
+        },
+        {
+          "id": "2026-11-28-2",
+          "stem": "A woman has a postpartum haemorrhage 1 hour after delivery. When should tranexamic acid be given?",
+          "options": [
+            "Only if bleeding continues after 24 hours",
+            "Only after hysterectomy",
+            "It isn't recommended in PPH",
+            "1 g IV as soon as possible, within 3 hours of birth"
+          ],
+          "answerIndex": 3,
+          "explanation": "In WOMAN, TXA cut deaths from bleeding, especially when given within 3 hours of birth. Give 1 g IV, and a second 1 g if bleeding continues after 30 minutes.",
+          "reference": {
+            "label": "WOMAN Trial Collaborators. Effect of early tranexamic acid administration on mortality, hysterectomy, and other morbidities in women with post-partum haemorrhage (WOMAN). Lancet 2017;389:2105-2116",
+            "url": "https://doi.org/10.1016/S0140-6736(17)30638-4"
+          },
+          "moduleId": "obstetric-critical-care"
+        },
+        {
+          "id": "2026-11-28-3",
+          "stem": "A farmer drank paraquat 1 hour ago and is alert. Which gut decontamination step is advised?",
+          "options": [
+            "Gastric lavage",
+            "Activated charcoal or Fuller's earth",
+            "Syrup of ipecac",
+            "Whole bowel irrigation"
+          ],
+          "answerIndex": 1,
+          "explanation": "Activated charcoal or Fuller's earth is given to limit absorption. Gastric lavage shouldn't be done. Haemodialysis or haemoperfusion is unlikely to change the course.",
+          "reference": {
+            "label": "Gawarammana IB, Buckley NA. Medical management of paraquat ingestion. Br J Clin Pharmacol 2011;72:745-757",
+            "url": "https://doi.org/10.1111/j.1365-2125.2011.04026.x"
+          },
+          "moduleId": "agrochemical-household-poisons"
+        },
+        {
+          "id": "2026-11-28-4",
+          "stem": "You are placing an internal jugular central line. What is recommended for finding the vein and puncturing it?",
+          "options": [
+            "Landmark technique only",
+            "A static ultrasound check, then a blind puncture",
+            "Real-time ultrasound guidance",
+            "Fluoroscopy"
+          ],
+          "answerIndex": 2,
+          "explanation": "Real-time ultrasound guidance is recommended for IJV cannulation. It cuts failed attempts and arterial puncture.",
+          "reference": {
+            "label": "American Society of Anesthesiologists Task Force on Central Venous Access. Practice guidelines for central venous access 2020. Anesthesiology 2020;132:8-43",
+            "url": "https://doi.org/10.1097/ALN.0000000000002864"
+          },
+          "moduleId": "procedures"
+        },
+        {
+          "id": "2026-11-28-5",
+          "stem": "You do a passive leg raise in a hypotensive patient while measuring cardiac output. Which change predicts fluid responsiveness?",
+          "options": [
+            "A rise in CVP of 2 mmHg",
+            "A fall in heart rate of 5 bpm",
+            "Any rise in blood pressure",
+            "A rise in cardiac output of 10% or more"
+          ],
+          "answerIndex": 3,
+          "explanation": "A PLR-induced rise in cardiac output of at least 10% reliably predicts fluid responsiveness (AUROC 0.95). Blood pressure alone is a much weaker guide. Measure CO (for example VTI), not BP.",
+          "reference": {
+            "label": "Monnet X, Marik P, Teboul JL. Passive leg raising for predicting fluid responsiveness: a systematic review and meta-analysis. Intensive Care Med 2016;42:1935-1947",
+            "url": "https://doi.org/10.1007/s00134-015-4134-1"
+          },
+          "moduleId": "haemodynamic-monitoring"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "title": "Daily Quiz: 27 November 2026",
+      "questions": [
+        {
+          "id": "2026-11-27-1",
+          "stem": "A hypoxaemic patient (SpO₂ 90% on a face mask) needs emergency intubation in the ICU. Which preoxygenation method lowered hypoxaemia during intubation in the PREOXI trial?",
+          "options": [
+            "Non-rebreather oxygen mask",
+            "Nasal cannula at 4 L/min",
+            "Non-invasive ventilation",
+            "Bag-valve-mask without PEEP"
+          ],
+          "answerIndex": 2,
+          "explanation": "NIV preoxygenation halved hypoxaemia (SpO₂ < 85%) during intubation compared with an oxygen mask: 9.1% vs 18.5%.",
+          "reference": {
+            "label": "Gibbs KW, et al. Noninvasive ventilation for preoxygenation during emergency intubation (PREOXI). N Engl J Med 2024;390:2165-2177",
+            "url": "https://doi.org/10.1056/NEJMoa2313680"
+          },
+          "moduleId": "airway-management"
+        },
+        {
+          "id": "2026-11-27-2",
+          "stem": "You prescribe CRRT for AKI in septic shock. Which delivered effluent dose is recommended?",
+          "options": [
+            "20–25 mL/kg/h",
+            "10–15 mL/kg/h",
+            "40–45 mL/kg/h",
+            "60 mL/kg/h for the first 48 h"
+          ],
+          "answerIndex": 0,
+          "explanation": "KDIGO recommends a delivered dose of 20–25 mL/kg/h. In the RENAL trial, 40 mL/kg/h didn't lower 90-day mortality compared with 25 mL/kg/h. Prescribe a little more to allow for downtime.",
+          "reference": {
+            "label": "RENAL Replacement Therapy Study Investigators. Intensity of continuous renal-replacement therapy in critically ill patients. N Engl J Med 2009;361:1627-1638",
+            "url": "https://doi.org/10.1056/NEJMoa0902413"
+          },
+          "moduleId": "renal-replacement-therapy"
+        },
+        {
+          "id": "2026-11-27-3",
+          "stem": "A young man is on day 4 of dengue. His fever is settling. Which finding is a warning sign that means admission and close monitoring?",
+          "options": [
+            "Fever going down",
+            "Rash on the limbs",
+            "Platelets of 140 ×10⁹/L with a stable haematocrit",
+            "Persistent vomiting"
+          ],
+          "answerIndex": 3,
+          "explanation": "WHO warning signs are abdominal pain, persistent vomiting, fluid accumulation, mucosal bleeding, lethargy or restlessness, liver enlargement more than 2 cm, and a rising haematocrit with a rapidly falling platelet count. The critical phase often starts as the fever settles.",
+          "reference": {
+            "label": "WHO. Dengue: guidelines for diagnosis, treatment, prevention and control. Geneva: WHO; 2009",
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK143157/"
+          },
+          "moduleId": "tropical-monsoon-fevers"
+        },
+        {
+          "id": "2026-11-27-4",
+          "stem": "A patient on warfarin has an intracerebral haemorrhage. INR is 3.4. What is the best reversal?",
+          "options": [
+            "Fresh frozen plasma alone",
+            "4-factor PCC plus IV vitamin K",
+            "Oral vitamin K alone",
+            "Platelet transfusion"
+          ],
+          "answerIndex": 1,
+          "explanation": "4F-PCC corrects the INR faster than FFP and with less volume. Give IV vitamin K with it so the INR doesn't rebound.",
+          "reference": {
+            "label": "Greenberg SM, et al. 2022 Guideline for the management of patients with spontaneous intracerebral hemorrhage (AHA/ASA). Stroke 2022;53:e282-e361",
+            "url": "https://doi.org/10.1161/STR.0000000000000407"
+          },
+          "moduleId": "neuro-emergencies"
+        },
+        {
+          "id": "2026-11-27-5",
+          "stem": "Lung ultrasound in a breathless patient shows many B-lines in both lungs, in several zones on each side. What does this pattern indicate?",
+          "options": [
+            "Pneumothorax",
+            "A normal lung",
+            "Interstitial syndrome, for example pulmonary oedema",
+            "Pleural effusion only"
+          ],
+          "answerIndex": 2,
+          "explanation": "Multiple diffuse bilateral B-lines mean interstitial syndrome, most often cardiogenic oedema or ARDS. In pneumothorax, B-lines and lung sliding are absent.",
+          "reference": {
+            "label": "Volpicelli G, et al. International evidence-based recommendations for point-of-care lung ultrasound. Intensive Care Med 2012;38:577-591",
+            "url": "https://doi.org/10.1007/s00134-012-2513-4"
+          },
+          "moduleId": "pocus-critical-care-echo"
+        }
+      ]
+    },
+    {
       "date": "2026-11-26",
       "title": "Daily Quiz: 26 November 2026",
       "questions": [
