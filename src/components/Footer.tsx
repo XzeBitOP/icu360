@@ -41,7 +41,7 @@ export async function Footer() {
       </p>
       <p className="px-1 text-[12px] leading-relaxed text-ink-500 dark:text-night-muted">
         <b className="font-semibold text-ink-700 dark:text-night-text">Video credits.</b> Embedded videos by Armando Hasudungan (
-        <a href="https://armandoh.org" target="_blank" rel="noopener" className="font-semibold text-brand-600 dark:text-glow-teal">armandoh.org</a>). We do not own these videos; all rights belong to Armando Hasudungan.{" "}
+        <a href="https://armandoh.org" target="_blank" rel="noopener" className="font-semibold text-brand-600 dark:text-glow-teal">armandoh.org</a>). We do not own these videos; all rights belong to Armando Hasudungan. Other embedded YouTube videos are credited to their channels on each video; all rights belong to their creators.{" "}
         <Link href="/credits" className="font-semibold text-brand-600 dark:text-glow-teal">All video credits</Link>
       </p>
       <p className="px-1 pb-2 text-[11.5px] text-ink-400 dark:text-night-faint">© {new Date().getFullYear()} ICU 360 · Made in India for night shifts everywhere.</p>

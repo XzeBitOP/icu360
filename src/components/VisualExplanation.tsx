@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ExternalLink, Clapperboard } from "lucide-react";
 import { Chip, muted } from "./ui";
 import { LiteYouTube } from "./client/LiteYouTube";
-import { type EmbeddedVideo, getArmando, ytEmbed, ytThumb } from "@/lib/embedded-videos";
+import { type EmbeddedVideo, type FreeVideoWithChannel, getArmando, freeVideoRights, VIDEO_LIBRARY_LABEL, VIDEO_LIBRARY_PATH, videoAnchor, ytEmbed, ytThumb } from "@/lib/embedded-videos";
 
 /** Credit line shown under every embedded video: his name, his exact topic page and his site. */
 export function ArmandoCredit({ v }: { v: EmbeddedVideo }) {
@@ -61,6 +61,67 @@ export function VisualExplanation({ videos }: { videos: EmbeddedVideo[] }) {
         Embedded video by Armando Hasudungan. ICU 360 does not own this video; all rights belong to Armando Hasudungan. Free videos, diagrams and PDFs at{" "}
         <a href="https://armandoh.org" target="_blank" rel="noopener" className="font-semibold text-brand-600 dark:text-glow-teal">armandoh.org</a>. The video loads from YouTube only when you tap play.{" "}
 <Link href="/videos/armando" className="font-semibold text-brand-600 dark:text-glow-teal">Video resource by Armandoh</Link> ·{" "}
+        <Link href="/credits" className="font-semibold text-brand-600 dark:text-glow-teal">Video credits</Link>
+      </p>
+    </section>
+  );
+}
+
+/** Credit line under a free YouTube video: the channel name (linked to the channel) and the source. */
+export function FreeVideoCredit({ v }: { v: FreeVideoWithChannel }) {
+  return (
+    <p className={`text-[12.5px] leading-snug ${muted}`} data-testid="free-video-credit">
+      Embedded video by{" "}
+      <a href={v.channel.youtube} target="_blank" rel="noopener" className="font-semibold text-ink-900 dark:text-night-text underline decoration-ink-300 dark:decoration-night-faint underline-offset-2" data-testid="free-video-channel-link">
+        {v.channel.name}
+      </a>{" "}
+      (YouTube)
+    </p>
+  );
+}
+
+/** Links under a free video card: watch on YouTube. */
+export function FreeVideoLinks({ v }: { v: FreeVideoWithChannel }) {
+  return (
+    <div className="flex flex-wrap gap-x-4 gap-y-1">
+      <a href={`https://www.youtube.com/watch?v=${v.youtubeId}`} target="_blank" rel="noopener" className="inline-flex items-center gap-1 text-[12.5px] font-semibold text-brand-600 dark:text-glow-teal" data-testid="free-video-watch">
+        Watch on YouTube<ExternalLink className="w-3.5 h-3.5" strokeWidth={2} aria-hidden="true" />
+      </a>
+    </div>
+  );
+}
+
+/** "Visual explanation" glass card for free YouTube videos by other educators (same layout as Armando's card). */
+export function FreeVideoExplanation({ videos }: { videos: FreeVideoWithChannel[] }) {
+  if (!videos.length) return null;
+  const names = [...new Set(videos.map((v) => v.channel.name))];
+  return (
+    <section id="visual" className="glass rounded-[26px] p-4 lg:p-5 scroll-mt-24" aria-labelledby="visual-h" data-testid="free-video-explanation">
+      <div className="flex items-center justify-between gap-3 mb-3">
+        <h2 id="visual-h" className="display text-[20px] font-semibold flex items-center gap-2">
+          <Clapperboard className="w-5 h-5 text-brand-600 dark:text-glow-teal" strokeWidth={2} aria-hidden="true" />
+          Visual explanation
+        </h2>
+        <Chip className="text-brand-700 dark:text-glow-teal">{videos.length > 1 ? `${videos.length} videos` : "Video"}</Chip>
+      </div>
+      <div className="space-y-5">
+        {videos.map((v) => (
+          <article key={v.youtubeId} className="space-y-2.5" data-testid="free-video" data-video-id={v.youtubeId}>
+            <LiteYouTube id={v.youtubeId} title={v.videoTitle} thumb={ytThumb(v.youtubeId)} embed={ytEmbed(v.youtubeId)} />
+            <div className="px-0.5 space-y-1.5">
+              <div className="flex items-start gap-2">
+                <p className="flex-1 min-w-0 text-[14px] leading-[1.45] font-medium text-ink-900 dark:text-night-text">{v.blurb}</p>
+                {v.matchStrength === "partial" ? <Chip className="text-ink-500 dark:text-night-muted">Background</Chip> : null}
+              </div>
+              <FreeVideoCredit v={v} />
+              <FreeVideoLinks v={v} />
+            </div>
+          </article>
+        ))}
+      </div>
+      <p className={`mt-4 pt-3 border-t border-ink-200/70 dark:border-white/10 text-[11.5px] leading-relaxed ${muted}`} data-testid="free-video-rights">
+        {names.map((n) => freeVideoRights(n)).join(" ")}{" "}
+        <Link href={`${VIDEO_LIBRARY_PATH}#${videoAnchor(videos[0].youtubeId)}`} className="font-semibold text-brand-600 dark:text-glow-teal">{VIDEO_LIBRARY_LABEL}</Link> ·{" "}
         <Link href="/credits" className="font-semibold text-brand-600 dark:text-glow-teal">Video credits</Link>
       </p>
     </section>

@@ -60,6 +60,7 @@ export default function LearnHub() {
             { href: "/tools/code-timer", title: "Code timer", sub: "CPR cycles, adrenaline and rhythm checks", icon: "timer" },
             { href: "/antimicrobials", title: "Antimicrobials guide", sub: "ICU doses, renal adjustment, Indian brands", icon: "pill" },
             { href: "/videos/armando", title: "Video resource by Armandoh", sub: "Embedded videos by Armando Hasudungan, by topic", icon: "clapperboard" },
+            { href: "/videos/library", title: "Video library", sub: "Free YouTube videos from other educators, by module", icon: "clapperboard" },
             { href: "/news", title: "Critical care news", sub: "New trials and guidelines, with sources", icon: "newspaper" },
           ]}
         />

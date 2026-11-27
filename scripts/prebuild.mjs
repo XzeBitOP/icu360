@@ -92,6 +92,16 @@ search.push({ type: "video", title: "Video resource by Armandoh", sub: `Video ·
 for (const { v, topics, mods } of armandoVideos.values()) {
   search.push({ type: "video", title: v.videoTitle, sub: `Video · Armando Hasudungan · ${v.icuTopicTitle}`, href: `/videos/armando#v-${v.youtubeId}`, k: strip([...new Set([...topics, ...mods])].join(" ") + " " + v.blurb + " armando hasudungan video").slice(0, 400) });
 }
+// Free YouTube videos by other educators: one entry for the "Video library" page and one per video (anchor on that
+// page), labelled "Video · <Channel>" so results say whose video it is.
+const FREE_VIDEOS_FILE = C("embedded-videos/youtube-free.json");
+const freeVideos = read(FREE_VIDEOS_FILE);
+const freeChannel = new Map(freeVideos.channels.map((c) => [c.id, c]));
+search.push({ type: "video", title: "Video library", sub: `Video · ${freeVideos.videos.length} free YouTube videos from ${freeVideos.channels.length} channels`, href: "/videos/library", k: "video library videos youtube free lectures visual explanation embedded " + freeVideos.channels.map((c) => c.name).join(" ") });
+for (const v of freeVideos.videos) {
+  const ch = freeChannel.get(v.channelId);
+  search.push({ type: "video", title: v.videoTitle, sub: `Video · ${ch.name} · ${v.icuTopicTitle}`, href: `/videos/library#v-${v.youtubeId}`, k: strip([v.icuTopicTitle, modTitle.get(v.icuModuleId) ?? "", v.blurb, ch.name, "video youtube"].join(" ")).slice(0, 400) });
+}
 search.push({ type: "tool", title: "Code timer", sub: "Interactive tool", href: "/tools/code-timer", k: "cardiac arrest cpr acls adrenaline rhythm check timer" });
 
 const routes = [
@@ -100,7 +110,7 @@ const routes = [
   ...modules.flatMap((m) => [`/m/${m.id}`, `/m/${m.id}/quiz`, ...m.topics.map((t) => `/m/${m.id}/${t.id}`)]),
   ...calcs.map((c) => `/tools/${c.id}`),
   "/sim/heart.bin", "/sim/heart-hit.bin", "/sim/lung.bin", "/sim/lung-hit.bin",
-  "/antimicrobials", "/videos/armando",
+  "/antimicrobials", "/videos/armando", "/videos/library",
   ...antimicrobials.map((a) => `/antimicrobials/${a.id}`),
 ];
 
@@ -114,6 +124,7 @@ for (const f of ["views.json", "news/news.json", "quiz/daily.json", "shared/calc
 for (const m of modules) contentHash.update(JSON.stringify(m));
 contentHash.update(fs.readFileSync(AM_FILE));
 contentHash.update(fs.readFileSync(ARMANDO_FILE));
+contentHash.update(fs.readFileSync(FREE_VIDEOS_FILE));
 const version = `${new Date().toISOString().slice(0, 10)}-${contentHash.digest("hex").slice(0, 8)}-${(process.env.VERCEL_GIT_COMMIT_SHA || "local").slice(0, 7)}`;
 fs.writeFileSync(path.join(ROOT, "public/precache.json"), JSON.stringify({ version, routes }));
 

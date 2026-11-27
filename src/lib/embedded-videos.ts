@@ -98,3 +98,88 @@ export function armandoResourceGroups(moduleOrder: string[]): { moduleId: string
     .map((moduleId) => ({ moduleId, items: items.filter((i) => i.primary.icuModuleId === moduleId) }))
     .filter((g) => g.items.length);
 }
+
+/* ------------------------------------------------------------------------------------------------------------------
+ * Free YouTube videos from other educators (content/embedded-videos/youtube-free.json).
+ * ICU 360 embeds them with each creator's own YouTube embedding setting; it does not own them and all rights belong
+ * to the creators. Every card credits the channel by name with a link to it. Never described as partners, no
+ * thank-you notes and no implied endorsement. Like Armando's videos, they are never sent to the AI tutor.
+ * ---------------------------------------------------------------------------------------------------------------- */
+
+export type FreeVideoChannel = { id: string; name: string; youtube: string; youtubeChannelId: string };
+
+export type FreeVideo = {
+  youtubeId: string;
+  /** Official title from YouTube oEmbed. */
+  videoTitle: string;
+  /** Key into `channels`. */
+  channelId: string;
+  icuModuleId: string;
+  icuTopicId: string;
+  icuTopicTitle: string;
+  matchStrength: MatchStrength;
+  /** One line in our own words. */
+  blurb: string;
+  /** YouTube publish date (YYYY-MM-DD). */
+  publishedAt: string;
+};
+
+export type FreeVideosFile = { schemaVersion: number; verifiedAt: string; rights: string; verification: string; channels: FreeVideoChannel[]; videos: FreeVideo[] };
+
+/** A free video joined with its channel (what the UI renders). */
+export type FreeVideoWithChannel = FreeVideo & { channel: FreeVideoChannel };
+
+export const FREE_VIDEOS_FILE = path.join(process.cwd(), "content", "embedded-videos", "youtube-free.json");
+export const VIDEO_LIBRARY_PATH = "/videos/library";
+export const VIDEO_LIBRARY_LABEL = "Video library";
+
+/** Credit sentence shown on every free-video card. */
+export const freeVideoRights = (channelName: string) =>
+  `Embedded video by ${channelName} (YouTube). ICU 360 does not own this video; all rights belong to the creator. The video loads from YouTube only when you tap play.`;
+
+let _free: FreeVideosFile | null = null;
+export function getFreeVideos(): FreeVideosFile {
+  if (!_free) _free = JSON.parse(fs.readFileSync(FREE_VIDEOS_FILE, "utf8")) as FreeVideosFile;
+  return _free;
+}
+
+function withChannel(v: FreeVideo): FreeVideoWithChannel {
+  const channel = getFreeVideos().channels.find((c) => c.id === v.channelId);
+  if (!channel) throw new Error(`Unknown channel ${v.channelId} for ${v.youtubeId}`);
+  return { ...v, channel };
+}
+
+/** Free videos for one topic: strong matches first, at most `max`. */
+export function freeVideosFor(moduleId: string, topicId: string, max = 2): FreeVideoWithChannel[] {
+  return getFreeVideos()
+    .videos.filter((v) => v.icuModuleId === moduleId && v.icuTopicId === topicId)
+    .sort((a, b) => Number(a.matchStrength !== "strong") - Number(b.matchStrength !== "strong"))
+    .slice(0, max)
+    .map(withChannel);
+}
+
+/** Topic ids in a module with any embedded video (Armando or free), mapped to the credited creator names. */
+export function topicVideoCreators(moduleId: string): Map<string, string[]> {
+  const out = new Map<string, string[]>();
+  const add = (t: string, name: string) => out.set(t, [...new Set([...(out.get(t) ?? []), name])]);
+  for (const v of getArmando().videos) if (v.icuModuleId === moduleId) add(v.icuTopicId, v.author);
+  for (const v of getFreeVideos().videos) if (v.icuModuleId === moduleId) add(v.icuTopicId, withChannel(v).channel.name);
+  return out;
+}
+
+/** All free videos grouped by ICU 360 module, in `moduleOrder`. */
+export function freeVideoGroups(moduleOrder: string[]): { moduleId: string; items: FreeVideoWithChannel[] }[] {
+  const all = getFreeVideos().videos.map(withChannel);
+  return moduleOrder
+    .map((moduleId) => ({ moduleId, items: all.filter((v) => v.icuModuleId === moduleId) }))
+    .filter((g) => g.items.length);
+}
+
+/** Every credited channel with its video count, most videos first. */
+export function freeVideoChannels(): (FreeVideoChannel & { count: number })[] {
+  const { channels, videos } = getFreeVideos();
+  return channels
+    .map((c) => ({ ...c, count: videos.filter((v) => v.channelId === c.id).length }))
+    .filter((c) => c.count)
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+}

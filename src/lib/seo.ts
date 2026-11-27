@@ -315,6 +315,7 @@ export function getSitemapEntries(): SitemapEntry[] {
     { url: `${SITE_ORIGIN}/tools/code-timer`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_ORIGIN}/antimicrobials`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${SITE_ORIGIN}/videos/armando`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE_ORIGIN}/videos/library`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_ORIGIN}/credits`, changeFrequency: "monthly", priority: 0.4 },
   ];
 

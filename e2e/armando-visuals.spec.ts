@@ -39,9 +39,10 @@ test("topic with a match shows the card, credit link and a lite embed that loads
 });
 
 test("topic without a match has no card", async ({ page }) => {
-  await page.goto("/m/handover-transport-icu-safety/isbar-handover");
+  await page.goto("/m/snakebite-scorpion-envenomation/wbct-coagulopathy");
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   await expect(page.getByTestId("visual-explanation")).toHaveCount(0);
+  await expect(page.getByTestId("free-video-explanation")).toHaveCount(0);
 });
 
 test("AI tutor context excludes the embedded video card", async ({ page }) => {

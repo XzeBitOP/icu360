@@ -1,0 +1,2200 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-11-24",
+  "rights": "ICU 360 does not own these videos; all rights belong to the creators. Each video is embedded from YouTube with the creator's own embedding setting and is credited to its channel.",
+  "verification": "Every video was checked on 24 Nov 2026 (IST): public, playable, embedding allowed (YouTube oEmbed 200 and playableInEmbed true); title and channel are YouTube's own.",
+  "channels": [
+    {
+      "id": "abcs-of-anaesthesia",
+      "name": "ABCs of Anaesthesia",
+      "youtube": "https://www.youtube.com/@ABCsofAnaesthesia",
+      "youtubeChannelId": "UCs1fy2n5Ey0c9VZRBL7UCsg"
+    },
+    {
+      "id": "aetcm-emergency-medicine",
+      "name": "AETCM Emergency Medicine",
+      "youtube": "https://www.youtube.com/@AETCMEmergencyMedicine",
+      "youtubeChannelId": "UCJeFOVY_Lmx4lcdWbJME_vQ"
+    },
+    {
+      "id": "ahrq-patient-safety",
+      "name": "AHRQ Patient Safety",
+      "youtube": "https://www.youtube.com/@ahrqpatientsafety",
+      "youtubeChannelId": "UCDzTBDWHvj7VOTKrBgIYQ5g"
+    },
+    {
+      "id": "american-thoracic-society",
+      "name": "American Thoracic Society",
+      "youtube": "https://www.youtube.com/@atscommunity",
+      "youtubeChannelId": "UCzbly6r1MKUnO0KfrD__yqg"
+    },
+    {
+      "id": "anesthesia-and-critical-care",
+      "name": "Anesthesia and Critical Care",
+      "youtube": "https://www.youtube.com/@AnesthesiaandCriticalcare",
+      "youtubeChannelId": "UCyNbj_udrZ1o1o7Ywi36ttQ"
+    },
+    {
+      "id": "anesthesia-patient-safety-foundation-apsf",
+      "name": "Anesthesia Patient Safety Foundation (APSF)",
+      "youtube": "https://www.youtube.com/@AnesthesiaPatientSafety",
+      "youtubeChannelId": "UCrXZCfeGh7aaINJUf8T8ciA"
+    },
+    {
+      "id": "bharat-jagiasi",
+      "name": "Bharat Jagiasi",
+      "youtube": "https://www.youtube.com/@bharatjagiasi",
+      "youtubeChannelId": "UCZosCoHgajNrrz6LI5O1bGQ"
+    },
+    {
+      "id": "clinical-nutrition-university",
+      "name": "Clinical Nutrition University",
+      "youtube": "https://www.youtube.com/@clinicalnutritionuniversity",
+      "youtubeChannelId": "UCct4QtBkcn0or0aOi_IwbTw"
+    },
+    {
+      "id": "clinicalmeded",
+      "name": "ClinicalMedEd",
+      "youtube": "https://www.youtube.com/@ClinicalMedEd",
+      "youtubeChannelId": "UCrUVmjrSdS49caLM-Rst9mA"
+    },
+    {
+      "id": "coda-change",
+      "name": "Coda Change",
+      "youtube": "https://www.youtube.com/@TheSMACCchannel",
+      "youtubeChannelId": "UC1olVK2n61Sppuo67FELptA"
+    },
+    {
+      "id": "core-em",
+      "name": "Core EM",
+      "youtube": "https://www.youtube.com/@coreemvideos",
+      "youtubeChannelId": "UC-OUZUPyX0KiZAtPjUqUIxA"
+    },
+    {
+      "id": "core-im",
+      "name": "Core IM",
+      "youtube": "https://www.youtube.com/@Core_IM",
+      "youtubeChannelId": "UC8xhtJuoQ0Zu2w62qivPl_g"
+    },
+    {
+      "id": "core-ultrasound",
+      "name": "Core Ultrasound",
+      "youtube": "https://www.youtube.com/@CoreUltrasound",
+      "youtubeChannelId": "UClxmp0_JzTpmc8dNW_j7QNg"
+    },
+    {
+      "id": "critical-consult-md",
+      "name": "Critical Consult MD",
+      "youtube": "https://www.youtube.com/@criticalconsultmd9458",
+      "youtubeChannelId": "UCank8PazlUdYbBlBgTYkPVw"
+    },
+    {
+      "id": "dietitians-in-nutrition-support",
+      "name": "Dietitians in Nutrition Support",
+      "youtube": "https://www.youtube.com/@DietitiansinNutritionSupport",
+      "youtubeChannelId": "UCc1QvkNHCobeXufCxQgQAPQ"
+    },
+    {
+      "id": "dr-matt-dr-mike",
+      "name": "Dr Matt & Dr Mike",
+      "youtube": "https://www.youtube.com/@DrMattDrMike",
+      "youtubeChannelId": "UCH6Oc4MAJzzmK0SM805ZnjQ"
+    },
+    {
+      "id": "ecmo-society-of-india",
+      "name": "ECMO Society Of India",
+      "youtube": "https://www.youtube.com/@ecmosocietyofindia2168",
+      "youtubeChannelId": "UCBY1yccK6Dy3GwDA_vHViMw"
+    },
+    {
+      "id": "eddyjoemd",
+      "name": "eddyjoemd",
+      "youtube": "https://www.youtube.com/@eddyjoemd",
+      "youtubeChannelId": "UCRJ7nyDIlWFNAaQFkCQb9pQ"
+    },
+    {
+      "id": "em-note",
+      "name": "EM Note",
+      "youtube": "https://www.youtube.com/@jackcfchong",
+      "youtubeChannelId": "UCf96NcByqoDlU5I3xvcgkwg"
+    },
+    {
+      "id": "em-rap-medical-education",
+      "name": "EM:RAP Medical Education",
+      "youtube": "https://www.youtube.com/@EMRAPHD",
+      "youtubeChannelId": "UCxwzhuYyeejWW1MIwIXi1Iw"
+    },
+    {
+      "id": "emcrit",
+      "name": "EMCrit",
+      "youtube": "https://www.youtube.com/@emcrit",
+      "youtubeChannelId": "UCEz2tG3N25OiE06nzYqdJsA"
+    },
+    {
+      "id": "esicm",
+      "name": "ESICM",
+      "youtube": "https://www.youtube.com/@esicm2023",
+      "youtubeChannelId": "UCC4ptWdJUCK5C8j1IcWo0kg"
+    },
+    {
+      "id": "fcpiofficial",
+      "name": "FCPIOfficial",
+      "youtube": "https://www.youtube.com/@fcpiofficial",
+      "youtubeChannelId": "UCRYLR2xnXSfhu2cHXVhYz4A"
+    },
+    {
+      "id": "geeky-medics",
+      "name": "Geeky Medics",
+      "youtube": "https://www.youtube.com/@geekymedics",
+      "youtubeChannelId": "UCkjnrEHQ8bQQmlfNdAQC_5w"
+    },
+    {
+      "id": "global-health-media-project",
+      "name": "Global Health Media Project",
+      "youtube": "https://www.youtube.com/@globalhealthmedia",
+      "youtubeChannelId": "UCLxFqUTzhUVC-_F_pd4Yvkg"
+    },
+    {
+      "id": "hackensack-meridian-mountainside-medical-center",
+      "name": "Hackensack Meridian Mountainside Medical Center",
+      "youtube": "https://www.youtube.com/@hackensackmeridianmountain6792",
+      "youtubeChannelId": "UCiTHp3joK7FsTMyvMWf-Tew"
+    },
+    {
+      "id": "hopitaux-universitaires-de-gen-ve",
+      "name": "Hopitaux Universitaires de Genève",
+      "youtube": "https://www.youtube.com/@hug_ge",
+      "youtubeChannelId": "UCfRZKrhLs6HbL5jEc3OL82w"
+    },
+    {
+      "id": "houston-methodist-debakey-cv-education",
+      "name": "Houston Methodist DeBakey CV Education",
+      "youtube": "https://www.youtube.com/@DeBakeyCVEdu",
+      "youtubeChannelId": "UCb8PGmJ6SILfyOvOWJvHZIg"
+    },
+    {
+      "id": "icu-advantage",
+      "name": "ICU Advantage",
+      "youtube": "https://www.youtube.com/@ICUAdvantage",
+      "youtubeChannelId": "UC5ADeLt8ckSBvfz0C47qbGQ"
+    },
+    {
+      "id": "icu-reach",
+      "name": "ICU REACH",
+      "youtube": "https://www.youtube.com/@ICUREACH",
+      "youtubeChannelId": "UCOG2zb1HrbuBhGp4aVd1J2Q"
+    },
+    {
+      "id": "icu-dr-pradeep-rangappa",
+      "name": "ICU_Dr.Pradeep Rangappa",
+      "youtube": "https://www.youtube.com/@ICUDrPradeepRangappa",
+      "youtubeChannelId": "UCsTbpvX5p3Pf5De057q12XA"
+    },
+    {
+      "id": "idpodcasts",
+      "name": "IDPodcasts",
+      "youtube": "https://www.youtube.com/@IDPodcasts",
+      "youtubeChannelId": "UCCmSK2u1VWVEFFgskdewK5A"
+    },
+    {
+      "id": "indian-society-of-critical-care-medicine",
+      "name": "Indian Society of Critical Care Medicine",
+      "youtube": "https://www.youtube.com/@isccmnational",
+      "youtubeChannelId": "UCtyEfqIGqVNaLDwBzS4sgcw"
+    },
+    {
+      "id": "irriv-international-renal-research-institute-vicenza",
+      "name": "IRRIV International Renal Research Institute Vicenza",
+      "youtube": "https://www.youtube.com/@VicenzaNephroCourses",
+      "youtubeChannelId": "UC4VNEm4rRKyT_hLTOuECOtQ"
+    },
+    {
+      "id": "jeff-gadsden-regional-anesthesia",
+      "name": "Jeff Gadsden | Regional Anesthesia",
+      "youtube": "https://www.youtube.com/@regionalanesthesiology",
+      "youtubeChannelId": "UCqMt0yH0ZHez6wFFP6ZfECg"
+    },
+    {
+      "id": "johns-hopkins-medicine",
+      "name": "Johns Hopkins Medicine",
+      "youtube": "https://www.youtube.com/@JohnsHopkinsMedicine",
+      "youtubeChannelId": "UCATNzbTbfeoMhNonZGZmrhA"
+    },
+    {
+      "id": "larry-b-mellick-md",
+      "name": "Larry B. Mellick, MD",
+      "youtube": "https://www.youtube.com/@lmellick",
+      "youtubeChannelId": "UC_yjveGdyx6mqqHkHaD-_bg"
+    },
+    {
+      "id": "lecturio-medical",
+      "name": "Lecturio Medical",
+      "youtube": "https://www.youtube.com/@lecturiomedical",
+      "youtubeChannelId": "UCbYmF43dpGHz8gi2ugiXr0Q"
+    },
+    {
+      "id": "leicester-icm-teaching",
+      "name": "Leicester ICM Teaching",
+      "youtube": "https://www.youtube.com/@leicestericmteaching2837",
+      "youtubeChannelId": "UCqiILuoMN9QIhjhmKbIy1JQ"
+    },
+    {
+      "id": "level-up-rn",
+      "name": "Level Up RN",
+      "youtube": "https://www.youtube.com/@LevelUpRN",
+      "youtubeChannelId": "UCSlJ8BB17Ex9s4mrg7DEYCw"
+    },
+    {
+      "id": "medcram-medical-lectures-explained-clearly",
+      "name": "MedCram - Medical Lectures Explained CLEARLY",
+      "youtube": "https://www.youtube.com/@Medcram",
+      "youtubeChannelId": "UCG-iSMVtWbbwDDXgXXypARQ"
+    },
+    {
+      "id": "medicosis-perfectionalis",
+      "name": "Medicosis Perfectionalis",
+      "youtube": "https://www.youtube.com/@MedicosisPerfectionalis",
+      "youtubeChannelId": "UCl-J-ovSJhA3or73Q2uVpow"
+    },
+    {
+      "id": "medmastery",
+      "name": "Medmastery",
+      "youtube": "https://www.youtube.com/@MedMastery",
+      "youtubeChannelId": "UC1a4RqaEpMsHja5dSlUE1mg"
+    },
+    {
+      "id": "medvarsity",
+      "name": "Medvarsity",
+      "youtube": "https://www.youtube.com/@MedvarsityTechnologiesPvtLtd",
+      "youtubeChannelId": "UC-AWNCtrtDYUhfk_UmjBhTQ"
+    },
+    {
+      "id": "midcheshirehospitals",
+      "name": "MidCheshireHospitals",
+      "youtube": "https://www.youtube.com/@MidCheshireHospitals",
+      "youtubeChannelId": "UCqJ_AMykbFUHtVMDm_ULwHg"
+    },
+    {
+      "id": "mount-sinai-health-system",
+      "name": "Mount Sinai Health System",
+      "youtube": "https://www.youtube.com/@MountSinaiNYC",
+      "youtubeChannelId": "UC4ZyUot7ROY6H1kV8_J__kQ"
+    },
+    {
+      "id": "nephrology-board-review",
+      "name": "Nephrology Board Review",
+      "youtube": "https://www.youtube.com/@NephrologyBoardReview",
+      "youtubeChannelId": "UCCeGKaSJoBAfcwbRXPw5H0w"
+    },
+    {
+      "id": "nhs-organ-donation",
+      "name": "NHS Organ Donation",
+      "youtube": "https://www.youtube.com/@nhsorgandonation",
+      "youtubeChannelId": "UC0vYkpY4BHAIc5wNm_gNurg"
+    },
+    {
+      "id": "ninja-nerd",
+      "name": "Ninja Nerd",
+      "youtube": "https://www.youtube.com/@NinjaNerdOfficial",
+      "youtubeChannelId": "UC6QYFutt9cluQ3uSM963_KQ"
+    },
+    {
+      "id": "openpediatrics",
+      "name": "OPENPediatrics",
+      "youtube": "https://www.youtube.com/@OPENPediatrics",
+      "youtubeChannelId": "UCyQ4ieAnEwDQs9iZLwH9H8w"
+    },
+    {
+      "id": "osmosis-from-elsevier",
+      "name": "Osmosis from Elsevier",
+      "youtube": "https://www.youtube.com/@osmosis",
+      "youtubeChannelId": "UCNI0qOojpkhsUtaQ4_2NUhQ"
+    },
+    {
+      "id": "paul-bolin-m-d",
+      "name": "Paul Bolin, M.D.",
+      "youtube": "https://www.youtube.com/@pwbmd",
+      "youtubeChannelId": "UCyaG5WliXdoVSC-yh5iDk8Q"
+    },
+    {
+      "id": "registerednursern",
+      "name": "RegisteredNurseRN",
+      "youtube": "https://www.youtube.com/@RegisteredNurseRN",
+      "youtubeChannelId": "UCPyMN8DzkFl2__xnTEiGZ1w"
+    },
+    {
+      "id": "rhesus-medicine",
+      "name": "Rhesus Medicine",
+      "youtube": "https://www.youtube.com/@RhesusMedicine",
+      "youtubeChannelId": "UCRks8wB6vgz0E7buP0L_5RQ"
+    },
+    {
+      "id": "royal-berkshire-nhs-foundation-trust",
+      "name": "Royal Berkshire NHS Foundation Trust",
+      "youtube": "https://www.youtube.com/@RBH0091",
+      "youtubeChannelId": "UCdXE3-zGbNfSAhqfe-hddTQ"
+    },
+    {
+      "id": "rush-university-system-for-health",
+      "name": "Rush University System for Health",
+      "youtube": "https://www.youtube.com/@rushmedicalcenter",
+      "youtubeChannelId": "UCPsHraybgqSCHorAcg7Y8Tg"
+    },
+    {
+      "id": "sccm",
+      "name": "SCCM",
+      "youtube": "https://www.youtube.com/@SCCM",
+      "youtubeChannelId": "UCD4yTwlCd09rCbB7KSPmGUA"
+    },
+    {
+      "id": "sound-physicians",
+      "name": "Sound Physicians",
+      "youtube": "https://www.youtube.com/@sound_physicians",
+      "youtubeChannelId": "UC4kxBhkuBX2HAlKnmqa2XmQ"
+    },
+    {
+      "id": "stanford-medicine-25",
+      "name": "Stanford Medicine 25",
+      "youtube": "https://www.youtube.com/@StanfordMedicine25",
+      "youtubeChannelId": "UCGxGC5RCVFOEebFfepv6frQ"
+    },
+    {
+      "id": "strong-medicine",
+      "name": "Strong Medicine",
+      "youtube": "https://www.youtube.com/@StrongMed",
+      "youtubeChannelId": "UCFq5vPnNRNNNysLrktz4aSw"
+    },
+    {
+      "id": "tbs-zermatt",
+      "name": "TBS Zermatt",
+      "youtube": "https://www.youtube.com/@TBSZermatt",
+      "youtubeChannelId": "UCfkvK1O6LZgvEkCsLZQahtw"
+    },
+    {
+      "id": "the-alfred-intensive-care-academic-centre",
+      "name": "The Alfred Intensive Care Academic Centre",
+      "youtube": "https://www.youtube.com/@alfredicu8359",
+      "youtubeChannelId": "UCy-Vq8KF4wcMF8eL4lFENzw"
+    },
+    {
+      "id": "the-center-for-medical-education",
+      "name": "The Center for Medical Education",
+      "youtube": "https://www.youtube.com/@ccme_courses",
+      "youtubeChannelId": "UC1BtR-QhDTo77VkxxsC9gDA"
+    },
+    {
+      "id": "the-icu-channel-by-esbicm",
+      "name": "The ICU Channel by ESBICM",
+      "youtube": "https://www.youtube.com/@TheICUChannel",
+      "youtubeChannelId": "UCcCQjkMaQ4WT-2roV8xYtLQ"
+    },
+    {
+      "id": "the-resuscitation-coach",
+      "name": "The Resuscitation Coach",
+      "youtube": "https://www.youtube.com/@TheResuscitationCoach",
+      "youtubeChannelId": "UC7hDpwJGGJci0IXYkpKFp5g"
+    },
+    {
+      "id": "thoracicsurgeons",
+      "name": "ThoracicSurgeons",
+      "youtube": "https://www.youtube.com/@ThoracicSurgeons",
+      "youtubeChannelId": "UCNpeFIjuR24mQCUtVFIEDpQ"
+    },
+    {
+      "id": "unmc-heroes",
+      "name": "UNMC HEROES",
+      "youtube": "https://www.youtube.com/@unmcheroes",
+      "youtubeChannelId": "UC-g0YPrNz_XHGNOvi6POoCA"
+    },
+    {
+      "id": "wellington-icu",
+      "name": "Wellington ICU",
+      "youtube": "https://www.youtube.com/@wellingtonicu8604",
+      "youtubeChannelId": "UC2qNHYgLoJLQKZ8odcvTQPA"
+    }
+  ],
+  "videos": [
+    {
+      "youtubeId": "uDT4daY92Uo",
+      "videoTitle": "A to E Assessment for Deteriorating and Acutely Unwell Patients | ABDCE Clinical Approach",
+      "channelId": "rhesus-medicine",
+      "icuModuleId": "deteriorating-patient-icu-triage",
+      "icuTopicId": "abcde-approach",
+      "icuTopicTitle": "ABCDE approach to the deteriorating patient",
+      "matchStrength": "strong",
+      "blurb": "A structured A-to-E walk-through for assessing an acutely unwell, deteriorating patient.",
+      "publishedAt": "2020-05-06"
+    },
+    {
+      "youtubeId": "-DTVZtp-ARM",
+      "videoTitle": "National Early Warning Score 2 (NEWS2) How is the NEWS2 score used? What does the NEWS2 score mean?",
+      "channelId": "rhesus-medicine",
+      "icuModuleId": "deteriorating-patient-icu-triage",
+      "icuTopicId": "news2-qsofa",
+      "icuTopicTitle": "NEWS2 and qSOFA",
+      "matchStrength": "strong",
+      "blurb": "How the NEWS2 early warning score is calculated and used to escalate care.",
+      "publishedAt": "2020-05-08"
+    },
+    {
+      "youtubeId": "ZxwFOXUyiuw",
+      "videoTitle": "Rapid Response Calls (Intern Crash Course)",
+      "channelId": "strong-medicine",
+      "icuModuleId": "deteriorating-patient-icu-triage",
+      "icuTopicId": "rapid-response-calls",
+      "icuTopicTitle": "Rapid response calls",
+      "matchStrength": "strong",
+      "blurb": "A practical framework for attending rapid response calls on the ward.",
+      "publishedAt": "2023-01-10"
+    },
+    {
+      "youtubeId": "tQEdi0OKv8Y",
+      "videoTitle": "ICU Triage: What We Know and Everything We Don’t",
+      "channelId": "sccm",
+      "icuModuleId": "deteriorating-patient-icu-triage",
+      "icuTopicId": "icu-admission-discharge",
+      "icuTopicTitle": "ICU admission and discharge criteria (India)",
+      "matchStrength": "strong",
+      "blurb": "What the evidence says about ICU triage and admission decisions, and its gaps.",
+      "publishedAt": "2026-03-23"
+    },
+    {
+      "youtubeId": "fDkxJLAfCEE",
+      "videoTitle": "Disaster Ethics in Critical Care: Sara Gray",
+      "channelId": "coda-change",
+      "icuModuleId": "deteriorating-patient-icu-triage",
+      "icuTopicId": "bed-triage-scarcity",
+      "icuTopicTitle": "Bed triage when beds are short",
+      "matchStrength": "strong",
+      "blurb": "Ethics of allocating ICU resources during disasters and surges.",
+      "publishedAt": "2021-10-14"
+    },
+    {
+      "youtubeId": "3Y5sO2REU2o",
+      "videoTitle": "How to Perform Chest Compressions | CPR Technique | OSCE Guide | UKMLA | CPSA | PLAB 2",
+      "channelId": "geeky-medics",
+      "icuModuleId": "cardiac-arrest-post-rosc",
+      "icuTopicId": "bls-high-quality-cpr",
+      "icuTopicTitle": "Recognition and high-quality CPR",
+      "matchStrength": "strong",
+      "blurb": "Correct chest compression technique for high-quality CPR.",
+      "publishedAt": "2023-04-25"
+    },
+    {
+      "youtubeId": "F-udw0Av4kw",
+      "videoTitle": "ACLS 2025 - Cardiac Arrest Algorithm",
+      "channelId": "the-resuscitation-coach",
+      "icuModuleId": "cardiac-arrest-post-rosc",
+      "icuTopicId": "als-shockable",
+      "icuTopicTitle": "ALS: shockable rhythms (VF / pulseless VT)",
+      "matchStrength": "strong",
+      "blurb": "The 2025 adult cardiac arrest algorithm, including the VF/pulseless VT arm.",
+      "publishedAt": "2025-10-29"
+    },
+    {
+      "youtubeId": "5MEgNiqGvUI",
+      "videoTitle": "ACLS Algorithms Review: Cardiac Arrest (Asystole & PEA)",
+      "channelId": "the-resuscitation-coach",
+      "icuModuleId": "cardiac-arrest-post-rosc",
+      "icuTopicId": "als-nonshockable-hs-ts",
+      "icuTopicTitle": "ALS: PEA, asystole and the reversible causes (Hs and Ts)",
+      "matchStrength": "strong",
+      "blurb": "Running the asystole and PEA arm of the cardiac arrest algorithm.",
+      "publishedAt": "2021-08-23"
+    },
+    {
+      "youtubeId": "_4c4YNg0NEc",
+      "videoTitle": "ACLS 2025- Post Cardiac Arrest Care",
+      "channelId": "the-resuscitation-coach",
+      "icuModuleId": "cardiac-arrest-post-rosc",
+      "icuTopicId": "post-rosc-bundle",
+      "icuTopicTitle": "Post-ROSC care: the first hours",
+      "matchStrength": "strong",
+      "blurb": "The 2025 post-cardiac arrest care algorithm, step by step.",
+      "publishedAt": "2025-11-06"
+    },
+    {
+      "youtubeId": "GQATRbVkx80",
+      "videoTitle": "Post-Cardiac Arrest Care 2025 AHA: Key Updates & Guidelines || #aetcm || #emergencymedicine ||",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "cardiac-arrest-post-rosc",
+      "icuTopicId": "temperature-control",
+      "icuTopicTitle": "Temperature control after cardiac arrest",
+      "matchStrength": "partial",
+      "blurb": "Short summary of the 2025 AHA post-arrest updates, including temperature control.",
+      "publishedAt": "2026-04-13"
+    },
+    {
+      "youtubeId": "VLsbV7xS6kQ",
+      "videoTitle": "Neuroprognostication after Cardiac Arrest",
+      "channelId": "leicester-icm-teaching",
+      "icuModuleId": "cardiac-arrest-post-rosc",
+      "icuTopicId": "neuroprognostication",
+      "icuTopicTitle": "Neuroprognostication after cardiac arrest",
+      "matchStrength": "strong",
+      "blurb": "A teaching session on multimodal neuroprognostication after cardiac arrest.",
+      "publishedAt": "2026-03-18"
+    },
+    {
+      "youtubeId": "p-9xDWb-svI",
+      "videoTitle": "Assessing Fluid Responsiveness in 2023",
+      "channelId": "sccm",
+      "icuModuleId": "shock-vasoactive-support",
+      "icuTopicId": "fluid-responsiveness",
+      "icuTopicTitle": "Fluid challenge and fluid responsiveness",
+      "matchStrength": "strong",
+      "blurb": "A critical care society talk on assessing fluid responsiveness at the bedside.",
+      "publishedAt": "2023-01-24"
+    },
+    {
+      "youtubeId": "zf28Rjbu3VM",
+      "videoTitle": "Vasopressors Explained Clearly: Norepinephrine, Epinephrine, Vasopressin, Dobutamine...",
+      "channelId": "medcram-medical-lectures-explained-clearly",
+      "icuModuleId": "shock-vasoactive-support",
+      "icuTopicId": "inotropes",
+      "icuTopicTitle": "Inotropes and inodilators",
+      "matchStrength": "strong",
+      "blurb": "Receptor-level explanation of vasopressors and inotropes, including dobutamine and milrinone.",
+      "publishedAt": "2018-08-19"
+    },
+    {
+      "youtubeId": "y8b20TMA-7Q",
+      "videoTitle": "INTENSIVE CARE MEDICINE ~ The Surviving Sepsis Campaign Bundle: 2018 update",
+      "channelId": "esicm",
+      "icuModuleId": "sepsis-septic-shock",
+      "icuTopicId": "hour-1-bundle",
+      "icuTopicTitle": "Hour-1 bundle and initial resuscitation",
+      "matchStrength": "strong",
+      "blurb": "The Surviving Sepsis Campaign Hour-1 bundle in brief.",
+      "publishedAt": "2018-05-18"
+    },
+    {
+      "youtubeId": "GL4lGzQ3vyg",
+      "videoTitle": "Intra-Abdominal Sepsis",
+      "channelId": "leicester-icm-teaching",
+      "icuModuleId": "sepsis-septic-shock",
+      "icuTopicId": "source-control",
+      "icuTopicTitle": "Source control",
+      "matchStrength": "partial",
+      "blurb": "ICU teaching on intra-abdominal sepsis, including source control.",
+      "publishedAt": "2026-01-22"
+    },
+    {
+      "youtubeId": "d54pdgxZfgY",
+      "videoTitle": "Sepsis 2026 - Ep 5: Antibiotic De-escalation & Stewardship | MRCP",
+      "channelId": "clinicalmeded",
+      "icuModuleId": "sepsis-septic-shock",
+      "icuTopicId": "de-escalation-duration",
+      "icuTopicTitle": "De-escalation, duration and stewardship",
+      "matchStrength": "strong",
+      "blurb": "Antibiotic de-escalation and stewardship in sepsis.",
+      "publishedAt": "2026-08-15"
+    },
+    {
+      "youtubeId": "aJKt5o5szVU",
+      "videoTitle": "How to Perform The Primary Survey in Trauma",
+      "channelId": "core-em",
+      "icuModuleId": "trauma-burns-environmental",
+      "icuTopicId": "primary-survey-massive-transfusion",
+      "icuTopicTitle": "Primary survey and massive transfusion",
+      "matchStrength": "strong",
+      "blurb": "How to perform the trauma primary survey.",
+      "publishedAt": "2023-11-13"
+    },
+    {
+      "youtubeId": "NH9PEkkfYXQ",
+      "videoTitle": "Heat Stroke",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "trauma-burns-environmental",
+      "icuTopicId": "heat-stroke",
+      "icuTopicTitle": "Heat stroke",
+      "matchStrength": "strong",
+      "blurb": "Recognition and emergency cooling of heat stroke.",
+      "publishedAt": "2022-06-06"
+    },
+    {
+      "youtubeId": "2EJ2moOLE8M",
+      "videoTitle": "Drowning || ER Management",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "trauma-burns-environmental",
+      "icuTopicId": "drowning",
+      "icuTopicTitle": "Drowning",
+      "matchStrength": "strong",
+      "blurb": "Emergency department management of drowning.",
+      "publishedAt": "2023-12-05"
+    },
+    {
+      "youtubeId": "iAPGu6FusQ0",
+      "videoTitle": "Podcast 66 – …Until they are warm and dead: Severe Accidental Hypothermia",
+      "channelId": "emcrit",
+      "icuModuleId": "trauma-burns-environmental",
+      "icuTopicId": "hypothermia-electrical-injury",
+      "icuTopicTitle": "Hypothermia and electrical injury",
+      "matchStrength": "strong",
+      "blurb": "Severe accidental hypothermia: rewarming, arrest and ECMO decisions.",
+      "publishedAt": "2026-07-31"
+    },
+    {
+      "youtubeId": "lmvN4B5nfrA",
+      "videoTitle": "The Physiologically Difficult Airway ⏐ Soren Steemann Rudolph ⏐ TBS",
+      "channelId": "tbs-zermatt",
+      "icuModuleId": "airway-management",
+      "icuTopicId": "assessment-preparation",
+      "icuTopicTitle": "Airway assessment and preparation (anatomical and physiological)",
+      "matchStrength": "strong",
+      "blurb": "The physiologically difficult airway: hypoxia, hypotension and acidosis before intubation.",
+      "publishedAt": "2025-10-05"
+    },
+    {
+      "youtubeId": "S02irA6nbw0",
+      "videoTitle": "EMCrit 377 - Break News - The PREOXI Trial changes everything about Preoxygenation for Intubation...",
+      "channelId": "emcrit",
+      "icuModuleId": "airway-management",
+      "icuTopicId": "preoxygenation",
+      "icuTopicTitle": "Preoxygenation and apnoeic oxygenation",
+      "matchStrength": "strong",
+      "blurb": "The PREOXI trial and what it means for preoxygenation before intubation.",
+      "publishedAt": "2026-07-31"
+    },
+    {
+      "youtubeId": "uq7xREf9NoY",
+      "videoTitle": "Must Know EM - Rapid Sequence Intubation | The Advanced EM Boot Camp",
+      "channelId": "the-center-for-medical-education",
+      "icuModuleId": "airway-management",
+      "icuTopicId": "rsi-drugs-technique",
+      "icuTopicTitle": "Rapid sequence induction: drugs and technique",
+      "matchStrength": "strong",
+      "blurb": "Rapid sequence intubation: preparation, drugs and technique.",
+      "publishedAt": "2023-01-12"
+    },
+    {
+      "youtubeId": "bINVXQZ4mcQ",
+      "videoTitle": "Scalpel bougie technique in CICO emergencies | Airway Management",
+      "channelId": "abcs-of-anaesthesia",
+      "icuModuleId": "airway-management",
+      "icuTopicId": "failed-airway-cico",
+      "icuTopicTitle": "Failed intubation and CICO (can't intubate, can't oxygenate)",
+      "matchStrength": "strong",
+      "blurb": "Scalpel-bougie-tube front-of-neck access for a CICO emergency.",
+      "publishedAt": "2022-09-11"
+    },
+    {
+      "youtubeId": "s06nCoguSJ0",
+      "videoTitle": "EMCrit 1:1 Nursing Podcast 002 - Post-Intubation Sedation (Pain, Agitation, & Delirium)",
+      "channelId": "emcrit",
+      "icuModuleId": "airway-management",
+      "icuTopicId": "post-intubation-care",
+      "icuTopicTitle": "Immediately after intubation",
+      "matchStrength": "strong",
+      "blurb": "Pain, sedation and agitation management straight after intubation.",
+      "publishedAt": "2026-07-31"
+    },
+    {
+      "youtubeId": "liFCXIHNdaQ",
+      "videoTitle": "What is Cuff leak test? How to do and interpret it on ventilator",
+      "channelId": "the-icu-channel-by-esbicm",
+      "icuModuleId": "airway-management",
+      "icuTopicId": "extubation",
+      "icuTopicTitle": "Planning and performing extubation",
+      "matchStrength": "strong",
+      "blurb": "How to perform and interpret the cuff leak test before extubation.",
+      "publishedAt": "2024-02-09"
+    },
+    {
+      "youtubeId": "_rTq99Y8T_w",
+      "videoTitle": "High Flow Nasal Cannula",
+      "channelId": "mount-sinai-health-system",
+      "icuModuleId": "oxygen-hfnc-niv",
+      "icuTopicId": "hfnc-rox",
+      "icuTopicTitle": "High-flow nasal oxygen and the ROX index",
+      "matchStrength": "strong",
+      "blurb": "How high-flow nasal cannula oxygen works and when to use it.",
+      "publishedAt": "2020-04-06"
+    },
+    {
+      "youtubeId": "H24YhlQblRM",
+      "videoTitle": "Non-Invasive Positive Pressure Ventilation (Mechanical Ventilation - Lecture 6)",
+      "channelId": "strong-medicine",
+      "icuModuleId": "oxygen-hfnc-niv",
+      "icuTopicId": "niv-other-indications",
+      "icuTopicTitle": "NIV and CPAP beyond COPD",
+      "matchStrength": "strong",
+      "blurb": "Non-invasive positive pressure ventilation: modes, indications and pitfalls.",
+      "publishedAt": "2011-11-21"
+    },
+    {
+      "youtubeId": "Xlf59HlLsd0",
+      "videoTitle": "How to set initial ventilator settings after intubation in ICU & ED",
+      "channelId": "the-icu-channel-by-esbicm",
+      "icuModuleId": "mechanical-ventilation",
+      "icuTopicId": "initial-settings",
+      "icuTopicTitle": "Initial ventilator settings",
+      "matchStrength": "strong",
+      "blurb": "Setting the ventilator after intubation in the ICU and ED.",
+      "publishedAt": "2024-05-15"
+    },
+    {
+      "youtubeId": "Bz6nf-pnyIY",
+      "videoTitle": "Ventilator Modes (Mechanical Ventilation - Lecture 7)",
+      "channelId": "strong-medicine",
+      "icuModuleId": "mechanical-ventilation",
+      "icuTopicId": "modes",
+      "icuTopicTitle": "Ventilator modes made simple",
+      "matchStrength": "strong",
+      "blurb": "Volume, pressure and spontaneous ventilator modes explained.",
+      "publishedAt": "2011-11-26"
+    },
+    {
+      "youtubeId": "lyTrsOa7mac",
+      "videoTitle": "DOPES Ventilator Troubleshooting",
+      "channelId": "em-note",
+      "icuModuleId": "mechanical-ventilation",
+      "icuTopicId": "alarms-dopes",
+      "icuTopicTitle": "Alarms and sudden deterioration (DOPES)",
+      "matchStrength": "strong",
+      "blurb": "The DOPES approach to sudden deterioration on the ventilator.",
+      "publishedAt": "2024-11-22"
+    },
+    {
+      "youtubeId": "XjE7WpaxLHk",
+      "videoTitle": "Master the basics of ventilator graphs & waveforms in 50 mins (doctors & nurses);Ventilator Graphics",
+      "channelId": "the-icu-channel-by-esbicm",
+      "icuModuleId": "mechanical-ventilation",
+      "icuTopicId": "graphics-asynchrony",
+      "icuTopicTitle": "Ventilator graphics, auto-PEEP and asynchrony",
+      "matchStrength": "strong",
+      "blurb": "Reading pressure, flow and volume waveforms on the ventilator.",
+      "publishedAt": "2020-08-25"
+    },
+    {
+      "youtubeId": "ZxZjGnjBLwg",
+      "videoTitle": "When to start weaning off & extubate the patient from ventilator in ICU | regularcrisis",
+      "channelId": "the-icu-channel-by-esbicm",
+      "icuModuleId": "mechanical-ventilation",
+      "icuTopicId": "weaning-sbt",
+      "icuTopicTitle": "Liberation: daily SAT and SBT",
+      "matchStrength": "strong",
+      "blurb": "When to start weaning and how to judge readiness for extubation.",
+      "publishedAt": "2020-09-05"
+    },
+    {
+      "youtubeId": "KW0eSGFfc4c",
+      "videoTitle": "Tracheostomy Care and Suctioning - Clinical Nursing Skills |@LevelUpRN​",
+      "channelId": "level-up-rn",
+      "icuModuleId": "mechanical-ventilation",
+      "icuTopicId": "tracheostomy",
+      "icuTopicTitle": "Tracheostomy: timing and care",
+      "matchStrength": "strong",
+      "blurb": "Tracheostomy care and suctioning technique.",
+      "publishedAt": "2022-02-27"
+    },
+    {
+      "youtubeId": "mKoSrfPd1vM",
+      "videoTitle": "Drive to Survive: Optimizing lung protective ventilation strategy -- BAVLS",
+      "channelId": "american-thoracic-society",
+      "icuModuleId": "ards-refractory-hypoxaemia",
+      "icuTopicId": "lung-protective-peep",
+      "icuTopicTitle": "Lung-protective ventilation and PEEP",
+      "matchStrength": "strong",
+      "blurb": "Optimising lung-protective ventilation and driving pressure in ARDS.",
+      "publishedAt": "2018-06-06"
+    },
+    {
+      "youtubeId": "lcBPaHQUvXY",
+      "videoTitle": "Prone Positioning for Acute Respiratory Distress Syndrome (ARDS)",
+      "channelId": "rush-university-system-for-health",
+      "icuModuleId": "ards-refractory-hypoxaemia",
+      "icuTopicId": "prone-position",
+      "icuTopicTitle": "Prone positioning",
+      "matchStrength": "strong",
+      "blurb": "How a team safely proned ventilated ARDS patients, step by step.",
+      "publishedAt": "2020-04-02"
+    },
+    {
+      "youtubeId": "6YAsgQ5oWco",
+      "videoTitle": "Neuromuscular Blockers In ARDS",
+      "channelId": "sound-physicians",
+      "icuModuleId": "ards-refractory-hypoxaemia",
+      "icuTopicId": "nmb-fluids",
+      "icuTopicTitle": "Neuromuscular blockade and fluid management",
+      "matchStrength": "strong",
+      "blurb": "Evidence for neuromuscular blockade in ARDS.",
+      "publishedAt": "2025-12-01"
+    },
+    {
+      "youtubeId": "x0_H3YQhV_0",
+      "videoTitle": "ECMO:  Picking the Right ARDS Patient for VV ECMO",
+      "channelId": "critical-consult-md",
+      "icuModuleId": "ards-refractory-hypoxaemia",
+      "icuTopicId": "rescue-ecmo",
+      "icuTopicTitle": "Refractory hypoxaemia and VV-ECMO",
+      "matchStrength": "strong",
+      "blurb": "Selecting the right ARDS patient for VV-ECMO.",
+      "publishedAt": "2022-01-25"
+    },
+    {
+      "youtubeId": "AjNuAcM1UuA",
+      "videoTitle": "Wide Complex Tachycardias (Miguel Valderrábano, MD)",
+      "channelId": "houston-methodist-debakey-cv-education",
+      "icuModuleId": "cardiac-emergencies-arrhythmias",
+      "icuTopicId": "vt-wide-complex",
+      "icuTopicTitle": "Ventricular tachycardia, wide-complex tachycardia and electrical storm",
+      "matchStrength": "strong",
+      "blurb": "Approach to wide-complex tachycardia and ventricular tachycardia.",
+      "publishedAt": "2019-01-30"
+    },
+    {
+      "youtubeId": "kHYZjDCQBcI",
+      "videoTitle": "Hypertensive Emergency & Urgency",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "cardiac-emergencies-arrhythmias",
+      "icuTopicId": "hypertensive-emergency",
+      "icuTopicTitle": "Hypertensive emergencies",
+      "matchStrength": "strong",
+      "blurb": "Hypertensive emergency versus urgency, and how to treat each.",
+      "publishedAt": "2022-06-17"
+    },
+    {
+      "youtubeId": "UbwdbK2inZY",
+      "videoTitle": "The Arterial Line Waveform EXPLAINED!",
+      "channelId": "icu-advantage",
+      "icuModuleId": "haemodynamic-monitoring",
+      "icuTopicId": "arterial-waveform-damping",
+      "icuTopicTitle": "Arterial line waveform and damping",
+      "matchStrength": "strong",
+      "blurb": "The arterial line waveform and what changes in its shape mean.",
+      "publishedAt": "2021-08-02"
+    },
+    {
+      "youtubeId": "7pzLa_NysrY",
+      "videoTitle": "Resuscitation using SvO2 and ScvO2",
+      "channelId": "eddyjoemd",
+      "icuModuleId": "haemodynamic-monitoring",
+      "icuTopicId": "cvp-scvo2",
+      "icuTopicTitle": "CVP and ScvO2",
+      "matchStrength": "strong",
+      "blurb": "Using SvO2 and ScvO2 to guide resuscitation.",
+      "publishedAt": "2020-05-04"
+    },
+    {
+      "youtubeId": "K-a-HY7NstI",
+      "videoTitle": "How to calculate SPV and PPV and how to use them for accessing fluid responsiveness in ICU",
+      "channelId": "the-icu-channel-by-esbicm",
+      "icuModuleId": "haemodynamic-monitoring",
+      "icuTopicId": "fluid-responsiveness-ppv-plr",
+      "icuTopicTitle": "Fluid responsiveness: PPV and passive leg raise",
+      "matchStrength": "strong",
+      "blurb": "Calculating SPV and PPV and using them to judge fluid responsiveness.",
+      "publishedAt": "2022-09-17"
+    },
+    {
+      "youtubeId": "VdzsLDh9elc",
+      "videoTitle": "V-A CO2 Gap and its Utility_Dr Pradeep Rangappa",
+      "channelId": "icu-dr-pradeep-rangappa",
+      "icuModuleId": "haemodynamic-monitoring",
+      "icuTopicId": "co2-gap-lactate",
+      "icuTopicTitle": "CO2 gap, lactate and perfusion targets",
+      "matchStrength": "strong",
+      "blurb": "The venous-to-arterial CO2 gap and how to use it.",
+      "publishedAt": "2026-02-09"
+    },
+    {
+      "youtubeId": "fsRrC53sWus",
+      "videoTitle": "Point of Care Cardiac Ultrasound (Echocardiography, POCUS)",
+      "channelId": "stanford-medicine-25",
+      "icuModuleId": "pocus-critical-care-echo",
+      "icuTopicId": "cardiac-views",
+      "icuTopicTitle": "Core cardiac views and LV assessment",
+      "matchStrength": "strong",
+      "blurb": "Point-of-care cardiac ultrasound: the core views and what they show.",
+      "publishedAt": "2022-06-08"
+    },
+    {
+      "youtubeId": "UggcygRRar8",
+      "videoTitle": "Echocardiography Essentials: Evaluating right ventricular size and function",
+      "channelId": "medmastery",
+      "icuModuleId": "pocus-critical-care-echo",
+      "icuTopicId": "rv-assessment",
+      "icuTopicTitle": "Right ventricle assessment",
+      "matchStrength": "strong",
+      "blurb": "Evaluating right ventricular size and function on echo.",
+      "publishedAt": "2017-04-29"
+    },
+    {
+      "youtubeId": "VyMoRGCg8oY",
+      "videoTitle": "VExUS Score Made Simple!",
+      "channelId": "core-ultrasound",
+      "icuModuleId": "pocus-critical-care-echo",
+      "icuTopicId": "ivc-venous-congestion",
+      "icuTopicTitle": "IVC and venous congestion (VExUS)",
+      "matchStrength": "strong",
+      "blurb": "The VExUS venous congestion score made simple.",
+      "publishedAt": "2024-11-06"
+    },
+    {
+      "youtubeId": "F5umLIRKZPs",
+      "videoTitle": "Lung USG Blue Protocol overview_Dr Pradeep Rangappa",
+      "channelId": "icu-dr-pradeep-rangappa",
+      "icuModuleId": "pocus-critical-care-echo",
+      "icuTopicId": "lung-ultrasound",
+      "icuTopicTitle": "Lung ultrasound and the BLUE protocol",
+      "matchStrength": "strong",
+      "blurb": "An overview of lung ultrasound and the BLUE protocol.",
+      "publishedAt": "2023-01-25"
+    },
+    {
+      "youtubeId": "tf_pJfIbqx4",
+      "videoTitle": "The RUSH EXAM (BASICS)",
+      "channelId": "core-ultrasound",
+      "icuModuleId": "pocus-critical-care-echo",
+      "icuTopicId": "rush-efast",
+      "icuTopicTitle": "RUSH in shock and eFAST in trauma",
+      "matchStrength": "strong",
+      "blurb": "The basics of the RUSH exam in undifferentiated shock.",
+      "publishedAt": "2026-05-26"
+    },
+    {
+      "youtubeId": "oxKxV1bdMyk",
+      "videoTitle": "VV vs VA ECMO Explained!",
+      "channelId": "icu-advantage",
+      "icuModuleId": "ecmo-mechanical-circulatory-support",
+      "icuTopicId": "vv-vs-va-ecmo-indications",
+      "icuTopicTitle": "VV vs VA ECMO: modes and indications",
+      "matchStrength": "strong",
+      "blurb": "VV versus VA ECMO: how each works and when it is used.",
+      "publishedAt": "2020-07-27"
+    },
+    {
+      "youtubeId": "B_iMMBqHRN4",
+      "videoTitle": "VV-ECMO ~ When to Initiate_Dr Pradeep Rangappa",
+      "channelId": "icu-dr-pradeep-rangappa",
+      "icuModuleId": "ecmo-mechanical-circulatory-support",
+      "icuTopicId": "ecmo-referral-criteria",
+      "icuTopicTitle": "ECMO referral: who, when and how",
+      "matchStrength": "strong",
+      "blurb": "When to consider and initiate VV-ECMO.",
+      "publishedAt": "2026-07-04"
+    },
+    {
+      "youtubeId": "Lycn_4fgeSc",
+      "videoTitle": "What is an Intra-Aortic Balloon Pump (IABP)?",
+      "channelId": "icu-advantage",
+      "icuModuleId": "ecmo-mechanical-circulatory-support",
+      "icuTopicId": "iabp-impella-basics",
+      "icuTopicTitle": "IABP and Impella basics",
+      "matchStrength": "strong",
+      "blurb": "How an intra-aortic balloon pump works.",
+      "publishedAt": "2021-09-21"
+    },
+    {
+      "youtubeId": "y6_nLrILyHU",
+      "videoTitle": "ECMO Circuit Monitoring: The Essentials of Pressure and Flow",
+      "channelId": "thoracicsurgeons",
+      "icuModuleId": "ecmo-mechanical-circulatory-support",
+      "icuTopicId": "daily-ecmo-checks",
+      "icuTopicTitle": "Daily ECMO checks and rounds",
+      "matchStrength": "strong",
+      "blurb": "Monitoring the ECMO circuit: the essentials of pressure and flow.",
+      "publishedAt": "2020-08-20"
+    },
+    {
+      "youtubeId": "gWKRY5EFOj4",
+      "videoTitle": "Preparing for ECMO Emergencies Through Simulation -- BAVLS",
+      "channelId": "american-thoracic-society",
+      "icuModuleId": "ecmo-mechanical-circulatory-support",
+      "icuTopicId": "ecmo-complications",
+      "icuTopicTitle": "ECMO complications and emergencies",
+      "matchStrength": "strong",
+      "blurb": "Preparing for ECMO emergencies through simulation.",
+      "publishedAt": "2017-05-16"
+    },
+    {
+      "youtubeId": "3rD76i1v-Yc",
+      "videoTitle": "05 Weaning, trial off & decannulation by Dr Pranay  Oza ECMO INDIA OCT 2024 - Day 02",
+      "channelId": "ecmo-society-of-india",
+      "icuModuleId": "ecmo-mechanical-circulatory-support",
+      "icuTopicId": "ecmo-weaning-decannulation",
+      "icuTopicTitle": "Weaning and decannulation",
+      "matchStrength": "strong",
+      "blurb": "Weaning, trial-off and decannulation from ECMO.",
+      "publishedAt": "2024-11-01"
+    },
+    {
+      "youtubeId": "CmQOtP3pFus",
+      "videoTitle": "Elevated Anion Gap Metabolic Acidosis (ABG Interpretation - Lesson 8)",
+      "channelId": "strong-medicine",
+      "icuModuleId": "acid-base-abg",
+      "icuTopicId": "hagma",
+      "icuTopicTitle": "High anion gap metabolic acidosis",
+      "matchStrength": "strong",
+      "blurb": "Elevated anion gap metabolic acidosis: causes and work-up.",
+      "publishedAt": "2012-04-09"
+    },
+    {
+      "youtubeId": "bBe2MU5r7fs",
+      "videoTitle": "Normal Anion Gap Metabolic Acidosis (ABG Interpretation - Lesson 9)",
+      "channelId": "strong-medicine",
+      "icuModuleId": "acid-base-abg",
+      "icuTopicId": "nagma",
+      "icuTopicTitle": "Normal anion gap (hyperchloraemic) metabolic acidosis",
+      "matchStrength": "strong",
+      "blurb": "Normal anion gap metabolic acidosis: causes and work-up.",
+      "publishedAt": "2012-05-11"
+    },
+    {
+      "youtubeId": "2vBNPG_QeZk",
+      "videoTitle": "Metabolic alkalosis - causes, symptoms, diagnosis, treatment, pathology",
+      "channelId": "osmosis-from-elsevier",
+      "icuModuleId": "acid-base-abg",
+      "icuTopicId": "metabolic-alkalosis",
+      "icuTopicTitle": "Metabolic alkalosis",
+      "matchStrength": "strong",
+      "blurb": "Causes, diagnosis and treatment of metabolic alkalosis.",
+      "publishedAt": "2023-12-13"
+    },
+    {
+      "youtubeId": "NuCfzf9KNTI",
+      "videoTitle": "Respiratory Acidosis (ABG Interpretation - Lesson 11)",
+      "channelId": "strong-medicine",
+      "icuModuleId": "acid-base-abg",
+      "icuTopicId": "respiratory-disorders",
+      "icuTopicTitle": "Respiratory acidosis and alkalosis",
+      "matchStrength": "strong",
+      "blurb": "Respiratory acidosis on the blood gas, with compensation.",
+      "publishedAt": "2012-07-13"
+    },
+    {
+      "youtubeId": "kEebSzgD8pc",
+      "videoTitle": "ABG Interpretation: The Delta Ratio and Triple Disorders (Lesson 6)",
+      "channelId": "strong-medicine",
+      "icuModuleId": "acid-base-abg",
+      "icuTopicId": "mixed-disorders-vbg",
+      "icuTopicTitle": "Mixed disorders and when a VBG is enough",
+      "matchStrength": "strong",
+      "blurb": "Using the delta ratio to find mixed and triple acid-base disorders.",
+      "publishedAt": "2012-02-13"
+    },
+    {
+      "youtubeId": "n-h-Yb05AwM",
+      "videoTitle": "Hyperkalemia Explained Clearly - Remastered (Potassium Imbalances)",
+      "channelId": "medcram-medical-lectures-explained-clearly",
+      "icuModuleId": "fluids-electrolytes",
+      "icuTopicId": "hyperkalaemia",
+      "icuTopicTitle": "Hyperkalaemia",
+      "matchStrength": "strong",
+      "blurb": "Hyperkalaemia: causes, ECG effects and treatment.",
+      "publishedAt": "2019-03-03"
+    },
+    {
+      "youtubeId": "CIUE2OGOMfo",
+      "videoTitle": "Hypokalemia",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "fluids-electrolytes",
+      "icuTopicId": "hypokalaemia",
+      "icuTopicTitle": "Hypokalaemia",
+      "matchStrength": "strong",
+      "blurb": "Emergency approach to hypokalaemia.",
+      "publishedAt": "2022-11-30"
+    },
+    {
+      "youtubeId": "untwg1l9Np4",
+      "videoTitle": "KDIGO Acute Kidney Injury (AKI) Criteria || #aetcm #emergencymedicine.",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "aki-renal-drug-dosing",
+      "icuTopicId": "kdigo-staging",
+      "icuTopicTitle": "KDIGO definition and staging",
+      "matchStrength": "strong",
+      "blurb": "The KDIGO criteria for defining and staging AKI.",
+      "publishedAt": "2026-03-23"
+    },
+    {
+      "youtubeId": "ADw3EkpTDqQ",
+      "videoTitle": "Case Discussion || Rhabdomyolysis",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "aki-renal-drug-dosing",
+      "icuTopicId": "rhabdomyolysis",
+      "icuTopicTitle": "Rhabdomyolysis",
+      "matchStrength": "strong",
+      "blurb": "A case-based discussion of rhabdomyolysis.",
+      "publishedAt": "2024-02-04"
+    },
+    {
+      "youtubeId": "W0WtCv6TpF8",
+      "videoTitle": "#15 Contrast-Induced Nephropathy: 5 Pearls segment",
+      "channelId": "core-im",
+      "icuModuleId": "aki-renal-drug-dosing",
+      "icuTopicId": "contrast-associated-aki",
+      "icuTopicTitle": "Contrast-associated AKI",
+      "matchStrength": "strong",
+      "blurb": "Five evidence-based pearls on contrast-associated kidney injury.",
+      "publishedAt": "2024-05-12"
+    },
+    {
+      "youtubeId": "R0FE2FS6vPk",
+      "videoTitle": "SCCM Pod-429 Drug Dosing Considerations in AKI and RRT",
+      "channelId": "sccm",
+      "icuModuleId": "aki-renal-drug-dosing",
+      "icuTopicId": "drug-dosing-aki",
+      "icuTopicTitle": "Drug dosing in AKI",
+      "matchStrength": "strong",
+      "blurb": "Drug dosing considerations in AKI and renal replacement therapy.",
+      "publishedAt": "2024-03-12"
+    },
+    {
+      "youtubeId": "a-1LqAkqYt8",
+      "videoTitle": "STARRT-AKI Trial Explained: When to Start Dialysis in AKI | Landmark Trials in Nephrology",
+      "channelId": "nephrology-board-review",
+      "icuModuleId": "renal-replacement-therapy",
+      "icuTopicId": "rrt-indications-timing",
+      "icuTopicTitle": "Indications and timing of RRT",
+      "matchStrength": "strong",
+      "blurb": "The STARRT-AKI trial: when to start dialysis in AKI.",
+      "publishedAt": "2026-04-20"
+    },
+    {
+      "youtubeId": "H6JfCxUnDmw",
+      "videoTitle": "What is CRRT? - CRRT Explained!",
+      "channelId": "icu-advantage",
+      "icuModuleId": "renal-replacement-therapy",
+      "icuTopicId": "crrt-ihd-sled",
+      "icuTopicTitle": "CRRT vs IHD vs SLED",
+      "matchStrength": "strong",
+      "blurb": "What CRRT is and how it differs from intermittent dialysis.",
+      "publishedAt": "2020-09-01"
+    },
+    {
+      "youtubeId": "COKzm4pTPcs",
+      "videoTitle": "Dose prescription in CRRT - S. Goldstein",
+      "channelId": "irriv-international-renal-research-institute-vicenza",
+      "icuModuleId": "renal-replacement-therapy",
+      "icuTopicId": "crrt-prescription-dose",
+      "icuTopicTitle": "Prescribing CRRT dose",
+      "matchStrength": "strong",
+      "blurb": "How to prescribe the CRRT dose.",
+      "publishedAt": "2019-01-04"
+    },
+    {
+      "youtubeId": "RXUpPXpsA0Y",
+      "videoTitle": "CRRT Module 3: Anticoagulation — Heparin, Citrate & When to Use Neither",
+      "channelId": "nephrology-board-review",
+      "icuModuleId": "renal-replacement-therapy",
+      "icuTopicId": "crrt-anticoagulation",
+      "icuTopicTitle": "Heparin vs citrate anticoagulation",
+      "matchStrength": "strong",
+      "blurb": "CRRT anticoagulation: heparin, citrate, and when to use neither.",
+      "publishedAt": "2026-05-01"
+    },
+    {
+      "youtubeId": "iWcSVQ6bbqA",
+      "videoTitle": "CRRT Module 2: Machine Setup & The Circuit (Pressures, Alarms, Filter Clotting)",
+      "channelId": "nephrology-board-review",
+      "icuModuleId": "renal-replacement-therapy",
+      "icuTopicId": "filter-clotting-troubleshooting",
+      "icuTopicTitle": "Filter clotting and CRRT troubleshooting",
+      "matchStrength": "strong",
+      "blurb": "CRRT circuit set-up, pressures, alarms and filter clotting.",
+      "publishedAt": "2026-04-30"
+    },
+    {
+      "youtubeId": "XAvELOu_0Cg",
+      "videoTitle": "Antibiotic Dosing in CRRT_Dr Pradeep Rangappa",
+      "channelId": "icu-dr-pradeep-rangappa",
+      "icuModuleId": "renal-replacement-therapy",
+      "icuTopicId": "antibiotic-dosing-crrt",
+      "icuTopicTitle": "Antibiotic dosing on CRRT and SLED",
+      "matchStrength": "strong",
+      "blurb": "Antibiotic dosing for patients on CRRT.",
+      "publishedAt": "2026-05-26"
+    },
+    {
+      "youtubeId": "dhsxAYusG0k",
+      "videoTitle": "Hyperosmolar Hyperglycemic State || HHS",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "endocrine-metabolic-emergencies",
+      "icuTopicId": "hhs",
+      "icuTopicTitle": "Hyperosmolar hyperglycaemic state (HHS)",
+      "matchStrength": "strong",
+      "blurb": "Recognition and management of hyperosmolar hyperglycaemic state.",
+      "publishedAt": "2020-09-07"
+    },
+    {
+      "youtubeId": "DqpqHQKiR3I",
+      "videoTitle": "Case Discussion.. Hypoglycemia Clinical features and it's Management in the Emergency Room.",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "endocrine-metabolic-emergencies",
+      "icuTopicId": "hypoglycaemia",
+      "icuTopicTitle": "Hypoglycaemia",
+      "matchStrength": "strong",
+      "blurb": "A case-based look at hypoglycaemia and its emergency management.",
+      "publishedAt": "2026-01-20"
+    },
+    {
+      "youtubeId": "Bv60Xd3u_jQ",
+      "videoTitle": "Approach to Coma",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "neuro-emergencies",
+      "icuTopicId": "coma-approach",
+      "icuTopicTitle": "Approach to coma (GCS and FOUR score)",
+      "matchStrength": "strong",
+      "blurb": "A structured approach to the comatose patient.",
+      "publishedAt": "2022-02-10"
+    },
+    {
+      "youtubeId": "7FOcgVqXPk8",
+      "videoTitle": "Increased Intracranial Pressure",
+      "channelId": "dr-matt-dr-mike",
+      "icuModuleId": "raised-icp-neurotrauma-brain-death",
+      "icuTopicId": "icp-cpp-targets",
+      "icuTopicTitle": "ICP and CPP targets: tiered management",
+      "matchStrength": "partial",
+      "blurb": "The physiology of raised intracranial pressure.",
+      "publishedAt": "2019-05-16"
+    },
+    {
+      "youtubeId": "VR-OdNPEXBg",
+      "videoTitle": "HTS vs Mannitol_ICU Bytes (Dr Pradeep Rangappa)",
+      "channelId": "icu-dr-pradeep-rangappa",
+      "icuModuleId": "raised-icp-neurotrauma-brain-death",
+      "icuTopicId": "osmotherapy",
+      "icuTopicTitle": "Osmotherapy: mannitol vs hypertonic saline",
+      "matchStrength": "strong",
+      "blurb": "Hypertonic saline versus mannitol for raised ICP.",
+      "publishedAt": "2026-06-22"
+    },
+    {
+      "youtubeId": "wsvvctVASmM",
+      "videoTitle": "Neurosurgery ICU EVD Management",
+      "channelId": "hackensack-meridian-mountainside-medical-center",
+      "icuModuleId": "raised-icp-neurotrauma-brain-death",
+      "icuTopicId": "post-craniotomy-care",
+      "icuTopicTitle": "Post-craniotomy care",
+      "matchStrength": "partial",
+      "blurb": "External ventricular drain management in the neurosurgical ICU.",
+      "publishedAt": "2020-03-12"
+    },
+    {
+      "youtubeId": "_FwnDAubZEw",
+      "videoTitle": "Isaac Tawil, MD Demonstrating Brain Death Exam",
+      "channelId": "emcrit",
+      "icuModuleId": "raised-icp-neurotrauma-brain-death",
+      "icuTopicId": "brain-stem-death-testing",
+      "icuTopicTitle": "Brain-stem death testing and apnoea test (THOA rules)",
+      "matchStrength": "partial",
+      "blurb": "A demonstration of the brain death examination. Follow THOA rules for the legal steps in India.",
+      "publishedAt": "2020-07-26"
+    },
+    {
+      "youtubeId": "vYQGfJk3CfM",
+      "videoTitle": "Abdominal Compartment Syndrome Overview_Dr Pradeep Rangappa",
+      "channelId": "icu-dr-pradeep-rangappa",
+      "icuModuleId": "gi-bleeding-abdominal-emergencies",
+      "icuTopicId": "abdominal-compartment-syndrome",
+      "icuTopicTitle": "Intra-abdominal hypertension and compartment syndrome",
+      "matchStrength": "strong",
+      "blurb": "An overview of intra-abdominal hypertension and abdominal compartment syndrome.",
+      "publishedAt": "2023-01-03"
+    },
+    {
+      "youtubeId": "y6k7OEtoSXQ",
+      "videoTitle": "Intestinal Ischemia | Clinical Medicine",
+      "channelId": "ninja-nerd",
+      "icuModuleId": "gi-bleeding-abdominal-emergencies",
+      "icuTopicId": "mesenteric-ischaemia",
+      "icuTopicTitle": "Acute mesenteric ischaemia",
+      "matchStrength": "strong",
+      "blurb": "Intestinal and mesenteric ischaemia: causes, diagnosis and treatment.",
+      "publishedAt": "2024-03-11"
+    },
+    {
+      "youtubeId": "JZdgGm83aog",
+      "videoTitle": "Acute Liver Failure | Clinical Medicine",
+      "channelId": "ninja-nerd",
+      "icuModuleId": "liver-failure",
+      "icuTopicId": "acute-liver-failure",
+      "icuTopicTitle": "Acute liver failure and King's College criteria",
+      "matchStrength": "strong",
+      "blurb": "Acute liver failure: causes, complications and management.",
+      "publishedAt": "2024-03-11"
+    },
+    {
+      "youtubeId": "sTKg0UmNeeQ",
+      "videoTitle": "Hepatic Encephalopathy",
+      "channelId": "strong-medicine",
+      "icuModuleId": "liver-failure",
+      "icuTopicId": "hepatic-encephalopathy",
+      "icuTopicTitle": "Hepatic encephalopathy",
+      "matchStrength": "strong",
+      "blurb": "Hepatic encephalopathy: grading, triggers and treatment.",
+      "publishedAt": "2018-12-16"
+    },
+    {
+      "youtubeId": "CaBnPmyY5kE",
+      "videoTitle": "Insights Into Cirrhotic Bleeding of the Liver, and How to Stop It",
+      "channelId": "medcram-medical-lectures-explained-clearly",
+      "icuModuleId": "liver-failure",
+      "icuTopicId": "liver-coagulopathy",
+      "icuTopicTitle": "Coagulopathy in liver disease",
+      "matchStrength": "partial",
+      "blurb": "Why patients with cirrhosis bleed, and how bleeding is controlled.",
+      "publishedAt": "2023-07-17"
+    },
+    {
+      "youtubeId": "6SeXvH0VYL8",
+      "videoTitle": "Acute Transfusion Reactions: Management Techniques",
+      "channelId": "medmastery",
+      "icuModuleId": "haematology-coagulation-transfusion",
+      "icuTopicId": "transfusion-thresholds-reactions",
+      "icuTopicTitle": "Red cell, platelet and plasma transfusion; reactions",
+      "matchStrength": "strong",
+      "blurb": "Recognising and managing acute transfusion reactions.",
+      "publishedAt": "2019-03-11"
+    },
+    {
+      "youtubeId": "Fv_4Gjur4vI",
+      "videoTitle": "Podcast 185.0: Anticoagulation Reversal",
+      "channelId": "core-em",
+      "icuModuleId": "haematology-coagulation-transfusion",
+      "icuTopicId": "anticoagulant-reversal",
+      "icuTopicTitle": "Anticoagulant and antiplatelet reversal",
+      "matchStrength": "strong",
+      "blurb": "Reversal of warfarin, heparins and DOACs in bleeding patients.",
+      "publishedAt": "2024-08-11"
+    },
+    {
+      "youtubeId": "s_WOKFEx2wc",
+      "videoTitle": "Heparin-Induced Thrombocytopenia (HIT) | A Comprehensive Explanation",
+      "channelId": "medicosis-perfectionalis",
+      "icuModuleId": "haematology-coagulation-transfusion",
+      "icuTopicId": "hit",
+      "icuTopicTitle": "Heparin-induced thrombocytopenia",
+      "matchStrength": "strong",
+      "blurb": "Heparin-induced thrombocytopenia: mechanism, diagnosis and treatment.",
+      "publishedAt": "2020-08-12"
+    },
+    {
+      "youtubeId": "1g8UP9r3FX8",
+      "videoTitle": "Tropical Fever and its Management | Medvarsity",
+      "channelId": "medvarsity",
+      "icuModuleId": "tropical-monsoon-fevers",
+      "icuTopicId": "afi-approach",
+      "icuTopicTitle": "Approach to severe acute febrile illness",
+      "matchStrength": "strong",
+      "blurb": "Approach to tropical fevers and their management.",
+      "publishedAt": "2023-01-05"
+    },
+    {
+      "youtubeId": "RY9DpiHBdf8",
+      "videoTitle": "STEP N SESSION : Dengue fever in the ICU",
+      "channelId": "indian-society-of-critical-care-medicine",
+      "icuModuleId": "tropical-monsoon-fevers",
+      "icuTopicId": "severe-dengue",
+      "icuTopicTitle": "Severe dengue and dengue shock",
+      "matchStrength": "strong",
+      "blurb": "An ICU society session on dengue in the ICU.",
+      "publishedAt": "2022-07-18"
+    },
+    {
+      "youtubeId": "Hey47muujyw",
+      "videoTitle": "Management of Weil's Disease || Leptospirosis",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "tropical-monsoon-fevers",
+      "icuTopicId": "leptospirosis",
+      "icuTopicTitle": "Leptospirosis (Weil's disease)",
+      "matchStrength": "strong",
+      "blurb": "Management of Weil's disease (severe leptospirosis).",
+      "publishedAt": "2022-05-23"
+    },
+    {
+      "youtubeId": "CrT38UkMN_Q",
+      "videoTitle": "Rickettsial Fever || Scrub Typhus",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "tropical-monsoon-fevers",
+      "icuTopicId": "scrub-typhus",
+      "icuTopicTitle": "Scrub typhus",
+      "matchStrength": "strong",
+      "blurb": "Rickettsial fever and scrub typhus: features and treatment.",
+      "publishedAt": "2021-09-20"
+    },
+    {
+      "youtubeId": "21T8gGVIWGg",
+      "videoTitle": "Enteric Fever || Clinical Features & Management",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "tropical-monsoon-fevers",
+      "icuTopicId": "enteric-fever",
+      "icuTopicTitle": "Enteric fever (typhoid and paratyphoid)",
+      "matchStrength": "strong",
+      "blurb": "Enteric fever: clinical features and management.",
+      "publishedAt": "2022-01-02"
+    },
+    {
+      "youtubeId": "Mvwk3Z9Fa4I",
+      "videoTitle": "Hospital Acquired Pneumonia & Ventilator Associated Pneumonia",
+      "channelId": "fcpiofficial",
+      "icuModuleId": "icu-infections-stewardship-immunocompromised",
+      "icuTopicId": "hap-vap",
+      "icuTopicTitle": "Hospital-acquired and ventilator-associated pneumonia",
+      "matchStrength": "strong",
+      "blurb": "Hospital-acquired and ventilator-associated pneumonia.",
+      "publishedAt": "2025-08-28"
+    },
+    {
+      "youtubeId": "cOuvyuTmkec",
+      "videoTitle": "Invasive Candidiasis",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "icu-infections-stewardship-immunocompromised",
+      "icuTopicId": "invasive-fungal",
+      "icuTopicTitle": "Invasive fungal infections: candidaemia, C. auris, aspergillosis, mucormycosis",
+      "matchStrength": "strong",
+      "blurb": "Invasive candidiasis in the critically ill.",
+      "publishedAt": "2022-05-03"
+    },
+    {
+      "youtubeId": "pOmKwjyZKoo",
+      "videoTitle": "Essentials of Antibiotic Dosing: Pharmacokinetics and Pharmacodynamics",
+      "channelId": "idpodcasts",
+      "icuModuleId": "icu-infections-stewardship-immunocompromised",
+      "icuTopicId": "pkpd-stewardship",
+      "icuTopicTitle": "Antibiotic PK/PD, TDM, procalcitonin and stewardship",
+      "matchStrength": "strong",
+      "blurb": "Essentials of antibiotic pharmacokinetics and pharmacodynamics.",
+      "publishedAt": "2022-09-02"
+    },
+    {
+      "youtubeId": "v0T9FpbkEPk",
+      "videoTitle": "Activated Charcoal for Poisoning Management",
+      "channelId": "em-note",
+      "icuModuleId": "poisoning-approach-drug-overdoses",
+      "icuTopicId": "decontamination-elimination",
+      "icuTopicTitle": "Decontamination and enhanced elimination",
+      "matchStrength": "strong",
+      "blurb": "When activated charcoal helps in poisoning, and when it does not.",
+      "publishedAt": "2024-03-12"
+    },
+    {
+      "youtubeId": "u6edELA3rgs",
+      "videoTitle": "Paracetamol Overdose || Clinical features & ER management",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "poisoning-approach-drug-overdoses",
+      "icuTopicId": "paracetamol",
+      "icuTopicTitle": "Paracetamol poisoning",
+      "matchStrength": "strong",
+      "blurb": "Paracetamol overdose: clinical features and emergency management.",
+      "publishedAt": "2022-12-12"
+    },
+    {
+      "youtubeId": "_b4nIVDi2kc",
+      "videoTitle": "Treating beta blocker and calcium channel blocker toxicity",
+      "channelId": "medmastery",
+      "icuModuleId": "poisoning-approach-drug-overdoses",
+      "icuTopicId": "cardiotoxic-overdoses",
+      "icuTopicTitle": "Cardiotoxic overdoses: TCA, beta-blockers, CCB, digoxin",
+      "matchStrength": "strong",
+      "blurb": "Treating beta-blocker and calcium channel blocker toxicity.",
+      "publishedAt": "2022-07-25"
+    },
+    {
+      "youtubeId": "YXe8_8PNKK4",
+      "videoTitle": "Aluminum Phosphide Poisoning_Dr Pradeep Rangappa",
+      "channelId": "icu-dr-pradeep-rangappa",
+      "icuModuleId": "agrochemical-household-poisons",
+      "icuTopicId": "aluminium-phosphide",
+      "icuTopicTitle": "Aluminium phosphide (celphos) poisoning",
+      "matchStrength": "strong",
+      "blurb": "Aluminium phosphide (celphos) poisoning in the ICU.",
+      "publishedAt": "2026-04-05"
+    },
+    {
+      "youtubeId": "ERfhZ88RrSg",
+      "videoTitle": "Paraquat Poisoning || Clinical features & Management",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "agrochemical-household-poisons",
+      "icuTopicId": "paraquat",
+      "icuTopicTitle": "Paraquat poisoning",
+      "matchStrength": "strong",
+      "blurb": "Paraquat poisoning: clinical features and management.",
+      "publishedAt": "2022-11-28"
+    },
+    {
+      "youtubeId": "2ftjiVOtSyA",
+      "videoTitle": "Approach to a Patient with Rat Poisoning in Emergency Room  || # AETCM  # Emergency Medicine.",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "agrochemical-household-poisons",
+      "icuTopicId": "yellow-phosphorus",
+      "icuTopicTitle": "Yellow phosphorus (rat paste) poisoning",
+      "matchStrength": "strong",
+      "blurb": "Approach to rat poison (rodenticide) ingestion in the emergency room.",
+      "publishedAt": "2026-02-10"
+    },
+    {
+      "youtubeId": "JD_kUGDqYV0",
+      "videoTitle": "Case Discussion || Caustic Ingestion",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "agrochemical-household-poisons",
+      "icuTopicId": "corrosives-hydrocarbons",
+      "icuTopicTitle": "Corrosive and hydrocarbon (kerosene) ingestion",
+      "matchStrength": "strong",
+      "blurb": "A case-based discussion of caustic ingestion.",
+      "publishedAt": "2024-04-30"
+    },
+    {
+      "youtubeId": "I-xw_Nh6zr0",
+      "videoTitle": "How to manage snake bites, HINDI language narration with English slides | RegularCrisis",
+      "channelId": "the-icu-channel-by-esbicm",
+      "icuModuleId": "snakebite-scorpion-envenomation",
+      "icuTopicId": "snakebite-syndromes",
+      "icuTopicTitle": "Recognising envenoming: Big Four and syndromes",
+      "matchStrength": "strong",
+      "blurb": "Managing snakebite in India (Hindi narration with English slides).",
+      "publishedAt": "2020-08-09"
+    },
+    {
+      "youtubeId": "MS3hXm-eMFU",
+      "videoTitle": "How to use Anti Snake Venom || Dose || Indications",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "snakebite-scorpion-envenomation",
+      "icuTopicId": "asv-dosing-reactions",
+      "icuTopicTitle": "ASV dosing and adverse reactions",
+      "matchStrength": "strong",
+      "blurb": "How to use anti-snake venom: indications and dosing.",
+      "publishedAt": "2023-07-07"
+    },
+    {
+      "youtubeId": "MaUBaP_A3N4",
+      "videoTitle": "Case Discussion.. Management of Snake Bite ||  #snakebite # krait #indiancobra # AETCM",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "snakebite-scorpion-envenomation",
+      "icuTopicId": "neuroparalysis-ventilation",
+      "icuTopicTitle": "Neuroparalysis: airway, ventilation and neostigmine",
+      "matchStrength": "strong",
+      "blurb": "A case-based discussion of neurotoxic snakebite management.",
+      "publishedAt": "2025-07-09"
+    },
+    {
+      "youtubeId": "kYNBR6qV87E",
+      "videoTitle": "Case Discussion...Approach to a patient with Scorpion Sting in ED || #aetcm # Emergency Medicine.",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "snakebite-scorpion-envenomation",
+      "icuTopicId": "scorpion-sting",
+      "icuTopicTitle": "Scorpion sting (Indian red scorpion) and prazosin",
+      "matchStrength": "strong",
+      "blurb": "Approach to a patient with scorpion sting in the ED.",
+      "publishedAt": "2025-11-29"
+    },
+    {
+      "youtubeId": "vMw5CqVFrWs",
+      "videoTitle": "Severe Pre-Eclampsia (Portuguese) - Childbirth Series",
+      "channelId": "global-health-media-project",
+      "icuModuleId": "obstetric-critical-care",
+      "icuTopicId": "pre-eclampsia-eclampsia",
+      "icuTopicTitle": "Severe pre-eclampsia and eclampsia",
+      "matchStrength": "strong",
+      "blurb": "Recognising and managing severe pre-eclampsia, including magnesium sulphate.",
+      "publishedAt": "2022-09-23"
+    },
+    {
+      "youtubeId": "irXbqbOYTHk",
+      "videoTitle": "Postpartum hemorrhage - causes, symptoms, diagnosis, treatment, pathology",
+      "channelId": "osmosis-from-elsevier",
+      "icuModuleId": "obstetric-critical-care",
+      "icuTopicId": "postpartum-haemorrhage",
+      "icuTopicTitle": "Postpartum haemorrhage",
+      "matchStrength": "strong",
+      "blurb": "Postpartum haemorrhage: causes, diagnosis and treatment.",
+      "publishedAt": "2023-08-22"
+    },
+    {
+      "youtubeId": "jZcKg_0-FX8",
+      "videoTitle": "HELLP Syndrome (updated 2023) - CRASH! Medical Review Series",
+      "channelId": "paul-bolin-m-d",
+      "icuModuleId": "obstetric-critical-care",
+      "icuTopicId": "hellp-aflp",
+      "icuTopicTitle": "HELLP syndrome and acute fatty liver of pregnancy",
+      "matchStrength": "strong",
+      "blurb": "HELLP syndrome: diagnosis and management.",
+      "publishedAt": "2023-04-03"
+    },
+    {
+      "youtubeId": "gP6dK4zDnxk",
+      "videoTitle": "Maternal Sepsis",
+      "channelId": "anesthesia-patient-safety-foundation-apsf",
+      "icuModuleId": "obstetric-critical-care",
+      "icuTopicId": "sepsis-pregnancy",
+      "icuTopicTitle": "Sepsis in pregnancy and the puerperium",
+      "matchStrength": "strong",
+      "blurb": "Recognising and managing maternal sepsis.",
+      "publishedAt": "2025-09-29"
+    },
+    {
+      "youtubeId": "Qp3p4RSBBEA",
+      "videoTitle": "Peripartum Cardiomyopathy - CRASH! Medical Review Series",
+      "channelId": "paul-bolin-m-d",
+      "icuModuleId": "obstetric-critical-care",
+      "icuTopicId": "peripartum-cardiomyopathy",
+      "icuTopicTitle": "Peripartum cardiomyopathy",
+      "matchStrength": "partial",
+      "blurb": "Peripartum cardiomyopathy: presentation and management.",
+      "publishedAt": "2017-09-03"
+    },
+    {
+      "youtubeId": "DFN0tWCNE4Y",
+      "videoTitle": "Maternal Cardiac Arrest ||| Cardiac Arrest in Pregnancy",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "obstetric-critical-care",
+      "icuTopicId": "maternal-cardiac-arrest",
+      "icuTopicTitle": "Maternal cardiac arrest and amniotic fluid embolism",
+      "matchStrength": "strong",
+      "blurb": "Cardiac arrest in pregnancy and its specific resuscitation steps.",
+      "publishedAt": "2024-05-06"
+    },
+    {
+      "youtubeId": "CpB2uYsU4X4",
+      "videoTitle": "PALS 2025: Systematic Approach",
+      "channelId": "the-resuscitation-coach",
+      "icuModuleId": "paediatric-emergencies-essentials",
+      "icuTopicId": "pals-weight-based-doses",
+      "icuTopicTitle": "PALS and weight-based doses",
+      "matchStrength": "strong",
+      "blurb": "The 2025 PALS systematic approach to a seriously ill child.",
+      "publishedAt": "2025-11-15"
+    },
+    {
+      "youtubeId": "KDqv8kD-7lA",
+      "videoTitle": "Pediatric Septic Shock by J. O'Hara and K. Madden | OPENPediatrics‌",
+      "channelId": "openpediatrics",
+      "icuModuleId": "paediatric-emergencies-essentials",
+      "icuTopicId": "paediatric-sepsis-fluids",
+      "icuTopicTitle": "Paediatric sepsis and fluids",
+      "matchStrength": "strong",
+      "blurb": "Recognition and management of paediatric septic shock.",
+      "publishedAt": "2026-09-04"
+    },
+    {
+      "youtubeId": "2r14qWHDToE",
+      "videoTitle": "Basic Airway Equipment for Intubation by T. Wolbrink | OPENPediatrics",
+      "channelId": "openpediatrics",
+      "icuModuleId": "paediatric-emergencies-essentials",
+      "icuTopicId": "paediatric-airway-sizes",
+      "icuTopicTitle": "Paediatric airway: sizes, RSI and first ventilator settings",
+      "matchStrength": "strong",
+      "blurb": "Basic airway equipment and sizing for paediatric intubation.",
+      "publishedAt": "2016-02-17"
+    },
+    {
+      "youtubeId": "CYkGfWvDLrg",
+      "videoTitle": "RSV Bronchiolitis Emergency Management",
+      "channelId": "larry-b-mellick-md",
+      "icuModuleId": "paediatric-emergencies-essentials",
+      "icuTopicId": "bronchiolitis-croup",
+      "icuTopicTitle": "Bronchiolitis and croup",
+      "matchStrength": "strong",
+      "blurb": "Emergency management of RSV bronchiolitis.",
+      "publishedAt": "2022-08-01"
+    },
+    {
+      "youtubeId": "3YfiCGVaBOY",
+      "videoTitle": "Postoperative Care – Surgery | Lecturio",
+      "channelId": "lecturio-medical",
+      "icuModuleId": "perioperative-cardiac-surgical-icu",
+      "icuTopicId": "postop-handover-complications",
+      "icuTopicTitle": "Post-operative handover and early complications",
+      "matchStrength": "partial",
+      "blurb": "Postoperative care and early complications.",
+      "publishedAt": "2018-04-03"
+    },
+    {
+      "youtubeId": "6dnfkEsySKU",
+      "videoTitle": "LAST (Local Anesthetic Systemic Toxicity): A practical update for clinicians",
+      "channelId": "jeff-gadsden-regional-anesthesia",
+      "icuModuleId": "perioperative-cardiac-surgical-icu",
+      "icuTopicId": "malignant-hyperthermia-last",
+      "icuTopicTitle": "Malignant hyperthermia and local anaesthetic systemic toxicity",
+      "matchStrength": "strong",
+      "blurb": "A practical update on local anaesthetic systemic toxicity (LAST).",
+      "publishedAt": "2021-11-30"
+    },
+    {
+      "youtubeId": "OfAPueuZxu8",
+      "videoTitle": "Critical Care and Management of the Post-Op CV Patient (Faisal Masud, MD)",
+      "channelId": "houston-methodist-debakey-cv-education",
+      "icuModuleId": "perioperative-cardiac-surgical-icu",
+      "icuTopicId": "post-cabg-valve-care",
+      "icuTopicTitle": "Post-CABG and valve surgery care",
+      "matchStrength": "strong",
+      "blurb": "Critical care of the patient after cardiovascular surgery.",
+      "publishedAt": "2018-06-01"
+    },
+    {
+      "youtubeId": "40Dkv44HJ0Q",
+      "videoTitle": "Wellington ICU Cardiac Advanced Life Support Emergency Resternotomy",
+      "channelId": "wellington-icu",
+      "icuModuleId": "perioperative-cardiac-surgical-icu",
+      "icuTopicId": "bleeding-tamponade-after-surgery",
+      "icuTopicTitle": "Bleeding, tamponade and cardiac arrest after cardiac surgery",
+      "matchStrength": "strong",
+      "blurb": "Cardiac advanced life support and emergency resternotomy after cardiac surgery.",
+      "publishedAt": "2023-03-29"
+    },
+    {
+      "youtubeId": "0MK1C_u3R_Q",
+      "videoTitle": "Temporary Epicardial Pacemakers and Sensitivity",
+      "channelId": "the-alfred-intensive-care-academic-centre",
+      "icuModuleId": "perioperative-cardiac-surgical-icu",
+      "icuTopicId": "pacing-wires",
+      "icuTopicTitle": "Epicardial pacing wires and temporary pacing",
+      "matchStrength": "strong",
+      "blurb": "Temporary epicardial pacing and sensitivity settings.",
+      "publishedAt": "2021-09-27"
+    },
+    {
+      "youtubeId": "KlyRUibAUaE",
+      "videoTitle": "Beyond Age: Caring for the Critically ill Older Adult",
+      "channelId": "mount-sinai-health-system",
+      "icuModuleId": "perioperative-cardiac-surgical-icu",
+      "icuTopicId": "frailty-obesity",
+      "icuTopicTitle": "Frailty and obesity in the surgical ICU patient",
+      "matchStrength": "partial",
+      "blurb": "Caring for the critically ill older adult beyond age alone.",
+      "publishedAt": "2022-11-17"
+    },
+    {
+      "youtubeId": "R2XMro13dD0",
+      "videoTitle": "Dopamine IV Drip Calculation & Nursing Considerations Pharmacology Implications",
+      "channelId": "registerednursern",
+      "icuModuleId": "icu-pharmacology-drug-infusions",
+      "icuTopicId": "infusion-dilutions",
+      "icuTopicTitle": "Standard infusion dilutions and rate maths",
+      "matchStrength": "strong",
+      "blurb": "A worked example of a weight-based infusion rate calculation.",
+      "publishedAt": "2019-02-08"
+    },
+    {
+      "youtubeId": "uFl71j52IO0",
+      "videoTitle": "Antibiotic Dosing in Obesity -- Jaela Fredenrich, Pharm.D",
+      "channelId": "idpodcasts",
+      "icuModuleId": "icu-pharmacology-drug-infusions",
+      "icuTopicId": "obesity-dosing",
+      "icuTopicTitle": "Drug dosing in obesity",
+      "matchStrength": "partial",
+      "blurb": "Antibiotic dosing in obesity.",
+      "publishedAt": "2021-11-15"
+    },
+    {
+      "youtubeId": "UFtlGt4IXgo",
+      "videoTitle": "ARC (Aug Renal Clearance)_Dr Pradeep Rangappa",
+      "channelId": "icu-dr-pradeep-rangappa",
+      "icuModuleId": "icu-pharmacology-drug-infusions",
+      "icuTopicId": "renal-dosing",
+      "icuTopicTitle": "Dosing in AKI, CRRT and augmented renal clearance",
+      "matchStrength": "strong",
+      "blurb": "Augmented renal clearance and its effect on drug dosing.",
+      "publishedAt": "2026-05-26"
+    },
+    {
+      "youtubeId": "bTrTmsnc__8",
+      "videoTitle": "Renal and Hepatic Dose Adjustment in Critically Ill Patients",
+      "channelId": "fcpiofficial",
+      "icuModuleId": "icu-pharmacology-drug-infusions",
+      "icuTopicId": "hepatic-dosing",
+      "icuTopicTitle": "Dosing in liver dysfunction",
+      "matchStrength": "strong",
+      "blurb": "Renal and hepatic dose adjustment in critically ill patients.",
+      "publishedAt": "2025-01-04"
+    },
+    {
+      "youtubeId": "qOl8CkvzUpA",
+      "videoTitle": "Rate and Rhythm | Torsades de Pointes",
+      "channelId": "ninja-nerd",
+      "icuModuleId": "icu-pharmacology-drug-infusions",
+      "icuTopicId": "qt-interactions",
+      "icuTopicTitle": "QT prolongation, torsades and key ICU drug interactions",
+      "matchStrength": "strong",
+      "blurb": "Torsades de pointes: ECG recognition, causes and treatment.",
+      "publishedAt": "2020-01-12"
+    },
+    {
+      "youtubeId": "WEwup2IciKE",
+      "videoTitle": "Pharmacologic Management of Pain in the ICU",
+      "channelId": "icu-reach",
+      "icuModuleId": "analgesia-sedation-delirium",
+      "icuTopicId": "pain-analgosedation",
+      "icuTopicTitle": "Pain assessment and analgesia-first sedation (PADIS, eCASH)",
+      "matchStrength": "strong",
+      "blurb": "Pharmacological management of pain in the ICU.",
+      "publishedAt": "2023-11-10"
+    },
+    {
+      "youtubeId": "-jnUsQIzSUs",
+      "videoTitle": "Richmond Agitation-Sedation Scale (RASS)",
+      "channelId": "icu-reach",
+      "icuModuleId": "analgesia-sedation-delirium",
+      "icuTopicId": "sedation-rass",
+      "icuTopicTitle": "Sedation targets, RASS and sedative choice",
+      "matchStrength": "strong",
+      "blurb": "How to use the Richmond Agitation-Sedation Scale (RASS).",
+      "publishedAt": "2023-11-10"
+    },
+    {
+      "youtubeId": "m6G95Ga2GoI",
+      "videoTitle": "Delirium Screening: CAM-ICU",
+      "channelId": "icu-reach",
+      "icuModuleId": "analgesia-sedation-delirium",
+      "icuTopicId": "delirium-cam-icu",
+      "icuTopicTitle": "Delirium: CAM-ICU screening, prevention and management",
+      "matchStrength": "strong",
+      "blurb": "Screening for delirium with the CAM-ICU.",
+      "publishedAt": "2023-12-07"
+    },
+    {
+      "youtubeId": "gEVPSNcNR0Q",
+      "videoTitle": "Alcohol Withdrawal",
+      "channelId": "strong-medicine",
+      "icuModuleId": "analgesia-sedation-delirium",
+      "icuTopicId": "alcohol-withdrawal",
+      "icuTopicTitle": "Alcohol withdrawal and delirium tremens",
+      "matchStrength": "strong",
+      "blurb": "Alcohol withdrawal: stages, delirium tremens and treatment.",
+      "publishedAt": "2019-07-28"
+    },
+    {
+      "youtubeId": "Az6gRzCB6l0",
+      "videoTitle": "2021 Adult Critical Care Guidelines | Nutrition Support",
+      "channelId": "clinical-nutrition-university",
+      "icuModuleId": "nutrition-metabolic-support",
+      "icuTopicId": "nutrition-risk-early-en",
+      "icuTopicTitle": "Nutritional risk and early enteral nutrition",
+      "matchStrength": "strong",
+      "blurb": "Nutrition support guidelines for critically ill adults.",
+      "publishedAt": "2022-01-22"
+    },
+    {
+      "youtubeId": "7nj_BZXw1Eg",
+      "videoTitle": "Energy and Protein Needs in Critical Illness - Dietetic Practice Updates",
+      "channelId": "dietitians-in-nutrition-support",
+      "icuModuleId": "nutrition-metabolic-support",
+      "icuTopicId": "energy-protein-targets",
+      "icuTopicTitle": "Energy and protein targets",
+      "matchStrength": "strong",
+      "blurb": "Energy and protein needs in critical illness.",
+      "publishedAt": "2024-09-30"
+    },
+    {
+      "youtubeId": "yRhXkF6nUig",
+      "videoTitle": "Gastric Residual Volumes (GRVs) and Enteral Nutrition",
+      "channelId": "dietitians-in-nutrition-support",
+      "icuModuleId": "nutrition-metabolic-support",
+      "icuTopicId": "feed-intolerance",
+      "icuTopicTitle": "Feed intolerance, gastric residuals and post-pyloric feeding",
+      "matchStrength": "strong",
+      "blurb": "Gastric residual volumes and enteral nutrition.",
+      "publishedAt": "2022-05-16"
+    },
+    {
+      "youtubeId": "KDI44fM5ezk",
+      "videoTitle": "What's in Parenteral Nutrition?",
+      "channelId": "dietitians-in-nutrition-support",
+      "icuModuleId": "nutrition-metabolic-support",
+      "icuTopicId": "parenteral-nutrition",
+      "icuTopicTitle": "Parenteral nutrition",
+      "matchStrength": "strong",
+      "blurb": "What goes into parenteral nutrition.",
+      "publishedAt": "2019-01-17"
+    },
+    {
+      "youtubeId": "fEe5_UBD684",
+      "videoTitle": "Refeeding Syndrome",
+      "channelId": "clinical-nutrition-university",
+      "icuModuleId": "nutrition-metabolic-support",
+      "icuTopicId": "refeeding-syndrome",
+      "icuTopicTitle": "Refeeding syndrome",
+      "matchStrength": "strong",
+      "blurb": "Refeeding syndrome: risk, recognition and prevention.",
+      "publishedAt": "2021-10-23"
+    },
+    {
+      "youtubeId": "zha90EuLcFI",
+      "videoTitle": "STEP N SESSION : Basics of FAST HUG BID",
+      "channelId": "indian-society-of-critical-care-medicine",
+      "icuModuleId": "icu-care-bundles-infection-prevention",
+      "icuTopicId": "fast-hugs-daily-checklist",
+      "icuTopicTitle": "Daily ICU checklist (FAST HUGS BID)",
+      "matchStrength": "strong",
+      "blurb": "An ICU society session on the FAST HUGS BID daily checklist.",
+      "publishedAt": "2023-05-25"
+    },
+    {
+      "youtubeId": "OeV8Sa41UtE",
+      "videoTitle": "Prevention of VAP | Dr. Pradeep Rangappa",
+      "channelId": "icu-dr-pradeep-rangappa",
+      "icuModuleId": "icu-care-bundles-infection-prevention",
+      "icuTopicId": "vap-prevention",
+      "icuTopicTitle": "Ventilator-associated pneumonia prevention bundle",
+      "matchStrength": "strong",
+      "blurb": "Prevention of ventilator-associated pneumonia.",
+      "publishedAt": "2021-06-02"
+    },
+    {
+      "youtubeId": "U2h6zSMZq7M",
+      "videoTitle": "CLABSI/CRBSI Prevention Overview_Dr Pradeep Rangappa",
+      "channelId": "icu-dr-pradeep-rangappa",
+      "icuModuleId": "icu-care-bundles-infection-prevention",
+      "icuTopicId": "clabsi-cauti-prevention",
+      "icuTopicTitle": "CLABSI and CAUTI prevention",
+      "matchStrength": "strong",
+      "blurb": "An overview of CLABSI/CRBSI prevention.",
+      "publishedAt": "2024-07-12"
+    },
+    {
+      "youtubeId": "P9dYZlmGwKM",
+      "videoTitle": "#166 Stress Ulcer Prophylaxis in the ICU and REVISE Trial: Beyond Journal Club with NEJM Group",
+      "channelId": "core-im",
+      "icuModuleId": "icu-care-bundles-infection-prevention",
+      "icuTopicId": "vte-stress-ulcer-prophylaxis",
+      "icuTopicTitle": "VTE and stress ulcer prophylaxis",
+      "matchStrength": "strong",
+      "blurb": "Stress ulcer prophylaxis in the ICU and the REVISE trial.",
+      "publishedAt": "2024-12-10"
+    },
+    {
+      "youtubeId": "TqCNWhY_N3s",
+      "videoTitle": "Your WHO 5 moments for Hand Hygiene along the patient journey in surgery",
+      "channelId": "hopitaux-universitaires-de-gen-ve",
+      "icuModuleId": "icu-care-bundles-infection-prevention",
+      "icuTopicId": "hand-hygiene-isolation",
+      "icuTopicTitle": "Hand hygiene, standard and transmission-based precautions",
+      "matchStrength": "strong",
+      "blurb": "The WHO 5 Moments for Hand Hygiene along the patient journey.",
+      "publishedAt": "2016-04-29"
+    },
+    {
+      "youtubeId": "D53gygWRhLM",
+      "videoTitle": "Johns Hopkins Medicine: Early Mobility in the ICU",
+      "channelId": "johns-hopkins-medicine",
+      "icuModuleId": "icu-care-bundles-infection-prevention",
+      "icuTopicId": "pressure-injury-mobilisation",
+      "icuTopicTitle": "Pressure injury prevention and early mobilisation",
+      "matchStrength": "strong",
+      "blurb": "Early mobility for patients in the ICU.",
+      "publishedAt": "2009-09-23"
+    },
+    {
+      "youtubeId": "HuJzn_PF118",
+      "videoTitle": "Central Venous Catheter Insertion Demonstration",
+      "channelId": "royal-berkshire-nhs-foundation-trust",
+      "icuModuleId": "procedures",
+      "icuTopicId": "central-venous-catheter",
+      "icuTopicTitle": "Central venous catheter insertion",
+      "matchStrength": "strong",
+      "blurb": "A demonstration of central venous catheter insertion.",
+      "publishedAt": "2020-12-14"
+    },
+    {
+      "youtubeId": "v0C1GBw6n6w",
+      "videoTitle": "Arterial Line Insertion",
+      "channelId": "aetcm-emergency-medicine",
+      "icuModuleId": "procedures",
+      "icuTopicId": "arterial-line",
+      "icuTopicTitle": "Arterial line insertion and troubleshooting",
+      "matchStrength": "strong",
+      "blurb": "Arterial line insertion, step by step.",
+      "publishedAt": "2024-01-08"
+    },
+    {
+      "youtubeId": "WpXGUn7eGZE",
+      "videoTitle": "Lumbar Puncture Tutorial",
+      "channelId": "em-rap-medical-education",
+      "icuModuleId": "procedures",
+      "icuTopicId": "lumbar-puncture",
+      "icuTopicTitle": "Lumbar puncture in the ICU",
+      "matchStrength": "strong",
+      "blurb": "A lumbar puncture tutorial.",
+      "publishedAt": "2016-10-04"
+    },
+    {
+      "youtubeId": "-BYuVL4E-cY",
+      "videoTitle": "Ultrasound for Paracentesis -- BAVLS",
+      "channelId": "american-thoracic-society",
+      "icuModuleId": "procedures",
+      "icuTopicId": "paracentesis",
+      "icuTopicTitle": "Paracentesis (diagnostic and large-volume)",
+      "matchStrength": "strong",
+      "blurb": "Ultrasound guidance for paracentesis.",
+      "publishedAt": "2017-05-16"
+    },
+    {
+      "youtubeId": "G3PsxQhZErY",
+      "videoTitle": "5 Minute Sono - Pericardiocentesis",
+      "channelId": "core-ultrasound",
+      "icuModuleId": "procedures",
+      "icuTopicId": "pericardiocentesis",
+      "icuTopicTitle": "Pericardiocentesis",
+      "matchStrength": "strong",
+      "blurb": "Ultrasound-guided pericardiocentesis.",
+      "publishedAt": "2024-04-01"
+    },
+    {
+      "youtubeId": "OcIxL56an3c",
+      "videoTitle": "How to Interpret a Chest X-Ray (Lesson 9 - Atelectasis, Lines, Tubes, Devices, and Surgeries)",
+      "channelId": "strong-medicine",
+      "icuModuleId": "bedside-interpretation-ecg-cxr-ct-labs",
+      "icuTopicId": "cxr-lines-tubes-ards",
+      "icuTopicTitle": "Chest X-ray in the ICU: lines, tubes and lung patterns",
+      "matchStrength": "strong",
+      "blurb": "Chest X-ray interpretation: atelectasis, lines, tubes and devices.",
+      "publishedAt": "2014-04-03"
+    },
+    {
+      "youtubeId": "5H9SYD6hxwU",
+      "videoTitle": "CT Head Interpretation for Beginners - OSCE Guide | UKMLA | CPSA | PLAB 2",
+      "channelId": "geeky-medics",
+      "icuModuleId": "bedside-interpretation-ecg-cxr-ct-labs",
+      "icuTopicId": "ct-head",
+      "icuTopicTitle": "CT head: when to scan and how to read it",
+      "matchStrength": "strong",
+      "blurb": "CT head interpretation for beginners.",
+      "publishedAt": "2022-11-21"
+    },
+    {
+      "youtubeId": "3Zn5tHDuQns",
+      "videoTitle": "Interpretation of Culture Reports - Dr. Bharat Jagiasi",
+      "channelId": "bharat-jagiasi",
+      "icuModuleId": "bedside-interpretation-ecg-cxr-ct-labs",
+      "icuTopicId": "cultures-microbiology",
+      "icuTopicTitle": "Cultures and microbiology interpretation",
+      "matchStrength": "strong",
+      "blurb": "How to interpret culture reports.",
+      "publishedAt": "2025-09-24"
+    },
+    {
+      "youtubeId": "9afuudUCKm4",
+      "videoTitle": "Breaking Bad News - SPIKES Overview - OSCE Guide | UKMLA | CPSA | PLAB 2",
+      "channelId": "geeky-medics",
+      "icuModuleId": "ethics-communication-palliative-care",
+      "icuTopicId": "breaking-bad-news",
+      "icuTopicTitle": "Breaking bad news (SPIKES)",
+      "matchStrength": "strong",
+      "blurb": "An overview of the SPIKES model for breaking bad news.",
+      "publishedAt": "2022-05-23"
+    },
+    {
+      "youtubeId": "kKt9X60uMOM",
+      "videoTitle": "How To Run A Family Meeting",
+      "channelId": "strong-medicine",
+      "icuModuleId": "ethics-communication-palliative-care",
+      "icuTopicId": "family-meetings",
+      "icuTopicTitle": "Family meetings and shared decision-making",
+      "matchStrength": "strong",
+      "blurb": "How to run a family meeting.",
+      "publishedAt": "2019-08-04"
+    },
+    {
+      "youtubeId": "I5t9tCYOKLA",
+      "videoTitle": "Vodcast on: End of Life Care and withdrawal of Life-Sustaining Therapies in ICU",
+      "channelId": "indian-society-of-critical-care-medicine",
+      "icuModuleId": "ethics-communication-palliative-care",
+      "icuTopicId": "limitation-dnar-india",
+      "icuTopicTitle": "Withholding and withdrawing treatment in India (law and process)",
+      "matchStrength": "strong",
+      "blurb": "An ICU society vodcast on end-of-life care and withdrawing life support in India.",
+      "publishedAt": "2024-07-01"
+    },
+    {
+      "youtubeId": "b3QraGZ9BSg",
+      "videoTitle": "Palliative Care in the ICU & End of Life Care Explained Clearly",
+      "channelId": "medcram-medical-lectures-explained-clearly",
+      "icuModuleId": "ethics-communication-palliative-care",
+      "icuTopicId": "palliative-symptom-care",
+      "icuTopicTitle": "Palliative symptom care and compassionate extubation",
+      "matchStrength": "strong",
+      "blurb": "Palliative care and end-of-life care in the ICU.",
+      "publishedAt": "2018-03-18"
+    },
+    {
+      "youtubeId": "kpw6ibh7AH8",
+      "videoTitle": "How are families involved in organ donation?",
+      "channelId": "nhs-organ-donation",
+      "icuModuleId": "ethics-communication-palliative-care",
+      "icuTopicId": "organ-donation-conversation",
+      "icuTopicTitle": "Organ donation: the request conversation",
+      "matchStrength": "partial",
+      "blurb": "How families are involved in the organ donation process (UK).",
+      "publishedAt": "2021-01-07"
+    },
+    {
+      "youtubeId": "dkf-jM2GIyo",
+      "videoTitle": "STAFF TRAINING VIDEO: Mental Capacity Assessment - Doctor-led scenario",
+      "channelId": "midcheshirehospitals",
+      "icuModuleId": "ethics-communication-palliative-care",
+      "icuTopicId": "documentation-medicolegal",
+      "icuTopicTitle": "Consent, capacity, documentation and medico-legal practice",
+      "matchStrength": "partial",
+      "blurb": "A doctor-led mental capacity assessment (UK law; check Indian law for consent).",
+      "publishedAt": "2019-02-18"
+    },
+    {
+      "youtubeId": "X_3wY-4f8HY",
+      "videoTitle": "SBAR (Situation | Background | Assessment | Recommendation) | ABCDE Emergency | OSCE Guide | PLAB 2",
+      "channelId": "geeky-medics",
+      "icuModuleId": "handover-transport-icu-safety",
+      "icuTopicId": "isbar-handover",
+      "icuTopicTitle": "ISBAR and structured handover",
+      "matchStrength": "strong",
+      "blurb": "Using SBAR for structured handover and escalation.",
+      "publishedAt": "2023-04-06"
+    },
+    {
+      "youtubeId": "Y5c7zQVowXc",
+      "videoTitle": "How to take BEDSIDE ROUNDS in ICU - the thought process",
+      "channelId": "the-icu-channel-by-esbicm",
+      "icuModuleId": "handover-transport-icu-safety",
+      "icuTopicId": "daily-rounds-structure",
+      "icuTopicTitle": "Structure of the daily ICU round",
+      "matchStrength": "strong",
+      "blurb": "The thought process behind bedside ICU rounds.",
+      "publishedAt": "2020-08-27"
+    },
+    {
+      "youtubeId": "9BQlEEcxIFA",
+      "videoTitle": "STEP N SESSION : Intra Hospital transport of Critically ill Patient",
+      "channelId": "indian-society-of-critical-care-medicine",
+      "icuModuleId": "handover-transport-icu-safety",
+      "icuTopicId": "transfer-checklist",
+      "icuTopicTitle": "Intra- and inter-hospital transfer checklist",
+      "matchStrength": "strong",
+      "blurb": "An ICU society session on intra-hospital transport of critically ill patients.",
+      "publishedAt": "2026-02-06"
+    },
+    {
+      "youtubeId": "1TAY7d6qgXU",
+      "videoTitle": "How long will the oxygen cylinder last???| Boyles| conversion Factor|",
+      "channelId": "anesthesia-and-critical-care",
+      "icuModuleId": "handover-transport-icu-safety",
+      "icuTopicId": "oxygen-cylinder-planning",
+      "icuTopicTitle": "Oxygen cylinder planning",
+      "matchStrength": "strong",
+      "blurb": "How to calculate how long an oxygen cylinder will last.",
+      "publishedAt": "2023-12-10"
+    },
+    {
+      "youtubeId": "TLeHkU34_Ho",
+      "videoTitle": "Fostering a Culture of Safety",
+      "channelId": "ahrq-patient-safety",
+      "icuModuleId": "handover-transport-icu-safety",
+      "icuTopicId": "error-reporting-safety",
+      "icuTopicTitle": "Errors, incident reporting and ICU safety culture",
+      "matchStrength": "strong",
+      "blurb": "Fostering a culture of safety in healthcare.",
+      "publishedAt": "2015-06-24"
+    },
+    {
+      "youtubeId": "9QHDs10e-G0",
+      "videoTitle": "START Triage Basics",
+      "channelId": "unmc-heroes",
+      "icuModuleId": "handover-transport-icu-safety",
+      "icuTopicId": "mass-casualty-triage",
+      "icuTopicTitle": "Mass casualty triage and ICU surge",
+      "matchStrength": "strong",
+      "blurb": "The basics of START triage at a mass casualty incident.",
+      "publishedAt": "2011-08-29"
+    }
+  ]
+}

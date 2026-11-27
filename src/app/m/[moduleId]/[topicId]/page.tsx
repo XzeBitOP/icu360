@@ -19,8 +19,8 @@ import { practiceLinks } from "@/lib/learn";
 import { LinkGrid } from "@/components/LearnBlocks";
 import { AiButton } from "@/components/client/ai/AiTutor";
 import { bedsideText, ctx, notesText } from "@/lib/ai/context";
-import { visualsFor } from "@/lib/embedded-videos";
-import { VisualExplanation } from "@/components/VisualExplanation";
+import { freeVideosFor, visualsFor } from "@/lib/embedded-videos";
+import { FreeVideoExplanation, VisualExplanation } from "@/components/VisualExplanation";
 
 type Params = { moduleId: string; topicId: string };
 
@@ -54,6 +54,8 @@ export default async function TopicPage({ params }: { params: Promise<Params> })
   const calcs = topic.calculatorIds.map((id) => getCalculator(id)).filter((c) => !!c);
   const section = getSections().find((s) => s.id === module.section.id)!;
   const visuals = visualsFor(module.id, topic.id);
+  // Free YouTube videos by other educators fill topics that have no Armando Hasudungan video.
+  const freeVideos = visuals.length ? [] : freeVideosFor(module.id, topic.id);
   const reviewed = module.lastReviewed ? `Reviewed ${prettyDate(module.lastReviewed.slice(0, 7))}` : "Draft";
 
   const meta = (
@@ -71,6 +73,11 @@ export default async function TopicPage({ params }: { params: Promise<Params> })
         <a href="#visual" className={`mt-2 inline-flex items-center gap-1.5 text-[12.5px] ${muted}`} data-testid="visual-meta">
           <Clapperboard className="w-4 h-4 text-brand-600 dark:text-glow-teal" strokeWidth={2} aria-hidden="true" />
           Embedded video by <span className="font-semibold text-ink-700 dark:text-night-text">Armando Hasudungan</span>
+        </a>
+      ) : freeVideos.length ? (
+        <a href="#visual" className={`mt-2 inline-flex items-center gap-1.5 text-[12.5px] ${muted}`} data-testid="visual-meta">
+          <Clapperboard className="w-4 h-4 text-brand-600 dark:text-glow-teal" strokeWidth={2} aria-hidden="true" />
+          Embedded video by <span className="font-semibold text-ink-700 dark:text-night-text">{[...new Set(freeVideos.map((v) => v.channel.name))].join(", ")}</span>
         </a>
       ) : null}
     </>
@@ -105,6 +112,7 @@ export default async function TopicPage({ params }: { params: Promise<Params> })
         <Callouts b={b} which={["warn"]} />
         <div className="space-y-4 xl:hidden"><Callouts b={b} which={["pearl"]} /></div>
         <VisualExplanation videos={visuals} />
+        <FreeVideoExplanation videos={freeVideos} />
         {calcLinks}
         <LinkGrid title="Practise interactively" links={practiceLinks(module.id)} />
         <div className="xl:hidden"><RefsCard refs={refs} /></div>

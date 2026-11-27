@@ -4,13 +4,13 @@ import { ExternalLink, Clapperboard, ChevronRight, Info } from "lucide-react";
 import { pageMeta } from "@/lib/seo";
 import { PageHeader, Main } from "@/components/Shell";
 import { Chip, muted, gradBtn } from "@/components/ui";
-import { getArmando } from "@/lib/embedded-videos";
+import { getArmando, freeVideoChannels, getFreeVideos, VIDEO_LIBRARY_LABEL, VIDEO_LIBRARY_PATH } from "@/lib/embedded-videos";
 import { getModules } from "@/lib/content";
 
 export const metadata: Metadata = pageMeta({
-  title: "Video credits: embedded videos by Armando Hasudungan",
+  title: "Video credits: embedded YouTube videos and their creators",
   description:
-    "ICU 360 embeds Armando Hasudungan's YouTube videos. We do not own these videos; all rights belong to Armando Hasudungan. armandoh.org has complete free-to-use videos, diagrams and PDFs.",
+    "ICU 360 embeds Armando Hasudungan's YouTube videos and free YouTube videos from other educators. We do not own these videos; all rights belong to their creators. armandoh.org has complete free-to-use videos, diagrams and PDFs.",
   path: "/credits",
 });
 
@@ -21,6 +21,9 @@ export default function CreditsPage() {
     .filter((x) => x.items.length);
   const uniqueVideos = new Set(videos.map((v) => v.youtubeId)).size;
   const topics = new Set(videos.map((v) => `${v.icuModuleId}/${v.icuTopicId}`)).size;
+  const free = getFreeVideos();
+  const freeChannels = freeVideoChannels();
+  const freeTopics = new Set(free.videos.map((v) => `${v.icuModuleId}/${v.icuTopicId}`)).size;
 
   return (
     <>
@@ -58,6 +61,40 @@ export default function CreditsPage() {
           <p className={`mt-4 flex items-start gap-2 text-[12px] leading-relaxed ${muted}`}>
             <Info className="w-4 h-4 shrink-0 mt-px" strokeWidth={2} aria-hidden="true" />
             <span>Videos play from YouTube and load only when you tap play. ICU 360 links to his pages and does not copy his notes or diagrams. His videos are not sent to the ICU 360 AI tutor.</span>
+          </p>
+        </section>
+
+        <section className="glass rounded-[26px] p-4 lg:p-5" data-testid="credit-youtube-channels">
+          <div className="flex items-start gap-3.5">
+            <span className="w-12 h-12 rounded-[16px] grid place-items-center text-white shrink-0" style={gradBtn} aria-hidden="true">
+              <Clapperboard className="w-6 h-6" strokeWidth={2} />
+            </span>
+            <div className="flex-1 min-w-0">
+              <p className="text-[11.5px] uppercase tracking-[.1em] font-semibold text-brand-600 dark:text-glow-teal">Embedded YouTube videos</p>
+              <h2 className="display text-[22px] font-semibold leading-snug">Free videos from other educators</h2>
+              <p className="text-[14.5px] leading-[1.55] mt-1 font-medium text-ink-900 dark:text-night-text" data-testid="credit-youtube-rights">
+                ICU 360 embeds {free.videos.length} free YouTube videos from {freeChannels.length} channels on {freeTopics} topics. We do not own these videos; all rights belong to the creators. Each video is credited to its channel where it appears.
+              </p>
+            </div>
+          </div>
+          <div className="mt-4 flex flex-wrap gap-2.5">
+            <Link href={VIDEO_LIBRARY_PATH} className="glass-btn inline-flex items-center gap-2 h-11 px-5 rounded-full font-semibold text-[14px] text-ink-900 dark:text-night-text" data-testid="credit-library">
+              {VIDEO_LIBRARY_LABEL}<ChevronRight className="w-4 h-4" strokeWidth={2.2} aria-hidden="true" />
+            </Link>
+          </div>
+          <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5" aria-label="Credited YouTube channels">
+            {freeChannels.map((c) => (
+              <li key={c.id} className="flex items-baseline gap-2 min-w-0" data-testid="credit-channel">
+                <a href={c.youtube} target="_blank" rel="noopener" className="min-w-0 break-words font-semibold text-[14px] leading-snug text-ink-900 dark:text-night-text underline decoration-ink-300 dark:decoration-night-faint underline-offset-2">
+                  {c.name}
+                </a>
+                <span className={`shrink-0 text-[12px] ${muted}`}>{c.count === 1 ? "1 video" : `${c.count} videos`}</span>
+              </li>
+            ))}
+          </ul>
+          <p className={`mt-4 flex items-start gap-2 text-[12px] leading-relaxed ${muted}`}>
+            <Info className="w-4 h-4 shrink-0 mt-px" strokeWidth={2} aria-hidden="true" />
+            <span>Videos play from YouTube and load only when you tap play. They are embedded using each creator&apos;s own YouTube embedding setting and are not sent to the ICU 360 AI tutor. Listing a channel here does not mean it endorses ICU 360.</span>
           </p>
         </section>
 
