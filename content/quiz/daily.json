@@ -2,6 +2,102 @@
   "description": "Daily Quiz sets shown on /quiz, keyed by date (YYYY-MM-DD, India time). Each set has 5 MCQs. New sets are added only after Kenil approves them in chat. The first set below is a sample drawn from existing module quiz items.",
   "sets": [
     {
+      "date": "2026-11-29",
+      "title": "Daily Quiz: 29 November 2026",
+      "questions": [
+        {
+          "id": "2026-11-29-1",
+          "stem": "A 30-year-old was stung by a red scorpion 2 hours ago. He has cold extremities, sweating, BP 180/100 and HR 130, and his chest is clear. Which drug is first-line?",
+          "options": [
+            "IV atropine to dry the secretions",
+            "Sublingual nifedipine",
+            "Oral prazosin",
+            "IV hydrocortisone and an antihistamine"
+          ],
+          "answerIndex": 2,
+          "explanation": "Red scorpion venom causes a catecholamine storm, and prazosin (an α1-blocker) reverses it. In the Bawaskar RCT, adding scorpion antivenom to prazosin gave faster recovery. Avoid atropine, which worsens the tachycardia and hypertension.",
+          "reference": {
+            "label": "Bawaskar HS, Bawaskar PH. Efficacy and safety of scorpion antivenom plus prazosin compared with prazosin alone for venomous scorpion (Mesobuthus tamulus) sting: randomised open label clinical trial. BMJ 2011;342:c7136",
+            "url": "https://doi.org/10.1136/bmj.c7136"
+          },
+          "moduleId": "snakebite-scorpion-envenomation",
+          "topicId": "scorpion-sting"
+        },
+        {
+          "id": "2026-11-29-2",
+          "stem": "An ICU patient with a central line grows Candida albicans in a blood culture. She is haemodynamically stable. What's the best initial plan?",
+          "options": [
+            "Start an echinocandin and remove the central line early",
+            "Repeat the culture; it is probably a contaminant",
+            "Oral fluconazole and keep the line",
+            "Change the line over a guidewire, with no antifungal"
+          ],
+          "answerIndex": 0,
+          "explanation": "Candida in blood is never a contaminant. IDSA recommends an echinocandin first, removing the central venous catheter as early as possible when it is the likely source, daily repeat cultures and a dilated eye exam.",
+          "reference": {
+            "label": "Pappas PG, et al. Clinical Practice Guideline for the Management of Candidiasis: 2016 Update by the Infectious Diseases Society of America. Clin Infect Dis 2016;62(4):e1-e50",
+            "url": "https://doi.org/10.1093/cid/civ933"
+          },
+          "moduleId": "icu-infections-stewardship-immunocompromised",
+          "topicId": "invasive-fungal"
+        },
+        {
+          "id": "2026-11-29-3",
+          "stem": "You are treating MRSA bacteraemia with IV vancomycin. Which monitoring target does the 2020 consensus guideline recommend?",
+          "options": [
+            "Trough 15–20 mg/L alone",
+            "Peak above 40 mg/L",
+            "Trough below 5 mg/L to protect the kidneys",
+            "AUC of 400–600 mg·h/L (assuming an MIC of 1 mg/L)"
+          ],
+          "answerIndex": 3,
+          "explanation": "AUC-guided dosing (ideally Bayesian) to 400–600 mg·h/L is as effective as trough-based dosing and causes less nephrotoxicity. Trough-only monitoring at 15–20 mg/L is no longer recommended for serious MRSA infections.",
+          "reference": {
+            "label": "Rybak MJ, et al. Therapeutic monitoring of vancomycin for serious MRSA infections: a revised consensus guideline (ASHP/IDSA/PIDS/SIDP). Am J Health Syst Pharm 2020;77(11):835-864",
+            "url": "https://doi.org/10.1093/ajhp/zxaa036"
+          },
+          "moduleId": "icu-pharmacology-drug-infusions",
+          "topicId": "renal-dosing"
+        },
+        {
+          "id": "2026-11-29-4",
+          "stem": "A patient on peripheral femoral VA-ECMO has a recovering heart but poor lung function. Where should you sample the arterial blood gas to detect differential (north–south) hypoxaemia?",
+          "options": [
+            "Left femoral artery",
+            "Right radial artery",
+            "Post-oxygenator circuit port",
+            "Left radial artery only"
+          ],
+          "answerIndex": 1,
+          "explanation": "The right radial artery comes off the brachiocephalic trunk, the first aortic branch. It is the first to receive poorly oxygenated blood ejected by the native heart, so it best reflects brain and coronary oxygenation. Femoral or circuit samples show the well-oxygenated ECMO blood.",
+          "reference": {
+            "label": "Winiszewski H, Guinot PG, Schmidt M, et al. Optimizing PO2 during peripheral veno-arterial ECMO: a narrative review. Crit Care 2022;26:226",
+            "url": "https://doi.org/10.1186/s13054-022-04102-0"
+          },
+          "moduleId": "ecmo-mechanical-circulatory-support",
+          "topicId": "daily-ecmo-checks"
+        },
+        {
+          "id": "2026-11-29-5",
+          "stem": "A ward patient's total NEWS2 is 4, but the respiratory rate alone (26/min) scores 3. What response does NEWS2 call for?",
+          "options": [
+            "Routine 12-hourly observations",
+            "Nothing until the total reaches 5",
+            "An urgent ward-based review by a clinician who can assess acutely ill patients",
+            "Immediate cardiac arrest call"
+          ],
+          "answerIndex": 2,
+          "explanation": "NEWS2 treats a score of 3 in any single parameter as low-to-medium risk that needs an urgent ward-based response. A total of 5–6 needs an urgent response, and 7 or more needs an emergency response from a critical care team.",
+          "reference": {
+            "label": "Royal College of Physicians. National Early Warning Score (NEWS) 2: Standardising the assessment of acute-illness severity in the NHS. London: RCP, 2017",
+            "url": "https://www.rcp.ac.uk/resources/national-early-warning-score-news-2/"
+          },
+          "moduleId": "deteriorating-patient-icu-triage",
+          "topicId": "news2-qsofa"
+        }
+      ]
+    },
+    {
       "date": "2026-11-28",
       "title": "Daily Quiz: 28 November 2026",
       "questions": [

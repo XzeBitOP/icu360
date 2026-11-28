@@ -22,6 +22,26 @@
       "moduleId": "sepsis-septic-shock"
     },
     {
+      "id": "2026-11-28-fda-portex-ett",
+      "date": "2026-11-25",
+      "tag": "Drug safety",
+      "source": "FDA (Early Alert, 25 Nov 2026)",
+      "title": "FDA early alert: some small uncuffed Portex tracheal tubes pulled after one reported death",
+      "summary": "ICU Medical has asked hospitals to stop using and destroy certain lots of uncuffed Portex tracheal tubes in sizes 2.5, 3.0 and 3.5 mm: Murphy-eye oral/nasal tubes (100/127/025, 100/127/030, 100/127/035) and Polar preformed oral tubes (100/134/030, 100/134/035). A resin problem can make the tube softer than expected. In neonates and infants this can cause kinking, high resistance to ventilation and difficult or delayed intubation, and one death has been reported. If your NICU, PICU or OT stocks these, check the item and lot numbers and quarantine affected stock. It is not confirmed whether these lots reached India.",
+      "url": "https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/early-alert-icu-medical-removes-portex-endotracheal-tubes",
+      "moduleId": "paediatric-emergencies-essentials"
+    },
+    {
+      "id": "2026-11-28-betalactam-full-dose-aki",
+      "date": "2026-11-25",
+      "tag": "Review",
+      "source": "Critical Care",
+      "title": "Sepsis with AKI: cutting the beta-lactam dose early was linked to more deaths",
+      "summary": "This meta-analysis pooled 5 observational studies (1,215 ICU patients with sepsis-related AKI). Patients who got the full beta-lactam dose had lower mortality than those whose dose was cut for kidney function (OR 0.67). The worry is that an early renal cut underdoses the antibiotic in the first, most important days, while the AKI may still be recovering. These are observational data, so it isn't proof. Still, a practical approach is to give full doses for the first 24–48 hours, then reassess kidney function, and use TDM if it is available.",
+      "url": "https://doi.org/10.1186/s13054-026-06484-x",
+      "moduleId": "icu-infections-stewardship-immunocompromised"
+    },
+    {
       "id": "2026-11-27-teach-sat-sbt",
       "date": "2026-11-25",
       "tag": "Trial",
